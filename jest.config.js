@@ -7,9 +7,8 @@ module.exports = {
   testMatch: ['**/+(*.)+(spec).+(ts)'],
   setupFilesAfterEnv: ['<rootDir>/src/test.ts'],
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.js", "!**/node_modules/**"],
   coverageReporters: ["html", "text", "text-summary", "cobertura"],
-  coverageDirectory: 'coverage/my-app',
+  coverageDirectory: './coverage',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/'
   })
