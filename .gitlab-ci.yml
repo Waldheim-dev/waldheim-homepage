@@ -7,6 +7,8 @@
 stages:
   - build
   - test
+  - deploy
+
 
 include:
   - template: Security/SAST.gitlab-ci.yml
@@ -25,6 +27,9 @@ build:
     when: on_success
     paths:
       - node_modules/
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_MERGE_REQUEST_IID
 
 test:
   stage: test
@@ -34,9 +39,32 @@ test:
     - build
   script:
     - yarn test:ci
+  cache:
+    paths:
+      - coverage/
   artifacts:
+    paths:
+      - coverage/
     when: always
     reports:
       junit:
         - junit.xml
       cobertura: coverage/cobertura-coverage.xml
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_MERGE_REQUEST_IID
+
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mkdir .public
+    - cp -r coverage/* .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_MERGE_REQUEST_IID
