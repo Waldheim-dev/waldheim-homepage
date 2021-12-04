@@ -10,3 +10,33 @@ sast:
   stage: test
 include:
 - template: Security/SAST.gitlab-ci.yml
+
+
+build:
+  stage: build
+  image: node:latest
+  script:
+    - yarn
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+
+test:
+  stage: test
+  image: node:latest
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  dependencies:
+    - build
+  script:
+    - yarn test:ci
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - junit.xml
+      cobertura: coverage/cobertura-coverage.xml
