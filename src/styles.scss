@@ -1,39 +1,68 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$waldheim-dev-primary: mat.define-palette(mat.$indigo-palette);
-$waldheim-dev-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$waldheim-dev-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$waldheim-dev-theme: mat.define-light-theme((
-  color: (
-    primary: $waldheim-dev-primary,
-    accent: $waldheim-dev-accent,
-    warn: $waldheim-dev-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($waldheim-dev-theme);
-
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #00639A;
+  --on-primary: #FFFFFF;
+  --primary-container: #CBE5FF;
+  --on-primary-container: #001D32;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  --secondary: #51606F;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #D4E4F6;
+  --on-secondary-container: #0D1D2A;
+
+  --tertiary: #67587A;
+  --on-tertiary: #FFFFFF;
+  --tertiary-container: #EEDBFF;
+  --on-tertiary-container: #221533;
+
+  --error: #BA1B1B;
+  --on-error: #FFDAD4;
+  --error-container: #FFFFFF;
+  --on-error-container: #410001;
+
+  --background: #FCFCFF;
+  --on-background: #1A1C1E;
+  --surface: #FCFCFF;
+  --on-surface: #1A1C1E;
+
+  --surface-variant: #DEE3EB;
+  --on-surface-variant: #41474D;
+
+  --outline: #72777E;
+
+  --invserse-on-surface: #F0F0F3;
+  --inverse-surface: #2F3032;
+  --inverse-primary: #91CCFF;
+
+  --shadow: #000000;
+
+  --elevation-1: 0 1px 2px 0 rgba(0,0,0,calc(100% / 3)), 0 1px 3px 1px rgba(0,0,0,15%);
+  --elevation-2: 0 1px 2px 0 rgba(0,0,0,calc(100% / 3)), 0 2px 6px 2px rgba(0,0,0,15%);
+  --elevation-3: 0 4px 8px 3px rgba(0,0,0,15%), 0 1px 3px 0 rgba(0,0,0,calc(100% / 3));
+  --elevation-4: 0 6px 10px 4px rgba(0,0,0,15%), 0 2px 3px 0 rgba(0,0,0,calc(100% / 3));
+  --elevation-5: 0 8px 12px 6px rgba(0,0,0,15%), 0 4px 4px 0 rgba(0,0,0,calc(100% / 3));
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+  }
+}
+
+body {
+  background-color: var(---background);
+  color: var(--on-background);
+}
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  @media screen and (max-width: 80rem) {
+    padding: 0 1rem;
+  }
+}
