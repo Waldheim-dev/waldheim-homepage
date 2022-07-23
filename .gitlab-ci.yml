@@ -41,23 +41,7 @@ build_version_container:
   services:
     - docker:dind
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      changes:
-        - "**/doc/Dockerfile"
-    - if: $CI_COMMIT_BRANCH == "alpha"
-      changes:
-        - "**/doc/Dockerfile"
-    - if: $CI_COMMIT_BRANCH == "beta"
-      changes:
-        - "**/doc/Dockerfile"
-    - if: $CI_COMMIT_BRANCH == "next"
-      changes:
-        - "**/doc/Dockerfile"
-    - if: $CI_COMMIT_BRANCH == "next-major"
-      changes:
-        - "**/doc/Dockerfile"
-    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
-      changes:
+      - changes:
         - "**/doc/Dockerfile"
 
   variables:
@@ -76,13 +60,6 @@ fetch-semantic-version:
   needs:
     - job: build_version_container
       optional: true
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_BRANCH == "alpha"
-    - if: $CI_COMMIT_BRANCH == "beta"
-    - if: $CI_COMMIT_BRANCH == "next"
-    - if: $CI_COMMIT_BRANCH == "next-major"
-    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
   script:
     - npx semantic-release --generate-notes false --dry-run
   tags:
@@ -97,12 +74,6 @@ release:
   stage: deploy
   needs:
     - job: fetch-semantic-version
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_BRANCH == "alpha"
-    - if: $CI_COMMIT_BRANCH == "next"
-    - if: $CI_COMMIT_BRANCH == "next-major"
-    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
   script:
     - touch CHANGELOG.md
     - npx semantic-release
