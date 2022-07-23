@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url":"https://gitlab.com/mwaldheim/waldheim.dev.homepage.git"
+    "url":"https://gitlab.com/mwaldheim/waldheim.dev.homepage"
   },
   "private": true,
   "dependencies": {
