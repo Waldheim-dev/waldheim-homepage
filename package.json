@@ -8,6 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "repository": {
+    "type": "git",
+    "url":"https://gitlab.com/mwaldheim/waldheim.dev.homepage.git"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~14.1.0",
