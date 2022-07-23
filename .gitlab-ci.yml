@@ -1,0 +1,113 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+stages:
+  - build
+  - test
+  - deploy
+  - review
+  - dast
+  - staging
+  - canary
+  - production
+  - performance
+  - cleanup
+
+variables:
+  SAST_EXCLUDED_ANALYZERS: '/sobelow/'
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/SAST-IaC.latest.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml
+
+#######################################################################################################
+#                                       _    _                                       _                #
+#                                      | |  (_)                                     (_)               #
+#   ___   ___  _ __ ___    __ _  _ __  | |_  _   ___  ______ __   __ ___  _ __  ___  _   ___   _ __   #
+#  / __| / _ \| '_ ` _ \  / _` || '_ \ | __|| | / __||______|\ \ / // _ \| '__|/ __|| | / _ \ | '_ \  #
+#  \__ \|  __/| | | | | || (_| || | | || |_ | || (__          \ V /|  __/| |   \__ \| || (_) || | | | #
+#  |___/ \___||_| |_| |_| \__,_||_| |_| \__||_| \___|          \_/  \___||_|   |___/|_| \___/ |_| |_| #
+#######################################################################################################
+
+build_version_container:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - "**/doc/Dockerfile"
+    - if: $CI_COMMIT_BRANCH == "alpha"
+      changes:
+        - "**/doc/Dockerfile"
+    - if: $CI_COMMIT_BRANCH == "beta"
+      changes:
+        - "**/doc/Dockerfile"
+    - if: $CI_COMMIT_BRANCH == "next"
+      changes:
+        - "**/doc/Dockerfile"
+    - if: $CI_COMMIT_BRANCH == "next-major"
+      changes:
+        - "**/doc/Dockerfile"
+    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
+      changes:
+        - "**/doc/Dockerfile"
+
+  variables:
+    DOCKER_FILDER: .ci/doc/
+  tags:
+    - docker
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY/mwaldheim/waldheim.dev.homepage/version:latest $DOCKER_FILDER.
+    - docker push $CI_REGISTRY/mwaldheim/waldheim.dev.homepage/version:latest
+
+
+fetch-semantic-version:
+  image: registry.gitlab.com/mwaldheim/waldheim.dev.homepage/version
+  stage: build
+  needs:
+    - job: build_version_container
+      optional: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "alpha"
+    - if: $CI_COMMIT_BRANCH == "beta"
+    - if: $CI_COMMIT_BRANCH == "next"
+    - if: $CI_COMMIT_BRANCH == "next-major"
+    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
+  script:
+    - npx semantic-release --generate-notes false --dry-run
+  tags:
+    - docker
+  artifacts:
+    paths:
+      - package.json
+      - CHANGELOG.md
+
+release:
+  image: registry.gitlab.com/mwaldheim/waldheim.dev.homepage/version
+  stage: deploy
+  needs:
+    - job: fetch-semantic-version
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "alpha"
+    - if: $CI_COMMIT_BRANCH == "next"
+    - if: $CI_COMMIT_BRANCH == "next-major"
+    - if: $CI_COMMIT_BRANCH == "+([0-9])?(.{+([0-9]),x}).x"
+  script:
+    - touch CHANGELOG.md
+    - npx semantic-release
+  artifacts:
+    paths:
+      - package.json
+      - CHANGELOG.md
+      - dist/*.zip

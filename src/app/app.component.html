@@ -1,9 +1,37 @@
 <header>
   <div class="container">
-    <nav>
-      <div class="brand">
+    <nav fxLayout fxLayoutAlign="space-between center">
+      <div class="brand" fxLayoutAlign="space-between center">
         <img src="assets/forestdesign_icon.png" alt="Waldheim.dev" height="40px" width="40px">
-        Waldheim.dev
+        <span>Waldheim.dev</span>
+        <app-tag>v{{version}}</app-tag>
+        <app-nav>
+          <a mat-button href="#" target="_blank">
+            Mein Service
+          </a>
+        </app-nav>
+        <app-nav>
+          <a href="#" target="_blank">
+            Ecodrive
+          </a>
+        </app-nav>
+      </div>
+      <div class="nav-list">
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-xing"></i>
+          </a>
+        </app-nav>
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-twitch"></i>
+          </a>
+        </app-nav>
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </app-nav>
       </div>
     </nav>
   </div>

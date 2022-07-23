@@ -1,0 +1,26 @@
+:host {
+  border-radius: 1.5rem;
+  padding: 1rem;
+  display: block;
+  &.primary {
+    background-color: var(--primary-container);
+  }
+  &.secondary {
+    background-color: var(--secondary-container);
+  }
+  &.tertiary {
+    background-color: var(--tertiary-container);
+  }
+  &.error {
+    background-color: var(--error-container);
+  }
+  &.surface {
+    background-color: var(--surface-container);
+  }
+  &.inverse-surface {
+    background-color: var(--inverse-surface-container);
+  }
+  &.is-elevation {
+    box-shadow: var(--elevation-1);
+  }
+}

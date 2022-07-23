@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import  pack  from '../../package.json';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'waldheim-dev';
+  version = '0.0.0';
+
+  constructor() {
+    this.version = pack.version;
+  }
 }
