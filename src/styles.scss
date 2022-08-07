@@ -78,11 +78,42 @@ section {
   padding: 6rem 0;
 }
 h1 {
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 10rem;
+  line-height: 11rem;
   padding-bottom: 2.5rem;
   font-weight: normal;
+  small {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+h2 {
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  padding-bottom: 1.5rem;
+}
+.h2 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  font-weight: normal;
+  padding-bottom: .5rem;
 }
 p {
   padding-bottom: 1rem;
+}
+
+a.button {
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+}
+ul {
+  margin-left: 1rem;
+}
+
+.section-24 {
+  padding: 24px 0;
+}
+.text-center {
+  text-align: center;
 }

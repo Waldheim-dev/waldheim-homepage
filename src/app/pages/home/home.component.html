@@ -1,38 +1,85 @@
-<section class="container" fxLayoutGap="1rem" fxLayoutAlign="space-between start">
+<section class="container" fxLayoutGap="1rem" fxLayoutAlign="space-between strech">
   <div fxFlex="70%">
-  <h1>Mit guten Design und intuitiven Entwicklungen im Web</h1>
-    <p>Seit 2014 wird täglich mehr und mehr Erfahrung gesammelt. Durch den hohen Anspruch an Qualität und guten Design bis ins letzte Detail trifft hier Qualität made in Germany vollständig zu!</p>
-    <div>
-      <div fxFlex="70%">
-        <p>Gerne bin ich bereit euch in der Digitalisierung zu helfen.</p>
-      </div>
-      <div fxFlex="30%">
-        <p>Markus Waldheim<br><a href="mailto:markus@waldheim.dev">markus@waldheim.dev</a></p>
-      </div>
-    </div>
-    <p>👇 Schau die an, was ich anbiete</p>
+  <h1>Markus Waldheim<br>
+    <small>Software als Leidenschaft</small></h1>
   </div>
-  <div fxFlex="300px">
-    <app-cloudcard></app-cloudcard>
+  <div fxFlex="300px" fxLayoutAlign="strech strech">
+    <app-cloudcard fxFlex="300px" ></app-cloudcard>
   </div>
 </section>
 
 <section class="container">
-  <div fxFlex="calc((100% - 2rem) / 3)">
-    <app-card primary elevation>
-      <app-tag>Entwicklung</app-tag>
-    </app-card>
+  <h2>Mein Service</h2>
+  <div class="section-24">
+    <div fxFlex="calc((100% - 3rem) / 4)">
+      <app-card primary elevation>
+
+        <div class="pre-icon"><i class="fa-regular fa-laptop-code fa-2x fa-fw"></i></div>
+        <h3>Entwicklung</h3>
+        <ul>
+          <li>Webseiten</li>
+          <li>Microservices</li>
+        </ul>
+        <app-nav class="button">
+          <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
+        </app-nav>
+      </app-card>
+    </div>
+    <div fxFlex="1rem"></div>
+    <div fxFlex="calc((100% - 3rem) / 4)">
+      <app-card secondary elevation>
+        <div class="pre-icon"><i class="fa-regular fa-rocket-launch fa-fw fa-2x"></i></div>
+        <h3>Design</h3>
+        <ul>
+          <li>UI / UX</li>
+          <li>Print & Medien</li>
+        </ul>
+        <app-nav class="button">
+          <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
+        </app-nav>
+      </app-card>
+    </div>
+    <div fxFlex="1rem"></div>
+    <div fxFlex="calc((100% - 3rem) / 4)">
+      <app-card tertiary elevation>
+        <div class="pre-icon"><i class="fa-regular fa-code-fork fa-fw fa-2x"></i></div>
+        <h3>Automatisierung</h3>
+        <ul>
+          <li>CI / CD</li>
+          <li>Versionierung</li>
+        </ul>
+        <app-nav class="button">
+          <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
+        </app-nav>
+      </app-card>
+    </div>
+    <div fxFlex="1rem"></div>
+    <div fxFlex="calc((100% - 3rem) / 4)">
+      <app-card elevation>
+        <h3 class="h2">Mehr Service</h3>
+
+        <app-nav class="button">
+          <a class="button"><i class="fa-regular fa-angle-right fa-fw fa-2x"></i></a>
+        </app-nav>
+      </app-card>
+    </div>
   </div>
-  <div fxFlex="1rem"></div>
-  <div fxFlex="calc((100% - 2rem) / 3)">
-    <app-card secondary elevation>
-      <app-tag>Design</app-tag>
-    </app-card>
+  <div>
+    <p>Je angefangene 15 Minuten werden 15€ berechnet. Gemäß §19 UStG enthält der Rechnungsbetrag keine Umsatzsteuer.</p>
   </div>
-  <div fxFlex="1rem"></div>
-  <div fxFlex="calc((100% - 2rem) / 3)">
-    <app-card tertiary elevation>
-      <app-tag>Automatisierung</app-tag>
-    </app-card>
+</section>
+
+<app-brands></app-brands>
+
+<app-ecodrive-preview></app-ecodrive-preview>
+
+<section>
+  <h2 class="container">Meine Projekte</h2>
+  <div class="slider-wrapper" fxLayoutGap="1rem">
+    <app-card elevation fxFlex="30%"></app-card>
+    <app-card elevation fxFlex="30%"></app-card>
+    <app-card elevation fxFlex="30%"></app-card>
+    <app-card elevation fxFlex="30%"></app-card>
+    <app-card elevation fxFlex="30%"></app-card>
   </div>
 </section>

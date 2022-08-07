@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { Component, ElementRef, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 const COLORS = [
   'primary',
@@ -12,10 +13,23 @@ const COLORS = [
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CardComponent implements OnInit {
-  readonly elevation: boolean = this._hasHostAttributes('elevation');
+
+  @Input()
+  @HostBinding('class.is-elevation')
+  get elevation(): boolean {
+    return this._elevation;
+  }
+
+  set elevation(value: BooleanInput) {
+    this._elevation = coerceBooleanProperty(value);
+  }
+
+  private _elevation: boolean = false;
+
 
   constructor(public _elementRef: ElementRef) {
     for (const attr of COLORS) {
@@ -23,7 +37,7 @@ export class CardComponent implements OnInit {
         (this._getHostElement() as HTMLElement).classList.add(attr);
       }
     }
-    if (this.elevation) {
+    if (this._elevation) {
       (this._getHostElement() as HTMLElement).classList.add('is-elevation');
     }
   }
