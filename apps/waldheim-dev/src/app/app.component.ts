@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import  pack  from '../../package.json';
+import  pack  from '../../../../package.json';
 
 
 @Component({
