@@ -1,6 +1,6 @@
 {
   "name": "waldheim-dev",
-  "version": "22.0.0",
+  "version": "22.1.0",
   "scripts": {
     "ng": "nx",
     "start": "nx serve",
