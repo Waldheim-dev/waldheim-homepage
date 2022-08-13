@@ -8,7 +8,7 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "postinstall": "node ./decorate-angular-cli.js",
-    "make_zip": "node zip.js"
+    "zip": "node zip.js"
   },
   "private": true,
   "dependencies": {

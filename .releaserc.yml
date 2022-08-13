@@ -44,7 +44,7 @@ plugins:
     - changelogFile: "CHANGELOG.md"
   - - "@semantic-release/exec"
     - verifyReleaseCmd: "echo ${nextRelease.version} > VERSION.txt"
-      prepareCmd: "npx rjp package.json version ${nextRelease.version} && npm run make_zip"
+      prepareCmd: "rjp package.json version ${nextRelease.version} && npm install --silent && npm run zip"
   - - "@semantic-release/git"
     - assets:
         - "CHANGELOG.md"
