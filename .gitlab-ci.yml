@@ -8,63 +8,77 @@ stages:
   - build
   - test
   - deploy
+  - review
+  - dast
+  - staging
+  - canary
+  - production
+  - performance
+  - cleanup
 
-
+variables:
+  SAST_EXCLUDED_ANALYZERS: '/sobelow/'
 include:
   - template: Security/SAST.gitlab-ci.yml
+  - template: Security/SAST-IaC.latest.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml
 
+#######################################################################################################
+#                                       _    _                                       _                #
+#                                      | |  (_)                                     (_)               #
+#   ___   ___  _ __ ___    __ _  _ __  | |_  _   ___  ______ __   __ ___  _ __  ___  _   ___   _ __   #
+#  / __| / _ \| '_ ` _ \  / _` || '_ \ | __|| | / __||______|\ \ / // _ \| '__|/ __|| | / _ \ | '_ \  #
+#  \__ \|  __/| | | | | || (_| || | | || |_ | || (__          \ V /|  __/| |   \__ \| || (_) || | | | #
+#  |___/ \___||_| |_| |_| \__,_||_| |_| \__||_| \___|          \_/  \___||_|   |___/|_| \___/ |_| |_| #
+#######################################################################################################
 
-build:
+build_version_container:
+  image: docker:latest
   stage: build
-  image: node:latest
-  script:
-    - yarn
-  cache:
-    paths:
-      - node_modules/
-  artifacts:
-    expire_in: 1 days
-    when: on_success
-    paths:
-      - node_modules/
+  services:
+    - docker:dind
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-    - if: $CI_MERGE_REQUEST_IID
+      - changes:
+        - "**/doc/Dockerfile"
 
-test:
-  stage: test
-  image: node:latest
-  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
-  dependencies:
-    - build
+  variables:
+    DOCKER_FILDER: .ci/doc/
+  tags:
+    - docker
   script:
-    - yarn test:ci
-  cache:
-    paths:
-      - coverage/
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY/mwaldheim/waldheim.dev.homepage/version:latest $DOCKER_FILDER.
+    - docker push $CI_REGISTRY/mwaldheim/waldheim.dev.homepage/version:latest
+
+
+fetch-semantic-version:
+  image: registry.gitlab.com/mwaldheim/waldheim.dev.homepage/version
+  stage: build
+  needs:
+    - job: build_version_container
+      optional: true
+  script:
+    - npx semantic-release --generate-notes false --dry-run
+  tags:
+    - docker
   artifacts:
     paths:
-      - coverage/
-    when: always
-    reports:
-      junit:
-        - junit.xml
-      cobertura: coverage/cobertura-coverage.xml
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-    - if: $CI_MERGE_REQUEST_IID
+      - package.json
+      - CHANGELOG.md
 
-pages:
+release:
+  image: registry.gitlab.com/mwaldheim/waldheim.dev.homepage/version
   stage: deploy
-  dependencies:
-    - test
+  needs:
+    - job: fetch-semantic-version
   script:
-    - mkdir .public
-    - cp -r coverage/* .public
-    - mv .public public
+    - touch CHANGELOG.md
+    - npx semantic-release
   artifacts:
     paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-    - if: $CI_MERGE_REQUEST_IID
+      - package.json
+      - CHANGELOG.md
+      - dist/*.zip

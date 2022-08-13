@@ -1,0 +1,67 @@
+<header>
+  <div class="container">
+    <nav fxLayout fxLayoutAlign="space-between center">
+      <div class="brand" fxLayoutAlign="space-between center">
+        <img src="assets/forestdesign_icon.png" alt="Waldheim.dev" height="40px" width="40px">
+        <span>Waldheim.dev</span>
+        <app-tag>v{{version}}</app-tag>
+<!--        <app-nav class="button">-->
+<!--          <a href="#" target="_blank" class="button">-->
+<!--            Mein Service-->
+<!--          </a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="#" target="_blank" class="button">-->
+<!--            Ecodrive-->
+<!--          </a>-->
+<!--        </app-nav>-->
+      </div>
+      <div class="nav-list">
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-xing"></i>
+          </a>
+        </app-nav>
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-twitch"></i>
+          </a>
+        </app-nav>
+        <app-nav>
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </app-nav>
+      </div>
+    </nav>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div class="container">
+    <div class="card footer-card">
+      <div class="card-content content-center"  fxLayout="column" fxLayoutAlign="center center">
+        <figure fxLayoutAlign="center center" fxLayoutGap="1rem">
+          <img src="assets/forestdesign_icon.png" alt="Waldheim.dev" height="40px" width="40px">
+          <span>Waldheim.dev</span>
+        </figure>
+        <div class="action-row">
+          <a href="https://www.waldheim-it.de/" target="_blank">Waldheim IT-Beratung <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="mailto:info@waldheim.dev"><i class="fa-solid fa-envelope"></i> Kontakt</a>
+        </div>
+      </div>
+      <div class="card-footer content-center">
+        <div class="action-row">
+          <h3>Waldheim.dev</h3>
+          <a href="./">Home</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+          <a href="mailto:contact-project+mwaldheim-waldheim-dev-homepage-31853486-issue-@incoming.gitlab.com"><i class="fa-solid fa-envelope"></i> Bug
+            melden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,102 @@
+{
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    },
+    "@schematics/angular:application": {
+      "strict": true
+    }
+  },
+  "sourceRoot": "apps/waldheim-dev/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/waldheim-dev",
+        "index": "apps/waldheim-dev/src/index.html",
+        "main": "apps/waldheim-dev/src/main.ts",
+        "polyfills": "apps/waldheim-dev/src/polyfills.ts",
+        "tsConfig": "apps/waldheim-dev/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/waldheim-dev/src/favicon.ico",
+          "apps/waldheim-dev/src/assets"
+        ],
+        "styles": [
+          "apps/waldheim-dev/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/waldheim-dev/src/environments/environment.ts",
+              "with": "apps/waldheim-dev/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "waldheim-dev:build:production"
+        },
+        "development": {
+          "browserTarget": "waldheim-dev:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "waldheim-dev:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/waldheim-dev/src/test.ts",
+        "polyfills": "apps/waldheim-dev/src/polyfills.ts",
+        "tsConfig": "apps/waldheim-dev/tsconfig.spec.json",
+        "karmaConfig": "apps/waldheim-dev/karma.conf.js",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/waldheim-dev/src/favicon.ico",
+          "apps/waldheim-dev/src/assets"
+        ],
+        "styles": [
+          "apps/waldheim-dev/src/styles.scss"
+        ],
+        "scripts": []
+      }
+    }
+  }
+}

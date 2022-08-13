@@ -1,0 +1,17 @@
+section {
+  background-color: var(--secondary-container);
+  max-width: 100vw;
+  overflow: hidden;
+  .circle {
+    transition: margin-left 1s ease-in-out;
+  }
+  img {
+    filter: rgb(var(--on-secondary-container));
+  }
+}
+.container > div {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
