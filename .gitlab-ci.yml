@@ -19,4 +19,4 @@ include:
   - template: Security/Container-Scanning.gitlab-ci.yml
   - template: Security/Secret-Detection.gitlab-ci.yml
   - template: Security/License-Scanning.gitlab-ci.yml
-  - remote: https://gitlab.com/mwaldheim/container/-/raw/main/version/make_release.yml
+  - remote: https://gitlab.com/mwaldheim/container/-/raw/main/version/release.yml
