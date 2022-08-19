@@ -8,7 +8,8 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "postinstall": "node ./decorate-angular-cli.js",
-    "zip": "node zip.js"
+    "zip": "node zip.js",
+    "deploy": "firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "@angular/router": "~14.1.x",
     "@fortawesome/fontawesome-pro": "^6.1.x",
     "@nrwl/angular": "^14.5.x",
+    "firebase": "^9.9.3",
     "rxjs": "~7.5.x",
     "tslib": "^2.4.x",
     "zone.js": "~0.11.X"
@@ -32,6 +34,7 @@
     "@angular-devkit/build-angular": "~14.1.x",
     "@angular/cli": "~14.1.x",
     "@angular/compiler-cli": "~14.1.x",
+    "@nrwl/workspace": "14.5.x",
     "@types/jasmine": "~4.0.x",
     "@types/node": "^18.0.x",
     "jasmine-core": "~4.2.x",
@@ -40,9 +43,8 @@
     "karma-coverage": "~2.2.x",
     "karma-jasmine": "~5.1.x",
     "karma-jasmine-html-reporter": "~2.0.x",
-    "typescript": "~4.7.x",
-    "@nrwl/workspace": "14.5.x",
     "nx": "14.5.x",
-    "prettier": "^2.6.x"
+    "prettier": "^2.6.x",
+    "typescript": "~4.7.x"
   }
 }
