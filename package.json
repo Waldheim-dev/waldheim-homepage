@@ -9,7 +9,8 @@
     "test": "nx test",
     "postinstall": "node ./decorate-angular-cli.js",
     "zip": "node zip.js",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting",
+    "build:deploy": "nx build && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {

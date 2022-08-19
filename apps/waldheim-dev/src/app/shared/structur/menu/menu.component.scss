@@ -5,6 +5,7 @@
   width: 100%;
   min-height: calc(100vh - 76px);
   bottom: -200vh;
+  z-index: 1000;
   transition: bottom .4s ease-in-out;
 
   &.active {
@@ -22,7 +23,7 @@ span {
   width: 100%;
   padding: 2rem;
   border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 -.5rem 1rem rgba(0,0,0,.12);
+  box-shadow: var(--elevation-5);
   a.button {
     width: 100%;
   }
