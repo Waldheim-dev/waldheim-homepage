@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
     HomeComponent,
     PrivacyComponent,
     ImprintComponent,
+    ServicesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FlexLayoutModule, SharedModule],
   providers: [],

@@ -131,6 +131,10 @@ ul {
   text-align: center;
 }
 
+hr {
+  border-color: var(--primary);
+}
+
 
 @media screen and (max-width: 900px) {
   h1 {
