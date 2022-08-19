@@ -1,3 +1,13 @@
+## [22.3.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.2.0...v22.3.0) (2022-08-19)
+
+
+### :sparkles: Features
+
+* Add Favicons ([8c6b268](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/8c6b268fbfa923ab40c37bfb889af25e41984638))
+* Add Firebase deploy ([0dfc738](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0dfc7380d0b591e279fa30249efad38c8191e7ee))
+* Add responsive Menu ([9d45b60](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9d45b60893c530ffa58ee58675272e3320a006b7))
+* Add Service-Page ([b756f62](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b756f626e5c08cbd23096c13fee81d8b265495c1))
+
 ## [22.2.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.1.0...v22.2.0) (2022-08-19)
 
 
