@@ -3,7 +3,12 @@
   <div #circle class="container" gdAlignColumns="stretch stretch"
        gdAuto="row"
        gdColumns="repeat(7,1fr)" gdGap="1rem"
-       gdRows="repeat(3,minmax(60px,1fr))">
+       gdRows="repeat(3,minmax(60px,1fr))"
+       gdColumns.lt-md="repeat(5,1fr)"
+       gdRows.lt-md="repeat(4,minmax(60px,1fr))"
+       gdColumns.lt-sm="repeat(3,1fr)"
+       gdRows.lt-sm="repeat(7,minmax(60px,1fr))"
+  >
     <app-card elevation gdColumn="auto / span 1" gdRow="auto / span 1">
       <div fxLayoutAlign="center center">
         <img src="assets/brands/angular-icon-1.svg" height="50px" width="47px">

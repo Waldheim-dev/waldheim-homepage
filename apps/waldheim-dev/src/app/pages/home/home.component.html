@@ -1,17 +1,17 @@
-<section class="container" fxLayoutGap="1rem" fxLayoutAlign="space-between strech">
-  <div fxFlex="70%">
+<section class="container" fxLayoutGap="1rem" fxLayoutAlign="space-between strech" fxLayout.lt-md="column">
+  <div fxFlex="70%" fxFlex.lt-md="100%">
   <h1>Markus Waldheim<br>
     <small>Software als Leidenschaft</small></h1>
   </div>
-  <div fxFlex="300px" fxLayoutAlign="strech strech">
-    <app-cloudcard fxFlex="300px" ></app-cloudcard>
+  <div fxFlex="300px" fxLayoutAlign="strech strech" fxFlex.lt-md="100%">
+    <app-cloudcard fxFlex="300px" fxFlex.lt-md="100%" ></app-cloudcard>
   </div>
 </section>
 
 <section class="container">
   <h2>Mein Service</h2>
-  <div class="section-24">
-    <div fxFlex="calc((100% - 3rem) / 4)">
+  <div class="section-24" fxLayout="row" fxLayout.lt-md="row wrap">
+    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card primary elevation>
 
         <div class="pre-icon"><i class="fa-regular fa-laptop-code fa-2x fa-fw"></i></div>
@@ -25,8 +25,8 @@
         </app-nav>
       </app-card>
     </div>
-    <div fxFlex="1rem"></div>
-    <div fxFlex="calc((100% - 3rem) / 4)">
+    <div fxFlex="1rem" fxHide.lt-sm></div>
+    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card secondary elevation>
         <div class="pre-icon"><i class="fa-regular fa-rocket-launch fa-fw fa-2x"></i></div>
         <h3>Design</h3>
@@ -39,8 +39,8 @@
         </app-nav>
       </app-card>
     </div>
-    <div fxFlex="1rem"></div>
-    <div fxFlex="calc((100% - 3rem) / 4)">
+    <div fxFlex="1rem" fxHide.lt-md></div>
+    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card tertiary elevation>
         <div class="pre-icon"><i class="fa-regular fa-code-fork fa-fw fa-2x"></i></div>
         <h3>Automatisierung</h3>
@@ -53,13 +53,17 @@
         </app-nav>
       </app-card>
     </div>
-    <div fxFlex="1rem"></div>
-    <div fxFlex="calc((100% - 3rem) / 4)">
-      <app-card elevation>
-        <h3 class="h2">Mehr Service</h3>
-
+    <div fxFlex="1rem" fxHide.lt-sm></div>
+    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
+      <app-card error elevation>
+        <div class="pre-icon"><i class="fa-brands fa-microsoft fa-fw fa-2x"></i></div>
+        <h3>Systeme</h3>
+        <ul>
+          <li>Installation</li>
+          <li>Support</li>
+        </ul>
         <app-nav class="button">
-          <a class="button"><i class="fa-regular fa-angle-right fa-fw fa-2x"></i></a>
+          <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
         </app-nav>
       </app-card>
     </div>
@@ -75,50 +79,50 @@
 
 <section class="container">
   <h2>Meine Projekte</h2>
-  <div fxLayoutGap="1rem" fxLayout="row wrap" fxLayoutAlign="space-between start">
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+  <div fxLayoutGap="1rem" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="stretch stretch">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>Studymaster</h3>
       <small>Als Arbeit in der Interface AG</small>
       <p>dieses Projekt ist dafür da, um bei Kindern im jungen Alter Diabetes zu erkennen.</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>Ecodrive</h3>
       <small>Als Arbeit in der Waldheim.dev</small>
       <p>Protokollieren Sie Ihre effizients Ihres Fuhrparks und prüfen Sie, wie groß Ihr ökologischer Fußabdruck ist,</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>Waldheim.dev (Homepage)</h3>
       <small>Als Arbeit in der Waldheim.dev</small>
       <p>Aufbauen eines neuen Webseiten-Designs</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>Waldheim-it.de (Homepage)</h3>
       <small>Als Arbeit in der Waldheim.dev</small>
       <p>Aufbauen eines neuen Webseiten-Designs</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>SEWOBE.de (Homepage)</h3>
       <small>Als Arbeit in der SEWOBE AG</small>
       <p>Aufbauen eines neuen Webseiten-Designs</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>SEWOBE.de (Redesign)</h3>
       <small>Als Arbeit in der SEWOBE AG</small>
       <p>Aufbauen eines neuen Designs für die Neuentwicklung</p>
       <a class="button">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
     </app-card>
-    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )">
+    <app-card elevation fxFlex="calc((100% - 1rem) / 3 )" fxFlex.lt-md="100%">
       <img>
       <h3>SEWOBE.de (Onlinesoftware)</h3>
       <small>Als Arbeit in der SEWOBE AG</small>
