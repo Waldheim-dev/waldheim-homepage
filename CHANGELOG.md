@@ -1,3 +1,10 @@
+## [22.3.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.3.0...v22.3.1) (2022-08-19)
+
+
+### :bug: Fixes
+
+* Add tools ([9cd0639](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9cd0639373d9b0fcb2d06007c35f7073cf2d0819))
+
 ## [22.3.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.2.0...v22.3.0) (2022-08-19)
 
 
