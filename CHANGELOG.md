@@ -1,3 +1,20 @@
+## [22.2.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.1.0...v22.2.0) (2022-08-19)
+
+
+### :repeat: Build System
+
+* change Update Pipeline ([fcb84bf](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/fcb84bfa307b15b2c8f4d3a4d792da4f0e3e4e2e))
+
+
+### :sparkles: Features
+
+* Impressum eingefügt ([6b38d82](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/6b38d82b8e9a12da9e8bd779cf6518afbd53fe63))
+
+
+### :barber: Style
+
+* Home-Seite responsive gemacht ([f4943ea](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/f4943eaa9e269801f0debdf3542426dbf80bc491))
+
 ## [22.1.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.0.0...v22.1.0) (2022-08-13)
 
 
