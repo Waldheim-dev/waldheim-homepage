@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import  pack  from '../../../../package.json';
 
 
 @Component({
@@ -8,9 +7,5 @@ import  pack  from '../../../../package.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  version = '0.0.0';
-
-  constructor() {
-    this.version = pack.version;
-  }
+  isSticky: boolean = false;
 }
