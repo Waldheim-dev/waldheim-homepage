@@ -1,0 +1,41 @@
+<div class="container">
+  <div fxFlex="70%">
+    <router-outlet></router-outlet>
+  </div>
+  <div fxFlex="30%">
+    <app-card>
+      <h3>Ändere Projekte</h3>
+      <div class="group" fxLayout="column">
+        <h4>Waldheim.dev</h4>
+        <app-nav class="button">
+          <a href="projects/waldheim-dev/homepage" routerLinkActive="active" class="button">Homepage</a>
+        </app-nav>
+        <app-nav class="button">
+          <a href="projects/waldheim-dev/ecodrive" routerLinkActive="active" class="button">Ecodrive</a>
+        </app-nav>
+        <hr>
+        <h4>Waldheim-it.de</h4>
+        <app-nav class="button">
+          <a href="projects/waldheim-it/homepage" routerLinkActive="active" class="button">Homepage</a>
+        </app-nav>
+        <hr>
+        <h4>Interface AG</h4>
+        <app-nav class="button">
+          <a href="projects/interface/studymaster" routerLinkActive="active" class="button">Studymaster</a>
+        </app-nav>
+        <hr>
+        <h4>SEWOBE AG</h4>
+        <app-nav class="button">
+          <a href="projects/sewobe/homepage" routerLinkActive="active" class="button">Homepage</a>
+        </app-nav>
+        <app-nav class="button">
+          <a href="projects/sewobe/design" routerLinkActive="active" class="button">Design</a>
+        </app-nav>
+        <app-nav class="button">
+          <a href="projects/sewobe/onlinesoftware" routerLinkActive="active" class="button">Software</a>
+        </app-nav>
+
+      </div>
+    </app-card>
+  </div>
+</div>

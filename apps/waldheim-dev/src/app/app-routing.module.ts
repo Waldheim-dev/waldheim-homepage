@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'datenschutz', component: PrivacyComponent},
   {path: 'impressum', component: ImprintComponent},
   {path: 'service', component: ServicesComponent},
+  {path: 'projects', loadChildren: () => import('./pages/projects/project.module').then((m) => m.ProjectModule)}
 ];
 
 @NgModule({
