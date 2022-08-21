@@ -1,0 +1,22 @@
+.group {
+  margin-top: 1rem;
+  padding: 0 0 1rem 0;
+  border: 1px solid var(--outline);
+  border-radius: 1rem;
+  h4 {
+    padding: 1rem 1rem;
+  }
+
+  app-nav {
+    padding: 0 !important;
+  }
+  a.button {
+    width: calc(100% - 1rem);
+    width: -webkit-fill-available;
+    border-radius: 2rem;
+    &:hover {
+      background-color: var(--primary-container);
+
+    }
+  }
+}

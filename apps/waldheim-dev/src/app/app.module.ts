@@ -18,7 +18,7 @@ import { ServicesComponent } from './pages/services/services.component';
     ImprintComponent,
     ServicesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FlexLayoutModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

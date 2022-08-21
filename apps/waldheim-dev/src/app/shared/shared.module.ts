@@ -28,7 +28,9 @@ import {RouterModule} from "@angular/router";
     CardComponent,
     BrandsComponent,
     EcodrivePreviewComponent,
-    MenuComponent
+    MenuComponent,
+    FlexLayoutModule,
+    RouterModule
   ],
 })
 export class SharedModule {}
