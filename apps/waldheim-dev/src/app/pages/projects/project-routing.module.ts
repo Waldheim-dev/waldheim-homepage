@@ -20,16 +20,16 @@ const routes: Routes = [
         {path: 'homepage', component: WaldheimItHomepageComponent},
       ]
     },
-    {path: 'interface', children: [
-        {path: 'studymaster', component: InterfaceStudymasterComponent},
-      ]
-    },
-    {path: 'sewobe', children: [
-        {path: 'homepage', component: SewobeHomepageComponent},
-        {path: 'design', component: SewobeRedesignComponent},
-        {path: 'software', component: SewobeOnlinesoftwareComponent},
-      ]
-    },
+    // {path: 'interface', children: [
+    //     {path: 'studymaster', component: InterfaceStudymasterComponent},
+    //   ]
+    // },
+    // {path: 'sewobe', children: [
+    //     {path: 'homepage', component: SewobeHomepageComponent},
+    //     {path: 'design', component: SewobeRedesignComponent},
+    //     {path: 'software', component: SewobeOnlinesoftwareComponent},
+    //   ]
+    // },
   ]}
 ];
 

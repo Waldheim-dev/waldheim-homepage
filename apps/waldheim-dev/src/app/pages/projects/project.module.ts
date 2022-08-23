@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FlexModule } from '@angular/flex-layout';
 import { SharedModule } from '../../shared/shared.module';
 
 import { ProjectRoutingModule } from './project-routing.module';
@@ -11,6 +9,7 @@ import { WaldheimDevEcodriveComponent } from './waldheim-dev/ecodrive/waldheim-d
 import { InterfaceStudymasterComponent } from './interface/studymaster/interface-studymaster.component';
 import { WaldheimItHomepageComponent } from './waldheim-it/homepage/waldheim-it-homepage.component';
 import { ProjectsComponent } from './projects.component';
+import {WaldheimDevHomepageComponent} from "./waldheim-dev/homepage/waldheim-dev-homepage.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { ProjectsComponent } from './projects.component';
     SewobeRedesignComponent,
     SewobeHomepageComponent,
     WaldheimItHomepageComponent,
-    WaldheimItHomepageComponent,
+    WaldheimDevHomepageComponent,
     WaldheimDevEcodriveComponent,
     InterfaceStudymasterComponent,
     ProjectsComponent,
