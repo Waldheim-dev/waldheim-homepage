@@ -1,3 +1,20 @@
+## [22.4.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.3.1...v22.4.0) (2022-08-23)
+
+
+### :repeat: Chores
+
+* Fix typo errors ([9416bba](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9416bbab24be0d62fc72ebb67fca6726a611d338))
+
+
+### :sparkles: Features
+
+* add Features page ([acd9663](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/acd9663a1bb6ab8b5aad798614159265f5bd8114))
+
+
+### :bug: Fixes
+
+* Add Projects for Waldheim-dev and Waldheim-IT ([a39aa9d](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/a39aa9df40e40c7d42dbc81463b155f991457ca2))
+
 ## [22.3.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.3.0...v22.3.1) (2022-08-19)
 
 
