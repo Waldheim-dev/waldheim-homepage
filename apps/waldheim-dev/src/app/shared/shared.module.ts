@@ -10,27 +10,38 @@ import { EcodrivePreviewComponent } from './structur/ecodrive-preview/ecodrive-p
 import { MenuComponent } from './structur/menu/menu.component';
 import {RouterModule} from "@angular/router";
 
+const COMP_IMPORT_EXPORT = [
+  NavComponent,
+  TagComponent,
+  CloudcardComponent,
+  CardComponent,
+  BrandsComponent,
+  EcodrivePreviewComponent,
+  MenuComponent,
+];
+const COMP_IMPORT_ONLY: never[] = [
+
+];
+const MOD_IMPORT_EXPORT = [
+  FlexLayoutModule,
+  RouterModule
+];
+const MOD_IMPORT_ONLY = [
+  CommonModule
+];
+
 @NgModule({
   declarations: [
-    NavComponent,
-    TagComponent,
-    CloudcardComponent,
-    CardComponent,
-    BrandsComponent,
-    EcodrivePreviewComponent,
-    MenuComponent,
+    ...COMP_IMPORT_EXPORT,
+    ...COMP_IMPORT_ONLY
   ],
-  imports: [CommonModule, FlexLayoutModule, RouterModule],
+  imports: [
+    ...MOD_IMPORT_ONLY,
+    ...MOD_IMPORT_EXPORT,
+    ],
   exports: [
-    NavComponent,
-    TagComponent,
-    CloudcardComponent,
-    CardComponent,
-    BrandsComponent,
-    EcodrivePreviewComponent,
-    MenuComponent,
-    FlexLayoutModule,
-    RouterModule
+    ...MOD_IMPORT_EXPORT,
+    ...COMP_IMPORT_EXPORT
   ],
 })
 export class SharedModule {}

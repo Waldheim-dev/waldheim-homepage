@@ -1,8 +1,8 @@
-<div class="container">
-  <div fxFlex="70%">
+<div class="container" fxLayout="row" fxLayout.lt-lg="column">
+  <div fxFlex="70%" fxFlex.lt-lg="100%">
     <router-outlet></router-outlet>
   </div>
-  <div fxFlex="30%">
+  <div fxFlex="30%" fxFlex.lt-lg="100%">
     <app-card>
       <h3>Ändere Projekte</h3>
       <div class="group" fxLayout="column">
@@ -13,27 +13,39 @@
         <app-nav class="button">
           <a href="projects/waldheim-dev/ecodrive" routerLinkActive="active" class="button">Ecodrive</a>
         </app-nav>
+<!--        <app-nav class="button">-->
+<!--          <a href="#" routerLinkActive="active" class="button">Netbox Ausgabeschein <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="#" routerLinkActive="active" class="button">Budget App <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="#" routerLinkActive="active" class="button">Firetime App <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="#" routerLinkActive="active" class="button">FirstAid App <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
         <hr>
         <h4>Waldheim-it.de</h4>
         <app-nav class="button">
-          <a href="projects/waldheim-it/homepage" routerLinkActive="active" class="button">Homepage</a>
+          <a href="projects/waldheim-it/homepage" routerLinkActive="active" class="button">Homepage & CI</a>
         </app-nav>
         <hr>
-        <h4>Interface AG</h4>
-        <app-nav class="button">
-          <a href="projects/interface/studymaster" routerLinkActive="active" class="button">Studymaster</a>
-        </app-nav>
-        <hr>
-        <h4>SEWOBE AG</h4>
-        <app-nav class="button">
-          <a href="projects/sewobe/homepage" routerLinkActive="active" class="button">Homepage</a>
-        </app-nav>
-        <app-nav class="button">
-          <a href="projects/sewobe/design" routerLinkActive="active" class="button">Design</a>
-        </app-nav>
-        <app-nav class="button">
-          <a href="projects/sewobe/onlinesoftware" routerLinkActive="active" class="button">Software</a>
-        </app-nav>
+<!--        <h4>Interface AG</h4>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="projects/interface/studymaster" routerLinkActive="active" class="button">Studymaster <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <hr>-->
+<!--        <h4>SEWOBE AG</h4>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="projects/sewobe/homepage" routerLinkActive="active" class="button">Homepage <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="projects/sewobe/design" routerLinkActive="active" class="button">Design <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
+<!--        <app-nav class="button">-->
+<!--          <a href="projects/sewobe/onlinesoftware" routerLinkActive="active" class="button">Software <app-tag>DRAFT</app-tag></a>-->
+<!--        </app-nav>-->
 
       </div>
     </app-card>
