@@ -1,3 +1,10 @@
+## [22.4.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.1...v22.4.2) (2022-08-26)
+
+
+### :bug: Fixes
+
+* Add Studymaster-Projectdescriptions ([5576ba7](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/5576ba78879a7e1cf860df76a93aebea5cb7c58d))
+
 ## [22.4.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.0...v22.4.1) (2022-08-26)
 
 
