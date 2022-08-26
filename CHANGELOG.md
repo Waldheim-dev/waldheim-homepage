@@ -1,3 +1,10 @@
+## [22.4.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.0...v22.4.1) (2022-08-26)
+
+
+### :bug: Fixes
+
+* Add SEWOBE-Projectdescriptions ([046ebb7](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/046ebb77315dcdde564adcd2396e1e6d8a230ce5))
+
 ## [22.4.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.3.1...v22.4.0) (2022-08-23)
 
 
