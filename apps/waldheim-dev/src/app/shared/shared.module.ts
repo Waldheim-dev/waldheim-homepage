@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavComponent } from './structur/nav/nav.component';
 import { TagComponent } from './structur/tag/tag.component';
@@ -24,7 +24,8 @@ const COMP_IMPORT_ONLY: never[] = [
 ];
 const MOD_IMPORT_EXPORT = [
   FlexLayoutModule,
-  RouterModule
+  RouterModule,
+  NgOptimizedImage
 ];
 const MOD_IMPORT_ONLY = [
   CommonModule
@@ -35,9 +36,9 @@ const MOD_IMPORT_ONLY = [
     ...COMP_IMPORT_EXPORT,
     ...COMP_IMPORT_ONLY
   ],
-  imports: [
-    ...MOD_IMPORT_ONLY,
-    ...MOD_IMPORT_EXPORT,
+    imports: [
+        ...MOD_IMPORT_ONLY,
+        ...MOD_IMPORT_EXPORT,
     ],
   exports: [
     ...MOD_IMPORT_EXPORT,
