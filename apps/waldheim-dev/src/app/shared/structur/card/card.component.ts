@@ -30,6 +30,18 @@ export class CardComponent implements OnInit {
 
   private _elevation: boolean = false;
 
+  @Input()
+  @HostBinding('class.is-outline')
+  get outline(): boolean {
+    return this._outline;
+  }
+
+  set outline(value: BooleanInput) {
+    this._outline = coerceBooleanProperty(value);
+  }
+
+  private _outline: boolean = false;
+
 
   constructor(public _elementRef: ElementRef) {
     for (const attr of COLORS) {

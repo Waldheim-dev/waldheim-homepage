@@ -80,6 +80,9 @@ app-card {
   &.is-elevation {
     box-shadow: var(--elevation-1);
   }
+  &.is-outline {
+    border: 1px solid var(--outline);
+  }
 
   .pre-icon {
     display: inline-block;
