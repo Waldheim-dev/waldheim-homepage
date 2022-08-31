@@ -1,3 +1,21 @@
+## [22.5.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.2...v22.5.0) (2022-08-31)
+
+
+### :sparkles: Features
+
+* Add Img to Card ([d35a5d3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/d35a5d3398cfbd9b7aec4b85f2226db11e8142e0))
+* Add Img to Projects in Home ([dfbd287](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/dfbd287a7af1826d68592d173b791d72caec4c71))
+* Add Img to Projects in Projects (SEWOBE, Waldheim-IT, Waldheim.dev) ([7541cd1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/7541cd1b043a3cde97697039379636023526a554))
+* Update to Angular 14.2 ([5ba3156](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/5ba3156948c43b319c18e93fd2ef5f6606d39d87))
+* Use NgOptimizedImage and add Spring and Stencil ([ff23daa](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/ff23daaa4f78ce5603a7c478d05fcd5aea01c377))
+
+
+### :bug: Fixes
+
+* Add "Not available" to Ecodrive price table ([a6645bc](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/a6645bc178c266e3368efe742223ab7e8888220f))
+* Korrektur von Style der Cards ([21f4677](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/21f4677ad0a5f52345b0cbd4ceab2f2abdb3bb4a))
+* Optimize Navigation ([16afa82](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/16afa820852bd066b846c11f162eaaec92439311))
+
 ## [22.4.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.1...v22.4.2) (2022-08-26)
 
 
