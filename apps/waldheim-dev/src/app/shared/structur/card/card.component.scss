@@ -87,4 +87,11 @@ app-card {
     padding: .5rem;
     margin-bottom: 1rem;
   }
+  img {
+    max-width: calc(100% + 2rem);
+    margin: -1rem;
+    margin-bottom: 1rem;
+  }
 }
+
+
