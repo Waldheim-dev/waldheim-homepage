@@ -1,3 +1,10 @@
+## [22.5.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.1...v22.5.2) (2022-08-31)
+
+
+### :bug: Fixes
+
+* Add Help Center ([06cdb14](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/06cdb14bb9ef7db12d9e8b9606feda6519aef332))
+
 ## [22.5.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.0...v22.5.1) (2022-08-31)
 
 
