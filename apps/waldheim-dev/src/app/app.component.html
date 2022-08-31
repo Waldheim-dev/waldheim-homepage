@@ -1,4 +1,4 @@
-<header  class="sticky">
+<header class="sticky">
   <div class="container">
     <app-menu></app-menu>
   </div>
@@ -9,24 +9,61 @@
 <footer>
   <div class="container">
     <div class="card footer-card">
-      <div class="card-content content-center"  fxLayout="column" fxLayoutAlign="center center">
+      <div class="card-content content-center" fxLayout="column" fxLayoutAlign="center center">
         <figure fxLayoutAlign="center center" fxLayoutGap="1rem">
           <img src="assets/forestdesign_icon.png" alt="Waldheim.dev" height="40px" width="40px">
           <span>Waldheim.dev</span>
         </figure>
         <div fxLayout="row wrap" fxLayoutAlign="center center">
-          <a href="https://www.waldheim-it.de/" target="_blank">Waldheim IT-Beratung <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          <a href="mailto:kontakt@waldheim.dev"><i class="fa-solid fa-envelope"></i> Kontakt</a>
+          <app-nav class="button">
+            <a href="https://www.waldheim-it.de/" class="button" target="_blank">Waldheim IT-Beratung <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </app-nav>
+          <app-nav class="button">
+            <a href="mailto:kontakt@waldheim.dev" class="button"><i class="fa-solid fa-envelope"></i> Kontakt</a>
+          </app-nav>
+          <app-nav>
+            <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank">
+              <i class="fa-brands fa-xing"></i>
+            </a>
+          </app-nav>
+          <app-nav>
+            <a href="https://gitlab.com/mwaldheim" target="_blank">
+              <i class="fa-brands fa-gitlab"></i>
+            </a>
+          </app-nav>
+          <app-nav>
+            <a href="https://www.twitch.tv/blackbird995" target="_blank">
+              <i class="fa-brands fa-twitch"></i>
+            </a>
+          </app-nav>
+          <app-nav>
+            <a href="https://twitter.com/my_codec" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </app-nav>
         </div>
       </div>
       <div class="card-footer content-center">
         <div fxLayout="row wrap" fxLayoutAlign="center center">
           <h3>Waldheim.dev</h3>
-          <a routerLink="/">Home</a>
-          <a routerLink="datenschutz">Datenschutz</a>
-          <a routerLink="imprint">Impressum</a>
-          <a href="mailto:contact-project+mwaldheim-waldheim-dev-homepage-31853486-issue-@incoming.gitlab.com"><i class="fa-solid fa-envelope"></i> Bug
-            melden</a>
+
+          <app-nav class="button">
+            <a routerLink="/" class="button">Home</a>
+          </app-nav>
+
+          <app-nav class="button">
+            <a routerLink="datenschutz" class="button">Datenschutz</a>
+          </app-nav>
+
+          <app-nav class="button">
+          <a routerLink="imprint" class="button">Impressum</a>
+          </app-nav>
+          <app-nav class="button">
+            <a href="mailto:contact-project+mwaldheim-waldheim-dev-homepage-31853486-issue-@incoming.gitlab.com" class="button"><i
+              class="fa-solid fa-envelope"></i> Bug
+              melden</a>
+          </app-nav>
         </div>
       </div>
     </div>
