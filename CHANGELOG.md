@@ -1,3 +1,13 @@
+## [22.5.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.0...v22.5.1) (2022-08-31)
+
+
+### :bug: Fixes
+
+* add asset-class to projects (sewobe, waldheim.dev) ([4bf9730](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/4bf973041dcdd84b9a83a67a030d7c803f006d1a))
+* add social media to cloudcard ([2ae09e6](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/2ae09e66309dee356a92e5e2cc573a26a1c7eb7b))
+* make footer links to buttons ([95c8527](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/95c8527fd9d1ff24c6b63e9e7dc9ee703eb923a4))
+* make sidenav sticky ([bdf8b7e](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/bdf8b7eed5a5a4cf1a65ef79ffb292242e4f3d51))
+
 ## [22.5.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.4.2...v22.5.0) (2022-08-31)
 
 
