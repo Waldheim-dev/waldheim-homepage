@@ -18,11 +18,20 @@
 
     }
   }
-  .assets {
-    position: relative;
-    img {
-      aspect-ratio: 16/9;
-      width: 100%;
-    }
+}
+.assets {
+  position: relative;
+  img {
+    width: calc(100% - 1rem) !important;
+    min-width: calc(100% - 1rem) !important;
+  }
+}
+
+app-projects {
+  app-card[outline] {
+    position: sticky;
+    top: calc(76px + 1rem);
+    max-height: calc(100vh - 76px - 4rem);
+    overflow: auto;
   }
 }
