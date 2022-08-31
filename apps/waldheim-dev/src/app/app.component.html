@@ -1,6 +1,6 @@
-<header  [ngClass]="{'sticky': isSticky}">
+<header  class="sticky">
   <div class="container">
-    <app-menu (isMenuEvent)="isSticky = $event"></app-menu>
+    <app-menu></app-menu>
   </div>
 </header>
 <main>

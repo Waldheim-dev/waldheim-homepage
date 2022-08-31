@@ -7,9 +7,9 @@
         <i class="fa-solid fa-times fa-fw" *ngIf="isMenuOpen"></i>
       </a>
     </app-nav>
-    <img src="assets/forestdesign_icon.png" alt="Waldheim.dev" height="40px" width="40px">
-    <span>Waldheim.dev</span>
-    <app-tag>v{{version}}</app-tag>
+    <img src="assets/forestdesign_icon.png" routerLink="/" alt="Waldheim.dev" height="40px" width="40px">
+    <span routerLink="/">Waldheim.dev</span>
+    <app-tag routerLink="/">v{{version}}</app-tag>
     <div class="nav-list" fxHide.lt-md>
       <app-nav class="button">
         <a routerLink="services" class="button">
@@ -59,25 +59,27 @@
       </a>
     </app-nav>
     <hr>
-    <app-nav class="button">
-      <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" class="button">
-        <i class="fa-brands fa-xing"></i> Xing
-      </a>
-    </app-nav>
-    <app-nav class="button">
-      <a href="https://gitlab.com/mwaldheim" target="_blank" class="button">
-        <i class="fa-brands fa-gitlab"></i> Gitlab
-      </a>
-    </app-nav>
-    <app-nav class="button">
-      <a href="https://www.twitch.tv/blackbird995" target="_blank" class="button">
-        <i class="fa-brands fa-twitch"></i> Twitch
-      </a>
-    </app-nav>
-    <app-nav class="button">
-      <a href="https://twitter.com/my_codec" target="_blank" class="button">
-        <i class="fa-brands fa-twitter"></i> Twitter
-      </a>
-    </app-nav>
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+        <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" class="button">
+          <i class="fa-brands fa-xing"></i> Xing
+        </a>
+      </app-nav>
+      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+        <a href="https://gitlab.com/mwaldheim" target="_blank" class="button">
+          <i class="fa-brands fa-gitlab"></i> Gitlab
+        </a>
+      </app-nav>
+      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+        <a href="https://www.twitch.tv/blackbird995" target="_blank" class="button">
+          <i class="fa-brands fa-twitch"></i> Twitch
+        </a>
+      </app-nav>
+      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+        <a href="https://twitter.com/my_codec" target="_blank" class="button">
+          <i class="fa-brands fa-twitter"></i> Twitter
+        </a>
+      </app-nav>
+    </div>
   </div>
 </div>
