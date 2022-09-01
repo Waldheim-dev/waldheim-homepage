@@ -1,3 +1,12 @@
+## [22.5.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.2...v22.5.3) (2022-09-01)
+
+
+### :bug: Fixes
+
+* add images to ecodrive and studymaster ([0472155](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0472155347ce13782bea2302972511a23fe2aaee))
+* add Netbox to Projects ([a9fd888](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/a9fd888ed18afb872477486e0db7938eee96582a))
+* Migrate nx.dev to 14.6.1 ([8cb9f42](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/8cb9f422db2af7bdb73d05a6acdb3ef025806c81))
+
 ## [22.5.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.1...v22.5.2) (2022-08-31)
 
 
