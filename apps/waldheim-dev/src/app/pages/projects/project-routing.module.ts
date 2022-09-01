@@ -8,12 +8,14 @@ import { SewobeRedesignComponent } from './sewobe/redesign/sewobe-redesign.compo
 import { WaldheimDevEcodriveComponent } from './waldheim-dev/ecodrive/waldheim-dev-ecodrive.component';
 import { WaldheimDevHomepageComponent } from './waldheim-dev/homepage/waldheim-dev-homepage.component';
 import { WaldheimItHomepageComponent } from './waldheim-it/homepage/waldheim-it-homepage.component';
+import {WaldheimDevAusgabescheinComponent} from "./waldheim-dev/ausgabeschein/waldheim-dev-ausgabeschein.component";
 
 const routes: Routes = [
   {path:'', component: ProjectsComponent, children: [
     {path: 'waldheim-dev', children: [
         {path: 'homepage', component: WaldheimDevHomepageComponent},
         {path: 'ecodrive', component: WaldheimDevEcodriveComponent},
+        {path: 'ausgabeschein', component: WaldheimDevAusgabescheinComponent},
       ]
     },
     {path: 'waldheim-it', children: [

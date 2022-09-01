@@ -9,7 +9,8 @@ import { WaldheimDevEcodriveComponent } from './waldheim-dev/ecodrive/waldheim-d
 import { InterfaceStudymasterComponent } from './interface/studymaster/interface-studymaster.component';
 import { WaldheimItHomepageComponent } from './waldheim-it/homepage/waldheim-it-homepage.component';
 import { ProjectsComponent } from './projects.component';
-import {WaldheimDevHomepageComponent} from "./waldheim-dev/homepage/waldheim-dev-homepage.component";
+import { WaldheimDevHomepageComponent } from './waldheim-dev/homepage/waldheim-dev-homepage.component';
+import { WaldheimDevAusgabescheinComponent } from './waldheim-dev/ausgabeschein/waldheim-dev-ausgabeschein.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {WaldheimDevHomepageComponent} from "./waldheim-dev/homepage/waldheim-dev
     WaldheimDevEcodriveComponent,
     InterfaceStudymasterComponent,
     ProjectsComponent,
+    WaldheimDevAusgabescheinComponent,
   ],
   imports: [ProjectRoutingModule, SharedModule],
 })
