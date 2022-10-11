@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isSticky: boolean = false;
+  untilDate(date: string) {
+    return new Date() >= new Date(date);
+  }
 }

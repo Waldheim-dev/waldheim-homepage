@@ -3,6 +3,14 @@
     <app-menu></app-menu>
   </div>
 </header>
+<div class="banner" [fxHide]="untilDate('01.01.2023')">
+  <div class="container" fxLayoutAlign="space-between center" fxLayout.lt-lg="column" fxLayoutGap="1rem">
+    <h3>🎉 Liebe Kunden, wir sind umgezogen. Bitte achtet darauf, dass alle Anschriebe nun an die neue Adresse gehen.</h3>
+    <app-nav >
+      <a routerLink="imprint" class="button"><i class="fa-solid fa-2x fa-arrow-right"></i></a>
+    </app-nav>
+  </div>
+</div>
 <main>
   <router-outlet></router-outlet>
 </main>
