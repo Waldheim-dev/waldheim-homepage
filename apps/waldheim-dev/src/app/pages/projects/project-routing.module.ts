@@ -8,7 +8,9 @@ import { SewobeRedesignComponent } from './sewobe/redesign/sewobe-redesign.compo
 import { WaldheimDevEcodriveComponent } from './waldheim-dev/ecodrive/waldheim-dev-ecodrive.component';
 import { WaldheimDevHomepageComponent } from './waldheim-dev/homepage/waldheim-dev-homepage.component';
 import { WaldheimItHomepageComponent } from './waldheim-it/homepage/waldheim-it-homepage.component';
-import {WaldheimDevAusgabescheinComponent} from "./waldheim-dev/ausgabeschein/waldheim-dev-ausgabeschein.component";
+import { WaldheimDevAusgabescheinComponent } from "./waldheim-dev/ausgabeschein/waldheim-dev-ausgabeschein.component";
+import { MvObermeitingenInKonzertComponent } from "./mv-obermeitingen/in-konzert/mv-obermeitingen-in-konzert.component";
+import { MvObermeitingenHomepageComponent } from "./mv-obermeitingen/homepage/mv-obermeitingen-homepage.component";
 
 const routes: Routes = [
   {path:'', component: ProjectsComponent, children: [
@@ -20,6 +22,11 @@ const routes: Routes = [
     },
     {path: 'waldheim-it', children: [
         {path: 'homepage', component: WaldheimItHomepageComponent},
+      ]
+    },
+    {path: 'mv-obermeitingen', children: [
+        {path: 'homepage', component: MvObermeitingenHomepageComponent},
+        {path: 'in-konzert', component: MvObermeitingenInKonzertComponent},
       ]
     },
     {path: 'interface', children: [
