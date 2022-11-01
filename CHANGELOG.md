@@ -1,3 +1,36 @@
+## [22.6.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.3...v22.6.0) (2022-11-01)
+
+
+### :repeat: Build System
+
+* Optimize Zip-File of Release ([29ba65f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/29ba65f54f2cd3373bdadf6a29a5d9907281da19))
+
+
+### :barber: Style
+
+* Add more Space to ULs in Project descriptions and remove scrollable content for mobile devices of other projects ([90ca92f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/90ca92fff66b3feef55dd63c06321def5a44ea99))
+* fix height of header image into cards ([9fca047](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9fca04743e7464a8c6084934bcc190d732bc4893))
+
+
+### :sparkles: Features
+
+* Add Banner of new Information ([7764142](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/7764142057f28faaaf70197dc070f812e5dfec0b))
+* Add images of sewobe projects ([8277cf8](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/8277cf85199cb9923221195625c85df2dbab1966))
+* Add new Projects of MV Obermeitingen e.V. ([3ff3032](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/3ff3032f61e44de85eeea519702ae6288ac6961d))
+* Add new projects on home ([129ec21](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/129ec2114556f76cb3033b5a9bb800c0b4fb012e))
+* Optimize Home for more context ([ab97a60](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/ab97a606a725a25ad537b56ce3d9aba65c7ff166))
+
+
+### :bug: Fixes
+
+* Add no Images image ([9e4b67f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9e4b67f4c57863b9ac1a43d373062621061b0abe))
+* Add Shots of MVO in concert ([dac272e](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/dac272e4e484b3b2f1795d3ab50e240ad4e79c14))
+* Change Address of Company ([7af090b](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/7af090beff54951eae20913ba3d9c31ecbf9b382))
+* change alternative text of image ([b9edee3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b9edee330b9fd1791895ebec7ef7610a69468b45))
+* Change subtitle of home page ([5387c02](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/5387c024b2edbca941032769a7b7ab415414a430))
+* fix Typoerrors ([40f88a5](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/40f88a5e623ca8a3502df814831a5b96d8a8feb2))
+* Update dependencies ([b22d674](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b22d67435b3ef26046cffd7348d9fb8d6ee4f939))
+
 ## [22.5.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.2...v22.5.3) (2022-09-01)
 
 
