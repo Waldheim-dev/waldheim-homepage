@@ -15,3 +15,32 @@ section {
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media screen and (max-width: 450px) {
+  .charts {
+    overflow: auto;
+    width: 100%;
+  }
+}
+
+.bar {
+  background-color: var(--on-error);
+  color: var(--error);
+  border-radius: .4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    color: var(--primary);
+    background-color: var(--primary-container);
+  }
+}
+
+.tool {
+  padding: .5rem 0;
+}
+
+.top, .name {
+  white-space: nowrap;
+}
