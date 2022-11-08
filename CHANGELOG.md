@@ -1,3 +1,10 @@
+## [22.6.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.0...v22.6.1) (2022-11-08)
+
+
+### :bug: Fixes
+
+* overwrite Tools / Skills ([2a4db74](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/2a4db7423e169caf60edd9671da88f2abb42cd2e))
+
 ## [22.6.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.5.3...v22.6.0) (2022-11-01)
 
 
