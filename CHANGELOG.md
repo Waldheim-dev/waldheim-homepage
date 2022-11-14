@@ -1,3 +1,16 @@
+## [22.6.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.2...v22.6.3) (2022-11-14)
+
+
+### :bug: Fixes
+
+* Korrektur von JSON ([8acdfe5](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/8acdfe51decb7f4052e68c9109e534cf3211578b))
+
+
+### :repeat: Chores
+
+* Update release ([19dc495](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/19dc4950694d681ded9a3f7a946faf0fb51a26d7))
+* Update release ([af7d17a](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/af7d17a0bd6e170a0df087def342f62dd48195ad))
+
 ## [22.6.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.1...v22.6.2) (2022-11-14)
 
 
