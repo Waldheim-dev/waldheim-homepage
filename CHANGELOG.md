@@ -1,3 +1,17 @@
+## [22.6.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.1...v22.6.2) (2022-11-14)
+
+
+### :bug: Fixes
+
+* Change to offline Fonts ([c54e802](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/c54e802e0d4c50df6a517d0009df257415d9db96))
+* rename font files for short names ([303b827](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/303b8277d52554826d31478b695836e04f55b9db))
+* Update deps ([bee71c7](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/bee71c705f67e39499d5e1b94fb40c75c7bde15f))
+
+
+### :repeat: Chores
+
+* Update release ([88573f7](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/88573f743605def1aa7bb8a896a333e915d48579))
+
 ## [22.6.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.0...v22.6.1) (2022-11-08)
 
 
