@@ -45,7 +45,7 @@ plugins:
   - - "@semantic-release/exec"
     - verifyReleaseCmd: "echo ${nextRelease.version} > VERSION.txt"
       prepareCmd: "npx replace-json-property package.json version ${nextRelease.version}"
-      publishCmd: "npm install --silent && npm run build && npm run zip"
+      publishCmd: "npm i -f && npm run build && npm run zip"
   - - "@semantic-release/git"
     - assets:
         - "CHANGELOG.md"
