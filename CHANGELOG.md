@@ -1,3 +1,15 @@
+## [22.6.4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.3...v22.6.4) (2022-11-14)
+
+
+### :bug: Fixes
+
+* Dependencies fixed ([eb396dc](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/eb396dc171dc38f60760b5c575470fa3a631f249))
+
+
+### :repeat: Chores
+
+* Update release ([58cd4c2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/58cd4c2e7783f619439bd401aebf75aa2ff3616e))
+
 ## [22.6.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.2...v22.6.3) (2022-11-14)
 
 
