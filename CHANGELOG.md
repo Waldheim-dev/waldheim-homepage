@@ -1,3 +1,10 @@
+## [22.7.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.4...v22.7.0) (2022-11-17)
+
+
+### :sparkles: Features
+
+* Upgrade to Angular v15 ([0c33c3f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0c33c3f9f3d3abcf31d3088613770a63a3bab4ae))
+
 ## [22.6.4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.3...v22.6.4) (2022-11-14)
 
 
