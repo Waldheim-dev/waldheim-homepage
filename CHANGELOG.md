@@ -1,3 +1,15 @@
+## [22.7.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.0...v22.7.1) (2022-12-19)
+
+
+### :repeat: Chores
+
+* add basically zip.js to project ([4d08444](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/4d0844418ff39e5e9adca13e396cb5c6c2d4c317))
+
+
+### :bug: Fixes
+
+* Update Brands (add Axure and Liquibase) ([c7030f5](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/c7030f59d964ceb8121ca2b1c8b4dfed4fe86132))
+
 ## [22.7.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.6.4...v22.7.0) (2022-11-17)
 
 
