@@ -160,7 +160,7 @@ export class BrandsComponent {
   }
 
   tailwind: Tool = {
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     image: {
       path: 'assets/brands/tailwind-css-2.svg',
       height: 50,
@@ -219,6 +219,18 @@ export class BrandsComponent {
     sinceLastRollup: (new Date('2015-01-01')).getTime()
   }
 
+  axure: Tool = {
+    name: 'Axure',
+    image: {
+      path: 'assets/brands/axure-2.svg',
+      height: 50,
+      width: 51
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2022-12-01')).getTime()
+  }
+
   xd: Tool = {
     name: 'XD',
     image: {
@@ -256,7 +268,7 @@ export class BrandsComponent {
   }
 
   webstandards: Tool = {
-    name: 'Web Standards',
+    name: 'Web',
     image: {
       path: 'assets/brands/webdev-1.svg',
       height: 50,
@@ -292,7 +304,7 @@ export class BrandsComponent {
   }
 
   composer: Tool = {
-    name: 'PHP Composer',
+    name: 'Composer',
     image: {
       path: 'assets/brands/composer.svg',
       height: 50,
@@ -313,6 +325,30 @@ export class BrandsComponent {
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2017-01-01')).getTime()
+  }
+
+  liquibase: Tool = {
+    name: 'Liquibase',
+    image: {
+      path: 'assets/brands/footer-logo-org.svg',
+      height: 50,
+      width: 100
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2022-12-16')).getTime()
+  }
+
+  semantic: Tool = {
+    name: 'Semantic',
+    image: {
+      path: 'assets/brands/semantic-release.png',
+      height: 50,
+      width: 50
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2020-01-01')).getTime()
   }
 
   confluence: Tool = {
@@ -736,7 +772,7 @@ export class BrandsComponent {
   }
 
   affinity: Tool = {
-    name: 'Affinity Designer',
+    name: 'Affinity',
     image: {
       path: 'assets/brands/file_type_affinitydesigner.svg',
       height: 50,
@@ -815,6 +851,7 @@ export class BrandsComponent {
       this.affinity,
       this.figma,
       this.xd,
+      this.axure,
     ]
   }
 
@@ -869,7 +906,9 @@ export class BrandsComponent {
     name: 'Managing',
     tools: [
       this.jira,
-      this.confluence
+      this.confluence,
+      this.liquibase,
+      this.semantic,
     ]
   }
 
