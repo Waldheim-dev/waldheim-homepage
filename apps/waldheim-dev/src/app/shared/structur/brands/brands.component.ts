@@ -327,6 +327,30 @@ export class BrandsComponent {
     sinceLastRollup: (new Date('2017-01-01')).getTime()
   }
 
+  nx: Tool = {
+    name: 'nx.dev',
+    image: {
+      path: 'assets/brands/nx.svg',
+      height: 50,
+      width: 40
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2021-01-01')).getTime()
+  }
+
+  husky: Tool = {
+    name: 'Husky',
+    image: {
+      path: 'assets/brands/husky.png',
+      height: 50,
+      width: 40
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2022-11-01')).getTime()
+  }
+
   liquibase: Tool = {
     name: 'Liquibase',
     image: {
@@ -909,6 +933,8 @@ export class BrandsComponent {
       this.confluence,
       this.liquibase,
       this.semantic,
+      this.nx,
+      this.husky
     ]
   }
 
