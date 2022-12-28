@@ -17,7 +17,7 @@ import { ServicesComponent } from './pages/services/services.component';
     ImprintComponent,
     ServicesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
