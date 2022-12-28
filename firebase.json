@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/apps/waldheim-dev",
+    "public": "dist/waldheim-dev/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
