@@ -1,3 +1,14 @@
+## [22.7.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.1...v22.7.2) (2022-12-28)
+
+
+### :bug: Fixes
+
+* Add Husky and nx.dev as Tools ([023edd3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/023edd37c6ca4710896a100b26fd092aed1f983a))
+* Add SSR to Angular for Version 23 ([0ceb374](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0ceb3742ee736d6dd3313f4e2a68696a9d2d67d6))
+* Change path of Zip for SSR ([89a470b](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/89a470bd343423722ad6869cfe600b9809ecb833))
+* Update Daterange for Notification ([450815d](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/450815dc5db9559bf649a2bff2469e61c5b5cde0))
+* Update Path of Zip for Zip file ([00f02cd](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/00f02cdae4dac655f856e46bed10d91a06ca0cd9))
+
 ## [22.7.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.0...v22.7.1) (2022-12-19)
 
 
