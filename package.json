@@ -10,7 +10,8 @@
     "postinstall": "node ./decorate-angular-cli.js",
     "zip": "node zip.js",
     "deploy": "firebase deploy --only hosting",
-    "build:deploy": "nx build && firebase deploy --only hosting"
+    "build:deploy": "nx build && firebase deploy --only hosting",
+    "ssr": "nx run waldheim-dev:serve-ssr"
   },
   "private": true,
   "dependencies": {
@@ -19,15 +20,17 @@
     "@angular/common": "15.0.x",
     "@angular/compiler": "15.0.x",
     "@angular/core": "15.0.x",
-    "@angular/flex-layout": "14.0.0-beta.41",
+    "@angular/flex-layout": "^14.0.0-beta.41",
     "@angular/forms": "15.0.x",
     "@angular/platform-browser": "15.0.x",
     "@angular/platform-browser-dynamic": "15.0.x",
+    "@angular/platform-server": "15.0.x",
     "@angular/router": "15.0.x",
     "@fortawesome/fontawesome-pro": "6.2.x",
-    "@nrwl/angular": "15.1.1",
-    "firebase": "9.14.x",
-    "rxjs": "7.5.x",
+    "@nguniversal/express-engine": "15.0.x",
+    "@nrwl/angular": "15.4.2",
+    "firebase": "9.15.x",
+    "rxjs": "7.8.x",
     "tslib": "^2.4.x",
     "zone.js": "~0.12.x"
   },
@@ -35,7 +38,8 @@
     "@angular-devkit/build-angular": "15.0.x",
     "@angular/cli": "15.0.x",
     "@angular/compiler-cli": "15.0.x",
-    "@nrwl/workspace": "15.1.1",
+    "@nguniversal/builders": "15.0.x",
+    "@nrwl/workspace": "15.4.2",
     "@types/jasmine": "4.3.x",
     "@types/node": "18.11.x",
     "jasmine-core": "4.5.x",
@@ -44,8 +48,8 @@
     "karma-coverage": "2.2.x",
     "karma-jasmine": "5.1.x",
     "karma-jasmine-html-reporter": "2.0.x",
-    "nx": "15.1.1",
-    "prettier": "^2.7.x",
+    "nx": "15.4.2",
+    "prettier": "^2.8.x",
     "typescript": "4.8.x"
   }
 }
