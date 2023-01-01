@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
+@mixin light() {
   --primary: #00639A;
   --on-primary: #FFFFFF;
   --primary-container: #CBE5FF;
@@ -42,6 +42,58 @@
   --elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 15%), 0 2px 3px 0 rgba(0, 0, 0, calc(100% / 3));
   --elevation-5: 0 8px 12px 6px rgba(0, 0, 0, 15%), 0 4px 4px 0 rgba(0, 0, 0, calc(100% / 3));
 }
+@mixin dark() {
+  --primary: #adc6ff;
+  --on-primary: #002e69;
+  --primary-container: #004494;
+  --on-primary-container: #d8e2ff;
+
+  --secondary: #bbc6e4;
+  --on-secondary: #253048;
+  --secondary-container: #3b475f;
+  --on-secondary-container: #d8e2ff;
+
+  --tertiary: #e5b8e8;
+  --on-tertiary: #44244a;
+  --tertiary-container: #5d3a62;
+  --on-tertiary-container: #fed6ff;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffb4ab;
+
+  --background: #1b1b1f;
+  --on-background: #e3e2e6;
+  --surface: #1b1b1f;
+  --on-surface: #e3e2e6;
+
+  --surface-variant: #44474f;
+  --on-surface-variant: #c4c6d0;
+
+  --outline: #72777E;
+
+  --invserse-on-surface: #303033;
+  --inverse-surface: #e3e2e6;
+  --inverse-primary: #005ac1;
+
+  --shadow: #000000;
+
+  --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, calc(100% / 3)), 0 1px 3px 1px rgba(0, 0, 0, 15%);
+  --elevation-2: 0 1px 2px 0 rgba(0, 0, 0, calc(100% / 3)), 0 2px 6px 2px rgba(0, 0, 0, 15%);
+  --elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 15%), 0 1px 3px 0 rgba(0, 0, 0, calc(100% / 3));
+  --elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 15%), 0 2px 3px 0 rgba(0, 0, 0, calc(100% / 3));
+  --elevation-5: 0 8px 12px 6px rgba(0, 0, 0, 15%), 0 4px 4px 0 rgba(0, 0, 0, calc(100% / 3));
+}
+
+:root {
+  @include light();
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark();
+  }
+}
 
 @import '../../../tools/font.css';
 
@@ -59,7 +111,7 @@ html {
 }
 
 body {
-  background-color: var(---background);
+  background-color: var(--background);
   color: var(--on-background);
 }
 
