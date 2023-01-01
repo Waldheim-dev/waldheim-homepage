@@ -1,3 +1,10 @@
+## [23.0.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.0.0...v23.0.1) (2023-01-01)
+
+
+### :bug: Fixes
+
+* Add Overwrite-Rules for Dark-Light-Switch ([a8436cf](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/a8436cfdf268f7af86639585df2c2c82d6085c63))
+
 ## [23.0.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.2...v23.0.0) (2023-01-01)
 
 
