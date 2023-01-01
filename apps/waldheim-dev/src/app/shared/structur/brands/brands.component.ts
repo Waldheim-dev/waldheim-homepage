@@ -375,6 +375,30 @@ export class BrandsComponent {
     sinceLastRollup: (new Date('2020-01-01')).getTime()
   }
 
+  eslint: Tool = {
+    name: 'Eslint',
+    image: {
+      path: 'assets/brands/eslint-icon.svg',
+      height: 50,
+      width: 50
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2022-07-01')).getTime()
+  }
+
+  prettier: Tool = {
+    name: 'Prettier',
+    image: {
+      path: 'assets/brands/prettier-2.svg',
+      height: 50,
+      width: 50
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2022-07-01')).getTime()
+  }
+
   confluence: Tool = {
     name: 'Confluence',
     image: {
@@ -922,7 +946,10 @@ export class BrandsComponent {
     name: 'Sicherheit / Standards',
     tools: [
       this.sonarqube,
-      this.nexusiq
+      this.nexusiq,
+      this.husky,
+      this.eslint,
+      this.prettier
     ]
   }
 
@@ -934,7 +961,6 @@ export class BrandsComponent {
       this.liquibase,
       this.semantic,
       this.nx,
-      this.husky
     ]
   }
 
