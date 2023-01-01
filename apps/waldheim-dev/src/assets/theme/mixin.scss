@@ -1,0 +1,13 @@
+@mixin light-dark($light, $dark, $element, $rule) {
+  #{$element} {
+    #{$rule}: $light;
+  }
+
+
+  @media (prefers-color-scheme: dark) {
+    #{$element} {
+      #{$rule}: $dark;
+    }
+  }
+
+}
