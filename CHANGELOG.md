@@ -1,3 +1,20 @@
+## [23.0.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.2...v23.0.0) (2023-01-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Pagedesign for Darkmode
+
+### :bug: Fixes
+
+* Restyle Brands-Icons ([0c28960](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0c2896055b5f9f41e2d935283f499fe44f092f4c))
+
+
+### :sparkles: Features
+
+* add Darkmode ([2c98bda](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/2c98bdaf81a32f1984ad5ff8a8054e63df6c2e8a))
+* Add Prettier and Eslint to Brands ([90f483f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/90f483f8a2baf8d74e9377e900f8773cc2a3b44a))
+
 ## [22.7.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v22.7.1...v22.7.2) (2022-12-28)
 
 
