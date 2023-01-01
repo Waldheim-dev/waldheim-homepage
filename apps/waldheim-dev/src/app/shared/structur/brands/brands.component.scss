@@ -7,6 +7,9 @@ section {
   }
   img {
     filter: rgb(var(--on-secondary-container));
+    background-color: var(--inverse-surface);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
   }
 }
 .container > div {
