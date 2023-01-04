@@ -11,6 +11,9 @@ import { WaldheimItHomepageComponent } from './waldheim-it/homepage/waldheim-it-
 import { WaldheimDevAusgabescheinComponent } from "./waldheim-dev/ausgabeschein/waldheim-dev-ausgabeschein.component";
 import { MvObermeitingenInKonzertComponent } from "./mv-obermeitingen/in-konzert/mv-obermeitingen-in-konzert.component";
 import { MvObermeitingenHomepageComponent } from "./mv-obermeitingen/homepage/mv-obermeitingen-homepage.component";
+import {
+  MvObermeitingenFaschingComponent
+} from "./mv-obermeitingen/mv-obermeitingen-fasching/mv-obermeitingen-fasching.component";
 
 const routes: Routes = [
   {path:'', component: ProjectsComponent, children: [
@@ -27,6 +30,7 @@ const routes: Routes = [
     {path: 'mv-obermeitingen', children: [
         {path: 'homepage', component: MvObermeitingenHomepageComponent},
         {path: 'in-konzert', component: MvObermeitingenInKonzertComponent},
+        {path: 'fasching', component: MvObermeitingenFaschingComponent},
       ]
     },
     {path: 'interface', children: [
