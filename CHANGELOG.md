@@ -1,3 +1,10 @@
+## [23.1.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.0...v23.1.1) (2023-01-04)
+
+
+### :bug: Fixes
+
+* Change URL of Module ([16f858d](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/16f858de0ed06eb8ce0e451666bb6353aabd7379))
+
 ## [23.1.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.0.1...v23.1.0) (2023-01-04)
 
 
