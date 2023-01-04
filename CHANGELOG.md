@@ -1,3 +1,15 @@
+## [23.1.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.0.1...v23.1.0) (2023-01-04)
+
+
+### :sparkles: Features
+
+* MVO Obermeitingen Fasching 2023 als Projekt eingefügt ([1ca5d32](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/1ca5d3234d685fcdea9fbee234fec1ac3944832b))
+
+
+### :bug: Fixes
+
+* Change Filename of CSS in Component ([f55d810](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/f55d8107b8319375b7e36dd5467d6b489b793f6e))
+
 ## [23.0.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.0.0...v23.0.1) (2023-01-01)
 
 
