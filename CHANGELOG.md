@@ -1,3 +1,10 @@
+## [23.1.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.1...v23.1.2) (2023-01-13)
+
+
+### :bug: Fixes
+
+* Update to Angular 15.1 ([27ca829](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/27ca829220f27aba5820c09a3a1c98a3889615ce))
+
 ## [23.1.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.0...v23.1.1) (2023-01-04)
 
 
