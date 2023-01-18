@@ -339,6 +339,42 @@ export class BrandsComponent {
     sinceLastRollup: (new Date('2021-01-01')).getTime()
   }
 
+  jest: Tool = {
+    name: 'Jest',
+    image: {
+      path: 'assets/brands/file-type-jest.svg',
+      height: 50,
+      width: 40
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2020-01-01')).getTime()
+  }
+
+  cypress: Tool = {
+    name: 'Cypress',
+    image: {
+      path: 'assets/brands/cypress-icon.svg',
+      height: 50,
+      width: 40
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2020-01-01')).getTime()
+  }
+
+  playwright: Tool = {
+    name: 'Playwright',
+    image: {
+      path: 'assets/brands/file-type-playwright.svg',
+      height: 50,
+      width: 40
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-01-01')).getTime()
+  }
+
   husky: Tool = {
     name: 'Husky',
     image: {
@@ -947,9 +983,26 @@ export class BrandsComponent {
     tools: [
       this.sonarqube,
       this.nexusiq,
+    ]
+  }
+
+  hooks: Groups = {
+    name: 'Hooks',
+    tools: [
       this.husky,
       this.eslint,
-      this.prettier
+      this.prettier,
+      this.semantic,
+      this.nx,
+    ]
+  }
+
+  testing: Groups = {
+    name: 'Testing',
+    tools: [
+      this.jest,
+      this.cypress,
+      this.playwright,
     ]
   }
 
@@ -959,8 +1012,6 @@ export class BrandsComponent {
       this.jira,
       this.confluence,
       this.liquibase,
-      this.semantic,
-      this.nx,
     ]
   }
 
@@ -1000,6 +1051,8 @@ export class BrandsComponent {
     this.frondned_addon,
     this.backend_addon,
     this.db,
+    this.hooks,
+    this.testing,
     this.webbasics,
     this.systems,
     this.design,
