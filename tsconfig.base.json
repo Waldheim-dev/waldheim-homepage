@@ -17,8 +17,9 @@
     "importHelpers": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
+    "target": "es2022",
     "module": "es2020",
+    "useDefineForClassFields": false,
     "lib": ["es2020", "dom"],
     "paths": {},
     "rootDir": "."
