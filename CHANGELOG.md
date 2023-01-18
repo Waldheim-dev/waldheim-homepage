@@ -1,3 +1,15 @@
+## [23.2.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.2...v23.2.0) (2023-01-18)
+
+
+### :sparkles: Features
+
+* Add Testings ([719c503](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/719c50315aa13d8c38d99612482ba2150876535c))
+
+
+### :bug: Fixes
+
+* Add Lazyloading for big Images ([052f726](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/052f72623408a518291cab1c0e14c26fb371a65e))
+
 ## [23.1.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.1...v23.1.2) (2023-01-13)
 
 
