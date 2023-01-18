@@ -28,7 +28,7 @@
                   <!-- Ausgeben von Jahren -->
                   <!-- Bereichnung von Höhe basierend auf Höchstjahre in Kat -->
                 </div>
-              <img [src]="tool.image.path" [height]="tool.image.height / 2" [width]="tool.image.width / 2"
+              <img loading="lazy" [src]="tool.image.path" [height]="tool.image.height / 2" [width]="tool.image.width / 2"
                    [alt]="tool.name">
               <h4 class="name">{{ tool.name }}</h4>
             </div>
