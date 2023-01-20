@@ -29,6 +29,19 @@
     </div>
   </div>
   <div class="nav-list" fxHide.lt-md>
+    <app-nav class="button">
+      <a class="button" (click)="toggleTheme()">
+
+      <div class="fa-custom-stack" style="vertical-align: top;" *ngIf="!isDarkTheme">
+            <i class="fa-solid fa-sun fa-fw"></i>
+            <i class="fa-solid fa-right-left fa-fw fa-right-bottom"></i>
+      </div>
+      <div class="fa-custom-stack" style="vertical-align: top;" *ngIf="isDarkTheme">
+            <i class="fa-solid fa-moon fa-fw"></i>
+            <i class="fa-solid fa-right-left fa-fw fa-right-bottom"></i>
+      </div>
+      </a>
+    </app-nav>
     <app-nav>
       <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" title="Xing">
         <i class="fa-brands fa-xing"></i>
@@ -95,6 +108,24 @@
           <i class="fa-brands fa-twitter"></i> Twitter
         </a>
       </app-nav>
+
     </div>
+
+    <hr>
+    <app-nav class="button" fxFlex="100%">
+      <a class="button" (click)="toggleTheme()">
+          <span class="fa-custom-stack" style="vertical-align: top;" *ngIf="!isDarkTheme">
+            <i class="fa-solid fa-moon fa-fw"></i>
+            <i class="fa-solid fa-right-left fa-fw fa-right-bottom"></i>
+          </span>
+        <span class="fa-custom-stack" style="vertical-align: top;" *ngIf="isDarkTheme">
+            <i class="fa-solid fa-sun fa-fw"></i>
+            <i class="fa-solid fa-right-left fa-fw fa-right-bottom"></i>
+          </span>
+        <span *ngIf="!isDarkTheme">Darkmode</span>
+        <span *ngIf="isDarkTheme">Lightmode</span>
+
+      </a>
+    </app-nav>
   </div>
 </div>
