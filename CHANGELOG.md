@@ -1,3 +1,10 @@
+## [23.3.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.2.1...v23.3.0) (2023-01-20)
+
+
+### :sparkles: Features
+
+* Add Toggle for Light- and Darkmode ([9ad48d4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/9ad48d42897314a25a62c8125f0915688afc8e98))
+
 ## [23.2.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.2.0...v23.2.1) (2023-01-20)
 
 
