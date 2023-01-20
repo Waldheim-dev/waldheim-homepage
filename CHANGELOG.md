@@ -1,3 +1,11 @@
+## [23.3.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.0...v23.3.1) (2023-01-20)
+
+
+### :bug: Fixes
+
+* Update deps ([b13e803](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b13e8039a6f8b290d8498285cb031c026ddf143f))
+* Update Styles ([095c627](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/095c627b5223ed890d35f65b33053f02ffd8051b))
+
 ## [23.3.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.2.1...v23.3.0) (2023-01-20)
 
 
