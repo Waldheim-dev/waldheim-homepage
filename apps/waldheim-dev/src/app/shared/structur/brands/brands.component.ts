@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 
-
+enum Knowledgebase {
+  BASIC=1,
+  ADVANCED,
+  EXPERT
+}
 interface Groups {
   name: string;
   tools: Tool[];
@@ -18,6 +22,7 @@ interface Tool {
   isActive: boolean;
   fixedExperience: number;
   sinceLastRollup: number;
+  knowledgebase: Knowledgebase;
 }
 
 @Component({
@@ -36,7 +41,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   ngrx: Tool = {
@@ -48,7 +54,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2020-06-01')).getTime()
+    sinceLastRollup: (new Date('2020-06-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   react: Tool = {
@@ -60,7 +67,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   js: Tool = {
@@ -72,7 +80,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2012-01-01')).getTime()
+    sinceLastRollup: (new Date('2012-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   ts: Tool = {
@@ -84,7 +93,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   vue: Tool = {
@@ -96,7 +106,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   jquery: Tool = {
@@ -108,7 +119,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 7,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   html: Tool = {
@@ -120,7 +132,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2012-01-01')).getTime()
+    sinceLastRollup: (new Date('2012-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   css: Tool = {
@@ -132,7 +145,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2012-01-01')).getTime()
+    sinceLastRollup: (new Date('2012-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   scss: Tool = {
@@ -144,7 +158,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2015-01-01')).getTime()
+    sinceLastRollup: (new Date('2015-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   bootstrap: Tool = {
@@ -156,7 +171,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 4,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   tailwind: Tool = {
@@ -168,7 +184,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   php: Tool = {
@@ -180,7 +197,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 8,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   laravel: Tool = {
@@ -192,7 +210,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   java: Tool = {
@@ -204,7 +223,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 4,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   illustrator: Tool = {
@@ -216,7 +236,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2015-01-01')).getTime()
+    sinceLastRollup: (new Date('2015-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   axure: Tool = {
@@ -228,7 +249,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-12-01')).getTime()
+    sinceLastRollup: (new Date('2022-12-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   xd: Tool = {
@@ -240,7 +262,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 4,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   figma: Tool = {
@@ -252,7 +275,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 2,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   android: Tool = {
@@ -264,7 +288,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2014-01-01')).getTime()
+    sinceLastRollup: (new Date('2014-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   webstandards: Tool = {
@@ -276,7 +301,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2015-01-01')).getTime()
+    sinceLastRollup: (new Date('2015-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   flutter: Tool = {
@@ -288,7 +314,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   capacitor: Tool = {
@@ -300,7 +327,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 3,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   composer: Tool = {
@@ -312,7 +340,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 4,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   jira: Tool = {
@@ -324,7 +353,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2017-01-01')).getTime()
+    sinceLastRollup: (new Date('2017-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   nx: Tool = {
@@ -336,7 +366,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2021-01-01')).getTime()
+    sinceLastRollup: (new Date('2021-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   jest: Tool = {
@@ -348,7 +379,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2020-01-01')).getTime()
+    sinceLastRollup: (new Date('2020-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   cypress: Tool = {
@@ -360,7 +392,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2020-01-01')).getTime()
+    sinceLastRollup: (new Date('2020-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   playwright: Tool = {
@@ -372,7 +405,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2023-01-01')).getTime()
+    sinceLastRollup: (new Date('2023-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   husky: Tool = {
@@ -384,7 +418,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   liquibase: Tool = {
@@ -396,7 +431,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-12-16')).getTime()
+    sinceLastRollup: (new Date('2022-12-16')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   semantic: Tool = {
@@ -408,7 +444,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2020-01-01')).getTime()
+    sinceLastRollup: (new Date('2020-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   eslint: Tool = {
@@ -420,7 +457,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   prettier: Tool = {
@@ -432,7 +470,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   confluence: Tool = {
@@ -444,7 +483,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   gitlab: Tool = {
@@ -456,7 +496,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   github: Tool = {
@@ -468,7 +509,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 2,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   bitbucket: Tool = {
@@ -480,7 +522,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   sonarqube: Tool = {
@@ -492,7 +535,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-01-01')).getTime()
+    sinceLastRollup: (new Date('2022-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   nexusiq: Tool = {
@@ -504,7 +548,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   nexusrepo: Tool = {
@@ -516,7 +561,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 2,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   windows: Tool = {
@@ -528,7 +574,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2002-01-01')).getTime()
+    sinceLastRollup: (new Date('2002-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   macos: Tool = {
@@ -540,7 +587,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2013-01-01')).getTime()
+    sinceLastRollup: (new Date('2013-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   linux: Tool = {
@@ -552,7 +600,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2015-01-01')).getTime()
+    sinceLastRollup: (new Date('2015-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   aws: Tool = {
@@ -564,7 +613,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2021-07-01')).getTime()
+    sinceLastRollup: (new Date('2021-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   firebase: Tool = {
@@ -576,7 +626,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   ionos: Tool = {
@@ -588,7 +639,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2012-01-01')).getTime()
+    sinceLastRollup: (new Date('2012-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   grafana: Tool = {
@@ -600,7 +652,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2021-01-01')).getTime()
+    sinceLastRollup: (new Date('2021-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   prometheus: Tool = {
@@ -612,7 +665,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   checkmk: Tool = {
@@ -624,7 +678,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   docker: Tool = {
@@ -636,7 +691,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2017-01-01')).getTime()
+    sinceLastRollup: (new Date('2017-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   portainer: Tool = {
@@ -648,7 +704,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   kubernetes: Tool = {
@@ -660,7 +717,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-01-01')).getTime()
+    sinceLastRollup: (new Date('2022-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   kafka: Tool = {
@@ -672,7 +730,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-07-01')).getTime()
+    sinceLastRollup: (new Date('2022-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   mongodb: Tool = {
@@ -684,7 +743,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 2,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   mysql: Tool = {
@@ -696,7 +756,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 7,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   mssql: Tool = {
@@ -708,7 +769,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   wordpress: Tool = {
@@ -720,7 +782,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 3,
-    sinceLastRollup: (new Date('2020-01-01')).getTime()
+    sinceLastRollup: (new Date('2020-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   typo3: Tool = {
@@ -732,7 +795,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 6,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   joomla: Tool = {
@@ -744,7 +808,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   drupal: Tool = {
@@ -756,7 +821,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   nodejs: Tool = {
@@ -768,7 +834,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   git: Tool = {
@@ -780,7 +847,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2016-01-01')).getTime()
+    sinceLastRollup: (new Date('2016-01-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   postgres: Tool = {
@@ -792,7 +860,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 1,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   traefik: Tool = {
@@ -804,7 +873,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-01-01')).getTime()
+    sinceLastRollup: (new Date('2022-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   springboot: Tool = {
@@ -816,7 +886,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 0.5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   quarkus: Tool = {
@@ -828,7 +899,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-11-01')).getTime()
+    sinceLastRollup: (new Date('2022-11-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
   }
 
   stencil: Tool = {
@@ -840,7 +912,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 0,
-    sinceLastRollup: (new Date('2022-09-01')).getTime()
+    sinceLastRollup: (new Date('2022-09-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   ionic: Tool = {
@@ -852,7 +925,8 @@ export class BrandsComponent {
     },
     isActive: false,
     fixedExperience: 5,
-    sinceLastRollup: (new Date()).getTime()
+    sinceLastRollup: (new Date()).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   affinity: Tool = {
@@ -864,7 +938,8 @@ export class BrandsComponent {
     },
     isActive: true,
     fixedExperience: 3,
-    sinceLastRollup: (new Date('2021-01-01')).getTime()
+    sinceLastRollup: (new Date('2021-01-01')).getTime(),
+    knowledgebase: Knowledgebase.EXPERT
   }
 
   frontend: Groups = {
