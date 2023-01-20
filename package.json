@@ -28,8 +28,8 @@
     "@angular/router": "15.1.x",
     "@fortawesome/fontawesome-pro": "6.2.x",
     "@nguniversal/express-engine": "15.1.x",
-    "@nrwl/angular": "15.5.0",
-    "firebase": "9.15.x",
+    "@nrwl/angular": "15.5.2",
+    "firebase": "9.16.x",
     "rxjs": "7.8.x",
     "tslib": "^2.4.x",
     "zone.js": "~0.12.x"
@@ -39,7 +39,7 @@
     "@angular/cli": "15.1.x",
     "@angular/compiler-cli": "15.1.x",
     "@nguniversal/builders": "15.1.x",
-    "@nrwl/workspace": "15.5.0",
+    "@nrwl/workspace": "15.5.2",
     "@types/jasmine": "4.3.x",
     "@types/node": "18.11.x",
     "jasmine-core": "4.5.x",
@@ -48,7 +48,7 @@
     "karma-coverage": "2.2.x",
     "karma-jasmine": "5.1.x",
     "karma-jasmine-html-reporter": "2.0.x",
-    "nx": "15.5.0",
+    "nx": "15.5.2",
     "prettier": "^2.8.x",
     "typescript": "4.9.x"
   }
