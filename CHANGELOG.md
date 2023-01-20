@@ -1,3 +1,10 @@
+## [23.2.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.2.0...v23.2.1) (2023-01-20)
+
+
+### :bug: Fixes
+
+* Add Legend and Knowledgebase to Skills ([8f64f88](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/8f64f88846088f9a30ef707da221390650cb558a))
+
 ## [23.2.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.1.2...v23.2.0) (2023-01-18)
 
 
