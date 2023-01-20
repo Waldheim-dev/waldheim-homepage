@@ -86,13 +86,12 @@
   --elevation-5: 0 8px 12px 6px rgba(0, 0, 0, 15%), 0 4px 4px 0 rgba(0, 0, 0, calc(100% / 3));
 }
 
-:root {
+html {
   @include light();
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include dark();
-  }
+// set :root to dark theme if body has class dark
+html[data-theme="dark"] {
+  @include dark();
 }
 
 @import '../../../tools/font.css';
@@ -246,5 +245,17 @@ hr {
     line-height: 1.25rem;
     font-weight: normal;
     padding-bottom: .25rem;
+  }
+}
+
+.fa-custom-stack {
+  position: relative;
+  padding: 0 !important;
+  .fa-right-bottom {
+    position: absolute;
+    bottom: -0.25rem;
+    font-size: .8rem;
+    right: -0.25rem;
+    -webkit-text-stroke: .5px var(--background);
   }
 }
