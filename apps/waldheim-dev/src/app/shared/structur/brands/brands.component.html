@@ -1,6 +1,17 @@
 <section>
   <h2 class="container text-center">Meine Tools / Skills</h2>
 
+  <div class="container">
+  <div class="legende">
+    <h4>Legende:</h4>
+    <div><i class="fa-solid fa-pause fa-beat-fade fa-fw"></i> Pausierte(r/s) Tool / Skill</div>
+    <div><i class="fa-regular fa-rotate fa-spin fa-fw"></i> Aktive(r/s) Tool / Skill</div>
+    <div><i class="fa-solid fa-plus fa-fw"></i> Grundlegende Erfahrung</div>
+    <div><i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(2)"></i> Erweiterte Erfahrung</div>
+    <div><i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(3)"></i> Tiefe Erfahrungen</div>
+  </div>
+  </div>
+
   <div class="container" gdAlignColumns="stretch stretch"
        gdAuto="row"
        gdColumns="repeat(2,1fr)" gdGap="1rem"
@@ -21,6 +32,9 @@
                   <div class="bar" [ngClass]="{'active': tool.isActive }" style="height:{{getPercentExp(tool, group.tools) + '%'}}">
                     <i class="fa-solid fa-pause fa-beat-fade" *ngIf="!tool.isActive"></i>
                     <i class="fa-regular fa-rotate fa-spin" *ngIf="tool.isActive"></i>
+                    <div class="knowgledbase">
+                      <i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(tool.knowledgebase)"></i>
+                    </div>
                   </div>
                   <div class="top">
                     {{ getTotalExp(tool) }} Jahr/e
