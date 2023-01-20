@@ -10,6 +10,9 @@
   font-size: .8rem;
 }
 
+
+@include mixin.light-dark(var(--background), var(--inverse-surface), section img, background-color);
+
 section {
   background-color: var(--secondary-container);
   max-width: 100vw;
@@ -25,7 +28,6 @@ section {
     border-radius: 0.4rem;
   }
 
-  @include mixin.light-dark(var(--background), var(--inverse-surface), img, background-color)
 }
 
 .container > div {
