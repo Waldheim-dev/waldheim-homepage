@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 enum Knowledgebase {
   BASIC=1,
@@ -28,7 +28,8 @@ interface Tool {
 @Component({
   selector   : 'app-brands',
   templateUrl: './brands.component.html',
-  styleUrls  : ['./brands.component.scss']
+  styleUrls  : ['./brands.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BrandsComponent {
 
@@ -942,6 +943,19 @@ export class BrandsComponent {
     knowledgebase: Knowledgebase.EXPERT
   }
 
+  jaws: Tool = {
+    name: 'Jaws',
+    image: {
+      path: 'assets/brands/JAWS-screenreader-logo.png',
+      height: 50,
+      width: 75
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-01-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
+  }
+
   frontend: Groups = {
     name: 'Frontend-Technologien',
     tools: [
@@ -1078,6 +1092,7 @@ export class BrandsComponent {
       this.jest,
       this.cypress,
       this.playwright,
+      this.jaws
     ]
   }
 
