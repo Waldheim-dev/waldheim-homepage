@@ -1,3 +1,11 @@
+## [23.3.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.1...v23.3.2) (2023-02-19)
+
+
+### :bug: Fixes
+
+* Add JAWS as Knowledge and fix Darkmode for Images ([2d0b221](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/2d0b221149aa2a1d0709d1b99c89cc6e0820b7d2))
+* Set Ecodrive as DEMO ([662eb5c](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/662eb5c65bf42389290810fb28fa648fca151bf3))
+
 ## [23.3.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.0...v23.3.1) (2023-01-20)
 
 
