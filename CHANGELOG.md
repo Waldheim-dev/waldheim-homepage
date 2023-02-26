@@ -1,3 +1,10 @@
+## [23.4.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.2...v23.4.0) (2023-02-26)
+
+
+### :sparkles: Features
+
+* Rework of the lifecicle / projects ([b4d194b](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b4d194be5fcecc51f62109aa32d996ea741ee7d9))
+
 ## [23.3.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.1...v23.3.2) (2023-02-19)
 
 
