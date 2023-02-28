@@ -1,3 +1,10 @@
+## [23.4.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.1...v23.4.2) (2023-02-28)
+
+
+### :bug: Fixes
+
+* Remove Certification ([e24e1d6](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/e24e1d645b3a8b7c7c47a9ade39a05a1da9c20a5))
+
 ## [23.4.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.0...v23.4.1) (2023-02-28)
 
 
