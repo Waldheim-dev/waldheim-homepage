@@ -1,3 +1,11 @@
+## [23.4.1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.0...v23.4.1) (2023-02-28)
+
+
+### :bug: Fixes
+
+* Alignment ([b921b3d](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b921b3d167dba1d07f16f97064a700b99aa16f34))
+* Update Privacy ([e83efd4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/e83efd4c8ae1e014dc9b98296189cc19ecbbd138))
+
 ## [23.4.0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.3.2...v23.4.0) (2023-02-26)
 
 
