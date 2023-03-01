@@ -20,8 +20,6 @@ export class MenuComponent {
     // is isDarkTheme is undefined in local Storage, get it from Browser
     if (localStorage.getItem('isDarkTheme') === null) {
       this.isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      // set to local storage
-      localStorage.setItem('isDarkTheme', this.isDarkTheme.toString());
     } else {
       // load isDarkTheme from local storage
       this.isDarkTheme = localStorage.getItem('isDarkTheme') === 'true';
