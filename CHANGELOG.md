@@ -1,3 +1,12 @@
+## [23.4.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.2...v23.4.3) (2023-03-01)
+
+
+### :bug: Fixes
+
+* Optimize Wordings of SEWOBE-Content ([7de4c94](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/7de4c94fa0b39a6e978b5100eb334811a37786f3))
+* Reduce Information of SEWOBE ([1fa0bdb](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/1fa0bdbca6ddda5bead1f5f73f28994d8515b59a))
+* Remove Theme-Option without some selection ([dca5efa](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/dca5efa67ec958117d15707a4738f3c3d69f07e8))
+
 ## [23.4.2](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.1...v23.4.2) (2023-02-28)
 
 
