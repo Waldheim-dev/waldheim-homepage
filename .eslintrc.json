@@ -15,7 +15,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "waldheimDev",
+            "prefix": "app",
             "style": "camelCase"
           }
         ],
@@ -23,7 +23,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "waldheim-dev",
+            "prefix": "app",
             "style": "kebab-case"
           }
         ]
