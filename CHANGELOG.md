@@ -1,3 +1,21 @@
+## [23.4.5](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.4...v23.4.5) (2023-03-02)
+
+
+### :repeat: Build System
+
+* Change URl of Firebase ([0bfc16b](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/0bfc16b8e5a476742a0fdb35d47af9242e74de54))
+
+
+### :white_check_mark: Tests
+
+* Fix Prefixing ([3acc84f](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/3acc84f61ec83b70a6eda11a0e522ed2ecf83bd6))
+
+
+### :bug: Fixes
+
+* Add Ausbilderschein to Informations ([6093202](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/609320205c7532cddf6c7eb3c3be608ebfb0e80f))
+* Add new Images to Ecodrive ([31c6bba](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/31c6bba7867b0661e98ef6068f34ab18835a595c))
+
 ## [23.4.4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.3...v23.4.4) (2023-03-02)
 
 
