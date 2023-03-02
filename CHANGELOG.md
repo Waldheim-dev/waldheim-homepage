@@ -1,3 +1,24 @@
+## [23.4.4](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.3...v23.4.4) (2023-03-02)
+
+
+### :bug: Fixes
+
+* Change Order of Projects ([99c6c09](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/99c6c090fd181a86c7889a0bd75910c035f4998e))
+* Migrate to a new Version of NX ([b9e3d49](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/b9e3d4920a20574afbf030060d2752d8ec7f778d))
+* Update Deps ([36280d3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/36280d3cee1028b65bb0ee022f36594533fb665c))
+
+
+### :repeat: Chores
+
+* Update lock ([4cee9d1](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/4cee9d1b9683b6b27e22949414b62a094b7c7da7))
+
+
+### :repeat: Build System
+
+* Change Budget of Elements ([7dcc5e0](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/7dcc5e0bfceca1f406012379d7ff044bb378185f))
+* Change Budget of Style ([6ae2b0b](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/6ae2b0b0731067c22b584b1018abc6f6c7acd809))
+* Change Folder of Elements ([30e4912](https://gitlab.com/mwaldheim/waldheim.dev.homepage/commit/30e4912fe8f1937c128ef0967f87ed429ff990dd))
+
 ## [23.4.3](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.2...v23.4.3) (2023-03-01)
 
 
