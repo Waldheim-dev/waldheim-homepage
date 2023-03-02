@@ -7,26 +7,50 @@
     </a>
   </app-nav>
   <section fxLayout="row wrap" fxLayoutGap="1rem" fxLayout.lt-md="column">
+    <div fxFlex="100%">
+      <app-card primary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_dashboard.png" width="1200" height="560" loading="lazy">
+        <p>Fahre nachhaltiger mit mehr Informationen</p>
+      </app-card>
+    </div>
     <div fxFlex="calc(50% - 1rem)">
       <app-card primary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_dashboard_2.png" width="600" height="280" loading="lazy">
         <h3>Fahre mit bedacht!</h3>
         <p>Diese Software dient euch, um euch zu zeigen, wie groß euer Ökologischer Fußabdruck ist. Gehe in den Wettkampf mit anderen Usern und sei effizienter als alle anderen!</p>
       </app-card>
     </div>
     <div fxFlex="calc(50% - 1rem)">
-      <app-card secondary>
+      <app-card tertiary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_logs.png" width="600" height="280" loading="lazy">
       <h3>Erstelle dein Fahrtenbuch für das Finanzamt automatisch</h3>
       <p>Für einige Firmenfahrzeuge müsst Ihr je nach Versteuerung ein Fahrtenbuch führen. Jetzt ist so einfach wie noch nie erstellt! Gehe einfach her und protokolliere deine Fahrten in Ecodrive und erstelle dir dein digitales Fahrtenbuch mit nur einen Knopfdruck.</p>
       </app-card>
     </div>
     <div fxFlex="calc(50% - 1rem)">
       <app-card tertiary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_vehicles.png" width="600" height="280" loading="lazy">
       <h3>Vergleiche deinen eigenen Fuhrpark</h3>
       <p>Vergleiche deine Fahrzeuge im Bereich, Effizient, Kosten, Verbrauch, Nutzung</p>
       </app-card>
     </div>
+    <div fxFlex="calc(50% - 1rem)">
+      <app-card secondary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_users.png" width="600" height="280" loading="lazy">
+      <h3>Mit der Pro-Lizenz mehrere Benutzer verwalten</h3>
+      <p>Als Firma oder Gruppe nur einmal für unendlich viele Fahrzeuge nutzen</p>
+      </app-card>
+    </div>
+    <div fxFlex="calc(50% - 1rem)">
+      <app-card secondary>
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive_tenants.png" width="600" height="280" loading="lazy">
+      <h3>Mit nur einem Login</h3>
+      <p>Du kannst mit nur einem Login zu unterschiedlichsten Gruppen zugehörig sein. Egal ob du es privat nutzt und zudem auch für eine Firma.</p>
+      </app-card>
+    </div>
     <div fxFlex="calc(50%)" [ngStyle]="{'margin-right': '1rem'}">
       <app-card >
+        <img class="header" src="assets/projects/waldheim-dev/ecodrive/ecodrive.png" width="600" height="280" loading="lazy">
       <h3>Einfacher geht das registrieren und Anmelden nicht!</h3>
       <p>Wir unterstützen eine Vielzahl an Dienstleistern zum Anmelden</p>
       <div fxLayout="row wrap" fxLayoutGap=".5rem">
@@ -73,7 +97,7 @@
           <td></td>
           <td><h4>Free</h4><div fxLayout fxLayoutAlign="center center" fxLayoutGap=".5rem"><strong>0,- €</strong></div></td>
           <td><h4>Basic</h4><div fxLayout fxLayoutAlign="center center" fxLayoutGap=".5rem"><div><strong>3,99 €</strong><br>Pro Monat</div><div>oder</div><div><strong>45,46 €</strong><br>Pro Jahr<br>(-5% Rabatt)</div></div></td>
-          <td><h4>Pro</h4><div fxLayout fxLayoutAlign="center center" fxLayoutGap=".5rem"><div><strong>6,99 €</strong><br>Pro Monat</div><div>oder</div><div><strong>76,69 €</strong><br>Pro Jahr<br>(-5% Rabatt)</div></div></td>
+          <td><h4>Pro</h4><div fxLayout fxLayoutAlign="center center" fxLayoutGap=".5rem"><div><strong>14,99 €</strong><br>Pro Monat</div><div>oder</div><div><strong>170,89 €</strong><br>Pro Jahr<br>(-5% Rabatt)</div></div></td>
         </tr>
       </thead>
       <tbody>
@@ -103,6 +127,24 @@
         </tr>
         <tr>
           <td>Exportiertes Fahrtenbuch</td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-check fa-fw"></i></td>
+        </tr>
+        <tr>
+          <td>Benutzereinladung</td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-check fa-fw"></i></td>
+        </tr>
+        <tr>
+          <td>Statistiken</td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
+          <td><i class="fa-solid fa-circle-check fa-fw"></i></td>
+        </tr>
+        <tr>
+          <td>Logbuch</td>
           <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
           <td><i class="fa-solid fa-circle-xmark fa-fw"></i></td>
           <td><i class="fa-solid fa-circle-check fa-fw"></i></td>
