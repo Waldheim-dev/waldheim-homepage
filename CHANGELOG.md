@@ -1,3 +1,11 @@
+## [23.4.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.4.5...v23.4.6) (2023-03-03)
+
+
+### :bug: Fixes
+
+* Kirchenkonzert in erster Fassung eingebaut ([7ee8a88](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7ee8a886f3848cdba4f210c67a50b8315dc6bd90))
+* Svelte hinzugefügt ([f570ff4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f570ff45b4465eaba0616a4d4623f8ce64982ca8))
+
 ## [23.4.5](https://gitlab.com/mwaldheim/waldheim.dev.homepage/compare/v23.4.4...v23.4.5) (2023-03-02)
 
 
