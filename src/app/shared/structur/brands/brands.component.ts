@@ -917,6 +917,19 @@ export class BrandsComponent {
     knowledgebase: Knowledgebase.ADVANCED
   }
 
+  svelte: Tool = {
+    name: 'Svelte',
+    image: {
+      path: 'assets/brands/svelte.svg',
+      height: 50,
+      width: 50
+    },
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-03-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
+  }
+
   ionic: Tool = {
     name: 'Ionic',
     image: {
@@ -963,6 +976,7 @@ export class BrandsComponent {
       this.react,
       this.stencil,
       this.vue,
+      this.svelte
     ]
   }
 
