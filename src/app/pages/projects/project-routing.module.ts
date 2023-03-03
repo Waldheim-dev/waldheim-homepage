@@ -14,6 +14,9 @@ import { MvObermeitingenHomepageComponent } from "./mv-obermeitingen/homepage/mv
 import {
   MvObermeitingenFaschingComponent
 } from "./mv-obermeitingen/mv-obermeitingen-fasching/mv-obermeitingen-fasching.component";
+import {
+  MvObermeitingenKirchenkonzertComponent
+} from './mv-obermeitingen/mv-obermeitingen-kirchenkonzert/mv-obermeitingen-kirchenkonzert.component';
 
 const routes: Routes = [
   {path:'', component: ProjectsComponent, children: [
@@ -31,6 +34,7 @@ const routes: Routes = [
         {path: 'homepage', component: MvObermeitingenHomepageComponent},
         {path: 'in-konzert', component: MvObermeitingenInKonzertComponent},
         {path: 'fasching', component: MvObermeitingenFaschingComponent},
+        {path: 'kirchenkonzert', component: MvObermeitingenKirchenkonzertComponent},
       ]
     },
     {path: 'interface', children: [
