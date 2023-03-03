@@ -14,6 +14,9 @@ import { WaldheimDevAusgabescheinComponent } from './waldheim-dev/ausgabeschein/
 import { MvObermeitingenInKonzertComponent } from './mv-obermeitingen/in-konzert/mv-obermeitingen-in-konzert.component';
 import { MvObermeitingenHomepageComponent } from './mv-obermeitingen/homepage/mv-obermeitingen-homepage.component';
 import { MvObermeitingenFaschingComponent } from './mv-obermeitingen/mv-obermeitingen-fasching/mv-obermeitingen-fasching.component';
+import {
+  MvObermeitingenKirchenkonzertComponent
+} from './mv-obermeitingen/mv-obermeitingen-kirchenkonzert/mv-obermeitingen-kirchenkonzert.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { MvObermeitingenFaschingComponent } from './mv-obermeitingen/mv-obermeit
     MvObermeitingenInKonzertComponent,
     MvObermeitingenHomepageComponent,
     MvObermeitingenFaschingComponent,
+    MvObermeitingenKirchenkonzertComponent
   ],
   imports: [ProjectRoutingModule, SharedModule],
 })
