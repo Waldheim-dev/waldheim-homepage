@@ -9,7 +9,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/waldheim.dev",
+        "outputPath": "dist/apps/waldheim.dev/browser",
         "index": "./src/index.html",
         "main": "./src/main.ts",
         "polyfills": ["zone.js"],
@@ -84,6 +84,57 @@
           "codeCoverage": true
         }
       }
+    },
+    "server": {
+      "dependsOn": ["build"],
+      "executor": "@angular-devkit/build-angular:server",
+      "options": {
+        "outputPath": "dist/./server",
+        "main": "server.ts",
+        "tsConfig": "tsconfig.server.json"
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "media"
+        },
+        "development": {
+          "optimization": false,
+          "sourceMap": true,
+          "extractLicenses": false
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve-ssr": {
+      "executor": "@nguniversal/builders:ssr-dev-server",
+      "configurations": {
+        "development": {
+          "browserTarget": "waldheim.dev:build:development",
+          "serverTarget": "waldheim.dev:server:development"
+        },
+        "production": {
+          "browserTarget": "waldheim.dev:build:production",
+          "serverTarget": "waldheim.dev:server:production"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "prerender": {
+      "executor": "@nguniversal/builders:prerender",
+      "options": {
+        "routes": ["/"]
+      },
+      "configurations": {
+        "development": {
+          "browserTarget": "waldheim.dev:build:development",
+          "serverTarget": "waldheim.dev:server:development"
+        },
+        "production": {
+          "browserTarget": "waldheim.dev:build:production",
+          "serverTarget": "waldheim.dev:server:production"
+        }
+      },
+      "defaultConfiguration": "production"
     }
   },
   "tags": []
