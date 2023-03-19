@@ -9,6 +9,9 @@ import { BrandsComponent } from './structur/brands/brands.component';
 import { EcodrivePreviewComponent } from './structur/ecodrive-preview/ecodrive-preview.component';
 import { MenuComponent } from './structur/menu/menu.component';
 import {RouterModule} from "@angular/router";
+import { LocalStorageService } from './services/local-storage.service';
+import { WindowRef } from './services/window-ref.service';
+import { MediaService } from './services/media.service';
 
 const COMP_IMPORT_EXPORT = [
   NavComponent,
@@ -44,5 +47,15 @@ const MOD_IMPORT_ONLY = [
     ...MOD_IMPORT_EXPORT,
     ...COMP_IMPORT_EXPORT
   ],
+  providers: [
+    MediaService,
+    WindowRef,
+    LocalStorageService,
+    { provide: 'LOCALSTORAGE', useFactory: getLocalStorage }
+  ]
 })
 export class SharedModule {}
+
+export function getLocalStorage() {
+  return (typeof window !== 'undefined') ? window.localStorage : null;
+}

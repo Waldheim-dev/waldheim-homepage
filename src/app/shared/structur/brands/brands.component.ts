@@ -1173,7 +1173,7 @@ export class BrandsComponent {
 
   getPercentExp(tool: Tool, group: Tool[]) {
     const max = Math.max(...group.map(o => Number(this.getTotalExp(o, true))));
-    console.log(max, Number(this.getTotalExp(tool, true)), 100 * Number(this.getTotalExp(tool, true)) / max )
+    // console.log(max, Number(this.getTotalExp(tool, true)), 100 * Number(this.getTotalExp(tool, true)) / max )
     return 100 * Number(this.getTotalExp(tool, true)) / max;
   }
 
