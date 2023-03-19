@@ -28,7 +28,9 @@
     "@fortawesome/fontawesome-pro": "6.3.x",
     "@nguniversal/express-engine": "15.2.x",
     "@nrwl/angular": "15.8.1",
+    "@nrwl/nx-linux-x64-musl": "^15.8.7",
     "firebase": "9.17.x",
+    "localstorage-polyfill": "^1.0.1",
     "rxjs": "7.8.x",
     "tslib": "2.5.x",
     "zone.js": "0.12.x"
