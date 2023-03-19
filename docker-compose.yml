@@ -1,0 +1,41 @@
+version: '3'
+services:
+  wd-web:
+    build:
+      context: .
+      args:
+        PORT: ${WEB_PORT}
+    restart: unless-stopped
+    container_name: "wd-web"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.wd-web.rule=Host(`w2.waldheim.de`)
+      - traefik.http.routers.wd-web.entrypoints=websecure,web
+      - traefik.http.routers.wd-web.service=wd-web-waldheimdevhomepage@docker
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.server.port=8084
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.healthcheck.path=/health
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.healthcheck.interval=10s
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.healthcheck.timeout=5s
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.healthcheck.port=8084
+      - traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.healthcheck.hostname=wd-web
+      - traefik.docker.network=proxy
+      #      - traefik.http.routers.mvo-web.tls.certresolver=lets-encrypt
+    ports:
+      - 8084:${WEB_PORT}
+    env_file: .env
+    environment:
+      PORT: ${WEB_PORT}
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./:/opt/app
+    networks:
+      - proxy
+      - default
+
+
+networks:
+  proxy:
+    external:
+      name: proxy
+  default:
+    driver: bridge
