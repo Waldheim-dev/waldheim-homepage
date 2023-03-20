@@ -17,7 +17,7 @@ COPY . .
 
 RUN npm i -f
 RUN npm run build
-RUN npx nx run waldheim.dev:server:production
+RUN npm run ssr:prod || true
 EXPOSE $PORT
 
 ENTRYPOINT node dist/server/main.js --port $PORT

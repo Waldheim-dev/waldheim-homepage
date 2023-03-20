@@ -10,7 +10,8 @@
     "zip": "node zip.js",
     "deploy": "firebase deploy --only hosting",
     "build:deploy": "nx build && firebase deploy --only hosting",
-    "ssr": "nx run waldheim.dev:serve-ssr"
+    "ssr": "nx run waldheim.dev:serve-ssr",
+    "ssr:prod": "nx run waldheim.dev:server:production"
   },
   "private": true,
   "dependencies": {
