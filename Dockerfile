@@ -3,9 +3,10 @@ ARG PORT=8082
 
 USER root
 
+RUN apk add --no-cache curl
+
 HEALTHCHECK --interval=10s --timeout=5s \
   CMD curl -f http://localhost:$PORT/health || exit 1
-
 
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
