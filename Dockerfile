@@ -16,6 +16,7 @@ WORKDIR /opt/app
 COPY . .
 
 RUN npm i -f
+RUN npm run build
 RUN npx nx run waldheim.dev:server:production
 EXPOSE $PORT
 
