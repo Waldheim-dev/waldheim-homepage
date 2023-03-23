@@ -17,7 +17,9 @@ COPY . .
 
 RUN npm i -f
 RUN npm run build
-RUN npm run ssr:prod || true
+# run
+CMD ["npm","run","ssr:prod"]
+#RUN npm run ssr:prod --verbose
 EXPOSE $PORT
 
 ENTRYPOINT node dist/server/main.js --port $PORT
