@@ -1,3 +1,28 @@
+## [23.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.4.6...v23.5.0) (2023-03-23)
+
+
+### :sparkles: Features
+
+* Insert optimized Service for SSR ([dbcb935](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dbcb9354c3ca6203bb7371cf194d2ba7317cf2be))
+* Insert SSR for Angular - Local actions (Deploy via SSH on Docker-Server coming soon) ([333de59](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/333de59f00f83d126c40f6f2dbd375406ecb54e8))
+
+
+### :repeat: Chores
+
+* Change Deployment ([aadb8c8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/aadb8c89476958e59e1fe9362c21c2386a97d1ae))
+* Change Traefik-Setup ([d0af107](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d0af10784aac1f09cc4e5ca5aff3e34984a58ce0))
+* Change URLs ([865cf79](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/865cf7934a887f09be6109af4b959093c008d08b))
+* Update Build-Process ([0c09043](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0c09043ddc9e9b7e8178954a9dd0f4a17e12cb14))
+* Update Build-Process ([944b531](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/944b5317ad0224c1e731e3d0437d6bd6651a5b55))
+* Update Healthy-Container ([ac6b0e2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ac6b0e20fcc38e93ab0306c0a705e4f297c4d9e1))
+* Update Healthy-Container ([425ffa0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/425ffa07748f67d41dedf0db7289dcaf0875650a))
+* Wrong Router fixed ([ad80e35](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ad80e35161d25edb329f6dc0e8a91a6f2544693a))
+
+
+### :bug: Fixes
+
+* Change Path of Rendert Elements ([1546da1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1546da147b278977cfe8016b1cac0865469ed1f3))
+
 ## [23.4.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.4.5...v23.4.6) (2023-03-03)
 
 
