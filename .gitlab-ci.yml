@@ -30,7 +30,7 @@ deploy-hosting:
     entrypoint: [""]
   script:
     - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
-    - ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "sudo -s && cd $SSH_PATH && docker-compose down && git pull origin default && docker-compose up -d"
+    - ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "sudo -s && cd $SSH_PATH && git pull && docker-compose down && docker-compose up -d"
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
       when: on_success
