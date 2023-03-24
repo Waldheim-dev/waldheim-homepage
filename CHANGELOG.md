@@ -1,3 +1,19 @@
+## [23.6.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.0...v23.6.1) (2023-03-24)
+
+
+### :repeat: Chores
+
+* rebuild ([7554a69](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7554a69ce6dbcb98a20e62506b7ecb6f3b65e064))
+* rebuild ([aba5164](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/aba5164a3611fc37d874d729ce989c8f50fbdd19))
+* rebuild ([54dfe37](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/54dfe370862aefad43b5d1f434a14adf9f130fed))
+* rebuild ([e6d4d0f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e6d4d0f8d02af18977ad5bc63780e004bedb8e67))
+* rebuild ([ec2b841](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ec2b8417710ea7e11a60ded276716a14fe7d29b7))
+
+
+### :bug: Fixes
+
+* Add final deploy ([bd49856](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bd49856a12f21de01ec6f91d72dc17da65998c71))
+
 ## [23.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.5.0...v23.6.0) (2023-03-24)
 
 
