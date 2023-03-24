@@ -1,3 +1,10 @@
+## [23.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.5.0...v23.6.0) (2023-03-24)
+
+
+### :sparkles: Features
+
+* Add Demo-Run for deploy ([084ab5f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/084ab5f47edbcc3cf6108abdee554b002ab0ce55))
+
 ## [23.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.4.6...v23.5.0) (2023-03-23)
 
 
