@@ -21,3 +21,21 @@ include:
   - template: Security/License-Scanning.gitlab-ci.yml
   - remote: https://gitlab.com/mwaldheim/container/-/raw/main/version/release.yml
 #  - remote: https://gitlab.com/mwaldheim/container/-/raw/main/firebase/firebase.yml
+
+
+deploy-hosting:
+  stage: production
+  image:
+    name: registry.gitlab.com/mwaldheim/container/sshdeploy
+    entrypoint: [""]
+  needs:
+    - job: release
+  script:
+    - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+    - ssh -o StrictHostKeyChecking=no -p $SSH_PORT $SSH_USER@$SSH_HOST "cd $SSH_PATH && sudo -s docker-compose down && git pull origin default && sudo -s docker-compose up -d"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_success
+    - when: never
+
+
