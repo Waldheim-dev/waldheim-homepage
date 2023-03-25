@@ -1,3 +1,10 @@
+## [23.6.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.1...v23.6.2) (2023-03-25)
+
+
+### :bug: Fixes
+
+* Change Header. Exclude Firebase, update Dependencies ([69a6ad3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/69a6ad3c0deba8864e034847a43d55000492eb8a))
+
 ## [23.6.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.0...v23.6.1) (2023-03-24)
 
 
