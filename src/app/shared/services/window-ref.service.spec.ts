@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { WindowRefService } from './window-ref.service';
+import { WindowRef } from "./window-ref.service";
 
-describe('WindowRefService', () => {
-  let service: WindowRefService;
+describe("WindowRefService", () => {
+  let service: WindowRef;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WindowRefService);
+    service = TestBed.inject(WindowRef);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });
