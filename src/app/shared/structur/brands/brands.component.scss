@@ -36,6 +36,69 @@ app-brands {
     align-items: center;
     justify-content: space-evenly;
   }
+  .wrapper-skills {
+    position: relative;
+
+    .button {
+      position: absolute;
+      left: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--tertiary-container);
+      color: var(--on-tertiary-container);
+      border: 0;
+      box-shadow: var(--elevation-2);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--tertiary);
+        color: var(--on-tertiary);
+      }
+
+      &.right {
+        left: unset;
+        right: 3rem;
+      }
+      &[disabled] {
+        background-color: var(--surface-variant) !important;
+        color: var(--outline) !important;
+        cursor: auto !important;
+      }
+    }
+
+    .container-skills {
+      gap: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none; // Die Scrollbar ausblenden
+      }
+
+      > app-card {
+
+        flex: 0 0 100%;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+
+      }
+    }
+  }
+
+  .charts {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
   @media screen and (max-width: 450px) {
     .charts {
@@ -67,9 +130,35 @@ app-brands {
       background-color: var(--primary-container);
     }
   }
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .legend-wrapper {
+    width: 100%;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+  }
+
+  .carousel-counter {
+    margin-bottom: 1rem;
+  }
 
   .tool {
     padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    .tool-limiter {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
   }
 
   .top, .name {

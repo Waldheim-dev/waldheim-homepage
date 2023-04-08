@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 
 enum Knowledgebase {
   BASIC=1,
@@ -31,8 +31,11 @@ interface Tool {
   styleUrls  : ['./brands.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class BrandsComponent {
+export class BrandsComponent implements OnInit {
 
+
+
+  //<editor-fold desc="Options">
   angular: Tool = {
     name: 'Angular',
     image: {
@@ -391,8 +394,8 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
-    isActive: true,
-    fixedExperience: 0,
+    isActive: false,
+    fixedExperience: 3,
     sinceLastRollup: (new Date('2020-01-01')).getTime(),
     knowledgebase: Knowledgebase.ADVANCED
   }
@@ -1169,6 +1172,84 @@ export class BrandsComponent {
     this.hosting,
     this.cms
   ];
+  //</editor-fold>
+
+
+  acceptableDenominators = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  maxDistanceToNumerator = 0.0001;
+
+  @ViewChild('container') containerRef: ElementRef<HTMLDivElement> | undefined;
+  private keysPressed = new Set<string>();
+  private scrollAmount = 100; // Anzahl Pixel, um den Container zu scrollen
+  isLeftDisabled = true;
+  isRightDisabled = false;
+  current: number = 1;
+
+
+
+  ngOnInit() {
+    this.updateButtonState();
+  }
+
+  scrollBackward() {
+    const container = this.containerRef?.nativeElement;
+    if (!container) {
+      return;
+    }
+    container.scrollLeft -= container.offsetWidth; // Scrollt um 100% Breite zurück
+    this.updateButtonState();
+  }
+
+  scrollForward() {
+    const container = this.containerRef?.nativeElement;
+    if (!container) {
+      return;
+    }
+    container.scrollLeft += container.offsetWidth; // Scrollt um 100% Breite vorwärts
+    this.updateButtonState();
+  }
+
+  private updateButtonState() {
+    const container = this.containerRef?.nativeElement;
+    if (!container) {
+      return;
+    }
+    this.isLeftDisabled = container.scrollLeft === 0;
+    this.isRightDisabled = container.scrollLeft + container.clientWidth === container.scrollWidth;
+    // Berechnet die aktuelle Seite inkl. hochrunden
+    this.current = Math.ceil(container.scrollLeft / container.offsetWidth) + 1;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
+    this.keysPressed.add(event.key.toLowerCase());
+    this.scrollContainer();
+  }
+
+  @HostListener('document:keyup', ['$event'])
+  onKeyUp(event: KeyboardEvent) {
+    this.keysPressed.delete(event.key.toLowerCase());
+  }
+
+  private scrollContainer() {
+    const container = this.containerRef?.nativeElement;
+    if (!container) {
+      return;
+    }
+    let deltaX = 0;
+
+    if (this.keysPressed.has('arrowleft') || this.keysPressed.has('a')) {
+      deltaX -= this.scrollAmount;
+    }
+
+    if (this.keysPressed.has('arrowright') || this.keysPressed.has('d')) {
+      deltaX += this.scrollAmount;
+    }
+
+    container.scrollLeft += deltaX;
+    this.updateButtonState();
+  }
+
 
 
   getPercentExp(tool: Tool, group: Tool[]) {
@@ -1197,9 +1278,6 @@ export class BrandsComponent {
     }
     return years;
   }
-
-  acceptableDenominators = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  maxDistanceToNumerator = 0.0001
 
   numberToFractionString(n: number): string | undefined {
     const negative = (n < 0);
