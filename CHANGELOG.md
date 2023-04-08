@@ -1,3 +1,21 @@
+## [23.6.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.2...v23.6.3) (2023-04-08)
+
+
+### :zap: Refactoring
+
+* Fix Theme-Service ([80f54b5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/80f54b56a6736c413409d6d4972d9bf7d1873ccd))
+* Remove fxLayouts from Brands ([c9b4dc2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c9b4dc2b382cb204b216f54ce7f732846517b2f8))
+* Remove fxLayouts from Cloudcard ([b937939](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b937939185a0c680a02290e1edc2c41cc748a8fb))
+* Remove fxLayouts from Ecodrive-Preview ([b2b8318](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b2b83181105bdf6b0fc45bf8edcc13f87ae01679))
+* Remove unused Functions from nav ([fd977b6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/fd977b6b08fd33b8080bb5f194711475c5470a12))
+
+
+### :bug: Fixes
+
+* Add Smoth-Animations for Scroll and Color-Switch ([d9a784f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d9a784fea290ff02a62817e91bd50385fcf09892))
+* Shots für Konzert, Fasching und Waldheim.dev aktualisiert ([1b169a5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1b169a51b2bb0619e156a5ab2d744fb3b2072d48))
+* Vatertags-Projekt hinzugefügt ([a3393ee](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a3393ee4eb3de141ba346c100d20c23295169a5e))
+
 ## [23.6.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.1...v23.6.2) (2023-03-25)
 
 
