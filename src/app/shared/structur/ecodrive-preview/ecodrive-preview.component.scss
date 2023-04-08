@@ -8,7 +8,7 @@ table {
   position: relative;
 
   &:after {
-    content: "Bald Verfügbar";
+    content: "Release Q4 2023 geplant";
     background-color: var(--error);
     color: var(--on-error);
     width: 120%;
@@ -77,4 +77,42 @@ td {
 app-card {
   height: calc(100% - 1rem);
   box-sizing: border-box;
+}
+.feature-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  .login-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+  }
+  .flex-full {
+    flex: 0 0 100%;
+  }
+  .flex-half {
+      flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+.text-spacing {
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  gap: .5rem;
+}
+
+[size-lt="md"], [size-lt="sm"], [size-lt="xs"] {
+  .hide-lt-md {
+    display: none;
+  }
+  .feature-wrapper {
+    flex-direction: column;
+
+    .flex-half {
+      flex: 0 0 100%;
+    }
+  }
 }
