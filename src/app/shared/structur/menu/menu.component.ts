@@ -26,12 +26,11 @@ export class MenuComponent {
   constructor(
     private localStorageService: LocalStorageService,
     @Inject(DOCUMENT) private document: Document,
-    private windowRef: WindowRef
   ) {
     this.version = pack.version;
     // is isDarkTheme is undefined in local Storage, get it from Browser
     if (this.localStorageService.getItem('isDarkTheme') === null) {
-      this.isDarkTheme = this.windowRef.nativeWindow?.matchMedia('(prefers-color-scheme: dark)').matches ?? false;
+      this.isDarkTheme = WindowRef.nativeWindow()?.matchMedia('(prefers-color-scheme: dark)').matches ?? false;
     } else {
       // load isDarkTheme from local storage
       this.isDarkTheme = this.localStorageService.getItem('isDarkTheme') === 'true';
