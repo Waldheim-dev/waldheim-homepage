@@ -1,55 +1,59 @@
 <section>
-  <h2 class="container text-center">Meine Tools / Skills</h2>
+  <h2 class='container text-center'>Meine Tools / Skills</h2>
 
-  <div class="container">
-  <div class="legende">
-    <h4>Legende:</h4>
-    <div><i class="fa-solid fa-pause fa-beat-fade fa-fw"></i> Pausierte(r/s) Tool / Skill</div>
-    <div><i class="fa-regular fa-rotate fa-spin fa-fw"></i> Aktive(r/s) Tool / Skill</div>
-    <div><i class="fa-solid fa-plus fa-fw"></i> Grundlegende Erfahrung</div>
-    <div><i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(2)"></i> Erweiterte Erfahrung</div>
-    <div><i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(3)"></i> Tiefe Erfahrungen</div>
-  </div>
+  <div class='container'>
+    <div class='legend-wrapper'>
+    <div class='legende'>
+      <h4>Legende:</h4>
+      <div><i class='fa-solid fa-pause fa-beat-fade fa-fw'></i> Pausierte(r/s) Tool / Skill</div>
+      <div><i class='fa-regular fa-rotate fa-spin fa-fw'></i> Aktive(r/s) Tool / Skill</div>
+      <div><i class='fa-solid fa-plus fa-fw'></i> Grundlegende Erfahrung</div>
+      <div><i class='fa-solid fa-plus fa-fw' *ngFor='let item of [].constructor(2)'></i> Erweiterte Erfahrung</div>
+      <div><i class='fa-solid fa-plus fa-fw' *ngFor='let item of [].constructor(3)'></i> Tiefe Erfahrungen</div>
+    </div>
+
+    <div class="carousel-counter">{{ current }} / {{ groups.length }} Skill-Gruppen</div>
+    </div>
   </div>
 
-  <div class="container" gdAlignColumns="stretch stretch"
-       gdAuto="row"
-       gdColumns="repeat(2,1fr)" gdGap="1rem"
-       gdRows="repeat(8,minmax(250px,1fr))"
-       gdColumns.lt-md="repeat(2,1fr)"
-       gdRows.lt-md="repeat(8,minmax(250px,1fr))"
-       gdColumns.lt-sm="repeat(1,1fr)"
-       gdRows.lt-sm="repeat(16,minmax(250px,1fr))"
-  >
-    <ng-container class="groups" *ngFor="let group of groups">
-      <app-card elevation class="group" gdColumn="auto / span 1" gdRow="auto / span 1">
-        <div fxLayout="column" fxLayoutAlign="space-between center">
-          <h3>{{ group.name }}</h3>
-          <div class="charts" fxLayout="row" fxLayoutGap="1rem">
-            <div class="tool" *ngFor="let tool of group.tools"
-              fxLayout="column" fxLayoutAlign="center center" fxLayoutGap=".5rem">
-                <div style="height: 150px" fxLayout="column" fxLayoutAlign="end center">
-                  <div class="bar" [ngClass]="{'active': tool.isActive }" style="height:{{getPercentExp(tool, group.tools) + '%'}}">
-                    <i class="fa-solid fa-pause fa-beat-fade" *ngIf="!tool.isActive"></i>
-                    <i class="fa-regular fa-rotate fa-spin" *ngIf="tool.isActive"></i>
-                    <div class="knowgledbase">
-                      <i class="fa-solid fa-plus fa-fw" *ngFor="let item of [].constructor(tool.knowledgebase)"></i>
+  <div class='wrapper-skills'>
+    <button (click)='scrollBackward()' [disabled]="isLeftDisabled" class='button'><i class='fa-solid fa-angles-left' aria-label='Zurück'></i>
+    </button>
+    <button (click)='scrollForward()' [disabled]="isRightDisabled" class='button right'><i class='fa-solid fa-angles-right'
+                                                              aria-label='Vorwärts'></i></button>
+    <div class='container container-skills' #container>
+      <ng-container class='groups' *ngFor='let group of groups'>
+        <app-card elevation class='group'>
+          <div class="card-inner">
+            <h3>{{ group.name }}</h3>
+            <div class='charts'>
+              <div class='tool' *ngFor='let tool of group.tools'
+                   fxLayout='column'>
+                <div style='height: 250px' class='tool-limiter'>
+                  <div class='bar' [ngClass]="{'active': tool.isActive }"
+                       style="height:{{getPercentExp(tool, group.tools) + '%'}}">
+                    <i class='fa-solid fa-pause fa-beat-fade' *ngIf='!tool.isActive'></i>
+                    <i class='fa-regular fa-rotate fa-spin' *ngIf='tool.isActive'></i>
+                    <div class='knowgledbase'>
+                      <i class='fa-solid fa-plus fa-fw' *ngFor='let item of [].constructor(tool.knowledgebase)'></i>
                     </div>
                   </div>
-                  <div class="top">
+                  <div class='top'>
                     {{ getTotalExp(tool) }} Jahr/e
                   </div>
                   <!-- Ausgeben von Jahren -->
                   <!-- Bereichnung von Höhe basierend auf Höchstjahre in Kat -->
                 </div>
-              <img loading="lazy" [src]="tool.image.path" [height]="tool.image.height / 2" [width]="tool.image.width / 2"
-                   [alt]="tool.name">
-              <h4 class="name">{{ tool.name }}</h4>
+                <img loading='lazy' [src]='tool.image.path' [height]='tool.image.height / 2'
+                     [width]='tool.image.width / 2'
+                     [alt]='tool.name'>
+                <h4 class='name'>{{ tool.name }}</h4>
+              </div>
             </div>
           </div>
-        </div>
-      </app-card>
-    </ng-container>
+        </app-card>
+      </ng-container>
 
+    </div>
   </div>
 </section>
