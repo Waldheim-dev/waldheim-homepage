@@ -261,3 +261,17 @@ hr {
     -webkit-text-stroke: .5px var(--background);
   }
 }
+
+
+[size-lt="md"], [size-lt="sm"], [size-lt="sm"] {
+  .hide-lt-md {
+    display: none;
+  }
+  .feature-wrapper {
+    flex-direction: column;
+
+    .flex-half {
+      flex: 0 0 100% !important;
+    }
+  }
+}

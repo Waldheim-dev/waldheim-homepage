@@ -103,16 +103,3 @@ app-card {
     align-items: center;
   gap: .5rem;
 }
-
-[size-lt="md"], [size-lt="sm"], [size-lt="xs"] {
-  .hide-lt-md {
-    display: none;
-  }
-  .feature-wrapper {
-    flex-direction: column;
-
-    .flex-half {
-      flex: 0 0 100%;
-    }
-  }
-}
