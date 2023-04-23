@@ -1180,7 +1180,9 @@ export class BrandsComponent implements OnInit {
 
   @ViewChild('container') containerRef: ElementRef<HTMLDivElement> | undefined;
   private keysPressed = new Set<string>();
-  private scrollAmount = 100; // Anzahl Pixel, um den Container zu scrollen
+  private scrollAmount = 1; // Anzahl Pixel, um den Container zu scrollen
+  // MaxScroll von 80rem in px
+  private maxScroll = 1280;
   isLeftDisabled = true;
   isRightDisabled = false;
   current: number = 1;
@@ -1196,7 +1198,7 @@ export class BrandsComponent implements OnInit {
     if (!container) {
       return;
     }
-    container.scrollLeft -= container.offsetWidth; // Scrollt um 100% Breite zurück
+    container.scrollLeft -= container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth; // Scrollt um 100% Breite zurück
     this.updateButtonState();
   }
 
@@ -1205,7 +1207,7 @@ export class BrandsComponent implements OnInit {
     if (!container) {
       return;
     }
-    container.scrollLeft += container.offsetWidth; // Scrollt um 100% Breite vorwärts
+    container.scrollLeft += container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth; // Scrollt um 100% Breite vorwärts
     this.updateButtonState();
   }
 
@@ -1214,10 +1216,11 @@ export class BrandsComponent implements OnInit {
     if (!container) {
       return;
     }
+    const maxScroll = container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth;
     this.isLeftDisabled = container.scrollLeft === 0;
     this.isRightDisabled = container.scrollLeft + container.clientWidth === container.scrollWidth;
     // Berechnet die aktuelle Seite inkl. hochrunden
-    this.current = Math.ceil(container.scrollLeft / container.offsetWidth) + 1;
+    this.current = Math.ceil(container.scrollLeft / maxScroll) + 1;
   }
 
   @HostListener('document:keydown', ['$event'])
