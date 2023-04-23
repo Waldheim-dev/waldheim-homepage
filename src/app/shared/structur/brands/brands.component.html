@@ -21,7 +21,7 @@
     </button>
     <button (click)='scrollForward()' [disabled]="isRightDisabled" class='button right'><i class='fa-solid fa-angles-right'
                                                               aria-label='Vorwärts'></i></button>
-    <div class='container container-skills' #container>
+    <div class='container-skills' #container>
       <ng-container class='groups' *ngFor='let group of groups'>
         <app-card elevation class='group'>
           <div class="card-inner">
