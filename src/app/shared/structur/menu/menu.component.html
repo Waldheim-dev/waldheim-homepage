@@ -1,8 +1,8 @@
-<nav fxLayout fxLayoutAlign="space-between center">
-  <div class="brand" fxLayoutAlign="space-between center">
+<nav>
+  <div class="brand">
 
     <app-nav class="button">
-      <a fxShow.lt-lg fxHide.gt-md class="button" (click)="toggleMenu()">
+      <a class="button hide-gt-sm" (click)="toggleMenu()">
         <i class="fa-solid fa-bars-sort fa-fw" *ngIf="!isMenuOpen"></i>
         <i class="fa-solid fa-times fa-fw" *ngIf="isMenuOpen"></i>
       </a>
@@ -10,7 +10,7 @@
     <img src="assets/forestdesign_icon.png" routerLink="/" alt="Waldheim.dev" height="40px" width="40px">
     <span routerLink="/">Waldheim.dev</span>
     <app-tag routerLink="/">v{{version}}</app-tag>
-    <div class="nav-list" fxHide.lt-md>
+    <div class="nav-list hide-lt-md">
       <app-nav class="button">
         <a routerLink="services" class="button">
           Mein Service
@@ -28,7 +28,7 @@
       </app-nav>
     </div>
   </div>
-  <div class="nav-list" fxHide.lt-md>
+  <div class="nav-list hide-lt-md">
     <app-nav class="button">
       <a class="button" (click)="toggleTheme()">
 
@@ -69,8 +69,8 @@
     </app-nav>
   </div>
 </nav>
-<div class="nav-overlay" fxShow.lt-lg fxHide.gt-md [ngClass]="{'active': isMenuOpen}">
-  <div class="nav-inner" fxLayout="column" fxLayoutGap="1rem">
+<div class="nav-overlay"  [ngClass]="{'active': isMenuOpen}">
+  <div class="nav-inner">
     <app-nav class="button">
       <a routerLink="services" class="button">
         Mein Service
@@ -87,23 +87,23 @@
       </a>
     </app-nav>
     <hr>
-    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
-      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+    <div class='row'>
+      <app-nav class="button">
         <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" class="button">
           <i class="fa-brands fa-xing"></i> Xing
         </a>
       </app-nav>
-      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+      <app-nav class="button">
         <a href="https://gitlab.com/mwaldheim" target="_blank" class="button">
           <i class="fa-brands fa-gitlab"></i> Gitlab
         </a>
       </app-nav>
-      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+      <app-nav class="button">
         <a href="https://www.twitch.tv/blackbird995" target="_blank" class="button">
           <i class="fa-brands fa-twitch"></i> Twitch
         </a>
       </app-nav>
-      <app-nav class="button" fxFlex="calc(50% - 1rem)">
+      <app-nav class="button">
         <a href="https://twitter.com/my_codec" target="_blank" class="button">
           <i class="fa-brands fa-twitter"></i> Twitter
         </a>
@@ -112,7 +112,7 @@
     </div>
 
     <hr>
-    <app-nav class="button" fxFlex="100%">
+    <app-nav class="button">
       <a class="button" (click)="toggleTheme()">
           <span class="fa-custom-stack" style="vertical-align: top;" *ngIf="!isDarkTheme">
             <i class="fa-solid fa-moon fa-fw"></i>

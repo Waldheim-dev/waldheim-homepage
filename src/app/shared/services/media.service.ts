@@ -75,17 +75,17 @@ export class MediaService {
     }
 
     switch (true) {
-      case this.MediaQueryList.gtXs.matches:
-        this.document.documentElement.setAttribute('size-gt', 'xs');
-        break;
-      case this.MediaQueryList.gtSm.matches:
-        this.document.documentElement.setAttribute('size-gt', 'sm');
+      case this.MediaQueryList.gtLg.matches:
+        this.document.documentElement.setAttribute('size-gt', 'lg');
         break;
       case this.MediaQueryList.gtMd.matches:
         this.document.documentElement.setAttribute('size-gt', 'md');
         break;
-      case this.MediaQueryList.gtLg.matches:
-        this.document.documentElement.setAttribute('size-gt', 'lg');
+      case this.MediaQueryList.gtSm.matches:
+        this.document.documentElement.setAttribute('size-gt', 'sm');
+        break;
+      case this.MediaQueryList.gtXs.matches:
+        this.document.documentElement.setAttribute('size-gt', 'xs');
         break;
     }
 
