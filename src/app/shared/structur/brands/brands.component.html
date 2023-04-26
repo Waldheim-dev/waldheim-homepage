@@ -27,8 +27,7 @@
           <div class="card-inner">
             <h3>{{ group.name }}</h3>
             <div class='charts'>
-              <div class='tool' *ngFor='let tool of group.tools'
-                   fxLayout='column'>
+              <div class='tool' *ngFor='let tool of group.tools'>
                 <div style='height: 250px' class='tool-limiter'>
                   <div class='bar' [ngClass]="{'active': tool.isActive }"
                        style="height:{{getPercentExp(tool, group.tools) + '%'}}">
