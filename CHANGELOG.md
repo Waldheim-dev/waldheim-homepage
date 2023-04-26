@@ -1,3 +1,10 @@
+## [23.6.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.4...v23.6.5) (2023-04-26)
+
+
+### :bug: Fixes
+
+* Entferne weitere fx-Classes ([031bc10](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/031bc102670d04f49180ae59a55a2142d6e69f08))
+
 ## [23.6.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.3...v23.6.4) (2023-04-23)
 
 
