@@ -1,63 +1,16 @@
-<section class="section-24">
-  <h1 class="h2">Ecodrive</h1>
-  <div fxLayout="row wrap">
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Kunde</h5>
-      <span>Waldheim.dev</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Branche</h5>
-      <span>IT</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Projektgröße</h5>
-      <span>2 Personen</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Homepage</h5>
-      <a href="https://www.eco-drive.app" rel="nofollow" target="_blank">www.eco-drive.app <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </app-card>
-    <div fxFlex="1rem"></div>
-  </div>
-</section>
-<section class="section-24">
-  Ecodrive ist eine Software zur Nutzungsermittlung. Dabei werden Daten von Fahrzeugen und deren laufenden Kosten
-  erfasst. Dadurch können Effizient und Kosten überblickt und gesammelt werden. Für Firmen gibt es mit einem Upgrade
-  auch die Möglichkeit direkt ein Fahrtenbuch aus den Daten zu generieren.
-</section>
-<section class="section-24" fxLayoutGap=".5rem">
-  <app-tag>Docker</app-tag>
-  <app-tag>Angular</app-tag>
-  <app-tag>C#</app-tag>
-  <app-tag>Firebase</app-tag>
-  <app-tag>OAuth2</app-tag>
-  <app-tag>Angular-Material</app-tag>
-  <app-tag>Gitlab-CI</app-tag>
-  <app-tag>CleanCode</app-tag>
-  <app-tag>Jest</app-tag>
-  <app-tag>Cypress</app-tag>
-  <app-tag>SonarQube</app-tag>
-  <app-tag>REST</app-tag>
-  <app-tag>Jira</app-tag>
-  <app-tag>Webstorm</app-tag>
-  <app-tag>Visual Studio Code</app-tag>
-  <app-tag>Typescript</app-tag>
-  <app-tag>Stripe</app-tag>
-  <app-tag>Apexcharts</app-tag>
-  <app-tag>Code-Security</app-tag>
-</section>
-<section class="section-24">
-  <h2 class="h2">Allgemein</h2>
-  <ul>
+<app-project-details [overview]='overview' [tags]='tags'>
+  <ng-container header>Ecodrive</ng-container>
+  <ng-container content>
+    Ecodrive ist eine Software zur Nutzungsermittlung. Dabei werden Daten von Fahrzeugen und deren laufenden Kosten
+    erfasst. Dadurch können Effizient und Kosten überblickt und gesammelt werden. Für Firmen gibt es mit einem Upgrade
+    auch die Möglichkeit direkt ein Fahrtenbuch aus den Daten zu generieren.
+  </ng-container>
+  <ul general>
     <li>Umsetzung von einer kostengünstigen leistungsstarken Umgebung</li>
     <li>Optimieren von Kosten</li>
     <li>Implementieren von Kostenabrechnung</li>
   </ul>
-  <h2 class="h2">Frontend</h2>
-  <ul>
+  <ul frontend>
     <li>Gestaltung einer modernen Lösung basierend auf Angular</li>
     <li>Erstellen eines eigenen Themes für Material</li>
     <li>Optimierung bis zum Smartphone</li>
@@ -65,16 +18,10 @@
     <li>Sicherung der CodeQuality durch Unittests mit Jest und e2e-Tests mit Cypress</li>
     <li>Optimierung der Workflows durch nx.dev</li>
   </ul>
-  <h2 class="h2">Backend</h2>
-  <ul>
+  <ul backend>
     <li>Entwicklung eines eigenen OAuth-Moduls</li>
   </ul>
-</section>
-<hr>
-<section class="section-24">
-  <h2 class="h2">Assets</h2>
-  <app-tag>Werden nachgeliefert</app-tag>
-  <div class="assets" fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="space-evenly start">
-    <img alt="Waldheim.dev - Home" src="assets/projects/waldheim-dev/ecodrive/ecodrive.png" fxFlexFill>
-  </div>
-</section>
+  <ng-container assets>
+    <img alt="Waldheim.dev - Home" src="assets/projects/waldheim-dev/ecodrive/ecodrive.png">
+  </ng-container>
+</app-project-details>
