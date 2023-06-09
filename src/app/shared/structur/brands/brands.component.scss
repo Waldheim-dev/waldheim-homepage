@@ -36,47 +36,16 @@ app-brands {
     align-items: center;
     justify-content: space-evenly;
   }
-  .wrapper-skills {
+  .wrapper-skills, .container {
     position: relative;
 
-    .button {
-      position: absolute;
-      left: 3rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--tertiary-container);
-      color: var(--on-tertiary-container);
-      border: 0;
-      box-shadow: var(--elevation-2);
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      z-index: 1;
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--tertiary);
-        color: var(--on-tertiary);
-      }
-
-      &.right {
-        left: unset;
-        right: 3rem;
-      }
-      &[disabled] {
-        background-color: var(--surface-variant) !important;
-        color: var(--outline) !important;
-        cursor: auto !important;
-      }
-    }
 
     .container-skills {
       gap: 1rem;
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
+      justify-content: space-between;
+      flex-wrap: wrap;
 
       &::-webkit-scrollbar {
         display: none; // Die Scrollbar ausblenden
@@ -84,12 +53,12 @@ app-brands {
 
       > app-card {
 
-        flex: 0 0 100%;
-        width: 100%;
+        flex: 0 0 calc(50% - 1rem);
+        width: calc(50% - 1rem);
         display: block;
         box-sizing: border-box;
         scroll-snap-align: center;
-        max-width: 80rem;
+        min-width: 50vh;
 
       }
     }

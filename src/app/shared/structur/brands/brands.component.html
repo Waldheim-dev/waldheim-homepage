@@ -12,16 +12,11 @@
       <div><i class='fa-solid fa-plus fa-fw' *ngFor='let item of [].constructor(3)'></i> Tiefe Erfahrungen</div>
     </div>
 
-    <div class="carousel-counter">{{ current }} / {{ groups.length }} Skill-Gruppen</div>
-    </div>
+  </div>
   </div>
 
-  <div class='wrapper-skills'>
-    <button (click)='scrollBackward()' [disabled]="isLeftDisabled" class='button'><i class='fa-solid fa-angles-left' aria-label='Zurück'></i>
-    </button>
-    <button (click)='scrollForward()' [disabled]="isRightDisabled" class='button right'><i class='fa-solid fa-angles-right'
-                                                              aria-label='Vorwärts'></i></button>
-    <div class='container-skills' #container>
+  <div class='container'>
+    <div class='container-skills'>
       <ng-container class='groups' *ngFor='let group of groups'>
         <app-card elevation class='group'>
           <div class="card-inner">
