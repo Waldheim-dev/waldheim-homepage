@@ -60,6 +60,7 @@
 
       }
     }
+
     .lifecicle_descriptions {
       display: flex;
       flex-wrap: wrap;
@@ -75,12 +76,15 @@
         box-sizing: border-box;
       }
     }
+
     .lifecicle_projects {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+
       .lifecicle_project {
         flex: 0 0 calc((100% / 3) - (1rem));
+
         app-card {
           min-height: 100%;
           box-sizing: border-box;
@@ -92,23 +96,89 @@
   }
 }
 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+
+  .title {
+    flex: 0 0 calc(100% - 300px - 1rem);
+  }
+
+  .side {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  .side, .side app-cloudcard {
+    flex: 0 0 300px;
+  }
+}
+
+.service {
+  .service-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    app-card {
+      flex: 0 0 calc(100% / 4 - 3rem);
+      width: calc(100% / 4 - 3rem);
+    }
+  }
+}
+
 @media screen and (max-width: 950px) {
-.lifecicle {
-  .lifecicle_milestone {
-    .lifecicle_descriptions, .lifecicle_projects {
-      .lifecicle_description, .lifecicle_project {
-        flex: 0 0 calc((100% / 2) - (.5rem));
+
+  .hero {
+    flex-direction: column;
+
+    .title, .side, .side app-cloudcard {
+      flex: 0 0 100%;
+    }
+  }
+
+  .service {
+    .service-wrapper {
+      display: flex;
+      app-card {
+        flex: 0 0 calc(100% / 2 - 3rem);
+        width: calc(100% / 2 - 3rem);
+      }
+    }
+  }
+  .lifecicle {
+    .lifecicle_milestone {
+      .lifecicle_descriptions, .lifecicle_projects {
+        .lifecicle_description, .lifecicle_project {
+          flex: 0 0 calc((100% / 2) - (.5rem));
+        }
       }
     }
   }
 }
-}
+
 @media screen and (max-width: 640px) {
-.lifecicle {
-  .lifecicle_milestone {
-    .lifecicle_descriptions, .lifecicle_projects {
+
+  .service {
+    .service-wrapper {
+      display: flex;
       flex-direction: column;
+      app-card {
+        flex: 0 0 calc(100% - 2rem);
+        width: calc(100% - 2rem);
+      }
     }
   }
-}
+  .lifecicle {
+    .lifecicle_milestone {
+      .lifecicle_descriptions, .lifecicle_projects {
+        flex-direction: column;
+      }
+    }
+  }
 }
