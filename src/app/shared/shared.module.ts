@@ -12,6 +12,8 @@ import { LocalStorageService } from './services/local-storage.service';
 import { WindowRef } from './services/window-ref.service';
 import { MediaService } from './services/media.service';
 import { ProjectDetailsComponent } from './structur/project-details/project-details.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const COMP_IMPORT_EXPORT = [
   NavComponent,
@@ -25,7 +27,22 @@ const COMP_IMPORT_EXPORT = [
 ];
 const COMP_IMPORT_ONLY: never[] = [];
 const MOD_IMPORT_EXPORT = [RouterModule, NgOptimizedImage];
-const MOD_IMPORT_ONLY = [CommonModule];
+const MOD_IMPORT_ONLY = [CommonModule,HttpClientModule,
+  MarkdownModule.forRoot({
+    loader: HttpClient, // optional, only if you use [src] attribute
+    markedOptions: {
+      provide: MarkedOptions,
+      useValue: {
+        gfm: true,
+        breaks: false,
+        pedantic: false,
+        smartLists: true,
+        smartypants: false,
+      },
+    },
+  }),];
+const MOD_EXPORT_ONLY = [
+  MarkdownModule];
 
 @NgModule({
   declarations: [
@@ -33,7 +50,7 @@ const MOD_IMPORT_ONLY = [CommonModule];
     ...COMP_IMPORT_ONLY,
   ],
   imports: [...MOD_IMPORT_ONLY, ...MOD_IMPORT_EXPORT],
-  exports: [...MOD_IMPORT_EXPORT, ...COMP_IMPORT_EXPORT],
+  exports: [...MOD_IMPORT_EXPORT, ...COMP_IMPORT_EXPORT, ...MOD_EXPORT_ONLY],
   providers: [
     MediaService,
     WindowRef,
