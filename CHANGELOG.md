@@ -1,3 +1,44 @@
+## [23.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.5...v23.7.0) (2023-06-09)
+
+
+### :barber: Style
+
+* Add Hide-Feature ([2c553e4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2c553e45dd12aacc97369206f395cae3596a7505))
+
+
+### :zap: Refactoring
+
+* Create project-Details as Subpage ([e4ea40c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e4ea40ce4a071613fbff9bfdd56530538c52c302))
+* Remove fxLayout from app.component ([9d08e50](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9d08e5060f20a1c29836e49af2a4b629bcae16a0))
+* Remove fxLayout from brands ([2eb6a31](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2eb6a3114587db0cefc71d1ac88c8e8d0cc1dcfa))
+* Remove fxLayout from home and Add Page ([2a6a824](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2a6a82490fa318db81574e5d7693b6acd6c24bfa))
+* Remove fxLayout from if.studymaster ([e925371](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e925371d814f537c9f277a37b0876856b2cf77ab))
+* Remove fxLayout from mvo.fasching ([63fdbb7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/63fdbb7c0c5141114d66e332bfa52990f7724f39))
+* Remove fxLayout from mvo.homepage ([de6b445](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/de6b445959685ee57e72b36824961169d1f40e24))
+* Remove fxLayout from mvo.inkonzert ([f6956a3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f6956a3251720965e5f56c86cf4403b3a6f4d06d))
+* Remove fxLayout from mvo.kirchenkonzert ([71e59a5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/71e59a5381b06d7d752a7c4f4c9310f677bd5adf))
+* Remove fxLayout from mvo.vatertag ([46e35b2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/46e35b2515347f309ff7cefc0d13db62c3278593))
+* Remove fxLayout from projects.component ([002c4ee](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/002c4eef97668787d590d5cf66d5b2943ecb3934))
+* Remove fxLayout from sewobe.homepage ([aded055](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/aded055eae0e42d3dc7e0b89feb9c0b9affcfe4a))
+* Remove fxLayout from sewobe.redesign ([5ea87ba](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5ea87ba39ab87603497919d614ec03dbce19f497))
+* Remove fxLayout from sewobe.software ([4292ed5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4292ed5488e767fd75576c578ab995534226ade9))
+* Remove fxLayout from waldheim-dev.ausgabeschein ([1ffab2c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1ffab2cce980891d34ff19843df7ff1a265d3753))
+* Remove fxLayout from waldheim-dev.ecodrive ([ee1c114](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ee1c114cdb8f1d1fc5c3829da70ca7274a6b011b))
+* Remove fxLayout from waldheim-dev.homepage ([7001415](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7001415b69c1d19a1033f345962c1ec5e582809d))
+* Remove fxLayout from waldheim-it.homepage ([b1e11ef](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b1e11eff32b023b0a8bf9a1973653499297cf248))
+
+
+### :bug: Fixes
+
+* Remove Horizontal-Scroll from Brands ([6dbc49b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6dbc49b475a82c1a9fed1a6187c09d437f17387a))
+
+
+### :sparkles: Features
+
+* Add Changelog to Page ([12468a8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/12468a8a76852926f277423a497bd96b6739114d))
+* Add mvo.serenade ([f3ecb5c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f3ecb5c9164bc58196e4100ac742f3dd975d3095))
+* Upgrade to Angular  16 ([c90f6aa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c90f6aac99334ee08a4952268e3ad1aadfeade5d))
+
 ## [23.6.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.4...v23.6.5) (2023-04-26)
 
 
