@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavComponent } from './structur/nav/nav.component';
 import { TagComponent } from './structur/tag/tag.component';
 import { CloudcardComponent } from './structur/cloudcard/cloudcard.component';
@@ -25,7 +24,7 @@ const COMP_IMPORT_EXPORT = [
   ProjectDetailsComponent,
 ];
 const COMP_IMPORT_ONLY: never[] = [];
-const MOD_IMPORT_EXPORT = [FlexLayoutModule, RouterModule, NgOptimizedImage];
+const MOD_IMPORT_EXPORT = [RouterModule, NgOptimizedImage];
 const MOD_IMPORT_ONLY = [CommonModule];
 
 @NgModule({
