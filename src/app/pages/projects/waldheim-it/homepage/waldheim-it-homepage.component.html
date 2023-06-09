@@ -1,65 +1,25 @@
-<section class="section-24">
-  <h1 class="h2">Homepage u. CI</h1>
-  <div fxLayout="row wrap">
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Kunde</h5>
-      <span>Waldheim-it.de</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Branche</h5>
-      <span>IT</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Projektgröße</h5>
-      <span>1 Person</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Homepage</h5>
-      <a href="https://www.waldheim-it.de" rel="nofollow" target="_blank">www.waldheim-it.de <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </app-card>
-    <div fxFlex="1rem"></div>
-  </div>
-</section>
-<section class="section-24">
-  Die Webseite der Waldheim IT-Beratung wurde auf Basis eines modernen Designs gemäß den Regeln von Google Material You
-  entwickelt. Zudem wurde zeitgleich ein komplettes Branding geschaffen. Welches in genauer Absprache mit dem
-  Unternehmer umgesetzt wurde.
-</section>
-<section class="section-24" fxLayoutGap=".5rem">
-  <app-tag>HTML</app-tag>
-  <app-tag>CSS</app-tag>
-  <app-tag>JS</app-tag>
-  <app-tag>Material You</app-tag>
-  <app-tag>Gitlab-CI</app-tag>
-  <app-tag>Typescript</app-tag>
-  <app-tag>Code-Security</app-tag>
-</section>
-<section class="section-24">
-  <h2 class="h2">Allgemein</h2>
-  <ul>
+<app-project-details [overview]='overview' [tags]='tags'>
+  <ng-container header>Homepage u. CI</ng-container>
+  <ng-container content>
+    Die Webseite der Waldheim IT-Beratung wurde auf Basis eines modernen Designs gemäß den Regeln von Google Material You
+    entwickelt. Zudem wurde zeitgleich ein komplettes Branding geschaffen. Welches in genauer Absprache mit dem
+    Unternehmer umgesetzt wurde.
+  </ng-container>
+  <ul general>
     <li>Hosting auf Firebase</li>
     <li>Automatisches Versionieren und Deployen</li>
   </ul>
-  <h2 class="h2">Frontend</h2>
-  <ul>
+  <ul frontend>
     <li>Gestaltung einer modernen Lösung basierend auf Angular</li>
     <li>Erstellen eines eigenen Themes für Material You (eigener Nachbau)</li>
     <li>Optimierung bis zum Smartphone</li>
     <li>Implementierung eines automatischen Deploys via Firebase für das Frontend</li>
     <li>Optimierung der Workflows durch nx.dev</li>
   </ul>
-  <h2 class="h2">Backend</h2>
-  <app-tag>Kein Backend notwendig</app-tag>
-</section>
-<hr>
-<section class="section-24">
-  <h2 class="h2">Assets</h2>
-  <div class="assets" fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="space-evenly start">
-    <img alt="Waldheim IT-Beratung - Home" src="assets/projects/waldheim-it/homepage/homepage.png" fxFlexFill>
-    <img alt="Waldheim IT-Beratung - Visitenkarte Back" src="assets/projects/waldheim-it/homepage/waldheim_vi_back.png" fxFlexFill>
-    <img alt="Waldheim IT-Beratung - Visitenkarte Front" src="assets/projects/waldheim-it/homepage/waldheim_vi_front.png" fxFlexFill>
-  </div>
-</section>
+  <app-tag backend>Kein Backend notwendig</app-tag>
+  <ng-container assets>
+    <img alt="Waldheim IT-Beratung - Home" src="assets/projects/waldheim-it/homepage/homepage.png">
+    <img alt="Waldheim IT-Beratung - Visitenkarte Back" src="assets/projects/waldheim-it/homepage/waldheim_vi_back.png">
+    <img alt="Waldheim IT-Beratung - Visitenkarte Front" src="assets/projects/waldheim-it/homepage/waldheim_vi_front.png">
+  </ng-container>
+</app-project-details>
