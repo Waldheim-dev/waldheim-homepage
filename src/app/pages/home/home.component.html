@@ -1,21 +1,19 @@
-<section class="container" fxLayoutGap="1rem" fxLayoutAlign="space-between strech" fxLayout.lt-md="column">
-  <div fxFlex="70%" fxFlex.lt-md="100%">
+<section class="container hero">
+  <div class="title">
     <h1>Let`s build a better tomorrow, together
     </h1>
     <small class="header">Durch nachhaltige und optimierte Entwicklungen und Design. Durch einsparen von Zeit und
       Ressourcen zu optimierten Prozessen. Ich helfe Ihnen dabei.</small>
   </div>
-  <div fxFlex="300px" fxLayoutAlign="strech strech" fxFlex.lt-md="100%">
-    <app-cloudcard fxFlex="300px" fxFlex.lt-md="100%"></app-cloudcard>
+  <div class="side">
+    <app-cloudcard></app-cloudcard>
   </div>
 </section>
 
-<section class="container">
+<section class="container service">
   <h2>Mein Service</h2>
-  <div class="section-24" fxLayout="row" fxLayout.lt-md="row wrap">
-    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
+  <div class="section-24 service-wrapper">
       <app-card primary elevation>
-
         <div class="pre-icon"><i class="fa-regular fa-laptop-code fa-2x fa-fw"></i></div>
         <h3>Entwicklung</h3>
         <ul>
@@ -27,9 +25,6 @@
           <a class="button" routerLink="service">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
         </app-nav>
       </app-card>
-    </div>
-    <div fxFlex="1rem" fxHide.lt-sm></div>
-    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card secondary elevation>
         <div class="pre-icon"><i class="fa-regular fa-rocket-launch fa-fw fa-2x"></i></div>
         <h3>Design</h3>
@@ -43,9 +38,6 @@
           <a class="button" routerLink="service">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
         </app-nav>
       </app-card>
-    </div>
-    <div fxFlex="1rem" fxHide.lt-md></div>
-    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card tertiary elevation>
         <div class="pre-icon"><i class="fa-regular fa-code-fork fa-fw fa-2x"></i></div>
         <h3>Automatisierung</h3>
@@ -59,9 +51,6 @@
           <a class="button" routerLink="service">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
         </app-nav>
       </app-card>
-    </div>
-    <div fxFlex="1rem" fxHide.lt-sm></div>
-    <div fxFlex="calc((100% - 3rem) / 4)" fxFlex.lt-md="calc((100% - 1rem) / 2)" fxFlex.lt-sm="100%">
       <app-card error elevation>
         <div class="pre-icon"><i class="fa-brands fa-microsoft fa-fw fa-2x"></i></div>
         <h3>Systeme</h3>
@@ -74,7 +63,6 @@
           <a class="button" routerLink="service">Mehr sehen <i class="fa-regular fa-plus-circle"></i></a>
         </app-nav>
       </app-card>
-    </div>
   </div>
   <div>
     <p>Je angefangene 15 Minuten werden 15€ berechnet. Gemäß §19 UStG enthält der Rechnungsbetrag keine
@@ -118,6 +106,20 @@
         </app-card>
       </div>
       <div class="lifecicle_projects">
+        <div class="lifecicle_project">
+          <app-card elevation>
+            <img class="header" alt="Musikverein Obermeitingen - Plakat Kirchenkonzert 2023"
+                 src="assets/projects/mvo-obermeitingen/serenade_2023_plakat_shot.jpg" width="600" height="280" loading="lazy">
+            <h3>MVO Serenade
+              <app-tag>Design</app-tag>
+            </h3>
+            <br>
+            <small>Als Arbeit in der Waldheim.dev</small>
+            <p>Hierbei wurden Print-Medien für die Musikevents des Vereins entwickelt.</p>
+            <a class="button" routerLink="projects/mv-obermeitingen/serenade">Arbeit ansehen <i
+              class="fa-regular fa-plus-circle"></i></a>
+          </app-card>
+        </div>
         <div class="lifecicle_project">
           <app-card elevation>
             <img class="header" alt="Musikverein Obermeitingen - Plakat Kirchenkonzert 2023"
