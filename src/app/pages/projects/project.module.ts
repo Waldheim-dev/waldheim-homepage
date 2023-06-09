@@ -16,6 +16,7 @@ import { MvObermeitingenHomepageComponent } from './mv-obermeitingen/homepage/mv
 import { MvObermeitingenFaschingComponent } from './mv-obermeitingen/mv-obermeitingen-fasching/mv-obermeitingen-fasching.component';
 import { MvObermeitingenKirchenkonzertComponent } from './mv-obermeitingen/mv-obermeitingen-kirchenkonzert/mv-obermeitingen-kirchenkonzert.component';
 import { MvObermeitingenVatertagComponent } from './mv-obermeitingen/mv-obermeitingen-vatertag/mv-obermeitingen-vatertag.component';
+import { MvObermeitingenSerenadeComponent } from './mv-obermeitingen/mv-obermeitingen-serenade/mv-obermeitingen-serenade.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MvObermeitingenVatertagComponent } from './mv-obermeitingen/mv-obermeit
     MvObermeitingenFaschingComponent,
     MvObermeitingenKirchenkonzertComponent,
     MvObermeitingenVatertagComponent,
+    MvObermeitingenSerenadeComponent,
   ],
   imports: [ProjectRoutingModule, SharedModule],
 })
