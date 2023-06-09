@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ChangelogComponent } from './pages/changelog/changelog.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -16,15 +21,16 @@ import { ServicesComponent } from './pages/services/services.component';
     PrivacyComponent,
     ImprintComponent,
     ServicesComponent,
+    ChangelogComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({
-      appId: 'serverApp',
+      appId: 'serverApp'
     }),
     AppRoutingModule,
     SharedModule,
   ],
-  providers: [ provideClientHydration()],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

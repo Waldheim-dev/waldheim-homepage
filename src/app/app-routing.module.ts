@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import {PrivacyComponent} from "./pages/privacy/privacy.component";
 import {ImprintComponent} from "./pages/imprint/imprint.component";
 import {ServicesComponent} from "./pages/services/services.component";
+import { ChangelogComponent } from './pages/changelog/changelog.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'datenschutz', component: PrivacyComponent},
   {path: 'impressum', component: ImprintComponent},
   {path: 'service', component: ServicesComponent},
+  {path: 'changelog', component: ChangelogComponent},
   {path: 'projects', loadChildren: () => import('./pages/projects/project.module').then((m) => m.ProjectModule)}
 ];
 
