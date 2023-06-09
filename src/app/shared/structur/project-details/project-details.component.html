@@ -1,0 +1,43 @@
+<section class='section-24'>
+  <h1 class='h2'>
+    <ng-content select='[header]'></ng-content>
+  </h1>
+  <div class='overview'>
+    <ng-container *ngFor='let item of overview'>
+      <app-card tertiary>
+        <h5>{{item.title}}</h5>
+        <ng-container *ngIf='item.link; else plaintext'>
+          <a [href]="item.link" rel="nofollow" target="_blank">{{item.meta}} <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </ng-container>
+        <ng-template #plaintext><span>{{item.meta}}</span></ng-template>
+      </app-card>
+    </ng-container>
+  </div>
+</section>
+
+<section class="section-24">
+  <ng-content select='[content]'></ng-content>
+</section>
+
+<section class="section-24 tags" >
+  <ng-container *ngFor='let item of tags'>
+    <app-tag>{{item}}</app-tag>
+  </ng-container>
+</section>
+
+
+<section class="section-24">
+  <h2 class="h2">Allgemein</h2>
+  <ng-content select='[general]'></ng-content>
+  <h2 class="h2">Frontend</h2>
+  <ng-content select='[frontend]'></ng-content>
+  <h2 class="h2">Backend</h2>
+  <ng-content select='[backend]'></ng-content>
+</section>
+<hr>
+<section class="section-24">
+  <h2 class="h2">Assets</h2>
+  <div class="assets">
+    <ng-content select='[assets]'></ng-content>
+  </div>
+</section>
