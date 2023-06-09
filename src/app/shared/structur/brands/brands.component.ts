@@ -31,7 +31,7 @@ interface Tool {
   styleUrls  : ['./brands.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class BrandsComponent implements OnInit {
+export class BrandsComponent {
 
 
 
@@ -1178,80 +1178,8 @@ export class BrandsComponent implements OnInit {
   acceptableDenominators = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   maxDistanceToNumerator = 0.0001;
 
-  @ViewChild('container') containerRef: ElementRef<HTMLDivElement> | undefined;
-  private keysPressed = new Set<string>();
-  private scrollAmount = 1; // Anzahl Pixel, um den Container zu scrollen
-  // MaxScroll von 80rem in px
-  private maxScroll = 1280;
-  isLeftDisabled = true;
-  isRightDisabled = false;
-  current: number = 1;
 
 
-
-  ngOnInit() {
-    this.updateButtonState();
-  }
-
-  scrollBackward() {
-    const container = this.containerRef?.nativeElement;
-    if (!container) {
-      return;
-    }
-    container.scrollLeft -= container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth; // Scrollt um 100% Breite zurück
-    this.updateButtonState();
-  }
-
-  scrollForward() {
-    const container = this.containerRef?.nativeElement;
-    if (!container) {
-      return;
-    }
-    container.scrollLeft += container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth; // Scrollt um 100% Breite vorwärts
-    this.updateButtonState();
-  }
-
-  private updateButtonState() {
-    const container = this.containerRef?.nativeElement;
-    if (!container) {
-      return;
-    }
-    const maxScroll = container.offsetWidth > this.maxScroll ? this.maxScroll : container.offsetWidth;
-    this.isLeftDisabled = container.scrollLeft === 0;
-    this.isRightDisabled = container.scrollLeft + container.clientWidth === container.scrollWidth;
-    // Berechnet die aktuelle Seite inkl. hochrunden
-    this.current = Math.ceil(container.scrollLeft / maxScroll) + 1;
-  }
-
-  @HostListener('document:keydown', ['$event'])
-  onKeyDown(event: KeyboardEvent) {
-    this.keysPressed.add(event.key.toLowerCase());
-    this.scrollContainer();
-  }
-
-  @HostListener('document:keyup', ['$event'])
-  onKeyUp(event: KeyboardEvent) {
-    this.keysPressed.delete(event.key.toLowerCase());
-  }
-
-  private scrollContainer() {
-    const container = this.containerRef?.nativeElement;
-    if (!container) {
-      return;
-    }
-    let deltaX = 0;
-
-    if (this.keysPressed.has('arrowleft') || this.keysPressed.has('a')) {
-      deltaX -= this.scrollAmount;
-    }
-
-    if (this.keysPressed.has('arrowright') || this.keysPressed.has('d')) {
-      deltaX += this.scrollAmount;
-    }
-
-    container.scrollLeft += deltaX;
-    this.updateButtonState();
-  }
 
 
 
