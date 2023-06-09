@@ -1,63 +1,9 @@
-<section class="section-24">
-  <h1 class="h2">SEWOBE &bull; Software</h1>
-  <div fxLayout="row wrap">
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Arbeitgeber</h5>
-      <span>SEWOBE AG (8 Jahre)</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Branche</h5>
-      <span>Verwaltung</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Projektgröße</h5>
-      <span>24 Personen (+ Ausbildung & Ausbilden)</span>
-    </app-card>
-    <div fxFlex="1rem"></div>
-    <app-card tertiary fxFlex="calc((100% - 2rem) / 2)" fxFlex.lt-sm="100%">
-      <h5>Homepage</h5>
-      <a href="https://www.sewobe.de" rel="nofollow" target="_blank">www.sewobe.de <i
-        class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </app-card>
-    <div fxFlex="1rem"></div>
-  </div>
-</section>
-<section class="section-24">
-  <p>Ehemaliger Arbeitgeber</p>
-</section>
-<section class="section-24" fxLayoutGap=".5rem">
-  <app-tag>Docker</app-tag>
-  <app-tag>Angular</app-tag>
-  <app-tag>PHP</app-tag>
-  <app-tag>OAuth2</app-tag>
-  <app-tag>Own Theme</app-tag>
-  <app-tag>Gitlab-CI</app-tag>
-  <app-tag>Git</app-tag>
-  <app-tag>Jest</app-tag>
-  <app-tag>Cypress</app-tag>
-  <app-tag>SonarQube</app-tag>
-  <app-tag>REST</app-tag>
-  <app-tag>OOP</app-tag>
-  <app-tag>Phpstorm</app-tag>
-  <app-tag>Typescript</app-tag>
-  <app-tag>Apexcharts</app-tag>
-  <app-tag>Code-Security</app-tag>
-  <app-tag>Twig</app-tag>
-  <app-tag>mySQL</app-tag>
-  <app-tag>Android</app-tag>
-  <app-tag>iOS</app-tag>
-  <app-tag>HTML</app-tag>
-  <app-tag>CSS</app-tag>
-  <app-tag>Fastlane</app-tag>
-  <app-tag>Capacitor</app-tag>
-  <app-tag>SCSS</app-tag>
-  <app-tag>Python</app-tag>
-</section>
-<section class="section-24">
-  <h2 class="h2">Allgemein</h2>
-  <ul>
+<app-project-details [overview]='overview' [tags]='tags'>
+  <ng-container header>SEWOBE &bull; Software</ng-container>
+  <ng-container content>
+    -
+  </ng-container>
+  <ul general>
     <li>Erweitern der Software</li>
     <li>Optimierung von Performance</li>
     <li>Implementierung und Ausbau von neuen oder bestehenden Funktionen</li>
@@ -66,8 +12,7 @@
     <li>Umsetzung von Hierarchie-Lösungen</li>
     <li>Datenmigrationen</li>
   </ul>
-  <h2 class="h2">Frontend</h2>
-  <ul>
+  <ul frontend>
     <li>Neugestaltung in Angular (eigene Angular-Library)</li>
     <li>Erstellen eines eigenen Themes in SCSS</li>
     <li>Optimierung bis zum Smartphone</li>
@@ -79,8 +24,7 @@
     <li>Bauen von neuen Masken in SCSS</li>
     <li>Entwicklung von Kundenspezifischen Designs in den Homepagemodulen</li>
   </ul>
-  <h2 class="h2">Backend</h2>
-  <ul>
+  <ul backend>
     <li>Weiterentwicklung von PHP basiertem Backend</li>
     <li>Entwicklung unterschiedlichster Funktionen in den Bereichen
       <ul>
@@ -104,9 +48,7 @@
       </ul>
     </li>
   </ul>
-</section>
-<hr>
-<section class="section-24">
-  <h2 class="h2">Assets</h2>
-  <app-tag>Aus Datenschutzgründen keine Assets verfügbar</app-tag>
-</section>
+  <ng-container assets>
+    <app-tag>Aus Datenschutzgründen keine Assets verfügbar</app-tag>
+  </ng-container>
+</app-project-details>
