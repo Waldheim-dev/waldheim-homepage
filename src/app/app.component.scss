@@ -59,4 +59,40 @@ main {
   background-color: var(--tertiary-container);
   color: var(--tertiary);
   padding: 2rem;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+[size-lt="lg"], [size-lt="md"], [size-lt="sm"], [size-lt="xs"] {
+  .banner {
+    > .container {
+      flex-direction: column;
+    }
+  }
+}
+
+footer {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    figure {
+      gap: 1rem;
+        display: flex;
+      align-items: center;
+        justify-content: center;
+    }
+    div {
+        display: flex;
+      flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+  }
 }
