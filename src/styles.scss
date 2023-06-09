@@ -279,6 +279,9 @@ hr {
 }
 
 // defaults
+.hide {
+  display: none;
+}
 
 [size-lt="xs"] {
   .hide-lt-xs {
