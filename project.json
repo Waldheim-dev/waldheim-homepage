@@ -6,7 +6,7 @@
   "prefix": "app",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:browser-esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/waldheim.dev/browser",
@@ -21,7 +21,7 @@
             "input": ".",
             "output": "/"
           }],
-        "styles": ["./src/styles.scss"],
+        "styles": ["@fortawesome/fontawesome-pro/css/all.min.css","./src/styles.scss"],
         "scripts": [
           "node_modules/marked/marked.min.js",
           "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
