@@ -12,7 +12,6 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ChangelogComponent } from './pages/changelog/changelog.component';
-import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
