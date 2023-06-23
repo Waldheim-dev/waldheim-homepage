@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 enum Knowledgebase {
   BASIC=1,
@@ -19,6 +19,7 @@ interface Image {
 interface Tool {
   name: string;
   image: Image;
+  productive: boolean;
   isActive: boolean;
   fixedExperience: number;
   sinceLastRollup: number;
@@ -43,6 +44,7 @@ export class BrandsComponent {
       height: 50,
       width: 47
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -56,6 +58,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2020-06-01')).getTime(),
@@ -69,6 +72,7 @@ export class BrandsComponent {
       height: 50,
       width: 44
     },
+    productive: false,
     isActive: true,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -82,6 +86,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2012-01-01')).getTime(),
@@ -95,6 +100,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -108,6 +114,7 @@ export class BrandsComponent {
       height: 50,
       width: 58
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -121,6 +128,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: false,
     isActive: false,
     fixedExperience: 7,
     sinceLastRollup: (new Date()).getTime(),
@@ -134,6 +142,7 @@ export class BrandsComponent {
       height: 50,
       width: 44
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2012-01-01')).getTime(),
@@ -147,6 +156,7 @@ export class BrandsComponent {
       height: 50,
       width: 44
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2012-01-01')).getTime(),
@@ -160,6 +170,7 @@ export class BrandsComponent {
       height: 50,
       width: 44
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2015-01-01')).getTime(),
@@ -173,6 +184,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 4,
     sinceLastRollup: (new Date()).getTime(),
@@ -186,6 +198,7 @@ export class BrandsComponent {
       height: 50,
       width: 83
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -199,6 +212,7 @@ export class BrandsComponent {
       height: 50,
       width: 95
     },
+    productive: false,
     isActive: false,
     fixedExperience: 8,
     sinceLastRollup: (new Date()).getTime(),
@@ -212,6 +226,7 @@ export class BrandsComponent {
       height: 50,
       width: 73
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -225,6 +240,7 @@ export class BrandsComponent {
       height: 50,
       width: 27
     },
+    productive: true,
     isActive: true,
     fixedExperience: 4,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -238,6 +254,7 @@ export class BrandsComponent {
       height: 50,
       width: 51
     },
+    productive: false,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2015-01-01')).getTime(),
@@ -251,6 +268,7 @@ export class BrandsComponent {
       height: 50,
       width: 51
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-12-01')).getTime(),
@@ -264,6 +282,7 @@ export class BrandsComponent {
       height: 50,
       width: 51
     },
+    productive: false,
     isActive: false,
     fixedExperience: 4,
     sinceLastRollup: (new Date()).getTime(),
@@ -277,6 +296,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 2,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -290,6 +310,7 @@ export class BrandsComponent {
       height: 50,
       width: 93
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2014-01-01')).getTime(),
@@ -303,6 +324,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2015-01-01')).getTime(),
@@ -316,6 +338,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -329,6 +352,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: false,
     isActive: false,
     fixedExperience: 3,
     sinceLastRollup: (new Date()).getTime(),
@@ -342,6 +366,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: false,
     isActive: false,
     fixedExperience: 4,
     sinceLastRollup: (new Date()).getTime(),
@@ -355,6 +380,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2017-01-01')).getTime(),
@@ -368,6 +394,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2021-01-01')).getTime(),
@@ -381,6 +408,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2020-01-01')).getTime(),
@@ -394,6 +422,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: false,
     isActive: false,
     fixedExperience: 3,
     sinceLastRollup: (new Date('2020-01-01')).getTime(),
@@ -407,6 +436,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2023-01-01')).getTime(),
@@ -420,6 +450,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -433,6 +464,7 @@ export class BrandsComponent {
       height: 50,
       width: 100
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-12-16')).getTime(),
@@ -446,6 +478,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2020-01-01')).getTime(),
@@ -459,6 +492,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -472,6 +506,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -485,6 +520,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -498,6 +534,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -511,6 +548,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: false,
     fixedExperience: 2,
     sinceLastRollup: (new Date()).getTime(),
@@ -524,6 +562,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -537,6 +576,7 @@ export class BrandsComponent {
       height: 50,
       width: 90
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-01-01')).getTime(),
@@ -550,6 +590,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -563,6 +604,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: true,
     isActive: true,
     fixedExperience: 2,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -576,6 +618,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2002-01-01')).getTime(),
@@ -589,6 +632,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2013-01-01')).getTime(),
@@ -602,6 +646,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2015-01-01')).getTime(),
@@ -615,6 +660,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2021-07-01')).getTime(),
@@ -628,6 +674,7 @@ export class BrandsComponent {
       height: 50,
       width: 40
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -641,6 +688,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2012-01-01')).getTime(),
@@ -654,6 +702,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2021-01-01')).getTime(),
@@ -667,6 +716,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -680,6 +730,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: true,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -693,6 +744,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2017-01-01')).getTime(),
@@ -706,6 +758,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 5,
     sinceLastRollup: (new Date()).getTime(),
@@ -719,6 +772,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-01-01')).getTime(),
@@ -732,6 +786,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-07-01')).getTime(),
@@ -745,6 +800,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 2,
     sinceLastRollup: (new Date()).getTime(),
@@ -758,6 +814,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 7,
     sinceLastRollup: (new Date()).getTime(),
@@ -771,6 +828,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -784,6 +842,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: true,
     fixedExperience: 3,
     sinceLastRollup: (new Date('2020-01-01')).getTime(),
@@ -797,6 +856,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 6,
     sinceLastRollup: (new Date()).getTime(),
@@ -810,6 +870,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -823,6 +884,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -836,6 +898,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -849,6 +912,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2016-01-01')).getTime(),
@@ -862,6 +926,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 1,
     sinceLastRollup: (new Date()).getTime(),
@@ -875,6 +940,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-01-01')).getTime(),
@@ -888,6 +954,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: false,
     isActive: false,
     fixedExperience: 0.5,
     sinceLastRollup: (new Date()).getTime(),
@@ -901,6 +968,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-11-01')).getTime(),
@@ -914,6 +982,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2022-09-01')).getTime(),
@@ -927,10 +996,67 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2023-03-01')).getTime(),
     knowledgebase: Knowledgebase.BASIC
+  }
+
+  vite: Tool = {
+    name: 'Vite',
+    image: {
+      path: 'assets/brands/vitejs.svg',
+      height: 50,
+      width: 50
+    },
+    productive: true,
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
+  }
+
+  astro: Tool = {
+    name: 'Astro',
+    image: {
+      path: 'assets/brands/astro-icon-dark.svg',
+      height: 50,
+      width: 50
+    },
+    productive: true,
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
+  }
+
+  qwik: Tool = {
+    name: 'Qwik',
+    image: {
+      path: 'assets/brands/qwik.svg',
+      height: 50,
+      width: 50
+    },
+    productive: false,
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2023-07-01')).getTime(),
+    knowledgebase: Knowledgebase.BASIC
+  }
+
+  rxjs: Tool = {
+    name: 'RxJS',
+    image: {
+      path: 'assets/brands/reactivex.svg',
+      height: 50,
+      width: 50
+    },
+    productive: true,
+    isActive: true,
+    fixedExperience: 0,
+    sinceLastRollup: (new Date('2020-06-01')).getTime(),
+    knowledgebase: Knowledgebase.ADVANCED
   }
 
   ionic: Tool = {
@@ -940,6 +1066,7 @@ export class BrandsComponent {
       height: 50,
       width: 55
     },
+    productive: false,
     isActive: false,
     fixedExperience: 5,
     sinceLastRollup: (new Date()).getTime(),
@@ -953,6 +1080,7 @@ export class BrandsComponent {
       height: 50,
       width: 50
     },
+    productive: true,
     isActive: true,
     fixedExperience: 3,
     sinceLastRollup: (new Date('2021-01-01')).getTime(),
@@ -966,63 +1094,69 @@ export class BrandsComponent {
       height: 50,
       width: 75
     },
+    productive: true,
     isActive: true,
     fixedExperience: 0,
     sinceLastRollup: (new Date('2023-01-01')).getTime(),
     knowledgebase: Knowledgebase.BASIC
   }
 
+
   frontend: Groups = {
-    name: 'Frontend-Technologien',
+    name: 'Frontend',
     tools: [
       this.angular,
       this.react,
       this.stencil,
       this.vue,
-      this.svelte
-    ]
-  }
-
-  webbasics: Groups = {
-    name: 'Web-Sprachen',
-    tools: [
+      this.svelte,
+      this.vite,
+      this.rxjs,
+      this.astro,
+      this.qwik,
       this.js,
       this.html,
       this.css,
       this.scss,
       this.ts,
-    ]
-  }
-
-  frondned_addon: Groups = {
-    name: 'Frontend Frameworks',
-    tools: [
       this.webstandards,
       this.ngrx,
       this.jquery,
       this.bootstrap,
       this.tailwind,
+      this.ionic,
+      this.capacitor,
+      this.flutter,
+      this.husky,
+      this.eslint,
+      this.prettier,
+      this.semantic,
+      this.nx,
+      this.jest,
+      this.cypress,
+      this.playwright,
+      this.jaws
     ]
   }
 
   backend: Groups = {
-    name: 'Backend-Technologien',
+    name: 'Backend',
     tools: [
       this.nodejs,
       this.java,
       this.php,
-    ]
-  }
-
-  backend_addon: Groups = {
-    name: 'Backend-Frameworks',
-    tools: [
       this.quarkus,
       this.composer,
       this.springboot,
-      this.laravel
+      this.laravel,
+      this.liquibase,
+      this.postgres,
+      this.mysql,
+      this.mongodb,
+      this.mssql,
     ]
   }
+
 
   systems: Groups = {
     name: 'Betriebssysteme',
@@ -1035,7 +1169,7 @@ export class BrandsComponent {
   }
 
   design: Groups = {
-    name: 'Design',
+    name: 'UI / UX',
     tools: [
       this.illustrator,
       this.affinity,
@@ -1045,92 +1179,32 @@ export class BrandsComponent {
     ]
   }
 
-  native: Groups = {
-    name: 'Native Apps',
-    tools: [
-      this.ionic,
-      this.capacitor,
-      this.flutter,
-    ]
-  }
-
   monitoring: Groups = {
-    name: 'Monitoring-Tools',
-    tools: [
-      this.grafana,
-      this.prometheus,
-      this.checkmk,
-    ]
-  }
-
-  container: Groups = {
-    name: 'Container-Tools',
+    name: 'DevOps',
     tools: [
       this.docker,
       this.kubernetes,
       this.kafka,
       this.traefik,
-      this.portainer
-    ]
-  }
-
-  gits: Groups = {
-    name: 'Git-Managing',
-    tools: [
+      this.portainer,
+      this.grafana,
+      this.prometheus,
+      this.checkmk,
       this.git,
       this.gitlab,
       this.bitbucket,
       this.github,
-    ]
-  }
-
-  security: Groups = {
-    name: 'Sicherheit / Standards',
-    tools: [
       this.sonarqube,
       this.nexusiq,
-    ]
-  }
-
-  hooks: Groups = {
-    name: 'Hooks',
-    tools: [
-      this.husky,
-      this.eslint,
-      this.prettier,
-      this.semantic,
-      this.nx,
-    ]
-  }
-
-  testing: Groups = {
-    name: 'Testing',
-    tools: [
-      this.jest,
-      this.cypress,
-      this.playwright,
-      this.jaws
-    ]
-  }
-
-  managing: Groups = {
-    name: 'Managing',
-    tools: [
       this.jira,
       this.confluence,
-      this.liquibase,
-    ]
-  }
-
-  hosting: Groups = {
-    name: 'Hosting',
-    tools: [
       this.ionos,
       this.firebase,
       this.nexusrepo,
       this.aws,
     ]
   }
+
 
   cms: Groups = {
     name: 'CMS',
@@ -1142,34 +1216,13 @@ export class BrandsComponent {
     ]
   }
 
-  db: Groups = {
-    name: 'Database',
-    tools: [
-      this.postgres,
-      this.mysql,
-      this.mongodb,
-      this.mssql,
-    ]
-  }
 
   groups: Groups[] = [
     this.frontend,
     this.backend,
-    this.frondned_addon,
-    this.backend_addon,
-    this.db,
-    this.hooks,
-    this.testing,
-    this.webbasics,
-    this.systems,
-    this.design,
-    this.native,
     this.monitoring,
-    this.container,
-    this.gits,
-    this.security,
-    this.managing,
-    this.hosting,
+    this.design,
+    this.systems,
     this.cms
   ];
   //</editor-fold>
@@ -1179,7 +1232,20 @@ export class BrandsComponent {
   maxDistanceToNumerator = 0.0001;
 
 
-
+  constructor() {
+    // Order Tools in Groups by productive, then active, then years of experience
+    this.groups.forEach(group => {
+      group.tools.sort((a, b) => {
+        if (a.productive === b.productive) {
+          if (a.isActive === b.isActive) {
+            return b.fixedExperience - a.fixedExperience;
+          }
+          return b.isActive ? 1 : -1;
+        }
+        return b.productive ? 1 : -1;
+      });
+    })
+  }
 
 
 
@@ -1189,7 +1255,7 @@ export class BrandsComponent {
     return 100 * Number(this.getTotalExp(tool, true)) / max;
   }
 
-  getTotalExp(tool: Tool, onlyNumber: boolean = false) {
+  getTotalExp(tool: Tool, onlyNumber = false) {
     let years: string | number = tool.fixedExperience;
     if (tool.isActive) {
       const currentDate = (new Date()).getTime();
