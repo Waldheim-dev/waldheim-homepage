@@ -1,3 +1,10 @@
+## [23.7.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.2...v23.7.3) (2023-06-23)
+
+
+### :bug: Fixes
+
+* Revert health-check ([0dbc9ec](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0dbc9eccbb85ce09826257ab81d774b428654f34))
+
 ## [23.7.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.1...v23.7.2) (2023-06-23)
 
 
