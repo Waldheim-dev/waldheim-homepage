@@ -1,6 +1,6 @@
 {
   "name": "waldheim.dev",
-  "version": "23.7.1",
+  "version": "23.7.2",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
