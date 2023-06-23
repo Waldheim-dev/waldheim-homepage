@@ -3,11 +3,11 @@ import 'zone.js/dist/zone-node';
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync } from 'fs';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
-//SSR Dom errors polyfile and work around
+//SSR Dom errors polyfill and work around
 import "localstorage-polyfill";
 
 global['localStorage'] = localStorage;
@@ -32,11 +32,6 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  server.get('/health', (req,res) => {
-    res.status(200).send('ok');
-  });
   // Serve static files from /browser
   server.get(
     '*.*',
@@ -46,7 +41,7 @@ export function app(): express.Express {
   );
 
   // All regular routes use the Universal engine
-  server.get('*', (req, res) => {
+  server.get('*', (req: any, res: any) => {
     res.render(indexHtml, {
       req,
       providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
