@@ -1,3 +1,19 @@
+## [23.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.0...v23.7.1) (2023-06-23)
+
+
+### :bug: Fixes
+
+* Add enterJS ([3ad8b9e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3ad8b9e6955488a4b23d6880985872898a53db25))
+* add pnpm to release ([57daabf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/57daabf794011e489fce21358c06b7cd9dcc64a1))
+* Change to pnpm-installation ([7c332bd](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7c332bda6d96e19541cccb7a96daa1c927a9b6fe))
+* Fix issues with Styles ([26872c0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/26872c05fc8f03e94b2cef19f60292cab19a2147))
+* Upgrade to Angular 16.1 ([6d67e38](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6d67e38dece2956946552988aa4d4bb9c8ff432e))
+
+
+### :repeat: Chores
+
+* optimize Install from pnpm ([aa3c25c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/aa3c25cbb2915128c2c6512fab89e842d69df69c))
+
 ## [23.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.6.5...v23.7.0) (2023-06-09)
 
 
