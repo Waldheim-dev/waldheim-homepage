@@ -1,3 +1,15 @@
+## [23.7.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.1...v23.7.2) (2023-06-23)
+
+
+### :repeat: Chores
+
+* Restable ssr ([f4e253b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f4e253b461750f318d4316f4b178aadb7e4e244b))
+
+
+### :bug: Fixes
+
+* Add new EXP ([17d3355](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/17d33552f614b70621ea4b277deb2ae6f13c17d7))
+
 ## [23.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.0...v23.7.1) (2023-06-23)
 
 
