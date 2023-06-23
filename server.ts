@@ -32,6 +32,11 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
+  // Example Express Rest API endpoints
+  // server.get('/api/**', (req, res) => { });
+  server.get('/health', (req: never,res: any) => {
+    res.status(200).send('ok');
+  });
   // Serve static files from /browser
   server.get(
     '*.*',
