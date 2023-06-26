@@ -1,0 +1,9 @@
+{
+  "name": "PostgreSQL",
+  "image": "assets/brands/postgresql.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 1,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

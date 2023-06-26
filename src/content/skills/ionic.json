@@ -1,0 +1,9 @@
+{
+  "name": "Ionic",
+  "image": "assets/brands/ionic-icon.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 5,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}
