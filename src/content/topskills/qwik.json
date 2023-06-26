@@ -1,6 +1,6 @@
 {
   "name": "Qwik",
-  "image": "assets/brands/qwik.svg",
+  "image": "/brands/qwik.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 0,

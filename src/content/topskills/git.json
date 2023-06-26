@@ -1,6 +1,6 @@
 {
   "name": "Git Basics",
-  "image": "assets/brands/git-icon.svg",
+  "image": "/brands/git-icon.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

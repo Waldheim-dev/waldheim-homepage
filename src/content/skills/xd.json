@@ -1,0 +1,9 @@
+{
+  "name": "XD",
+  "image": "/brands/adobe-xd-2.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 4,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

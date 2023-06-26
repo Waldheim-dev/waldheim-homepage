@@ -1,0 +1,9 @@
+{
+  "name": "JavaScript",
+  "image": "/brands/logo-javascript.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2012-01-01",
+  "knowledgebase": "expert"
+}

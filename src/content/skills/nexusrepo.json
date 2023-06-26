@@ -1,0 +1,9 @@
+{
+  "name": "Nexus Repo",
+  "image": "/brands/NexusRepo_Vertical.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 2,
+  "sinceLastRollup": "2022-11-01",
+  "knowledgebase": "advanced"
+}

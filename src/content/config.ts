@@ -1,21 +1,17 @@
 import { defineCollection, reference, z } from 'astro:content';
 
 const blogCollection = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string(),
     heroImage: z.string(),
-    author: reference('author'),
+    author: reference('authors'),
     // Transform string to Date object
     pubDate: z
       .string()
       .or(z.date())
       .transform((val) => new Date(val)),
-    updatedDate: z
-      .string()
-      .optional()
-      .transform((str) => (str ? new Date(str) : undefined))
   })
 });
 
@@ -45,7 +41,7 @@ const skill = z.object({
     .string()
     .optional()
     .transform((str) => (str ? new Date(str) : undefined)),
-  knowledge: z.enum(['basic', 'advanced', 'expert'])
+  knowledgebase: z.enum(['basic', 'advanced', 'expert'])
 });
 
 const skillsCollection = defineCollection({
@@ -59,9 +55,9 @@ const topskillsCollection = defineCollection({
 });
 
 export const collections = {
-  'blog': blogCollection,
-  'author': authorCollection,
-  'project': projectCollection,
-  'skills': skillsCollection,
-  'topskills': topskillsCollection
+  blog: blogCollection,
+  author: authorCollection,
+  project: projectCollection,
+  skills: skillsCollection,
+  topskills: topskillsCollection
 };

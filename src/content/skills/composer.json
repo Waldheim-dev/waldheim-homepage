@@ -1,0 +1,9 @@
+{
+  "name": "Composer",
+  "image": "/brands/composer.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 4,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

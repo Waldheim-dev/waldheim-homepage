@@ -1,6 +1,6 @@
 {
   "name": "Kubernetes",
-  "image": "assets/brands/kubernets.svg",
+  "image": "/brands/kubernets.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 0,

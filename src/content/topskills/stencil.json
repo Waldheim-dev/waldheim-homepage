@@ -1,6 +1,6 @@
 {
   "name": "Stencil.js",
-  "image": "assets/brands/stencil-seeklogo.com.svg",
+  "image": "/brands/stencil-seeklogo.com.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

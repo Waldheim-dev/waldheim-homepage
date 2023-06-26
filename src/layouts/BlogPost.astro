@@ -1,50 +1,34 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import BaseLayout from './BaseLayout.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
+<BaseLayout>
+  <BaseHead title={title} description={description} />
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
-						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+  <div class='bg-white  dark:bg-slate-800 px-6 py-6 lg:px-8'>
+    <div class='mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300'>
+      {heroImage && <img width={720} height={360} src={heroImage} alt=''  class='aspect-[7/4] w-full rounded-2xl object-cover'/>}
+      <h1 class='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50'>{title}</h1>
+
+      <div class="relative mt-6">
+        <FormattedDate date={pubDate} /><br>
+        {description}
+      </div>
+      <div class="relative mt-6">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+      </div>
+      <div class="mt-16 ">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

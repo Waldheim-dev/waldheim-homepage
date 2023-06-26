@@ -1,6 +1,6 @@
 {
   "name": "Kafka",
-  "image": "assets/brands/kafka-icon.svg",
+  "image": "/brands/kafka-icon.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

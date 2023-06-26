@@ -1,0 +1,9 @@
+{
+  "name": "Flutter",
+  "image": "/brands/flutter-logo.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

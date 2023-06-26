@@ -1,6 +1,6 @@
 {
   "name": "Svelte",
-  "image": "assets/brands/svelte.svg",
+  "image": "/brands/svelte.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

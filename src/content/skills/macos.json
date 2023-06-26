@@ -1,0 +1,9 @@
+{
+  "name": "macOS",
+  "image": "/brands/apple-13.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2013-01-01",
+  "knowledgebase": "advanced"
+}

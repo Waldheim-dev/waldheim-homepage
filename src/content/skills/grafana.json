@@ -1,6 +1,6 @@
 {
   "name": "Grafana",
-  "image": "assets/brands/grafana.svg",
+  "image": "/brands/grafana.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

@@ -1,0 +1,9 @@
+{
+  "name": "Jest",
+  "image": "/brands/file-type-jest.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2020-01-01",
+  "knowledgebase": "advanced"
+}

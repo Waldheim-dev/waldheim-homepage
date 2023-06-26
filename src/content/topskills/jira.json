@@ -1,0 +1,9 @@
+{
+  "name": "Jira",
+  "image": "/brands/jira-3.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2017-01-01",
+  "knowledgebase": "advanced"
+}

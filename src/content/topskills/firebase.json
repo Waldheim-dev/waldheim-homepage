@@ -1,6 +1,6 @@
 {
   "name": "Firebase",
-  "image": "assets/brands/firebase.svg",
+  "image": "/brands/firebase.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

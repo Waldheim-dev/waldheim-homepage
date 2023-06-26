@@ -1,6 +1,6 @@
 {
   "name": "Joomla",
-  "image": "assets/brands/joomla-1.svg",
+  "image": "/brands/joomla-1.svg",
   "productive": false,
   "isActive": false,
   "fixedExperience": 0.5,
