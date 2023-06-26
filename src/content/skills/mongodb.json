@@ -1,0 +1,9 @@
+{
+  "name": "MongoDB",
+  "image": "assets/brands/mongodb-icon-1.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 2,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

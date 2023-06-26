@@ -1,0 +1,9 @@
+{
+  "name": "WordPress",
+  "image": "assets/brands/wordpress-icon.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 3,
+  "sinceLastRollup": "2020-01-01",
+  "knowledgebase": "expert"
+}

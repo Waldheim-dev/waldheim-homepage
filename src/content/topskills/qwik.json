@@ -1,0 +1,9 @@
+{
+  "name": "Qwik",
+  "image": "assets/brands/qwik.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2023-07-01",
+  "knowledgebase": "basic"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "TYPO3",
+  "image": "assets/brands/typo3-icon.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 6,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

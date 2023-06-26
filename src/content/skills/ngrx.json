@@ -1,0 +1,9 @@
+{
+  "name": "ngRx",
+  "image": "/brands/ngrx.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2020-06-01",
+  "knowledgebase": "advanced"
+}

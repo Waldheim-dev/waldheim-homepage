@@ -1,0 +1,9 @@
+{
+  "name": "Git Basics",
+  "image": "assets/brands/git-icon.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2016-01-01",
+  "knowledgebase": "advanced"
+}

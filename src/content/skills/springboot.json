@@ -1,0 +1,9 @@
+{
+  "name": "SpringBoot",
+  "image": "assets/brands/spring-3.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

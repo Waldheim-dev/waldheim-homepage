@@ -1,0 +1,9 @@
+{
+  "name": "MariaDB",
+  "image": "assets/brands/mariadb.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 7,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}
