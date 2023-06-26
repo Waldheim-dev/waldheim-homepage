@@ -1,6 +1,6 @@
 {
   "name": "Quarkus",
-  "image": "assets/brands/quarkus-icon.svg",
+  "image": "/brands/quarkus-icon.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

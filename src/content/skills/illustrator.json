@@ -1,0 +1,9 @@
+{
+  "name": "Illustrator",
+  "image": "/brands/adobe-illustrator-cc-icon.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2015-01-01",
+  "knowledgebase": "advanced"
+}

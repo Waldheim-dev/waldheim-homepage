@@ -1,6 +1,6 @@
 {
   "name": "PostgreSQL",
-  "image": "assets/brands/postgresql.svg",
+  "image": "/brands/postgresql.svg",
   "productive": false,
   "isActive": false,
   "fixedExperience": 1,

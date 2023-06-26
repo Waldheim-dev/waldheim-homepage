@@ -1,0 +1,9 @@
+{
+  "name": "Windows",
+  "image": "/brands/microsoft-5.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2002-01-01",
+  "knowledgebase": "advanced"
+}

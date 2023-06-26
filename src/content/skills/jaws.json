@@ -1,6 +1,6 @@
 {
   "name": "Jaws",
-  "image": "assets/brands/JAWS-screenreader-logo.png",
+  "image": "/brands/JAWS-screenreader-logo.png",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

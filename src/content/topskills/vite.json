@@ -1,6 +1,6 @@
 {
   "name": "Vite",
-  "image": "assets/brands/vitejs.svg",
+  "image": "/brands/vitejs.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

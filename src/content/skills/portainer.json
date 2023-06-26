@@ -1,6 +1,6 @@
 {
   "name": "Portainer",
-  "image": "assets/brands/portainer.svg",
+  "image": "/brands/portainer.svg",
   "productive": false,
   "isActive": false,
   "fixedExperience": 5,

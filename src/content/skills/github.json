@@ -1,0 +1,9 @@
+{
+  "name": "GitHub",
+  "image": "/brands/github-icon-1.svg",
+  "productive": true,
+  "isActive": false,
+  "fixedExperience": 2,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

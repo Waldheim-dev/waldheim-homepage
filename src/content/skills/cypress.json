@@ -1,0 +1,9 @@
+{
+  "name": "Cypress",
+  "image": "/brands/cypress-icon.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 6,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

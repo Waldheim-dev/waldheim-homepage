@@ -1,6 +1,6 @@
 {
   "name": "Docker",
-  "image": "assets/brands/docker-icon.svg",
+  "image": "/brands/docker-icon.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

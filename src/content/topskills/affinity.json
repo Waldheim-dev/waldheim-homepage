@@ -1,6 +1,6 @@
 {
   "name": "Affinity",
-  "image": "assets/brands/file_type_affinitydesigner.svg",
+  "image": "/brands/file_type_affinitydesigner.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 3,

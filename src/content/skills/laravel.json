@@ -1,0 +1,9 @@
+{
+  "name": "Laravel",
+  "image": "/brands/laravel-1.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

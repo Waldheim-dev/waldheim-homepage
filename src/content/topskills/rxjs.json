@@ -1,6 +1,6 @@
 {
   "name": "RxJS",
-  "image": "assets/brands/reactivex.svg",
+  "image": "/brands/reactivex.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

@@ -1,6 +1,6 @@
 {
   "name": "WordPress",
-  "image": "assets/brands/wordpress-icon.svg",
+  "image": "/brands/wordpress-icon.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 3,
