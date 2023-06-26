@@ -1,0 +1,9 @@
+{
+  "name": "PHP",
+  "image": "/brands/php-1.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 8,
+  "sinceLastRollup": "",
+  "knowledgebase": "expert"
+}

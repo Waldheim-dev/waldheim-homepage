@@ -1,0 +1,9 @@
+{
+  "name": "JQuery",
+  "image": "/brands/jquery-4.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 7,
+  "sinceLastRollup": "",
+  "knowledgebase": "expert"
+}

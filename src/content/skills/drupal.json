@@ -1,6 +1,6 @@
 {
   "name": "Drupal",
-  "image": "assets/brands/drupal-icon.svg",
+  "image": "/brands/drupal-icon.svg",
   "productive": false,
   "isActive": false,
   "fixedExperience": 0.5,

@@ -1,0 +1,9 @@
+{
+  "name": "Capacitor",
+  "image": "/brands/capacitor-js.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 3,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

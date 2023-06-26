@@ -1,0 +1,9 @@
+{
+  "name": "nx.dev",
+  "image": "/brands/nx.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2021-01-01",
+  "knowledgebase": "advanced"
+}

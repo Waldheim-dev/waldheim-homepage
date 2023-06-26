@@ -1,0 +1,9 @@
+{
+  "name": "Bootstrap",
+  "image": "/brands/bootstrap-4.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 4,
+  "sinceLastRollup": "",
+  "knowledgebase": "expert"
+}

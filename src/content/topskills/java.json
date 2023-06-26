@@ -1,0 +1,9 @@
+{
+  "name": "Java",
+  "image": "/brands/java-4.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 4,
+  "sinceLastRollup": "2022-07-01",
+  "knowledgebase": "basic"
+}

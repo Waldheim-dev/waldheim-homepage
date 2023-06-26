@@ -1,6 +1,6 @@
 {
   "name": "Angular",
-  "image": "assets/brands/angular-icon-1.svg",
+  "image": "/brands/angular-icon-1.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

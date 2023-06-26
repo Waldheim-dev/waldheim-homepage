@@ -1,0 +1,9 @@
+{
+  "name": "VueJS",
+  "image": "/brands/vue-9.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

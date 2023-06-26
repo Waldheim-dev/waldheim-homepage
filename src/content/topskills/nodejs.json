@@ -1,6 +1,6 @@
 {
   "name": "NodeJS",
-  "image": "assets/brands/nodejs-icon.svg",
+  "image": "/brands/nodejs-icon.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

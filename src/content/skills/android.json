@@ -1,0 +1,9 @@
+{
+  "name": "Android",
+  "image": "/brands/android-4.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2014-01-01",
+  "knowledgebase": "expert"
+}

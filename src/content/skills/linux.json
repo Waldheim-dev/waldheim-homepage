@@ -1,0 +1,9 @@
+{
+  "name": "Linux",
+  "image": "/brands/linux-tux.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2015-01-01",
+  "knowledgebase": "advanced"
+}

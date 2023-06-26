@@ -1,6 +1,6 @@
 {
   "name": "Ionos",
-  "image": "assets/brands/1and1-ionos-logo.svg",
+  "image": "/brands/1and1-ionos-logo.svg",
   "productive": true,
   "isActive": true,
   "fixedExperience": 0,

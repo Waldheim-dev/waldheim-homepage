@@ -1,6 +1,6 @@
 {
   "name": "Prometheus",
-  "image": "assets/brands/prometheus.svg",
+  "image": "/brands/prometheus.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 0,
