@@ -1,0 +1,9 @@
+{
+  "name": "Prometheus",
+  "image": "assets/brands/prometheus.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-11-01",
+  "knowledgebase": "basic"
+}

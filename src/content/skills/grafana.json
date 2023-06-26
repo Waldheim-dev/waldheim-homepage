@@ -1,0 +1,9 @@
+{
+  "name": "Grafana",
+  "image": "assets/brands/grafana.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2021-01-01",
+  "knowledgebase": "basic"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Jaws",
+  "image": "assets/brands/JAWS-screenreader-logo.png",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2023-01-01",
+  "knowledgebase": "basic"
+}

@@ -1,0 +1,56 @@
+---
+import Nav from './Nav.astro';
+
+const date = new Date();
+---
+<footer class="bg-white dark:bg-slate-800">
+	<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+		<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+			<div class="pb-6">
+				<a href="/imprint/" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Impressum</a>
+			</div>
+			<div class="pb-6">
+				<a href="/privacy/" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Datenschutz</a>
+			</div>
+			<div class="pb-6">
+				<a href="/blog/" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Blog</a>
+			</div>
+			<div class="pb-6">
+				<a href="mailto:kontakt@waldheim.dev" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Bug melden <i class='fa-regular fa-envelope'></i></a>
+			</div>
+			<div class="pb-6">
+				<a href="https://forestdesign.atlassian.net/servicedesk/customer/portals" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Help-Center <i class='fa-regular fa-arrow-up-right-from-square'></i></a>
+			</div>
+			<div class="pb-6">
+				<a href="https://www.waldheim-it.de" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Waldheim IT-Beratung <i class='fa-regular fa-arrow-up-right-from-square'></i></a>
+			</div>
+		</nav>
+		<div class="mt-10 flex justify-center space-x-10">
+			<a href='https://www.xing.com/profile/Markus_Waldheim/cv' target='_blank' title='Xing'  class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-200">
+				<i class='fa-brands fa-xing'></i>
+			</a>
+				<a href='https://gitlab.com/mwaldheim' target='_blank' title='Gitlab'  class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-200">
+					<i class='fa-brands fa-gitlab'></i>
+				</a>
+				<a href='https://www.twitch.tv/blackbird995' target='_blank' title='Twitch'  class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-200">
+					<i class='fa-brands fa-twitch'></i>
+				</a>
+				<a href='https://twitter.com/my_codec' target='_blank' title='Twitter'  class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-200">
+					<i class='fa-brands fa-twitter'></i>
+				</a>
+				<a href='https://www.designenlassen.de/profil/622353' target='_blank' title='Designenlassen.de'  class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-200">
+					<i class='fa-solid fa-pen-ruler'></i>
+				</a>
+		</div>
+		<p class="mt-10 text-center text-xs leading-5">
+      <span
+				class='inline-flex items-center gap-x-1.5 rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700 dark:bg-green-100/55 dark:text-green-700'>
+        <svg class="h-1.5 w-1.5 fill-green-500 dark:fill-green-500/75" viewBox="0 0 6 6" aria-hidden="true">
+          <circle cx="3" cy="3" r="3" />
+        </svg>
+				v24.0.0-pre.1
+      </span>
+		</p>
+		<p class="mt-10 text-center text-xs leading-5 text-gray-500 dark:text-gray-400">&copy; {date.getFullYear()} Waldheim.dev. Alle Rechte vorbehalten.</p>
+	</div>
+</footer>

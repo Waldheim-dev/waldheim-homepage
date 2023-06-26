@@ -1,0 +1,9 @@
+{
+  "name": "Drupal",
+  "image": "assets/brands/drupal-icon.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "",
+  "knowledgebase": "basic"
+}

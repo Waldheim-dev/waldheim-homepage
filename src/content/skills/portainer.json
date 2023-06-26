@@ -1,0 +1,9 @@
+{
+  "name": "Portainer",
+  "image": "assets/brands/portainer.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 5,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced"
+}

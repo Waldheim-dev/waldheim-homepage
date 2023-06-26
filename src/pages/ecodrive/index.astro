@@ -1,0 +1,116 @@
+---
+
+import Card from '../../components/Card.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import BaseHead from '../../components/BaseHead.astro';
+---
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<section>
+  <div class="container">
+    <h1>Mein Service</h1>
+    <p>Gerne unterstütze ich Sie in Entwicklungsprozessen, berate Sie oder entwerfe Konzepte für Sie. Kontaktieren Sie mich einfach unter <a href="mailto:kontakt@waldheim.dev" target="_blank">kontakt@waldheim.dev</a></p>
+  </div>
+</section>
+<section class="container">
+  <h2>Dienst&shy;leistungen</h2>
+  <div class="section-24 services">
+    <div>
+      <Card colors='primary' elevation={true}>
+
+        <div class="pre-icon"><i class="fa-regular fa-laptop-code fa-2x fa-fw"></i></div>
+        <h3>Entwicklung</h3>
+        <p>Ich biete Ihnen Software-Entwicklungen für folgende Themenbereiche an.</p>
+        <ul>
+          <li>Webseiten</li>
+          <li>Microservices</li>
+        </ul>
+        <br>
+        <p>Mit folgenden Sprachen können diese umgesetzt werden</p>
+
+        <div class="login-types" >
+          <div class="login-type">
+            <img src="brands/angular-icon-1.svg" loading="lazy" height="40px" alt='Angular'>
+          </div>
+          <div class="login-type">
+            <img src="brands/wordpress-icon.svg" loading="lazy" height="40px" alt='Wordpress'>
+          </div>
+          <div class="login-type">
+            <img src="brands/stencil-seeklogo.com.svg" loading="lazy" height="40px" alt='Stencil'>
+          </div>
+          <div class="login-type">
+            <img src="brands/react-2.svg" loading="lazy" height="40px" alt='React JS'>
+          </div>
+          <div class="login-type">
+            <img src="brands/docker-icon.svg" loading="lazy" height="40px" alt='Docker'>
+          </div>
+          <div class="login-type">
+            <img src="brands/capacitor-js.svg" loading="lazy" height="40px" alt='Capacitor'>
+          </div>
+          <div class="login-type">
+            <img src="brands/java-4.svg" loading="lazy" height="40px" alt='Java'>
+          </div>
+          <div class="login-type">
+            <img src="brands/php-1.svg" loading="lazy" height="40px" alt='PHP'>
+          </div>
+          <div class="login-type" disabled>
+            <img src="brands/flutter-logo.svg" loading="lazy" height="40px" alt='Flutter'>
+          </div>
+          <div class="login-type" disabled>
+            <img src="brands/vue-9.svg" loading="lazy" height="40px" alt='VueJs'>
+          </div>
+          <div class="login-type" disabled>
+            <img src="brands/svelte.svg" loading="lazy" height="40px" alt='Svelte'>
+          </div>
+        </div>
+      </Card>
+    </div>
+    <div>
+      <Card colors='secondary' elevation={true}>
+        <div class="pre-icon"><i class="fa-regular fa-rocket-launch fa-fw fa-2x"></i></div>
+        <h3>Design</h3>
+        <p>Gerne gestalte ich für Sie auch von Benutzermasken, bis hin zu Grafiken und Print-Elementen alles durch.</p>
+        <ul>
+          <li>UI / UX</li>
+          <li>Logo-Gestaltung</li>
+          <li>Medien-Assets</li>
+          <li>Print-Vorlagen</li>
+          <li>Corporate Identity</li>
+          <li>Design System</li>
+          <li>CI Guidelines</li>
+        </ul>
+      </Card>
+    </div>
+    <div>
+      <Card colors='tertiary' elevation={true}>
+        <div class="pre-icon"><i class="fa-regular fa-code-fork fa-fw fa-2x"></i></div>
+        <h3>Automatisierung</h3>
+        <p>Um Ihnen langfristig Zeit zu ersparen automatisiere und optimiere ich mit Ihnen Ihre Prozesse. Egal ob es
+          Entwicklungsprozesse oder Arbeitsprozesse sind.</p>
+        <ul>
+          <li>CI / CD</li>
+          <li>Versionierung</li>
+          <li>Prozess-Optimierung</li>
+          <li>Beratung</li>
+        </ul>
+      </Card>
+    </div>
+    <div>
+      <Card colors='error' elevation={true}>
+        <div class="pre-icon"><i class="fa-brands fa-microsoft fa-fw fa-2x"></i></div>
+        <h3>Systeme</h3>
+        <p>Gemeinsam mit <a href="https://www.waldheim-it.de" target="_blank">Waldheim IT-Beratung</a> biete ich auch die Dienste als Systemintegrator an.</p>
+        <ul>
+          <li>Installation</li>
+          <li>Support</li>
+          <li>Administrierung</li>
+          <li>Beratung</li>
+          <li>Office365</li>
+        </ul>
+      </Card>
+    </div>
+  </div>
+  <div>
+    <p>Je angefangene 15 Minuten werden 15€ berechnet. Gemäß §19 UStG enthält der Rechnungsbetrag keine
+      Umsatzsteuer.</p>
+  </div>
+</section>
