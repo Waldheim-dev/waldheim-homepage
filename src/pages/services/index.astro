@@ -1,119 +1,99 @@
 ---
-import Card from '../../components/Card.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import BaseHead from '../../components/BaseHead.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pricing from '../../components/content/Pricing.astro';
 ---
 
-<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-<section>
-  <div class='container'>
-    <h1>Mein Service</h1>
-    <p>Gerne unterstütze ich Sie in Entwicklungsprozessen, berate Sie oder entwerfe Konzepte für Sie. Kontaktieren Sie
-      mich einfach unter <a href='mailto:kontakt@waldheim.dev' target='_blank'>kontakt@waldheim.dev</a></p>
-  </div>
-</section>
-<section class='container'>
-  <h2>Dienst&shy;leistungen</h2>
-  <div class='section-24 services'>
-    <div>
-      <Card colors='primary' elevation={true}>
+<BaseLayout>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
-        <div class='pre-icon'><i class='fa-regular fa-laptop-code fa-2x fa-fw'></i></div>
-        <h3>Entwicklung</h3>
-        <p>Ich biete Ihnen Software-Entwicklungen für folgende Themenbereiche an.</p>
-        <ul>
-          <li>Webseiten</li>
-          <li>Microservices</li>
-        </ul>
-        <br>
-        <p>Mit folgenden Sprachen können diese umgesetzt werden</p>
-
-        <div class='login-types'>
-          <div class='login-type'>
-            <img src='brands/angular-icon-1.svg' loading='lazy' height='40px' alt='Angular'>
+  <div class='bg-white dark:bg-slate-800'>
+    <div class='relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14'>
+      <div
+        class='absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-slate-800 shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96'
+        aria-hidden='true'></div>
+      <div class='mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8'>
+        <div
+          class='mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8'>
+          <h1
+            class='max-w-2xl text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:col-span-2 xl:col-auto'>
+            Holen Sie sich die bassende Hilfe</h1>
+          <div class='mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1'>
+            <p class='text-lg leading-8 text-gray-600 dark:text-gray-300'>Ich unterstütze Sie in kleineren Projekten
+              oder dauerhaften Wartungen. Je nach Leistung.</p>
           </div>
-          <div class='login-type'>
-            <img src='brands/wordpress-icon.svg' loading='lazy' height='40px' alt='Wordpress'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/stencil-seeklogo.com.svg' loading='lazy' height='40px' alt='Stencil'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/react-2.svg' loading='lazy' height='40px' alt='React JS'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/docker-icon.svg' loading='lazy' height='40px' alt='Docker'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/capacitor-js.svg' loading='lazy' height='40px' alt='Capacitor'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/java-4.svg' loading='lazy' height='40px' alt='Java'>
-          </div>
-          <div class='login-type'>
-            <img src='brands/php-1.svg' loading='lazy' height='40px' alt='PHP'>
-          </div>
-          <div class='login-type' disabled>
-            <img src='brands/flutter-logo.svg' loading='lazy' height='40px' alt='Flutter'>
-          </div>
-          <div class='login-type' disabled>
-            <img src='brands/vue-9.svg' loading='lazy' height='40px' alt='VueJs'>
-          </div>
-          <div class='login-type' disabled>
-            <img src='brands/svelte.svg' loading='lazy' height='40px' alt='Svelte'>
-          </div>
+          <img
+            src='https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+            alt=''
+            class='mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36'>
         </div>
-      </Card>
-    </div>
-    <div>
-      <Card colors='secondary' elevation={true}>
-        <div class='pre-icon'><i class='fa-regular fa-rocket-launch fa-fw fa-2x'></i></div>
-        <h3>Design</h3>
-        <p>Gerne gestalte ich für Sie auch von Benutzermasken, bis hin zu Grafiken und Print-Elementen alles durch.</p>
-        <ul>
-          <li>UI / UX</li>
-          <li>Logo-Gestaltung</li>
-          <li>Medien-Assets</li>
-          <li>Print-Vorlagen</li>
-          <li>Corporate Identity</li>
-          <li>Design System</li>
-          <li>CI Guidelines</li>
-        </ul>
-      </Card>
-    </div>
-    <div>
-      <Card colors='tertiary' elevation={true}>
-        <div class='pre-icon'><i class='fa-regular fa-code-fork fa-fw fa-2x'></i></div>
-        <h3>Automatisierung</h3>
-        <p>Um Ihnen langfristig Zeit zu ersparen automatisiere und optimiere ich mit Ihnen Ihre Prozesse. Egal ob es
-          Entwicklungsprozesse oder Arbeitsprozesse sind.</p>
-        <ul>
-          <li>CI / CD</li>
-          <li>Versionierung</li>
-          <li>Prozess-Optimierung</li>
-          <li>Beratung</li>
-        </ul>
-      </Card>
-    </div>
-    <div>
-      <Card colors='error' elevation={true}>
-        <div class='pre-icon'><i class='fa-brands fa-microsoft fa-fw fa-2x'></i></div>
-        <h3>Systeme</h3>
-        <p>Gemeinsam mit <a href='https://www.waldheim-it.de' target='_blank'>Waldheim IT-Beratung</a> biete ich auch
-          die Dienste als Systemintegrator an.</p>
-        <ul>
-          <li>Installation</li>
-          <li>Support</li>
-          <li>Administrierung</li>
-          <li>Beratung</li>
-          <li>Office365</li>
-        </ul>
-      </Card>
+      </div>
+      <div class='absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white dark:from-slate-800 sm:h-32'></div>
     </div>
   </div>
-  <div>
-    <p>Je angefangene 15 Minuten werden 15€ berechnet. Gemäß §19 UStG enthält der Rechnungsbetrag keine
-      Umsatzsteuer.</p>
+
+  <div class='bg-white dark:bg-slate-800 py-24 sm:py-32'>
+    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
+      <div class='mx-auto max-w-2xl lg:text-center'>
+        <h2 class='text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400'>Guter Service</h2>
+        <p class='mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl'>Für die IT von der
+          IT. Designs für Print und Digital</p>
+        <p class='mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400'>Buche deinen Service für einzelne Projekte
+          oder über einer meiner Servicepartner mit einem Wartungsvertrag (Ausschließlich IT-Service).</p>
+      </div>
+      <div class='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
+        <dl class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
+          <div class='relative pl-16'>
+            <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-100'>
+              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600'>
+                <i class='fa-regular text-white fa-code-compare'></i>
+              </div>
+              Effizient Entwickeln
+            </dt>
+            <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-400'>
+              Beratung und Optimierung von Prozessen in eurer Entwicklung. Durch effiziente Optimierungen und
+              Automatisierungen einen höheren Umsatz erreichen.
+            </dd>
+          </div>
+          <div class='relative pl-16'>
+            <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-100'>
+              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600'>
+                <i class='fa-regular text-white fa-swatchbook'></i>
+              </div>
+              Design / UX
+            </dt>
+            <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-400'>Gestaltung von Print und Digital. Von
+              der Visitenkarte bis zur Webseite. Von der Idee bis zum fertigen Produkt.
+            </dd>
+          </div>
+          <div class='relative pl-16'>
+            <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-100'>
+              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600'>
+                <i class='fa-regular text-white fa-code'></i>
+              </div>
+              Softwareentwicklung
+            </dt>
+            <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-400'>Lassen Sie Ihre Software von mir
+              entwickeln. Alle Produkte werden als OpenSource umgesetzt und Ihnen anschließend bereitgestellt. Kleinere
+              Softwarelösungen und Webseiten.
+            </dd>
+          </div>
+          <div class='relative pl-16'>
+            <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-100'>
+              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600'>
+                <i class='fa-regular text-white fa-computer'></i>
+              </div>
+              IT-Service
+            </dt>
+            <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-400'>Verwaltung und Wartung Ihrer IT. Von
+              der Beratung bis zur Umsetzung. Von der Beschaffung bis zur Wartung.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
   </div>
-</section>
+
+  <Pricing />
+</BaseLayout>
