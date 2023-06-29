@@ -24,10 +24,27 @@ const authorCollection = defineCollection({
 });
 
 const projectCollection = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     title: z.string(),
-    description: z.string()
+    description: z.string(),
+    shortDescription: z.string(),
+    heroImage: z.string(),
+    assets: z.array(z.string()).optional(),
+    overview: z.array(z.object({
+      title: z.string(),
+      meta: z.string(),
+      link: z.string().optional()
+    })).optional(),
+    tags: z.array(z.string()).optional(),
+    general: z.array(z.string()).optional(),
+    frontend: z.array(z.string()).optional(),
+    backend: z.array(z.string()).optional(),
+    // Transform string to Date object
+    pubDate: z
+      .string()
+      .or(z.date())
+      .transform((val) => new Date(val)),
   })
 });
 
