@@ -1,6 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 const blogPosts = (await getCollection('blog')).slice(0, 1);
+
+
+
+
 ---
 
 <style>
@@ -10,7 +14,12 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
     }
 </style>
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
+    const json = await fetch('https://gitlab.com/forestdesign/waldheim.dev.homepage/-/raw/main/package.json');
+    const data = JSON.parse(json);
+
+  document.querySelectorAll('.version').innerHTML = data.version;
+
     const toggles = document.querySelectorAll('.button-toggle');
 
     const toggleEvent = (e) => {
@@ -33,7 +42,7 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
   <nav class='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
     <div class='flex lg:flex-1 gap-1 items-center'>
       <a href='/' class='-m-1.5 p-1.5 flex items-center gap-1'>
-        <img class='h-8 w-auto' src='forestdesign_icon.png' alt='Waldheim.dev'>
+        <img class='h-8 w-auto' src='forestdesign_icon.png' alt='Waldheim.dev' loading='lazy'>
         <span class='text-gray-800 dark:text-white'>Waldheim.dev</span>
       </a>
       <span
@@ -41,7 +50,7 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
         <svg class="h-1.5 w-1.5 fill-green-500 dark:fill-green-500/75" viewBox="0 0 6 6" aria-hidden="true">
           <circle cx="3" cy="3" r="3" />
         </svg>
-				v24.0.0-pre.1
+        v<span class='version'><i class='fa-regular fa-circle-notch fa-spin'></i></span>
       </span>
 
     </div>
@@ -74,7 +83,7 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
       <div class='flex items-center justify-between'>
         <a href='#' class='-m-1.5 p-1.5'>
           <span class='sr-only text-slate-800 dark:text-white'>Waldheim.dev</span>
-          <img class='h-8 w-auto' src='forestdesign_icon.png' alt='waldheim.dev'>
+          <img class='h-8 w-auto' src='forestdesign_icon.png' alt='waldheim.dev' loading='lazy'>
         </a>
         <button type='button' class='-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-white button-toggle'>
           <span class='sr-only'>Schließe Menu</span>

@@ -1,7 +1,7 @@
 ---
 title: "Waldheim.dev Webseite"
 description: ""
-shortDescription: "Erstellung der ersten Homepage für Waldheim.dev"
+shortDescription: "Erstellung der ersten Homepage f&uuml;r Waldheim.dev"
 pubDate: "2022-06-01"
 heroImage: "projects/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg"
 assets: ["projects/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg", "projects/waldheim-dev/homepage/waldheim.dev-2023-light-shot.png","projects/waldheim-dev/homepage/waldheim.dev-2023-dark-shot.png", "projects/waldheim-dev/homepage/homepage.png"]
