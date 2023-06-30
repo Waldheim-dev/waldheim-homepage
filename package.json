@@ -21,7 +21,7 @@
     "astro": "2.5.x",
     "astro-compress": "^1.1.48",
     "sass": "1.63.x",
-    "tailwindcss": "3.0.x"
+    "tailwindcss": "3.3.x"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.60.x",
@@ -31,6 +31,6 @@
     "prettier": "2.8.x",
     "ts-node": "10.9.x",
     "typescript": "5.1.x",
-    "zip-dir": "^2.0.0"
+    "zip-dir": "2.0.x"
   }
 }
