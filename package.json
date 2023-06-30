@@ -30,6 +30,7 @@
     "eslint-config-prettier": "8.8.x",
     "prettier": "2.8.x",
     "ts-node": "10.9.x",
-    "typescript": "5.1.x"
+    "typescript": "5.1.x",
+    "zip-dir": "^2.0.0"
   }
 }
