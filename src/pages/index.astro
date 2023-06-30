@@ -152,10 +152,10 @@ const skills = await getCollection('skills');
   </div>
 
 
-  <div class='bg-gray-900 py-24 sm:py-32'>
+  <div class='bg-gray-100 dark:bg-gray-900 py-24 sm:py-32'>
     <div class='mx-auto max-w-2xl text-center px-6 lg:px-8 py-6'>
-      <h2 class='text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl'>Top Skills</h2>
-      <p class='mt-2 text-lg leading-8 text-gray-400'>Aktuell im Trend oder Produktiv im Einsatz.</p>
+      <h2 class='text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl'>Top Skills</h2>
+      <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400'>Aktuell im Trend oder Produktiv im Einsatz.</p>
     </div>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
       <div class='-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-6'>
@@ -163,11 +163,11 @@ const skills = await getCollection('skills');
 
         {
           topSkills.map((entry) => (
-            <div class='bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
+            <div class='bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
               <img class='max-h-12 w-full object-contain' loading='lazy'
                    src={entry.data.image} alt={entry.data.name} width='50'
                    height='50'>
-              <span class='w-full text-center text-gray-300'>{entry.data.name}</span>
+              <span class='w-full text-center text-gray-700 dark:text-gray-300'>{entry.data.name}</span>
               <span class='text-amber-500 flex gap-0.5'>
             {entry.data.knowledgebase === 'basic' ?
               <i class='fa-solid fa-star'></i> : entry.data.knowledgebase === 'advanced' ?
@@ -181,21 +181,21 @@ const skills = await getCollection('skills');
       </div>
     </div>
   </div>
-  <div class='bg-gray-900 py-24 sm:py-32'>
+  <div class='bg-gray-100 dark:bg-gray-900 py-24 sm:py-32'>
     <div class='mx-auto max-w-2xl text-center px-6 lg:px-8 py-6'>
-      <h2 class='text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl'>Weitere Skills</h2>
-      <p class='mt-2 text-lg leading-8 text-gray-400'>Learn how to grow your business with our expert advice.</p>
+      <h2 class='text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl'>Weitere Skills</h2>
+      <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400'>Learn how to grow your business with our expert advice.</p>
     </div>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
       <div class='-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-6'>
 
         {
           skills.map((entry) => (
-            <div class='bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
+            <div class='bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
               <img class='max-h-12 w-full object-contain' loading='lazy'
                    src={entry.data.image} alt={entry.data.name} width='50'
                    height='50'>
-              <span class='w-full text-center text-gray-300'>{entry.data.name}</span>
+              <span class='w-full text-center text-gray-700 dark:text-gray-300'>{entry.data.name}</span>
               <span class='text-amber-500 flex gap-0.5'>
             {entry.data.knowledgebase === 'basic' ?
               <i class='fa-solid fa-star'></i> : entry.data.knowledgebase === 'advanced' ?
