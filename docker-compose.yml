@@ -16,13 +16,15 @@ services:
       - "traefik.http.routers.wd-web.tls.domains[0].main=waldheim.dev"
       - "traefik.http.routers.wd-web.tls.domains[0].sans=www.waldheim.dev"
     ports:
-      - 8084:${WEB_PORT}
+      - 8084:80
     env_file: .env
     environment:
       PORT: ${WEB_PORT}
+      NGINX_PORT: ${WEB_PORT}
       NODE_ENV: ${NODE_ENV}
     volumes:
       - ./:/opt/app
+      - ./dist:/usr/share/nginx/html
     networks:
       - proxy
       - default

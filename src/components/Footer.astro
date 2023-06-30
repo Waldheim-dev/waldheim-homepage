@@ -2,6 +2,8 @@
 import Nav from './Nav.astro';
 
 const date = new Date();
+
+
 ---
 <footer class="bg-white dark:bg-slate-800">
 	<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
@@ -51,7 +53,7 @@ const date = new Date();
         <svg class="h-1.5 w-1.5 fill-green-500 dark:fill-green-500/75" viewBox="0 0 6 6" aria-hidden="true">
           <circle cx="3" cy="3" r="3" />
         </svg>
-				v24.0.0-pre.1
+        v<span class='version'><i class='fa-regular fa-circle-notch fa-spin'></i></span>
       </span>
 		</p>
 		<p class="mt-10 text-center text-xs leading-5 text-gray-500 dark:text-gray-400">&copy; {date.getFullYear()} Waldheim.dev. Alle Rechte vorbehalten.</p>
