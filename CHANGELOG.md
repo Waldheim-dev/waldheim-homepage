@@ -1,3 +1,19 @@
+## [24.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.8.0...v24.0.0) (2023-06-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rework Website with astro.js
+
+### :repeat: Chores
+
+* docker-compose changed ([0d82ec8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0d82ec87d4fea942e2c1c2a38f93289272478057))
+
+
+### :sparkles: Features
+
+* Add Reposts at Footer of Projects and Blogs ([effa519](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/effa519aadff31064c797318e02168a84c9ec2bb))
+
 ## [23.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.3...v23.8.0) (2023-06-30)
 
 
