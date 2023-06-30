@@ -1,3 +1,23 @@
+## [23.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.3...v23.8.0) (2023-06-30)
+
+
+### :sparkles: Features
+
+* Baue Projekt-Seite und Formatiere Projekt-Files ([3cf6902](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3cf6902337d952c7c667d8d3eafe48f10171476a))
+* Bauen von Brands und Blogs ([bb75a46](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bb75a46b87cb3e1a5f077600fcb0fd82f734562c))
+* Rebuild Website with ASTRO ([15f39d8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/15f39d853f120a4872f3f5299789382adcfc32f8))
+
+
+### :repeat: Chores
+
+* Fertigstellung von Webseite und Rebuild ([48c4f24](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/48c4f24fd0344125741154216cdef034f7413a15))
+* Install zip-dir ([fe30bcc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/fe30bccdcf556120ee6cdda8de3fab12685ffeef))
+
+
+### :bug: Fixes
+
+* Korrektur von Zipper ([08530c7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/08530c7b6045bea7c05077cc9a4014f86e45713e))
+
 ## [23.7.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.7.2...v23.7.3) (2023-06-23)
 
 
