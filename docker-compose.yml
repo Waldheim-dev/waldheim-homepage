@@ -24,7 +24,6 @@ services:
       NODE_ENV: ${NODE_ENV}
     volumes:
       - ./:/opt/app
-      - ./dist:/usr/share/nginx/html
     networks:
       - proxy
       - default
