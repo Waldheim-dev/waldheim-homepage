@@ -3,6 +3,8 @@ import Nav from './Nav.astro';
 
 const date = new Date();
 
+import fs from 'node:fs';
+const version = JSON.parse(fs.readFileSync('./package.json')).version;
 
 ---
 <footer class="bg-white dark:bg-slate-800">
@@ -53,7 +55,7 @@ const date = new Date();
         <svg class="h-1.5 w-1.5 fill-green-500 dark:fill-green-500/75" viewBox="0 0 6 6" aria-hidden="true">
           <circle cx="3" cy="3" r="3" />
         </svg>
-        v<span class='version'><i class='fa-regular fa-circle-notch fa-spin'></i></span>
+        v{version}
       </span>
 		</p>
 		<p class="mt-10 text-center text-xs leading-5 text-gray-500 dark:text-gray-400">&copy; {date.getFullYear()} Waldheim.dev. Alle Rechte vorbehalten.</p>
