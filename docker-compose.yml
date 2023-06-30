@@ -12,7 +12,7 @@ services:
       - "traefik.http.routers.wd-web.rule=Host(`waldheim.dev`) || Host(`www.waldheim.dev`)"
       - "traefik.http.routers.wd-web.service=wd-web-waldheimdevhomepage"
       - "traefik.http.routers.wd-web.tls.certresolver=lets-encrypt"
-      - "traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.server.port=8084"
+      - "traefik.http.services.wd-web-waldheimdevhomepage.loadbalancer.server.port=80"
       - "traefik.http.routers.wd-web.tls.domains[0].main=waldheim.dev"
       - "traefik.http.routers.wd-web.tls.domains[0].sans=www.waldheim.dev"
     ports:
