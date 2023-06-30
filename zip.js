@@ -1,5 +1,9 @@
-let zipdir = require('zip-dir');
-let pjson = require('./package.json');
+import zipdir  from 'zip-dir';
+// load the package.json file without using require()
+
+import fs from 'fs';
+const pjson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+
 
   zipdir(`dist`, {saveTo: `dist/${pjson.name}_${pjson.version}.zip`}, function (err) {
     if (err !== null) {
