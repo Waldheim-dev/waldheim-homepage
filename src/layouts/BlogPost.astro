@@ -31,7 +31,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 
   <div class='bg-white  dark:bg-slate-800 px-6 py-6 lg:px-8'>
     <div class='mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300'>
-      {heroImage && <img width={720} height={360} src={heroImage} alt=''  class='aspect-[7/4] w-full rounded-2xl object-cover'/>}
+      {heroImage && <img width={720} height={360} src={heroImage} loading='lazy' alt=''  class='aspect-[7/4] w-full rounded-2xl object-cover'/>}
       <h1 class='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50'>{title}</h1>
 
       <div class="relative mt-6">
