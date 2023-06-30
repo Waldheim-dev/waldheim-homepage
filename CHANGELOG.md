@@ -1,3 +1,10 @@
+## [24.0.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.0.0...v24.0.1) (2023-06-30)
+
+
+### :bug: Fixes
+
+* Optimize Build in Docker ([e145d08](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e145d08db9dc58c92bfdc9388cc5dc7fab93adf6))
+
 ## [24.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v23.8.0...v24.0.0) (2023-06-30)
 
 
