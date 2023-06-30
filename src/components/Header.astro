@@ -2,9 +2,8 @@
 import { getCollection } from 'astro:content';
 const blogPosts = (await getCollection('blog')).slice(0, 1);
 
-
-
-
+import fs from 'node:fs';
+const version = JSON.parse(fs.readFileSync('./package.json')).version;
 ---
 
 <style>
@@ -15,10 +14,6 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
 </style>
 <script is:inline>
   document.addEventListener('DOMContentLoaded', async () => {
-    const json = await fetch('https://gitlab.com/forestdesign/waldheim.dev.homepage/-/raw/main/package.json');
-    const data = JSON.parse(json);
-
-  document.querySelectorAll('.version').innerHTML = data.version;
 
     const toggles = document.querySelectorAll('.button-toggle');
 
@@ -50,7 +45,7 @@ const blogPosts = (await getCollection('blog')).slice(0, 1);
         <svg class="h-1.5 w-1.5 fill-green-500 dark:fill-green-500/75" viewBox="0 0 6 6" aria-hidden="true">
           <circle cx="3" cy="3" r="3" />
         </svg>
-        v<span class='version'><i class='fa-regular fa-circle-notch fa-spin'></i></span>
+        v{version}
       </span>
 
     </div>

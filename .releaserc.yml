@@ -44,11 +44,12 @@ plugins:
     - changelogFile: "CHANGELOG.md"
   - - "@semantic-release/exec"
     - verifyReleaseCmd: "echo ${nextRelease.version} > VERSION.txt"
-      prepareCmd: "npx replace-json-property package.json version ${nextRelease.version} && pnpm install && pnpm run build && pnpm run zip"
+      prepareCmd: "npx replace-json-property package.json version ${nextRelease.version} && npx replace-json-property public/versions.json website ${nextRelease.version} && pnpm install && pnpm run build && pnpm run zip"
   - - "@semantic-release/git"
     - assets:
         - "CHANGELOG.md"
         - "package.json"
+        - "public/versions.json"
   - - "@semantic-release/gitlab"
     - assets:
         - path: "VERSION.txt"
