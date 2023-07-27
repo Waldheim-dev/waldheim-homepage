@@ -1,3 +1,10 @@
+## [24.1.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.0...v24.1.1) (2023-07-27)
+
+
+### :bug: Fixes
+
+* Change Image of MVO . Wertungsspiele ([1ae81f9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1ae81f900d71cc0b15e19e8fc48d65f8905a3082))
+
 ## [24.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.0.1...v24.1.0) (2023-07-27)
 
 
