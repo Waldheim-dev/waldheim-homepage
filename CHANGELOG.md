@@ -1,3 +1,10 @@
+## [24.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.0.1...v24.1.0) (2023-07-27)
+
+
+### :sparkles: Features
+
+* Add new MVO Content for 2024 ([0b68024](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0b6802471b0a1603e7f7351ffefb42158caeb483))
+
 ## [24.0.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.0.0...v24.0.1) (2023-06-30)
 
 
