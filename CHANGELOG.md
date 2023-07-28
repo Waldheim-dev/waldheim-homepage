@@ -1,3 +1,11 @@
+## [24.1.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.1...v24.1.2) (2023-07-28)
+
+
+### :bug: Fixes
+
+* Change Icons from Fontawesome to SVG ([3f99878](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3f9987883127bd63501a4954d384872ca1469d61))
+* Update Weblaunch of MVO ([31f239a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/31f239aa9ef4d883119de26790197280854e5bf6))
+
 ## [24.1.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.0...v24.1.1) (2023-07-27)
 
 
