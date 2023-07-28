@@ -106,33 +106,77 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class='mt-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-5xl'>Preise für alle Teams, Firmen und einzelne Personen</p>
       </div>
       <p class='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300'>Wähle aus, was dir gefällt und du nutzen willst</p>
+      <script is:inline>
+        let plan = 'monthly';
+        document.addEventListener('DOMContentLoaded', () => {
+          const monthly = document.querySelector('#monthly');
+          const annual = document.querySelector('#annual');
+
+          const free = document.querySelector('#free');
+          const basic = document.querySelector('#basic');
+          const pro = document.querySelector('#pro');
+          const premium = document.querySelector('#premium');
+
+          monthly.addEventListener('click', () => {
+            plan = 'monthly';
+            monthly.classList.add('bg-indigo-500', 'text-white');
+            annual.classList.remove('bg-indigo-500', 'text-white');
+
+            free.querySelector('.price').innerHTML = '0,-€';
+            basic.querySelector('.price').innerHTML = '4,99€';
+            pro.querySelector('.price').innerHTML = '14,99€';
+            premium.querySelector('.price').innerHTML = '249,99€';
+
+            free.querySelector('.frequency').innerHTML = '/Monat';
+            basic.querySelector('.frequency').innerHTML = '/Monat';
+            pro.querySelector('.frequency').innerHTML = '/Monat';
+            premium.querySelector('.frequency').innerHTML = '/Monat';
+          })
+
+          annual.addEventListener('click', () => {
+            plan = 'annual';
+            annual.classList.add('bg-indigo-500', 'text-white');
+            monthly.classList.remove('bg-indigo-500', 'text-white');
+
+            free.querySelector('.price').innerHTML = '0,-€';
+            basic.querySelector('.price').innerHTML = '44,46€';
+            pro.querySelector('.price').innerHTML = '170,89€';
+            premium.querySelector('.price').innerHTML = '2999,88€';
+
+            free.querySelector('.frequency').innerHTML = '/Jahr';
+            basic.querySelector('.frequency').innerHTML = '/Jahr';
+            pro.querySelector('.frequency').innerHTML = '/Jahr';
+            premium.querySelector('.frequency').innerHTML = '/Jahr';
+          })
+        })
+      </script>
       <div class='mt-16 flex justify-center'>
         <fieldset
           class='grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-gray-800 dark:text-white'>
           <legend class='sr-only'>Zahlungsrythmus</legend>
           <!-- Checked: "bg-indigo-500 text-white" -->
-          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500 text-white'>
+          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500 text-white' id='monthly'>
             <input type='radio' name='frequency' value='monthly' class='sr-only'>
             <span>Monatlich</span>
           </label>
           <!-- Checked: "bg-indigo-500 text-white" -->
-          <label class='cursor-pointer rounded-full px-2.5 py-1'>
+          <label class='cursor-pointer rounded-full px-2.5 py-1' id='annual'>
             <input type='radio' name='frequency' value='annually' class='sr-only'>
             <span>Jährlich</span>
           </label>
         </fieldset>
       </div>
-      <div class='isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
-        <div class='rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70'>
+      <div class='isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-4'>
+        <div class='rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70' id='free'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-freelancer' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>Free</h3>
+            <h3 id='tier-free' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>🌱 Free</h3>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Lerne die Software kennen und probiere sie aus.</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>0,-€</span>
+            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>0,-€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
-            <span class='text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
+            <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
           <!--<a href='#' aria-describedby='tier-freelancer'-->
           <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
@@ -144,7 +188,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
               </svg>
-              1 Fahrzeug
+              <span><strong>1</strong> Fahrzeug</span>
             </li>
             <li class='flex gap-x-3'>
               <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
@@ -156,17 +200,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </li>
           </ul>
         </div>
-        <div class='rounded-3xl p-8 xl:p-10 bg-white/5 ring-2 ring-indigo-500'>
+        <div class='rounded-3xl p-8 xl:p-10 ring-1  dark:ring-white/10 ring-slate-700/70' id='basic'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-startup' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>Basic</h3>
-            <p class='rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white'>Empfehlung</p>
+            <h3 id='tier-basic' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>🚗 Basic</h3>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Ideal für Familien, kleine Firmen, Teams und Dich!</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>3,99€</span>
+            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>3,99€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
-            <span class='text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
+            <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
           <!--<a href='#' aria-describedby='tier-startup'-->
           <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500'>Buy-->
@@ -179,7 +222,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
               </svg>
-              3 Fahrzeuge
+              <span><strong>3</strong> Fahrzeuge</span>
             </li>
             <li class='flex gap-x-3'>
               <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
@@ -207,16 +250,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </li>
           </ul>
         </div>
-        <div class='rounded-3xl p-8 xl:p-10 ring-1  dark:ring-white/10 ring-slate-700/70'>
+        <div class='rounded-3xl p-8 xl:p-10 ring-1 bg-white/5 ring-2 ring-indigo-500' id='pro'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-enterprise' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>Pro</h3>
+            <h3 id='tier-pro' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>🚀 Pro</h3>
+            <p class='rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white'>Empfehlung</p>
           </div>
-          <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Optimal für Firmen mit einer gesetzlichen Verpflichtung und großen Fuhrparks.</p>
+          <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Optimal für Firmen mit einer gesetzlichen Verpflichtung.</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>14,99€</span>
+            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>14,99€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
-            <span class='text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
+            <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
           <!--<a href='#' aria-describedby='tier-enterprise'-->
           <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
@@ -230,7 +274,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
               </svg>
-              Unbegrenzte Fahrzeuge
+              <span><strong>10</strong> Fahrzeuge</span>
             </li>
             <li class='flex gap-x-3'>
               <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
@@ -270,7 +314,90 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
               </svg>
-              Benutzereinladung
+              <span><strong>10</strong> Benutzereinladung</span>
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Statistiken
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Logbuch
+            </li>
+          </ul>
+        </div>
+        <div class='rounded-3xl p-8 xl:p-10 ring-1  dark:ring-white/10 ring-slate-700/70' id='premium'>
+          <div class='flex items-center justify-between gap-x-4'>
+            <h3 id='tier-premium' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'>🪐 Premium</h3>
+          </div>
+          <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Optimal für große Firmen und großen Fuhrparks.</p>
+          <p class='mt-6 flex items-baseline gap-x-1'>
+            <!-- Price, update based on frequency toggle state -->
+            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>249,99€</span>
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
+          </p>
+          <!--<a href='#' aria-describedby='tier-enterprise'-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
+          <!--  plan</a>-->
+          <ul role='list' class='mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10'>
+
+
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              <span><strong>Unbegrenzte</strong> Fahrzeuge</span>
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Tank Protokollierung
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Service Protokollierung
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Fahrten Protokollierung
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              Exportiertes Fahrtenbuch
+            </li>
+            <li class='flex gap-x-3'>
+              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+                <path fill-rule='evenodd'
+                      d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
+                      clip-rule='evenodd' />
+              </svg>
+              <span><strong>Unbegrenzte</strong> Benutzereinladung</span>
             </li>
             <li class='flex gap-x-3'>
               <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
