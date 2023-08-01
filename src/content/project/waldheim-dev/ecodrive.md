@@ -6,7 +6,13 @@ description: "Ecodrive ist eine Software zur Nutzungsermittlung. Dabei werden Da
 shortDescription: "Entwicklung der Ecodrive Software (Erste Demo)"
 pubDate: "2022-07-01"
 heroImage: "projects/waldheim-dev/ecodrive/ecodrive_login.png"
-assets: ["projects/waldheim-dev/ecodrive/ecodrive_login.png"]
+assets: [
+  "projects/waldheim-dev/ecodrive/ecodrive_login.png",
+  "projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png",
+  "projects/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png",
+  "projects/waldheim-dev/ecodrive/ecodrive_settings.png",
+  "projects/waldheim-dev/ecodrive/ecodrive_releasenotes.png",
+]
 overview: [{
   title: 'Kunde',
   meta: 'Waldheim.dev',
