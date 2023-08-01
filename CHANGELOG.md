@@ -1,3 +1,10 @@
+## [24.1.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.2...v24.1.3) (2023-08-01)
+
+
+### :bug: Fixes
+
+* Update Images of Ecodrive ([0fed0a0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0fed0a05e0e8f365a3a0c74f4581366a47ed14f8))
+
 ## [24.1.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.1...v24.1.2) (2023-07-28)
 
 
