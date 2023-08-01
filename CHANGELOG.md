@@ -1,3 +1,10 @@
+## [24.1.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.3...v24.1.4) (2023-08-01)
+
+
+### :bug: Fixes
+
+* Change Icons and Images of Ecodrive ([942919f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/942919fe7856751f972c272ad77d8fa5a7fb0719))
+
 ## [24.1.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.2...v24.1.3) (2023-08-01)
 
 
