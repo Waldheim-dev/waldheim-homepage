@@ -5,8 +5,8 @@ description: "Ecodrive ist eine Software zur Nutzungsermittlung. Dabei werden Da
     auch die M&ouml;glichkeit direkt ein Fahrtenbuch aus den Daten zu generieren."
 shortDescription: "Entwicklung der Ecodrive Software (Erste Demo)"
 pubDate: "2022-07-01"
-heroImage: "projects/waldheim-dev/ecodrive/ecodrive.png"
-assets: ["projects/waldheim-dev/ecodrive/ecodrive.png"]
+heroImage: "projects/waldheim-dev/ecodrive/ecodrive_login.png"
+assets: ["projects/waldheim-dev/ecodrive/ecodrive_login.png"]
 overview: [{
   title: 'Kunde',
   meta: 'Waldheim.dev',
