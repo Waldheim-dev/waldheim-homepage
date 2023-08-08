@@ -1,3 +1,15 @@
+## [24.1.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.5...v24.1.6) (2023-08-08)
+
+
+### :bug: Fixes
+
+* Update Top Skills ([b9f45ed](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b9f45edf096dc3f28f361cc27c99692d369c74e6))
+
+
+### :repeat: Chores
+
+* Remove temporarily Compress ([b5c99f2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b5c99f21ef61156f13b94c3d5a2dd24d2f821af7))
+
 ## [24.1.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.4...v24.1.5) (2023-08-08)
 
 
