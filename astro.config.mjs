@@ -4,12 +4,11 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
 
-import compress from "@otterlord/astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.waldheim.dev',
-  integrations: [mdx(), sitemap(), tailwind(), prefetch(), compress()],
+  integrations: [mdx(), sitemap(), tailwind(), prefetch()],
   styles: {
     '*.scss': {
       preprocessor: 'sass',
