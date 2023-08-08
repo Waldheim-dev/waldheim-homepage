@@ -19,7 +19,7 @@
     "@fortawesome/fontawesome-pro": "6.4.x",
     "@types/node": "20.4.x",
     "astro": "2.9.x",
-    "astro-compress": "1.1.x",
+    "@otterlord/astro-compress": "1.1.x",
     "sass": "1.64.x",
     "tailwindcss": "3.3.x"
   },
