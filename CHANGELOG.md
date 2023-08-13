@@ -1,3 +1,10 @@
+## [24.1.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.6...v24.1.7) (2023-08-13)
+
+
+### :bug: Fixes
+
+* Add Compressor ([71b8d10](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/71b8d10e04c2347e10fcb9dd22f3c4611c3115a6))
+
 ## [24.1.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.5...v24.1.6) (2023-08-08)
 
 
