@@ -11,26 +11,26 @@
     "zip": "node zip.js"
   },
   "dependencies": {
-    "@astrojs/mdx": "0.19.x",
-    "@astrojs/prefetch": "0.3.x",
-    "@astrojs/rss": "2.4.x",
-    "@astrojs/sitemap": "2.0.x",
-    "@astrojs/tailwind": "4.0.x",
+    "@astrojs/mdx": "1.0.x",
+    "@astrojs/prefetch": "0.4.x",
+    "@astrojs/rss": "3.0.x",
+    "@astrojs/sitemap": "3.0.x",
+    "@astrojs/tailwind": "5.0.x",
     "@fortawesome/fontawesome-pro": "6.4.x",
-    "@types/node": "20.4.x",
-    "astro": "2.9.x",
+    "@types/node": "20.5.x",
+    "astro": "3.0.x",
     "astro-compress": "2.0.x",
-    "sass": "1.64.x",
+    "sass": "1.66.x",
     "tailwindcss": "3.3.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.2.x",
-    "@typescript-eslint/parser": "6.2.x",
-    "eslint": "8.45.x",
-    "eslint-config-prettier": "8.9.x",
+    "@typescript-eslint/eslint-plugin": "6.5.x",
+    "@typescript-eslint/parser": "6.5.x",
+    "eslint": "8.48.x",
+    "eslint-config-prettier": "9.0.x",
     "prettier": "3.0.x",
     "ts-node": "10.9.x",
-    "typescript": "5.1.x",
+    "typescript": "5.2.x",
     "zip-dir": "2.0.x"
   }
 }
