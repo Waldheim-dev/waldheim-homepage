@@ -2,7 +2,7 @@
 import '../styles/styles.scss';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import BaseHead from '../components/BaseHead.astro';
+import {ViewTransitions} from 'astro:transitions';
 ---
 <style>
     main {
@@ -33,6 +33,7 @@ import BaseHead from '../components/BaseHead.astro';
 <body>
 <Header />
 <main class='bg-white dark:bg-slate-800'>
+  <ViewTransitions />
   <slot />
 
 </main>
