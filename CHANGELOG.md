@@ -1,3 +1,11 @@
+## [24.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.7...v24.2.0) (2023-09-02)
+
+
+### :sparkles: Features
+
+* Add Pagetransition ([5abc6d5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5abc6d5565789e4902daa2178d74949fb419bcf2))
+* Upgrade to Astro 3.0 ([eb194f9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/eb194f9c7e8decd1e67c205a687d035eda5981d2))
+
 ## [24.1.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.6...v24.1.7) (2023-08-13)
 
 
