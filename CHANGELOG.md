@@ -1,3 +1,11 @@
+## [24.2.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.2.0...v24.2.1) (2023-10-02)
+
+
+### :bug: Fixes
+
+* Update Skill-Experience ([7f45f05](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7f45f057028761964cf7c85fc58a4ac0c9f24fd4))
+* Update to new Astro-Version 3.2 ([188e3ab](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/188e3abc40dccd73124bf33fa00b5ea2a9ea92bb))
+
 ## [24.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.1.7...v24.2.0) (2023-09-02)
 
 
