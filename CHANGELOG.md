@@ -1,3 +1,15 @@
+## [24.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.2.1...v24.3.0) (2023-10-08)
+
+
+### :sparkles: Features
+
+* Optimize Service-Page with new Partner SEWOBE ([0755c0d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0755c0d469703462dbad9619ec3d1d1ee5847553))
+
+
+### :repeat: Chores
+
+* Typoerror fixed ([b11e126](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b11e126efb8685c964b55e3bcbecd89a48adcd95))
+
 ## [24.2.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.2.0...v24.2.1) (2023-10-02)
 
 
