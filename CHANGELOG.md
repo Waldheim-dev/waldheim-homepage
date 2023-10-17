@@ -1,3 +1,17 @@
+## [24.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.3.0...v24.4.0) (2023-10-17)
+
+
+### :sparkles: Features
+
+* Neue Jahresberechnung für Skills erstellt ([384959a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/384959a83584db0ec9e54d5e789acc54211722ba))
+* Neuer Blog-Post eingefügt (Neuer Partner) ([d98bc42](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d98bc42a31cf2d54e64c4606fe72ad1d70dda5d8))
+* Upgrade to Astro 3.3 ([dd3c621](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dd3c6217a8567da9c2fbd08a4d6eff812b2d93d8))
+
+
+### :repeat: Chores
+
+* Implementierung der neuen Blogs und Skill-Darstellung ([dff5756](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dff57566aa4c2eb6373bfd1ac2bb408da5668626))
+
 ## [24.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.2.1...v24.3.0) (2023-10-08)
 
 
