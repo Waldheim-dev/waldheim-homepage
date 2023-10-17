@@ -1,3 +1,11 @@
+## [24.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.0...v24.5.1) (2023-10-17)
+
+
+### :bug: Fixes
+
+* Optimize Header-Action ([79f4796](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/79f479617f3c309f30fc109f48d1e9840ec8fcfa))
+* Optimize Hero-Actions ([a70e7ca](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a70e7cab0bfa6dcb876de00a40eca2d562bddeff))
+
 ## [24.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.4.0...v24.5.0) (2023-10-17)
 
 
