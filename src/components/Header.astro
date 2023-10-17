@@ -39,7 +39,8 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
   <nav class='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
     <div class='flex lg:flex-1 gap-1 items-center'>
       <a href='/' class='-m-1.5 p-1.5 flex items-center gap-1'>
-        <img class='h-8 w-auto' src='forestdesign_icon.png' alt='Waldheim.dev' loading='lazy'>
+        <img class='h-8 w-auto hidden dark:block' src='/waldheim.dev.png' alt='Waldheim.dev' loading='lazy'>
+        <img class='h-8 w-auto block dark:hidden' src='/waldheim.dev.dark.png' alt='Waldheim.dev' loading='lazy'>
         <span class='text-gray-800 dark:text-white'>Waldheim.dev</span>
       </a>
       <span
@@ -80,7 +81,8 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
       <div class='flex items-center justify-between'>
         <a href='#' class='-m-1.5 p-1.5'>
           <span class='sr-only text-slate-800 dark:text-white'>Waldheim.dev</span>
-          <img class='h-8 w-auto' src='forestdesign_icon.png' alt='waldheim.dev' loading='lazy'>
+          <img class='h-8 w-auto hidden dark:block' src='/waldheim.dev.png' alt='waldheim.dev' loading='lazy'>
+          <img class='h-8 w-auto block dark:hidden' src='/waldheim.dev.dark.png' alt='waldheim.dev' loading='lazy'>
         </a>
         <button type='button' class='-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-white button-toggle'>
           <span class='sr-only'>Schließe Menu</span>
