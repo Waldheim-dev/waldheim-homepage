@@ -37,22 +37,3 @@ Am dritten Tag der EnterJS fand die Konferenz statt. Ich habe mir folgende Vortr
 Die EnterJS ist eine der gr&ouml;&szlig;ten Konferenzen für JavaScript in Deutschland. Sie findet jedes Jahr in
 Deutschland statt. Die Konferenz ist in drei Tage aufgeteilt. Der erste Tag ist der Workshop-Tag und die letzten zwei Tage sind
 die Konferenz-Tage. In diesem Bericht m&ouml;chte ich euch meine Eindr&uuml;cke von der Konferenz schildern.
-
-<style>
-	h1 {
-		font-size: 3rem !important;
-		line-height: 4rem !important;
-		font-weight: bold !important;
-	}
-
-	h2 {
-		font-size: 1.5rem !important;
-		line-height: 2.5rem !important;
-		font-weight: bold !important;
-	}
-
-	p {
-		margin: 1rem 0 !important;
-	}
-</style>
-<meta charset='UTF-8'>
