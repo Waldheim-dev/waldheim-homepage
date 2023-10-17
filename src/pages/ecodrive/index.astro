@@ -106,9 +106,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class='mt-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-5xl'>Preise für alle Teams, Firmen und einzelne Personen</p>
       </div>
       <p class='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300'>Wähle aus, was dir gefällt und du nutzen willst</p>
-      <script is:inline>
-        let plan = 'monthly';
+      <script is:inline data-id='script' data-plan='monthly'>
         document.addEventListener('DOMContentLoaded', () => {
+          const script = document.querySelector('*[data-id="script"]');
           const monthly = document.querySelector('#monthly');
           const annual = document.querySelector('#annual');
 
@@ -117,8 +117,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           const pro = document.querySelector('#pro');
           const premium = document.querySelector('#premium');
 
-          monthly.addEventListener('click', () => {
-            plan = 'monthly';
+          monthly?.addEventListener('click', () => {
+            script.dataset.plan = 'monthly';
             monthly.classList.add('bg-indigo-500', 'text-white');
             annual.classList.remove('bg-indigo-500', 'text-white');
 
@@ -133,8 +133,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             premium.querySelector('.frequency').innerHTML = '/Monat';
           })
 
-          annual.addEventListener('click', () => {
-            plan = 'annual';
+          annual?.addEventListener('click', () => {
+            script.dataset.plan = 'annual';
             annual.classList.add('bg-indigo-500', 'text-white');
             monthly.classList.remove('bg-indigo-500', 'text-white');
 
