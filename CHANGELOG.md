@@ -1,3 +1,16 @@
+## [24.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.4.0...v24.5.0) (2023-10-17)
+
+
+### :sparkles: Features
+
+* Insert new Logo of Brand waldheim.dev (Simplify) ([b6d746e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b6d746e7d236b70bc2df08ca0e75c8123b799217))
+* Install typografie from tailwind ([c4db6b7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c4db6b7ec6f323228d3cc76e3f31666c74cba0d3))
+
+
+### :bug: Fixes
+
+* Add missing new Service to Pricing with Notice ([7a4c417](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7a4c4173edae208e52f447344607d1ca02159996))
+
 ## [24.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.3.0...v24.4.0) (2023-10-17)
 
 
