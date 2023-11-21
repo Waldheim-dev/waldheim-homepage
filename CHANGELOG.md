@@ -1,3 +1,11 @@
+## [24.5.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.1...v24.5.2) (2023-11-21)
+
+
+### :bug: Fixes
+
+* Add new logo of angular 17 ([1bd3f99](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1bd3f997e6512d10d19209c4238bbd16d9d97f04))
+* Add new skill vitest ([312d769](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/312d769a57f4d97ea7503d9fa68ee43f6a7b8d3e))
+
 ## [24.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.0...v24.5.1) (2023-10-17)
 
 
