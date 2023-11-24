@@ -1,3 +1,10 @@
+## [24.5.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.2...v24.5.3) (2023-11-24)
+
+
+### :bug: Fixes
+
+* Change price per 15 Minutes to 17.50 eur ([5476d45](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5476d45e7e02d8af32603ec45c88d3fed9a20bde))
+
 ## [24.5.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.1...v24.5.2) (2023-11-21)
 
 
