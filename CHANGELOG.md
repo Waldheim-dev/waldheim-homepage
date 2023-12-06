@@ -1,3 +1,16 @@
+## [24.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.3...v24.6.0) (2023-12-06)
+
+
+### :sparkles: Features
+
+* Upgrade to Astro 4.0 ([7e78e01](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7e78e01bcd6d7d69923d054f5a4eb3aa7a4f92af))
+
+
+### :bug: Fixes
+
+* Add For to label for better a11y ([96bb2e9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/96bb2e9bcc80624e28da88ad06084b462b86b9c6))
+* Drop Close-Button on Banner ([1940d01](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1940d012c82254fec74ae19eb519ceb602febeac))
+
 ## [24.5.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.2...v24.5.3) (2023-11-24)
 
 
