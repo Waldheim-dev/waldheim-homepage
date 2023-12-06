@@ -155,13 +155,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           class='grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-gray-800 dark:text-white'>
           <legend class='sr-only'>Zahlungsrythmus</legend>
           <!-- Checked: "bg-indigo-500 text-white" -->
-          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500 text-white' id='monthly'>
-            <input type='radio' name='frequency' value='monthly' class='sr-only'>
+          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500 text-white' id='monthly' for='frequency-monthly'>
+            <input type='radio' name='frequency' id='frequency-monthly' value='monthly' class='sr-only'>
             <span>Monatlich</span>
           </label>
           <!-- Checked: "bg-indigo-500 text-white" -->
-          <label class='cursor-pointer rounded-full px-2.5 py-1' id='annual'>
-            <input type='radio' name='frequency' value='annually' class='sr-only'>
+          <label class='cursor-pointer rounded-full px-2.5 py-1' id='annual' for='frequency-annualy'>
+            <input type='radio' name='frequency' id='frequency-annualy' value='annually' class='sr-only'>
             <span>Jährlich</span>
           </label>
         </fieldset>
