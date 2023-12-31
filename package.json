@@ -11,23 +11,24 @@
     "zip": "node zip.js"
   },
   "dependencies": {
-    "@astrojs/mdx": "2.0.0",
+    "@astrojs/mdx": "2.0.3",
     "@astrojs/prefetch": "0.4.1",
-    "@astrojs/rss": "4.0.0",
-    "@astrojs/sitemap": "3.0.3",
-    "@astrojs/tailwind": "5.0.3",
+    "@astrojs/rss": "4.0.1",
+    "@astrojs/sitemap": "3.0.4",
+    "@astrojs/tailwind": "5.1.0",
     "@fortawesome/fontawesome-pro": "6.5.x",
     "@types/node": "20.10.x",
-    "astro": "4.0.2",
+    "astro": "4.0.8",
     "astro-compress": "2.2.x",
     "sass": "1.69.x",
-    "tailwindcss": "3.3.x"
+    "tailwindcss": "3.4.x",
+    "vanilla-cookieconsent": "3.0.0-rc.17"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.x",
-    "@typescript-eslint/eslint-plugin": "6.13.x",
-    "@typescript-eslint/parser": "6.13.x",
-    "eslint": "8.55.x",
+    "@typescript-eslint/eslint-plugin": "6.16.x",
+    "@typescript-eslint/parser": "6.16.x",
+    "eslint": "8.56.x",
     "eslint-config-prettier": "9.1.x",
     "prettier": "3.1.x",
     "ts-node": "10.9.x",
