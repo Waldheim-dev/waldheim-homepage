@@ -1,3 +1,10 @@
+## [24.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.6.0...v24.7.0) (2023-12-31)
+
+
+### :sparkles: Features
+
+* Add google Analytics and consent banner ([7a362de](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7a362debf5ac46ce60ade9812b336e572035bcd9))
+
 ## [24.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.5.3...v24.6.0) (2023-12-06)
 
 
