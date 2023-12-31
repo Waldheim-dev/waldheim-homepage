@@ -40,4 +40,21 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 
 
   <!-- Import Tailwind JS -->
+  <script type="module" src="cookieconsent-config.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script 
+  type="text/plain"
+  data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=UA-72516425-1"></script>
+  <script 
+  type="text/plain"
+  data-category="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-72516425-1');
+  </script>
+
+
 </head>
