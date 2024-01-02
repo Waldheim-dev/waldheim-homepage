@@ -1,3 +1,10 @@
+## [24.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.7.0...v24.7.1) (2024-01-02)
+
+
+### :bug: Fixes
+
+* Change Google Tags ([5d49f90](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5d49f90aafa6f43324b135bed0141baa73ca4d03))
+
 ## [24.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.6.0...v24.7.0) (2023-12-31)
 
 
