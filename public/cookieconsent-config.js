@@ -59,8 +59,8 @@ CookieConsent.run({
                     serviceCounterLabel: "Dienstleistungen",
                     sections: [
                         {
-                            title: "Verwendung von Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            title: "Verwendung von Cookies",            
+                            description: "Wir verwenden Cookies und andere Technologien, um Ihre Erfahrung auf unserer Website zu personalisieren. Durch Klicken auf \"Alle akzeptieren\" stimmen Sie der Verwendung ALLER Cookies zu. Sie können jedoch die \"Einstellungen verwalten\" besuchen, um eine kontrollierte Zustimmung zu erteilen.",
                         },
                         {
                             title: "Streng Notwendige Cookies <span class=\"pm__badge\">Immer Aktiviert</span>",
