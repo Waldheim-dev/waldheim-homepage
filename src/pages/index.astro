@@ -54,7 +54,7 @@ const skills = await getCollection('skills');
                 <div class='mt-10 flex items-center flex-wrap gap-x-6'>
                   <a href='mailto:kontakt@waldheim.dev'
                      class='flex gap-1 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Kontaktiere
-                    mich <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    mich <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="animate-pulse w-5 h-5">
                       <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
                       <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
                     </svg>
@@ -175,8 +175,8 @@ const skills = await getCollection('skills');
 
         {
           topSkills.map((entry) => (
-            <div class='bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
-              <img class='max-h-12 w-full object-contain' loading='lazy'
+            <div class='group bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
+              <img class='max-h-12 w-full object-contain grayscale group-hover:grayscale-0 transition-all  duration-150 ease-out hover:ease-in' loading='lazy'
                    src={entry.data.image} alt={entry.data.name} width='50'
                    height='50'>
               <span class='w-full text-center text-gray-700 dark:text-gray-300'>{entry.data.name}</span>
@@ -221,8 +221,8 @@ const skills = await getCollection('skills');
 
         {
           skills.map((entry) => (
-            <div class='bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
-              <img class='max-h-12 w-full object-contain' loading='lazy'
+            <div class='group bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 flex flex-col justify-center items-center gap-1'>
+              <img class='max-h-12 w-full object-contain grayscale group-hover:grayscale-0 transition-all  duration-150 ease-out hover:ease-in' loading='lazy'
                    src={entry.data.image} alt={entry.data.name} width='50'
                    height='50'>
               <span class='w-full text-center text-gray-700 dark:text-gray-300'>{entry.data.name}</span>
