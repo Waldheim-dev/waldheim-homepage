@@ -1,3 +1,22 @@
+## [24.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.7.1...v24.8.0) (2024-01-12)
+
+
+### :sparkles: Features
+
+* Add Categories to Project ([994b5cd](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/994b5cd7ca0138ccc36a33d68c0d386f37d58d38))
+* Rework Footer for better Page-Overview ([8f96fe8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8f96fe8b732f44e91e61c72215ada7be5ef47bdb))
+
+
+### :barber: Style
+
+* Add Animation to Contact-Button ([009bd7e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/009bd7eee35fb199f710dc41a34db1dcf5e359c5))
+* Make version better visible ([4b8b906](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4b8b906a78f4637df72b1dc571d28f3139236c09))
+
+
+### :zap: Reverts
+
+* Remove Page Transition ([f90bd16](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f90bd1609b9330f0941cbac2a6db2274ba57d0d3))
+
 ## [24.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.7.0...v24.7.1) (2024-01-02)
 
 
