@@ -3,6 +3,7 @@ title: "Werbematerial In Konzert 2022"
 description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen & mehr ben&ouml;tigt. Daf&uuml;r wurde ein Designkonzept f&uuml;r alle\n    Veranstaltungen gemacht, die im laufe der Zeit umgesetzt werden. Das Portfolio wird dabei so aufgestellt, dass die\n    Designs und Materialien zum Ende eines Jahres bereits grundlegend bereit stehen."
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2022-11-18"
+category: "design"
 heroImage: "projects/mvo-obermeitingen/in_konzert_2022.jpg"
 assets: [ "projects/mvo-obermeitingen/in_konzert_2022.jpg", "projects/mvo-obermeitingen/in_konzert_2022_flyer.jpg", "projects/mvo-obermeitingen/in_konzert_2022_ticket.jpg"]
 overview: [{

@@ -3,6 +3,7 @@ title: "Werbematerial Kirchenkonzert 2023"
 description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen & mehr ben&ouml;tigt. Daf&uuml;r wurde ein Designkonzept f&uuml;r alle\n    Veranstaltungen gemacht, die im laufe der Zeit umgesetzt werden. Das Portfolio wird dabei so aufgestellt, dass die\n    Designs und Materialien zum Ende eines Jahres bereits grundlegend bereit stehen."
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-04-17"
+category: "design"
 heroImage: "projects/mvo-obermeitingen/kirchenkonzert_2023.jpg"
 assets: [ "projects/mvo-obermeitingen/kirchenkonzert_2023.jpg" ]
 overview: [{

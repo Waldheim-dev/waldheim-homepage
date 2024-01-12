@@ -3,6 +3,7 @@ title: "Werbematerial Kinderfasching 2023"
 description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen & mehr ben&ouml;tigt. Daf&uuml;r wurde ein Designkonzept f&uuml;r alle\n    Veranstaltungen gemacht, die im laufe der Zeit umgesetzt werden. Das Portfolio wird dabei so aufgestellt, dass die\n    Designs und Materialien zum Ende eines Jahres bereits grundlegend bereit stehen."
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-02-01"
+category: "design"
 heroImage: "projects/mvo-obermeitingen/fasching_2023.jpg"
 assets: [ "projects/mvo-obermeitingen/fasching_2023.jpg", "projects/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg", "projects/mvo-obermeitingen/fasching_2023_preisliste.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_bier.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_pommes.jpg" ]
 overview: [{

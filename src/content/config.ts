@@ -15,6 +15,14 @@ const blogCollection = defineCollection({
   })
 });
 
+
+const project_kategorie = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+  }),
+});
+
 const authorCollection = defineCollection({
   type: 'data',
   schema: z.object({
@@ -36,6 +44,7 @@ const projectCollection = defineCollection({
       meta: z.string(),
       link: z.string().optional()
     })).optional(),
+    category: reference('project_kategorie'),
     tags: z.array(z.string()).optional(),
     general: z.array(z.string()).optional(),
     frontend: z.array(z.string()).optional(),
@@ -75,6 +84,7 @@ export const collections = {
   blog: blogCollection,
   author: authorCollection,
   project: projectCollection,
+  project_kategorie: project_kategorie,
   skills: skillsCollection,
   topskills: topskillsCollection
 };
