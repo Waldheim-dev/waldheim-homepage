@@ -7,6 +7,7 @@ description: " Der Ausgabeschein-Generator dient als Verbindungsst&uuml;ck zu ei
     Standards in Deutschland dokumentieren."
 shortDescription: "Entwicklung einer Netbox-Opensource-Anbindung zur Erstellung von Ausgabescheinen."
 pubDate: "2020-07-25"
+category: "entwicklung"
 heroImage: "projects/waldheim-dev/netbox/home.png"
 assets: ["projects/waldheim-dev/netbox/home.png", "projects/waldheim-dev/netbox/settings.png", "projects/waldheim-dev/netbox/languages.png"]
 overview: [{
