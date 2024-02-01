@@ -1,3 +1,26 @@
+## [24.9.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.8.0...v24.9.0) (2024-02-01)
+
+
+### :sparkles: Features
+
+* Add Mobile-Subnavigations ([ed6748e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ed6748ef9564f545fe398a6ac83f78c0cf030917))
+* Extract Design aus dem Service ([d1947e9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d1947e9abd0ad3c5cd289dac06525817204f90bb))
+* Extract DevService aus dem Service ([75684ab](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/75684ab5beae25e9bdedcac4270e794e38e886ad))
+* Extract Entwicklung aus dem Service ([da17bf3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/da17bf3f71cb9c071ddf92485cc9c3c0f14d130f))
+* Extract IT-Service aus dem Service ([47f81f7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/47f81f739b4933d5b794ac9f80fc4adac437e10b))
+* Extract Verbandssoftware as Service ([0f3e218](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0f3e218f616c96ed1ac9b87c9f8292cc8ae8b2b6))
+
+
+### :bug: Fixes
+
+* Komplettes ausblenden von Dropdown ([f9ddd1f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f9ddd1f028ef14f3300fee0ba99864db11f768b5))
+* Overflow von Content verhindern ([ba204a6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ba204a648b68fb591174d462b84e4ee50e7b56e9))
+
+
+### :repeat: Chores
+
+* Update Dependencies ([13af2ab](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/13af2ab10d6db5d08061758f5b91037e5cc1c878))
+
 ## [24.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.7.1...v24.8.0) (2024-01-12)
 
 
