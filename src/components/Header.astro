@@ -19,6 +19,7 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
 
     const toggles = document.querySelectorAll('.button-toggle');
     const dropdowns  = document.querySelectorAll('.dropdown');
+    const menuTriggerSubnav = document.querySelectorAll('.mobile-subnav');
 
     const toggleEvent = (e) => {
       const nav = document.querySelector('.nav-sidebar');
@@ -56,9 +57,19 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
       }
     }
 
+    const mobileToggleDropdowns = (e) => {
+      const dropdown = e.currentTarget;
+      dropdown.classList.toggle('active');
+      dropdown.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+      dropdown.nextElementSibling.toggleAttribute('hidden');
+      dropdown.querySelector('svg').classList.toggle('rotate-180');
+    }
+
+
 
     toggles.forEach(toggle => toggle.addEventListener('click', toggleEvent));
     dropdowns.forEach(toggle => toggle.addEventListener('click', toggleDropdowns));
+    menuTriggerSubnav.forEach(toggle => toggle.addEventListener('click', mobileToggleDropdowns));
   });
 </script>
 
@@ -223,8 +234,42 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
       <div class='mt-6 flow-root'>
         <div class='-my-6 divide-y divide-gray-500/10'>
           <div class='space-y-2 py-6'>
-            <a href='/services/'
-               class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-900'>Services</a>
+            <div class="-mx-3">
+              <button type="button"
+                      class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-900"
+                      aria-controls="disclosure-1" aria-expanded="false">
+               <!--class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-900'> -->
+                Services
+                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <!-- 'Product' sub-menu, show/hide based on menu state. -->
+              <div class="mt-2 space-y-2" id="disclosure-2" hidden>
+                <a href="/services/devops"
+                   class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900">
+                  <span>Effiziente Entwicklung</span>
+                </a>
+                <a href="/services/entwicklung"
+                   class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900">
+                  <span>Softwareentwicklung</span>
+                </a>
+                <a href="/services/design"
+                   class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900">
+                  <span>Design / UX</span>
+                </a>
+                <a href="/services/it-service"
+                   class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900">
+                  <span>IT-Service</span>
+                </a>
+                <a href="/services/verbandssoftware"
+                   class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-900">
+                  <span>Verbandssoftware</span>
+                </a>
+              </div>
+            </div>
             <a href='/projects/'
                class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-900'>Projekte</a>
             <a href='/blog/'
