@@ -1,3 +1,11 @@
+## [24.9.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.0...v24.9.1) (2024-02-13)
+
+
+### :bug: Fixes
+
+* Add newest Dependencies ([52e1c58](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/52e1c58835b6dbc396d0d6923ca7527527bb0db6))
+* Add Service-Overview ([8adeaa3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8adeaa3e0d87eed9301b09170da657769935508a))
+
 ## [24.9.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.8.0...v24.9.0) (2024-02-01)
 
 
