@@ -1,3 +1,15 @@
+## [24.9.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.1...v24.9.2) (2024-02-28)
+
+
+### :bug: Fixes
+
+* add PSMI-Zertifizierung ([0b14302](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0b1430246ecff39aff286f104a5b6326114ece48))
+
+
+### :repeat: Chores
+
+* LICENSE hinzufügen [skip ci] ([538f7b2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/538f7b2eb42438deade661eba10a37479155f45a))
+
 ## [24.9.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.0...v24.9.1) (2024-02-13)
 
 
