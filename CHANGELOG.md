@@ -1,3 +1,10 @@
+## [24.9.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.2...v24.9.3) (2024-02-29)
+
+
+### :bug: Fixes
+
+* add PSPOI-Zertifizierung ([e1b02a6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e1b02a645465be2826c24b38cdb7919115d3dfd8))
+
 ## [24.9.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.1...v24.9.2) (2024-02-28)
 
 
