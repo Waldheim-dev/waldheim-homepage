@@ -1,3 +1,10 @@
+## [24.9.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.3...v24.9.4) (2024-03-04)
+
+
+### :bug: Fixes
+
+* add PSMII-Zertifizierung ([cfead2b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/cfead2b064f3f7ede4018917f74d24fb90795991))
+
 ## [24.9.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.2...v24.9.3) (2024-02-29)
 
 
