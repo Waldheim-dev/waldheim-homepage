@@ -1,13 +1,11 @@
 ---
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
-import BaseHead from '../../../components/BaseHead.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Pricing from '../../../components/content/Pricing.astro';
 import Partner from '../../../components/content/Partner.astro';
 ---
 
-<BaseLayout>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
 
   <div class='relative isolate px-6 pt-14 lg:px-8'>
     <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
