@@ -1,3 +1,10 @@
+## [24.9.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.4...v24.9.5) (2024-03-19)
+
+
+### :bug: Fixes
+
+* Add SEO-Optimization ([82f526c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/82f526c46f335b569173ffaa30f5dfa7ccc716d9))
+
 ## [24.9.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.3...v24.9.4) (2024-03-04)
 
 
