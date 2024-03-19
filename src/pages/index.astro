@@ -1,5 +1,4 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
@@ -15,8 +14,7 @@ const topSkills = (await getCollection('topskills'));
 const skills = await getCollection('skills');
 ---
 
-<BaseLayout>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
 
   <div class='bg-white dark:bg-slate-800'>
     <main>

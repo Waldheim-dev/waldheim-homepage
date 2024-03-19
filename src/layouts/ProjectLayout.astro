@@ -29,9 +29,8 @@ const { title, description, pubDate, heroImage, overview, assets, tags, general,
         max-width: 50%;
     }
 </style>
-<BaseHead title={title} description={description} />
 
-<BaseLayout>
+<BaseLayout title={title} description={description} >
   <meta charset='utf-8' />
   <div class='bg-white  dark:bg-slate-800 px-6 py-6 lg:px-8'>
     <div class='mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300'>
