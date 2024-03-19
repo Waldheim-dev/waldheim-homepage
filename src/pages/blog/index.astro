@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import BaseHead from '../../components/BaseHead.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 const blogPosts = (await getCollection('blog')).sort(
@@ -10,9 +9,7 @@ const blogPosts = (await getCollection('blog')).sort(
 );
 ---
 
-<BaseLayout>
-
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
 
   <div class='bg-white dark:bg-slate-800 py-24 sm:py-32'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
