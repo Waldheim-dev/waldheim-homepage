@@ -1,3 +1,23 @@
+## [24.9.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.5...v24.9.6) (2024-04-04)
+
+
+### :bug: Fixes
+
+* Add ATV Element ([01dd2d6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/01dd2d68de2869bd4a5ae0ae976eca22b56ea4eb))
+* Add Fasching 2024 ([6fe3023](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6fe302326987cd28088b55ce51986844f2e47490))
+* Add Teenieparty 2024 ([0008cb7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0008cb73dcf41ed56077306a5b6008aa50cb6785))
+* Announce new skill for portfolio ([7487722](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7487722c6f18e0cacd038f46b29cf285375f1ae5))
+* Optimize Assets of Pages ([95e8350](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/95e83503f85a9f71600c8d777d8c9269d2a2464a))
+* Update Image of Wertungsspiele 2024 ([c09f3a8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c09f3a835a803947b92ffaf275adf78f73ab444c))
+* Update In Konzert 2024 ([2beaab3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2beaab37cb2c340e71cb6024d51005398399427a))
+* Update Meta-Description of Serenade ([46f3bf5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/46f3bf50a5977018ce0f16bd7da588d5c6673308))
+* Update Vatertagsfest 2024 ([12089e0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/12089e0ab3e9979a994fc5b77b5642aab7627284))
+
+
+### :repeat: Build System
+
+* Update to Astro 4.5 ([8c43720](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8c437206ff96ebfa0c6c2c30c14cdbb02cc15cb3))
+
 ## [24.9.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.4...v24.9.5) (2024-03-19)
 
 
