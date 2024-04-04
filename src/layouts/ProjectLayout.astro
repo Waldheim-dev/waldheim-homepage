@@ -105,7 +105,7 @@ const { title, description, pubDate, heroImage, overview, assets, tags, general,
       {assets && assets.length > 0 ? (
         <div class='relative mt-6'><h2>Assets</h2>
           {assets.map((item) => (
-            <img width={720} height={360} src={item} alt='' class='mt-6 aspect-[7/4] w-full rounded-2xl object-cover'
+            <img src={item} alt='' class='mt-6 aspect-[7/4] w-full rounded-2xl object-contain'
                  loading='lazy' />
           ))}
         </div>) : null}
