@@ -1,11 +1,11 @@
 ---
-title: "Werbematerial In-Konzert 2024"
+title: "Werbematerial Vatertagsfest 2024"
 description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen & mehr ben&ouml;tigt. Daf&uuml;r wurde ein Designkonzept f&uuml;r alle\n    Veranstaltungen gemacht, die im laufe der Zeit umgesetzt werden. Das Portfolio wird dabei so aufgestellt, dass die\n    Designs und Materialien zum Ende eines Jahres bereits grundlegend bereit stehen."
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
-pubDate: "2023-07-27"
+pubDate: "2024-04-04"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/vatertag_2024_savedate.jpg"
-assets: [ "projects/mvo-obermeitingen/vatertag_2024_savedate.jpg" ]
+heroImage: "projects/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg"
+assets: [ "projects/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg", "projects/mvo-obermeitingen/vatertag_2024_savedate.jpg" ]
 overview: [{
   title: 'Kunde',
   meta: 'Musikverein Obermeitingen e.V.',
