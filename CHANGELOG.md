@@ -1,3 +1,15 @@
+## [24.11.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.10.0...v24.11.0) (2024-04-05)
+
+
+### :sparkles: Features
+
+* Add Top Portfolio to Mainpage ([924d941](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/924d9416d0b98419c038d9e3778739ed1599af63))
+
+
+### :bug: Fixes
+
+* Add Website as  category ([1f06022](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1f06022e3ef42d3dad5beae2bab3303b47173d4e))
+
 ## [24.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.6...v24.10.0) (2024-04-05)
 
 
