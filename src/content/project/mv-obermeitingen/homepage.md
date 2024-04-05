@@ -4,7 +4,7 @@ isTopProject: true
 description: "Neuentwicklung und modernisierung der MVO Webseite"
 shortDescription: "Entwicklung einer vollständigen Webseite mit Astro.js"
 pubDate: "2023-07-27"
-category: "entwicklung"
+category: "website"
 heroImage: "projects/mvo-obermeitingen/homepage/mvo_startseite.png"
 assets: [
   "projects/mvo-obermeitingen/homepage/mvo_startseite.png",
