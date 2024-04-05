@@ -1,3 +1,20 @@
+## [24.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.6...v24.10.0) (2024-04-05)
+
+
+### :sparkles: Features
+
+* Add Flipcards to Skills and extract this logic ([77e4f9c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/77e4f9c2179579bf2cab1d0257732e211afa2bd0))
+
+
+### :bug: Fixes
+
+* Add missing skills to pricing ([19adf48](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/19adf489931d3caa8949bd140fd2cb0f8aefbf8d))
+
+
+### :repeat: Chores
+
+* Prepare TopPortfolio as empty elements for coming feature ([9275f90](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9275f90f8e673ce0a66838e4f6b5f7ad2fd49317))
+
 ## [24.9.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.9.5...v24.9.6) (2024-04-04)
 
 
