@@ -35,6 +35,7 @@ const projectCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    isTopProject: z.boolean(),
     description: z.string(),
     shortDescription: z.string(),
     heroImage: z.string(),

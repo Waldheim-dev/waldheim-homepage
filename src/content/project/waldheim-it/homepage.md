@@ -1,5 +1,6 @@
 ---
 title: "Waldheim-IT Branding"
+isTopProject: true
 description: "Die Webseite der Waldheim IT-Beratung wurde auf Basis eines modernen Designs gem&auml;&szlig; den Regeln von Google Material You
     entwickelt. Zudem wurde zeitgleich ein komplettes Branding geschaffen. Welches in genauer Absprache mit dem
     Unternehmer umgesetzt wurde."
