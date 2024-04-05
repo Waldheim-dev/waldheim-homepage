@@ -1,3 +1,10 @@
+## [24.11.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.0...v24.11.1) (2024-04-05)
+
+
+### :bug: Fixes
+
+* Change Padding for Slide to optimize on mobile device ([52ec94c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/52ec94c0f990bd4bb8b69fbee2cf6c280522b280))
+
 ## [24.11.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.10.0...v24.11.0) (2024-04-05)
 
 
