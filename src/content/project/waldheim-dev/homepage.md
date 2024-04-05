@@ -1,5 +1,6 @@
 ---
 title: "Waldheim.dev Webseite"
+isTopProject: false
 description: ""
 shortDescription: "Erstellung der ersten Homepage f&uuml;r Waldheim.dev"
 pubDate: "2022-06-01"

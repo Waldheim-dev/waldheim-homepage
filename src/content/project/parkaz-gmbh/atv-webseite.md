@@ -1,5 +1,6 @@
 ---
 title: "ATV Webseite"
+isTopProject: true
 description: "Die Webseite wurde ihm Rahmen eines Kundenprojektes erstellt. Dieser Kunde kam auf mich über mein Partnernetzwerk auf mich zu, da es verheerende Sicherheitsprobleme mit der frisch gebauten Webseite gab, die ein Drittanbieter erstellt hatte. Im Rahmen dessen habe ich die bestehende Webseite analysiert und darauf bezogen ein Angebot für eine Neuentwicklung gemacht. Die Bestehende Webseite wurde in Ruby programmiert und der Quellcode wurde verschleiert bei der Übergabe. Die neuen Maßstäbe der Webseite waren dabei, dass die Webseite nun wartbarer wird, hohe Sicherheitsstandards erfüllt und die Webseite auf einem modernen Stand ist. Daher wurde auf den Standard WordPress gesetzt und ein eigenen Theme entwickelt."
 shortDescription: "Erstellung einer neuen Webseite für den ATV"
 pubDate: "2024-03-01"
