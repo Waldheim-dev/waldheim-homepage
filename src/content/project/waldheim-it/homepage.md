@@ -6,7 +6,7 @@ description: "Die Webseite der Waldheim IT-Beratung wurde auf Basis eines modern
     Unternehmer umgesetzt wurde."
 shortDescription: "Erstellung eines Logos und Branding f&uuml;r die Waldheim-IT Beratung"
 pubDate: "2022-03-01"
-category: "entwicklung"
+category: "website"
 heroImage: "projects/waldheim-it/homepage/homepage.png"
 assets: ["projects/waldheim-it/homepage/homepage.png", "projects/waldheim-it/homepage/waldheim_vi_back.png", "projects/waldheim-it/homepage/waldheim_vi_front.png"]
 overview: [{

@@ -4,7 +4,7 @@ isTopProject: true
 description: "Neuentwicklung der Webseite von Waldheim.dev mit Astro.js und Tailwindcss. Als Jubiläum der 24. Version der Webseite wurde diese komplett neu aufgesetzt."
 shortDescription: "Aufsetzen einer neuen Webseite mit neuer Technologie Astro"
 pubDate: "2023-06-29"
-category: "entwicklung"
+category: "website"
 heroImage: "projects/waldheim-dev/homepage_24/waldheim.dev-webseite-v24.png"
 assets: [ ]
 overview: [{
