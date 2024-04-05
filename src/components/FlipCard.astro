@@ -1,0 +1,40 @@
+---
+const { entry } = Astro.props;
+import TimeDiff from './TimeDiff.astro';
+let progress = 0;
+switch (entry.data.knowledgebase) {
+  case 'basic':
+    progress = 33;
+    break;
+  case 'advanced':
+    progress = 66;
+    break;
+  case 'expert':
+    progress = 100;
+    break;
+  default:
+    progress = 0;
+}
+---
+<div class='flip-card'>
+  <div class='flip-card-inner group bg-slate-300 dark:bg-slate-700 p-8 sm:p-10 gap-1 rounded-md h-36'>
+    <div class='flip-front flex flex-col justify-center items-center gap-1'>
+      <img
+        class='max-h-12 w-full object-contain group-hover:grayscale-0 duration-150 ease-out hover:ease-in'
+        loading='lazy'
+        src={entry.data.image} alt={entry.data.name} width='50'
+        height='50'>
+      <span class='w-full text-center text-gray-700 dark:text-gray-300'>{entry.data.name}</span></div>
+    <div class='flip-back flex flex-col justify-center items-center gap-1'>
+
+      <TimeDiff sinceLastRollup={entry.data.sinceLastRollup} isActive={entry.data.isActive}
+                fixedExperience={entry.data.fixedExperience} />
+      <div class='w-full bg-slate-200 dark:bg-slate-500 rounded-md overflow-hidden'>
+        <div style={`width: ${progress}%`} class='h-4 bg-amber-600 flex justify-center items-center'>
+          <span class='text-xs leading-none text-white sm-only hidden'>{entry.data.knowledgebase}</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
