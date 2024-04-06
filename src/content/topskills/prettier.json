@@ -1,9 +1,0 @@
-{
-  "name": "Prettier",
-  "image": "/brands/prettier-2.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2022-07-01",
-  "knowledgebase": "advanced"
-}

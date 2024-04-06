@@ -1,0 +1,10 @@
+{
+  "name": "RxJS",
+  "image": "/brands/reactivex.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2020-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Affinity",
+  "image": "/brands/file_type_affinitydesigner.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 3,
+  "sinceLastRollup": "2021-01-01",
+  "knowledgebase": "expert",
+  "isTopSkill": true
+}

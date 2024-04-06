@@ -1,0 +1,10 @@
+{
+  "name": "Tailwind CSS",
+  "image": "/brands/tailwind-css-2.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0.5,
+  "sinceLastRollup": "2023-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

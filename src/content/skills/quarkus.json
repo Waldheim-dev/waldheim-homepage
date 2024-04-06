@@ -1,0 +1,10 @@
+{
+  "name": "Quarkus",
+  "image": "/brands/quarkus-icon.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-11-01",
+  "knowledgebase": "basic",
+  "isTopSkill": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "NodeJS",
+  "image": "/brands/nodejs-icon.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2016-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

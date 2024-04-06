@@ -37,19 +37,43 @@ const projectCollection = defineCollection({
     title: z.string(),
     isTopProject: z.boolean(),
     description: z.string(),
-    shortDescription: z.string(),
+    
+    client: z.object({
+      name: z.string(),
+      url: z.string().optional()
+    }).optional(),
+
+    project: z.object({
+      duration: z.number(),
+      teamSize: z.number(),
+    }).optional(),
+
     heroImage: z.string(),
+
+    tags: z.array(z.string()).optional(),
+    techStack: z.array(reference('skills')).optional(),
+    category: reference('project_kategorie'),
+    
+    general: z.array(z.string()).optional(),
+    frontend: z.array(z.string()).optional(),
+    backend: z.array(z.string()).optional(),
+    design: z.array(z.string()).optional(),
+    
+
+    problem: z.string().optional(),
+
+    solution: z.string().optional(),
+
     assets: z.array(z.string()).optional(),
+
+    shortDescription: z.string().optional(),
+
     overview: z.array(z.object({
       title: z.string(),
       meta: z.string(),
       link: z.string().optional()
     })).optional(),
-    category: reference('project_kategorie'),
-    tags: z.array(z.string()).optional(),
-    general: z.array(z.string()).optional(),
-    frontend: z.array(z.string()).optional(),
-    backend: z.array(z.string()).optional(),
+
     // Transform string to Date object
     pubDate: z
       .string()
@@ -64,6 +88,7 @@ const skill = z.object({
   productive: z.boolean(),
   isActive: z.boolean(),
   fixedExperience: z.number(),
+  isTopSkill: z.boolean(),
   sinceLastRollup: z
     .string()
     .optional()
@@ -76,16 +101,10 @@ const skillsCollection = defineCollection({
   schema: skill
 });
 
-const topskillsCollection = defineCollection({
-  type: 'data',
-  schema: skill
-});
-
 export const collections = {
   blog: blogCollection,
   author: authorCollection,
   project: projectCollection,
   project_kategorie: project_kategorie,
-  skills: skillsCollection,
-  topskills: topskillsCollection
+  skills: skillsCollection
 };
