@@ -1,0 +1,10 @@
+{
+  "name": "Firebase",
+  "image": "/brands/firebase.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2016-01-01",
+  "knowledgebase": "basic",
+  "isTopSkill": true
+}

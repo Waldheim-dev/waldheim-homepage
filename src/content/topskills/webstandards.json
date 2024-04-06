@@ -1,9 +1,0 @@
-{
-  "name": "Web",
-  "image": "/brands/webdev-1.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2015-01-01",
-  "knowledgebase": "expert"
-}

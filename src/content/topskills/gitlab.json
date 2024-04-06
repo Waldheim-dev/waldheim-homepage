@@ -1,9 +1,0 @@
-{
-  "name": "GitLab",
-  "image": "/brands/gitlab-3.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2016-01-01",
-  "knowledgebase": "expert"
-}

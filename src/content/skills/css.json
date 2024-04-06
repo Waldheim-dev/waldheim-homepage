@@ -1,0 +1,10 @@
+{
+  "name": "CSS",
+  "image": "/brands/css-3.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2012-01-01",
+  "knowledgebase": "expert",
+  "isTopSkill": true
+}

@@ -11,8 +11,8 @@ import TopPortfolio from '../components/content/TopPortfolio.astro';
 const blogPosts = (await getCollection('blog')).sort((a, b) => {
   return new Date(b.data.pubDate) - new Date(a.data.pubDate);
 });
-const topSkills = (await getCollection('topskills'));
-const skills = await getCollection('skills');
+const skills = (await getCollection('skills')).filter((entry) => entry.data.isTopSkill === false);
+const topSkills = (await getCollection('skills')).filter((entry) => entry.data.isTopSkill === true);
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >

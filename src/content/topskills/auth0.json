@@ -1,9 +1,0 @@
-{
-  "name": "auth0",
-  "image": "/brands/auth0.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2023-06-01",
-  "knowledgebase": "advanced"
-}
