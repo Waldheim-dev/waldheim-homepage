@@ -1,0 +1,10 @@
+{
+  "name": "Figma",
+  "image": "/brands/figma-1.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 2,
+  "sinceLastRollup": "2022-07-01",
+  "knowledgebase": "expert",
+  "isTopSkill": true
+}

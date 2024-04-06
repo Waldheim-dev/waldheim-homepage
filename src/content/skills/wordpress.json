@@ -5,5 +5,6 @@
   "isActive": true,
   "fixedExperience": 3,
   "sinceLastRollup": "2020-01-01",
-  "knowledgebase": "expert"
+  "knowledgebase": "expert",
+  "isTopSkill": false
 }

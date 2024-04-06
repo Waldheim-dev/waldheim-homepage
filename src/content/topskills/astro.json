@@ -1,9 +1,0 @@
-{
-  "name": "Astro",
-  "image": "/brands/astro-icon-dark.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2023-07-01",
-  "knowledgebase": "advanced"
-}

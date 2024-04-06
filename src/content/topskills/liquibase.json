@@ -1,9 +1,0 @@
-{
-  "name": "Liquibase",
-  "image": "/brands/footer-logo-org.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2022-12-16",
-  "knowledgebase": "advanced"
-}

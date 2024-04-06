@@ -1,0 +1,10 @@
+{
+  "name": "Husky",
+  "image": "/brands/husky.png",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-11-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Traefik",
+  "image": "/brands/traefik-1.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

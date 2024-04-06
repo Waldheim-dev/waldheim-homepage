@@ -1,0 +1,10 @@
+{
+  "name": "Vitest",
+  "image": "/brands/vitest.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2023-11-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true
+}

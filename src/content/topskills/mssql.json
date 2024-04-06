@@ -1,9 +1,0 @@
-{
-  "name": "msSQL",
-  "image": "/brands/microsoft-sql-server-1.svg",
-  "productive": true,
-  "isActive": false,
-  "fixedExperience": 0.5,
-  "sinceLastRollup": "",
-  "knowledgebase": "basic"
-}

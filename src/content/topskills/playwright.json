@@ -1,9 +1,0 @@
-{
-  "name": "Playwright",
-  "image": "/brands/file-type-playwright.svg",
-  "productive": true,
-  "isActive": true,
-  "fixedExperience": 0,
-  "sinceLastRollup": "2023-01-01",
-  "knowledgebase": "basic"
-}
