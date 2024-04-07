@@ -40,12 +40,8 @@ const projectCollection = defineCollection({
     
     client: z.object({
       name: z.string(),
-      url: z.string().optional()
-    }).optional(),
-
-    project: z.object({
-      duration: z.number(),
-      teamSize: z.number(),
+      web: z.object({url: z.string(), name: z.string()}).optional(),
+      description: z.string(),
     }).optional(),
 
     heroImage: z.string(),
