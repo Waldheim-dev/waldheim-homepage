@@ -1,3 +1,11 @@
+## [24.11.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.1...v24.11.2) (2024-04-07)
+
+
+### :bug: Fixes
+
+* Add new Layout for Projects ([347a16f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/347a16f712914bd085376a28cba4ba1b0a853136))
+* Merge Skills ans Topskills to single data ([2eae52d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2eae52d47f1348e54bf2b67043b067d752041ef4))
+
 ## [24.11.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.0...v24.11.1) (2024-04-05)
 
 
