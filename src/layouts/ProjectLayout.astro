@@ -62,7 +62,7 @@ const skills = await getCollection('skills');
 <!-- BE, FE, Generel, Design -->
 <!-- Assets -->
 
-<BaseLayout title={title} description={shortDescription ?? description}>
+<BaseLayout title={title} description={shortDescription ?? description} image={heroImage}>
   <meta charset="utf-8" />
   <div
     class="bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 px-6 py-6 lg:px-8"
@@ -170,6 +170,7 @@ const skills = await getCollection('skills');
                   ) : null}
                 </figure>
               </div>
+              
             </div>
             <div>
               <div class="text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-lg">
@@ -177,10 +178,13 @@ const skills = await getCollection('skills');
                   Firmenwerte
                 </p>
                 <div class="max-w-xl">
+                  {client.shortDescription ? (
+                    <p class="mt-6">{client.shortDescription}</p>
+                  ) : null}
                   <p class="mt-6">{client.description}</p>
                 </div>
               </div>
-              <dl class="mt-10 flex gap-8 border-t border-gray-900/10 dark:border-gray-50/10 pt-10">
+              <dl class="mt-10 flex flex-wrap gap-8 border-t border-gray-900/10 dark:border-gray-50/10 pt-10">
                 {overview.map((item) => (
                   <div>
                     <dt class="text-sm font-semibold leading-6 text-gray-600 dark:text-gray-400">
@@ -210,29 +214,43 @@ const skills = await getCollection('skills');
     ) : null
   }
 
-
-<!-- Problem -->
-{problem ? (
-  <div class="relative isolate overflow-hidden bg-gray-900 dark:bg-gray-800">
-  <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Das Problem</h2>
-      <p class="mx-auto mt-6 text-lg leading-8 text-gray-300" set:text={problem}></p>
-      
-    </div>
-  </div>
-  <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
-    <circle cx="512" cy="512" r="512" fill="url(#8d958450-c69f-4251-94bc-4e091a323369)" fill-opacity="0.7" />
-    <defs>
-      <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
-        <stop stop-color="#7775D6" />
-        <stop offset="1" stop-color="#E935C1" />
-      </radialGradient>
-    </defs>
-  </svg>
-</div>
-
-) : null}
+  <!-- Problem -->
+  {
+    problem ? (
+      <div class="relative isolate overflow-hidden bg-gray-900 dark:bg-gray-800">
+        <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Das Problem
+            </h2>
+            <p
+              class="mx-auto mt-6 text-lg leading-8 text-gray-300"
+              set:text={problem}
+            />
+          </div>
+        </div>
+        <svg
+          viewBox="0 0 1024 1024"
+          class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+          aria-hidden="true"
+        >
+          <circle
+            cx="512"
+            cy="512"
+            r="512"
+            fill="url(#8d958450-c69f-4251-94bc-4e091a323369)"
+            fill-opacity="0.7"
+          />
+          <defs>
+            <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
+              <stop stop-color="#7775D6" />
+              <stop offset="1" stop-color="#E935C1" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+    ) : null
+  }
 
   {
     techStack && techStack.length > 0 ? (
@@ -241,41 +259,50 @@ const skills = await getCollection('skills');
           <h2 class="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-white">
             Mit welchem Tech-Stack habe ich gearbeitet?
           </h2>
-          <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            {techStack.map((item) => {
-              return (
-                <FlipCard
-                  entry={skills.find((skill) => skill.id === item.id)}
-                />
-              );
-            })}
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+              {techStack.map((item) => {
+                return (
+                  <FlipCard
+                    entry={skills.find((skill) => skill.id === item.id)}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
     ) : null
   }
 
-<!-- Solution -->
+  <!-- Solution -->
 
-{ solution ? (
-  <div class="bg-indigo-700 dark:bg-indigo-800">
-  <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Unsere Lösung</h2>
-      <p class="mx-auto mt-6 text-lg leading-8 text-indigo-200" set:text={solution}></p>
-      
-    </div>
-  </div>
-</div>
-
-) : null}
+  {
+    solution ? (
+      <div class="bg-indigo-700 dark:bg-indigo-800">
+        <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Unsere Lösung
+            </h2>
+            <p
+              class="mx-auto mt-6 text-lg leading-8 text-indigo-200"
+              set:text={solution}
+            />
+          </div>
+        </div>
+      </div>
+    ) : null
+  }
 
   <div class="bg-white dark:bg-slate-800 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div
         class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
       >
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+        <h2
+          class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl"
+        >
           Auf was habe ich geachtet?
         </h2>
         <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
@@ -421,47 +448,61 @@ const skills = await getCollection('skills');
     </div>
   </div>
 
-  {assets && assets.length > 0 ? (
-  <div class="bg-white dark:bg-slate-800  py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+  {
+    assets && assets.length > 0 ? (
+      <div class="bg-white dark:bg-slate-800  py-6 sm:py-8 lg:py-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
             <div class="flex items-center gap-12">
-                <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white">Assets</h2>
+              <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white">
+                Assets
+              </h2>
             </div>
+          </div>
 
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
             {assets.map((image) => {
-              const small = "group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80";
-              const large = "group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+              const small =
+                'group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80';
+              const large =
+                'group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80';
               return (
-                <span                     class={assets.indexOf(image ) % 2 === 0 || assets.indexOf(image) % 3 === 0 ? small : large}>
-                    <img src={image} loading="lazy" alt="" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
+                <span
+                  class={
+                    assets.indexOf(image) % 2 === 0 ||
+                    assets.indexOf(image) % 3 === 0
+                      ? small
+                      : large
+                  }
+                >
+                  <img
+                    src={image}
+                    loading="lazy"
+                    alt=""
+                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                  />
                 </span>
-              ); 
+              );
             })}
-
+          </div>
         </div>
-    </div>
-</div>
-):null}
+      </div>
+    ) : null
+  }
 
-
-{tags && tags.length > 0 ? (
-  <div class="bg-indigo-100 dark:bg-indigo-700">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
-    <div class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 lg:mt-0">
-      {tags.map((item) => (
-          <span class="inline-flex items-center rounded-md bg-indigo-50 dark:bg-indigo-400/10 px-2 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-400 ring-1 ring-inset ring-indigo-700/10 dark:ring-indigo-400/30">
-            {item}
-          </span>
-        ))
-      }
-    </div>
-  </div>
-</div>
-
-) : null}
+  {
+    tags && tags.length > 0 ? (
+      <div class="bg-indigo-100 dark:bg-indigo-700">
+        <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+          <div class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 lg:mt-0">
+            {tags.map((item) => (
+              <span class="inline-flex items-center rounded-md bg-gray-50 dark:bg-gray-50/25 px-2 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-800 ring-1 ring-inset ring-indigo-700/10 dark:ring-indigo-400/30">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ) : null
+  }
 </BaseLayout>
