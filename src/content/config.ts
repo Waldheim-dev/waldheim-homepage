@@ -42,6 +42,7 @@ const projectCollection = defineCollection({
       name: z.string(),
       web: z.object({url: z.string(), name: z.string()}).optional(),
       description: z.string(),
+      shortDescription: z.string().optional(),
     }).optional(),
 
     heroImage: z.string(),

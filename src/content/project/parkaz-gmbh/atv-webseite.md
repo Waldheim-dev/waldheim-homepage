@@ -12,11 +12,11 @@ overview: [
     title: 'Branche',
     meta: 'Tech',
   },
-  { title: 'Team',
+  { title: 'Teamgröße',
     meta: '1 Person',
   },
   {
-    title: 'Zeitraum',
+    title: 'Projektdauer',
     meta: '16 Wochen',
   }]
 problem: "Wir hatten hier das Problem eines großen Sicherheitsrisikos, da unterschiedliche Bots die Formulare der bestehenden Webseite befeuert hatten und dadurch unnötige Anfragen erzeugt wurden und damit der Kunde eine wahre Spamflut erhalten hatte. Zudem war die Pflege der Webseite sehr aufwendig, da hier ein eigenentwickeltes CMS genutzt wurde."
@@ -24,9 +24,9 @@ solution: "Der Aufbau auf ein Standard-CMS wie WordPress hat schon mal einen mas
 
 client: {name: "ATV Technologie GmbH", description: "ATV ist eine Technologie-Firma für High-Tech Lötöfen. Diese steuern präziser die Temperatur für Halbleitertechnologien und Mikroelektronik.", web: {name: "atv-tech.com", url: "https://www.atv-tech.com" }}
 tags: ["HTML","SCSS",'JS',"Tailwind CSS","Gitlab-CI","PHP","Code-Security", "WordPress", "Theme-Entwicklung", "SEO", "Google Analytics", "Google Recaptcha", "Yoast SEO", "WP Job Manager", "WP Event Manager", "WP Form", "WP Product Manager", "WP Product Range", "WP Product System", "WP Privacy Policy", "WP Cookie Policy", "Block Manager", "WP Optimize", "Contact Form 7", "Honeypot for Contact Form 7", "Font Awesome", "Event Manager", "Complianz", "PHP Hooks for Contact Form 7"]
-techStack: ["html","scss","js","tailwind","gitlab","php","wordpress"]
+techStack: ["html","scss","js","tailwind","gitlab","php","wordpress", "git","semantic", "linux","windows","nodejs"]
 general: ["Hosting auf Strato", "Automatisches Versionieren", "Hoher Sicherheitsstandard", "Hook für Weiterleitung von E-Mails an weitere Personen"]
 frontend: ["Gestaltung einer modernen L&ouml;sung basierend auf Tailwind CSS", "Erstellen eines eigenen Themes f&uuml;r WordPress", "Optimierung bis zum Smartphone", "Implementierung eines automatischen Deploys via Gitlab-CI für das Frontend"]
-backend: [ ]
-design: [ ]
+backend: ["WordPress auf Strato-Hosting", "PHP mit neustem Techstack", "Nativer E-Mail-Versand von Strato"]
+design: ["Nachbau bestehenden Designs auf Tailwind-Basis", "Mobiloptimierung des Designs"]
 ---

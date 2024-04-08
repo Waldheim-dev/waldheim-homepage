@@ -11,33 +11,29 @@ pubDate: "2020-07-25"
 category: "entwicklung"
 heroImage: "projects/waldheim-dev/netbox/home.png"
 assets: ["projects/waldheim-dev/netbox/home.png", "projects/waldheim-dev/netbox/settings.png", "projects/waldheim-dev/netbox/languages.png"]
-overview: [{
-  title: 'Kunde',
-  meta: 'Waldheim.dev',
-},
+overview: [
   {
     title: 'Branche',
-    meta: 'IT-Dienstleister',
+    meta: 'IT',
   },
   { title: 'OpenSource',
     meta: 'Ja',
-  },
-  {
-    title: 'Git',
-    meta: 'Ausgabeschein',
-    link: 'https://gitlab.com/mwaldheim/ausgabeschein-generator',
   },
   {
     title: 'Projektgr&ouml;&szlig;e',
     meta: '1. Person',
   },
   {
-    title: 'Homepage',
-    meta: 'www.waldheim.dev',
-    link: 'https://www.waldheim.dev',
-  }]
+    title: 'Projektdauer',
+    meta: 'Unbegrenzt',
+  },]
 tags: ["Docker", "Angular", "TypeScript","Material Design", "Netbox", "Gitlab-CI", "Code-Security", "Clean Code", "auto. Version-Control", "Cypress","Jira", "Standalone", "Signals"]
 general: ["Hosting auf beliebigen Apache / ngnx", "Automatisches Versionieren und Bereitstellung von Versionen"]
-frontend: ["Gestaltung einer modernen L&ouml;sung basierend auf Angular", "Erstellen eines eigenen Themes f&uuml;r Material Design (Angular Standard mit eigenen Farben)", "Optimierung bis zum Smartphone","Anbindung der Such-Schnittstelle von Netbox","31 Sprachen werden unterst&uuml;tzt", "JSON-Konfiguration und Konfig-Generator", "OpenSource Project zur Einsicht in den Code"]
+frontend: ["Gestaltung einer modernen L&ouml;sung basierend auf Angular", "Erstellen eines eigenen Themes f&uuml;r Material Design (Angular Standard mit eigenen Farben)", "Optimierung bis zum Smartphone","Anbindung der Such-Schnittstelle von Netbox","Mehr als31 Sprachen werden unterst&uuml;tzt", "JSON-Konfiguration und Konfig-Generator", "OpenSource Project zur Einsicht in den Code"]
 backend: []
+design: ["Material for Angular","Beta von M3 in Material for Angular"]
+problem: "Ein Unternehmen brauchte eine Lösung, um aus der Software Netbox einen Ausgabeschein, wie auch den Rückgabeschein oder Überlassungsschein zu erzeugen. Netbox hat dafür keine Möglichkeit."
+solution: "Um die Dokumente zu erzeugen wurde ein Tool gebaut, welches über die Schnittstellen von Netbox nach Geräten suchen kann und alle relevanten Informationen bezieht und auf die Dokumente erzeugt."
+client: {name: "Waldheim.dev", web: {name: "waldheim.dev", url: "https://www.waldheim.dev"}, description: "Kleinunternehmer für Design, Entwicklung und Prozessoptimierung."}
+techStack: ["angular","eslint","nodejs","scss","html","docker","gitlab","rxjs","semantic","jest","cypress","ts","linux","wordpress","prettier","jira","git","aws"]
 ---
