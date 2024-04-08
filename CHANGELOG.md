@@ -1,3 +1,10 @@
+## [24.11.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.2...v24.11.3) (2024-04-08)
+
+
+### :bug: Fixes
+
+* Updatr all Homepage projects and software projects to new structur ([2ebe296](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2ebe2964c21ebca801cf68bd745e279cdd10b422))
+
 ## [24.11.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.1...v24.11.2) (2024-04-07)
 
 
