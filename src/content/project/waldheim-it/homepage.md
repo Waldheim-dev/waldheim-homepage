@@ -9,24 +9,24 @@ pubDate: "2022-03-01"
 category: "website"
 heroImage: "projects/waldheim-it/homepage/homepage.png"
 assets: ["projects/waldheim-it/homepage/homepage.png", "projects/waldheim-it/homepage/waldheim_vi_back.png", "projects/waldheim-it/homepage/waldheim_vi_front.png"]
-overview: [{
-  title: 'Kunde',
-  meta: 'Waldheim-it.de',
-},
+overview: [
   {
     title: 'Branche',
-    meta: 'IT-Dienstleister',
+    meta: 'IT',
   },
-  { title: 'Projektgr&ouml;&szlig;e',
+  { title: 'Projektgröße',
     meta: '1 Person',
   },
-  {
-    title: 'Homepage',
-    meta: 'www.waldheim-it.de',
-    link: 'https://www.waldheim-it.de',
-  }]
+  { title: 'Projektdauer',
+    meta: '1 Woche',
+  },]
 tags: ["HTML","CSS",'JS',"Material You","Gitlab-CI","TypeScript","Code-Security"]
-general: ["Hosting auf Firebase", "Automatisches Versionieren und Deployen"]
-frontend: ["Gestaltung einer modernen L&ouml;sung basierend auf Angular", "Erstellen eines eigenen Themes f&uuml;r Material You (eigener Nachbau)", "Optimierung bis zum Smartphone", "Implementierung eines automatischen Deploys via Firebase f&uuml;r das Frontend", "Optimierung der Workflows durch nx.dev"]
+general: ["Hosting auf Strato", "Automatisches Versionieren und Deployen"]
+frontend: ["Implementierung mit klassischem HTML", "Extrem vereinfachter statischer Code", "Mobiloptimierung der Seite"]
 backend: [ ]
+design: ["Design auf neuester Material You (Material 3)"]
+problem: "Das neue Kleinunternehmen brauchte eine Internet-Präsenz, wodurch eine kleine Informationansammlung der Dienste benötigt wird. Diese Seite würde eher weniger aktualisiert werden."
+solution: "Aufbau einer statischen Seite inkl. Mobiloptimierung. Zudem sollten nur die nötigsten Seiten eingefügt werden."
+client: {name: "Waldheim IT-Beratung", web: {name: "waldheim-it.de", url: "https://www.waldheim-it.de"}, description: "Als Kleinunternehmer bietet diese Firma kleinere IT-Dienstleistungen an. Das Projekt wurden kostenfrei gestelt, da hier eine Partnerschaft aufgebaut wurde, zwischen dieser Firma und Waldheim.dev"}
+techStack: ["html", "css","scss","js", "gitlab", "git","semantic","linux","windows","nodejs"]
 ---
