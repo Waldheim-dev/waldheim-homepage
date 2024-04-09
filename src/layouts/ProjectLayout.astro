@@ -479,7 +479,8 @@ const skills = await getCollection('skills');
                     src={image}
                     loading="lazy"
                     alt=""
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    data-trigger="image"
+                    class="absolute cursor-pointer inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                   />
                 </span>
               );
@@ -487,6 +488,41 @@ const skills = await getCollection('skills');
           </div>
         </div>
       </div>
+
+      <div class="fixed transition-all cursor-pointer hidden inset-0 bg-slate-900/10 backdrop-blur-sm p-20" data-trigger="modal" aria-hidden="true">
+        <div class="relative h-full w-full rounded-lg overflow-hidden">
+          <img src="" alt="" class="h-full w-full object-contain drop-shadow-lg" />
+          
+          <button class="absolute right-0 top-0 bg-white rounded-bl-md p-4" data-trigger="close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <script is:inline>
+        const images = document.querySelectorAll('[data-trigger="image"]');
+        const close = document.querySelector('[data-trigger="close"]');
+        const modal = document.querySelector('[data-trigger="modal"]');
+
+        const load = (image) => {
+          modal.classList.remove('hidden');
+          modal.querySelector('img').src = image.src;
+        }
+
+        const closeEvent = () => {
+          modal.classList.add('hidden');
+          modal.querySelector('img').src = '';
+        }
+
+        images.forEach((image) => {
+          image.addEventListener('click', () => load(image));
+        });
+
+        close.addEventListener('click', closeEvent);
+
+        modal.addEventListener('click', closeEvent);
+      </script>
     ) : null
   }
 
