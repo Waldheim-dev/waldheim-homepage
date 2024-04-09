@@ -1,3 +1,11 @@
+## [24.11.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.3...v24.11.4) (2024-04-09)
+
+
+### :bug: Fixes
+
+* Add More Details to images by Modalopener ([e618057](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e618057e485265364a0cfc3e40f4ba2564e6c3a4))
+* Add new style to project overview ([68068c1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/68068c10aed37215b42be51a5a5d427b8e1bd1c2))
+
 ## [24.11.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.2...v24.11.3) (2024-04-08)
 
 
