@@ -1,3 +1,17 @@
+## [24.11.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.4...v24.11.5) (2024-04-11)
+
+
+### :bug: Fixes
+
+* Add active state to flipcard ([fbb4faa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/fbb4faabd77508b696593749c5196f803163b179))
+* add multiple fixes to main page ([47a814a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/47a814a3123e2ef0c8f8094840e6255c34ba198e))
+* Add singular to plural mapping for "year of exp" ([b2a8e37](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b2a8e378d2f8d0e0faad5458e0a439b674af2157))
+* Optimize style of projects ([5b542cf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5b542cf2088edb85315459d8bb3df97b48daa7fe))
+* Speedup slider animation ([dcfcdeb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dcfcdeb68c276bd65dc2328e89683ffe4d7fb092))
+* Update card effect of exp ([9bbb1ef](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9bbb1efbf138e4258429519b61443c599dc8b63a))
+* Update skills of mssql, php and react ([51082d3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/51082d3777dc02efa767eed424cac78a2544ac5f))
+* Update style of tags in dark mode ([1c11aaf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1c11aaf8aec37b0a56228c16532d34b5fbadd748))
+
 ## [24.11.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.3...v24.11.4) (2024-04-09)
 
 
