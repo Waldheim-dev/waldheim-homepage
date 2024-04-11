@@ -22,7 +22,7 @@ const categories = (await getCollection('project_kategorie'));
         <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300'>Alle Projekte chronologisch.</p>
       </div>
 
-      <div class='mx-auto max-w-2xl text-center flex justify-center items-center gap-2'>
+      <div class='mx-auto max-w-2xl text-center flex flex-wrap justify-center items-center gap-2'>
         <button data-trigger="filter" data-filter="all" data-group="category"
           class="relative z-10 rounded-full bg-gray-200  px-2 py-0.5 font-medium text-gray-600 hover:bg-gray-100">Alle</button>
         {categories.map(category => (
@@ -38,7 +38,7 @@ const categories = (await getCollection('project_kategorie'));
           projects.map(async (project) => {
 
             return (
-            <div class='bg-gray-900 pb-28 sm:pb-36 xl:pb-8 rounded-2xl min-w-96' data-trigger="entry" data-type={project.data?.category.id}>
+            <div class='bg-gray-900 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full' data-trigger="entry" data-type={project.data?.category.id}>
               <div
                 class='mx-auto flex min-w-5xl flex-col items-center gap-x-8 gap-y-10 px-6'>
                 <div class='-mt-8 w-full max-w-1xl xl:-mb-8'>
@@ -47,8 +47,8 @@ const categories = (await getCollection('project_kategorie'));
                          src={project.data.heroImage} alt={project.data.title} loading='lazy'>
                   </div>
                 </div>
-                <div class='min-w-96 xl:flex-auto'>
-                  <figure class='relative isolate pt-6 sm:pt-12'>
+                <div class='md:min-w-96 xl:flex-auto'>
+                  <figure class='relative isolate pt-6 sm:pt-12 text-white'>
                     <FormattedDate date={project.data.pubDate} />
                     <blockquote class='text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9'>
                       <p>{project.data.title}</p>
