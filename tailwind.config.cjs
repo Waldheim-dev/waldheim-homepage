@@ -35,10 +35,12 @@ module.exports = {
           transform: 'rotateY(0)',
           transition: 'transform 1s',
           perspective: '1000px',
+          position: 'relative',
           '.flip-card-inner': {
             position: 'relative',
             transform: 'rotateY(0)',
             transition: 'transform 1s',
+            width: '100%',
             transformStyle: 'preserve-3d',
             '.flip-front, .flip-back': {
               backfaceVisibility: 'hidden',
@@ -46,9 +48,8 @@ module.exports = {
             },
             '.flip-back': {
               position: 'absolute',
-              left: '5%',
-              top: '50%',
-              transform: 'rotateY(180deg) translate(-25%, -50%) translateZ(1px)',
+              inset: 0,
+              transform: 'rotateY(180deg) translateZ(1px)',
             }
           },
           '&:hover': {
