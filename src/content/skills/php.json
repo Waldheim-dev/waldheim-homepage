@@ -2,9 +2,9 @@
   "name": "PHP",
   "image": "/brands/php-1.svg",
   "productive": false,
-  "isActive": false,
-  "fixedExperience": 8,
-  "sinceLastRollup": "",
+  "isActive": true,
+  "fixedExperience": 9,
+  "sinceLastRollup": "2023-10-01",
   "knowledgebase": "expert",
   "isTopSkill": false
 }
