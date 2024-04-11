@@ -20,7 +20,12 @@ if( dateDiff <= 0){
       break;
   }
 }
-const dynamicExperience = isActive ? dateDiff : fixedExperience;
+const dynamicExperience = isActive ? dateDiff + fixedExperience : fixedExperience;
+let year = 'Jahr';
+
+if (dynamicExperience != 1) {
+  year = 'Jahre';
+}
 ---
 
-<small class='w-full text-center text-gray-700 dark:text-gray-300'>{dynamicExperience.toString().replace('.', ',')} Jahr/e Erfahrung</small>
+<small class='w-full text-center text-gray-700 dark:text-gray-300'>{dynamicExperience.toString().replace('.', ',')} { year } Erfahrung</small>
