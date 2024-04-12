@@ -491,11 +491,23 @@ const skills = await getCollection('skills');
 
       <div class="fixed transition-all cursor-pointer hidden inset-0 bg-slate-900/10 backdrop-blur-sm p-20" data-trigger="modal" aria-hidden="true">
         <div class="relative h-full w-full rounded-lg overflow-hidden">
-          <img src="" alt="" class="h-full w-full object-contain drop-shadow-lg" />
+          <img src="" alt="" loading="lazy" class="h-full w-full object-contain drop-shadow-xl" data-trigger="image-placeholder"/>
           
           <button class="absolute right-0 top-0 bg-white rounded-bl-md p-4" data-trigger="close">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <button class="absolute left-0 bottom-0 bg-white rounded-tr-md p-4" data-trigger="previmage">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+
+          <button class="absolute right-0 bottom-0 bg-white rounded-tl-md p-4" data-trigger="nextimage">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
           </button>
         </div>
@@ -504,24 +516,62 @@ const skills = await getCollection('skills');
         const images = document.querySelectorAll('[data-trigger="image"]');
         const close = document.querySelector('[data-trigger="close"]');
         const modal = document.querySelector('[data-trigger="modal"]');
+        const next = document.querySelector('[data-trigger="nextimage"]');
+        const prev = document.querySelector('[data-trigger="previmage"]');
+        const placeholder = document.querySelector('[data-trigger="image-placeholder"]');
 
         const load = (image) => {
           modal.classList.remove('hidden');
           modal.querySelector('img').src = image.src;
         }
 
-        const closeEvent = () => {
-          modal.classList.add('hidden');
-          modal.querySelector('img').src = '';
+        const closeEvent = (event) => {
+          if(event.target === close || event.target === modal || event.target === placeholder) {
+            modal.classList.add('hidden');
+            modal.querySelector('img').src = '';
+          }
+        }
+
+        const nextEvent = () => {
+          const current = images[Array.from(images).findIndex((image) => image.src === modal.querySelector('img').src)];
+          const next = images[Array.from(images).indexOf(current) + 1] ?? images[0];
+          if (next) {
+            load(next);
+          }
+        }
+
+        const prevEvent = () => {
+          const current = images[Array.from(images).findIndex((image) => image.src === modal.querySelector('img').src)];
+          const prev = images[Array.from(images).indexOf(current) - 1] ?? images[images.length - 1];
+          if (prev) {
+            load(prev);
+          }
         }
 
         images.forEach((image) => {
           image.addEventListener('click', () => load(image));
         });
 
-        close.addEventListener('click', closeEvent);
+        close.addEventListener('click', (event) => {closeEvent(event)});
 
-        modal.addEventListener('click', closeEvent);
+        modal.addEventListener('click', (event) => {closeEvent(event)});
+
+        next.addEventListener('click', () => {nextEvent()});
+
+        prev.addEventListener('click', () => {prevEvent()});
+
+        window.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            modal.classList.add('hidden');
+            modal.querySelector('img').src = '';
+          }
+          if (event.key === 'ArrowRight') {
+            nextEvent();
+          }
+          if (event.key === 'ArrowLeft') {
+            prevEvent();
+          }
+        });
       </script>
     ) : null
   }
