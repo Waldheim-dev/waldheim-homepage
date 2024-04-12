@@ -7,10 +7,7 @@ pubDate: "2023-02-01"
 category: "design"
 heroImage: "projects/mvo-obermeitingen/fasching_2023.jpg"
 assets: [ "projects/mvo-obermeitingen/fasching_2023.jpg", "projects/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg", "projects/mvo-obermeitingen/fasching_2023_preisliste.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_bier.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_pommes.jpg" ]
-overview: [{
-  title: 'Kunde',
-  meta: 'Musikverein Obermeitingen e.V.',
-},
+overview: [
   {
     title: 'Branche',
     meta: 'Verein',
@@ -20,12 +17,16 @@ overview: [{
     meta: '1. Person',
   },
   {
-    title: 'Homepage',
-    meta: 'www.mv-obermeitingen.de',
-    link: 'https://www.mv-obermeitingen.de',
-  }]
+    title: 'Projektdauer',
+    meta: '2 Wochen',
+  },]
 tags: ["Vektoren", "Affinity Designer", "Print-Design"]
 general: [ "Es soll Marketing f&uuml;r das jeweilige Event sein", "Die Medien sollen Modern sein", "Nur grundlegende Eckdaten m&uuml;ssen j&auml;hrlich ausgetauscht werden, wie z.B. Datum und einzelne Metainformationen", "Dient als Werbung f&uuml;r neue Mitglieder", "Soll Besucher zum Event f&uuml;hren", "Werbung f&uuml;r die Webseite und die Social Medias" ]
 frontend: []
 backend: []
+design: []
+problem: ""
+solution: ""
+client: {name: "Musikverein Obermeitingen e.V.", web: {name: "mv-obermeitingen.de", url: "https://www.mv-obermeitingen.de"}, description: "Der Musikverein Obermeitingen ist ein Örtlicher Musikverein, welcher mehrfach im Jahr Konzerte auf Auftritte austrägt, welche viele Gäste lockt."}
+techStack: []
 ---
