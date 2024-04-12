@@ -1,3 +1,10 @@
+## [24.11.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.5...v24.11.6) (2024-04-12)
+
+
+### :bug: Fixes
+
+* add prev and next control for image gallery ([5375d79](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5375d792552d13ca003b47c7a9751eec5071858a))
+
 ## [24.11.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.4...v24.11.5) (2024-04-11)
 
 
