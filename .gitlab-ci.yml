@@ -17,6 +17,5 @@ include:
   - template: Security/SAST-IaC.latest.gitlab-ci.yml
   - template: Security/Dependency-Scanning.gitlab-ci.yml
   - template: Security/Secret-Detection.gitlab-ci.yml
-  - template: Security/License-Scanning.gitlab-ci.yml
   - remote: https://gitlab.com/mwaldheim/container/-/raw/main/version/release.yml
   - remote: https://gitlab.com/mwaldheim/container/-/raw/main/sshdeploy/sshdeploy.yml
