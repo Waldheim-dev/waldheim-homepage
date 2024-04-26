@@ -1,3 +1,11 @@
+## [24.11.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.6...v24.11.7) (2024-04-26)
+
+
+### :bug: Fixes
+
+* Remove Licence pipeline ([631f42a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/631f42a6bd07f4cb87cc07958f902b9c670ef707))
+* Update to Astro 4.7 ([e31b65d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e31b65da51969b630a47ea2bbf75d702dcd18c63))
+
 ## [24.11.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.5...v24.11.6) (2024-04-12)
 
 
