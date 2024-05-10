@@ -1,3 +1,23 @@
+## [24.11.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.7...v24.11.8) (2024-05-10)
+
+
+### :bug: Fixes
+
+* Add missing images of vatertag 2023 ([067ded5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/067ded58d8b0f6d538bcd26d694364e95fc3fb34))
+* Add missing images of vatertag 2024 ([8d90ba4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8d90ba43a1dd35297d9628a7807664325939d249))
+* Add new images of serenade 2024 ([9debed1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9debed16a94bd0c09063a2ace5e47733081293d9))
+
+
+### :barber: Style
+
+* Fix changes of consent banner ([daebe6b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/daebe6b71e2c42f474d5801a0bb39e6d9c103d80))
+
+
+### :repeat: Chores
+
+* Update dependencies ([2dbca03](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2dbca0354d520e9f86da1da2e42dd50d6deb0788))
+* update to 3.0.1 of cookieconsent ([7b2c7f5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7b2c7f571682e3330d471c09d65f14b860be44cf))
+
 ## [24.11.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.6...v24.11.7) (2024-04-26)
 
 
