@@ -14,11 +14,11 @@ module.exports = {
       addBase({
 
         ':root': {
-          '--primary': theme('colors.indigo.600'),
+          '--primary': theme('colors.indigo.500'),
           '--primary-hover': theme('colors.indigo.700'),
           '--primary-contrast': theme('colors.white'),
-          '--secondary': theme('colors.indigo.500'),
-          '--secondary-hover': theme('colors.indigo.600'),
+          '--secondary': theme('colors.indigo.400'),
+          '--secondary-hover': theme('colors.indigo.500'),
           '--secondary-contrast': theme('colors.white'),
           '--accent': theme('colors.slate.500'),
           '--accent-contrast': theme('colors.slate.100'),
