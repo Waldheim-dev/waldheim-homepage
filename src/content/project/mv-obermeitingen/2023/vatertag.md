@@ -6,7 +6,28 @@ shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-05-18"
 category: "design"
 heroImage: "projects/mvo-obermeitingen/vatertagsfest_2023_plakat_a3.jpg"
-assets: [ "projects/mvo-obermeitingen/vatertagsfest_2023_plakat_a3.jpg", "projects/mvo-obermeitingen/vatertagsfest_banner_klein.jpg" ]
+assets: [ 
+  "projects/mvo-obermeitingen/vatertagsfest_2023_plakat_a3.jpg", 
+  "projects/mvo-obermeitingen/vatertagsfest_banner_klein.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_preisliste.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_bier.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_getraenk.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_gutschein.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_kaesspatzen.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_kaffee.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_kuchen.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_pizza.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_pommes.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_salat.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_schweinebraten.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_bon_wurst.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_braten.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_geschirr.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_getraenke.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_kaesspatzen.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_pizza.jpg",
+  "projects/mvo-obermeitingen/vatertagsfest_2023_schild_wurst.jpg", 
+]
 overview: [
   {
     title: 'Branche',
