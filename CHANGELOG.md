@@ -1,3 +1,13 @@
+## [24.11.9](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.8...v24.11.9) (2024-06-28)
+
+### :bug: Fixes
+
+* add filter to skill overview ([93f909d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/93f909dad0080ca344fb066f0b8b5f61518cb283))
+* add more brands to website ([74ed296](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/74ed296b1d77a42c97bf2c385d8b51abde79cd56))
+* add techstack as parameter and layer to skills ([ba56ef7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ba56ef7b340e7230e769b03b25d9734800e5f9af))
+* add techstack attribute to flip cards ([ecc0d90](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ecc0d90fdf697e524a303736cf89a5c60676609c))
+* Update to latest dependencies ([2c3498c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2c3498cc13f54649cfbd28ca09b61329592eff81))
+
 ## [24.11.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.7...v24.11.8) (2024-05-10)
 
 
