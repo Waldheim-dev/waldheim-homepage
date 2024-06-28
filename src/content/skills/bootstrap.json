@@ -6,5 +6,7 @@
   "fixedExperience": 4,
   "sinceLastRollup": "",
   "knowledgebase": "expert",
-  "isTopSkill": false
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": ["frontend"]
 }

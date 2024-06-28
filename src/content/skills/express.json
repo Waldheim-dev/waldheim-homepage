@@ -1,0 +1,12 @@
+{
+  "name": "Express JS",
+  "image": "/brands/express.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 4,
+  "sinceLastRollup": "2024-04-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["backend"]
+}

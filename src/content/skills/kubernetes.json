@@ -1,10 +1,12 @@
 {
   "name": "Kubernetes",
-  "image": "/brands/kubernets.svg",
+  "image": "/brands/kubernetes.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 0,
   "sinceLastRollup": "2022-01-01",
-  "knowledgebase": "basic",
-  "isTopSkill": true
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["infrastructure"]
 }
