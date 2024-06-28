@@ -13,106 +13,108 @@ const blogPosts = (await getCollection('blog')).sort((a, b) => {
 });
 const skills = (await getCollection('skills')).filter((entry) => entry.data.isTopSkill === false);
 const topSkills = (await getCollection('skills')).filter((entry) => entry.data.isTopSkill === true);
+
+const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'general', 'system', 'security', 'database'];
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 
-  <div class='bg-white dark:bg-slate-800'>
+  <div class="bg-white dark:bg-slate-800">
     <main>
-      <div class='relative isolate'>
+      <div class="relative isolate">
         <svg
-          class='absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 dark:stroke-slate-900 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]'
-          aria-hidden='true'>
+          class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 dark:stroke-slate-900 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+          aria-hidden="true">
           <defs>
-            <pattern id='1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84' width='200' height='200' x='50%' y='-1'
-                     patternUnits='userSpaceOnUse'>
-              <path d='M.5 200V.5H200' fill='none' />
+            <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1"
+                     patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none" />
             </pattern>
           </defs>
-          <svg x='50%' y='-1' class='overflow-visible fill-gray-50 dark:fill-slate-900'>
-            <path d='M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z'
-                  stroke-width='0' />
+          <svg x="50%" y="-1" class="overflow-visible fill-gray-50 dark:fill-slate-900">
+            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+                  stroke-width="0" />
           </svg>
-          <rect width='100%' height='100%' stroke-width='0' fill='url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)' />
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
         </svg>
         <div
-          class='absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48'
-          aria-hidden='true'>
-          <div class='aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30'
-               style='clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)'></div>
+          class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+          aria-hidden="true">
+          <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+               style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
         </div>
-        <div class='overflow-hidden'>
-          <div class='mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32'>
-            <div class='mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
-              <div class='w-full max-w-xl lg:shrink-0 xl:max-w-2xl'>
-                <h1 class='text-6xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-7xl'>Let`s build a
+        <div class="overflow-hidden">
+          <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+            <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+              <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+                <h1 class="text-6xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-7xl">Let`s build a
                   better tomorrow, together</h1>
-                <p class='relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
+                <p class="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
                   Durch nachhaltige und optimierte Entwicklungen und Design. Durch einsparen von Zeit und
                   Ressourcen zu optimierten Prozessen. Ich helfe Ihnen dabei.</p>
-                <div class='mt-10 flex items-center flex-wrap gap-x-6'>
-                  <a href='mailto:kontakt@waldheim.dev'
-                     class='flex gap-1 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>Kontaktiere
+                <div class="mt-10 flex items-center flex-wrap gap-x-6">
+                  <a href="mailto:kontakt@waldheim.dev"
+                     class="flex gap-1 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Kontaktiere
                     mich
-                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'
-                         class='animate-pulse w-5 h-5'>
-                      <path d='M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z' />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                         class="animate-pulse w-5 h-5">
+                      <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
                       <path
-                        d='M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z' />
+                        d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
                     </svg>
 
                   </a>
-                  <a href='/projects/' class='flex gap-1 text-sm font-semibold leading-6 text-gray-900 dark:text-white'>Mein
+                  <a href="/projects/" class="flex gap-1 text-sm font-semibold leading-6 text-gray-900 dark:text-white">Mein
                     Portfolio
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5'
-                         stroke='currentColor' class='w-6 h-6'>
-                      <path stroke-linecap='round' stroke-linejoin='round'
-                            d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75' />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                     </svg>
                   </a>
                 </div>
               </div>
-              <div class='mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0'>
+              <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                 <div
-                  class='ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80'>
-                  <div class='relative'>
-                    <img loading='lazy'
-                         src='https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=360&q=80'
-                         alt='' class='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'>
+                  class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div class="relative">
+                    <img loading="lazy"
+                         src="https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=360&q=80"
+                         alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                     <div
-                      class='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10'></div>
+                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                   </div>
                 </div>
-                <div class='mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36'>
-                  <div class='relative'>
-                    <img loading='lazy'
-                         src='https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
-                         alt='' class='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'>
+                <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                  <div class="relative">
+                    <img loading="lazy"
+                         src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                         alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                     <div
-                      class='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10'></div>
+                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                   </div>
-                  <div class='relative'>
-                    <img loading='lazy'
-                         src='https://images.unsplash.com/photo-1560732488-6b0df240254a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
-                         alt='' class='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'>
+                  <div class="relative">
+                    <img loading="lazy"
+                         src="https://images.unsplash.com/photo-1560732488-6b0df240254a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                         alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                     <div
-                      class='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10'></div>
+                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                   </div>
                 </div>
-                <div class='w-44 flex-none space-y-8 pt-32 sm:pt-0'>
-                  <div class='relative'>
-                    <img loading='lazy'
-                         src='https://images.unsplash.com/photo-1529310399831-ed472b81d589?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
-                         alt='' class='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'>
+                <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                  <div class="relative">
+                    <img loading="lazy"
+                         src="https://images.unsplash.com/photo-1529310399831-ed472b81d589?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                         alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                     <div
-                      class='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10'></div>
+                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                   </div>
-                  <div class='relative'>
-                    <img loading='lazy'
-                         src='https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
-                         alt='' class='aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg'>
+                  <div class="relative">
+                    <img loading="lazy"
+                         src="https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                         alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
                     <div
-                      class='pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10'></div>
+                      class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                   </div>
                 </div>
               </div>
@@ -124,181 +126,214 @@ const topSkills = (await getCollection('skills')).filter((entry) => entry.data.i
   </div>
 
 
-  <section class='bento-service bg-gradient-to-br from-indigo-500 to-indigo-700 dark:bg-gradient-to-b dark:to-slate-800 dark:from-slate-800 relative isolate'>
+  <section
+    class="bento-service bg-gradient-to-br from-indigo-500 to-indigo-700 dark:bg-gradient-to-b dark:to-slate-800 dark:from-slate-800 relative isolate">
 
     <svg
-      class='absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-indigo-200 dark:stroke-indigos-900 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]'
-      aria-hidden='true'>
+      class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-indigo-200 dark:stroke-indigos-900 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+      aria-hidden="true">
       <defs>
-        <pattern id='1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84' width='200' height='200' x='50%' y='-1'
-                 patternUnits='userSpaceOnUse'>
-          <path d='M.5 200V.5H200' fill='none' />
+        <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1"
+                 patternUnits="userSpaceOnUse">
+          <path d="M.5 200V.5H200" fill="none" />
         </pattern>
       </defs>
-      <svg x='50%' y='-1' class='overflow-visible fill-indigo-50 dark:fill-indigo-900'>
-        <path d='M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z'
-              stroke-width='0' />
+      <svg x="50%" y="-1" class="overflow-visible fill-indigo-50 dark:fill-indigo-900">
+        <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+              stroke-width="0" />
       </svg>
-      <rect width='100%' height='100%' stroke-width='0' fill='url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)' />
+      <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
     </svg>
 
     <div
-      class='absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48'
-      aria-hidden='true'>
-      <div class='aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30'
-           style='clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)'></div>
+      class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+      aria-hidden="true">
+      <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+           style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
     </div>
 
     <div
-      class='mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-4 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row'>
+      class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-4 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row">
       <div
-        class='bento-card lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 backdrop-blur-sm bg-white/30 dark:bg-white/10 rounded-3xl text-white overflow-hidden p-12 border border-solid border-slate-400  shadow-lg'>
-        <div class='flex flex-col gap-4 justify-between h-full'>
-          <div class='flex flex-col gap-4'>
+        class="bento-card lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 backdrop-blur-sm bg-white/30 dark:bg-white/10 rounded-3xl text-white overflow-hidden p-12 border border-solid border-slate-400  shadow-lg">
+        <div class="flex flex-col gap-4 justify-between h-full">
+          <div class="flex flex-col gap-4">
 
-            <h2 class='text-3xl font-bold tracking-tight text-white dark:text-gray-50 sm:text-6xl'>Bringt den
+            <h2 class="text-3xl font-bold tracking-tight text-white dark:text-gray-50 sm:text-6xl">Bringt den
               Professionellen Service zu euch</h2>
-            <p class='relative mt-6 text-lg leading-8 text-gray-100 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
+            <p class="relative mt-6 text-lg leading-8 text-gray-100 dark:text-gray-200 sm:max-w-md lg:max-w-none">
               Qualität im Service von Anfang an</p>
             <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-100">
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor"
+                     aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span><strong class="font-semibold text-white">Hohe Qualität.</strong> Mit dem Service-Anspruch auf höchster Qualität</span>
               </li>
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor"
+                     aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span><strong class="font-semibold text-white">Solide.</strong> Es muss immer stabil und konsequent sein</span>
               </li>
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor"
+                     aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span><strong class="font-semibold text-white">Dokumentierung.</strong> Transparente Nachvollziehbarkeit</span>
               </li>
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor"
+                     aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
-                <span><strong class="font-semibold text-white">Kundenorientiert.</strong> An Ihre Wünsche angepasst</span>
+                <span><strong
+                  class="font-semibold text-white">Kundenorientiert.</strong> An Ihre Wünsche angepasst</span>
               </li>
             </ul>
           </div>
-          <img src='/bento/cert.webp' loading='lazy' alt='Qualität bei Waldheim.dev'>
+          <img src="/bento/cert.webp" loading="lazy" alt="Qualität bei Waldheim.dev">
         </div>
       </div>
       <div
-        class='bento-card lg:col-span-1 sm:col-span-6 col-span-1 bg-gradient-to-tr from-teal-500 to-teal-600 dark:from-teal-600 dark:to-teal-800 rounded-3xl text-white overflow-hidden p-12  shadow-lg'>
+        class="bento-card lg:col-span-1 sm:col-span-6 col-span-1 bg-gradient-to-tr from-teal-500 to-teal-600 dark:from-teal-600 dark:to-teal-800 rounded-3xl text-white overflow-hidden p-12  shadow-lg">
 
-        <div class='flex flex-col gap-4 justify-between h-full'>
-          <div class='flex flex-col items-start gap-2'>
-            <h3 class='text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl'>Effiziente
+        <div class="flex flex-col gap-4 justify-between h-full">
+          <div class="flex flex-col items-start gap-2">
+            <h3 class="text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl">Effiziente
               Entwicklung</h3>
 
-            <p class='relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
+            <p class="relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none">
               Optimierung der Entwicklung</p>
-            <a href='/services/devops'
-               class='border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition'>Erfahre
+            <a href="/services/devops"
+               class="border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition">Erfahre
               mehr</a>
           </div>
-          <img src='/bento/devops.webp' loading='lazy' class='-mb-6 w-full' alt='DevSecOps'>
+          <img src="/bento/devops.webp" loading="lazy" class="-mb-6 w-full" alt="DevSecOps">
         </div>
-      </div>
-      <div class='bento-card lg:col-span-1 md:col-span-2 sm:col-span-3 col-span-1 bg-gradient-to-br from-white to-gray-300 rounded-3xl overflow-hidden p-12 text-slate-800  shadow-lg'>
-
-        <div class='flex flex-col gap-4 justify-between h-full'>
-          <div class='flex flex-col items-start gap-2'>
-          <h3 class='text-lg -mt-2 font-bold tracking-tight text-slate-800 sm:text-xl'>
-          Softwareentwicklung</h3>
-            <p class='relative mb-6 text-lg text-slate-700 sm:max-w-md lg:max-w-none'>
-              Software nach Maß</p>
-
-            <a href='/services/entwicklung'
-               class='border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white transition'>Erfahre
-              mehr</a>
-          </div>
-          <img src='/bento/code.webp' loading='lazy' class='-mb-6 w-full' alt='Code'>
-          </div>
-
-      </div>
-      <div class='bento-card lg:col-span-1 md:col-span-2 sm:col-span-3  col-span-1 bg-gradient-to-br from-slate-700 to-slate-800 rounded-3xl overflow-hidden p-12 text-white  shadow-lg'>
-        <div class='flex flex-col gap-4 justify-between h-full'>
-          <div class='flex flex-col items-start gap-2'>
-          <h3 class='text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl'>Design / UX</h3>
-
-            <p class='relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
-              Design bis in den letzten Pixel</p>
-            <a href='/services/design'
-               class='border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition'>Erfahre
-              mehr</a>
-        </div>
-        <img src='/bento/design.webp' loading='lazy' class='-m-6' alt='Design'>
-      </div>
-      </div>
-      <div class='bento-card lg:col-span-1 md:col-span-2 sm:col-span-3 col-span-1 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-500 dark:to-amber-700 rounded-3xl overflow-hidden p-12 text-slate-800  shadow-lg'>
-        <div class='flex flex-col gap-4 justify-between h-full'>
-          <div class='flex flex-col items-start gap-2'>
-          <h3 class='text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl'>
-            IT-Service</h3>
-            <p class='relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
-              Sichere Cloud-IT von Überall</p>
-          <a href='/services/it-service'
-             class='border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition'>Erfahre
-            mehr</a>
-          </div>
-        <img src='/bento/security.webp' loading='lazy' class='-m-6' alt='Security'>
-      </div>
       </div>
       <div
-        class='bento-card lg:col-span-2 sm:col-span-6 col-span-1 bg-gradient-to-l from-gray-300 to-slate-300 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12  text-slate-800 shadow-lg'>
-        <div class='flex flex-row gap-4 justify-between'>
-          <div class='flex flex-col col-auto items-start gap-2'>
-            <p class='text-base font-semibold leading-5 text-indigo-600 dark:text-indigo-200'>Für Verbände, Vereine und mehr</p>
-            <h3 class='text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl'>
-              Verbandssoftware</h3>
-            <p class='relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none'>
-              Optimiert eure Organisation</p>
-            <a href='/services/verbandssoftware'
-               class='border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition'>Erfahre
+        class="bento-card lg:col-span-1 md:col-span-2 sm:col-span-3 col-span-1 bg-gradient-to-br from-white to-gray-300 rounded-3xl overflow-hidden p-12 text-slate-800  shadow-lg">
+
+        <div class="flex flex-col gap-4 justify-between h-full">
+          <div class="flex flex-col items-start gap-2">
+            <h3 class="text-lg -mt-2 font-bold tracking-tight text-slate-800 sm:text-xl">
+              Softwareentwicklung</h3>
+            <p class="relative mb-6 text-lg text-slate-700 sm:max-w-md lg:max-w-none">
+              Software nach Maß</p>
+
+            <a href="/services/entwicklung"
+               class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white transition">Erfahre
               mehr</a>
           </div>
-          <img src='/bento/sewobe.webp' class='rounded-xl mt-12 -mb-24' loading='lazy' alt='Verbandssoftware der SEWOBE AG'>
+          <img src="/bento/code.webp" loading="lazy" class="-mb-6 w-full" alt="Code">
+        </div>
+
+      </div>
+      <div
+        class="bento-card lg:col-span-1 md:col-span-2 sm:col-span-3  col-span-1 bg-gradient-to-br from-slate-700 to-slate-800 rounded-3xl overflow-hidden p-12 text-white  shadow-lg">
+        <div class="flex flex-col gap-4 justify-between h-full">
+          <div class="flex flex-col items-start gap-2">
+            <h3 class="text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl">Design / UX</h3>
+
+            <p class="relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none">
+              Design bis in den letzten Pixel</p>
+            <a href="/services/design"
+               class="border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition">Erfahre
+              mehr</a>
+          </div>
+          <img src="/bento/design.webp" loading="lazy" class="-m-6" alt="Design">
         </div>
       </div>
-      <div class='bento-card lg:col-span-4 sm:col-span-6 col-span-1 bg-gradient-to-l from-gray-300 to-slate-300 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12  text-slate-800 shadow-lg'>
-        <div class='flex md:flex-row flex-col gap-4 justify-between'>
-          <div class='flex flex-col col-auto items-start gap-2'>
-            <p class='text-base font-semibold leading-5 text-indigo-600 dark:text-indigo-200'>Qualität die für sich Spricht</p>
-            <h3 class='text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl'>
+      <div
+        class="bento-card lg:col-span-1 md:col-span-2 sm:col-span-3 col-span-1 bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-500 dark:to-amber-700 rounded-3xl overflow-hidden p-12 text-slate-800  shadow-lg">
+        <div class="flex flex-col gap-4 justify-between h-full">
+          <div class="flex flex-col items-start gap-2">
+            <h3 class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl">
+              IT-Service</h3>
+            <p class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none">
+              Sichere Cloud-IT von Überall</p>
+            <a href="/services/it-service"
+               class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition">Erfahre
+              mehr</a>
+          </div>
+          <img src="/bento/security.webp" loading="lazy" class="-m-6" alt="Security">
+        </div>
+      </div>
+      <div
+        class="bento-card lg:col-span-2 sm:col-span-6 col-span-1 bg-gradient-to-l from-gray-300 to-slate-300 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12  text-slate-800 shadow-lg">
+        <div class="flex flex-row gap-4 justify-between">
+          <div class="flex flex-col col-auto items-start gap-2">
+            <p class="text-base font-semibold leading-5 text-indigo-600 dark:text-indigo-200">Für Verbände, Vereine und
+              mehr</p>
+            <h3 class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl">
+              Verbandssoftware</h3>
+            <p class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none">
+              Optimiert eure Organisation</p>
+            <a href="/services/verbandssoftware"
+               class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition">Erfahre
+              mehr</a>
+          </div>
+          <img src="/bento/sewobe.webp" class="rounded-xl mt-12 -mb-24" loading="lazy"
+               alt="Verbandssoftware der SEWOBE AG">
+        </div>
+      </div>
+      <div
+        class="bento-card lg:col-span-4 sm:col-span-6 col-span-1 bg-gradient-to-l from-gray-300 to-slate-300 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12  text-slate-800 shadow-lg">
+        <div class="flex md:flex-row flex-col gap-4 justify-between">
+          <div class="flex flex-col col-auto items-start gap-2">
+            <p class="text-base font-semibold leading-5 text-indigo-600 dark:text-indigo-200">Qualität die für sich
+              Spricht</p>
+            <h3 class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl">
               Zertifizierungen</h3>
             <ul role="list" class="mt-8 max-w-xl space-y-8 text-slate-800 dark:text-gray-100">
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20"
+                     fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span>Zertifizierter Professional <strong class="font-semibold text-slate-800 dark:text-white">Scrum Master I.</strong></span>
               </li>
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20"
+                     fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span>Zertifizierter Professional <strong class="font-semibold text-slate-800 dark:text-white">Scrum Product Owner I.</strong></span>
               </li>
               <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                <svg class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white" viewBox="0 0 20 20"
+                     fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd" />
                 </svg>
                 <span>Ausgebildeter IHK <strong class="font-semibold text-slate-800 dark:text-white">Ausbilder für Fachinformatik.</strong></span>
               </li>
             </ul>
           </div>
-          <div class='relative flex gap-2'>
-            <img src='/bento/PSMI.png' class='rounded-xl mt-12 -mb-24 h-40 w-40' loading='lazy' alt='Markus Waldheim - Zertifizierter Professional Scrum Master 1.'>
-            <img src='/bento/PSMII.png' class='rounded-xl mt-12 -mb-24 h-40 w-40' loading='lazy' alt='Markus Waldheim - Zertifizierter Professional Scrum Master 2.'>
-            <img src='/bento/PSPOI.png' class='rounded-xl mt-12 -mb-24 h-40 w-40' loading='lazy' alt='Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1.'>
+          <div class="relative flex gap-2">
+            <img src="/bento/PSMI.png" class="rounded-xl mt-12 -mb-24 h-40 w-40" loading="lazy"
+                 alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1.">
+            <img src="/bento/PSMII.png" class="rounded-xl mt-12 -mb-24 h-40 w-40" loading="lazy"
+                 alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2.">
+            <img src="/bento/PSPOI.png" class="rounded-xl mt-12 -mb-24 h-40 w-40" loading="lazy"
+                 alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1.">
           </div>
         </div>
       </div>
@@ -311,15 +346,15 @@ const topSkills = (await getCollection('skills')).filter((entry) => entry.data.i
 
   <Pricing />
 
-  <div class='bg-white dark:bg-slate-800 py-24 sm:py-32'>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-      <div class='mx-auto max-w-2xl text-center'>
-        <h2 class='text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl'>Neuigkeiten</h2>
-        <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300'>Bleibe auf dem neusten und schaue dir an, was
+  <div class="bg-white dark:bg-slate-800 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">Neuigkeiten</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">Bleibe auf dem neusten und schaue dir an, was
           es alles neues gibt. Top Themen und Unternehmen-Highlights.</p>
       </div>
       <div
-        class='mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
+        class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
 
         {
@@ -328,22 +363,22 @@ const topSkills = (await getCollection('skills')).filter((entry) => entry.data.i
             return (
               <a href={`/blog/${post.slug}/`}>
                 <article
-                  class='relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80'>
-                  <img loading='lazy'
+                  class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                  <img loading="lazy"
                        src={post.data.heroImage}
-                       alt={post.data.title} class='absolute inset-0 -z-10 h-full w-full object-cover'>
-                  <div class='absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40'></div>
-                  <div class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
+                       alt={post.data.title} class="absolute inset-0 -z-10 h-full w-full object-cover">
+                  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                  <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 
-                  <div class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-200'>
+                  <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-200">
                     <FormattedDate date={post.data.pubDate} />
                   </div>
-                  <h3 class='mt-3 text-lg font-semibold leading-6 text-white'>
-                    <span class='absolute inset-0'></span>
+                  <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                    <span class="absolute inset-0"></span>
                     {post.data.title}
                   </h3>
                   <p
-                    class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>{post.data.description}</p>
+                    class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">{post.data.description}</p>
                 </article>
               </a>
             );
@@ -354,74 +389,148 @@ const topSkills = (await getCollection('skills')).filter((entry) => entry.data.i
   </div>
 
 
-  <div class='bg-gray-100 dark:bg-gray-900 py-24 sm:py-32'>
-    <div class='mx-auto max-w-2xl text-center px-6 lg:px-8 py-6'>
-      <h2 class='text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl'>Top Skills</h2>
-      <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400'>Aktuell im Trend oder Produktiv im Einsatz.</p>
-    </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-      <div class='-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6'>
-        {
-          topSkills.map((entry) => (
-            <FlipCard entry={entry} />
-          ))
-        }
+  <section>
+    <div class="bg-gray-100 dark:bg-gray-900">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 pb-2">Filtere die Skills, wie du es dir
+          wünscht</p>
+        <div class="flex gap-1 justify-center flex-wrap">
+          {layer.map((entry) => (
+            <button data-trigger="filter" data-filter={entry} data-filtered="false"
+                    class="bg-slate-200 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">{entry}</button>
+          ))}
+          <button data-trigger="filter" data-filter="all" data-filtered="false"
+                  class="bg-slate-200 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">
+        <span class='text-rose-500' title="Filter zurücksetzen">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+              <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+            </svg>
+        </span>
+          </button>
+        </div>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Klicke auf die Karte, um mehr zu erfahren.</p>
+        <p class="mt-2 text-lg justify-center items-center leading-8 text-gray-600 dark:text-gray-400 flex gap-0.5">
+        <span class='text-emerald-500' title="Mein empfohlender Techstack">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path d="M5.507 4.048A3 3 0 0 1 7.785 3h8.43a3 3 0 0 1 2.278 1.048l1.722 2.008A4.533 4.533 0 0 0 19.5 6h-15c-.243 0-.482.02-.715.056l1.722-2.008Z" />
+            <path fill-rule="evenodd" d="M1.5 10.5a3 3 0 0 1 3-3h15a3 3 0 1 1 0 6h-15a3 3 0 0 1-3-3Zm15 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm2.25.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM4.5 15a3 3 0 1 0 0 6h15a3 3 0 1 0 0-6h-15Zm11.25 3.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM19.5 18a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" clip-rule="evenodd" />
+          </svg>
+        </span>
+          = Mein empfohlender Techstack
+        </p>
+        <script is:inline>
+          document.addEventListener('DOMContentLoaded', () => {
+            const triggers = document.querySelectorAll('[data-trigger="filter"]');
+            const cards = document.querySelectorAll('.flip-card');
+            triggers.forEach((trigger) => {
+              trigger.addEventListener('click', () => {
+                let filtered = trigger.getAttribute('data-filtered') === 'true';
+                const filter = trigger.getAttribute('data-filter');
+                filtered = !filtered;
+                if (filter === 'all') {
+                  filtered = false;
+                }
+                  for(const nextTrigger of triggers) {
+                    nextTrigger.classList.remove('bg-slate-300');
+                    nextTrigger.classList.remove('dark:bg-slate-500');
+                    nextTrigger.classList.add('bg-slate-200');
+                    nextTrigger.classList.add('dark:bg-slate-700');
+                    nextTrigger.setAttribute('data-filtered', 'false');
+                  }
+                if (filtered) {
+                  trigger.classList.remove('bg-slate-200');
+                  trigger.classList.remove('dark:bg-slate-700');
+                  trigger.classList.add('bg-slate-300');
+                  trigger.classList.add('dark:bg-slate-500');
+                  trigger.setAttribute('data-filtered', 'true');
+                }
+                for(const card of cards) {
+                  if (!filtered) {
+                    card.style.display = 'block';
+                  } else {
+                    if (card.getAttribute('data-layer').includes(filter)) {
+                      card.style.display = 'block';
+                    } else {
+                      card.style.display = 'none';
+                    }
+                  }
+                }
+              });
+            });
+          });
+        </script>
       </div>
     </div>
-  </div>
-  <div class='bg-gray-100 dark:bg-gray-900 py-24 sm:py-32'>
-    <div class='mx-auto max-w-2xl text-center px-6 lg:px-8 py-6'>
-      <h2 class='text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl'>Weitere Skills</h2>
-      <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400'>Learn how to grow your business with our expert
-        advice.</p>
-    </div>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-      <div class='-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6'>
-        {
-          skills.map((entry) => (
-            <FlipCard entry={entry} />
-          ))
-        }
+    <div class="bg-gray-100 dark:bg-gray-900 py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Top Skills (<span class="top-counter">{topSkills.length}</span>)</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Aktuell im Trend oder Produktiv im
+          Einsatz.</p>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+          {
+            topSkills.map((entry) => (
+              <FlipCard entry={entry} />
+            ))
+          }
+        </div>
       </div>
     </div>
-  </div>
-
+    <div class="bg-gray-100 dark:bg-gray-900 py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Weitere Skills (<span class="counter">{skills.length}</span>)</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Learn how to grow your business with our
+          expert
+          advice.</p>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+          {
+            skills.map((entry) => (
+              <FlipCard entry={entry} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!--# Projects-->
 
-  <div class='bg-white dark:bg-slate-800'>
-    <div class='mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8'>
+  <div class="bg-white dark:bg-slate-800">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
       <div
-        class='relative isolate overflow-hidden bg-gray-900 px-6 pt-16  shadow-lg sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0'>
-        <svg viewBox='0 0 1024 1024'
-             class='absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0'
-             aria-hidden='true'>
-          <circle cx='512' cy='512' r='512' fill='url(#759c1415-0410-454c-8f7c-9a820de03641)' fill-opacity='0.7' />
+        class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16  shadow-lg sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <svg viewBox="0 0 1024 1024"
+             class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+             aria-hidden="true">
+          <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
           <defs>
-            <radialGradient id='759c1415-0410-454c-8f7c-9a820de03641'>
-              <stop stop-color='#7775D6' />
-              <stop offset='1' stop-color='#E935C1' />
+            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+              <stop stop-color="#7775D6" />
+              <stop offset="1" stop-color="#E935C1" />
             </radialGradient>
           </defs>
         </svg>
-        <div class='mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left'>
-          <h2 class='text-3xl font-bold tracking-tight text-white sm:text-4xl'>Booste deine Nachhaltigkeite.<br>Nutze es
+        <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Booste deine Nachhaltigkeite.<br>Nutze es
             schon heute.</h2>
-          <p class='mt-6 text-lg leading-8 text-gray-300'>Mit Ecodrive mehr Infos über den Fahrverhalten ermitteln.
+          <p class="mt-6 text-lg leading-8 text-gray-300">Mit Ecodrive mehr Infos über den Fahrverhalten ermitteln.
             Nicht mehr vermuten! </p>
-          <div class='mt-10 flex items-center justify-center gap-x-6 lg:justify-start'>
-            <a href='https://www.eco-drive.app'
-               class='rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'>Demo
+          <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+            <a href="https://www.eco-drive.app"
+               class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Demo
               testen</a>
-            <a href='/ecodrive/' class='text-sm font-semibold leading-6 text-white'>Erfahre mehr <span
-              aria-hidden='true'>→</span></a>
+            <a href="/ecodrive/" class="text-sm font-semibold leading-6 text-white">Erfahre mehr <span
+              aria-hidden="true">→</span></a>
           </div>
         </div>
-        <div class='relative mt-16 h-80 lg:mt-8'>
-          <img class='absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10'
-               src='/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png' alt='Ecodrive screenshot'
-               loading='lazy'
-               width='1824' height='1080'>
+        <div class="relative mt-16 h-80 lg:mt-8">
+          <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+               src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" alt="Ecodrive screenshot"
+               loading="lazy"
+               width="1824" height="1080">
         </div>
       </div>
     </div>
