@@ -1,3 +1,9 @@
+## [24.11.10](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.9...v24.11.10) (2024-06-28)
+
+### :bug: Fixes
+
+* Update logo of firebase ([ee5d53e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ee5d53e4a7616042b7f173b41f2b10d02994ca49))
+
 ## [24.11.9](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.8...v24.11.9) (2024-06-28)
 
 ### :bug: Fixes
