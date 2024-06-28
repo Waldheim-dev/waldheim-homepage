@@ -86,11 +86,13 @@ const skill = z.object({
   isActive: z.boolean(),
   fixedExperience: z.number(),
   isTopSkill: z.boolean(),
+  isTechStack: z.boolean(),
   sinceLastRollup: z
     .string()
     .optional()
     .transform((str) => (str ? new Date(str) : undefined)),
-  knowledgebase: z.enum(['basic', 'advanced', 'expert'])
+  knowledgebase: z.enum(['basic', 'advanced', 'expert']),
+  layer: z.array(z.enum(['frontend', 'backend', 'design', 'infrastructure', 'quality', 'general', 'system', 'security', 'database']))
 });
 
 const skillsCollection = defineCollection({

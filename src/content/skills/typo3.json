@@ -6,5 +6,7 @@
   "fixedExperience": 6,
   "sinceLastRollup": "",
   "knowledgebase": "advanced",
-  "isTopSkill": false
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": ["general"]
 }
