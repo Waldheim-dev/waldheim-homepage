@@ -1,3 +1,10 @@
+## [24.11.11](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.10...v24.11.11) (2024-08-05)
+
+### :bug: Fixes
+
+* add more details for design ([f4097f2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f4097f2836a46e74731cdf6e5c2864d779e7e4c5))
+* update to latest deps ([81b1637](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/81b16371c2e88dd999f4286e8540357634792a25))
+
 ## [24.11.10](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.9...v24.11.10) (2024-06-28)
 
 ### :bug: Fixes
