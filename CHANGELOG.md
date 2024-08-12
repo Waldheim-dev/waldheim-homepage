@@ -1,3 +1,9 @@
+## [24.11.12](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.11...v24.11.12) (2024-08-12)
+
+### :bug: Fixes
+
+* Change Address of Company ([23043ce](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/23043ceb15be48ec6a51301f0c49efb9ea06b2b8))
+
 ## [24.11.11](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.10...v24.11.11) (2024-08-05)
 
 ### :bug: Fixes
