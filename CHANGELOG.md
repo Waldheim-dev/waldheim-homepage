@@ -1,3 +1,9 @@
+## [24.11.13](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.12...v24.11.13) (2024-08-12)
+
+### :bug: Fixes
+
+* Change path of footer privacy ([65a6bb2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/65a6bb26fff55226b0c110da663d1b522c196a12))
+
 ## [24.11.12](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.11...v24.11.12) (2024-08-12)
 
 ### :bug: Fixes
