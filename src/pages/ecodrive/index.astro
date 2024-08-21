@@ -27,12 +27,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </span>
             </div>
 
-            <h1 class='text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-6xl'>Effizienz Ihrer Fahrzeuge auf einen
+            <h1 class='text-4xl font-bold tracking-tight text-wd-800 dark:text-white sm:text-6xl'>Effizienz Ihrer Fahrzeuge auf einen
               Blick</h1>
             <p class='mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300'>Mehr Übersicht über euren Fuhrpark mit Ecodrive</p>
             <div class='mt-10 flex items-center justify-center gap-x-6'>
               <a href='https://www.eco-drive.app' target='_blank'
-                 class='rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400'>Demo
+                 class='rounded-md bg-wd-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-wd-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wd'>Demo
                 ansehen</a>
             </div>
           </div>
@@ -55,14 +55,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2'>
         <div class='lg:pr-8 lg:pt-4'>
           <div class='lg:max-w-lg'>
-            <h2 class='text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400'>Fahrtenbuch digital</h2>
-            <p class='mt-2 text-3xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-4xl'>So einfach wars noch nie</p>
+            <h2 class='text-base font-semibold leading-7 text-wd-600 dark:text-wd-400'>Fahrtenbuch digital</h2>
+            <p class='mt-2 text-3xl font-bold tracking-tight text-wd-800 dark:text-white sm:text-4xl'>So einfach wars noch nie</p>
             <p class='mt-6 text-lg leading-8 text-gray-700 dark:text-gray-300'>Für Firmen ist ein Fahrtenbuch wichtig. Aber auch privat
               möchte man vielleicht den Konsum seines Fahrzeugs überblicken.</p>
             <dl class='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-none'>
               <div class='relative pl-9'>
-                <dt class='inline font-semibold text-gray-800 dark:text-white'>
-                  <i class='absolute left-1 top-1 fa-solid fa-car text-indigo-500'></i>
+                <dt class='inline font-semibold text-wd-800 dark:text-white'>
+                  <i class='absolute left-1 top-1 fa-solid fa-car text-wd-500'></i>
                   Mehrere Fahrzeuge.
                 </dt>
                 <dd class='inline'>Mit der Pro-Version kannst du unbegrenzt viele Fahrzeuge anlegen und verwalten. So
@@ -70,8 +70,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 </dd>
               </div>
               <div class='relative pl-9'>
-                <dt class='inline font-semibold text-gray-800 dark:text-white'>
-                  <i class='absolute left-1 top-1 fa-solid fa-chart-line-up-down text-indigo-500'></i>
+                <dt class='inline font-semibold text-wd-800 dark:text-white'>
+                  <i class='absolute left-1 top-1 fa-solid fa-chart-line-up-down text-wd-500'></i>
                   Statistiken überblicken.
                 </dt>
                 <dd class='inline'>Vergleiche dich mit anderen Fahrern und sehe, wie du im Vergleich abschneidest. Auch
@@ -79,8 +79,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 </dd>
               </div>
               <div class='relative pl-9'>
-                <dt class='inline font-semibold text-gray-800 dark:text-white'>
-                  <i class='absolute left-1 top-1 fa-solid fa-lock-hashtag text-indigo-500'></i>
+                <dt class='inline font-semibold text-wd-800 dark:text-white'>
+                  <i class='absolute left-1 top-1 fa-solid fa-lock-hashtag text-wd-500'></i>
                   DSGVO konform.
                 </dt>
                 <dd class='inline'>Made in Germany. Deine Daten werden auf deutschen Servern gespeichert und unterliegen
@@ -100,8 +100,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <div class='bg-white dark:bg-slate-800 py-24 sm:py-32'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
       <div class='mx-auto max-w-4xl text-center'>
-        <h2 class='text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400'>Preise</h2>
-        <p class='mt-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-5xl'>Preise für alle Teams, Firmen und einzelne Personen</p>
+        <h2 class='text-base font-semibold leading-7 text-wd-600 dark:text-wd-400'>Preise</h2>
+        <p class='mt-2 text-4xl font-bold tracking-tight text-wd-800 dark:text-white sm:text-5xl'>Preise für alle Teams, Firmen und private Personen</p>
       </div>
       <p class='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300'>Wähle aus, was dir gefällt und du nutzen willst</p>
       <script is:inline data-id='script' data-plan='monthly'>
@@ -117,8 +117,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
           monthly?.addEventListener('click', () => {
             script.dataset.plan = 'monthly';
-            monthly.classList.add('bg-indigo-500', 'text-white');
-            annual.classList.remove('bg-indigo-500', 'text-white');
+            monthly.classList.add('bg-wd-500', 'text-white');
+            annual.classList.remove('bg-wd-500', 'text-white');
 
             free.querySelector('.price').innerHTML = '0,-€';
             basic.querySelector('.price').innerHTML = '4,99€';
@@ -133,8 +133,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
           annual?.addEventListener('click', () => {
             script.dataset.plan = 'annual';
-            annual.classList.add('bg-indigo-500', 'text-white');
-            monthly.classList.remove('bg-indigo-500', 'text-white');
+            annual.classList.add('bg-wd-500', 'text-white');
+            monthly.classList.remove('bg-wd-500', 'text-white');
 
             free.querySelector('.price').innerHTML = '0,-€';
             basic.querySelector('.price').innerHTML = '44,46€';
@@ -150,14 +150,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </script>
       <div class='mt-16 flex justify-center'>
         <fieldset
-          class='grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-gray-800 dark:text-white'>
+          class='grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-wd-800 dark:text-white'>
           <legend class='sr-only'>Zahlungsrythmus</legend>
-          <!-- Checked: "bg-indigo-500 text-white" -->
-          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500 text-white' id='monthly' for='frequency-monthly'>
+          <!-- Checked: "bg-wd-500 text-white" -->
+          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-wd-500 text-white' id='monthly' for='frequency-monthly'>
             <input type='radio' name='frequency' id='frequency-monthly' value='monthly' class='sr-only'>
             <span>Monatlich</span>
           </label>
-          <!-- Checked: "bg-indigo-500 text-white" -->
+          <!-- Checked: "bg-wd-500 text-white" -->
           <label class='cursor-pointer rounded-full px-2.5 py-1' id='annual' for='frequency-annualy'>
             <input type='radio' name='frequency' id='frequency-annualy' value='annually' class='sr-only'>
             <span>Jährlich</span>
@@ -167,12 +167,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class='isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-4'>
         <div class='rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70' id='free'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-free' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'><i class='fa-regular fa-seedling text-indigo-600'></i> Free</h3>
+            <h3 id='tier-free' class='text-lg font-semibold leading-8 text-wd-800 dark:text-white'><i class='fa-regular fa-seedling text-wd-600'></i> Free</h3>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Lerne die Software kennen und probiere sie aus.</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>0,-€</span>
+            <span class='price text-4xl font-bold tracking-tight text-wd-800 dark:text-white'>0,-€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
@@ -181,7 +181,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <!--  plan</a>-->
           <ul role='list' class='mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10'>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -189,7 +189,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>1</strong> Fahrzeug</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -200,22 +200,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div class='rounded-3xl p-8 xl:p-10 ring-1  dark:ring-white/10 ring-slate-700/70' id='basic'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-basic' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'><i class='fa-regular fa-car-side text-indigo-600'></i> Basic</h3>
+            <h3 id='tier-basic' class='text-lg font-semibold leading-8 text-wd-800 dark:text-white'><i class='fa-regular fa-car-side text-wd-600'></i> Basic</h3>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Ideal für Familien, kleine Firmen, Teams und Dich!</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>3,99€</span>
+            <span class='price text-4xl font-bold tracking-tight text-wd-800 dark:text-white'>3,99€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
           <!--<a href='#' aria-describedby='tier-startup'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500'>Buy-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-wd-500 text-white shadow-sm hover:bg-wd-400 focus-visible:outline-wd-500'>Buy-->
           <!--  plan</a>-->
           <ul role='list' class='mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10'>
 
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -223,7 +223,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>3</strong> Fahrzeuge</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -231,7 +231,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Tank Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -239,7 +239,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Service Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -248,15 +248,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </li>
           </ul>
         </div>
-        <div class='rounded-3xl p-8 xl:p-10 ring-1 bg-white/5 ring-2 ring-indigo-500' id='pro'>
+        <div class='rounded-3xl p-8 xl:p-10 ring-1 bg-wd-400/5 ring-2 ring-wd-500' id='pro'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-pro' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'><i class='fa-regular fa-rocket-launch text-indigo-600'></i> Pro</h3>
-            <p class='rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white'>Empfehlung</p>
+            <h3 id='tier-pro' class='text-lg font-semibold leading-8 text-wd-800 dark:text-white'><i class='fa-regular fa-rocket-launch text-wd-600'></i> Pro</h3>
+            <p class='rounded-full bg-wd-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white'>Empfehlung</p>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Optimal für Firmen mit einer gesetzlichen Verpflichtung.</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>14,99€</span>
+            <span class='price text-4xl font-bold tracking-tight text-wd-800 dark:text-white'>14,99€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
@@ -267,7 +267,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -275,7 +275,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>10</strong> Fahrzeuge</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -283,7 +283,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Tank Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -291,7 +291,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Service Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -299,7 +299,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Fahrten Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -307,7 +307,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Exportiertes Fahrtenbuch
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -315,7 +315,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>10</strong> Benutzereinladung</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -323,7 +323,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Statistiken
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -334,12 +334,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div class='rounded-3xl p-8 xl:p-10 ring-1  dark:ring-white/10 ring-slate-700/70' id='premium'>
           <div class='flex items-center justify-between gap-x-4'>
-            <h3 id='tier-premium' class='text-lg font-semibold leading-8 text-gray-800 dark:text-white'><i class='fa-regular fa-planet-ringed text-indigo-600'></i> Premium</h3>
+            <h3 id='tier-premium' class='text-lg font-semibold leading-8 text-wd-800 dark:text-white'><i class='fa-regular fa-planet-ringed text-wd-600'></i> Premium</h3>
           </div>
           <p class='mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300'>Optimal für große Firmen und großen Fuhrparks.</p>
           <p class='mt-6 flex items-baseline gap-x-1'>
             <!-- Price, update based on frequency toggle state -->
-            <span class='price text-4xl font-bold tracking-tight text-gray-800 dark:text-white'>249,99€</span>
+            <span class='price text-4xl font-bold tracking-tight text-wd-800 dark:text-white'>249,99€</span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class='frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300'>/Monat</span>
           </p>
@@ -350,7 +350,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -358,7 +358,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>Unbegrenzte</strong> Fahrzeuge</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -366,7 +366,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Tank Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -374,7 +374,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Service Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -382,7 +382,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Fahrten Protokollierung
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -390,7 +390,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Exportiertes Fahrtenbuch
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -398,7 +398,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <span><strong>Unbegrenzte</strong> Benutzereinladung</span>
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -406,7 +406,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Statistiken
             </li>
             <li class='flex gap-x-3'>
-              <svg class='h-6 w-5 flex-none text-indigo-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
+              <svg class='h-6 w-5 flex-none text-wd-600 dark:text-white' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
                 <path fill-rule='evenodd'
                       d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'
                       clip-rule='evenodd' />
@@ -425,7 +425,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!--    <h2 class='text-2xl font-bold leading-10 tracking-tight text-white'>Frequently asked questions</h2>-->
   <!--    <p class='mt-6 max-w-2xl text-base leading-7 text-gray-300'>Have a different question and can’t find the answer-->
   <!--      you’re looking for? Reach out to our support team by <a href='#'-->
-  <!--                                                              class='font-semibold text-indigo-400 hover:text-indigo-300'>sending-->
+  <!--                                                              class='font-semibold text-wd-400 hover:text-wd'>sending-->
   <!--        us an email</a> and we’ll get back to you as soon as we can.</p>-->
   <!--    <div class='mt-20'>-->
   <!--      <dl class='space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'>-->
