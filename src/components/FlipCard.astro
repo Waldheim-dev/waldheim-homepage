@@ -23,7 +23,7 @@ switch (entry.data.knowledgebase) {
 const layer = JSON.stringify(entry.data.layer)
 ---
 <div class='flip-card' data-layer={layer}>
-  <div class='flip-card-inner group bg-slate-300 dark:bg-slate-700 gap-1 rounded-md h-36'>
+  <div class='flip-card-inner group bg-wd-100 dark:bg-slate-700 gap-1 rounded-md h-36'>
     <div class='flip-front flex flex-col justify-center items-center gap-2 p-8 sm:p-10 relative'>
       <img
         class='max-h-12 w-full object-contain group-hover:grayscale-0 duration-150 ease-out hover:ease-in'
@@ -57,7 +57,7 @@ const layer = JSON.stringify(entry.data.layer)
       
       <TimeDiff sinceLastRollup={entry.data.sinceLastRollup} isActive={entry.data.isActive}
                 fixedExperience={entry.data.fixedExperience} />
-      <div class='w-full bg-slate-200 dark:bg-slate-500 rounded-md overflow-hidden'>
+      <div class='w-full bg-wd-50 dark:bg-slate-500 rounded-md overflow-hidden'>
         <div style={`width: ${progress}%`} class={`${color} h-2 flex justify-center items-center`}>
           <span class='text-xs leading-none text-white sm-only hidden'>{entry.data.knowledgebase}</span>
         </div>
