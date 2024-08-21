@@ -1,3 +1,19 @@
+## [25.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.13...v25.0.0) (2024-08-21)
+
+### ⚠ BREAKING CHANGES
+
+* Changes for 2025
+
+### :sparkles: Features
+
+* Add easy edit for skills ([4e91c5b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4e91c5bb75cd5df2ea3052893d8df1ad2b01ff34))
+* Add new Color of Flip Cards ([b80e2c9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b80e2c9b58bded346c332fa2c540e176e69da049))
+* Add new hover effect for header ([e5dcc0d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e5dcc0d54d6f255058080ad06dbf24e0a92af096))
+* Change colors to new WD brand color ([76ad9bd](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/76ad9bdd47323190afe55f6e5848a60ea8642696))
+* Make navigation sticky ([a9f862b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a9f862bd4a9aafdb98bf19a73cbdb35f95fc0815))
+* Update Darkmode with new brands ([015f743](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/015f743f0a2a11febc3db6556f0e94ff5fdcaa03))
+* Update to new depenencies ([165343a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/165343a76b048d2af5ccd3730aaaf15262062f03))
+
 ## [24.11.13](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.12...v24.11.13) (2024-08-12)
 
 ### :bug: Fixes
