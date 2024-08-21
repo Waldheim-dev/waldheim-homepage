@@ -5,7 +5,23 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'wd': {
+            '50': '#f2f7f3',
+            '100': '#dfece0',
+            '200': '#c1d9c5',
+            '300': '#97bea0',
+            '400': '#6b9e78',
+            '500': '#498059',
+            '600': '#366544',
+            '700': '#2b5138',
+            '800': '#24412e',
+            '900': '#1e3626',
+            '950': '#101e16',
+        },
+      },
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
@@ -14,11 +30,11 @@ module.exports = {
       addBase({
 
         ':root': {
-          '--primary': theme('colors.indigo.500'),
-          '--primary-hover': theme('colors.indigo.700'),
+          '--primary': theme('colors.wd.500'),
+          '--primary-hover': theme('colors.wd.700'),
           '--primary-contrast': theme('colors.white'),
-          '--secondary': theme('colors.indigo.400'),
-          '--secondary-hover': theme('colors.indigo.500'),
+          '--secondary': theme('colors.wd.400'),
+          '--secondary-hover': theme('colors.wd.500'),
           '--secondary-contrast': theme('colors.white'),
           '--accent': theme('colors.slate.500'),
           '--accent-contrast': theme('colors.slate.100'),
