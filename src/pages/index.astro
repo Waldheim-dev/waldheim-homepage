@@ -388,18 +388,18 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
   </div>
 
 
-  <section>
-    <div class="bg-wd-100 dark:bg-gray-900">
+  <section class="bg-wd-50 dark:bg-gray-900">
+    <div>
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 pb-2">Filtere die Skills, wie du es dir
           wünscht</p>
         <div class="flex gap-1 justify-center flex-wrap">
           {layer.map((entry) => (
             <button data-trigger="filter" data-filter={entry} data-filtered="false"
-                    class="bg-slate-200 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">{entry}</button>
+                    class="bg-wd-100 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">{entry}</button>
           ))}
           <button data-trigger="filter" data-filter="all" data-filtered="false"
-                  class="bg-slate-200 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">
+                  class="bg-wd-100 dark:bg-slate-700 rounded px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300">
         <span class='text-rose-500' title="Filter zurücksetzen">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
               <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
@@ -430,16 +430,16 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
                   filtered = false;
                 }
                   for(const nextTrigger of triggers) {
-                    nextTrigger.classList.remove('bg-slate-300');
+                    nextTrigger.classList.remove('bg-wd-300');
                     nextTrigger.classList.remove('dark:bg-slate-500');
-                    nextTrigger.classList.add('bg-slate-200');
+                    nextTrigger.classList.add('bg-wd-100');
                     nextTrigger.classList.add('dark:bg-slate-700');
                     nextTrigger.setAttribute('data-filtered', 'false');
                   }
                 if (filtered) {
-                  trigger.classList.remove('bg-slate-200');
+                  trigger.classList.remove('bg-wd-100');
                   trigger.classList.remove('dark:bg-slate-700');
-                  trigger.classList.add('bg-slate-300');
+                  trigger.classList.add('bg-wd-300');
                   trigger.classList.add('dark:bg-slate-500');
                   trigger.setAttribute('data-filtered', 'true');
                 }
@@ -460,7 +460,7 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
         </script>
       </div>
     </div>
-    <div class="bg-wd-100 dark:bg-gray-900 py-12 sm:py-16">
+    <div class="py-12 sm:py-16">
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
         <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Top Skills (<span class="top-counter">{topSkills.length}</span>)</h2>
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Aktuell im Trend oder Produktiv im
@@ -476,7 +476,7 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
         </div>
       </div>
     </div>
-    <div class="bg-wd-100 dark:bg-gray-900 py-12 sm:py-16">
+    <div class="py-12 sm:py-16">
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
         <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Weitere Skills (<span class="counter">{skills.length}</span>)</h2>
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Learn how to grow your business with our
