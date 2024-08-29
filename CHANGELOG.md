@@ -1,3 +1,20 @@
+## [25.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.0.0...v25.1.0) (2024-08-29)
+
+### :sparkles: Features
+
+* Add anchor for partners ([ca7df16](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ca7df1686c91982ce8d44dc62794b33077afc7b2))
+* Add new content for devops ([61a6378](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/61a63785d48bc8832c752ee8e192f681fbd6baa0))
+* Add new content for software development ([087fc86](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/087fc86d967416701744320aa5d30a44ecb90327))
+
+### :bug: Fixes
+
+* add latest versions ([74cebf1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/74cebf1ed3fc7713b9445f0ed409be69ca06ab9c))
+
+### :barber: Style
+
+* add highlights for pricing ([65abb65](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/65abb653e63fac97f3b59039f667c995d37e5b9f))
+* Change darkmode for dropdown menu ([f79564d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f79564d4108dfd1044193b17b8fce7f5ffe9d20a))
+
 ## [25.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v24.11.13...v25.0.0) (2024-08-21)
 
 ### ⚠ BREAKING CHANGES
