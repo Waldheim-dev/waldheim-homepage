@@ -1,3 +1,9 @@
+## [25.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.1.0...v25.2.0) (2024-09-24)
+
+### :sparkles: Features
+
+* add new table view ([4c71e68](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4c71e6823da6b321ffd482277924c4a1a251cce7))
+
 ## [25.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.0.0...v25.1.0) (2024-08-29)
 
 ### :sparkles: Features
