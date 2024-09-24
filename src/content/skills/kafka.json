@@ -6,7 +6,7 @@
   "fixedExperience": 0,
   "sinceLastRollup": "2022-07-01",
   "knowledgebase": "basic",
-  "isTopSkill": true,
+  "isTopSkill": false,
   "isTechStack": false,
   "layer": ["backend"]
 }
