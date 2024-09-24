@@ -1,7 +1,7 @@
 {
   "name": "Kubernetes",
   "image": "/brands/kubernetes.svg",
-  "productive": false,
+  "productive": true,
   "isActive": true,
   "fixedExperience": 0,
   "sinceLastRollup": "2022-01-01",

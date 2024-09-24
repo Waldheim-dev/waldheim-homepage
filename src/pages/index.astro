@@ -6,6 +6,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Pricing from '../components/content/Pricing.astro';
 import FlipCard from '../components/FlipCard.astro';
 import TopPortfolio from '../components/content/TopPortfolio.astro';
+import SkillRow from '../components/SkillRow.astro';
 
 
 const blogPosts = (await getCollection('blog')).sort((a, b) => {
@@ -393,6 +394,22 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 pb-2">Filtere die Skills, wie du es dir
           wünscht</p>
+      <div class='mt-2 flex justify-center'>
+        <fieldset
+          class='grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-wd-800 dark:text-white'>
+          <legend class='sr-only'>Ansicht</legend>
+          <!-- Checked: "bg-wd-500 text-white" -->
+          <label class='cursor-pointer rounded-full px-2.5 py-1 bg-wd-500 text-white' id='card' for='view-cared'>
+            <input type='radio' name='view' id='view-cards' value='card' class='sr-only'>
+            <span>Kartenansicht</span>
+          </label>
+          <!-- Checked: "bg-wd-500 text-white" -->
+          <label class='cursor-pointer rounded-full px-2.5 py-1' id='table' for='view-table'>
+            <input type='radio' name='view' id='view-table' value='table' class='sr-only'>
+            <span>Tabellenansicht</span>
+          </label>
+        </fieldset>
+      </div>
         <div class="flex gap-1 justify-center flex-wrap">
           {layer.map((entry) => (
             <button data-trigger="filter" data-filter={entry} data-filtered="false"
@@ -420,7 +437,7 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
         <script is:inline>
           document.addEventListener('DOMContentLoaded', () => {
             const triggers = document.querySelectorAll('[data-trigger="filter"]');
-            const cards = document.querySelectorAll('.flip-card');
+            const cards = document.querySelectorAll('[data-layer]');
             triggers.forEach((trigger) => {
               trigger.addEventListener('click', () => {
                 let filtered = trigger.getAttribute('data-filtered') === 'true';
@@ -445,10 +462,10 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
                 }
                 for(const card of cards) {
                   if (!filtered) {
-                    card.style.display = 'block';
+                    card.style.display =  null;
                   } else {
                     if (card.getAttribute('data-layer').includes(filter)) {
-                      card.style.display = 'block';
+                      card.style.display = null;
                     } else {
                       card.style.display = 'none';
                     }
@@ -458,41 +475,98 @@ const layer = ['frontend', 'backend', 'design', 'infrastructure', 'quality', 'ge
             });
           });
         </script>
+        <script is:inline data-id='script' data-plan='card'>
+        document.addEventListener('DOMContentLoaded', () => {
+          const script = document.querySelector('*[data-id="script"]');
+          const card = document.querySelector('#card');
+          const table = document.querySelector('#table');
+
+          const cardView = document.querySelector('.card-view');
+          const tableView = document.querySelector('.table-view');
+
+          card?.addEventListener('click', () => {
+            script.dataset.plan = 'card';
+            card.classList.add('bg-wd-500', 'text-white');
+            table.classList.remove('bg-wd-500', 'text-white');
+            cardView.classList.remove('hidden');
+            tableView.classList.add('hidden');
+          })
+
+          table?.addEventListener('click', () => {
+            script.dataset.plan = 'table';
+            table.classList.add('bg-wd-500', 'text-white');
+            card.classList.remove('bg-wd-500', 'text-white');
+            tableView.classList.remove('hidden');
+            cardView.classList.add('hidden');
+          })
+        })
+      </script>
       </div>
     </div>
-    <div class="py-12 sm:py-16">
-      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Top Skills (<span class="top-counter">{topSkills.length}</span>)</h2>
-        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Aktuell im Trend oder Produktiv im
-          Einsatz.</p>
-      </div>
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+    <section class="table-view hidden">
+      <div class="py-12 sm:py-16">
+        <div class="mx-auto max-w-2xl text-left px-6 lg:px-8 py-6">
+      <table class="w-full border-1 border border-wd-100 rounded-md shadow-md">
+        <thead>
+          <tr>
+            <th class="px-2 py-3"></th>
+            <th class="px-2 py-3">Skill</th>
+            <th class="px-2 py-3"></th>
+            <th class="px-2 py-3">Erfahrung</th>
+            <th class="px-2 py-3">Skilllevel</th>
+          </tr>
+        </thead>
+        <tbody>
           {
             topSkills.map((entry) => (
-              <FlipCard entry={entry} />
+              <SkillRow entry={entry} />
             ))
           }
-        </div>
-      </div>
-    </div>
-    <div class="py-12 sm:py-16">
-      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Weitere Skills (<span class="counter">{skills.length}</span>)</h2>
-        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Learn how to grow your business with our
-          expert
-          advice.</p>
-      </div>
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
           {
             skills.map((entry) => (
-              <FlipCard entry={entry} />
+              <SkillRow entry={entry} />
             ))
           }
+        </tbody>
+      </table>
+      </div>
+      </div>
+    </section>
+    <section class="card-view">
+      <div class="py-12 sm:py-16">
+        <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Top Skills (<span class="top-counter">{topSkills.length}</span>)</h2>
+          <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Aktuell im Trend oder Produktiv im
+            Einsatz.</p>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+            {
+              topSkills.map((entry) => (
+                <FlipCard entry={entry} />
+              ))
+            }
+          </div>
         </div>
       </div>
-    </div>
+      <div class="py-12 sm:py-16">
+        <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl">Weitere Skills (<span class="counter">{skills.length}</span>)</h2>
+          <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">Learn how to grow your business with our
+            expert
+            advice.</p>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6">
+            {
+              skills.map((entry) => (
+                <FlipCard entry={entry} />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 
   <!--# Projects-->
