@@ -1,3 +1,9 @@
+## [25.2.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.2.0...v25.2.1) (2024-09-25)
+
+### :bug: Fixes
+
+* add sort functions and better darkmode for table view ([7440241](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/74402410bef634e7b9fc1837d916d2056abe1cb2))
+
 ## [25.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.1.0...v25.2.0) (2024-09-24)
 
 ### :sparkles: Features
