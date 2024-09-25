@@ -23,7 +23,7 @@ switch (entry.data.knowledgebase) {
 const layer = JSON.stringify(entry.data.layer);
 ---
 
-<tr class="odd:bg-wd-200 even:bg-wd-100" data-layer={layer}>
+<tr class="odd:bg-wd-200 even:bg-wd-100 dark:odd:bg-slate-600 dark:even:bg-slate-700" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
   <td class="px-2 py-3">
       <img
       class="max-h-6 w-full object-contain group-hover:grayscale-0 duration-150 ease-out hover:ease-in"
