@@ -6,10 +6,13 @@ import prefetch from "@astrojs/prefetch";
 import compress from "astro-compress";
 
 
+import compressor from 'astro-compressor';
+
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.waldheim.dev',
-  integrations: [mdx(), sitemap(), tailwind(), prefetch(), compress()],
+  integrations: [mdx(), sitemap(), tailwind(), prefetch(), compress(), compressor({gzip: true})],
   styles: {
     '*.scss': {
       preprocessor: 'sass',
