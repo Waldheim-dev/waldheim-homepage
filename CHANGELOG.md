@@ -1,3 +1,9 @@
+## [25.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.2.1...v25.3.0) (2024-10-03)
+
+### :sparkles: Features
+
+* add new effect ([00ef473](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/00ef473091fb540935b93602ca4c57d4af800ddc))
+
 ## [25.2.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.2.0...v25.2.1) (2024-09-25)
 
 ### :bug: Fixes
