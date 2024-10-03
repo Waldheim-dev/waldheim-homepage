@@ -1,52 +1,74 @@
 ---
 import { getCollection } from 'astro:content';
 import FormattedDate from '../FormattedDate.astro';
-const projects = (await getCollection('project')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).filter((project) => project.data.isTopProject === true);
-const categories = (await getCollection('project_kategorie'));
+const projects = (await getCollection('project'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter((project) => project.data.isTopProject === true);
+const categories = await getCollection('project_kategorie');
 ---
 
-<section class='bg-white dark:bg-slate-800 py-24 sm:py-32'>
-  <div class='mx-auto px-6 lg:px-8'>
-    <div class='mx-auto max-w-2xl sm:text-center'>
-      <h2 class='text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-50 sm:text-4xl'>Auszüge aus meinem
-        Portfolio</h2>
-      <p class='my-6 text-lg leading-8 text-gray-600 dark:text-slate-300'>Schaut euch die bestehenden Projekte an und noch viele mehr</p>
-      <a href='/projects' class='mt-6 rounded-md px-3 py-2 bg-wd-600 text-white hover:bg-wd-800'>Alle Projekte</a>
+<section class="bg-white dark:bg-slate-800 py-24 sm:py-32">
+  <div class="mx-auto px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl sm:text-center">
+      <h2
+        class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-50 sm:text-4xl"
+      >
+        Auszüge aus meinem Portfolio
+      </h2>
+      <p class="my-6 text-lg leading-8 text-gray-600 dark:text-slate-300">
+        Schaut euch die bestehenden Projekte an und noch viele mehr
+      </p>
+      <a
+        href="/projects"
+        class="mt-6 rounded-md px-3 py-2 bg-wd-600 text-white hover:bg-wd-800"
+        >Alle Projekte</a
+      >
     </div>
-    <div class='overflow-hidde relatve isolate pt-24 xl:pb-16 pb-96'>
-      <div class='flex absolute gap-16 slide'>
+    <div class="overflow-hidde relatve isolate pt-24 xl:pb-16 pb-96">
+      <div class="flex absolute gap-16 slide">
+        {
+          projects.map((project) => (
+            <div class="bg-gray-900 pb-28 sm:pb-36 xl:pb-8 rounded-2xl min-w-96">
+              <div class="mx-auto flex min-w-5xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
+                <div class="-mt-8 w-full max-w-1xl xl:-mb-8">
+                  <div class="relative aspect-[16/9] w-96 h-64 h-full md:-mx-8 xl:mx-0">
+                    <div class="blur absolute inset-0 rounded-lg transition-all -translate-x-0 translate-y-0 bg-gradient-to-br from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
 
-          {projects.map((project) => (
-            <div class='bg-gray-900 pb-28 sm:pb-36 xl:pb-8 rounded-2xl min-w-96'>
-              <div
-                class='mx-auto flex min-w-5xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch'>
-                <div class='-mt-8 w-full max-w-1xl xl:-mb-8'>
-                  <div class='relative aspect-[16/9] w-96 h-64 h-full md:-mx-8 xl:mx-0'>
-                    <img class='absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'
-                         src={project.data.heroImage} alt={project.data.title} loading='lazy'>
+                    <img
+                      class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                      src={project.data.heroImage}
+                      alt={project.data.title}
+                      loading="lazy"
+                    />
                   </div>
                 </div>
-                <div class='min-w-96 xl:flex-auto'>
-                  <figure class='relative isolate pt-6 sm:pt-12'>
-                    <blockquote class='text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9'>
+                <div class="min-w-96 xl:flex-auto">
+                  <figure class="relative isolate pt-6 sm:pt-12">
+                    <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                       <p>{project.data.title}</p>
                     </blockquote>
-                    <div
-                      class="font-medium text-slate-300">
-                      {categories.find(category => category.id === project.data?.category.id)?.data.name
-                      }</div>
-                    <figcaption class='mt-8 text-base'>
-                      <a href={`/projects/${project.slug}`}
-                         class='rounded-md px-3 py-2 bg-wd-600 text-white hover:bg-wd-800'>Projekt ansehen</a>
+                    <div class="font-medium text-slate-300">
+                      {
+                        categories.find(
+                          (category) =>
+                            category.id === project.data?.category.id
+                        )?.data.name
+                      }
+                    </div>
+                    <figcaption class="mt-8 text-base">
+                      <a
+                        href={`/projects/${project.slug}`}
+                        class="rounded-md px-3 py-2 bg-wd-600 text-white hover:bg-wd-800"
+                      >
+                        Projekt ansehen
+                      </a>
                     </figcaption>
                   </figure>
                 </div>
               </div>
             </div>
-          ))}
-
+          ))
+        }
       </div>
     </div>
   </div>
@@ -66,14 +88,13 @@ const categories = (await getCollection('project_kategorie'));
     slide.style.transition = `transform ${innerTime}ms ease-in-out`;
     slide.style.transform = `translateX(-${first.offsetWidth + gap}px)`;
 
-
     setTimeout(() => {
       slide.removeChild(first);
       slide.appendChild(first);
       slide.style.transition = 'none';
       slide.style.transform = 'translateX(0)';
     }, innerTime);
-  }
+  };
 
   // scroll to left, but stop all on hover
   slide.addEventListener('mouseenter', () => {
@@ -85,8 +106,4 @@ const categories = (await getCollection('project_kategorie'));
   let slideInterval = setInterval(changeSlide, outerTime);
 
   // scroll to left smothly
-
-
-
-
 </script>
