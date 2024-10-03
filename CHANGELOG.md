@@ -1,3 +1,9 @@
+## [25.3.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.0...v25.3.1) (2024-10-03)
+
+### :bug: Fixes
+
+* add new gradients and more bento styles ([5db3672](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5db3672c840d58ce8bebcb40da76814fd33d1571))
+
 ## [25.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.2.1...v25.3.0) (2024-10-03)
 
 ### :sparkles: Features
