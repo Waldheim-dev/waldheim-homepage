@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "lint": "eslint",
     "astro": "astro",
     "zip": "node zip.js"
   },
@@ -17,22 +18,24 @@
     "@astrojs/sitemap": "3.1.6",
     "@astrojs/tailwind": "5.1.1",
     "@fortawesome/fontawesome-pro": "6.6.x",
-    "@types/node": "22.5.x",
-    "astro": "4.15.9",
+    "@types/node": "22.7.x",
+    "astro": "4.15.10",
     "astro-compress": "2.3.x",
-    "sass": "1.77.x",
+    "sass": "1.79.x",
     "tailwindcss": "3.4.x",
     "vanilla-cookieconsent": "3.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.x",
-    "@typescript-eslint/eslint-plugin": "8.3.x",
-    "@typescript-eslint/parser": "8.3.x",
-    "eslint": "9.9.x",
+    "@typescript-eslint/eslint-plugin": "8.8.x",
+    "@typescript-eslint/parser": "8.8.0",
+    "eslint": "9.11.1",
     "eslint-config-prettier": "9.1.x",
+    "eslint-plugin-astro": "^1.2.4",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
     "prettier": "3.3.x",
     "ts-node": "10.9.x",
-    "typescript": "5.5.x",
+    "typescript": "5.6.x",
     "zip-dir": "2.0.x"
   }
 }
