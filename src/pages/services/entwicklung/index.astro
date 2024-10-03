@@ -52,18 +52,18 @@ import Partner from '../../../components/content/Partner.astro';
                     class='text-purple-300'>import</span> &lbrace; <span
                     class='text-yellow-300'>ChangeDetectionStrategy</span>, <span
                     class='text-yellow-300'>Component</span>, <span class='text-yellow-300'>effect</span>, <span
-                    class='text-yellow-300'>OnInit</span> } <span class='text-purple-300'>from</span> <span
+                    class='text-yellow-300'>OnInit</span> &rbrace; <span class='text-purple-300'>from</span> <span
                     class='text-green-200'>'@angular/core'</span>;
-<span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>CommonModule</span> } <span
+<span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>CommonModule</span> &rbrace; <span
                       class='text-purple-300'>from</span> <span class='text-green-200'>'@angular/common'</span>;
 <span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>ActivatedRoute</span>, <span
-                      class='text-yellow-300'>RouterLink</span> } <span class='text-purple-300'>from</span> <span
+                      class='text-yellow-300'>RouterLink</span> &rbrace; <span class='text-purple-300'>from</span> <span
                       class='text-green-200'>'@angular/router'</span>;
-<span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>CustomerService</span> } <span
+<span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>CustomerService</span> &rbrace; <span
                       class='text-purple-300'>from</span> <span
                       class='text-green-200'>'../../../../shared/services'</span>;
 <span class='text-purple-300'>import</span> &lbrace; <span class='text-yellow-300'>FormControl</span>, <span
-                      class='text-yellow-300'>FormGroup</span>, <span class='text-yellow-300'>ReactiveFormsModule</span> } <span
+                      class='text-yellow-300'>FormGroup</span>, <span class='text-yellow-300'>ReactiveFormsModule</span> &rbrace; <span
                       class='text-purple-300'>from</span> <span class='text-green-200'>'@angular/forms'</span>;
 
 <span class='text-gray-500'>@Component</span>(&lbrace;
@@ -76,26 +76,26 @@ import Partner from '../../../components/content/Partner.astro';
   <span class='text-blue-300'>styleUrls</span>: [<span class='text-green-200'>'./kunde.component.scss'</span>],
   <span class='text-blue-300'>changeDetection</span>: <span class='text-yellow-300'>ChangeDetectionStrategy</span>.<span
                       class='text-blue-300'>Default</span>,
-})
+&rbrace;)
 <span class='text-purple-300'>export class</span> <span class='text-yellow-300'>KundeComponent</span> <span
                       class='text-purple-300'>implements</span> <span class='text-yellow-300'>OnInit</span> &lbrace;
   <span class='text-blue-300'>customerForm</span>: <span class='text-yellow-300'>FormGroup</span> = <span
-                      class='text-purple-300'>new</span> <span class='text-yellow-300'>FormGroup</span>(&lbrace;});
+                      class='text-purple-300'>new</span> <span class='text-yellow-300'>FormGroup</span>(&lbrace;&rbrace;);
 
   <span class='text-blue-300'>constructor</span>(
       <span class='text-purple-300'>public</span> <span class='text-blue-300'>service: CustomerService</span>,
       <span class='text-purple-300'>private</span> <span class='text-blue-300'>router: ActivatedRoute</span>,
     ) &lbrace;
-      <span class='text-blue-300'>effect</span>(() => &lbrace;
+      <span class='text-blue-300'>effect</span>(() &Rightarrow; &lbrace;
       this.<span class='text-blue-300'>customerForm</span>.<span class='text-blue-300'>patchValue</span>(this.<span
                       class='text-blue-300'>service</span>.<span
                       class='text-blue-300'>serviceItem</span>() ?? this.<span class='text-blue-300'>customerForm</span>.<span
                       class='text-blue-300'>getRawValue</span>());
-    });
-  }
+    &rbrace;);
+  &rbrace;
 
   <span class='text-gray-500'>// do more...</span>
-}</code></pre>
+&rbrace;</code></pre>
                   </div>
                 </div>
               </div>

@@ -6,19 +6,62 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      animation: {
+        tilt: 'tilt 3s linear infinite',
+        spin_right: 'spin_right 3s linear infinite',
+        spin_right_fast: 'spin_right 2s linear infinite',
+        spin_left: 'spin_left 3s linear infinite',
+        rotate_gradient: 'rotate_gradient 5s linear infinite',
+      },
+      keyframes: {
+        tilt: {
+          '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(1.5deg)' },
+          '75%': { transform: 'rotate(-1.5deg)' }
+        },
+        spin_right: {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        spin_left: {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(-180deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
+        rotate_gradient: {
+          '0.00%': { backgroundImage: 'linear-gradient(0deg, var(--tw-gradient-stops))' },
+          '6.25%': { backgroundImage: 'linear-gradient(22.5deg, var(--tw-gradient-stops))' },
+          '12.50%': { backgroundImage: 'linear-gradient(45deg, var(--tw-gradient-stops))' },
+          '18.75%': { backgroundImage: 'linear-gradient(67.5deg, var(--tw-gradient-stops))' },
+          '25.00%': { backgroundImage: 'linear-gradient(90deg, var(--tw-gradient-stops))' },
+          '31.25%': { backgroundImage: 'linear-gradient(112.5deg, var(--tw-gradient-stops))' },
+          '37.50%': { backgroundImage: 'linear-gradient(135deg, var(--tw-gradient-stops))' },
+          '43.75%': { backgroundImage: 'linear-gradient(157.5deg, var(--tw-gradient-stops))' },
+          '50.00%': { backgroundImage: 'linear-gradient(180deg, var(--tw-gradient-stops))' },
+          '56.25%': { backgroundImage: 'linear-gradient(202.5deg, var(--tw-gradient-stops))' },
+          '62.50%': { backgroundImage: 'linear-gradient(225deg, var(--tw-gradient-stops))' },
+          '68.75%': { backgroundImage: 'linear-gradient(247.5deg, var(--tw-gradient-stops))' },
+          '75.00%': { backgroundImage: 'linear-gradient(270deg, var(--tw-gradient-stops))' },
+          '81.25%': { backgroundImage: 'linear-gradient(292.5deg, var(--tw-gradient-stops))' },
+          '87.50%': { backgroundImage: 'linear-gradient(315deg, var(--tw-gradient-stops))' },
+          '93.75%': { backgroundImage: 'linear-gradient(337.5deg, var(--tw-gradient-stops))' },
+          '100.00%': { backgroundImage: 'linear-gradient(360deg, var(--tw-gradient-stops))' }
+        }
+      },
       colors: {
         'wd': {
-            '50': '#f2f7f3',
-            '100': '#dfece0',
-            '200': '#c1d9c5',
-            '300': '#97bea0',
-            '400': '#6b9e78',
-            '500': '#498059',
-            '600': '#366544',
-            '700': '#2b5138',
-            '800': '#24412e',
-            '900': '#1e3626',
-            '950': '#101e16',
+          '50': '#f2f7f3',
+          '100': '#dfece0',
+          '200': '#c1d9c5',
+          '300': '#97bea0',
+          '400': '#6b9e78',
+          '500': '#498059',
+          '600': '#366544',
+          '700': '#2b5138',
+          '800': '#24412e',
+          '900': '#1e3626',
+          '950': '#101e16',
         },
       },
     }
@@ -26,7 +69,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
 
-    plugin(function({ addBase, theme }) {
+    plugin(function ({ addBase, theme }) {
       addBase({
 
         ':root': {
