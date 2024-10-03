@@ -1,3 +1,13 @@
+## [25.3.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.1...v25.3.2) (2024-10-03)
+
+### :bug: Fixes
+
+* add new gzip compression ([4160c22](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4160c22a51ec088a03dff975d622a33fc9d1cca7))
+
+### :repeat: Chores
+
+* add new lock ([23fa6c3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/23fa6c34e5d9237bc9534e1a410c1d76c1552f9c))
+
 ## [25.3.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.0...v25.3.1) (2024-10-03)
 
 ### :bug: Fixes
