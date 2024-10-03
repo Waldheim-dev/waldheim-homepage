@@ -43,6 +43,8 @@ const categories = (await getCollection('project_kategorie'));
                 class='mx-auto flex min-w-5xl flex-col items-center gap-x-8 gap-y-10 px-6'>
                 <div class='-mt-8 w-full max-w-1xl xl:-mb-8'>
                   <div class='relative aspect-[16/9] w-68 md:-mx-8 xl:mx-0'>
+                    <div class="blur absolute inset-0 rounded-2xl transition-all -translate-x-0 translate-y-0 bg-gradient-to-br from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
+
                     <img class='absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'
                          src={project.data.heroImage} alt={project.data.title} loading='lazy'>
                   </div>
