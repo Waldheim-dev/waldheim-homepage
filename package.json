@@ -21,6 +21,7 @@
     "@types/node": "22.7.x",
     "astro": "4.15.10",
     "astro-compress": "2.3.x",
+    "astro-compressor": "0.4.1",
     "sass": "1.79.x",
     "tailwindcss": "3.4.x",
     "vanilla-cookieconsent": "3.0.1"
