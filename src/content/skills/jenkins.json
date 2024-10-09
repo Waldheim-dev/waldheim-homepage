@@ -1,0 +1,12 @@
+{
+  "name": "Jenkins",
+  "image": "/brands/jenkins-1.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2024-10-01",
+  "knowledgebase": "basic",
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": ["infrastructure"]
+}
