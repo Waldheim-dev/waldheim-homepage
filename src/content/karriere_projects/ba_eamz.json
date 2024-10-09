@@ -1,0 +1,10 @@
+{
+
+    "name": "Eine deutsche Behörde, Nürnberg ",
+    "position": "Frontend Senior-Developer",
+    "description": "Aus Datenschutzrechtlichen Gründen darf leider hierzu kein Kundenname genannt werden. Mit diesem Projekt wurde ein Genehmigungsprozess für eine Behördliche Freigabe digitalisiert.",
+    "techstack": ["kubernetes","stencil","bitbucket","axure","confluence","jira","css","eslint","git","grafana","html","java","jaws","jest","kafka","linux","liquibase","mssql","nexusiq","playwright","nodejs","prettier","prometheus","quarkus","sonarqube","ts","windows","scss"],
+    "from": "2022-11-01",
+  "to": "2023-10-31"
+    }
+    

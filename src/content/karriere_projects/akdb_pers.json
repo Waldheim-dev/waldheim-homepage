@@ -1,0 +1,9 @@
+{
+
+    "name": "Anstallt für Kommunale Datenverarbeitung in Bayern (AKDB), München",
+    "position": "DevSecOps-Spezialist",
+    "description": "Hierbei wird seitens DevOps die Automatisierung und Standardisierung von Prozessen und Tools in der Softwareentwicklung und IT-Infrastruktur betrieben. Im Bereich DevSecOps wird die Sicherheit in den Entwicklungsprozess integriert und automatisiert. Hierbei wird auf die Einhaltung von Sicherheitsstandards und -richtlinien geachtet.",
+    "techstack": ["kubernetes","helm","gitlab","vue","dotnet","jenkins","windows","git"],
+    "from": "2024-10-01"
+    }
+    
