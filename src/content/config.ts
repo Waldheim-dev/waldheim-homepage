@@ -100,10 +100,50 @@ const skillsCollection = defineCollection({
   schema: skill
 });
 
+const karriere_projectsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    description: z.string(),
+    position: z.string(),
+    from: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val)),
+    to: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val)).optional(),
+    techstack: z.array(reference('skills')).optional(),
+  }),
+});
+
+const karriereCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    from: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val)),
+    to: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val)).optional(),
+    company: z.string(),
+    position: z.string(),
+    description: z.string(),
+    isCurrent: z.boolean(),
+    location: z.string(),
+    projects: z.array(reference('karriere_projects')).optional(),
+  }),
+});
+
 export const collections = {
   blog: blogCollection,
   author: authorCollection,
   project: projectCollection,
   project_kategorie: project_kategorie,
-  skills: skillsCollection
+  skills: skillsCollection,
+  karriere: karriereCollection,
+  karriere_projects: karriere_projectsCollection,
 };

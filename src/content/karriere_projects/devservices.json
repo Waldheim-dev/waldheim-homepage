@@ -1,0 +1,8 @@
+{
+
+"name": "DevSecOps im internen DevService-Team",
+"position": "DevSecOps-Spezialist",
+"description": "Teammitglied des Firmeninternen DevService-Teams, welches die DevOps Themen für die Inhouse-Entwicklungen übernimmt und den Entwicklungsteams beiseite steht für die DevSecOps-Themen.",
+"techstack": ["kubernetes","helm","gitlab","angular","linux","docker","nodejs","jest","nexusrepo","sonarqube","eslint","prettier","semantic","vitest","react","vite","vue","aws","qwik","svelte","jira","confluence","git","html","css","scss","ts","windows","fluxcd","helm","terraform"],
+"from": "2023-11-01"
+}
