@@ -1,3 +1,21 @@
+## [25.3.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.2...v25.3.3) (2024-10-09)
+
+### :bug: Fixes
+
+* add latest updates ([8aa7c26](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8aa7c26c17738961e3e103b71e2821debcfc02d1))
+* add new page (about me) ([3ae00e2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3ae00e291b332108d7464f68d9ada46340bf84db))
+* add new project ([706799d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/706799d18ee1a2b2ce5752d83ac5222a98afc7d5))
+* add new skills (jenkins and dotnet) ([539e19a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/539e19a424af25103967d130a1c19a74da627ee1))
+* change icon of kubernetes ([a7d801c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a7d801cc08093a3642f79a3559594bf85a294d50))
+
+### :barber: Style
+
+* add new blury effect ([2f088b1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2f088b1882db603f8dee5f32f9576e3d8c41ca30))
+
+### :zap: Reverts
+
+* remove unused partner ([514cb5e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/514cb5e6a09797a59055bce96de7c0da1bc2c890))
+
 ## [25.3.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.1...v25.3.2) (2024-10-03)
 
 ### :bug: Fixes
