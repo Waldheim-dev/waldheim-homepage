@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import FlipCard from './FlipCard.astro';
+const { skills } = Astro.props;
+
+const skillsCollection = (await getCollection('skills')).filter((skill) =>
+  (skills as string[]).find((sk) => sk.id === skill.id)
+);
+---
+
+<div
+  class="grid grid-cols-2 gap-2 mt-4 sm:mx-0 md:grid-cols-5"
+>
+  {skillsCollection.map((skill) => <FlipCard entry={skill} />)}
+</div>
