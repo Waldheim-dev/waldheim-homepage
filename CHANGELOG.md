@@ -1,3 +1,9 @@
+## [25.3.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.3...v25.3.4) (2024-10-09)
+
+### :bug: Fixes
+
+* add missing path ([f44fd7d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f44fd7d50a0ee9bb49077f364473fb4a470ecd2d))
+
 ## [25.3.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.2...v25.3.3) (2024-10-09)
 
 ### :bug: Fixes
