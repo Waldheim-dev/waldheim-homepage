@@ -1,0 +1,12 @@
+{
+  "name": ".Net",
+  "image": "/brands/dot-net-core-7.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2024-10-01",
+  "knowledgebase": "basic",
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": ["backend"]
+}
