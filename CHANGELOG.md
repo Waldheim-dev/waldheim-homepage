@@ -1,3 +1,9 @@
+## [25.3.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.4...v25.3.5) (2024-10-16)
+
+### :bug: Fixes
+
+* overwrite customer names ([92e91ea](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/92e91ea20e548f6844952f0989c5fcb881b44d08))
+
 ## [25.3.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.3...v25.3.4) (2024-10-09)
 
 ### :bug: Fixes
