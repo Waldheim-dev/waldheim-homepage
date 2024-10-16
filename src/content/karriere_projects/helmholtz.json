@@ -1,5 +1,5 @@
 {
-  "name": "Helmholtz Zentrum München ",
+  "name": "Forschungseinrichtung im medizinischen Bereich, München",
   "position": "Frontend Senior-Developer",
   "description": "Mit dieser Web-Applikation werden Studien mit Patientendaten und zugehörigen medizinischen Werten sowie pharmazeutischen Indikationen im Rahmen der Diabetesforschung verwaltet. Studienbetreuer können, an die Kanban-Methode angelehnt, ihre anstehenden Aufgaben einsehen, bearbeiten und dokumentieren. ",
   "techstack": ["angular","aws","figma","jira","confluence","git","html","css","scss","ts","windows","linux","docker","postgress","nodejs","jest","cypress","sonarqube","eslint","prettier","gitlab","java","nexusrepo","semantic","vitest","react","vite"],
