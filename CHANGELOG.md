@@ -1,3 +1,9 @@
+## [25.3.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.6...v25.3.7) (2024-11-17)
+
+### :bug: Fixes
+
+* change copy of dist ([13d0b1d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/13d0b1dbd96ff6dd0e799157a2e5c94ced8a6432))
+
 ## [25.3.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.5...v25.3.6) (2024-11-17)
 
 ### :bug: Fixes
