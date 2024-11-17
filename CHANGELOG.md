@@ -1,3 +1,11 @@
+## [25.3.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.5...v25.3.6) (2024-11-17)
+
+### :bug: Fixes
+
+* limit pnpm usage ([d417c7b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d417c7b9828d9d016e6bd8846185e83156e4e721))
+* update deps ([2251a49](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2251a49639a11fd3263971753bd073998dd7ef05))
+* update ecodrive knowledge ([5bc1084](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5bc1084cb6b2858492fe3a753dc41ca82856582d))
+
 ## [25.3.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.4...v25.3.5) (2024-10-16)
 
 ### :bug: Fixes
