@@ -1,23 +1,24 @@
 ARG PORT=8084
 
-FROM registry.gitlab.com/mwaldheim/container/angular:latest as build
+FROM node:23-alpine AS build
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
 USER root
-
-RUN apk add --no-cache curl
 
 
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/app
+WORKDIR /app
 
 COPY . .
 
-RUN pnpm i
+RUN pnpm install
 RUN pnpm run build
 
-FROM nginx:latest as production
+FROM nginx:alpine AS production
 
 HEALTHCHECK --interval=10s --timeout=3s \
   CMD curl -f http://localhost || exit 1
