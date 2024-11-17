@@ -23,5 +23,5 @@ FROM nginx:alpine AS production
 HEALTHCHECK --interval=10s --timeout=3s \
   CMD curl -f http://localhost || exit 1
 
-COPY --from=build /opt/app/dist  /usr/share/nginx/html
+COPY --from=build /app/dist  /usr/share/nginx/html
 EXPOSE ${PORT}
