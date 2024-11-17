@@ -15,12 +15,18 @@ assets:
     'projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png',
     'projects/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png',
     'projects/waldheim-dev/ecodrive/ecodrive_settings.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_account.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_add_fuel.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_audit.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_report_fuel.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_vehicle.png',
+    'projects/waldheim-dev/ecodrive/ecodrive_vehicles.png',
     'projects/waldheim-dev/ecodrive/ecodrive_releasenotes.png',
   ]
 overview:
   [
     { title: 'Branche', meta: 'IT' },
-    { title: 'Projektgr&ouml;&szlig;e', meta: '2 Personen' },
+    { title: 'Projektgr&ouml;&szlig;e', meta: '1 Person' },
     { title: 'Projektdauer', meta: 'In Entwicklung' },
   ]
 tags:
@@ -42,6 +48,7 @@ tags:
     'Stripe',
     'Apexcharts',
     'Firebase-Auth',
+    "Express.js"
   ]
 general:
   [
@@ -58,10 +65,10 @@ frontend:
     'Sicherung der CodeQuality durch Unittests mit Jest und e2e-Tests mit Cypress',
     'Optimierung der Workflows durch nx.dev',
   ]
-backend: ['Entwicklung eines eigenen OAuth-Moduls']
-design: ['Tailwind basierte UI', 'Optimierte Darstellung für optionale PWA-Funktion']
+backend: ['Entwicklung eines eigenen OAuth-Moduls','Implementierung von REST-Schnittstellen','Sicherung der Daten durch oAuth2','Datenbankanbindung mit MariaDB','TypeORM für die Datenbankanbindung']
+design: ['Tailwind basierte UI', 'Optimierte Darstellung für optionale PWA-Funktion','Konzeption der UI/UX','Erstellung von Mockups und Prototypen']
 problem: "Mich hat es schon immer interessiert, wie effizient meine Fahrzeuge im Vergleich zueinander sind, jedoch fehlte mir die Muse das immer zu berechnen."
 solution: "Um ein Tool zu schaffen, was diese Funktionen abdeckt, habe ich einen Geschäftspartner mit einbezogen und eine Software für die Erfassung dieser Daten erzeugt, welche dann Vergleiche vornimmt und statistiken erzeugt für den Anwender und mit anderen Benutzern vergleicht."
 client: {name: "Waldheim.dev", web: {name: "waldheim.dev", url: "https://www.waldheim.dev"}, description: ""}
-techStack: ["angular","auth0","css","playwright","docker","eslint","firebase","figma","git","gitlab","html","ionos","jest","kubernetes","nodejs","ngrx","rxjs","prettier","scss","semantic","tailwind","ts","webstandards","windows","linux"]
+techStack: ["angular","auth0","css","playwright","docker","eslint","firebase","figma","git","gitlab","html","ionos","jest","kubernetes","nodejs","ngrx","rxjs","prettier","scss","semantic","tailwind","ts","webstandards","windows","linux","express","eslint","mysql"]
 ---
