@@ -7,6 +7,6 @@
   "sinceLastRollup": "2022-07-01",
   "knowledgebase": "advanced",
   "isTopSkill": true,
-  "isTechStack": false,
+  "isTechStack": true,
   "layer": ["quality", "frontend"]
 }

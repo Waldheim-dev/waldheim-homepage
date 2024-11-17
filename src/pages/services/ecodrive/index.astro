@@ -1,6 +1,6 @@
 ---
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 ---
 
 <style>
@@ -38,7 +38,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               Effizienz Ihrer Fahrzeuge auf einen Blick
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Mehr Übersicht über euren Fuhrpark mit Ecodrive
+              Mehr Übersicht über euren Fuhrpark mit Ecodrive. Einfach und
+              schnell. Jetzt testen!
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -157,6 +158,76 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </div>
 
   <div class="bg-white dark:bg-slate-800 py-24 sm:py-32">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-base/7 font-semibold text-wd-600">Steigere jetzt die effizienz</h2>
+      <p class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 dark:text-white sm:text-5xl">Mit den tollen Funktionen von Ecodrive mehr Transparenz zu deinem Fahrzeug</p>
+      <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+        <div class="relative lg:col-span-3">
+          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-700 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
+            <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_login.png" alt="">
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-wd-600 dark:text-wd-400">Einfach</h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Social Login</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Melde dich einfach mit deinem Social Media an oder erstelle einen Account. Dank dieser Mechanik kannst du weitere Benutzer je nach Modell einladen.</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
+        </div>
+        <div class="relative lg:col-span-3">
+          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-700 lg:rounded-tr-[2rem]"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
+            <img class="h-80 object-cover object-left lg:object-right" src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" alt="">
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-wd-600 dark:text-wd-400">Übersicht</h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Halte alles im Überblick</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Hier werden alle deine Infos für das Fahrzeug zusammen getragen und dargestellt. Nutze es um dir bewusst zu werden, was dein Fahrzeug dich kostet.</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"></div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-700 lg:rounded-bl-[2rem]"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
+            <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_settings.png" alt="">
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-wd-600 dark:text-wd-400">i18n</h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Nutzbar für eigentlich jeden!</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Dank Übersetzungsfunktion für jeden Benutzer nutzbar und zentral speicherbar.</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]"></div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-700"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+            <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_vehicles.png" alt="">
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-wd-600 dark:text-wd-400">Multiple</h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Speichere deinen gesamten Fuhrpark ab</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Vergleiche deine Fahrzeuge untereinander aber auch mit anderen Personen. Wo stehst du im internationalen Bereich?</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
+        </div>
+        <div class="relative lg:col-span-2">
+          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-700 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
+            <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_add_fuel.png" alt="">
+            <div class="p-10 pt-4">
+              <h3 class="text-sm/4 font-semibold text-wd-600 dark:text-wd-400">Verbrauch</h3>
+              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Erfasse dein Nutzungsverhalten</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Ermittle deine Kosten, die dich, und deinen Konsum. Wo stehst du im Durchschnitt?</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-white dark:bg-slate-800 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
         <h2
@@ -173,7 +244,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p
         class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300"
       >
-        Wähle aus, was dir gefällt und du nutzen willst
+        Wähle aus, was dir gefällt und du nutzen willst. Aktuell sind wir in der Vorbereitung von Version 1.0. Die Preise sind noch nicht final und können sich noch ändern. Geplanter Start im Jahr 2025.
       </p>
       <script is:inline data-id="script" data-plan="monthly">
         document.addEventListener('DOMContentLoaded', () => {
@@ -273,6 +344,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Lerne die Software kennen und probiere sie aus.
+            <br> <em>Ab Version 1.0</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
@@ -337,6 +409,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Ideal für Familien, kleine Firmen, Teams und Dich!
+            <br> <em>Ab Version 1.0</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
@@ -434,6 +507,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Optimal für Firmen mit einer gesetzlichen Verpflichtung.
+            <br> <em>Ab Version 1.1</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
@@ -582,6 +656,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Optimal für große Firmen und großen Fuhrparks.
+            <br> <em>Ab Version 1.2</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
