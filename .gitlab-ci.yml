@@ -1,21 +1,30 @@
+
 stages:
-  - build
+  - '.pre'
+  - prepare
   - test
+  - build
+  - release
+  - prepare-deploy
   - deploy
+  - canary
+  - staging
+  - production
   - review
   - dast
-  - staging
-  - canary
-  - production
   - performance
   - cleanup
+  - '.post'
 
-variables:
-  SAST_EXCLUDED_ANALYZERS: '/sobelow/'
 include:
-  - template: Security/SAST.gitlab-ci.yml
-  - template: Security/SAST-IaC.latest.gitlab-ci.yml
-  - template: Security/Dependency-Scanning.gitlab-ci.yml
-  - template: Security/Secret-Detection.gitlab-ci.yml
-  - remote: https://gitlab.com/mwaldheim/container/-/raw/main/version/release.yml
-  - remote: https://gitlab.com/mwaldheim/container/-/raw/main/sshdeploy/sshdeploy.yml
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-install@~latest
+    inputs:       
+      image: registry.gitlab.com/forestdesign/ci-components/node:latest
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-build@~latest
+    inputs:
+      image: registry.gitlab.com/forestdesign/ci-components/node:latest
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-semantic@~latest
+    inputs:
+      image: registry.gitlab.com/forestdesign/ci-components/node:latest     
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-ssh@~latest
+ 
