@@ -37,6 +37,15 @@
     "prettier": "3.3.x",
     "ts-node": "10.9.x",
     "typescript": "5.6.x",
-    "zip-dir": "2.0.x"
+    "zip-dir": "2.0.x",
+    
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.0",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/gitlab": "13.2.1",
+    "@semantic-release/release-notes-generator": "14.0.1",
+    "conventional-changelog-conventionalcommits": "8.0.0",
+    "semantic-release": "24.2.0"
   }
 }
