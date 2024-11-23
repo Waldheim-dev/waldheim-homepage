@@ -15,8 +15,8 @@ const karriere = (await getCollection('karriere')).sort(
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 
-    <div class="relative isolate overflow-hidden bg-gradient-to-b from-wd-100/20 pt-14">
-        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-slate-800 shadow-xl shadow-wd-600/10 ring-1 ring-wd-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
+    <div class="relative isolate overflow-hidden bg-gradient-to-b from-primary-100/20 pt-14">
+        <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-slate-800 shadow-xl shadow-primary-600/10 ring-1 ring-primary-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
         <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
             <h1 class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:col-span-2 xl:col-auto">Erfahre mehr über mich und meine Karriere</h1>
@@ -26,7 +26,7 @@ const karriere = (await getCollection('karriere')).sort(
               <div class="mt-10 flex items-center flex-wrap gap-x-6">
                 <a
                   href="mailto:kontakt@waldheim.dev"
-                  class="flex gap-1 rounded-md bg-wd-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-wd-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wd-600"
+                  class="flex gap-1 rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                   >Kontaktiere mich
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const karriere = (await getCollection('karriere')).sort(
                 </a>
                 <a
                   href="/projects/"
-                  class="flex gap-1 text-sm font-semibold leading-6 text-wd-900 dark:text-white"
+                  class="flex gap-1 text-sm font-semibold leading-6 text-primary-900 dark:text-white"
                   >Mein Portfolio
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ const karriere = (await getCollection('karriere')).sort(
       <!-- Werdegang -->
       <div class="bg-white dark:bg-slate-800 px-6 py-24 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-          <p class="text-base font-semibold leading-7 text-wd-600 dark:text-wd-400">Erfahre mehr über meinen Werdegang</p>
+          <p class="text-base font-semibold leading-7 text-primary-600 dark:text-primary-400">Erfahre mehr über meinen Werdegang</p>
           <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">Meine Karriere</h2>
           <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 ">Hier findest du einen Einblick zu den Firmen, in denen ich gearbeitet habe und aktuell beschäftigt bin. Dies stellt lediglich meinen persönliche Erfahrung dar.</p>
         </div>
@@ -107,7 +107,7 @@ const karriere = (await getCollection('karriere')).sort(
             { karriere.map(kar => (
           <div class="mx-auto max-w-4xl pb-12 divide-y divide-gray-900/10">
             <div class="mx-auto">
-                <p class="text-base font-semibold leading-7 text-wd-600 dark:text-wd-400"><FormattedDate date={kar.data.from} /> - {kar.data.to ? (<FormattedDate date={kar.data.to} />) : ('heute')}
+                <p class="text-base font-semibold leading-7 text-primary-600 dark:text-primary-400"><FormattedDate date={kar.data.from} /> - {kar.data.to ? (<FormattedDate date={kar.data.to} />) : ('heute')}
                 </p>
                 <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{kar.data.company}</h2>
                 <p class="text-base leading-7 text-gray-600 dark:text-slate-400 font-medium">{kar.data.position}</p>
