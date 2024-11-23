@@ -1,7 +1,7 @@
 {
   "name": "waldheim.dev.homepage",
   "type": "module",
-  "version": "25.3.7",
+  "version": "25.4.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -38,7 +38,6 @@
     "ts-node": "10.9.x",
     "typescript": "5.6.x",
     "zip-dir": "2.0.x",
-    
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/exec": "6.0.3",
@@ -47,5 +46,6 @@
     "@semantic-release/release-notes-generator": "14.0.1",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "semantic-release": "24.2.0"
-  }
+  },
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
 }
