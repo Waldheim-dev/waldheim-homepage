@@ -1,3 +1,10 @@
+# [25.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.7...25.4.0) (2024-11-23)
+
+
+### Features
+
+* add latest color shemas ([750602e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/750602efc49573df3a581c905b6281af2740c576))
+
 ## [25.3.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.6...v25.3.7) (2024-11-17)
 
 ### :bug: Fixes
