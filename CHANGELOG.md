@@ -1,3 +1,10 @@
+## [25.4.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.0...25.4.1) (2024-11-23)
+
+
+### Bug Fixes
+
+* update package versions and fix image paths in devops page ([bbe3f4b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bbe3f4b94399e42dc5976f1bae4aefc08e1d9915))
+
 # [25.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/v25.3.7...25.4.0) (2024-11-23)
 
 
