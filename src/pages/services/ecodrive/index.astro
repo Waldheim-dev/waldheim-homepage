@@ -262,10 +262,10 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
             monthly.classList.add('bg-primary-500', 'text-white');
             annual.classList.remove('bg-primary-500', 'text-white');
 
-            free.querySelector('.price').innerHTML = '0,-€';
-            basic.querySelector('.price').innerHTML = '4,99€';
-            pro.querySelector('.price').innerHTML = '14,99€';
-            premium.querySelector('.price').innerHTML = '249,99€';
+            free.querySelector('.price').innerHTML = '0,00 €';
+            basic.querySelector('.price').innerHTML = '5,00 €';
+            pro.querySelector('.price').innerHTML = '15,00 €';
+            premium.querySelector('.price').innerHTML = '250,00 €';
 
             free.querySelector('.frequency').innerHTML = '/Monat';
             basic.querySelector('.frequency').innerHTML = '/Monat';
@@ -278,10 +278,10 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
             annual.classList.add('bg-primary-500', 'text-white');
             monthly.classList.remove('bg-primary-500', 'text-white');
 
-            free.querySelector('.price').innerHTML = '0,-€';
-            basic.querySelector('.price').innerHTML = '44,46€';
-            pro.querySelector('.price').innerHTML = '170,89€';
-            premium.querySelector('.price').innerHTML = '2999,88€';
+            free.querySelector('.price').innerHTML = '0,00 €';
+            basic.querySelector('.price').innerHTML = '57,00 €';
+            pro.querySelector('.price').innerHTML = '171,00 €';
+            premium.querySelector('.price').innerHTML = '2850,00 €';
 
             free.querySelector('.frequency').innerHTML = '/Jahr';
             basic.querySelector('.frequency').innerHTML = '/Jahr';
@@ -323,7 +323,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               value="annually"
               class="sr-only"
             />
-            <span>Jährlich</span>
+            <span>Jährlich 
+              <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">-5%</span></span>
           </label>
         </fieldset>
       </div>
@@ -350,7 +351,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
             <!-- Price, update based on frequency toggle state -->
             <span
               class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
-              >0,-€</span
+              >0,00 €</span
             >
             <!-- Payment frequency, update based on frequency toggle state -->
             <span
@@ -409,13 +410,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Ideal für Familien, kleine Firmen, Teams und Dich!
-            <br> <em>Ab Version 1.0</em>
+            <br> <em>Ab Version 1.1</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
             <span
               class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
-              >3,99€</span
+              >5,00€</span
             >
             <!-- Payment frequency, update based on frequency toggle state -->
             <span
@@ -507,13 +508,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Optimal für Firmen mit einer gesetzlichen Verpflichtung.
-            <br> <em>Ab Version 1.1</em>
+            <br> <em>Ab Version 1.2</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
             <span
               class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
-              >14,99€</span
+              >15,00€</span
             >
             <!-- Payment frequency, update based on frequency toggle state -->
             <span
@@ -656,13 +657,13 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
             Optimal für große Firmen und großen Fuhrparks.
-            <br> <em>Ab Version 1.2</em>
+            <br> <em>Ab Version 1.3</em>
           </p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
             <span
               class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
-              >249,99€</span
+              >250,00 €</span
             >
             <!-- Payment frequency, update based on frequency toggle state -->
             <span
