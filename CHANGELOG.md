@@ -1,3 +1,10 @@
+## [25.4.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.1...25.4.2) (2024-11-27)
+
+
+### Bug Fixes
+
+* change pricings of ecodrive ([f2bd5de](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f2bd5de08ce08c36ecd64425c971ea7863a2e6ae))
+
 ## [25.4.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.0...25.4.1) (2024-11-23)
 
 
