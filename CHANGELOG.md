@@ -1,3 +1,10 @@
+## [25.4.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.2...25.4.3) (2024-11-28)
+
+
+### Bug Fixes
+
+* add new pricing options ([0f00c7a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0f00c7a2be1c09a0f4414ec37ede2412256e8a89))
+
 ## [25.4.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.1...25.4.2) (2024-11-27)
 
 
