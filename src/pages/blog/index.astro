@@ -27,13 +27,13 @@ const blogPosts = (await getCollection('blog')).sort(
             return (
               <a href={`/blog/${post.slug}/`}>
                 <article
-                  class='relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80'>
+                  class='relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pt-80 sm:pt-48 lg:pt-80'>
                   <img
                     src={post.data.heroImage} loading='lazy'
                     alt={post.data.title} class='absolute inset-0 -z-10 h-full w-full object-cover'>
-                  <div class='absolute inset-0 -z-10 bg-gradient-to-t from-primary-900 via-primary-900/40'></div>
                   <div class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
 
+                <div class="relative isolate flex flex-col bg-slate-900/40  backdrop-blur-sm justify-end p-8 pt-4">
                   <div class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>
                     <FormattedDate date={post.data.pubDate} />
                   </div>
@@ -42,7 +42,8 @@ const blogPosts = (await getCollection('blog')).sort(
                     {post.data.title}
                   </h3>
                   <p
-                    class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>{post.data.description}</p>
+                    class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 line-clamp-2'>{post.data.description}</p>
+                    </div>
                 </article>
               </a>
             );
