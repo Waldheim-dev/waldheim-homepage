@@ -1,3 +1,21 @@
+# [25.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.3...25.5.0) (2024-12-05)
+
+
+### Bug Fixes
+
+* change sorts of blogs ([3e18011](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3e18011e7b804455b4910f2508ac960bf9cae5e1))
+* change z-index of elements for better navigation ([7578eef](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7578eefd644d5c722bf7187f49ef956adb5ec918))
+* fix build error ([0ca0c9e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0ca0c9e0c35ae28afcc48381b51e8096757e138e))
+* migrate to latest optimizations ([ae1e454](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ae1e4549eecb601770023e8c9a83f3c9d53cf1de))
+
+
+### Features
+
+* Add new service - Smarthome system ([f287943](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f287943de7f762e664e5a89b87e621722bfb6515))
+* Add roadmap feature ([1770209](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1770209b37bb39c7f2aeb29032fd83fb0d3e623e))
+* Announce new Posts ([e5be4c8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e5be4c8c850534c2dfe0e49d018512e27506db2c))
+* Update to Astro 5.0 ([5c629ac](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5c629ac8c703078b111c3cded52c4d834b89cd2d))
+
 ## [25.4.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.2...25.4.3) (2024-11-28)
 
 
