@@ -1,3 +1,10 @@
+## [25.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.5.0...25.5.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* add missing dark mode support for roadmap ([e8751a5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e8751a5928852c2ad58b889ff2aa8b622232d1bf))
+
 # [25.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.4.3...25.5.0) (2024-12-05)
 
 
