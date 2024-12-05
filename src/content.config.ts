@@ -1,7 +1,8 @@
 import { defineCollection, reference, z } from 'astro:content';
+import { glob, file } from 'astro/loaders';
 
-const blogCollection = defineCollection({
-  type: 'content',
+const blog = defineCollection({
+  loader: glob({pattern: '**\/*.md', base: "./src/content/blog"}),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -17,22 +18,22 @@ const blogCollection = defineCollection({
 
 
 const project_kategorie = defineCollection({
-  type: 'data',
+  loader: glob({pattern: '**\/*.json', base: "./src/content/project_kategorie"}),
   schema: z.object({
     name: z.string(),
   }),
 });
 
-const authorCollection = defineCollection({
-  type: 'data',
+const author = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/content/authors"}),
   schema: z.object({
     name: z.string(),
     image: z.string()
   })
 });
 
-const projectCollection = defineCollection({
-  type: 'content',
+const project = defineCollection({
+  loader: glob({pattern: '**\/*.md', base: "./src/content/projects"}),
   schema: z.object({
     title: z.string(),
     isTopProject: z.boolean(),
@@ -95,13 +96,13 @@ const skill = z.object({
   layer: z.array(z.enum(['frontend', 'backend', 'design', 'infrastructure', 'quality', 'general', 'system', 'security', 'database']))
 });
 
-const skillsCollection = defineCollection({
-  type: 'data',
+const skills = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/content/skills"}),
   schema: skill
 });
 
-const karriere_projectsCollection = defineCollection({
-  type: 'data',
+const karriere_projects = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/content/karriere_projects"}),
   schema: z.object({
     name: z.string(),
     description: z.string(),
@@ -118,8 +119,8 @@ const karriere_projectsCollection = defineCollection({
   }),
 });
 
-const karriereCollection = defineCollection({
-  type: 'data',
+const karriere = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/content/karriere"}),
   schema: z.object({
     from: z
     .string()
@@ -138,12 +139,27 @@ const karriereCollection = defineCollection({
   }),
 });
 
+const ecodrive_versions = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/content/ecodrive_versions"}),
+  schema: z.object({
+    version: z.string(),
+    description: z.string(),
+    date: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val)),
+    planned: z.boolean(),
+    features: z.array(z.string()).optional(),
+  }), 
+})
+
 export const collections = {
-  blog: blogCollection,
-  author: authorCollection,
-  project: projectCollection,
-  project_kategorie: project_kategorie,
-  skills: skillsCollection,
-  karriere: karriereCollection,
-  karriere_projects: karriere_projectsCollection,
+  blog,
+  author,
+  project,
+  project_kategorie,
+  skills,
+  karriere,
+  karriere_projects,
+  ecodrive_versions
 };
