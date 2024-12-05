@@ -8,7 +8,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 
 
 const blogPosts = (await getCollection('blog',(data) => data.slug !== Astro.params.slug)).sort(
-(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+(a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
 )
 ---
 <style>
