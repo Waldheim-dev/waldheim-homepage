@@ -8,7 +8,6 @@ export async function getStaticPaths() {
     props: project,
   }));
 }
-type Props = CollectionEntry<'project'>;
 
 const project = Astro.props;
 const { Content } = await project.render();
@@ -19,4 +18,4 @@ const { Content } = await project.render();
     <h1>{project.title}</h1>
     <Content />
   </article>
-</ProjectLayout>
+</ProjectLayout> 

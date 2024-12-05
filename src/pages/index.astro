@@ -9,14 +9,10 @@ import TopPortfolio from '../components/content/TopPortfolio.astro';
 import SkillRow from '../components/SkillRow.astro';
 
 const blogPosts = (await getCollection('blog')).sort((a, b) => {
-  return new Date(b.data.pubDate) - new Date(a.data.pubDate);
+  return b.data.pubDate - a.data.pubDate;
 });
-const skills = (await getCollection('skills')).filter(
-  (entry) => entry.data.isTopSkill === false
-);
-const topSkills = (await getCollection('skills')).filter(
-  (entry) => entry.data.isTopSkill === true
-);
+const skills = (await getCollection('skills', ({data}) => data.isTopSkill === false));
+const topSkills = (await getCollection('skills',({data}) => data.isTopSkill === true));
 const allSkills = await getCollection('skills');
 
 const layer = [
