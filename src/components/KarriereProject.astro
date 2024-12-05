@@ -5,10 +5,10 @@ import SkillCards from './SkillCards.astro';
 const { projects } = Astro.props;
 
 const projectsCollection = (
-  await getCollection('karriere_projects', ({ data }) =>
-    (projects as string[]).find((pro) => pro.id === data.company.id)
-  )
-).sort((a, b) => b.data.from.valueOf() - a.data.from.valueOf());
+  await getCollection('karriere_projects', ({ data }) => (
+    projects
+  ).find((pr) => pr.id === data.id))
+  ).sort((a, b) => b.data.from.valueOf() - a.data.from.valueOf());
 ---
 
 <script is:inline>
