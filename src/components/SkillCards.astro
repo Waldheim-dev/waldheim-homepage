@@ -3,9 +3,7 @@ import { getCollection } from 'astro:content';
 import FlipCard from './FlipCard.astro';
 const { skills } = Astro.props;
 
-const skillsCollection = (await getCollection('skills')).filter((skill) =>
-  (skills as string[]).find((sk) => sk.id === skill.id)
-);
+const skillsCollection = (await getCollection('skills',({data}) => (skills as string[]).find((sk) => sk.id === data.id)));
 ---
 
 <div

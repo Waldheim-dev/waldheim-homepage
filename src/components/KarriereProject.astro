@@ -4,95 +4,113 @@ import FormattedDate from './FormattedDate.astro';
 import SkillCards from './SkillCards.astro';
 const { projects } = Astro.props;
 
-const projectsCollection = (await getCollection('karriere_projects')).filter(
-  (project) => (projects as string[]).find(pro => pro.id === project.id)
+const projectsCollection = (
+  await getCollection('karriere_projects', ({ data }) =>
+    (projects as string[]).find((pro) => pro.id === data.company.id)
+  )
 ).sort((a, b) => b.data.from.valueOf() - a.data.from.valueOf());
 ---
+
 <script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('button[aria-controls]');
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button[aria-controls]');
 
-        const toggle = (button) => {
-            const expanded = button.getAttribute('aria-expanded') === 'true' || false;
-            button.setAttribute('aria-expanded', !expanded);
-            const target = document.getElementById(button.getAttribute('aria-controls'));
-            target.style.height = expanded ? '0' : `${target.scrollHeight}px`;
-            const icons = button.querySelectorAll('svg');
-            icons.forEach((icon) => icon.classList.toggle('hidden'));
-        };
+    const toggle = (button) => {
+      const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+      button.setAttribute('aria-expanded', !expanded);
+      const target = document.getElementById(
+        button.getAttribute('aria-controls')
+      );
+      target.style.height = expanded ? '0' : `${target.scrollHeight}px`;
+      const icons = button.querySelectorAll('svg');
+      icons.forEach((icon) => icon.classList.toggle('hidden'));
+    };
 
-        buttons.forEach((button) => {
-            button.addEventListener('click', () => toggle(button));
-        });
-        console.log(buttons);
-    })
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => toggle(button));
+    });
+    console.log(buttons);
+  });
 </script>
 <div>
-    {projectsCollection.length > 0 ? (
-  <div>
-    <h3 class="text-1xl font-medium leading-10 tracking-tight text-gray-900 dark:text-white">
-      Projekte bei dieser Firma
-    </h3>
-    <dl class="divide-y divide-gray-900/10  dark:divide-white/10 ">
-        {projectsCollection.map(project => (
+  {
+    projectsCollection.length > 0 ? (
+      <div>
+        <h3 class="text-1xl font-medium leading-10 tracking-tight text-gray-900 dark:text-white">
+          Projekte bei dieser Firma
+        </h3>
+        <dl class="divide-y divide-gray-900/10  dark:divide-white/10 ">
+          {projectsCollection.map((project) => (
             <div>
-                <dt>
+              <dt>
                 <button
-                    type="button"
-                    class="flex w-full mt-2 items-start justify-between text-left text-gray-800 dark:text-slate-200  hover:bg-slate-200 dark:hover:bg-slate-700 p-2 rounded-md"
-                    aria-controls={project.id}
-                    aria-expanded="false"
+                  type="button"
+                  class="flex w-full mt-2 items-start justify-between text-left text-gray-800 dark:text-slate-200  hover:bg-slate-200 dark:hover:bg-slate-700 p-2 rounded-md"
+                  aria-controls={project.id}
+                  aria-expanded="false"
                 >
-                    <span class="text-base font-medium leading-7"
-                    >{project.data.name} (<FormattedDate date={project.data.from}/> - {project.data.to ? <FormattedDate date={project.data.to} /> : 'heute'})</span
-                    >
-                    <span class="ml-6 flex h-7 items-center">
+                  <span class="text-base font-medium leading-7">
+                    {project.data.name} (
+                    <FormattedDate date={project.data.from} /> -{' '}
+                    {project.data.to ? (
+                      <FormattedDate date={project.data.to} />
+                    ) : (
+                      'heute'
+                    )}
+                    )
+                  </span>
+                  <span class="ml-6 flex h-7 items-center">
                     <svg
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        aria-expanded="false"
-                        data-slot="icon"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                      aria-expanded="false"
+                      data-slot="icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M12 6v12m6-6H6"></path>
+                        d="M12 6v12m6-6H6"
+                      />
                     </svg>
                     <svg
-                        class="hidden h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                        aria-expanded="true"
-                        data-slot="icon"
+                      class="hidden h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                      aria-expanded="true"
+                      data-slot="icon"
                     >
-                        <path
+                      <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M18 12H6"></path>
+                        d="M18 12H6"
+                      />
                     </svg>
-                    </span>
+                  </span>
                 </button>
-                </dt>
-                <dd class="mt-2 px-2 pr-12 h-0 overflow-hidden transition-all" id={project.id}>
+              </dt>
+              <dd
+                class="mt-2 px-2 pr-12 h-0 overflow-hidden transition-all"
+                id={project.id}
+              >
                 <p class="text-base leading-7 text-gray-600  dark:text-slate-400 ">
-                    { project.data.description }    
-
+                  {project.data.description}
                 </p>
 
-                {project.data.techstack && (            
-                <SkillCards skills={project.data.techstack} />
+                {project.data.techstack && (
+                  <SkillCards skills={project.data.techstack} />
                 )}
-                </dd>
+              </dd>
             </div>
-        ))}
-    </dl>
-  </div>
-  ) : null}
+          ))}
+        </dl>
+      </div>
+    ) : null
+  }
 </div>

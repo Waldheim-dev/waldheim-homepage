@@ -1,9 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '../FormattedDate.astro';
-const projects = (await getCollection('project'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .filter((project) => project.data.isTopProject === true);
+const projects = (await getCollection('project', ({data}) => data.isTopProject === true)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const categories = await getCollection('project_kategorie');
 ---
 
