@@ -18,5 +18,9 @@ export default defineConfig({
       preprocessor: 'sass',
       postprocessor: true
     }
+  },
+  
+  legacy: {
+    collections: true
   }
 });
