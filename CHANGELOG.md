@@ -1,3 +1,10 @@
+# [25.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.5.1...25.6.0) (2024-12-14)
+
+
+### Features
+
+* add Fahrzeugkalkulation item to pricing section ([b785180](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b785180cf1fb86ff9f2968fa7e10bbdbd8b1dc2c))
+
 ## [25.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.5.0...25.5.1) (2024-12-05)
 
 
