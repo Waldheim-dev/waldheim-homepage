@@ -1,3 +1,10 @@
+## [25.6.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.0...25.6.1) (2024-12-19)
+
+
+### Bug Fixes
+
+* add new addresses ([8b2795b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8b2795ba555d0851ae0b39f4d9892b4d27f70f79))
+
 # [25.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.5.1...25.6.0) (2024-12-14)
 
 
