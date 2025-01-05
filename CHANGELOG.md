@@ -1,3 +1,10 @@
+## [25.6.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.1...25.6.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* update ecodrive version to 1.0.0-rc.3 and dependencies ([0ce2d37](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0ce2d378c25db66c740070c02197276ab64e3faf))
+
 ## [25.6.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.0...25.6.1) (2024-12-19)
 
 
