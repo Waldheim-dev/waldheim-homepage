@@ -1,3 +1,15 @@
+# [25.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.2...25.7.0) (2025-01-12)
+
+
+### Bug Fixes
+
+* update imprint and privacy ([f41c57e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f41c57e0b25a2a8c3d7ce213751ea7fb88626156))
+
+
+### Features
+
+* announce release of gitlab ([e2af765](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e2af765e98bf14ddffcefbe9cc27b23ffe03b7df))
+
 ## [25.6.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.1...25.6.2) (2025-01-05)
 
 
