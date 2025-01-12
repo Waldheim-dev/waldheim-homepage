@@ -243,7 +243,7 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       <svg class="h-1.5 w-1.5 fill-primary-100 dark:fill-emerald-700/95" viewBox="0 0 6 6" aria-hidden="true">
                         <circle cx="3" cy="3" r="3" />
                       </svg>
-                      v1.0.0-rc.3
+                      v1.0.0
                     </span>
                   </div>
                   <p class="mt-2 text-sm/6 text-primary-600 dark:text-primary-200">Steigere deine Nachhaltigkeit und Fahrverhalten</p>
@@ -361,7 +361,7 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
 
     blogPosts.map(async (post) => {
       return (
-        <div class="flex justify-center items-center gap-x-6 bg-primary-600 px-6 py-2.5 sm:px-3.5  ">
+        <div class="flex justify-center items-center gap-x-6 bg-primary-600 dark:bg-primary-500 px-6 py-2.5 sm:px-3.5  ">
           <p class="text-sm leading-6 text-white">
             <a href={`/blog/${post.slug}/`}>
               <strong class="font-semibold">{post.data.title}</strong>
