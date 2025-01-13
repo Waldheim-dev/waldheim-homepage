@@ -1,3 +1,10 @@
+## [25.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.7.0...25.7.1) (2025-01-13)
+
+
+### Bug Fixes
+
+* remove typoe of mail ([0e05214](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0e05214936908134f07fc596d3b273ba8bf4c6e7))
+
 # [25.7.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.6.2...25.7.0) (2025-01-12)
 
 
