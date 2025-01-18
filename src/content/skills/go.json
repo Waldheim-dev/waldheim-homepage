@@ -1,0 +1,12 @@
+{
+  "name": "Go",
+  "image": "/brands/golang.png",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2025-01-01",
+  "knowledgebase": "basic",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["general"]
+}
