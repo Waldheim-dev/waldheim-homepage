@@ -99,19 +99,19 @@ module.exports = {
       addBase({
 
         ':root': {
-          '--primary': theme('colors.wd.500'),
-          '--primary-hover': theme('colors.wd.700'),
+          '--primary': theme('colors.emerald.600'),
+          '--primary-hover': theme('colors.emerald.800'),
           '--primary-contrast': theme('colors.white'),
-          '--secondary': theme('colors.wd.400'),
-          '--secondary-hover': theme('colors.wd.500'),
+          '--secondary': theme('colors.emerald.600'),
+          '--secondary-hover': theme('colors.emerald.800'),
           '--secondary-contrast': theme('colors.white'),
           '--accent': theme('colors.slate.500'),
           '--accent-contrast': theme('colors.slate.100'),
           '--background-light': theme('colors.white'),
           '--background-dark': theme('colors.slate.800'),
           '--foreground-light': theme('colors.gray.300'),
-          '--foreground-dark': theme('colors.slate.700'),
-          '--highlight-dark': theme('colors.gray.700'),
+          '--foreground-dark': theme('colors.slate.900'),
+          '--highlight-dark': theme('colors.slate.700'),
           '--highlight-light': theme('colors.gray.200'),
           '--disabled': theme('colors.gray.400')
         },
