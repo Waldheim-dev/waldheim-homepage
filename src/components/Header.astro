@@ -76,17 +76,17 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
     });
   </script>
 
-  <header class="bg-primary-100 dark:bg-primary-700 sticky top-0 z-10 shadow-lg">
+  <header class="bg-primary-100 dark:bg-slate-950 sticky top-0 z-10 shadow-lg">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1 gap-1 items-center">
+      <div class="flex lg:flex-1 gap-2 items-center">
         <a href="/" class="-m-1.5 p-1.5 flex items-center gap-1">
           <img class="h-8 w-auto hidden dark:block" src="/waldheim.dev.png" alt="Waldheim.dev" loading="lazy">
           <img class="h-8 w-auto block dark:hidden" src="/waldheim.dev.dark.png" alt="Waldheim.dev" loading="lazy">
           <span class="text-primary-900 dark:text-white">Waldheim.dev</span>
         </a>
         <span
-          class="inline-flex items-center gap-x-1.5 rounded-md bg-primary-500 px-2 py-1 text-xs font-medium text-primary-100 dark:bg-emerald-100/60 dark:text-emerald-800">
-        <svg class="h-1.5 w-1.5 fill-primary-100 dark:fill-emerald-700/95" viewBox="0 0 6 6" aria-hidden="true">
+          class="inline-flex items-center gap-x-1.5 rounded-md bg-primary-500 px-2 py-1 text-xs font-medium text-primary-100 dark:bg-emerald-800/25 dark:text-emerald-600">
+        <svg class="h-1.5 w-1.5 fill-primary-100 dark:fill-emerald-600" viewBox="0 0 6 6" aria-hidden="true">
           <circle cx="3" cy="3" r="3" />
         </svg>
         v{version}
@@ -103,11 +103,14 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
           </svg>
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12"><a href="/projects/"
-        class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Projekte</a>
+      <div class="hidden lg:flex lg:gap-x-6">
+        <a href="/services/ecodrive/"
+        class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Ecodrive</a>
+        <a href="/projects/"
+        class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Projekte</a>
         <div class="relative dropdown">
           <button type="button"
-                  class="dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary-950 dark:text-white hover:bg-primary-400 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all "
+                  class="dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-primary-950 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all "
                   aria-expanded="false">
             <span>Mein Service</span>
             <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -118,10 +121,10 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
           </button>
 
           <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-5 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-200 opacity-0 translate-y-1">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-100 dark:bg-slate-800 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
+            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-100 dark:bg-slate-950 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
               <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -134,11 +137,11 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       Effiziente Entwicklung / DevSecOps
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-700 dark:text-primary-200">Optimierung der Entwicklung bei euch</p>
+                    <p class="mt-1 text-primary-700 dark:text-emerald-600">Optimierung der Entwicklung bei euch</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -151,11 +154,11 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       Softwareentwicklung
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-700 dark:text-primary-200">Webseiten, Plugins und kleinere Softwareprojekte</p>
+                    <p class="mt-1 text-primary-700 dark:text-emerald-600">Webseiten, Plugins und kleinere Softwareprojekte</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -168,11 +171,11 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       Design / UX
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-700 dark:text-primary-200">Print und digitales Design</p>
+                    <p class="mt-1 text-primary-700 dark:text-emerald-600">Print und digitales Design</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -185,11 +188,11 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       IT-Service
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-700 dark:text-primary-200">IT-Service, PC, Network und Administrierung</p>
+                    <p class="mt-1 text-primary-700 dark:text-emerald-600">IT-Service, PC, Network und Administrierung</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -202,11 +205,11 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       Smarthome
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-600 dark:text-primary-200">Baue dein eigenes Smarthome</p>
+                    <p class="mt-1 text-primary-600 dark:text-emerald-600">Baue dein eigenes Smarthome</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-50 dark:hover:bg-emerald-800/25">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
                          class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
@@ -219,15 +222,15 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                       Verbandssoftware
                       <span class="absolute inset-0"></span>
                     </a>
-                    <p class="mt-1 text-primary-600 dark:text-primary-200">Softwaresupport für Vereine & Verbände</p>
+                    <p class="mt-1 text-primary-600 dark:text-emerald-600">Softwaresupport für Vereine & Verbände</p>
                   </div>
                 </div>
               </div>
-              <div class="bg-primary-50 relative dark:bg-slate-700 px-8 py-6 flex gap-x-6 hover:bg-primary-200 dark:hover:bg-slate-600">
-                <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-500 transition-all">
+              <div class="bg-primary-50 relative dark:bg-slate-900 px-8 py-6 flex gap-x-6 hover:bg-primary-200 dark:hover:bg-slate-800">
+                <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-700 group-hover:bg-primary-200 dark:group-hover:bg-slate-700 transition-all">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                        stroke="currentColor"
-                       class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-primary-300 dark:group-hover:text-white">
+                       class="h-6 w-6 text-primary-600 group-hover:text-primary-600 dark:text-emerald-600 dark:group-hover:text-white">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                   </svg>
                 </div>
@@ -239,14 +242,14 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                     </a>
                       
                     <span
-                    class="inline-flex items-center gap-x-1.5 rounded-full bg-primary-500 px-2 py-1 text-xs font-medium text-primary-100 dark:bg-emerald-100/60 dark:text-emerald-800">
-                      <svg class="h-1.5 w-1.5 fill-primary-100 dark:fill-emerald-700/95" viewBox="0 0 6 6" aria-hidden="true">
+                    class="inline-flex items-center gap-x-1.5 rounded-sm bg-primary-500 px-2 py-1 text-xs font-medium text-primary-100 dark:bg-emerald-800/25 dark:text-emerald-600">
+                      <svg class="h-1.5 w-1.5 fill-primary-100 dark:fill-emerald-600" viewBox="0 0 6 6" aria-hidden="true">
                         <circle cx="3" cy="3" r="3" />
                       </svg>
                       v1.0.0
                     </span>
                   </div>
-                  <p class="mt-2 text-sm/6 text-primary-600 dark:text-primary-200">Steigere deine Nachhaltigkeit und Fahrverhalten</p>
+                  <p class="mt-2 text-sm/6 text-primary-600 dark:text-emerald-600">Steigere deine Nachhaltigkeit und Fahrverhalten</p>
                 </div>
               </div>
             </div>
@@ -254,14 +257,14 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
         </div>
         
         <a href="/about/"
-           class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Über
+           class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Über
           Mich</a>
         <a href="/blog/"
-           class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Blog</a>
+           class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Blog</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="https://forestdesign.atlassian.net/servicedesk/customer/portals" target="_blank"
-           class="flex gap-1 rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+           class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800/25 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 dark:hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
           Help Center
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
             <path fill-rule="evenodd"
@@ -310,31 +313,31 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2" id="disclosure-2" hidden>
                   <a href="/services/devops"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Effiziente Entwicklung / DevSecOps</span>
                   </a>
                   <a href="/services/entwicklung"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Softwareentwicklung</span>
                   </a>
                   <a href="/services/design"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Design / UX</span>
                   </a>
                   <a href="/services/it-service"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>IT-Service</span>
                   </a>
                   <a href="/services/ecodrive"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Ecodrive</span>
                   </a>
                   <a href="/services/smarthome"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Smarthome</span>
                   </a>
                   <a href="/services/verbandssoftware"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-primary-200 dark:hover:bg-primary-900">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-800 hover:bg-primary-50 dark:text-emerald-600 dark:hover:bg-primary-900">
                     <span>Verbandssoftware</span>
                   </a>
                 </div>
@@ -361,17 +364,23 @@ const version = JSON.parse(fs.readFileSync('./package.json')).version;
 
     blogPosts.map(async (post) => {
       return (
-        <div class="flex justify-center items-center gap-x-6 bg-primary-600 dark:bg-primary-500 px-6 py-2.5 sm:px-3.5  ">
-          <p class="text-sm leading-6 text-white">
-            <a href={`/blog/${post.slug}/`}>
-              <strong class="font-semibold">{post.data.title}</strong>
-              <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
-                <circle cx="1" cy="1" r="1" />
-              </svg>
-              {post.data.description}&nbsp;<span
-              aria-hidden="true">&rarr;</span>
-            </a>
-          </p>
+        <div class="relative">
+          <div
+            class="blur absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-gradient-to-br from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient"
+          >
+          </div>
+          <div class="flex justify-center items-center gap-x-6 bg-primary-600 dark:bg-emerald-800 px-6 py-2.5 sm:px-3.5 relative">
+            <p class="text-sm leading-6">
+              <a href={`/blog/${post.slug}/`} class="text-white">
+                <strong class="font-semibold">{post.data.title}</strong>
+                <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+                  <circle cx="1" cy="1" r="1" />
+                </svg>
+                {post.data.description}&nbsp;<span
+                aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
         </div>
       );
     })
