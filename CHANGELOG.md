@@ -1,3 +1,12 @@
+# [25.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.7.1...25.8.0) (2025-01-18)
+
+
+### Features
+
+* add golang as skill ([c6e5bbb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c6e5bbb806e85b6454adb8ea833ab3ce3a4c4db2))
+* Add pre design for 26.x ([1521529](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/152152994a812561549db47086b7322a100be19a))
+* update tailwind ([9cd746f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9cd746ff1bfa602393804d2ce7d3b7113d2ad84f))
+
 ## [25.7.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.7.0...25.7.1) (2025-01-13)
 
 
