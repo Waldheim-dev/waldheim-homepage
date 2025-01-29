@@ -1,6 +1,6 @@
 ---
 title: "Netbox Ausgabeschein"
-isTopProject: false
+isTopProject: true
 description: " Der Ausgabeschein-Generator dient als Verbindungsst&uuml;ck zu einem Netbox-System. Hierbei wird die Suche von Netbox
     angesteuert, um eine Suche nach Ger&auml;ten zu erm&ouml;glichen. Aus den Ergebnissen k&ouml;nnen dann Unterschiedliche Scheine
     erzeugt werden, welche die IT f&uuml;r eine Saubere Protokollierung f&uuml;r die Verteilung von Ger&auml;ten ben&ouuml;tigt.

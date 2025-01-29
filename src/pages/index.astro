@@ -110,33 +110,6 @@ const layer = [
   <section
     class="bento-service relative isolate"
   >
-    <svg
-      class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-primary-200 dark:stroke-wds-900 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-      aria-hidden="true"
-    >
-      <defs>
-        <pattern
-          id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-          width="200"
-          height="200"
-          x="50%"
-          y="-1"
-          patternUnits="userSpaceOnUse"
-        >
-          <path d="M.5 200V.5H200" fill="none"></path>
-        </pattern>
-      </defs>
-      <svg x="50%" y="-1" class="overflow-visible fill-primary-50 dark:fill-primary-900">
-        <path
-          d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-          stroke-width="0"></path>
-      </svg>
-      <rect
-        width="100%"
-        height="100%"
-        stroke-width="0"
-        fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"></rect>
-    </svg>
 
     <div
       class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -493,22 +466,22 @@ const layer = [
               </li>
             </ul>
           </div>
-          <div class="relative flex gap-2">
+          <div class="relative flex gap-2 flex-wrap">
             <img
               src="/bento/PSMI.png"
-              class="rounded-xl mt-12 -mb-24 h-40 w-40"
+              class="h-40 w-40"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1."
             />
             <img
               src="/bento/PSMII.png"
-              class="rounded-xl mt-12 -mb-24 h-40 w-40"
+              class="h-40 w-40"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2."
             />
             <img
               src="/bento/PSPOI.png"
-              class="rounded-xl mt-12 -mb-24 h-40 w-40"
+              class="h-40 w-40"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1."
             />
@@ -543,7 +516,7 @@ const layer = [
             return (
               <a href={`/blog/${post.slug}/`}>
                 <article
-                  class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pt-80 sm:pt-48 lg:pt-80">
+                  class="relative isolate flex flex-col h-full justify-end overflow-hidden rounded-2xl bg-gray-900 pt-80 sm:pt-48 lg:pt-80">
                   <img
                     src={post.data.heroImage} loading="lazy"
                     alt={post.data.title} class="absolute inset-0 -z-10 h-full w-full object-cover">
@@ -970,7 +943,7 @@ const layer = [
               <a
                 href="https://www.eco-drive.app"
                 class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >Demo testen</a
+              >Nutze jetzt Ecodrive kostenlos</a
               >
               <a
                 href="/services/ecodrive/"
