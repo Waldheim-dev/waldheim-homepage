@@ -1,3 +1,10 @@
+## [25.8.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.8.0...25.8.1) (2025-01-29)
+
+
+### Bug Fixes
+
+* Update service pages and improve content presentation ([be72663](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/be7266388709885269bd02ece889695b95ca71ca))
+
 # [25.8.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.7.1...25.8.0) (2025-01-18)
 
 
