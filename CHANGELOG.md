@@ -1,3 +1,15 @@
+# [25.9.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.8.1...25.9.0) (2025-01-31)
+
+
+### Bug Fixes
+
+* update event listeners to use astro:page-load for improved performance ([43a4e2a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/43a4e2abc2cc9a8a712ba053c93e35f64855c0c6))
+
+
+### Features
+
+* update styling and improve layout across various pages for tailwind 4 ([b31b9bf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b31b9bf2e6d1cd3423b065bd093c1a9d97085fc7))
+
 ## [25.8.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.8.0...25.8.1) (2025-01-29)
 
 
