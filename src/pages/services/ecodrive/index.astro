@@ -18,7 +18,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         aria-hidden="true"
       >
         <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
         >
         </div>
@@ -47,7 +47,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <a
                 href="https://www.eco-drive.app"
                 target="_blank"
-                class="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wd"
+                class="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wd"
                 >Nutze jetzt Ecodrive kostenlos</a
               >
             </div>
@@ -55,9 +55,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
           <div class="relative isolate">
             <div
-              class="blur absolute inset-0 rounded-nd transition-all -translate-x-0 translate-y-0 bg-gradient-to-br from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient"
-            >
-            </div>
+            class="blur-sm absolute inset-0 rounded-1xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
 
             <img
               src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png"
@@ -75,7 +73,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
         aria-hidden="true"
       >
         <div
-          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
           style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
         >
         </div>
@@ -166,7 +164,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
       <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
             <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_login.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Einfach</h3>
@@ -174,11 +172,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Melde dich einfach mit deinem Social Media an oder erstelle einen Account. Dank dieser Mechanik kannst du weitere Benutzer je nach Modell einladen.</p>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
         </div>
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-tr-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
             <img class="h-80 object-cover object-left lg:object-right" src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Übersicht</h3>
@@ -186,11 +184,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Hier werden alle deine Infos für das Fahrzeug zusammen getragen und dargestellt. Nutze es um dir bewusst zu werden, was dein Fahrzeug dich kostet.</p>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-tr-[2rem]"></div>
         </div>
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-bl-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
             <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_settings.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">i18n</h3>
@@ -198,11 +196,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Dank Übersetzungsfunktion für jeden Benutzer nutzbar und zentral speicherbar.</p>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-bl-[2rem]"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-bl-[2rem]"></div>
         </div>
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
             <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_vehicles.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Multiple</h3>
@@ -210,11 +208,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Vergleiche deine Fahrzeuge untereinander aber auch mit anderen Personen. Wo stehst du im internationalen Bereich?</p>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5"></div>
         </div>
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
             <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_add_fuel.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Verbrauch</h3>
@@ -222,7 +220,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Ermittle deine Kosten, die dich, und deinen Konsum. Wo stehst du im Durchschnitt?</p>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
         </div>
       </div>
     </div>

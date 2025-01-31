@@ -33,7 +33,7 @@ const blogPosts = (await getCollection('blog')).sort(
                     alt={post.data.title} class='absolute inset-0 -z-10 h-full w-full object-cover'>
                   <div class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
 
-                <div class="relative isolate flex flex-col bg-slate-900/40  backdrop-blur-sm justify-end p-8 pt-4">
+                <div class="relative isolate flex flex-col bg-slate-900/40  backdrop-blur-xs justify-end p-8 pt-4">
                   <div class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>
                     <FormattedDate date={post.data.pubDate} />
                   </div>
