@@ -12,7 +12,7 @@ const projectsCollection = (
 ---
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     const buttons = document.querySelectorAll('button[aria-controls]');
 
     const toggle = (button) => {
