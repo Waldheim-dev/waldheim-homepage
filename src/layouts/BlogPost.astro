@@ -33,7 +33,7 @@ const blogPosts = (await getCollection('blog',(data) => data.slug !== Astro.para
 
   <div class=' px-6 py-6 lg:px-8'>
     <div class='mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300'>
-      {heroImage && <img width={720} height={360} src={heroImage} loading='lazy' alt=''  class='aspect-[7/4] w-full rounded-2xl object-cover'/>}
+      {heroImage && <img width={720} height={360} src={heroImage} loading='lazy' alt=''  class='aspect-7/4 w-full rounded-2xl object-cover'/>}
       <h1 class='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-50'>{title}</h1>
 
       <div class="relative mt-6">
@@ -81,7 +81,7 @@ const blogPosts = (await getCollection('blog',(data) => data.slug !== Astro.para
                     alt={post.data.title} class='absolute inset-0 -z-10 h-full w-full object-cover'>
                   <div class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'></div>
 
-                <div class="relative isolate flex flex-col bg-slate-900/40  backdrop-blur-sm justify-end p-8 pt-4">
+                <div class="relative isolate flex flex-col bg-slate-900/40  backdrop-blur-xs justify-end p-8 pt-4">
                   <div class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>
                     <FormattedDate date={post.data.pubDate} />
                   </div>
