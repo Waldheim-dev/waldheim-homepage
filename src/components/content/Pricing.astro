@@ -166,7 +166,7 @@ const { dontShowService, dontShowEcodrive } = Astro.props;
       </p>
       
       <script is:inline data-id="script" data-plan="monthly">
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('astro:page-load', () => {
           const script = document.querySelector('*[data-id="script"]');
           const monthly = document.querySelector('#monthly');
           const annual = document.querySelector('#annual');

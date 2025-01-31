@@ -641,7 +641,7 @@ const layer = [
           = Mein empfohlender Techstack
         </p>
         <script is:inline>
-          document.addEventListener('DOMContentLoaded', () => {
+          document.addEventListener('astro:page-load', () => {
             const triggers = document.querySelectorAll(
               '[data-trigger="filter"]'
             );
@@ -680,7 +680,7 @@ const layer = [
           });
         </script>
         <script is:inline data-id="table-script" data-plan="card">
-          document.addEventListener('DOMContentLoaded', () => {
+          document.addEventListener('astro:page-load', () => {
             const script = document.querySelector('*[data-id="table-script"]');
             const card = document.querySelector('#card');
             const table = document.querySelector('#table');
