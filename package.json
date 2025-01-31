@@ -12,14 +12,14 @@
     "zip": "node zip.js"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.0.6",
+    "@astrojs/mdx": "4.0.8",
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/tailwind": "5.1.4",
+    "@astrojs/tailwind": "6.0.0",
     "@fortawesome/fontawesome-pro": "6.7.x",
     "@types/node": "22.10.x",
-    "astro": "5.1.7",
+    "astro": "5.2.1",
     "astro-compress": "2.3.x",
     "astro-compressor": "1.0.0",
     "sass": "1.83.x",
