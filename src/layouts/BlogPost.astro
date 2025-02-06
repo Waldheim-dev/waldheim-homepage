@@ -4,7 +4,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import BaseLayout from './BaseLayout.astro';
 
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage, schema } = Astro.props;
 
 
 const blogPosts = (await getCollection('blog',(data) => data.slug !== Astro.params.slug)).sort(
@@ -29,7 +29,7 @@ const blogPosts = (await getCollection('blog',(data) => data.slug !== Astro.para
     }
 </style>
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} schema={schema}>
 
   <div class=' px-6 py-6 lg:px-8'>
     <div class='mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300'>

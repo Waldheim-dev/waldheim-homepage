@@ -3,13 +3,31 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import FormattedDate from '../../components/FormattedDate.astro';
+import { SchemaUtils } from '../../utils/schema';
 
 const blogPosts = (await getCollection('blog')).sort(
   (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
 );
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+}, {
+  name: 'Blog',
+  link: Astro.url.href
+}]);
+
+const articleSchema = blogPosts.map((post) => SchemaUtils.getArticleSchema({
+  title: post.data.title,
+  image: post.data.heroImage,
+  datePublished: post.data.pubDate,
+  dateModified: post.data.pubDate,
+  description: post.data.description,
+  author: post.data.author,
+  publisher: SITE_TITLE,
+  url: Astro.url.href + post.slug
+}))
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema, ...articleSchema]}>
 
   <div class='py-24 sm:py-32'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
