@@ -3,6 +3,15 @@ import Pricing from '../../../components/content/Pricing.astro';
 import Roadmap from '../../../components/content/Roadmap.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { SchemaUtils } from '../../../utils/schema';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+},{
+  name: 'Service'
+}, {
+  name: 'Ecodrive',
+  link: Astro.url.href
+}]);
 ---
 
 <style>
@@ -10,7 +19,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
     top: 0 !important;
   }
 </style>
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
   <div>
     <div class="relative isolate pt-14">
       <div

@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import { SchemaUtils } from '../../utils/schema';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -12,6 +13,14 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await post.render();
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+	name: 'Home'
+}, {
+	name: 'Blog'
+},{
+	name: post.data.title,
+	link: Astro.url.href
+}]);
 ---
 <style>
 	h1 {
@@ -30,6 +39,6 @@ const { Content } = await post.render();
 		margin: 1rem 0 !important;
 	}
 </style>
-<BlogPost {...post.data}>
+<BlogPost {...post.data} schema={[breadCrumbSchema]}>
 	<Content />
 </BlogPost>
