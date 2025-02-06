@@ -17,25 +17,28 @@
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.2.1",
     "@fortawesome/fontawesome-pro": "6.7.x",
-    "@tailwindcss/vite": "^4.0.1",
-    "@types/node": "22.12.x",
-    "astro": "5.2.1",
+    "@sentry/astro": "8.54.0",
+    "@tailwindcss/vite": "4.0.4",
+    "@types/node": "22.13.x",
+    "astro": "5.2.5",
     "astro-compress": "2.3.x",
     "astro-compressor": "1.0.0",
-    "sass": "1.83.x",
-    "tailwindcss": "4.0.0",
-    "vanilla-cookieconsent": "3.0.1"
+    "astro-seo-schema": "^5.0.0",
+    "sass": "1.84.x",
+    "schema-dts": "^1.1.2",
+    "tailwindcss": "4.0.4",
+    "vanilla-cookieconsent": "3.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
-    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/exec": "7.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/gitlab": "13.2.4",
     "@semantic-release/release-notes-generator": "14.0.3",
     "@tailwindcss/typography": "0.5.x",
-    "@typescript-eslint/eslint-plugin": "8.22.x",
-    "@typescript-eslint/parser": "8.22.0",
+    "@typescript-eslint/eslint-plugin": "8.23.x",
+    "@typescript-eslint/parser": "8.23.0",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "eslint": "9.19.0",
     "eslint-config-prettier": "10.0.x",
@@ -47,5 +50,5 @@
     "typescript": "5.7.x",
     "zip-dir": "2.0.x"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  "packageManager": "pnpm@10.2.1"
 }

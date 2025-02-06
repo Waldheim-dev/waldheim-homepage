@@ -7,6 +7,7 @@ import Pricing from '../components/content/Pricing.astro';
 import FlipCard from '../components/FlipCard.astro';
 import TopPortfolio from '../components/content/TopPortfolio.astro';
 import SkillRow from '../components/SkillRow.astro';
+import { SchemaUtils } from '../utils/schema';
 
 const blogPosts = (await getCollection('blog')).sort((a, b) => {
   return new Date(b.data.pubDate) - new Date(a.data.pubDate);
@@ -26,9 +27,15 @@ const layer = [
   'security',
   'database'
 ];
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.href
+}]);
+
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
   <div>
     <main>
       <div class="relative isolate">
@@ -106,6 +113,7 @@ const layer = [
       </div>
     </main>
   </div>
+
 
   <section
     class="bento-service relative isolate"

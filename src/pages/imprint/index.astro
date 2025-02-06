@@ -1,6 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { SchemaUtils } from '../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+}, {
+  name: 'Impressum',
+  link: Astro.url.href
+}]);
 ---
 
 <style>
@@ -20,7 +28,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
     margin: 1rem 0 !important;
   }
 </style>
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
   <div class="px-6 py-32 lg:px-8">
     <div
       class="mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300"

@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import { SchemaUtils } from '../../utils/schema';
 export async function getStaticPaths() {
   const projects = await getCollection('project');
   return projects.map((project) => ({
@@ -12,8 +13,18 @@ export async function getStaticPaths() {
 const project = Astro.props;
 const { Content } = await project.render();
 
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+},{
+  name: 'Projekte'
+}, {
+  name: project.title,
+  link: Astro.url.href
+}]);
+
 ---
-<ProjectLayout {...project.data}>
+<ProjectLayout {...project.data} schema={[breadCrumbSchema]}>
   <article>
     <h1>{project.title}</h1>
     <Content />
