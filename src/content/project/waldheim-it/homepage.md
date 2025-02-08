@@ -7,8 +7,8 @@ description: "Die Webseite der Waldheim IT-Beratung wurde auf Basis eines modern
 shortDescription: "Erstellung eines Logos und Branding f&uuml;r die Waldheim-IT Beratung"
 pubDate: "2022-03-01"
 category: "website"
-heroImage: "projects/waldheim-it/homepage/homepage.png"
-assets: ["projects/waldheim-it/homepage/homepage.png", "projects/waldheim-it/homepage/waldheim_vi_back.png", "projects/waldheim-it/homepage/waldheim_vi_front.png"]
+heroImage: "referenzen/waldheim-it/homepage/homepage.png"
+assets: ["referenzen/waldheim-it/homepage/homepage.png", "referenzen/waldheim-it/homepage/waldheim_vi_back.png", "referenzen/waldheim-it/homepage/waldheim_vi_front.png"]
 overview: [
   {
     title: 'Branche',

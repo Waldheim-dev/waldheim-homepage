@@ -1,17 +1,19 @@
 ---
-import Pricing from '../../../components/content/Pricing.astro';
-import Roadmap from '../../../components/content/Roadmap.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { SchemaUtils } from '../../../utils/schema';
+import Pricing from '../../components/content/Pricing.astro';
+import Roadmap from '../../components/content/Roadmap.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SchemaUtils } from '../../utils/schema';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home'
 },{
-  name: 'Service'
-}, {
   name: 'Ecodrive',
   link: Astro.url.href
 }]);
+
+const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren"
+const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!"
+const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren"
 ---
 
 <style>
@@ -19,7 +21,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
     top: 0 !important;
   }
 </style>
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} schema={[breadCrumbSchema]}>
   <div>
     <div class="relative isolate pt-14">
       <div
@@ -67,7 +69,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             class="blur-sm absolute inset-0 rounded-1xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
 
             <img
-              src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png"
+              src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png"
               alt="App screenshot"
               loading="lazy"
               width="2432"
@@ -155,7 +157,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </div>
         </div>
         <img
-          src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png"
+          src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png"
           alt="Product screenshot"
           loading="lazy"
           class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
@@ -174,7 +176,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_login.png" alt="">
+            <img class="h-80 object-cover object-left" src="/referenzen/waldheim-dev/ecodrive/ecodrive_login.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Einfach</h3>
               <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Social Login</p>
@@ -186,7 +188,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="relative lg:col-span-3">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-tr-[2rem]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left lg:object-right" src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" alt="">
+            <img class="h-80 object-cover object-left lg:object-right" src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Übersicht</h3>
               <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Halte alles im Überblick</p>
@@ -198,7 +200,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-bl-[2rem]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left" src="/projects/waldheim-dev/ecodrive/ecodrive_settings.png" alt="">
+            <img class="h-80 object-cover object-left" src="/referenzen/waldheim-dev/ecodrive/ecodrive_settings.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">i18n</h3>
               <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Nutzbar für eigentlich jeden!</p>
@@ -210,7 +212,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-            <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_vehicles.png" alt="">
+            <img class="h-80 object-cover" src="/referenzen/waldheim-dev/ecodrive/ecodrive_vehicles.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Multiple</h3>
               <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Speichere deinen gesamten Fuhrpark ab</p>
@@ -222,7 +224,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="relative lg:col-span-2">
           <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
-            <img class="h-80 object-cover" src="/projects/waldheim-dev/ecodrive/ecodrive_add_fuel.png" alt="">
+            <img class="h-80 object-cover" src="/referenzen/waldheim-dev/ecodrive/ecodrive_add_fuel.png" alt="">
             <div class="p-10 pt-4">
               <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Verbrauch</h3>
               <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Erfasse dein Nutzungsverhalten</p>
@@ -250,7 +252,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   <!--    <div class='mt-20'>-->
   <!--      <dl class='space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'>-->
   <!--        <div>-->
-  <!--          <dt class='text-base font-semibold leading-7 text-white'>What&#039;s the best thing about Switzerland?</dt>-->
+  <!--          <dt class='text-base font-semibold leading-7 text-white'>What&#039;s the best thing ueber-mich Switzerland?</dt>-->
   <!--          <dd class='mt-2 text-base leading-7 text-gray-300'>I don&#039;t know, but the flag is a big plus. Lorem-->
   <!--            ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.-->
   <!--          </dd>-->

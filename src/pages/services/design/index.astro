@@ -12,9 +12,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Design',
   link: Astro.url.href
 }]);
+
+const titel = "Webdesign, Branding & UX/UI Design - waldheim.dev"
+const description = "Professionelles Webdesign, Branding, Printmedien und UX/UI-Design. Wir schaffen überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse."
+const keywords = "Webdesign, Branding, Corporate Design, Logo Design, Printmedien, UI Design, UX Design, User Experience, User Interface, Grafikdesign"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
   <div class="relative">
     <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">

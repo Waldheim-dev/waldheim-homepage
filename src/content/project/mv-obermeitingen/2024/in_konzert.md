@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-12-27"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/in_konzert_2024.jpg"
-assets: [ "projects/mvo-obermeitingen/in_konzert_2024.jpg", "projects/mvo-obermeitingen/in-konzert-eintrittskarte-2024-sam.jpg", "projects/mvo-obermeitingen/in-konzert-eintrittskarte-2024_son.jpg", "projects/mvo-obermeitingen/in-konzert-programm-2024-1-6-7-8.jpg", "projects/mvo-obermeitingen/in-konzert-programm-2024-2-3-4-5.jpg", "projects/mvo-obermeitingen/inkonzert_2024_savedate.jpg" ]
+heroImage: "referenzen/mvo-obermeitingen/in_konzert_2024.jpg"
+assets: [ "referenzen/mvo-obermeitingen/in_konzert_2024.jpg", "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024-sam.jpg", "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024_son.jpg", "referenzen/mvo-obermeitingen/in-konzert-programm-2024-1-6-7-8.jpg", "referenzen/mvo-obermeitingen/in-konzert-programm-2024-2-3-4-5.jpg", "referenzen/mvo-obermeitingen/inkonzert_2024_savedate.jpg" ]
 overview: [
   {
     title: 'Branche',

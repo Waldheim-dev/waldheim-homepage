@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2024-02-02"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/teenieparty.jpg"
-assets: [ "projects/mvo-obermeitingen/teenieparty.jpg"]
+heroImage: "referenzen/mvo-obermeitingen/teenieparty.jpg"
+assets: [ "referenzen/mvo-obermeitingen/teenieparty.jpg"]
 overview: [
   {
     title: 'Branche',

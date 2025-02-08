@@ -12,9 +12,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Verbandssoftware',
   link: Astro.url.href
 }]);
+
+const titel = "SEWOBE Verbandssoftware - Vertrieb & Support - waldheim.dev"
+const description = "SEWOBE Vertriebspartner: Wir bieten Beratung, Migration, Dienstleistungen und Support für die SEWOBE Verbandssoftware. Optimieren Sie Ihre Verbandsverwaltung"
+const keywords = "Verbandssoftware, SEWOBE, Mitgliederverwaltung, Vereinssoftware, Verbandsverwaltung, CRM, Migration, Support, Dienstleistungen"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
 
   <div class='relative isolate pt-14'>

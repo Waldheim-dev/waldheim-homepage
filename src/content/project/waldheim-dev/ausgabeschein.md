@@ -9,8 +9,8 @@ description: " Der Ausgabeschein-Generator dient als Verbindungsst&uuml;ck zu ei
 shortDescription: "Entwicklung einer Netbox-Opensource-Anbindung zur Erstellung von Ausgabescheinen."
 pubDate: "2020-07-25"
 category: "entwicklung"
-heroImage: "projects/waldheim-dev/netbox/home.png"
-assets: ["projects/waldheim-dev/netbox/home.png", "projects/waldheim-dev/netbox/settings.png", "projects/waldheim-dev/netbox/languages.png"]
+heroImage: "referenzen/waldheim-dev/netbox/home.png"
+assets: ["referenzen/waldheim-dev/netbox/home.png", "referenzen/waldheim-dev/netbox/settings.png", "referenzen/waldheim-dev/netbox/languages.png"]
 overview: [
   {
     title: 'Branche',

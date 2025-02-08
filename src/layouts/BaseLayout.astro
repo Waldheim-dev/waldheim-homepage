@@ -11,6 +11,7 @@ export interface Props {
   title: string;
   description: string;
   image?: string;
+  keywords?: string;
   schema?: any[];
 }
 
@@ -72,7 +73,8 @@ const {
   title = 'Waldheim.dev - Design, Beratung und Entwicklung',
   description = 'Lassen sie sich mit höchster Qualität für einzelne Projekte in der Entwicklung, Design und IT-Administration unterstützen.',
   image = '/placeholder-social.jpg',
-  schema = []
+  schema = [],
+  keywords = 'Waldheim.dev, Design, Beratung, Entwicklung, IT-Service, IT-Administration, Webentwicklung, DevSecOps, Smart Home, Verbandssoftware, Augsburg, München, Bayern, Deutschland',
 } = Astro.props;
 
 schema.push(organisationSchema);
@@ -118,6 +120,7 @@ schema.push(softwareApplicationEcoPro);
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />

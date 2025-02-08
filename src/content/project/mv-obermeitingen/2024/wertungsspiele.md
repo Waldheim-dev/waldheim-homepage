@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-07-27"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
-assets: [ "projects/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg" ]
+heroImage: "referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
+assets: [ "referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg" ]
 overview: [
   {
     title: 'Branche',

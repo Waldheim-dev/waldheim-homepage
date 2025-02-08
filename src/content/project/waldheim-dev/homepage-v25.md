@@ -5,7 +5,7 @@ description: "Entwicklung eines neuen Farbkonzepts für das Branding der Firma, 
 shortDescription: "Neue Corperate Identity durch Firmennähere Farben"
 pubDate: "2024-10-01"
 category: "website"
-heroImage: "projects/waldheim-dev/homepage_25/homepage.webp"
+heroImage: "referenzen/waldheim-dev/homepage_25/homepage.webp"
 assets: [ ]
 overview: [
   {
