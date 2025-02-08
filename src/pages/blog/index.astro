@@ -25,9 +25,13 @@ const articleSchema = blogPosts.map((post) => SchemaUtils.getArticleSchema({
   publisher: SITE_TITLE,
   url: Astro.url.href + post.slug
 }))
+
+const titel = "IT-Blog - waldheim.dev: Aktuelles & Insights"
+const description = "Unser IT-Blog: Aktuelle News, Fachartikel, Insights und Tipps zu DevSecOps, Webentwicklung, Smart Home, IT-Service und mehr. Bleiben Sie auf dem Laufenden!"
+const keywords = "IT-Blog, Technologie-Blog, DevSecOps, Webentwicklung, Smart Home, IT-Service, Verbandssoftware, News, Insights"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema, ...articleSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema, ...articleSchema]}>
 
   <div class='py-24 sm:py-32'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>

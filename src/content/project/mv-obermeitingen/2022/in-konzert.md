@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2022-11-18"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/in_konzert_2022.jpg"
-assets: [ "projects/mvo-obermeitingen/in_konzert_2022.jpg", "projects/mvo-obermeitingen/in_konzert_2022_flyer.jpg", "projects/mvo-obermeitingen/in_konzert_2022_ticket.jpg"]
+heroImage: "referenzen/mvo-obermeitingen/in_konzert_2022.jpg"
+assets: [ "referenzen/mvo-obermeitingen/in_konzert_2022.jpg", "referenzen/mvo-obermeitingen/in_konzert_2022_flyer.jpg", "referenzen/mvo-obermeitingen/in_konzert_2022_ticket.jpg"]
 overview: [
   {
     title: 'Branche',

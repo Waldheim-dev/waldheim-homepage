@@ -1,9 +1,6 @@
 ARG PORT=8084
 
 FROM node:23-alpine AS build
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
 
 USER root
 
@@ -15,8 +12,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pnpm install
-RUN pnpm run build
+RUN npm install
+RUN npm run build
 
 FROM nginx:alpine AS production
 

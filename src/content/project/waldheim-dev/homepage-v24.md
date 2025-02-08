@@ -5,7 +5,7 @@ description: "Neuentwicklung der Webseite von Waldheim.dev mit Astro.js und Tail
 shortDescription: "Aufsetzen einer neuen Webseite mit neuer Technologie Astro"
 pubDate: "2023-06-29"
 category: "website"
-heroImage: "projects/waldheim-dev/homepage_24/waldheim.dev-webseite-v24.png"
+heroImage: "referenzen/waldheim-dev/homepage_24/waldheim.dev-webseite-v24.png"
 assets: [ ]
 overview: [
   {

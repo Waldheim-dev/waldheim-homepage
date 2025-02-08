@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-04-17"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/kirchenkonzert_2023.jpg"
-assets: [ "projects/mvo-obermeitingen/kirchenkonzert_2023.jpg" ]
+heroImage: "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
+assets: [ "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg" ]
 overview: [
   {
     title: 'Branche',

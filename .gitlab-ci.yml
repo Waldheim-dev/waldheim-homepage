@@ -18,13 +18,16 @@ stages:
 
 include:
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-install@~latest
-    inputs:       
+    inputs:
+      command: npm install
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-build@~latest
     inputs:
+      command: npm run build
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-semantic@~latest
     inputs:
+      command: npx semantic-release
       image: registry.gitlab.com/forestdesign/ci-components/node:latest     
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-ssh@~latest
  

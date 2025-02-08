@@ -8,20 +8,20 @@ description:
 shortDescription: 'Entwicklung der Ecodrive Software (Erste Demo)'
 pubDate: '2022-07-01'
 category: 'entwicklung'
-heroImage: 'projects/waldheim-dev/ecodrive/ecodrive_login.png'
+heroImage: 'referenzen/waldheim-dev/ecodrive/ecodrive_login.png'
 assets:
   [
-    'projects/waldheim-dev/ecodrive/ecodrive_login.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_settings.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_account.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_add_fuel.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_audit.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_report_fuel.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_vehicle.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_vehicles.png',
-    'projects/waldheim-dev/ecodrive/ecodrive_releasenotes.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_login.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_settings.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_account.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_add_fuel.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_audit.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_report_fuel.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_vehicle.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_vehicles.png',
+    'referenzen/waldheim-dev/ecodrive/ecodrive_releasenotes.png',
   ]
 overview:
   [

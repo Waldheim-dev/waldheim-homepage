@@ -12,9 +12,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Softwareentwicklung',
   link: Astro.url.href
 }]);
+
+const titel = "Softwareentwicklung & Webentwicklung - waldheim.dev"
+const description = "Maßgeschneiderte Software- & Webentwicklung, Toolings, Schulungen + Scrum/Product Owner Expertise. Wir entwickeln hochwertige Lösungen und geben unser Wissen weiter."
+const keywords = "Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
   <div class='relative isolate overflow-hidden bg-linear-to-b from-primary-100/20'>
     <div class='mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40'>

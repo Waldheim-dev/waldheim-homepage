@@ -12,9 +12,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'DevOps',
   link: Astro.url.href
 }]);
+
+const titel = "DevSecOps Services - Automatisierung & Sicherheit - waldheim.dev"
+const description = "Optimieren Sie Ihre Softwareentwicklung mit DevSecOps: Automatisierung, Sicherheit und Effizienz für GitHub & GitLab. Wir beschleunigen Ihre Entwicklungsprozesse"
+const keywords = "DevSecOps, DevOps, Continuous Integration, Continuous Delivery, CI/CD, Automatisierung, GitHub, GitLab, Sicherheit, Softwareentwicklung"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <div class="relative">
     <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
       <div

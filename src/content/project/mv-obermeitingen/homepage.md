@@ -5,14 +5,14 @@ description: "Neuentwicklung und modernisierung der MVO Webseite"
 shortDescription: "Entwicklung einer vollständigen Webseite mit Astro.js"
 pubDate: "2023-07-27"
 category: "website"
-heroImage: "projects/mvo-obermeitingen/homepage/mvo_startseite.png"
+heroImage: "referenzen/mvo-obermeitingen/homepage/mvo_startseite.png"
 assets: [
-  "projects/mvo-obermeitingen/homepage/mvo_startseite.png",
-  "projects/mvo-obermeitingen/homepage/mvo_blog.png",
-  "projects/mvo-obermeitingen/homepage/mvo_event.png",
-  "projects/mvo-obermeitingen/homepage/mvo_musiker.png",
-  "projects/mvo-obermeitingen/homepage/mvo_webseite.png",
-  "projects/mvo-obermeitingen/homepage/mvo_konzerte.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_startseite.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_blog.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_event.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_musiker.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_webseite.png",
+  "referenzen/mvo-obermeitingen/homepage/mvo_konzerte.png",
 ]
 overview: [
   {

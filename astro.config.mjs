@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import prefetch from '@astrojs/prefetch';
 import compress from 'astro-compress';
 import tailwindcss from '@tailwindcss/vite';
 import compressor from 'astro-compressor';
@@ -13,10 +12,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  prefetch: true,
   integrations: [
     mdx(),
     sitemap(),
-    prefetch(),
     compress(),
     compressor({ gzip: true }),
 
