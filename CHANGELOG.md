@@ -1,3 +1,11 @@
+## [25.9.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.0...25.9.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* add sitemap, robots.txt and schema.org into pages ([ce8e709](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ce8e709fa75bfbca4656e24addf746885c24ed48))
+* optimize SEO for all meta and root page ([b650b92](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b650b922f8680ace7e415a75419189f7820caf72))
+
 # [25.9.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.8.1...25.9.0) (2025-01-31)
 
 
