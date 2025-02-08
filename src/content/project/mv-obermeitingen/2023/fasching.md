@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2023-02-01"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/fasching_2023.jpg"
-assets: [ "projects/mvo-obermeitingen/fasching_2023.jpg", "projects/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg", "projects/mvo-obermeitingen/fasching_2023_preisliste.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_bier.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg", "projects/mvo-obermeitingen/fasching_2023_bon_pommes.jpg" ]
+heroImage: "referenzen/mvo-obermeitingen/fasching_2023.jpg"
+assets: [ "referenzen/mvo-obermeitingen/fasching_2023.jpg", "referenzen/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg", "referenzen/mvo-obermeitingen/fasching_2023_preisliste.jpg", "referenzen/mvo-obermeitingen/fasching_2023_bon_bier.jpg", "referenzen/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg", "referenzen/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg", "referenzen/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg", "referenzen/mvo-obermeitingen/fasching_2023_bon_pommes.jpg" ]
 overview: [
   {
     title: 'Branche',

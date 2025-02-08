@@ -33,7 +33,7 @@ const author = defineCollection({
 });
 
 const project = defineCollection({
-  loader: glob({pattern: '**\/*.md', base: "./src/content/projects"}),
+  loader: glob({pattern: '**\/*.md', base: "./src/content/referenzen"}),
   schema: z.object({
     title: z.string(),
     isTopProject: z.boolean(),

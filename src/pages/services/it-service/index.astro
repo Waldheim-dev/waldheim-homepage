@@ -12,9 +12,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'IT-Service',
   link: Astro.url.href
 }]);
+
+const titel = "IT-Service, Support & Netzwerktechnik - waldheim.dev"
+const description = "Zuverlässiger IT-Service: Netzwerk, Computer, Server (Windows, macOS, Linux) & Cloud-Migrationen. Ihr Partner für IT-Support in Augsburg, München und Umgebung."
+const keywords = "IT-Service, IT-Support, IT-Wartung, IT-Beratung, IT-Administration, Netzwerktechnik, Windows, macOS, Linux, Server, Cloud-Migration, Augsburg, München"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
   <div class='relative isolate px-6 pt-14 lg:px-8'>
     <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>

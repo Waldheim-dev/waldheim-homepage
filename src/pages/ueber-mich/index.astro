@@ -20,9 +20,14 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: Astro.url.href
 }]);
 
+
+const titel = "Über mich - waldheim.dev: IT-Experte Markus Waldheim"
+const description = "Lernen Sie mich kennen: Markus Waldheim, IT-Experte mit Leidenschaft für Qualität. Mein Werdegang, meine Skills und meine Projekte. Ihr Partner für IT-Lösungen in Augsburg, München und darüber hinaus."
+const keywords = "Über mich, Markus Waldheim, IT-Experte, Lebenslauf, Skills, Erfahrung, Projekte, Werdegang, Persönlich, Augsburg, München"
+
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
     <div class="relative isolate overflow-hidden bg-linear-to-b from-primary-100/20 pt-14">
         <div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-slate-950 shadow-xl shadow-primary-600/10 ring-1 ring-primary-50 sm:-mr-80 lg:-mr-96" aria-hidden="true"></div>
@@ -52,7 +57,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                 </a>
                 <a
-                  href="/projects/"
+                  href="/referenzen/"
                   class="flex gap-1 text-sm font-semibold leading-6 text-primary-900 dark:text-white"
                   >Mein Portfolio
                   <svg

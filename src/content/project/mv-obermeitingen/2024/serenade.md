@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2024-05-10"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/serenade_2024_plakat.jpg"
-assets: [ "projects/mvo-obermeitingen/serenade_2024_plakat.jpg", "projects/mvo-obermeitingen/serenade_2024_savedate.jpg" ]
+heroImage: "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg"
+assets: [ "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg", "referenzen/mvo-obermeitingen/serenade_2024_savedate.jpg" ]
 overview: [
   {
     title: 'Branche',

@@ -9,6 +9,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Impressum',
   link: Astro.url.href
 }]);
+
+const titel = "Impressum - waldheim.dev"
+const description = "Rechtliche Angaben und Kontaktinformationen zu waldheim.dev."
+const keywords = "Impressum, rechtliche Hinweise, Anbieterkennzeichnung, Kontakt, Werner-Haas-Str. 8, 86153 Augsburg"
 ---
 
 <style>
@@ -28,7 +32,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
     margin: 1rem 0 !important;
   }
 </style>
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <div class="px-6 py-32 lg:px-8">
     <div
       class="mx-auto max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300"

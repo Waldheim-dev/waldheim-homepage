@@ -5,8 +5,8 @@ description: "Die Webseite wurde ihm Rahmen eines Kundenprojektes erstellt. Dies
 shortDescription: "Erstellung einer neuen Webseite für den ATV"
 pubDate: "2024-03-01"
 category: "website"
-heroImage: "projects/parkaz-gmbh/atv-website/atv-home.png"
-assets: ["projects/parkaz-gmbh/atv-website/atv-home.png","projects/parkaz-gmbh/atv-website/atv-blog-overview.png","projects/parkaz-gmbh/atv-website/atv-event-overview.png","projects/parkaz-gmbh/atv-website/atv-form.png","projects/parkaz-gmbh/atv-website/atv-job.png","projects/parkaz-gmbh/atv-website/atv-jobs.png","projects/parkaz-gmbh/atv-website/atv-nav.png","projects/parkaz-gmbh/atv-website/atv-privacy.png","projects/parkaz-gmbh/atv-website/atv-product.png","projects/parkaz-gmbh/atv-website/atv-product.png","projects/parkaz-gmbh/atv-website/atv-product-range.png","projects/parkaz-gmbh/atv-website/atv-product-system.png"]
+heroImage: "referenzen/parkaz-gmbh/atv-website/atv-home.png"
+assets: ["referenzen/parkaz-gmbh/atv-website/atv-home.png","referenzen/parkaz-gmbh/atv-website/atv-blog-overview.png","referenzen/parkaz-gmbh/atv-website/atv-event-overview.png","referenzen/parkaz-gmbh/atv-website/atv-form.png","referenzen/parkaz-gmbh/atv-website/atv-job.png","referenzen/parkaz-gmbh/atv-website/atv-jobs.png","referenzen/parkaz-gmbh/atv-website/atv-nav.png","referenzen/parkaz-gmbh/atv-website/atv-datenschutz.png","referenzen/parkaz-gmbh/atv-website/atv-product.png","referenzen/parkaz-gmbh/atv-website/atv-product.png","referenzen/parkaz-gmbh/atv-website/atv-product-range.png","referenzen/parkaz-gmbh/atv-website/atv-product-system.png"]
 overview: [
   {
     title: 'Branche',

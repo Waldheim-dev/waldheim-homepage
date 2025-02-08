@@ -33,9 +33,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: Astro.url.href
 }]);
 
+const titel = "waldheim.dev: IT-Lösungen für KMU, Vereine & Startups"
+const description = "waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service) und Verbandssoftware (SEWOBE). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)"
+const keywords = "IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups"
+
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <div>
     <main>
       <div class="relative isolate">
@@ -65,15 +69,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
               <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 dark:text-slate-200 sm:text-7xl">
-                Dein Design- und Entwicklungs-Berater</h1>
-              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 dark:text-slate-400 sm:text-xl/8">Durch nachhaltige und optimierte Entwicklungen und Design.
-                Durch einsparen von Zeit und Ressourcen zu optimierten
-                Prozessen. Ich helfe Ihnen dabei.</p>
+                Nachhaltige IT-Lösungen aus einer Hand</h1>
+              <p class="mt-8 text-pretty text-lg font-medium text-gray-500 dark:text-slate-400 sm:text-xl/8">Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München.</p>
               <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
                 <a
                   href="mailto:kontakt@waldheim.dev"
                   class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 dark:hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-                >Kontaktiere mich
+                >Jetzt beraten lassen
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -89,9 +91,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                 </a>
                 <a
-                  href="/projects/"
+                  href="/referenzen/"
                   class="flex gap-1 hover:gap-3 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-primary-900 dark:text-white"
-                >Mein Portfolio
+                >Referenzen
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -148,12 +150,12 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
               <h2
                 class="text-3xl font-bold tracking-tight text-primary-950 dark:text-gray-50 sm:text-6xl"
               >
-                Bringt den Professionellen Service zu euch
+                So arbeite ich: Meine Prinzipien für Ihren Erfolg
               </h2>
               <p
                 class="relative mt-6 text-lg leading-8 text-primary-600 dark:text-gray-200 sm:max-w-md lg:max-w-none"
               >
-                Qualität im Service von Anfang an
+                Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und Kundenorientierung.
               </p>
               <ul
                 role="list"
@@ -173,8 +175,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                   <span
                   ><strong class="font-semibold text-primary-950 dark:text-white"
-                  >Hohe Qualität.</strong
-                  > Mit dem Service-Anspruch auf höchster Qualität</span
+                  >Qualität:</strong
+                  >  Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span
                   >
                 </li>
                 <li class="flex gap-x-3">
@@ -191,8 +193,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                   <span
                   ><strong class="font-semibold text-primary-950 dark:text-white"
-                  >Solide.</strong
-                  > Es muss immer stabil und konsequent sein</span
+                  >Zuverlässigkeit:</strong
+                  > Auf meine IT-Lösungen und meinen Support können Sie zählen.</span
                   >
                 </li>
                 <li class="flex gap-x-3">
@@ -209,8 +211,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                   <span
                   ><strong class="font-semibold text-primary-950 dark:text-white"
-                  >Dokumentierung.</strong
-                  > Transparente Nachvollziehbarkeit</span
+                  >Nachvollziehbarkeit:</strong
+                  > Alle Schritte werden detailliert dokumentiert.</span
                   >
                 </li>
                 <li class="flex gap-x-3">
@@ -227,8 +229,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                   </svg>
                   <span
                   ><strong class="font-semibold text-primary-950 dark:text-white"
-                  >Kundenorientiert.</strong
-                  > An Ihre Wünsche angepasst</span
+                  >Passgenauigkeit:</strong
+                  > Ich entwickel Lösungen, die perfekt zu Ihren Anforderungen passen.</span
                   >
                 </li>
               </ul>
@@ -249,18 +251,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <h3
               class="text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl"
             >
-              Effiziente Entwicklung
+              DevSecOps für schnellere & sichere Entwicklung
             </h3>
 
             <p
               class="relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none"
             >
-              Optimierung der Entwicklung
+              Ich automatisiere Ihre Entwicklungspipeline, integrieren Sicherheit von Anfang an und verkürzen Ihre Release-Zyklen.
             </p>
             <a
               href="/services/devops"
-              class="border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition"
-            >Erfahre mehr</a
+              class="border px-5 py-2 rounded-full text-white border-white hover:bg-white hover:text-slate-800 transition"
+            >Zu meinem DevSecOps-Services</a
             >
           </div>
           <img
@@ -279,18 +281,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <h3
               class="text-lg -mt-2 font-bold tracking-tight text-slate-800 sm:text-xl"
             >
-              Softwareentwicklung
+              Individuelle Softwarelösungen für Ihren Bedarf
             </h3>
             <p
               class="relative mb-6 text-lg text-slate-700 sm:max-w-md lg:max-w-none"
             >
-              Software nach Maß
+              Ich entwickel Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen passt.
             </p>
 
             <a
               href="/services/entwicklung"
-              class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white transition"
-            >Erfahre mehr</a
+              class="border px-3.5 py-2 rounded-full text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white transition"
+            >Jetzt Projekt anfragen</a
             >
           </div>
           <img
@@ -309,18 +311,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <h3
               class="text-lg -mt-2 font-bold tracking-tight text-white dark:text-gray-50 sm:text-xl"
             >
-              Design / UX
+              Branding, Webdesign & UX – aus einem Guss
             </h3>
 
             <p
               class="relative mb-6 text-lg text-gray-200 dark:text-gray-200 sm:max-w-md lg:max-w-none"
             >
-              Design bis in den letzten Pixel
+              Ich entwickel ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
             </p>
             <a
               href="/services/design"
-              class="border px-3.5 py-2 rounded-3xl text-white border-white hover:bg-white hover:text-slate-800 transition"
-            >Erfahre mehr</a
+              class="border px-5 py-2 rounded-full text-white border-white hover:bg-white hover:text-slate-800 transition"
+            >Design-Philosophie entdecken</a
             >
           </div>
           <img
@@ -339,17 +341,17 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <h3
               class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl"
             >
-              IT-Service
+              Sichere Cloud-Lösungen & IT-Service
             </h3>
             <p
               class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
             >
-              Sichere Cloud-IT von Überall
+              Ich migriere Ihre IT in die Cloud, sorgen für maximale Sicherheit und ermöglichen ortsunabhängiges Arbeiten.
             </p>
             <a
               href="/services/it-service"
-              class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
-            >Erfahre mehr</a
+              class="border px-5 py-2 rounded-full text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+            >Mehr über Cloud-Services</a
             >
           </div>
           <img
@@ -368,22 +370,22 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <p
               class="text-base font-semibold leading-5 text-primary-600 dark:text-primary-200"
             >
-              Für Verbände, Vereine und mehr
+              Für Verbände, Vereine & Organisationen
             </p>
             <h3
               class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl"
             >
-              Verbandssoftware
+              Ihr Experte für Verbandssoftware
             </h3>
             <p
               class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
             >
-              Optimiert eure Organisation
+              Als SEWOBE Partner unterstütze ich Sie bei der Auswahl, Einführung und Nutzung der optimalen Software für Ihren Verband.
             </p>
             <a
               href="/services/verbandssoftware"
               class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
-            >Erfahre mehr</a
+            >Jetzt beraten lassen</a
             >
           </div>
           <img
@@ -402,12 +404,12 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <p
               class="text-base font-semibold leading-5 text-primary-600 dark:text-primary-200"
             >
-              Qualität die für sich Spricht
+              Ihr Vorteil: Zertifiziertes Know-how
             </p>
             <h3
               class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl"
             >
-              Zertifizierungen
+              Profitieren Sie von meiner Expertise in agilen Methoden und IT-Projekten.
             </h3>
             <ul
               role="list"
@@ -426,10 +428,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                     clip-rule="evenodd"></path>
                 </svg>
                 <span
-                >Zertifizierter Professional <strong
+                >Professional <strong
                   class="font-semibold text-slate-800 dark:text-white"
                 >Scrum Master I.</strong
-                ></span
+                > (PSM I) - Scrum.org</span
                 >
               </li>
               <li class="flex gap-x-3">
@@ -445,10 +447,29 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                     clip-rule="evenodd"></path>
                 </svg>
                 <span
-                >Zertifizierter Professional <strong
+                >Professional <strong
+                  class="font-semibold text-slate-800 dark:text-white"
+                >Scrum Master II.</strong
+                > (PSM II) - Scrum.org</span
+                >
+              </li>
+              <li class="flex gap-x-3">
+                <svg
+                  class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span
+                >Professional <strong
                   class="font-semibold text-slate-800 dark:text-white"
                 >Scrum Product Owner I.</strong
-                ></span
+                > (PSPO I.) - Scrum.org</span
                 >
               </li>
               <li class="flex gap-x-3">
@@ -464,7 +485,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                     clip-rule="evenodd"></path>
                 </svg>
                 <span
-                >Ausgebildeter IHK <strong
+                >Ausbilder (IHK) <strong
                   class="font-semibold text-slate-800 dark:text-white"
                 >Ausbilder für Fachinformatik.</strong
                 ></span
@@ -475,19 +496,19 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           <div class="relative flex gap-2 flex-wrap">
             <img
               src="/bento/PSMI.png"
-              class="h-40 w-40"
+              class="sm:h-40 sm:w-40 w-[33%] aspect-square"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1."
             />
             <img
               src="/bento/PSMII.png"
-              class="h-40 w-40"
+              class="sm:h-40 sm:w-40 w-[33%] aspect-square"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2."
             />
             <img
               src="/bento/PSPOI.png"
-              class="h-40 w-40"
+              class="sm:h-40 sm:w-40 w-[33%] aspect-square"
               loading="lazy"
               alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1."
             />
@@ -507,11 +528,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <h2
           class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl"
         >
-          Neuigkeiten
+          IT-Wissen, Trends & Insights – Mein Blog
         </h2>
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Bleibe auf dem neusten und schaue dir an, was es alles neues gibt. Top
-          Themen und Unternehmen-Highlights.
+          Bleiben Sie auf dem Laufenden mit aktuellen Beiträgen zu DevSecOps, Webentwicklung, Smart Home und mehr.
         </p>
       </div>
       <div
@@ -935,11 +955,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             <h2
               class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
-              Booste deine Nachhaltigkeite.<br />Nutze es schon heute.
+              Bewusster fahren, Umwelt schonen – mit Ecodrive
             </h2>
             <p class="mt-6 text-lg leading-8 text-gray-300">
-              Mit Ecodrive mehr Infos über den Fahrverhalten ermitteln. Nicht
-              mehr vermuten!
+              Erhalten Sie wertvolle Einblicke in Ihr Fahrverhalten und entdecken Sie, wie Sie nachhaltiger und effizienter unterwegs sein können.
             </p>
             <div
               class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
@@ -947,19 +966,19 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
               <a
                 href="https://www.eco-drive.app"
                 class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >Nutze jetzt Ecodrive kostenlos</a
+              >Jetzt kostenlos starten</a
               >
               <a
-                href="/services/ecodrive/"
+                href="/ecodrive/"
                 class="text-sm font-semibold leading-6 text-white"
-              >Erfahre mehr <span aria-hidden="true">→</span></a
+              >Details zu Ecodrive <span aria-hidden="true">→</span></a
               >
             </div>
           </div>
           <div class="relative mt-16 h-80 lg:mt-8">
             <img
               class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-              src="/projects/waldheim-dev/ecodrive/ecodrive_dashboard_light.png"
+              src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png"
               alt="Ecodrive screenshot"
               loading="lazy"
               width="1824"

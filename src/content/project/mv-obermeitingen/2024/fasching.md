@@ -5,8 +5,8 @@ description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen &
 shortDescription: "Erstellung von Werbematerial der Veranstaltung"
 pubDate: "2024-02-01"
 category: "design"
-heroImage: "projects/mvo-obermeitingen/fasching_2024.2.jpg"
-assets: [ "projects/mvo-obermeitingen/fasching_2024.2.jpg", "projects/mvo-obermeitingen/fasching_2024_savedate.jpg"]
+heroImage: "referenzen/mvo-obermeitingen/fasching_2024.2.jpg"
+assets: [ "referenzen/mvo-obermeitingen/fasching_2024.2.jpg", "referenzen/mvo-obermeitingen/fasching_2024_savedate.jpg"]
 overview: [
   {
     title: 'Branche',

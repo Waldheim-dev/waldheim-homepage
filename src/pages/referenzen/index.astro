@@ -17,9 +17,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Projekte',
   link: Astro.url.href
 }]);
+
+const titel = "Projekte & Referenzen - waldheim.dev"
+const description = "Entdecken Sie unsere Referenzprojekte: Webentwicklung, Softwarelösungen, Design und mehr. Überzeugen Sie sich von unserer Expertise und Qualität."
+const keywords = "Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Referenzen, Portfolio, Webdesign"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
 
 
   <div class='py-24 sm:py-32'>
@@ -70,7 +74,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                       
                   <p class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>{project.data.shortDescription}</p>
                     <figcaption class='mt-8 text-base'>
-                      <a href={`/projects/${project.slug}`} aria-description=""
+                      <a href={`/referenzen/${project.slug}`} aria-description=""
                          class='rounded-md px-3 py-2 bg-primary-600 dark:bg-emerald-800 text-white hover:bg-wd'>Projekt ansehen</a>
                     </figcaption>
                   </figure>
