@@ -1,3 +1,11 @@
+## [25.9.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.1...25.9.2) (2025-02-09)
+
+
+### Bug Fixes
+
+* enhance accessibility features and improve keyboard navigation across all pages ([dea2955](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dea2955d878736331afa4a63dfc28ef346e0c8ee))
+* update fontawesome-pro version and improve layout for services and ecodrive pages ([46c7a27](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/46c7a27654e6bbc247fe55f0a252feedf42536b3))
+
 ## [25.9.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.0...25.9.1) (2025-02-08)
 
 
