@@ -1,3 +1,13 @@
+## [25.9.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.5...25.9.6) (2025-02-09)
+
+
+### Bug Fixes
+
+* refine Tailwind CSS configuration; streamline color definitions and add rotate_gradient animation ([44945cc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/44945cc506676454cd36fbc00d9ecde98ed7ec25))
+* remove version specification from docker-compose.yml for compatibility ([e2e8a3b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e2e8a3b3822748f943568737282be37bd40d9c06))
+* update docker-compose.yml to simplify network configuration; set external network to true ([a6e249c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a6e249cd028542f723b174c8c7b4e99328b570dd))
+* update Traefik configuration for improved routing and HTTPS handling; streamline rules and add support for non-www redirection ([53546ce](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/53546ce4244b048bbf6e9b1b672581587a7ccbce))
+
 ## [25.9.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.4...25.9.5) (2025-02-09)
 
 
