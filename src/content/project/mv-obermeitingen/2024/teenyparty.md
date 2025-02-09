@@ -1,32 +1,88 @@
 ---
-title: "Werbematerial Teenyparty 2024"
+title: "Werbematerialien Teenyparty 2024: MV Obermeitingen"
 isTopProject: false
-description: "F&uuml;r unterschiedliche Veranstaltungen werden Werbematerialen & mehr ben&ouml;tigt. Daf&uuml;r wurde ein Designkonzept f&uuml;r alle\n    Veranstaltungen gemacht, die im laufe der Zeit umgesetzt werden. Das Portfolio wird dabei so aufgestellt, dass die\n    Designs und Materialien zum Ende eines Jahres bereits grundlegend bereit stehen."
-shortDescription: "Erstellung von Werbematerial der Veranstaltung"
+description: "Design und Erstellung von Werbematerialien (Plakate, Social Media Grafiken) für die Teenyparty 2024 des Musikvereins Obermeitingen. Modernes, jugendgerechtes Design."
+shortDescription: "Design von Werbematerialien für eine Teenyparty."
 pubDate: "2024-02-02"
 category: "design"
 heroImage: "referenzen/mvo-obermeitingen/teenieparty.jpg"
-assets: [ "referenzen/mvo-obermeitingen/teenieparty.jpg"]
-overview: [
+assets: [
+  "referenzen/mvo-obermeitingen/teenieparty.jpg"
+]
+overview: [ # Bleibt, wie vom Schema vorgegeben
   {
     title: 'Branche',
     meta: 'Verein',
   },
   {
-    title: 'Projektgr&ouml;&szlig;e',
-    meta: '1. Person',
+    title: 'Projektgröße',
+    meta: '1 Person',
   },
   {
     title: 'Projektdauer',
     meta: '2 Wochen',
-  },]
-tags: ["Vektoren", "Affinity Designer", "Print-Design"]
-general: [ "Es soll Marketing f&uuml;r das jeweilige Event sein", "Die Medien sollen Modern sein", "Nur grundlegende Eckdaten m&uuml;ssen j&auml;hrlich ausgetauscht werden, wie z.B. Datum und einzelne Metainformationen", "Dient als Werbung f&uuml;r neue Mitglieder", "Soll Besucher zum Event f&uuml;hren", "Werbung f&uuml;r die Webseite und die Social Medias" ]
-frontend: []
-backend: []
-design: []
-problem: ""
-solution: ""
-client: {name: "Musikverein Obermeitingen e.V.", web: {name: "mv-obermeitingen.de", url: "https://www.mv-obermeitingen.de"}, description: "Der Musikverein Obermeitingen ist ein Örtlicher Musikverein, welcher mehrfach im Jahr Konzerte auf Auftritte austrägt, welche viele Gäste lockt."}
-techStack: []
+  },
+  {
+    title: 'Kunde',
+    meta: 'Musikverein Obermeitingen e.V.',
+    link: 'https://www.mv-obermeitingen.de'
+  }
+]
+tags: [
+  "Vektorgrafik",
+  "Affinity Designer",
+  "Print-Design",
+  "Plakatgestaltung",
+  "Social Media Design",
+  "Veranstaltungsdesign",
+  "Teenyparty",
+  "Jugendveranstaltung",
+  "Marketingmaterialien",
+  "Designkonzept"
+]
+general: [
+  "Marketing für die Teenyparty 2024 des MV Obermeitingen",
+  "Modernes und jugendgerechtes Design",
+  "Wiederverwendbares Designkonzept (Anpassung von Datum und Details für Folgejahre)",
+  "Werbung für die Veranstaltung und Gewinnung neuer, junger Besucher",
+  "Werbung für den Musikverein (bei der jungen Zielgruppe)",
+  "Bewerbung der Website und Social-Media-Kanäle des Vereins"
+]
+frontend: []  # Korrekt leer
+backend: []  # Korrekt leer
+design: [
+  "Entwicklung eines Designkonzepts, das die Zielgruppe (Teenager) anspricht",
+  "Gestaltung von Plakaten",
+  "Erstellung von Grafiken für Social Media",
+  "Verwendung von Vektorgrafiken für hohe Qualität und Skalierbarkeit (Affinity Designer)",
+  "Sicherstellung eines konsistenten Erscheinungsbilds",
+  "Berücksichtigung des Corporate Designs des Vereins (falls vorhanden), aber mit jugendgerechter Anpassung"
+]
+problem: "Der Musikverein Obermeitingen benötigte professionelle Werbematerialien für seine Teenyparty 2024. Die Materialien sollten die Veranstaltung bewerben, speziell Teenager ansprechen und ein modernes, jugendliches Image vermitteln. Ein wiederverwendbares Design war gewünscht."
+solution: "Entwicklung eines modernen und jugendgerechten Designkonzepts für die Teenyparty. Gestaltung von Plakaten und Social-Media-Grafiken mit Affinity Designer (Vektorgrafiken). Das Design ist wiederverwendbar, sodass in den Folgejahren nur noch Details angepasst werden müssen."
+client: {
+  name: "Musikverein Obermeitingen e.V.",
+  web: {name: "mv-obermeitingen.de", url: "https://www.mv-obermeitingen.de"},
+  description: "Der Musikverein Obermeitingen ist ein örtlicher Musikverein, der mehrfach im Jahr Konzerte und Auftritte ausrichtet, die viele Gäste anlocken. Der Verein pflegt die Tradition der Blasmusik und fördert die musikalische Ausbildung von Kindern und Jugendlichen.",
+  shortDescription: "Örtlicher Musikverein mit regelmäßigen Konzerten und Auftritten."
+}
+techStack: [] # Korrekt leer
+keywords:
+  - Musikverein Obermeitingen
+  - Teenyparty 2024
+  - Werbematerialien
+  - Plakat
+  - Social Media
+  - Design
+  - Grafikdesign
+  - Vektorgrafik
+  - Affinity Designer
+  - Print-Design
+  - Veranstaltungsdesign
+  - Marketing
+  - Obermeitingen
+  - Verein
+  - Teenager
+  - Jugendliche
+
 ---

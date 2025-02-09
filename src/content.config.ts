@@ -6,6 +6,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    keywords: z.array(z.string()).optional(),
     heroImage: z.string(),
     author: reference('authors'),
     // Transform string to Date object
@@ -47,6 +48,7 @@ const project = defineCollection({
     }).optional(),
 
     heroImage: z.string(),
+    keywords: z.array(z.string()).optional(),
 
     tags: z.array(z.string()).optional(),
     techStack: z.array(reference('skills')).optional(),
