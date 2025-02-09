@@ -1,3 +1,10 @@
+## [25.9.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.6...25.9.7) (2025-02-09)
+
+
+### Bug Fixes
+
+* update links to ensure consistent trailing slashes in URLs ([9dc152c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9dc152cf72613b1fcf5994c1d7cf5b72d5e8d9dd))
+
 ## [25.9.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.5...25.9.6) (2025-02-09)
 
 
