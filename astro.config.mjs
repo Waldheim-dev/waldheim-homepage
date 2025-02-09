@@ -12,7 +12,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  prefetch: true,
   integrations: [
     mdx(),
     sitemap(),
@@ -37,7 +36,12 @@ export default defineConfig({
     collections: true,
   },
   build: {
-    inlineStylesheets: 'never',
+    inlineStylesheets: 'auto',
   },
+  prefetch: {
+    prefetchAll: true
+  },
+  compressHTML: true,
+  scopedStyleStrategy: 'class',
   trailingSlash: 'always'
 });
