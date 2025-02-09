@@ -1,3 +1,10 @@
+## [25.9.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.2...25.9.3) (2025-02-09)
+
+
+### Bug Fixes
+
+* add seobility ([7f37b1f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7f37b1fd4a6f85ab06e2c4bba11fb964a79db7a0))
+
 ## [25.9.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.1...25.9.2) (2025-02-09)
 
 
