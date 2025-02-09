@@ -33,7 +33,6 @@ export default defineConfig({
       postprocessor: true,
     },
   },
-
   legacy: {
     collections: true,
   },
