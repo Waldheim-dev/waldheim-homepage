@@ -1,3 +1,10 @@
+## [25.9.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.3...25.9.4) (2025-02-09)
+
+
+### Bug Fixes
+
+* update Traefik configuration for improved HTTPS handling and non-www redirection; adjust image styling on services page ([87e5b8f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/87e5b8ff8ff18432428c20ff5d6207cec228c3f6))
+
 ## [25.9.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.2...25.9.3) (2025-02-09)
 
 
