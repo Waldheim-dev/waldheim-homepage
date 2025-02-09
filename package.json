@@ -1,7 +1,7 @@
 {
   "name": "waldheim.dev.homepage",
   "type": "module",
-  "version": "25.9.2",
+  "version": "25.9.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
