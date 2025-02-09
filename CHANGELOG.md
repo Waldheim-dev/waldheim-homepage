@@ -1,3 +1,12 @@
+## [25.9.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.4...25.9.5) (2025-02-09)
+
+
+### Bug Fixes
+
+* enhance service pages with updated content and improved SEO; add robots meta tag for privacy and implement URL redirection rules ([b594f2d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b594f2d31b66f9b27a35fcff726429cb89ff1ba2))
+* update and enhance promotional materials for various events of MV Obermeitingen, including Kinderfasching, Vatertagsfest, Serenade, and more; improve design consistency and accessibility ([1387745](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1387745833b32194773d903e43714652d9e633bb))
+* update dependencies for improved performance and security; bump versions of FontAwesome, Tailwind CSS, ESLint, Prettier, and Semantic Release ([ff6198e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ff6198e470a4b0bf02f7425d1b4bd733efc4b642))
+
 ## [25.9.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.3...25.9.4) (2025-02-09)
 
 
