@@ -13,6 +13,7 @@ export interface Props {
   image?: string;
   keywords?: string;
   schema?: any[];
+  robots?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -60,7 +61,7 @@ const softwareApplicationEcoPro = SchemaUtils.getSoftwareApplicationSchema({
   billingFrequency: "P1M",
 })
 
-const softwareApplicationEcoUltimate = SchemaUtils.getSoftwareApplicationSchema({
+const softwareApplicationEcoPremium = SchemaUtils.getSoftwareApplicationSchema({
   name: "Ecodrive Premium",
   applicationCategory: "UtilityApplication",
   operatingSystem: "WebApplication",
@@ -75,6 +76,7 @@ const {
   image = '/placeholder-social.jpg',
   schema = [],
   keywords = 'Waldheim.dev, Design, Beratung, Entwicklung, IT-Service, IT-Administration, Webentwicklung, DevSecOps, Smart Home, Verbandssoftware, Augsburg, München, Bayern, Deutschland',
+  robots = 'index, follow',
 } = Astro.props;
 
 schema.push(organisationSchema);
@@ -109,6 +111,7 @@ schema.push(softwareApplicationEcoPro);
 
 
   <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta name="robots" content={robots} />
 
   <!-- Global Metadata -->
   <meta name="generator" content={Astro.generator} />
