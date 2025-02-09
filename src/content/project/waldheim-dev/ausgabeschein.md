@@ -1,16 +1,16 @@
 ---
-title: "Netbox Ausgabeschein"
+title: "Netbox Ausgabeschein-Generator: Automatisierte Dokumentation für Hardware-Verwaltung"
 isTopProject: true
-description: " Der Ausgabeschein-Generator dient als Verbindungsst&uuml;ck zu einem Netbox-System. Hierbei wird die Suche von Netbox
-    angesteuert, um eine Suche nach Ger&auml;ten zu erm&ouml;glichen. Aus den Ergebnissen k&ouml;nnen dann Unterschiedliche Scheine
-    erzeugt werden, welche die IT f&uuml;r eine Saubere Protokollierung f&uuml;r die Verteilung von Ger&auml;ten ben&ouuml;tigt.
-    Dadurch lassen sich der Ausgang, die R&uuml;ckgabe oder die &Uuml;berlassung von Hardware vollst&auml;ndig und korrekt nach bew&auml;hrten
-    Standards in Deutschland dokumentieren."
-shortDescription: "Entwicklung einer Netbox-Opensource-Anbindung zur Erstellung von Ausgabescheinen."
+description: "Entwicklung eines Open-Source-Tools zur automatisierten Erstellung von Ausgabe-, Rückgabe- und Überlassungsscheinen für Hardware, basierend auf Netbox-Daten. Integration mit Netbox-API, Mehrsprachigkeit und Konfigurationsgenerator."
+shortDescription: "Open-Source-Tool zur Generierung von Ausgabescheinen aus Netbox-Daten."
 pubDate: "2020-07-25"
 category: "entwicklung"
 heroImage: "referenzen/waldheim-dev/netbox/home.png"
-assets: ["referenzen/waldheim-dev/netbox/home.png", "referenzen/waldheim-dev/netbox/settings.png", "referenzen/waldheim-dev/netbox/languages.png"]
+assets: [
+  "referenzen/waldheim-dev/netbox/home.png",
+  "referenzen/waldheim-dev/netbox/settings.png",
+  "referenzen/waldheim-dev/netbox/languages.png"
+]
 overview: [
   {
     title: 'Branche',
@@ -20,20 +20,100 @@ overview: [
     meta: 'Ja',
   },
   {
-    title: 'Projektgr&ouml;&szlig;e',
-    meta: '1. Person',
+    title: 'Projektgröße',
+    meta: '1 Person',
   },
   {
     title: 'Projektdauer',
-    meta: 'Unbegrenzt',
-  },]
-tags: ["Docker", "Angular", "TypeScript","Material Design", "Netbox", "Gitlab-CI", "Code-Security", "Clean Code", "auto. Version-Control", "Cypress","Jira", "Standalone", "Signals"]
-general: ["Hosting auf beliebigen Apache / ngnx", "Automatisches Versionieren und Bereitstellung von Versionen"]
-frontend: ["Gestaltung einer modernen L&ouml;sung basierend auf Angular", "Erstellen eines eigenen Themes f&uuml;r Material Design (Angular Standard mit eigenen Farben)", "Optimierung bis zum Smartphone","Anbindung der Such-Schnittstelle von Netbox","Mehr als31 Sprachen werden unterst&uuml;tzt", "JSON-Konfiguration und Konfig-Generator", "OpenSource Project zur Einsicht in den Code"]
-backend: []
-design: ["Material for Angular","Beta von M3 in Material for Angular"]
-problem: "Ein Unternehmen brauchte eine Lösung, um aus der Software Netbox einen Ausgabeschein, wie auch den Rückgabeschein oder Überlassungsschein zu erzeugen. Netbox hat dafür keine Möglichkeit."
-solution: "Um die Dokumente zu erzeugen wurde ein Tool gebaut, welches über die Schnittstellen von Netbox nach Geräten suchen kann und alle relevanten Informationen bezieht und auf die Dokumente erzeugt."
-client: {name: "Waldheim.dev", web: {name: "waldheim.dev", url: "https://www.waldheim.dev"}, description: "Kleinunternehmer für Design, Entwicklung und Prozessoptimierung."}
-techStack: ["angular","eslint","nodejs","scss","html","docker","gitlab","rxjs","semantic","jest","cypress","ts","linux","wordpress","prettier","jira","git","aws"]
+    meta: 'Unbegrenzt',  #  Offenes Projekt, daher "unbegrenzt"
+  },
+]
+problem: "Ein Unternehmen benötigte eine Lösung zur automatisierten Erstellung von Ausgabe-, Rückgabe- und Überlassungsscheinen für Hardware, die in Netbox verwaltet wird. Netbox selbst bietet diese Funktionalität nicht."
+solution: "Entwicklung eines eigenständigen, Open-Source-Tools, das sich mit der Netbox-API verbindet, Gerätedaten abruft und daraus normgerechte Dokumente (Ausgabe-, Rückgabe-, Überlassungsscheine) generiert. Das Tool unterstützt mehr als 31 Sprachen und bietet einen Konfigurationsgenerator."
+client: {
+  name: "Waldheim.dev",
+  web: {name: "waldheim.dev", url: "https://www.waldheim.dev"},
+  description: "Kleinunternehmen für Design, Webentwicklung und Prozessoptimierung, mit Fokus auf maßgeschneiderte IT-Lösungen und Automatisierung.",
+  shortDescription: "IT-Dienstleister für Design, Entwicklung und Optimierung."
+}
+tags: [
+  "Docker",
+  "Angular",
+  "TypeScript",
+  "Material Design",
+  "Netbox",
+  "GitLab CI",
+  "Code-Security",
+  "Clean Code",
+  "Auto-Versioning",
+  "Cypress",
+  "Jira",
+  "Standalone",
+  "Signals",
+  "API-Integration",
+  "Open Source",
+  "Mehrsprachigkeit",
+  "JSON-Konfiguration"
+]
+techStack: [
+  "angular",
+  "eslint",
+  "nodejs",
+  "scss",
+  "html",
+  "docker",
+  "gitlab",
+  "rxjs",
+  "semantic",
+  "jest",
+  "cypress",
+  "ts",
+  "linux",
+  "wordpress",
+  "prettier",
+  "jira",
+  "git",
+  "aws"
+]
+general: [
+  "Hosting auf beliebigem Apache/nginx Server",
+  "Automatische Versionierung und Bereitstellung von Versionen über GitLab CI",
+  "Open-Source-Projekt (Code einsehbar)",
+  "Mehr als 31 Sprachen unterstützt"
+]
+frontend: [
+  "Modernes User Interface auf Basis von Angular und Material Design",
+  "Eigenes Theme für Material Design (angepasste Farben)",
+  "Optimierung für verschiedene Bildschirmgrößen (Responsive Design)",
+  "Anbindung der Netbox-Such-API",
+  "Unterstützung von mehr als 31 Sprachen",
+  "JSON-basierte Konfiguration mit Konfigurationsgenerator",
+  "Standalone-Anwendung"
+]
+backend: [] # Bleibt leer, da keine spezifischen Backend-Technologien genannt werden (die Logik liegt im Frontend)
+design: [
+  "Material Design (Angular Material)",
+  "Verwendung von M3 Design-Komponenten (Beta)" #  Präzisierung:  Es ist die *Beta* von Material *3*
+]
+keywords:
+  - Netbox
+  - Ausgabeschein
+  - Rückgabeschein
+  - Überlassungsschein
+  - Hardware
+  - IT-Dokumentation
+  - Automatisierung
+  - Open Source
+  - Angular
+  - TypeScript
+  - Material Design
+  - Docker
+  - GitLab CI
+  - API
+  - Mehrsprachigkeit
+  - JSON
+  - Tool
+  - Generator
+  - waldheim.dev
+
 ---

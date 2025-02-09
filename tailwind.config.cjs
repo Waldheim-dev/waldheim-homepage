@@ -198,6 +198,9 @@ module.exports = {
           '--highlight-light': theme('colors.gray.200'),
           '--disabled': theme('colors.gray.400')
         },
+        '.prose': {
+          maxWidth: '100% !important',
+        },
 
         '.flip-card': {
           transform: 'rotateY(0)',

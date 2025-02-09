@@ -8,7 +8,7 @@ import { SchemaUtils } from '../../utils/schema';
 
 
 const projects = (await getCollection('project')).sort(
-(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+(a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
 );
 const categories = (await getCollection('project_kategorie'));
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -29,8 +29,8 @@ const keywords = "Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
   <div class='py-24 sm:py-32'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
       <div class='mx-auto max-w-2xl text-center'>
-        <h1 class='text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl'>Projekte der Waldheim.dev</h1>
-        <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300'>Alle Projekte chronologisch.</p>
+        <h1 class='text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl'>Referenzen: Meine Projekte im Überblick</h1>
+        <p class='mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300'>Hier finden Sie eine Auswahl meiner erfolgreich abgeschlossenen Projekte. Die Liste wird fortlaufend aktualisiert und ist chronologisch geordnet (neueste Projekte zuerst).</p>
       </div>
 
       <div class='mx-auto max-w-2xl text-center flex flex-wrap justify-center items-center gap-2'>
@@ -47,9 +47,8 @@ const keywords = "Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
 
         {
           projects.map((project) => {
-
             return (
-            <div class='bg-gray-900 dark:bg-slate-900 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full' data-trigger="entry" data-type={project.data?.category.id}>
+            <div class='bg-gray-900 dark:bg-slate-900 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full' data-trigger="entry" data-type={project.data?.category}>
               <div
                 class='mx-auto flex flex-col items-center gap-x-8 gap-y-10 px-6'>
                 <div class='-mt-8 w-full max-w-1xl xl:-mb-8'>
