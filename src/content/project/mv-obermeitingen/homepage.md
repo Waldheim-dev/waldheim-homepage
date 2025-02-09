@@ -1,8 +1,8 @@
 ---
-title: "MV Obermeitingen - Homepage Relaunch"
+title: "Musikverein Obermeitingen: Moderner Webauftritt mit Astro.js"
 isTopProject: true
-description: "Neuentwicklung und modernisierung der MVO Webseite"
-shortDescription: "Entwicklung einer vollständigen Webseite mit Astro.js"
+description: "Relaunch der Website des MV Obermeitingen: Modernes, benutzerfreundliches Design, einfache Inhaltsverwaltung (Markdown) und verbesserte SEO. Umgesetzt mit Astro.js, Tailwind CSS und TypeScript."
+shortDescription: "Entwicklung einer vollständigen, responsiven und SEO-optimierten Website für den Musikverein Obermeitingen mit Astro.js."
 pubDate: "2023-07-27"
 category: "website"
 heroImage: "referenzen/mvo-obermeitingen/homepage/mvo_startseite.png"
@@ -20,20 +20,72 @@ overview: [
     meta: 'Verein',
   },
   {
-    title: 'Projektgr&ouml;&szlig;e',
-    meta: '1. Person',
+    title: 'Projektgröße',
+    meta: '1 Person',
   },
   {
     title: 'Projektdauer',
     meta: '16 Wochen',
-  },]
-tags: ['astro.js', 'Tailwind CSS', 'Tailwind UI', 'Responsive Design', 'New Branding', 'SEO', 'HTML', 'CSS', 'TypeScript', 'Docker', 'Auto-Versionierung', 'Auto-Deployment', 'Self-Hosting' ]
-general: ['Alle Events im Überblick', 'Alle Neuigkeiten bündeln', 'Mehr Interaktion auf der Webseite']
-frontend: ['Neuinterpretation des Brandings', 'Neuentwicklung der Webseite', 'SEO Optimierung', 'Responsive Design', 'Docker', 'Auto-Versionierung', 'Auto-Deployment', 'Self-Hosting']
-backend: []
-design: ["Designkonzept basierend auf Tailwind", "Freundliches Design"]
-problem: "Der Verein brauchte eine neue moderne Webseite, in der die Inhalte schneller aktualisiert werden, die Musiker dargestellt werden und der Verein den Menschen näher gebracht werden. Zudem soll der Besucher alles relevante auf der Webseite über den Verein erfahren."
-solution: "Eine Neuentwicklung löste die bestehende HTML-Seite mit statischen Inhalten und iFrames ab. Der Builder baut dabei die Seiten wie programmiert ein und Leien können über Markdown auch selbst einträge pflegen."
-client: {name: "Musikverein Obermeitingen e.V.", web: {name: "mv-obermeitingen.de", url: "https://www.mv-obermeitingen.de"}, description: "Der Musikverein Obermeitingen ist ein Örtlicher Musikverein, welcher mehrfach im Jahr Konzerte auf Auftritte austrägt, welche viele Gäste lockt."}
+  }
+]
+tags: ['Astro.js', 'Tailwind CSS', 'Tailwind UI', 'Responsive Design', 'New Branding', 'SEO', 'HTML', 'CSS', 'TypeScript', 'Docker', 'Auto-Versionierung', 'Auto-Deployment', 'Self-Hosting', 'Markdown', 'CI/CD', 'GitLab' ]
+general: [
+  'Übersichtlicher Veranstaltungskalender',
+  'Aktuelle Neuigkeiten und Berichte',
+  'Informationen über die Musiker und den Verein',
+  'Einfache Kontaktmöglichkeit',
+  'Verbesserte Interaktion mit den Besuchern',
+  'Einfache Inhaltsverwaltung für Vereinsmitglieder (ohne Programmierkenntnisse)'
+]
+frontend: [
+  'Neuinterpretation des Brandings',
+  'Neuentwicklung der Website',
+  'SEO-Optimierung',
+  'Responsive Design',
+  'Docker',
+  'Auto-Versionierung',
+  'Auto-Deployment',
+  'Self-Hosting',
+  'Performance-Optimierung',
+  'Barrierefreiheit (grundlegende Aspekte)'
+]
+backend: [] # Bleibt leer, da keine spezifischen Backend-Technologien genannt wurden
+design: [
+  "Designkonzept basierend auf Tailwind CSS",
+  "Freundliches und einladendes Design",
+  "Verbesserte Benutzerfreundlichkeit (Usability)",
+  "Modernes Erscheinungsbild"
+]
+problem: "Der Verein benötigte eine neue, moderne Website, die leicht zu pflegen ist, die Musiker ansprechend präsentiert und den Besuchern alle relevanten Informationen bietet. Die alte Website war statisch, veraltet und bot keine gute User Experience."
+solution: "Entwicklung einer komplett neuen, responsiven Website mit dem JavaScript-Framework Astro.js.  Die Website ist sehr schnell, performant und flexibel erweiterbar.  Die Inhalte können von den Vereinsmitgliedern einfach über Markdown gepflegt werden.  Ein automatisiertes Deployment sorgt für reibungslose Updates."
+client: {
+  name: "Musikverein Obermeitingen e.V.",
+  web: {name: "mv-obermeitingen.de", url: "https://www.mv-obermeitingen.de"},}
 techStack: ["astro","ionos","semantic","scss","tailwind","git","gitlab","nodejs","docker"]
+keywords:
+  - Musikverein Obermeitingen
+  - Website Relaunch
+  - Webdesign
+  - Webentwicklung
+  - Astro.js
+  - Tailwind CSS
+  - Tailwind UI
+  - Responsive Design
+  - SEO
+  - HTML
+  - CSS
+  - TypeScript
+  - Docker
+  - Auto-Versionierung
+  - Auto-Deployment
+  - Self-Hosting
+  - Markdown
+  - CMS
+  - Verein
+  - Obermeitingen
+  - Website für Vereine
+  - GitLab CI/CD
+  - Performance Optimierung
+  - Barrierefreiheit
+
 ---

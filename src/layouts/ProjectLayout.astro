@@ -22,7 +22,8 @@ const {
   assets,
   shortDescription,
   overview,
-  schema
+  schema,
+  keywords
 } = Astro.props;
 
 const skills = await getCollection('skills');
@@ -60,7 +61,7 @@ const skills = await getCollection('skills');
 <!-- BE, FE, Generel, Design -->
 <!-- Assets -->
 
-<BaseLayout title={title} description={shortDescription ?? description} image={heroImage} schema={schema}>
+<BaseLayout title={title} description={shortDescription ?? description} image={heroImage} schema={schema} keywords={keywords}>
   <meta charset="utf-8" />
   <div
     class=" text-gray-700 dark:text-gray-300 px-6 py-6 lg:px-8"
