@@ -5,7 +5,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SchemaUtils } from '../../utils/schema';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home'
+  name: 'Home',
+  link: Astro.url.host
 },{
   name: 'Ecodrive',
   link: Astro.url.href
@@ -21,7 +22,7 @@ const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Re
     top: 0 !important;
   }
 </style>
-<BaseLayout title={titel} description={description} schema={[breadCrumbSchema]}>
+<BaseLayout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <div>
     <div class="relative isolate pt-14">
       <div

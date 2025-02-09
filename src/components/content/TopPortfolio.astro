@@ -25,10 +25,10 @@ const categories = await getCollection('project_kategorie');
       <div class="flex absolute gap-16 slide">
         {
           projects.map((project) => (
-            <div class="bg-gray-900 pb-28 sm:pb-36 xl:pb-8 rounded-2xl min-w-96">
-              <div class="mx-auto flex min-w-5xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-                <div class="-mt-8 w-full max-w-1xl xl:-mb-8">
-                  <div class="relative aspect-16/9 w-96 h-64 h-full md:-mx-8 xl:mx-0">
+            <div class="bg-gray-900 pb-12 sm:pb-36 xl:pb-8 rounded-2xl md:min-w-96">
+              <div class="mx-auto flex md:min-96 flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
+                <div class="-mt-8 sm:w-full md:max-w-1xl xl:-mb-8">
+                  <div class="relative aspect-16/9 w-64 md:w-96 h-64 h-full md:-mx-8 xl:mx-0">
                     <div
                       class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
 
@@ -40,7 +40,7 @@ const categories = await getCollection('project_kategorie');
                     />
                   </div>
                 </div>
-                <div class="min-w-96 xl:flex-auto">
+                <div class="md:min-w-96 xl:flex-auto">
                   <figure class="relative isolate pt-6 sm:pt-12">
                     <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                       <p>{project.data.title}</p>
