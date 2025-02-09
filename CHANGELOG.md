@@ -1,3 +1,10 @@
+## [25.9.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.7...25.9.8) (2025-02-09)
+
+
+### Bug Fixes
+
+* update Astro configuration for improved performance; enable prefetching, adjust inlineStylesheets, and add HTML compression ([7882985](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7882985c029f40f8f371bcbcbb8f7e0e8bb1874c))
+
 ## [25.9.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.6...25.9.7) (2025-02-09)
 
 
