@@ -1,3 +1,10 @@
+# [25.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.8...25.10.0) (2025-03-10)
+
+
+### Features
+
+* add Microsoft Clarity analytics script to BaseLayout ([3de73d6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3de73d62358e0c6a395f411a6bb88e0ffbd11952))
+
 ## [25.9.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.7...25.9.8) (2025-02-09)
 
 
