@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Weiterleitung von /imprint und /imprint/ nach /impressum
+RewriteRule ^imprint/?$ /impressum [R=301,L]
+
+# Weiterleitung von /privacy und /privacy/ nach /datenschutz
+RewriteRule ^privacy/?$ /datenschutz [R=301,L]
+
+# Weiterleitung von /services/ecodrive und /services/ecodrive/ nach /ecodrive
+RewriteRule ^services/ecodrive/?$ /ecodrive [R=301,L]
+
+# Optional: Generelle Regel, um Trailing Slashes zu entfernen (außer bei Verzeichnissen)
+# Das sollte NACH den spezifischen Regeln stehen.
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)/$ /$1 [R=301,L]
