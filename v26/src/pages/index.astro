@@ -1,0 +1,94 @@
+---
+import HeroBetween from '../components/HeroBetween.astro';
+import Layout from '../layouts/Layout.astro';
+import { SchemaUtils } from '../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.href
+}]);
+
+const titel = "waldheim.dev: IT-Lösungen für KMU, Vereine & Startups"
+const description = "waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service) und Verbandssoftware (SEWOBE). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)"
+const keywords = "IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups"
+
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+	
+	<div>
+		<main>
+		  <div class="relative isolate">
+			<section class="absolute inset-0 -z-10">
+			  <div
+				class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+				aria-hidden="true"
+			  >
+				<div
+				  class=" w-[5.0625rem] bg-linear-to-tr from-[#dfece0] to-[#6b9e78] dark:from-emerald-200 dark:to-emerald-800 opacity-30"
+				  style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"
+				>
+				</div>
+			  </div>
+			</section>
+			<div
+			  class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+			  aria-hidden="true"
+			>
+			  <div
+				class="aspect-801/1036 w-[50.0625rem] bg-linear-to-tr from-[#dfece0] to-[#6b9e78] opacity-30"
+				style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"
+			  >
+			  </div>
+			</div>
+			<div class="py-24 sm:py-32 lg:pb-40">
+			  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl text-center">
+				  <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 dark:text-slate-200 sm:text-7xl">
+					Nachhaltige IT-Lösungen aus einer Hand</h1>
+				  <p class="mt-8 text-pretty text-lg font-medium text-gray-500 dark:text-slate-400 sm:text-xl/8">Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München.</p>
+				  <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
+					<a
+					  href="mailto:kontakt@waldheim.dev"
+					  class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 dark:hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+					>Jetzt beraten lassen
+					  <svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						class="animate-pulse w-5 h-5"
+					  >
+						<path
+						  d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
+						></path>
+						<path
+						  d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
+						></path>
+					  </svg>
+					</a>
+					<a
+					  href="/referenzen/"
+					  class="flex gap-1 hover:gap-3 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-primary-900 dark:text-white"
+					>Referenzen
+					  <svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					  >
+						<path
+						  stroke-linecap="round"
+						  stroke-linejoin="round"
+						  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+					  </svg>
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</main>
+	  </div>
+</Layout>
