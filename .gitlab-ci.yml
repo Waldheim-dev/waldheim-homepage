@@ -19,11 +19,11 @@ stages:
 include:
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-install@~latest
     inputs:
-      command: npm install
+      command: cd v26 && npm install
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-build@~latest
     inputs:
-      command: npm run build
+      command: cd v26 && npm run build
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-semantic@~latest
     inputs:
