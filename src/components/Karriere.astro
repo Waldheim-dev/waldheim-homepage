@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import KarriereProject from './KarriereProject.astro';
+const karriere = (await getCollection('karriere')).sort(
+  (a, b) => b.data.from.valueOf() - a.data.from.valueOf()
+);
+---
+
+<div class="px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <p class="text-base font-semibold leading-7 text-primary-600 dark:text-emerald-600">Mein beruflicher Weg</p>
+    <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">Karriere-Highlights</h2>
+    <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-400 ">Hier ist ein Überblick über meine bisherigen beruflichen Stationen und aktuellen Projekte.  Diese Informationen spiegeln meine persönliche Erfahrung wider.</p>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 divide-y divide-gray-900/10  dark:divide-white/10">
+    { karriere.map(kar => (  /*  Ersetze 'karriere' und 'kar' durch deine tatsächlichen Variablen-Namen */
+      <div class="mx-auto max-w-4xl pb-12 divide-y divide-gray-900/10">
+        <div class="mx-auto">
+          <p class="text-base font-semibold leading-7 text-primary-600 dark:text-emerald-600"><FormattedDate date={kar.data.from} /> - {kar.data.to ? (<FormattedDate date={kar.data.to} />) : ('heute')}
+          </p>
+          <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{kar.data.company}</h2>
+          <p class="text-base leading-7 text-gray-600 dark:text-slate-400 font-medium">{kar.data.position}</p>
+          <p class="text-base leading-7 text-gray-600 dark:text-slate-400 ">{kar.data.description}</p>
+        </div>
+        { kar.data.projects && (
+          <KarriereProject projects={kar.data.projects} /> /* Ersetze 'KarriereProject' durch deine tatsächliche Komponente */
+        )}
+      </div>
+    ))}
+  </div>
+</div>
