@@ -29,5 +29,13 @@ include:
     inputs:
       command: npx semantic-release
       image: registry.gitlab.com/forestdesign/ci-components/node:latest     
-  - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-ssh@~latest
- 
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-sftp@~latest
+    inputs:
+      rules:
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      remote-dir: /websites/waldheim.dev/www
+  - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-sftp@~latest
+    inputs:
+      remote-dir: /websites/waldheim.dev/next
+      rules:
+        - if: $CI_COMMIT_BRANCH == next
