@@ -1,3 +1,28 @@
+# [26.0.0-next.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.0...26.0.0-next.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* correct import path for global CSS in Layout.astro ([3e5f86a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3e5f86a0fb3d1be6e1bbfc343c31359aa369eb52))
+* improve accessibility and styling in Footer, HeroBackground, and Nav components ([e3b5e96](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e3b5e96d011798efdce38b1aaf74cb0d3d5b8dab))
+* update CI configuration to use v26 directory for npm commands and versioning ([a0a4327](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a0a43270e738789aa58148cb0052cdd9c08bc56a))
+* update deployment rules for next branch in CI configuration ([a21038d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a21038d365f49087fb60ece3a29e03d80e68fb0d))
+
+
+### Features
+
+* add new components and update schema for blog functionality; include pricing service and new content structure ([9ba2688](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9ba268808f0a66fb12651621adfa9b21132da8fb))
+* implement new setup for v26 and new branding with more animations ([8b7dd79](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8b7dd79867f9b44e991701682708e532d9295cc5))
+
+
+### BREAKING CHANGES
+
+* Create Release for 2026
+- Optimize for more interaktion
+- Add better SEO
+- Add more AI Features
+- Add more Animations and Gamification
+
 # [25.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.8...25.10.0) (2025-03-10)
 
 
