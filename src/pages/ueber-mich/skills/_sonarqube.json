@@ -1,0 +1,12 @@
+{
+  "name": "SonarQube",
+  "image": "/brands/sonarqube.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["general", "quality"]
+}
