@@ -19,11 +19,11 @@ stages:
 include:
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-install@~latest
     inputs:
-      command: cd v26 && npm install
+      command: npm install
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-build@~latest
     inputs:
-      command: cd v26 && npm run build
+      command: npm run build
       image: registry.gitlab.com/forestdesign/ci-components/node:latest
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/node-semantic@~latest
     inputs:
@@ -34,11 +34,9 @@ include:
       rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       remote-dir: /websites/waldheim.dev/www
-      path: "./v26"
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-sftp@~latest
     inputs:
       name: deploy-next
-      path: "./v26"
       remote-dir: /websites/waldheim.dev/next
       rules:
         - if: $CI_COMMIT_BRANCH == "next"

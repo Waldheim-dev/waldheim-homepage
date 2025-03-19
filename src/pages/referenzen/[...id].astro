@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from 'astro:content';
+import { SchemaUtils } from '../../utils/schema';
+import Layout from '../../layouts/Layout.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  // remove prefix _ on id
+  return projects.map((project) => ({
+   params: { id: project.id.replace(/^_/, '').replace(/\/_/, '/') },
+   props: project
+  }))
+}
+
+const project = Astro.props;
+const { Content } = await render(project)
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.hostname
+}, {
+  name: 'Referenzen',
+  link: Astro.url.hostname
+},{
+  name: project.data.title,
+  link: Astro.url.href
+}]);
+---
+<Layout {...project.data} schema={[breadCrumbSchema]}>
+  <ProjectLayout {...project.data}>
+    <Content />
+  </ProjectLayout>
+</Layout>

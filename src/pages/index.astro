@@ -1,0 +1,473 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SchemaUtils } from '../utils/schema';
+import HeroBackground from '../components/HeroBackground.astro';
+import PortfolioTop from '../components/PortfolioTop.astro';
+import PriceService from '../components/PriceService.astro';
+import Blog from '../components/Blog.astro';
+import EcodriveClaim from '../components/EcodriveClaim.astro';
+import PriceEcodrive from '../components/PriceEcodrive.astro';
+import SkillWrapper from '../components/SkillWrapper.astro';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.href
+}]);
+
+const titel = 'waldheim.dev: IT-Lösungen für KMU, Vereine & Startups';
+const description = 'waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service) und Verbandssoftware (SEWOBE). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)';
+const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups';
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <HeroBackground title="Nachhaltige IT-Lösungen aus einer Hand"
+                  subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
+                  image="https://images.unsplash.com/photo-1618389041494-8fab89c3f22b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
+      <a
+        href="mailto:kontakt@waldheim.dev"
+        class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 dark:hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+      >Jetzt beraten lassen
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="animate-pulse w-5 h-5"
+        >
+          <path
+            d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
+          ></path>
+          <path
+            d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
+          ></path>
+        </svg>
+      </a>
+      <a
+        href="/referenzen/"
+        class="flex gap-1 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white"
+      >Referenzen
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+        </svg>
+      </a>
+    </div>
+  </HeroBackground>
+
+  <div>
+    <main>
+
+      <section
+        class="bento-service relative isolate"
+      >
+
+        <div
+          class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-9 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row"
+        >
+          <div
+            class="realtive lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1 "
+          >
+            <div
+              class="bento-card relative lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 h-full"
+            >
+              <div
+                class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
+              <div
+                class="flex flex-col gap-4 justify-between h-full z-10 relative bg-white dark:bg-slate-900 text-white p-12 shadow-lg rounded-3xl bg-white border-1 border-gray-300/30"
+              >
+                <div class="flex flex-col gap-4">
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-primary-950 dark:text-gray-50 sm:text-6xl"
+                  >
+                    So arbeite ich: Meine Prinzipien für Ihren Erfolg
+                  </h2>
+                  <p
+                    class="relative mt-6 text-lg leading-8 text-primary-600 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                  >
+                    Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und
+                    Kundenorientierung.
+                  </p>
+                  <ul
+                    role="list"
+                    class="mt-8 max-w-xl space-y-8 text-primary-700 dark:text-primary-50"
+                  >
+                    <li class="flex gap-x-3">
+                      <svg
+                        class="mt-1 h-5 w-5 flex-none text-primary-600 dark:text-emerald-600"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span
+                      ><strong class="font-semibold text-primary-950 dark:text-white"
+                      >Qualität:</strong
+                      >  Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span
+                      >
+                    </li>
+                    <li class="flex gap-x-3">
+                      <svg
+                        class="mt-1 h-5 w-5 flex-none text-primary-600 dark:text-emerald-600"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span
+                      ><strong class="font-semibold text-primary-950 dark:text-white"
+                      >Zuverlässigkeit:</strong
+                      > Auf meine IT-Lösungen und meinen Support können Sie zählen.</span
+                      >
+                    </li>
+                    <li class="flex gap-x-3">
+                      <svg
+                        class="mt-1 h-5 w-5 flex-none text-primary-600 dark:text-emerald-600"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span
+                      ><strong class="font-semibold text-primary-950 dark:text-white"
+                      >Nachvollziehbarkeit:</strong
+                      > Alle Schritte werden detailliert dokumentiert.</span
+                      >
+                    </li>
+                    <li class="flex gap-x-3">
+                      <svg
+                        class="mt-1 h-5 w-5 flex-none text-primary-600 dark:text-emerald-600"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <span
+                      ><strong class="font-semibold text-primary-950 dark:text-white"
+                      >Passgenauigkeit:</strong
+                      > Ich entwickel Lösungen, die perfekt zu Ihren Anforderungen passen.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <img
+                  src="/bento/cert.webp"
+                  loading="lazy"
+                  alt="Qualität bei Waldheim.dev"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-3 sm:col-span-3 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-emerald-500 dark:to-emerald-800 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex flex-col gap-4 justify-between h-full">
+              <div class="flex flex-col items-start gap-2">
+                <h3
+                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl"
+                >
+                  DevSecOps für schnellere & sichere Entwicklung
+                </h3>
+
+                <p
+                  class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                >
+                  Ich automatisiere Ihre Entwicklungspipeline, integrieren Sicherheit von Anfang an und verkürzen Ihre
+                  Release-Zyklen.
+                </p>
+                <a
+                  href="/services/devops/"
+                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+                >Zu meinem DevSecOps-Services</a
+                >
+              </div>
+              <img
+                src="/bento/devops.webp"
+                loading="lazy"
+                class="-mb-6 w-full"
+                alt="DevSecOps"
+              />
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-3 sm:col-span-3 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex flex-col gap-4 justify-between h-full">
+              <div class="flex flex-col items-start gap-2">
+                <h3
+                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl"
+                >
+                  Individuelle Softwarelösungen für Ihren Bedarf
+                </h3>
+                <p
+                  class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                >
+                  Ich entwickel Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen
+                  passt.
+                </p>
+
+                <a
+                  href="/services/entwicklung/"
+                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+                >Jetzt Projekt anfragen</a
+                >
+              </div>
+              <img
+                src="/bento/code.webp"
+                loading="lazy"
+                class="-mb-6 w-full"
+                alt="Code"
+              />
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex flex-col gap-4 justify-between h-full">
+              <div class="flex flex-col items-start gap-2">
+                <h3
+                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl"
+                >
+                  Branding, Webdesign & UX – aus einem Guss
+                </h3>
+
+                <p
+                  class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                >
+                  Ich entwickel ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
+                </p>
+                <a
+                  href="/services/design/"
+                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+                >Design-Philosophie entdecken</a
+                >
+              </div>
+              <img
+                src="/bento/design.webp"
+                loading="lazy"
+                class="-m-6"
+                alt="Design"
+              />
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-emerald-500 dark:to-emerald-700 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex flex-col gap-4 justify-between h-full">
+              <div class="flex flex-col items-start gap-2">
+                <h3
+                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-xl"
+                >
+                  Sichere Cloud-Lösungen & IT-Service
+                </h3>
+                <p
+                  class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                >
+                  Ich migriere Ihre IT in die Cloud, sorgen für maximale Sicherheit und ermöglichen ortsunabhängiges
+                  Arbeiten.
+                </p>
+                <a
+                  href="/services/it-service/"
+                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+                >Mehr über Cloud-Services</a
+                >
+              </div>
+              <img
+                src="/bento/security.webp"
+                loading="lazy"
+                class="-m-6"
+                alt="Security"
+              />
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-9 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex sm:flex-row flex-col gap-4 justify-between">
+              <div class="flex flex-col col-auto items-start gap-2">
+                <p
+                  class="text-base font-semibold leading-5 text-primary-600 dark:text-primary-200"
+                >
+                  Für Verbände, Vereine & Organisationen
+                </p>
+                <h3
+                  class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl"
+                >
+                  Ihr Experte für Verbandssoftware
+                </h3>
+                <p
+                  class="relative mb-6 text-lg text-slate-700 dark:text-gray-200 sm:max-w-md lg:max-w-none"
+                >
+                  Als SEWOBE Partner unterstütze ich Sie bei der Auswahl, Einführung und Nutzung der optimalen Software
+                  für Ihren Verband.
+                </p>
+                <a
+                  href="/services/verbandssoftware/"
+                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
+                >Jetzt beraten lassen</a
+                >
+              </div>
+              <img
+                src="/bento/sewobe.webp"
+                class="rounded-xl mt-12 -mb-24"
+                loading="lazy"
+                alt="Verbandssoftware der SEWOBE AG"
+              />
+            </div>
+          </div>
+          <div
+            class="bento-card lg:col-span-9 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+          >
+            <div class="flex md:flex-row flex-col gap-4 justify-between">
+              <div class="flex flex-col col-auto items-start gap-2">
+                <p
+                  class="text-base font-semibold leading-5 text-primary-600 dark:text-primary-200"
+                >
+                  Ihr Vorteil: Zertifiziertes Know-how
+                </p>
+                <h3
+                  class="text-1xl -mt-2 font-bold tracking-tight text-slate-800 dark:text-gray-50 sm:text-2xl"
+                >
+                  Profitieren Sie von meiner Expertise in agilen Methoden und IT-Projekten.
+                </h3>
+                <ul
+                  role="list"
+                  class="mt-8 max-w-xl space-y-8 text-slate-800 dark:text-gray-100"
+                >
+                  <li class="flex gap-x-3">
+                    <svg
+                      class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                    >Professional <strong
+                      class="font-semibold text-slate-800 dark:text-white"
+                    >Scrum Master I.</strong
+                    > (PSM I) - Scrum.org</span
+                    >
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg
+                      class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                    >Professional <strong
+                      class="font-semibold text-slate-800 dark:text-white"
+                    >Scrum Master II.</strong
+                    > (PSM II) - Scrum.org</span
+                    >
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg
+                      class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                    >Professional <strong
+                      class="font-semibold text-slate-800 dark:text-white"
+                    >Scrum Product Owner I.</strong
+                    > (PSPO I.) - Scrum.org</span
+                    >
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg
+                      class="mt-1 h-5 w-5 flex-none text-slate-800 dark:text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                    <span
+                    >Ausbilder (IHK) <strong
+                      class="font-semibold text-slate-800 dark:text-white"
+                    >Ausbilder für Fachinformatik.</strong
+                    ></span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="relative flex gap-2 flex-wrap">
+                <img
+                  src="/bento/PSMI.png"
+                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
+                  loading="lazy"
+                  alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1."
+                />
+                <img
+                  src="/bento/PSMII.png"
+                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
+                  loading="lazy"
+                  alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2."
+                />
+                <img
+                  src="/bento/PSPOI.png"
+                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
+                  loading="lazy"
+                  alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <PortfolioTop />
+      <PriceService />
+
+      <Blog />
+      <SkillWrapper />
+
+      <EcodriveClaim />
+      <PriceEcodrive />
+    </main>
+  </div>
+</Layout>

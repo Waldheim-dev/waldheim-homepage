@@ -1,0 +1,245 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { SchemaUtils } from '../../../utils/schema';
+import PriceService from '../../../components/PriceService.astro';
+import Partner from '../../../components/Partner.astro';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.hostname
+}, {
+  name: 'Service',
+  link: Astro.url.hostname
+}, {
+  name: 'Softwareentwicklung',
+  link: Astro.url.href
+}]);
+
+const titel = 'Softwareentwicklung & Webentwicklung - waldheim.dev';
+const description = 'Maßgeschneiderte Software- & Webentwicklung, Toolings, Schulungen + Scrum/Product Owner Expertise. Wir entwickeln hochwertige Lösungen und geben unser Wissen weiter.';
+const keywords = 'Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen';
+---
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+
+  <div class="relative isolate overflow-hidden bg-linear-to-b from-primary-100/20">
+    <div class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
+      <div class="px-6 lg:px-0 lg:pt-4">
+        <div class="mx-auto max-w-2xl">
+          <div class="max-w-lg">
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+              Maßgeschneiderte Software- & Webentwicklung
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              Benötigen Sie eine individuelle Website, eine Webanwendung oder spezielle Software-Tools? Ich biete Ihnen
+              professionelle, sichere und hochwertige Softwareentwicklung – maßgeschneidert für Ihre Bedürfnisse.
+            </p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <a href="mailto:kontakt@waldheim.dev"
+                 class="rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+                Kostenloses Erstgespräch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+        <div
+          class="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white dark:bg-slate-950 shadow-xl shadow-primary-600/10 ring-1 ring-primary-50 md:-mr-20 lg:-mr-36"
+          aria-hidden="true"></div>
+        <div class="shadow-lg md:rounded-3xl">
+          <div
+            class="bg-primary-500 dark:bg-emerald-600 [clip-path:inset(0)] md:[clip-path:inset(0_round_var(--radius-3xl))]">
+            <div
+              class="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-primary-100 dark:bg-primary-900 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
+              aria-hidden="true"></div>
+            <div class="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
+              <div class="mx-auto max-w-2xl md:mx-0 md:max-w-none">
+                <div class="w-screen overflow-hidden rounded-tl-xl bg-gray-900">
+                  <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                    <div class="-mb-px flex text-sm font-medium leading-6 text-gray-400">
+                      <div
+                        class="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
+                        kunde.component.ts
+                      </div>
+                      <div class="border-r border-gray-600/10 px-4 py-2">kunden.component.html</div>
+                      <div class="border-r border-gray-600/10 px-4 py-2">kunden.component.scss</div>
+                    </div>
+                  </div>
+                  <div class="px-6 pb-14 pt-6">
+                                    <pre class="text-[0.8125rem] leading-6 text-gray-300" style="tab-size: 2">
+<code><span class="text-purple-300">import</span> &lbrace; <span class="text-yellow-300">ChangeDetectionStrategy</span>, <span
+  class="text-yellow-300">Component</span>, <span class="text-yellow-300">effect</span>, <span class="text-yellow-300">OnInit</span> &rbrace; <span
+  class="text-purple-300">from</span> <span class="text-green-200">'@angular/core'</span>;
+<span class="text-purple-300">import</span> &lbrace; <span class="text-yellow-300">CommonModule</span> &rbrace; <span
+    class="text-purple-300">from</span> <span class="text-green-200">'@angular/common'</span>;
+<span class="text-purple-300">import</span> &lbrace; <span class="text-yellow-300">ActivatedRoute</span>, <span
+    class="text-yellow-300">RouterLink</span> &rbrace; <span class="text-purple-300">from</span> <span
+    class="text-green-200">'@angular/router'</span>;
+<span class="text-purple-300">import</span> &lbrace; <span class="text-yellow-300">CustomerService</span> &rbrace; <span
+    class="text-purple-300">from</span> <span class="text-green-200">'../../../../shared/services'</span>;
+<span class="text-purple-300">import</span> &lbrace; <span class="text-yellow-300">FormControl</span>, <span
+    class="text-yellow-300">FormGroup</span>, <span class="text-yellow-300">ReactiveFormsModule</span> &rbrace; <span
+    class="text-purple-300">from</span> <span class="text-green-200">'@angular/forms'</span>;
+
+<span class="text-gray-500">@Component</span>(&lbrace;
+  <span class="text-blue-300">selector</span>: <span class="text-green-200">'im-kunde'</span>,
+  <span class="text-blue-300">standalone</span>: <span class="text-purple-300">true</span>,
+  <span class="text-blue-300">imports</span>: [<span class="text-yellow-300">CommonModule</span>, <span
+    class="text-yellow-300">RouterLink</span>, <span class="text-yellow-300">ReactiveFormsModule</span>],
+  <span class="text-blue-300">templateUrl</span>: <span class="text-green-200">'./kunde.component.html'</span>,
+  <span class="text-blue-300">styleUrls</span>: [<span class="text-green-200">'./kunde.component.scss'</span>],
+  <span class="text-blue-300">changeDetection</span>: <span class="text-yellow-300">ChangeDetectionStrategy</span>.<span
+    class="text-blue-300">Default</span>,
+&rbrace;)
+<span class="text-purple-300">export class</span> <span class="text-yellow-300">KundeComponent</span> <span
+    class="text-purple-300">implements</span> <span class="text-yellow-300">OnInit</span> &lbrace;
+  <span class="text-blue-300">customerForm</span>: <span class="text-yellow-300">FormGroup</span> = <span
+    class="text-purple-300">new</span> <span class="text-yellow-300">FormGroup</span>(&lbrace;&rbrace;);
+
+  <span class="text-blue-300">constructor</span>(
+      <span class="text-purple-300">public</span> <span class="text-blue-300">service: CustomerService</span>,
+      <span class="text-purple-300">private</span> <span class="text-blue-300">router: ActivatedRoute</span>,
+    ) &lbrace;
+      <span class="text-blue-300">effect</span>(() &Rightarrow; &lbrace;
+      this.<span class="text-blue-300">customerForm</span>.<span class="text-blue-300">patchValue</span>(this.<span
+    class="text-blue-300">service</span>.<span class="text-blue-300">serviceItem</span>() ?? this.<span
+    class="text-blue-300">customerForm</span>.<span class="text-blue-300">getRawValue</span>());
+    &rbrace;);
+  &rbrace;
+
+  <span class="text-gray-500">// do more...</span>
+&rbrace;</code>
+</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 md:rounded-3xl"
+                   aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-linear-to-t from-white dark:from-slate-950 sm:h-32"></div>
+  </div>
+
+  <div class="py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <h2 class="text-base font-semibold leading-7 text-primary-600 dark:text-emerald-600">Entwicklung</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+          Gemeinsam realisieren wir Ihre Vision!
+        </p>
+        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+          Ich entwickle individuelle Websites, Webanwendungen, Plugins und Microservices – präzise auf Ihre
+          Anforderungen zugeschnitten.
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
+              <div
+                class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 dark:bg-emerald-800">
+                <i class="fa-regular text-white fa-globe"></i>
+              </div>
+              Individuelle Websites
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+              Ob mit WordPress, Astro oder als reine HTML-Lösung – ich setze Ihre Website nach Ihren Wünschen
+              und den neuesten technischen Standards um.
+            </dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
+              <div
+                class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 dark:bg-emerald-800">
+                <i class="fa-regular text-white fa-plug"></i>
+              </div>
+              Plugin-Entwicklung
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+              Benötigen Sie ein spezielles Plugin für WordPress oder eine andere Plattform? Ich entwickle
+              maßgeschneiderte Erweiterungen für Ihre bestehende Software.
+            </dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
+              <div
+                class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 dark:bg-emerald-800">
+                <i class="fa-regular text-white fa-server"></i>
+              </div>
+              Microservices
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+              Ich entwickle unabhängige, skalierbare Microservices, die sich nahtlos in Ihre bestehende
+              IT-Landschaft integrieren lassen.
+            </dd>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
+              <div
+                class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 dark:bg-emerald-800">
+                <i class="fa-regular text-white fa-code"></i>
+              </div>
+              Open Source
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
+              Ich engagiere mich in der Open-Source-Community und entwickle öffentlich zugängliche
+              Softwarelösungen.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Meine Mission:
+          Qualität, Sicherheit, Nachhaltigkeit</h2>
+        <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+          <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
+            <p class="text-xl leading-8 text-gray-600 dark:text-gray-300">
+              Ich lege Wert auf Qualität bis ins Detail – für jedes Endgerät und mit einem starken Fokus auf
+              Sicherheit.
+            </p>
+            <p class="mt-10 max-w-xl text-base leading-7 text-gray-700 dark:text-gray-400">
+              Viele Agenturen vernachlässigen die Sicherheit. Ich nicht! Ich biete Ihnen langfristige, stabile
+              und sichere Softwarelösungen – zu fairen Preisen. Jedes Projekt wird mit einer umfassenden
+              Dokumentation und einem Sicherheitsbericht ausgeliefert. Auch langfristiger Support und
+              Anpassungen sind selbstverständlich.
+            </p>
+          </div>
+          <div class="lg:flex lg:flex-auto lg:justify-center">
+            <dl class="w-64 space-y-8 xl:w-80">
+              <div class="flex flex-col-reverse gap-y-4">
+                <dt class="text-base leading-7 text-gray-600 dark:text-gray-300">Software- und
+                  Webentwicklung
+                </dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-50">Über 10
+                  Jahre Erfahrung
+                </dd>
+              </div>
+              <div class="flex flex-col-reverse gap-y-4">
+                <dt
+                  class="text-base leading-7 text-gray-600 dark:text-gray-300 bg-linear-to-br from-pink-500 via-cyan-500 to-violet-500 inline-block text-transparent bg-clip-text transition-all font-semibold">
+                  KI-gestützte Entwicklung
+                </dt>
+                <dd class="text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-50">
+                  Effizienzsteigerung
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <PriceService />
+
+  <Partner />
+
+</Layout>

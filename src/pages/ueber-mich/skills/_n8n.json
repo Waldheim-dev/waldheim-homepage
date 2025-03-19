@@ -1,0 +1,12 @@
+{
+  "name": "N8N",
+  "image": "/brands/n8n-color.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2025-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["general"]
+}
