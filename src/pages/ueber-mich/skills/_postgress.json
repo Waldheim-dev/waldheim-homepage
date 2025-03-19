@@ -1,0 +1,12 @@
+{
+  "name": "PostgreSQL",
+  "image": "/brands/postgresql.svg",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 1,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["database"]
+}

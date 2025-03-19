@@ -1,0 +1,12 @@
+{
+  "name": "Open AI",
+  "image": "/brands/openai.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2023-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["general"]
+}
