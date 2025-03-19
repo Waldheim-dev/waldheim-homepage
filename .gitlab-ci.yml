@@ -34,9 +34,11 @@ include:
       rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       remote-dir: /websites/waldheim.dev/www
+      path: "./v26"
   - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-sftp@~latest
     inputs:
       name: deploy-next
+      path: "./v26"
       remote-dir: /websites/waldheim.dev/next
       rules:
         - if: $CI_COMMIT_BRANCH == "next"
