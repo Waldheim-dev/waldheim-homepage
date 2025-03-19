@@ -2,8 +2,8 @@
 import { Schema } from "astro-seo-schema";
 import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-
 import { SchemaUtils } from "../utils/schema";
 import Banner from "../components/Banner.astro";
 
@@ -198,13 +198,18 @@ schema.push(softwareApplicationEcoPro);
 
 		<ClientRouter />
 	</head>
-	<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-white">
-		<header class="sticky top-0 z-50 max-w-screen-lg mx-auto py-2">
+	<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-white flex-col gap-4">
+		<header class="sticky top-0 z-50 max-w-screen-lg mx-auto py-2 px-2">
 			<Nav/>
+		</header>
+		<header class="max-w-screen-lg mx-auto py-2 px-2">
+			<Banner />
 		</header>
 		<main>
 			<slot />
 		</main>
-		<footer></footer>
+		<footer>
+		<Footer />
+		</footer>
 	</body>
 </html>
