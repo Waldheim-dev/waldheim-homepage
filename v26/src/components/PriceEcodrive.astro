@@ -1,0 +1,632 @@
+---
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto px-6 lg:px-8 pt-16">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2
+          class="text-base font-semibold leading-7 text-primary-600 dark:text-emerald-600"
+        >
+          Ecodrive: Preise & Verfügbarkeit
+        </h2>
+        <p
+          class="mt-2 text-4xl font-bold tracking-tight text-primary-800 dark:text-white sm:text-5xl"
+        >
+          Transparente Preise für Ecodrive
+        </p>
+      </div>
+      <p
+        class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-700 dark:text-gray-300"
+      >
+        Ecodrive befindet sich derzeit in der Entwicklung. Die Version 1.0 ist für 2025 geplant. Die finalen Preise
+        stehen noch nicht fest. Bei Interesse können Sie sich gerne für Neuigkeiten vormerken lassen.
+      </p>
+
+      <script is:inline data-id="script" data-plan="monthly">
+        document.addEventListener('astro:page-load', () => {
+          const script = document.querySelector('*[data-id="script"]');
+          const monthly = document.querySelector('#monthly');
+          const annual = document.querySelector('#annual');
+
+          const free = document.querySelector('#free');
+          const basic = document.querySelector('#basic');
+          const pro = document.querySelector('#pro');
+          const premium = document.querySelector('#premium');
+
+          monthly?.addEventListener('click', () => {
+            script.dataset.plan = 'monthly';
+            monthly.classList.add('bg-primary-500', 'dark:bg-emerald-800', 'text-white');
+            annual.classList.remove('bg-primary-500', 'dark:bg-emerald-800', 'text-white');
+
+            free.querySelector('.price').innerHTML = '0,00€';
+            basic.querySelector('.price').innerHTML = '5,00€';
+            pro.querySelector('.price').innerHTML = '15,00€';
+            premium.querySelector('.price').innerHTML = '250,00€';
+
+            free.querySelector('.frequency').innerHTML = '/Monat';
+            basic.querySelector('.frequency').innerHTML = '/Monat';
+            pro.querySelector('.frequency').innerHTML = '/Monat';
+            premium.querySelector('.frequency').innerHTML = '/Monat';
+          });
+
+          annual?.addEventListener('click', () => {
+            script.dataset.plan = 'annual';
+            annual.classList.add('bg-primary-500', 'dark:bg-emerald-800', 'text-white');
+            monthly.classList.remove('bg-primary-500', 'dark:bg-emerald-800', 'text-white');
+
+            free.querySelector('.price').innerHTML = '0,00€';
+            basic.querySelector('.price').innerHTML = '57,00€';
+            pro.querySelector('.price').innerHTML = '171,00€';
+            premium.querySelector('.price').innerHTML = '2850,00€';
+
+            free.querySelector('.frequency').innerHTML = '/Jahr';
+            basic.querySelector('.frequency').innerHTML = '/Jahr';
+            pro.querySelector('.frequency').innerHTML = '/Jahr';
+            premium.querySelector('.frequency').innerHTML = '/Jahr';
+          });
+        });
+      </script>
+      <div class="mt-16 flex justify-center">
+        <fieldset
+          class="grid grid-cols-2 gap-x-1 rounded-full bg-black/5 p-1 text-center text-xs font-semibold leading-5 text-primary-800 dark:text-white"
+        >
+          <legend class="sr-only">Zahlungsrythmus</legend>
+          <!-- Checked: "bg-primary-500 text-white" -->
+          <label
+            class="cursor-pointer rounded-full px-2.5 py-1 bg-primary-500 dark:bg-emerald-800 text-white"
+            id="monthly"
+            for="frequency-monthly"
+          >
+            <input
+              type="radio"
+              name="frequency"
+              id="frequency-monthly"
+              value="monthly"
+              class="sr-only"
+            />
+            <span>Monatlich</span>
+          </label>
+          <!-- Checked: "bg-primary-500 text-white" -->
+          <label
+            class="cursor-pointer rounded-full px-2.5 py-1"
+            id="annual"
+            for="frequency-annualy"
+          >
+            <input
+              type="radio"
+              name="frequency"
+              id="frequency-annualy"
+              value="annually"
+              class="sr-only"
+            />
+            <span>Jährlich
+              <span
+                class="inline-flex items-center rounded-md bg-green-50 dark:bg-emerald-800/25 px-2 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-green-600/20">-5%</span></span>
+          </label>
+        </fieldset>
+      </div>
+      <div
+        class="isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-4"
+      >
+        <div
+          class="rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70 transition-all hover:bg-primary-400/10"
+          id="free"
+        >
+          <div class="flex items-center justify-between gap-x-4">
+            <h3
+              id="tier-free"
+              class="text-lg font-semibold leading-8 text-primary-800 dark:text-white"
+            >
+              <i class="fa-regular fa-seedling text-primary-600 dark:text-emerald-600"></i> Free
+            </h3>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Lerne die Software kennen und probiere sie aus.
+            <br> <strong><i class="fa-solid fa-fx fa-check-circle text-primary-400"></i> Verfügbar</strong>
+          </p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span
+              class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
+            >0,00€</span
+            >
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span
+              class="frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300"
+            >/Monat</span
+            >
+          </p>
+          <!--<a href='#' aria-describedby='tier-freelancer'-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
+          <!--  plan</a>-->
+          <ul
+            role="list"
+            class="mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10"
+          >
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>1</strong> Fahrzeug</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Tank Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrzeugkalkulation
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70 transition-all hover:bg-primary-400/10"
+          id="basic"
+        >
+          <div class="flex items-center justify-between gap-x-4">
+            <h3
+              id="tier-basic"
+              class="text-lg font-semibold leading-8 text-primary-800 dark:text-white"
+            >
+              <i class="fa-regular fa-car-side text-primary-600 dark:text-emerald-600"></i> Basic
+            </h3>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Ideal für Familien, kleine Firmen, Teams und Dich!
+            <br> <em>Ab Version 1.1</em>
+          </p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span
+              class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
+            >5,00€</span
+            >
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span
+              class="frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300"
+            >/Monat</span
+            >
+          </p>
+          <!--<a href='#' aria-describedby='tier-startup'-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary-500 text-white shadow-xs hover:bg-primary-400 focus-visible:outline-primary-500'>Buy-->
+          <!--  plan</a>-->
+          <ul
+            role="list"
+            class="mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10"
+          >
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>3</strong> Fahrzeuge</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Tank Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrzeugkalkulation
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Service Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrten Protokollierung
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rounded-3xl p-8 xl:p-10 bg-primary-400/5 ring-2 ring-primary-500 dark:ring-emerald-600 transition-all hover:bg-primary-400/10"
+          id="pro"
+        >
+          <div class="flex items-center justify-between gap-x-4">
+            <h3
+              id="tier-pro"
+              class="text-lg font-semibold leading-8 text-primary-800 dark:text-white"
+            >
+              <i class="fa-regular fa-rocket-launch text-primary-600 dark:text-emerald-600"></i> Pro
+            </h3>
+            <p
+              class="rounded-full bg-primary-500 dark:bg-emerald-800 px-2.5 py-1 text-xs font-semibold leading-5 text-white"
+            >
+              Empfehlung
+            </p>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Optimal für Firmen mit einer gesetzlichen Verpflichtung.
+            <br> <em>Ab Version 1.2</em>
+          </p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span
+              class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
+            >15,00€</span
+            >
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span
+              class="frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300"
+            >/Monat</span
+            >
+          </p>
+          <!--<a href='#' aria-describedby='tier-enterprise'-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
+          <!--  plan</a>-->
+          <ul
+            role="list"
+            class="mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10"
+          >
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>10</strong> Fahrzeuge</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Tank Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrzeugkalkulation
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Service Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrten Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Exportiertes Fahrtenbuch
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>10</strong> Benutzereinladung</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Statistiken
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Logbuch
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rounded-3xl p-8 xl:p-10 ring-1 dark:ring-white/10 ring-slate-700/70 transition-all hover:bg-primary-400/10"
+          id="premium"
+        >
+          <div class="flex items-center justify-between gap-x-4">
+            <h3
+              id="tier-premium"
+              class="text-lg font-semibold leading-8 text-primary-800 dark:text-white"
+            >
+              <i class="fa-regular fa-planet-ringed text-primary-600 dark:text-emerald-600"></i> Premium
+            </h3>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-gray-700 dark:text-gray-300">
+            Optimal für große Firmen und großen Fuhrparks.
+            <br> <em>Ab Version 1.3</em>
+          </p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span
+              class="price text-4xl font-bold tracking-tight text-primary-800 dark:text-white"
+            >250,00€</span
+            >
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span
+              class="frequency text-sm font-semibold leading-6 text-gray-700 dark:text-gray-300"
+            >/Monat</span
+            >
+          </p>
+          <!--<a href='#' aria-describedby='tier-enterprise'-->
+          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white'>Buy-->
+          <!--  plan</a>-->
+          <ul
+            role="list"
+            class="mt-8 space-y-3 text-sm leading-6 text-gray-700 dark:text-gray-300 xl:mt-10"
+          >
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Unbegrenzte</strong> Fahrzeuge</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Tank Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrzeugkalkulation
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Service Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Fahrten Protokollierung
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Exportiertes Fahrtenbuch
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span><strong>Unbegrenzte</strong> Benutzereinladung</span>
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Statistiken
+            </li>
+            <li class="flex gap-x-3">
+              <svg
+                class="h-6 w-5 flex-none text-primary-600 dark:text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Logbuch
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
