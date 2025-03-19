@@ -1,0 +1,372 @@
+---
+import { getCollection } from 'astro:content';
+import SkillFlipCard from './SkillFlipCard.astro';
+import SkillRow from './SkillRow.astro';
+const allSkills = await getCollection('skills');
+const topSkills = allSkills.filter((skill) => skill.data.isTopSkill === true);
+const otherSkills = allSkills.filter((skill) => skill.data.isTopSkill === false);
+const layer = [
+  'frontend',
+  'backend',
+  'design',
+  'infrastructure',
+  'quality',
+  'general',
+  'system',
+  'security',
+  'database'
+];
+---
+
+<section>
+  <div>
+    <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+      <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 pb-2">
+        Filtere die Skills, wie du es dir wünscht
+      </p>
+      <div class="mt-2 flex justify-center">
+        <fieldset
+          class="grid grid-cols-2 gap-x-1 rounded-full bg-black/5 p-1 text-center text-xs font-semibold leading-5 text-primary-800 dark:text-white"
+        >
+          <legend class="sr-only">Ansicht</legend>
+          <!-- Checked: "bg-primary-500 text-white" -->
+          <label
+            class="cursor-pointer rounded-full px-2.5 py-1 bg-primary-500 dark:bg-emerald-800 text-white"
+            id="card"
+          >
+            <input
+              type="radio"
+              name="view"
+              id="view-cards"
+              value="card"
+              class="sr-only"
+            />
+            <span>Kartenansicht</span>
+          </label>
+          <!-- Checked: "bg-primary-500 text-white" -->
+          <label
+            class="cursor-pointer rounded-full px-2.5 py-1"
+            id="table"
+            for="view-table"
+          >
+            <input
+              type="radio"
+              name="view"
+              id="view-table"
+              value="table"
+              class="sr-only"
+            />
+            <span>Tabellenansicht</span>
+          </label>
+        </fieldset>
+      </div>
+      <div class="mt-4 flex gap-1 justify-center flex-wrap">
+        {
+          layer.map((entry) => (
+            <button
+              data-trigger="filter"
+              data-filter={entry}
+              data-filtered="false"
+              class="bg-primary-100 dark:bg-slate-700 rounded-sm px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300"
+            >
+              {entry}
+            </button>
+          ))
+        }
+        <button
+          data-trigger="filter"
+          data-filter="all"
+          data-filtered="false"
+          class="bg-primary-100 dark:bg-slate-700 rounded-sm px-2 py-1 first-letter:uppercase text-slate-800 dark:text-slate-300"
+        >
+            <span class="text-rose-500" title="Filter zurücksetzen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </span>
+        </button>
+      </div>
+      <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">
+        Klicke auf die Karte, um mehr zu erfahren.
+      </p>
+      <p
+        class="mt-2 text-lg justify-center items-center leading-8 text-gray-600 dark:text-gray-400 flex gap-0.5"
+      >
+          <span class="text-emerald-500" title="Mein empfohlender Techstack">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                d="M5.507 4.048A3 3 0 0 1 7.785 3h8.43a3 3 0 0 1 2.278 1.048l1.722 2.008A4.533 4.533 0 0 0 19.5 6h-15c-.243 0-.482.02-.715.056l1.722-2.008Z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M1.5 10.5a3 3 0 0 1 3-3h15a3 3 0 1 1 0 6h-15a3 3 0 0 1-3-3Zm15 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm2.25.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM4.5 15a3 3 0 1 0 0 6h15a3 3 0 1 0 0-6h-15Zm11.25 3.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM19.5 18a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </span>
+        = Mein empfohlender Techstack
+      </p>
+      <script is:inline>
+        document.addEventListener('astro:page-load', () => {
+          const triggers = document.querySelectorAll(
+            '[data-trigger="filter"]'
+          );
+          const cards = document.querySelectorAll('[data-layer]');
+          triggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+              let filtered = trigger.getAttribute('data-filtered') === 'true';
+              const filter = trigger.getAttribute('data-filter');
+              filtered = !filtered;
+              if (filter === 'all') {
+                filtered = false;
+              }
+              for (const nextTrigger of triggers) {
+                nextTrigger.classList.remove('bg-primary-300','dark:bg-slate-500');
+                nextTrigger.classList.add('bg-primary-100','dark:bg-slate-700');
+                nextTrigger.setAttribute('data-filtered', 'false');
+              }
+              if (filtered) {
+                trigger.classList.remove('bg-primary-100','dark:bg-slate-700');
+                trigger.classList.add('bg-primary-300','dark:bg-slate-500');
+                trigger.setAttribute('data-filtered', 'true');
+              }
+              for (const card of cards) {
+                if (!filtered) {
+                  card.style.display = null;
+                } else {
+                  if (card.getAttribute('data-layer').includes(filter)) {
+                    card.style.display = null;
+                  } else {
+                    card.style.display = 'none';
+                  }
+                }
+              }
+            });
+          });
+        });
+      </script>
+      <script is:inline data-id="table-script" data-plan="card">
+        document.addEventListener('astro:page-load', () => {
+          const script = document.querySelector('*[data-id="table-script"]');
+          const card = document.querySelector('#card');
+          const table = document.querySelector('#table');
+
+          const cardView = document.querySelector('.card-view');
+          const tableView = document.querySelector('.table-view');
+
+          const dataSort = document.querySelectorAll('[data-sort]');
+
+          if (script.dataset.plan === 'card') {
+            tableView.classList.add('hidden');
+            cardView.classList.remove('hidden');
+          } else {
+            cardView.classList.add('hidden');
+            tableView.classList.remove('hidden');
+          }
+
+          card?.addEventListener('click', () => {
+            script.dataset.plan = 'card';
+            card.classList.add('bg-primary-500', 'text-white', 'dark:bg-emerald-800');
+            table.classList.remove('bg-primary-500', 'text-white', 'dark:bg-emerald-800');
+            cardView.classList.remove('hidden');
+            tableView.classList.add('hidden');
+          });
+
+          table?.addEventListener('click', () => {
+            script.dataset.plan = 'table';
+            table.classList.add('bg-primary-500', 'text-white', 'dark:bg-emerald-800');
+            card.classList.remove('bg-primary-500', 'text-white', 'dark:bg-emerald-800');
+            tableView.classList.remove('hidden');
+            cardView.classList.add('hidden');
+          });
+
+          dataSort.forEach((sort) => {
+            sort.classList.add('cursor-pointer');
+            sort.classList.add('after:transition-all');
+            sort.classList.add('hover:after:content-["↕"]');
+            sort.classList.add('relative');
+            sort.classList.add('after:absolute');
+            sort.classList.add('after:right-2');
+            sort.addEventListener('click', () => {
+              dataSort.forEach((nextSort) => {
+                nextSort.classList.remove('after:content-["↕"]');
+              });
+              sort.classList.add('after:content-["↕"]');
+              // get all rows of table
+              const rows = tableView.querySelectorAll('tbody tr');
+              let sortDirection =
+                tableView.getAttribute('data-sortDirection');
+              const sorted = tableView.getAttribute('data-sorted');
+              // change the direction by same sorted
+              if (sorted === sort.getAttribute('data-sort')) {
+                tableView.setAttribute(
+                  'data-sortDirection',
+                  sortDirection === 'asc' ? 'desc' : 'asc'
+                );
+              } else {
+                tableView.setAttribute(
+                  'data-sorted',
+                  sort.getAttribute('data-sort')
+                );
+                tableView.setAttribute('data-sortDirection', 'asc');
+              }
+              // sort all rows by sorted
+              sortDirection = tableView.getAttribute('data-sortDirection');
+              const tbody = tableView.querySelector('tbody');
+              tbody.innerHTML = '';
+              // convert NodeList to array
+              const sortArray = Array.from(rows);
+              // sort by sorted of all rows
+              const knowledgeNumber = (knowledge) => {
+                if (knowledge === 'basic') {
+                  return 1;
+                } else if (knowledge === 'advanced') {
+                  return 2;
+                } else if (knowledge === 'expert') {
+                  return 3;
+                }
+                return 0;
+              };
+              const timeDiff = (
+                fixedExperience,
+                isActive,
+                sinceLastRollup
+              ) => {
+                const current = new Date();
+                const since = new Date(sinceLastRollup);
+                let dateDiff = current.getFullYear() - since.getFullYear();
+                const months = current.getMonth() - since.getMonth();
+                if (dateDiff <= 0) {
+                  switch (true) {
+                    case months < 4:
+                      dateDiff = 0.25;
+                      break;
+                    case months < 7:
+                      dateDiff = 0.5;
+                      break;
+                    case months < 10:
+                      dateDiff = 0.75;
+                      break;
+                    default:
+                      dateDiff = 1;
+                      break;
+                  }
+                }
+                return isActive
+                  ? dateDiff + fixedExperience
+                  : fixedExperience;
+              };
+              const sortEntrys = sortArray.map((row) => {
+                const data = JSON.parse(row.getAttribute('data-entry'));
+                return {
+                  data: {
+                    ...data,
+                    knowledgebase: knowledgeNumber(data.knowledgebase),
+                    fixedExperience: timeDiff(
+                      data.fixedExperience,
+                      data.isActive,
+                      data.sinceLastRollup
+                    )
+                  },
+                  entitie: row
+                };
+              });
+              sortEntrys.sort((a, b) => {
+                if (sorted === 'name') {
+                  a.data[sorted] = a.data[sorted].toUpperCase();
+                  b.data[sorted] = b.data[sorted].toUpperCase();
+                }
+
+                if (sortDirection === 'asc') {
+                  return a.data[sorted] > b.data[sorted] ? 1 : -1;
+                } else {
+                  return a.data[sorted] < b.data[sorted] ? 1 : -1;
+                }
+              });
+              sortEntrys.forEach((entry) => {
+                tbody.appendChild(entry.entitie);
+              });
+            });
+          });
+        });
+      </script>
+    </div>
+  </div>
+  <section class="table-view" data-sorted="name" data-sortDirection="asc">
+    <div class="py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl text-left px-6 lg:px-8 py-6">
+        <table
+          class="w-full border-1 border border-primary-100 dark:border-slate-800 bg-primary-100 dark:bg-slate-900 rounded-md shadow-md"
+        >
+          <thead>
+          <tr class="dark:text-white">
+            <th class="px-2 py-3"></th>
+            <th class="px-2 py-3" data-sort="name">Skill</th>
+            <th class="px-2 py-3"></th>
+            <th class="px-2 py-3" data-sort="fixedExperience">Erfahrung</th>
+            <th class="px-2 py-3" data-sort="knowledgebase">Skilllevel</th>
+          </tr>
+          </thead>
+          <tbody>
+          {allSkills.map((entry) =>
+            <SkillRow entry={entry} />)}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="card-view">
+    <div class="py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+        <h2
+          class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl"
+        >
+          Top Skills (<span class="top-counter">{topSkills.length}</span>)
+        </h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">
+          Aktuell im Trend oder Produktiv im Einsatz.
+        </p>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6"
+        >
+          {topSkills.map((entry) =>
+            <SkillFlipCard entry={entry} />)}
+        </div>
+      </div>
+    </div>
+    <div class="py-12 sm:py-16">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+        <h2
+          class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-300 sm:text-4xl"
+        >
+          Weitere Skills (<span class="counter">{otherSkills.length}</span>)
+        </h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400">
+          Learn how to grow your business with our expert advice.
+        </p>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6"
+        >
+          {otherSkills.map((entry) =>
+            <SkillFlipCard entry={entry} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

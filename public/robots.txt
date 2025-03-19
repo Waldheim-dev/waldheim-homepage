@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /datenschutz/
+Disallow: /impressum/
+Disallow: /services/
+
+Sitemap: https://www.waldheim.dev/sitemap-index.xml
