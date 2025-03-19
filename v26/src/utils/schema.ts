@@ -6,7 +6,7 @@ interface BreadCrumb {
 
 interface Article {
   title: string;
-  image: string[];
+  image: string;
   author: string;
   datePublished: string;
   dateModified: string;
