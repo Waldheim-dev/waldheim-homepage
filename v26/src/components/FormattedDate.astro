@@ -1,0 +1,12 @@
+---
+const { date } = Astro.props;
+
+const dateDE = new Date(date).toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+
+<time datetime={date} class='text-current'>{dateDE}</time>
