@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
 ---
 
-<nav class="flex justify-between space-x-4 items-center py-4 pl-4 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-full text-slate-800 dark:text-white">
+<nav class="flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-full text-slate-800 dark:text-white">
     <div class="flex items-center gap-4">
         <a href="/" class="-m-1.5 flex items-center gap-1">
           <img class="h-8 w-auto hidden dark:block" src="/waldheim.dev.png" alt="Waldheim.dev" loading="lazy">
@@ -19,6 +19,16 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
       </span>
     </div>
     <div class="flex justify-center space-x-4 items-center">
+      <div class="block lg:hidden">
+        <button type="button"
+                class="inline-flex items-center justify-center rounded-md p-2.5 hover:bg-slate-100 dark:hover:bg-slate-900 text-primary-700 dark:text-white button-toggle">
+          <span class="sr-only">Öffne Menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+               aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
       <div class="hidden lg:flex lg:gap-x-2">
         <a href="/ecodrive/"
         class="text-sm font-semibold leading-6 text-primary-900 dark:text-white hover:bg-primary-400 dark:hover:bg-emerald-800/25 hover:text-primary-50 px-2 py-0.5 rounded-full transition-all ">Ecodrive</a>
