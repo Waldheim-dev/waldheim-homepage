@@ -23,23 +23,23 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
     <div class="lg:hidden" role="dialog" aria-modal="false" style="display: none;">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div
-        class="nav-sidebar absolute mt-12 left-0 rounded-3xl z-10 w-full overflow-y-auto bg-primary-50 dark:bg-slate-800 px-6 py-6 sm:ring-1 sm:ring-primary-900/10">
+        class="nav-sidebar absolute mt-24 left-0 top-0 rounded-3xl z-10 w-full max-w-96 mx-auto overflow-y-auto max-h-[calc(75vh)] bg-primary-100 dark:bg-slate-800 px-6 py-6 shadow-lg">
       
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-primary-500/10">
             <div class="space-y-2 py-6">
               <a href="/ecodrive/"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800">
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800">
                 <span>Ecodrive</span>
               </a>
               <a href="/referenzen/1/"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800">Referenzen</a>
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900  hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800">Referenzen</a>
 
               <div class="-mx-3 block">
                 <button type="button"
-                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800"
+                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900  hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800"
                         aria-controls="disclosure-1" aria-expanded="false">
-                  <!--class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800'> -->
+                  <!--class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900  hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800'> -->
                   Services
                   <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -50,40 +50,40 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2" id="disclosure-2" hidden>
                   <a href="/services/devsecops/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>Effiziente Entwicklung / DevSecOps</span>
                   </a>
                   <a href="/services/entwicklung/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>Softwareentwicklung</span>
                   </a>
                   <a href="/services/design/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>Design / UX</span>
                   </a>
                   <a href="/services/it-service/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>IT-Service</span>
                   </a>
                   <a href="/services/smarthome/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>Smarthome</span>
                   </a>
                   <a href="/services/verbandssoftware/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-primary-500 dark:text-slate-300 dark:hover:bg-emerald-800">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-400 dark:text-slate-300 dark:hover:bg-emerald-800">
                     <span>Verbandssoftware</span>
                   </a>
                 </div>
               </div>
               <a href="/ueber-mich/"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800">Über
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900  hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800">Über
                 mich</a>
               <a href="/blog/"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900 hover:bg-primary-600 dark:text-white dark:hover:bg-emerald-800">Blog</a>
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary-900  hover:bg-primary-400 dark:text-white dark:hover:bg-emerald-800">Blog</a>
             </div>
             <div class="py-6">
               <a href="https://forestdesign.atlassian.net/servicedesk/customer/portals" target="_blank"
-                 class="flex justify-between gap-1 rounded-md bg-primary-600 dark:bg-emerald-800/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-5000 dark:hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+                 class="flex justify-between gap-1 rounded-md bg-primary-600 dark:bg-emerald-800/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-4000 dark:hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
                 Help Center
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                   <path fill-rule="evenodd"
@@ -127,7 +127,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
           <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-10 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-200 opacity-0 translate-y-1">
             <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-100 dark:bg-slate-950 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
               <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -144,7 +144,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-primary-700 dark:text-slate-300">Optimierung der Entwicklung bei euch</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -161,7 +161,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-primary-700 dark:text-slate-300">Webseiten, Plugins und kleinere Softwareprojekte</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -178,7 +178,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-primary-700 dark:text-slate-300">Print und digitales Design</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -195,7 +195,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-primary-700 dark:text-slate-300">IT-Service, PC, Network und Administrierung</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -212,7 +212,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-primary-600 dark:text-slate-300">Baue dein eigenes Smarthome</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-500 dark:hover:bg-emerald-800/25">
+                <div class="group relative flex gap-x-6 rounded-lg p-4  hover:bg-primary-400 dark:hover:bg-emerald-800/25">
                   <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg  bg-primary-50 dark:bg-slate-800 group-hover:bg-emerald-800/25 dark:group-hover:bg-slate-950 transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor"
@@ -268,7 +268,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
       </div>
       <div class="hidden lg:flex ">
           <a href="https://forestdesign.atlassian.net/servicedesk/customer/portals" target="_blank"
-             class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-5000 dark:hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+             class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800/50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-4000 dark:hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
             Help Center
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
               <path fill-rule="evenodd"
@@ -303,12 +303,12 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
       const toggleEvent = (e) => {
         const nav = document.querySelector('.nav-sidebar');
         const dialog = document.querySelector('[role="dialog"]');
-        if (nav.classList.contains('right--100')) {
+        if (nav.classList.contains('top--100')) {
           dialog.style.display = 'block';
-          nav.classList.remove('right--100');
+          nav.classList.remove('top--100');
         } else {
           dialog.style.display = 'none';
-          nav.classList.add('right--100');
+          nav.classList.add('top--100');
         }
       };
 
