@@ -1,3 +1,21 @@
+# [26.0.0-next.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.1...26.0.0-next.2) (2025-03-25)
+
+
+### Bug Fixes
+
+* enhance styling and accessibility in HeroBackground and Banner components; update package dependencies ([b62c322](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b62c322f7562fd9b2b82e99323730b1de7fca6b3))
+* update release configuration and package dependencies to use exact versions ([9fe75af](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9fe75af8f985026079f6846b3156ce6dbc3e2d6b))
+
+
+### Code Refactoring
+
+* rename markdown files and update blog post links to remove prefix; add new JSON files for various services ([6023ec4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6023ec4f3576319a6de0aad4cde0a2fd0732500c))
+
+
+### BREAKING CHANGES
+
+* move v26 to new stable
+
 # [26.0.0-next.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.0...26.0.0-next.1) (2025-03-19)
 
 
