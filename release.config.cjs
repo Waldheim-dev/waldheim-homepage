@@ -29,13 +29,13 @@ module.exports = {
       {
         verifyReleaseCmd: "echo VERSION=${nextRelease.version} > version.env",
         prepareCmd:
-          "cd v26 && npm version ${nextRelease.version} --no-git-tag-version",
+          "npm version ${nextRelease.version} --no-git-tag-version",
       },
     ],
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md", "v26/package.json"],
+        assets: ["CHANGELOG.md", "package.json"],
       },
     ],
   ],
