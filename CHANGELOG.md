@@ -1,3 +1,10 @@
+# [26.0.0-next.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.2...26.0.0-next.3) (2025-03-25)
+
+
+### Bug Fixes
+
+* improve error handling in API requests and enhance logging functionality ([d36a19a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d36a19a21afca5ab4741b02cb47d38e6513f17ed))
+
 # [26.0.0-next.2](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.1...26.0.0-next.2) (2025-03-25)
 
 
