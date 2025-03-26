@@ -5,7 +5,7 @@ const { title, subtitle, image } = Astro.props;
 <div class="relative isolate">
     <div aria-hidden="true" class="absolute inset-0 flex justify-center items-center py-12 px-3 md:px-12">
         <figure class="rounded-3xl overflow-hidden relative w-full h-full">
-            <img src={image} class="object-contains w-full brightness-50" alt=""  loading="lazy"/>
+            <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="lazy"/>
         </figure>
     </div>
     <div class="py-24 sm:py-32 lg:pb-40 z-10 relative">
