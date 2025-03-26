@@ -1,3 +1,17 @@
+# [26.0.0-next.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.4...26.0.0-next.5) (2025-03-26)
+
+
+### Bug Fixes
+
+* update background colors and text colors for better contrast and accessibility ([8256582](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8256582ee4dc251843b705640736cec1532ffadb))
+* update blog links to include page number and change version to 26.0.0-prev ([3aab011](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3aab011eb74715642a2279d81ce84893add1360e))
+
+
+### Features
+
+* add lazy loading to images for improved performance ([387c87c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/387c87c4c2a441a1d57e9fe5135d72bea7b6bacc))
+* update pricing information and description in PriceService component ([540b39b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/540b39bf6f42fba352e462ba9675818e2c4e678d))
+
 # [26.0.0-next.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.3...26.0.0-next.4) (2025-03-26)
 
 
