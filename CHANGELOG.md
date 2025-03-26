@@ -1,3 +1,10 @@
+# [26.0.0-next.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.5...26.0.0-next.6) (2025-03-26)
+
+
+### Bug Fixes
+
+* remove disallow rule for services in robots.txt ([46c3e87](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/46c3e875a1dff562327454559796c2d36243cb41))
+
 # [26.0.0-next.5](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.4...26.0.0-next.5) (2025-03-26)
 
 
