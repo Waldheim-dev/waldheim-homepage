@@ -1,3 +1,10 @@
+# [26.0.0-next.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.6...26.0.0-next.7) (2025-03-26)
+
+
+### Bug Fixes
+
+* update version numbers for website and ecodrive components ([f85e488](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f85e4886a3c82df276ae79eaaa9e5e6fe51faa13))
+
 # [26.0.0-next.6](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.5...26.0.0-next.6) (2025-03-26)
 
 
