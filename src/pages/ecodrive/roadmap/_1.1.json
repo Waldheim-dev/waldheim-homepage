@@ -1,7 +1,7 @@
 {
     "version": "1.1",
-    "date": "2025-06-01",
-    "planned": true,
+    "date": "2025-04-01",
+    "planned": false,
     "description": "Mit v1.1 ist das Basic-Model geplant, indem es schon die ersten Funktionen für Bezahlkunden geben wird.",
     "features": []
 }
