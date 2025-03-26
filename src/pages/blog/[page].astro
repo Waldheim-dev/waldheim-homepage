@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Blog from '../../components/Blog.astro';
+import { getCollection } from 'astro:content';
+import { SchemaUtils } from '../../utils/schema';
+import { SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths({ paginate }) {
+  const blogs = (await getCollection('blog'))
+    .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+
+  // Generate pages from our array of astronauts, with 2 to a page
+  return paginate(blogs, { pageSize: 6 });
+}
+const { page } = Astro.props;
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.hostname
+}, {
+  name: 'Blog',
+  link: Astro.url.href
+}]);
+
+const articleSchema = page.data.map((post) => SchemaUtils.getArticleSchema({
+  title: post.data.title,
+  image: post.data.heroImage,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: post.data.pubDate.toISOString(),
+  description: post.data.description,
+  author: post.data.author,
+  publisher: SITE_TITLE,
+  url: Astro.url.href + post.id
+}))
+
+const titel = "IT-Blog - waldheim.dev: Aktuelles & Insights"
+const description = "Unser IT-Blog: Aktuelle News, Fachartikel, Insights und Tipps zu DevSecOps, Webentwicklung, Smart Home, IT-Service und mehr. Bleiben Sie auf dem Laufenden!"
+const keywords = "IT-Blog, Technologie-Blog, DevSecOps, Webentwicklung, Smart Home, IT-Service, Verbandssoftware, News, Insights"
+
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema, ...articleSchema]}>
+  <Blog blog={page.data}/>
+  
+  <div class="py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <nav class="flex items-center justify-between border-t border-gray-200 dark:border-slate-600 px-4 py-3 sm:px-6 mt-4"
+  aria-label="Pagination">
+<div class="hidden sm:block">
+ <p class="text-sm text-gray-700 dark:text-slate-300">
+   Zeige
+   <span class="font-medium">{ page.start + 1}</span>
+   bis
+   <span class="font-medium">{ page.end + 1}</span>
+   von
+   <span class="font-medium">{page.total}</span>
+   Ergebnissen
+ </p>
+</div>
+<div class="flex flex-1 justify-between sm:justify-end gap-2">
+
+
+ {page.url.first ? <a href={page.url.first}
+                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-600 dark:hover:bg-slate-600">Erste Seite</a> : null}
+ {page.url.prev ? <a href={page.url.prev}
+                     class="relative inline-flex cursor-pointer items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-600 dark:hover:bg-slate-600">Vorherige Seite</a> : null}
+ {page.url.next ? <a href={page.url.next}
+                     class="relative inline-flex cursor-pointer items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-600 dark:hover:bg-slate-600">Nächste Seite</a> : null}
+ {page.url.last ? <a href={page.url.last}
+                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-600 dark:hover:bg-slate-600">Letzte Seite</a> : null}
+</div>
+</nav></div></div>
+</Layout>
