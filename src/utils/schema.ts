@@ -51,7 +51,7 @@ export class SchemaUtils {
       };
       if (item.link) {
         // @ts-ignore
-        itemSchema['item'] = item.link;
+        itemSchema['item'] = item.link.includes('https') ? item.link : `https://${item.link}/`;
       }
       return itemSchema;
     });
