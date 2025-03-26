@@ -1,3 +1,17 @@
+# [26.0.0-next.4](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.3...26.0.0-next.4) (2025-03-26)
+
+
+### Bug Fixes
+
+* ensure item link is always formatted as a valid HTTPS URL ([e77c9b2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e77c9b202db6bdd089ea1c0b82adee0e4db94b46))
+* update version in package.json and adjust deployment component in CI configuration ([572f3b7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/572f3b7c47e6471cdfbad0fdd4b613a3c0b3db18))
+
+
+### Features
+
+* refactor blog component structure and implement pagination for blog posts ([c572cc3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c572cc31dd78b9ff467ead2bc92333895c854d15))
+* update footer component with Ecodrive links and improve support section ([72d7afa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/72d7afafa8a078a2ee63417f8038014c54b21658))
+
 # [26.0.0-next.3](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.2...26.0.0-next.3) (2025-03-25)
 
 
