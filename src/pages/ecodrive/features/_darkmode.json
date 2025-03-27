@@ -1,0 +1,8 @@
+{
+    "name": "Darkmode überall",
+    "description": "Du magst keine hellen Farben? Kein Problem! Schalte den Darkmode ein und genieße die App in dunklen Farben.",
+    "image": "/ecodrive/ecodrive_darkmode.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }
