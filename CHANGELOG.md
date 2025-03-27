@@ -1,3 +1,10 @@
+# [26.0.0-next.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.7...26.0.0-next.8) (2025-03-27)
+
+
+### Features
+
+* add new features for EcoDrive including vehicle management, trip logging, and service reports ([ba12636](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ba126362ab043b963225bdd6c87aeff2255ee1e8))
+
 # [26.0.0-next.7](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.6...26.0.0-next.7) (2025-03-26)
 
 
