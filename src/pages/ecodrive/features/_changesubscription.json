@@ -1,0 +1,8 @@
+{
+    "name": "Ändern des Abonnements",
+    "description": "Ihr könnt euer Abonnement jederzeit ändern. Wechsel dazu einfach in der Kundenportal und wähle dein Abo aus. Du hast einen Gutschein, dann nutze diesen einfach bei der Auswahl deines Abos.",
+    "image": "/ecodrive/ecodrive_abo.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }

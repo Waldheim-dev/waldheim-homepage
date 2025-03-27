@@ -1,0 +1,8 @@
+{
+    "name": "Du willst die EcoDrive App auch offline nutzen?",
+    "description": "Dank der PWA-Technologie kannst die mit Google Chrome EcoDrive installieren. Speichere die App einfach auf deinem Startbildschirm.",
+    "image": "/ecodrive/ecodrive_pwa.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }
