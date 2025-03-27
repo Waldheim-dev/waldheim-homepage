@@ -1,0 +1,8 @@
+{
+    "name": "Vergessen den Trip zu protokollieren?",
+    "description": "Kein Problem! Du kannst jederzeit deinen aktuellen Kilometerstand eingeben und den Trip nachträglich protokollieren.",
+    "image": "/ecodrive/ecodrive_mileage_log.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.1"
+   }

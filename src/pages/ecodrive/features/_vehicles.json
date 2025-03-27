@@ -1,0 +1,8 @@
+{
+    "name": "Verwalte alle deine Fahrzeuge",
+    "description": "Alle deine Fahrzeuge auf einen Blick. Verwalte deine Fahrzeuge und füge neue hinzu.",
+    "image": "/ecodrive/ecodrive_vehicle.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }
