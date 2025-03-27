@@ -1,0 +1,8 @@
+{
+    "name": "Schnelle Übersicht",
+    "description": "Dank dem Dashboard haben Sie alle wichtigen Informationen auf einen Blick. So sehen Sie auf einen Blick, wie Sie im Vergleich zu anderen Fahrern abschneiden und wie Sie Ihre Fahrweise verbessern können.",
+    "image": "/ecodrive/ecodrive_dashboard.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }

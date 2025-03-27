@@ -1,0 +1,8 @@
+{
+ "name": "Benutzerkonto pflegen",
+ "description": "Ihr könnt selbstständig darüber entscheiden, welche Daten von euch gespeichert werden und welche nicht. Ihr könnt eure Daten jederzeit einsehen und bearbeiten. Auch die Löschung eurer Daten ist möglich.",
+ "image": "/ecodrive/ecodrive_account.PNG",
+ "tier": "free",
+ "planned": false,
+ "since": "1.0"
+}

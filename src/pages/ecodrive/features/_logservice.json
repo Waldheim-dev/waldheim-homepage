@@ -1,0 +1,8 @@
+{
+    "name": "Kosten für Serviceleistungen?",
+    "description": "Viele kleine Rechnungen für Serviceleistungen? Mit dem Serviceprotokoll können Sie alle Serviceleistungen in einer Rechnung zusammenfassen.",
+    "image": "/ecodrive/ecodrive_service_log.PNG",
+    "tier": "basic",
+    "planned": false,
+    "since": "1.1"
+   }

@@ -1,0 +1,8 @@
+{
+    "name": "Tank Protokollieren",
+    "description": "Um deinen Verbrauch zu ermitteln und zu analysieren, kannst du deine Tankvorgänge protokollieren. So hast du immer den Überblick über deinen Verbrauch und kannst ihn mit anderen Fahrern vergleichen.",
+    "image": "/ecodrive/ecodrive_fuel_reports.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }
