@@ -1,0 +1,8 @@
+{
+    "name": "Teile deine Erfolge",
+    "description": "Lade deine Freunde ein, um gemeinsam zu fahren und die Umwelt zu schonen.",
+    "image": "/ecodrive/ecodrive_einladungen.PNG",
+    "tier": "basic",
+    "planned": false,
+    "since": "1.1"
+   }

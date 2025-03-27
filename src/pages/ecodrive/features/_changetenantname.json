@@ -1,0 +1,8 @@
+{
+    "name": "Ändern des Mandanten-Namens",
+    "description": "Ihr könnt den Namen eures Mandanten jederzeit ändern. Hier seit Ihr flexibel und könnt den Namen eurem Unternehmen anpassen.",
+    "image": "/ecodrive/ecodrive_tenant.PNG",
+    "tier": "free",
+    "planned": false,
+    "since": "1.0"
+   }

@@ -1,0 +1,8 @@
+{
+    "name": "Wieder ein neuer Trip?",
+    "description": "Mit dem Tripprotokoll kannst du deine gefahrene Leistung regelmäßig protokollieren und analysieren.",
+    "image": "/ecodrive/ecodrive_trip_log.PNG",
+    "tier": "basic",
+    "planned": false,
+    "since": "1.1"
+   }

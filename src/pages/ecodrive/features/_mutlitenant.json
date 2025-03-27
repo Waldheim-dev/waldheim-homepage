@@ -1,0 +1,8 @@
+{
+    "name": "Private nutzung oder doch geschäftlich?",
+    "description": "Mit dem Multi-Tenant Feature kannst du für die Software sowohl private als auch geschäftliche Fahrten erfassen.",
+    "image": "/ecodrive/ecodrive_tenant_switch.PNG",
+    "tier": "basic",
+    "planned": false,
+    "since": "1.1"
+   }

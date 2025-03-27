@@ -102,6 +102,18 @@ const roadmap = defineCollection({
   }),
 });
 
+const features = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/pages/ecodrive/features"}),
+  schema: z.object({
+    name: z.string(),
+    description: z.string(),
+    image: z.string().or(z.null()).optional(),
+    tier: z.enum(['free', 'basic', 'pro', 'premium']),
+    planned: z.boolean(),
+    since: reference('roadmap'),
+  }),
+});
+
 const projects_kategorie = defineCollection({
   loader: glob({pattern: '**\/*.json', base: "./src/pages/referenzen/project_kategorie"}),
   schema: z.object({
@@ -159,4 +171,4 @@ const projects = defineCollection({
 });
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { blog, authors, skills, karriere_projects, karriere, roadmap, projects_kategorie, projects };
+export const collections = { blog, authors, skills, karriere_projects, karriere, roadmap, projects_kategorie, projects, features };

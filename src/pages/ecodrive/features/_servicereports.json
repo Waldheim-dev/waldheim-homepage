@@ -1,0 +1,8 @@
+{
+    "name": "Erfasse Serviceberichte",
+    "description": "Unterschiedlichste Quellen von Servicekosten kannst du an einer Stelle zusammen fassen und weißt sofort, was alles für Kosten in deinem Auto stecken.",
+    "image": "/ecodrive/ecodrive_service_reports.PNG",
+    "tier": "basic",
+    "planned": false,
+    "since": "1.1"
+   }

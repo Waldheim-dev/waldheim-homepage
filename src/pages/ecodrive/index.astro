@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
 import PriceEcodrive from '../../components/PriceEcodrive.astro';
 import EcodriveRoadmap from '../../components/EcodriveRoadmap.astro';
+import EcodriveFeatures from '../../components/EcodriveFeatures.astro';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: Astro.url.host
@@ -10,7 +11,6 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Ecodrive',
   link: Astro.url.href
 }]);
-
 const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren"
 const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!"
 const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren"
@@ -58,7 +58,7 @@ const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Re
             class='blur-sm absolute inset-0 rounded-1xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient' />
 
           <img
-            src='/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png'
+            src='/ecodrive/ecodrive_dashboard.PNG'
             alt="Ecodrive Dashboard"
             loading="lazy"
             width="2432"
@@ -137,7 +137,7 @@ const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Re
           </div>
         </div>
         <img
-          src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png"
+          src="/ecodrive/ecodrive_darkmode.PNG"
           alt="Ecodrive Dashboard Darkmode"
           loading="lazy"
           class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
@@ -148,75 +148,7 @@ const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Re
     </div>
   </div>
 
-  <div class="py-24 sm:py-32">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-base/7 font-semibold text-primary-600 dark:text-emerald-600">Steigern Sie jetzt Ihre Effizienz</h2>
-      <p class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 dark:text-white sm:text-5xl">Entdecken Sie die vielfältigen Funktionen von Ecodrive – für mehr Transparenz und Kontrolle!</p>
-      <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-        <div class="relative lg:col-span-3">
-          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] lg:rounded-tl-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left" src="/referenzen/waldheim-dev/ecodrive/ecodrive_login.png" alt="Ecodrive Login" loading="lazy">
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Einfach</h3>
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Social Login</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Melden Sie sich bequem mit Ihrem Social-Media-Konto an oder erstellen Sie einen neuen Account.  Laden Sie weitere Benutzer ein (modellabhängig).</p>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]"></div>
-        </div>
-        <div class="relative lg:col-span-3">
-          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-tr-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left lg:object-right" src="/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png" loading="lazy" alt="Ecodrive Dashboard (Hellmodus)">
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Übersichtlich</h3>
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Alle Daten auf einen Blick</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Im Dashboard werden alle wichtigen Informationen zu Ihrem Fahrzeug übersichtlich zusammengefasst. Behalten Sie den Überblick über Kosten und Verbrauch.</p>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-tr-[2rem]"></div>
-        </div>
-        <div class="relative lg:col-span-2">
-          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 lg:rounded-bl-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(2rem+1px)]">
-            <img class="h-80 object-cover object-left" src="/referenzen/waldheim-dev/ecodrive/ecodrive_settings.png" loading="lazy" alt="Ecodrive Einstellungen">
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Mehrsprachig</h3>
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Für jeden nutzbar</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Dank der integrierten Übersetzungsfunktion ist Ecodrive für Benutzer weltweit zugänglich.</p>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-bl-[2rem]"></div>
-        </div>
-        <div class="relative lg:col-span-2">
-          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-            <img class="h-80 object-cover" src="/referenzen/waldheim-dev/ecodrive/ecodrive_vehicles.png" loading="lazy" alt="Ecodrive Fahrzeugverwaltung">
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Flexibel</h3>
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Verwalten Sie Ihren Fuhrpark</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Vergleichen Sie Ihre Fahrzeuge untereinander und mit anderen Nutzern. Finden Sie heraus, wo Sie im internationalen Vergleich stehen.</p>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5"></div>
-        </div>
-        <div class="relative lg:col-span-2">
-          <div class="absolute inset-px rounded-lg bg-white dark:bg-slate-900 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
-            <img class="h-80 object-cover" src="/referenzen/waldheim-dev/ecodrive/ecodrive_add_fuel.png" loading="lazy" alt="Ecodrive Kraftstofferfassung">
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-primary-600 dark:text-emerald-600">Verbrauchsdaten</h3>
-              <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">Erfassen Sie Ihr Nutzungsverhalten</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-slate-400">Ermitteln Sie Ihre Kosten und analysieren Sie Ihren Kraftstoffverbrauch. Finden Sie heraus, wo Sie im Vergleich zum Durchschnitt stehen.</p>
-            </div>
-          </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <EcodriveFeatures />
 
   <PriceEcodrive />
 
