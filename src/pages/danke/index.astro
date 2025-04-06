@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+}, {
+  name: 'Danke',
+  link: Astro.url.href
+}]);
+
+const titel = "Datenschutz - waldheim.dev"
+const description = "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten auf waldheim.dev gemäß DSGVO."
+const keywords = "Datenschutz, Datenschutzerklärung, DSGVO, Privatsphäre, Datensicherheit"
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]} robots="noindex">
+  <main class="mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-24 sm:py-64 lg:px-8">
+    <p class="text-base/8 font-semibold text-emerald-600">Wohoooo! 🎉</p>
+    <h1 class="mt-4 text-pretty text-5xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-6xl">Kontaktanfrage eingegangen</h1>
+    <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Vielen Dank! Ich habe deine Anfrage erhalten und werde mich schnellstmöglich bei dir melden!</p>
+    <div class="mt-10">
+      <a href="/" class="text-sm/7 font-semibold text-indigo-600 dark:text-blue-500"><span aria-hidden="true">&larr;</span> Stöbere weiter</a>
+    </div>
+  </main>
+
+</Layout>
