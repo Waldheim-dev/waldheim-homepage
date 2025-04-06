@@ -1,0 +1,46 @@
+---
+const {
+    className,
+    label,
+    name,
+    isRequired = false,
+    autocomplete = null,
+} = Astro.props;
+---
+
+<label
+    class={'flex gap-x-4 cursor-pointer ' + className}
+    for={name}
+    (click)={(e: MouseEvent) => {
+        console.log(e);
+    }}
+>
+    <div class="flex h-6 items-center group">
+        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+        <button
+            type="button"
+            class="flex w-8 flex-none rounded-full cursor-pointer bg-rose-600 has-checked:bg-emerald-600 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="switch-1-label"
+        >
+            <input
+                type="checkbox"
+                name={name}
+                id={name}
+                autocomplete={autocomplete}
+                required={isRequired}
+                class="hidden peer"
+                aria-hidden="true"
+            />
+            <span class="sr-only">{label}</span>
+            <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
+            <span
+                aria-hidden="true"
+                class="size-4 peer-checked:translate-x-3.5 transform rounded-full bg-white dark:bg-slate-800 shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
+            ></span>
+        </button>
+    </div><span class="text-sm/6 text-gray-500 dark:text-slate-400">
+        <slot />
+    </span>
+</label>
