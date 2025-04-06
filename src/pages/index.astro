@@ -24,8 +24,8 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
                   image="https://images.unsplash.com/photo-1618389041494-8fab89c3f22b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
-      <a
-        href="mailto:kontakt@waldheim.dev"
+      <button
+        onclick="openContact()"
         class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 dark:hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >Jetzt beraten lassen
         <svg
@@ -41,7 +41,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
           ></path>
         </svg>
-      </a>
+      </button>
       <a
         href="/referenzen/"
         class="flex gap-1 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white"
@@ -325,10 +325,10 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   Als SEWOBE Partner unterstütze ich Sie bei der Auswahl, Einführung und Nutzung der optimalen Software
                   für Ihren Verband.
                 </p>
-                <a
-                  href="/services/verbandssoftware/"
+                <button
+                  onclick="openContact()"
                   class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
-                >Jetzt beraten lassen</a
+                >Jetzt beraten lassen</button
                 >
               </div>
               <img
