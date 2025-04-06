@@ -1,3 +1,10 @@
+# [26.0.0-next.9](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.8...26.0.0-next.9) (2025-04-06)
+
+
+### Features
+
+* implement contact form and update navigation links to use modal for contact ([b7c8af8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b7c8af87a2eb23537c565e582b5b18186eb48a34))
+
 # [26.0.0-next.8](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.7...26.0.0-next.8) (2025-03-27)
 
 
