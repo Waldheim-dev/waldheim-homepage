@@ -173,38 +173,9 @@ schema.push(softwareApplicationEcoPremium);
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});
     gtag('js', new Date());
 
     gtag('config', 'G-F6PFMBR146');
-
-    
-  const updateGtagConsent = () => {
-    gtag('consent', 'update', {
-      'ad_storage': CookieConsent.acceptedCategory('advertisement') ? 'granted' : 'denied',
-      'ad_user_data': CookieConsent.acceptedCategory('advertisement') ? 'granted' : 'denied',
-      'ad_personalization': CookieConsent.acceptedCategory('advertisement') ? 'granted' : 'denied',
-      'analytics_storage': CookieConsent.acceptedCategory('analytics') ? 'granted' : 'denied',
-      'functionality_storage': CookieConsent.acceptedCategory('functional') ? 'granted' : 'denied',
-      'personalization_storage': CookieConsent.acceptedCategory('functional') ? 'granted' : 'denied',
-      'security_storage': 'granted', //necessary
-    });
-  };
-  
-
-  window.addEventListener('cc:onConsent', () => {
-    updateGtagConsent();
-  });
-
-  window.addEventListener('cc:onChange', () => {
-    updateGtagConsent();
-  });
-
   </script>
 
   <script data-category="analytics" is:inline>
