@@ -1,3 +1,10 @@
+# [26.0.0-next.11](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.10...26.0.0-next.11) (2025-04-07)
+
+
+### Bug Fixes
+
+* update version in package.json and implement consent management for Google Analytics ([ddd5348](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ddd5348ca065d48a76c451be935750300a22474f))
+
 # [26.0.0-next.10](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.9...26.0.0-next.10) (2025-04-07)
 
 
