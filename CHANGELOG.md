@@ -1,3 +1,10 @@
+# [26.0.0-next.10](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.9...26.0.0-next.10) (2025-04-07)
+
+
+### Bug Fixes
+
+* update contact form API endpoint to use new anonymous endpoint ([3586080](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/358608059964a3f6abe68dc1bda2439acb875abb))
+
 # [26.0.0-next.9](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.8...26.0.0-next.9) (2025-04-06)
 
 
