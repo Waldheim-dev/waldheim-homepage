@@ -1,3 +1,10 @@
+# [26.0.0-next.12](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.11...26.0.0-next.12) (2025-04-07)
+
+
+### Features
+
+* implement cookie consent management and update gtag consent handling ([c4ddb3e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c4ddb3e0d848176f062e5a73cc42de1afd8962f3))
+
 # [26.0.0-next.11](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.10...26.0.0-next.11) (2025-04-07)
 
 
