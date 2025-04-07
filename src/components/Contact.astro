@@ -239,7 +239,7 @@ if (Astro.request.method === 'POST') {
             const datenObjekt = Object.fromEntries(formData.entries());
             console.log('\nDaten als Objekt:', datenObjekt);
 
-            fetch('https://social.waldheim.dev/api/contact', {
+            fetch('https://api-sv.eco-drive.app/api/contact/anonym', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
