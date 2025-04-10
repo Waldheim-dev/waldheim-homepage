@@ -1,3 +1,10 @@
+# [26.0.0-next.13](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.12...26.0.0-next.13) (2025-04-10)
+
+
+### Bug Fixes
+
+* update form field names for consistency in Contact component ([03569aa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/03569aa5d7bfcfba0ccc556ae3f268df2de2c196))
+
 # [26.0.0-next.12](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.11...26.0.0-next.12) (2025-04-07)
 
 
