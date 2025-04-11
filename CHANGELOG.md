@@ -1,3 +1,10 @@
+# [26.0.0-next.14](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.13...26.0.0-next.14) (2025-04-11)
+
+
+### Features
+
+* add Socialverse page and navigation links, include SVG logo ([87aaadf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/87aaadf3b61fd0b7c9398ba8fd865762b88f42c2))
+
 # [26.0.0-next.13](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.12...26.0.0-next.13) (2025-04-10)
 
 
