@@ -1,3 +1,10 @@
+## [25.10.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.0...25.10.1) (2025-04-14)
+
+
+### Bug Fixes
+
+* add sonarqube ([400291a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/400291a1fabf4b76889ca2be1f9d2317b1b704d1))
+
 # [25.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.8...25.10.0) (2025-03-10)
 
 
