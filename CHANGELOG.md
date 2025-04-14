@@ -1,3 +1,10 @@
+# [26.0.0-next.15](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.14...26.0.0-next.15) (2025-04-14)
+
+
+### Features
+
+* Refactor navigation menu to include a collapsible 'Produkte' section with sub-menu items for Ecodrive, Socialverse, and Ausgabeschein Generator. Updated styles for better visual hierarchy and added version indicators for products. ([ee1c550](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ee1c5505dabb47d660d041738272738319d342c4))
+
 # [26.0.0-next.14](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.13...26.0.0-next.14) (2025-04-11)
 
 
