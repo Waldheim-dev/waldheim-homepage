@@ -22,10 +22,11 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <HeroBackground title="Nachhaltige IT-Lösungen aus einer Hand"
                   subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
-                  image="https://images.unsplash.com/photo-1618389041494-8fab89c3f22b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+                  video="/videos/video_chip.mp4">
     <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
-      <button
-        onclick="openContact()"
+      <a
+        href="/kontakt"
         class="flex gap-1 rounded-md bg-primary-600 dark:bg-emerald-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 dark:hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >Jetzt beraten lassen
         <svg
@@ -41,7 +42,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
           ></path>
         </svg>
-      </button>
+      </a>
       <a
         href="/referenzen/"
         class="flex gap-1 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white"
@@ -71,7 +72,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
       >
 
         <div
-          class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-9 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row"
+          class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row"
         >
           <div
             class="realtive lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1 "
@@ -305,7 +306,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             </div>
           </div>
           <div
-            class="bento-card lg:col-span-9 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+            class="bento-card lg:col-span-6 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
           >
             <div class="flex sm:flex-row flex-col gap-4 justify-between">
               <div class="flex flex-col col-auto items-start gap-2">
@@ -325,10 +326,11 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   Als SEWOBE Partner unterstütze ich Sie bei der Auswahl, Einführung und Nutzung der optimalen Software
                   für Ihren Verband.
                 </p>
-                <button
-                  onclick="openContact()"
+                <a
+                  href="/kontakt"
                   class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-slate-800 transition"
-                >Jetzt beraten lassen</button
+                >Jetzt beraten lassen
+                </a
                 >
               </div>
               <img
@@ -340,7 +342,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             </div>
           </div>
           <div
-            class="bento-card lg:col-span-9 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
+            class="bento-card lg:col-span-6 sm:col-span-6 col-span-1 bg-white dark:bg-slate-900 border-1 border-gray-300/30 dark:from-gray-400 dark:to-slate-500 rounded-3xl overflow-hidden p-12 shadow-lg dark:shadow-white/10"
           >
             <div class="flex md:flex-row flex-col gap-4 justify-between">
               <div class="flex flex-col col-auto items-start gap-2">
