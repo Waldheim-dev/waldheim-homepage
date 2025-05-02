@@ -42,5 +42,5 @@ export default defineConfig({
   },
   compressHTML: true,
   scopedStyleStrategy: 'class',
-  trailingSlash: 'always'
+  trailingSlash: 'ignore'
 });
