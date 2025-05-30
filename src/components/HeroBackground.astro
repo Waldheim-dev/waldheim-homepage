@@ -9,6 +9,8 @@ const { title, subtitle, image, video } = Astro.props;
           { video ?
             <video
               class="object-contains max-sm:max-w-none sm:w-full brightness-50"
+              preload="none"
+              poster=""
               autoplay
               loop
               muted
