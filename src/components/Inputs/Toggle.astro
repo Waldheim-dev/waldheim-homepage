@@ -22,7 +22,7 @@ const {
             class="flex w-8 flex-none rounded-full cursor-pointer bg-rose-600 has-checked:bg-emerald-600 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             role="switch"
             aria-checked="false"
-            aria-labelledby="switch-1-label"
+            onclick="toggleButton(this)"
         >
             <input
                 type="checkbox"
@@ -44,3 +44,15 @@ const {
         <slot />
     </span>
 </label>
+
+<script is:inline>
+  const toggleButton = (context) => {
+    const wrapper = context;
+    if (wrapper) {
+      const input = wrapper.querySelector('input');
+      if (input) {
+        input.click()
+      }
+    }
+  }
+</script>
