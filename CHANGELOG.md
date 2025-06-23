@@ -1,3 +1,62 @@
+# [26.0.0-next.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.1...26.0.0-next.1) (2025-04-17)
+
+
+### Bug Fixes
+
+* correct import path for global CSS in Layout.astro ([455d426](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/455d4260cc7f21581c491e5cb82ea8aa0de0ccc3))
+* enhance styling and accessibility in HeroBackground and Banner components; update package dependencies ([55ccee0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/55ccee0c445a896465967bfe6b2314d09e1376e9))
+* ensure item link is always formatted as a valid HTTPS URL ([d15c676](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d15c67645aac2865438e2388fdb61815e7ffc24b))
+* improve accessibility and styling in Footer, HeroBackground, and Nav components ([5d46740](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5d4674022bfc72cf064e56b5d88c9935176e344c))
+* improve error handling in API requests and enhance logging functionality ([ae4d4c7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ae4d4c7b48227a04137d1a5107a2b9c8ccdab18d))
+* remove disallow rule for services in robots.txt ([f6a9dc8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f6a9dc83f9e2ba0f4a4a224476f810590fa98542))
+* update background colors and text colors for better contrast and accessibility ([ad166f0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ad166f03cca95cd44726061c366b2d06b9008da4))
+* update blog links to include page number and change version to 26.0.0-prev ([21dc006](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/21dc006f73b67ab4f8bd821d3c40c8ce10bb8381))
+* update CI configuration to use v26 directory for npm commands and versioning ([06490c9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/06490c95069767428ca75dbce4baeba9275b72e0))
+* update contact form API endpoint to use new anonymous endpoint ([87fcb02](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/87fcb028d334bf877df78011d74720e5831c8621))
+* update deployment rules for next branch in CI configuration ([306df88](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/306df8809e3d171d64a4606326fe47ec5750d21c))
+* update form field names for consistency in Contact component ([7685893](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7685893119797dd0988bedfe3b32ed46a850c50b))
+* update release configuration and package dependencies to use exact versions ([bfc8073](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bfc8073aa35892f3218bfbff8a5365be6f1f1ef2))
+* update version in package.json and adjust deployment component in CI configuration ([f5df942](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f5df942024fddd332cff946838afdbd0885ffb0f))
+* update version in package.json and implement consent management for Google Analytics ([eb5894e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/eb5894e48c74fdc68f3c31cae53dd2ffe6500219))
+* update version numbers for website and ecodrive components ([fbc3291](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/fbc3291618ac77e51b4083ebf13ed6a2c3807e9f))
+
+
+### Code Refactoring
+
+* rename markdown files and update blog post links to remove prefix; add new JSON files for various services ([d4e4cfc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d4e4cfc6eb47663f0f8956f73cbf0ad0866e17ca))
+
+
+### Features
+
+* add lazy loading to images for improved performance ([c017f8f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c017f8f1b1f6b09c3d41516b48a9113cbab43000))
+* add new components and update schema for blog functionality; include pricing service and new content structure ([8518596](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/85185965f810c6d0cc2a3089cb3a6bc797856a84))
+* add new features for EcoDrive including vehicle management, trip logging, and service reports ([0854007](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/085400746a2b9d040f0abbe60047c4d557d94db9))
+* add Socialverse page and navigation links, include SVG logo ([00c13da](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/00c13da36a97e93491669fe0dd51849e4a922323))
+* implement contact form and update navigation links to use modal for contact ([e9ef785](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e9ef7859c787f0fe637e8b6a7d07ab5b67e4153f))
+* implement cookie consent management and update gtag consent handling ([e71a537](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e71a5372b980a2bff5415ff2d33149f6ba551219))
+* implement new setup for v26 and new branding with more animations ([8767f7b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8767f7b583685a472eac0888a90ec9564c96ee55))
+* refactor blog component structure and implement pagination for blog posts ([2fdc9c2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2fdc9c2a3a651da67b727bbffd85b496ed99e236))
+* Refactor navigation menu to include a collapsible 'Produkte' section with sub-menu items for Ecodrive, Socialverse, and Ausgabeschein Generator. Updated styles for better visual hierarchy and added version indicators for products. ([f8459f6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f8459f67966a48f21e212037350f5c74e8d30e4f))
+* update footer component with Ecodrive links and improve support section ([2609dbb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2609dbb20d1dc18b7005ae1745dbb3404ee85143))
+* update pricing information and description in PriceService component ([633ea29](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/633ea29de6b9fa9d704285090570d7ed5d6439ea))
+
+
+### BREAKING CHANGES
+
+* move v26 to new stable
+* Create Release for 2026
+- Optimize for more interaktion
+- Add better SEO
+- Add more AI Features
+- Add more Animations and Gamification
+
+# [26.0.0-next.15](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.14...26.0.0-next.15) (2025-04-14)
+
+
+### Features
+
+* Refactor navigation menu to include a collapsible 'Produkte' section with sub-menu items for Ecodrive, Socialverse, and Ausgabeschein Generator. Updated styles for better visual hierarchy and added version indicators for products. ([ee1c550](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ee1c5505dabb47d660d041738272738319d342c4))
+
 # [26.0.0-next.14](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0-next.13...26.0.0-next.14) (2025-04-11)
 
 
@@ -138,6 +197,13 @@
 - Add better SEO
 - Add more AI Features
 - Add more Animations and Gamification
+
+## [25.10.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.0...25.10.1) (2025-04-14)
+
+
+### Bug Fixes
+
+* add sonarqube ([400291a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/400291a1fabf4b76889ca2be1f9d2317b1b704d1))
 
 # [25.10.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.9.8...25.10.0) (2025-03-10)
 
