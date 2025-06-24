@@ -13,6 +13,8 @@ import compress from 'astro-compress';
 
 import sentry from '@sentry/astro';
 
+import llmsTxtIntegration from './src/integrations/astro-llms-txt';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -23,9 +25,15 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    compress(),
-    compressor({ gzip: true }),
-
+    llmsTxtIntegration({
+      site: 'https://www.waldheim.dev',
+      projectName: 'waldheim.dev',
+      description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
+      sectionTitle: 'Seitenübersicht',
+      aiProvider: 'openai',
+      aiModel: 'gpt-4.1',
+      aiApiKey: "REDACTED_OPENAI_API_KEY"
+    }),
     sentry({
       dsn: 'https://a58f0f0cc113eb469f1110959a44d8d7@o4508774614630400.ingest.de.sentry.io/4508774618759248',
       sourceMapsUploadOptions: {
@@ -33,6 +41,8 @@ export default defineConfig({
         authToken: process.env.SENTRY_AUTH_TOKEN,
       },
     }),
+    compress(),
+    compressor({ gzip: true }),
   ],
   build: {
     inlineStylesheets: 'auto',
