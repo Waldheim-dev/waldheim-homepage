@@ -56,12 +56,12 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
         const distPath = fileURLToPath(dir);
         // Nutze path.resolve für distPath, falls fileURLToPath ein relativer Pfad ist
         const resolvedDistPath = path.resolve(distPath);
-        logger.info(`Starte llms.txt-Generierung für ${projectName}... (Suche in: ${resolvedDistPath})`);
+        logger.info(`Starting llms.txt generation for ${projectName}... (Searching in: ${resolvedDistPath})`);
         const htmlFiles = await glob('**/*.html', { cwd: resolvedDistPath, absolute: true });
-        logger.info('Gefundene HTML-Dateien: ' + JSON.stringify(htmlFiles));
+        logger.debug('Found HTML files: ' + JSON.stringify(htmlFiles));
         if (!htmlFiles.length) {
-          logger.error('Keine HTML-Dateien im Build-Output gefunden! Prüfe Astro-Konfiguration ("outDir") und baue das Projekt vollständig.');
-          throw new Error('Build abgebrochen: Keine HTML-Dateien gefunden.');
+          logger.error('No HTML files found in build output! Check Astro config ("outDir") and build the project completely.');
+          throw new Error('Build aborted: No HTML files found.');
         }
         // Ollama als Default-Provider
         const aiProvider = options.aiProvider || 'ollama';
@@ -90,7 +90,7 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
           relUrl = relUrl.replace(/\/+/g, '/');
           // 5. Basis-URL aus der Astro-Konfiguration (site) verwenden
           const fullUrl = baseUrl + relUrl;
-          logger.info(`Verarbeite Datei: ${file}`);
+          logger.info(`Processing file: ${file}`);
           const title = extractTagContent(html, 'title');
           const description = extractMetaContent(html, 'description');
           const h1 = extractTagContent(html, 'h1');
@@ -108,10 +108,10 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
             try {
               summary = await generateAISummary(logger, aiProvider, aiApiKey, aiModel, aiPrompt, kiInputShort, options.aiUrl, cacheDir);
               if (!summary) {
-                logger.warn('KI hat keine Antwort geliefert oder die Antwort war leer!');
+                logger.warn('AI did not return a response or the response was empty!');
               }
             } catch (e) {
-              logger.warn('KI-Zusammenfassung fehlgeschlagen: ' + (e instanceof Error ? e.message : String(e)));
+              logger.warn('AI summarization failed: ' + (e instanceof Error ? e.message : String(e)));
             }
           }
           pageInfos.push({
@@ -123,8 +123,8 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
         // Prüfe, ob mindestens eine Seite eine nicht-leere KI-Antwort/Summary hat
         const validPages = pageInfos.filter(info => info.summary && info.summary.trim().length > 0);
         if (!validPages.length) {
-          logger.error('Keine KI-Antworten/Summaries für Seiten erhalten! Build wird abgebrochen.');
-          throw new Error('Build abgebrochen: Keine KI-Antworten/Summaries erhalten.');
+          logger.error('No AI responses/summaries received for any page! Build will be aborted.');
+          throw new Error('Build aborted: No AI responses/summaries received.');
         }
         // Gruppiere Seiten nach Root-Section
         // baseUrl muss hier im Scope sein
@@ -145,11 +145,11 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
           }
           llmsTxt += '\n';
         }
-        logger.info('llms.txt Inhalt: ' + llmsTxt);
+        logger.info('llms.txt content: ' + llmsTxt);
         // 3. Datei speichern
         const outPath = path.join(distPath, 'llms.txt');
         fs.writeFileSync(outPath, llmsTxt, 'utf-8');
-        logger.info('llms.txt erfolgreich erstellt!');
+        logger.info('llms.txt successfully created!');
       },
     },
   };
@@ -178,7 +178,7 @@ async function generateAISummary(
   cacheDir?: string
 ): Promise<string> {
   if (!provider || (provider !== 'ollama' && !apiKey)) {
-    logger.warn('[DEBUG] Kein KI-Provider angegeben oder API-Key fehlt! Es wird keine KI-Zusammenfassung erstellt.');
+    logger.warn('[DEBUG] No AI provider specified or API key missing! No AI summary will be generated.');
     return '';
   }
   // Caching: Erzeuge Hash aus Modell+Prompt+Text
@@ -191,18 +191,18 @@ async function generateAISummary(
       try {
         const cached = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
         if (cached && typeof cached.summary === 'string') {
-          logger.info(`KI-Cache-Hit für Hash ${hash}`);
+          logger.info(`AI cache hit for hash ${hash}`);
           return cached.summary;
         }
       } catch (e) {
-        logger.warn('Fehler beim Lesen des KI-Caches: ' + (e instanceof Error ? e.message : String(e)));
+        logger.warn('Error reading AI cache: ' + (e instanceof Error ? e.message : String(e)));
       }
     }
   }
   // ...OpenAI, Gemini, Ollama-Logik wie zuvor...
   let summary = '';
   if (provider === 'openai') {
-    logger.info('OpenAI-Request wird vorbereitet (SDK)...');
+    logger.info('Preparing OpenAI request (SDK)...');
     try {
       const client = new OpenAI({ apiKey: apiKey });
       const completion = await client.responses.create({
@@ -216,18 +216,18 @@ async function generateAISummary(
       if (cacheDir && summary) {
         try {
           fs.writeFileSync(cachePath, JSON.stringify({ summary }), 'utf-8');
-          logger.info(`KI-Response gecached unter ${cachePath}`);
+          logger.info(`AI response cached at ${cachePath}`);
         } catch (e) {
-          logger.warn('Fehler beim Schreiben des KI-Caches: ' + (e instanceof Error ? e.message : String(e)));
+          logger.warn('Error writing AI cache: ' + (e instanceof Error ? e.message : String(e)));
         }
       }
     } catch (e) {
-      logger.warn('OpenAI-SDK-Request fehlgeschlagen: ' + (e instanceof Error ? e.message : String(e)));
+      logger.warn('OpenAI SDK request failed: ' + (e instanceof Error ? e.message : String(e)));
       summary = '';
     }
   }
   if (provider === 'gemini') {
-    logger.info('Gemini-Request wird vorbereitet (SDK)...');
+    logger.info('Preparing Gemini request (SDK)...');
     try {
       // Dynamischer Import, damit das SDK nur bei Bedarf geladen wird
       const ai = new GoogleGenAI({ apiKey: apiKey });
@@ -241,28 +241,28 @@ async function generateAISummary(
       if (cacheDir && summary) {
         try {
           fs.writeFileSync(cachePath, JSON.stringify({ summary }), 'utf-8');
-          logger.info(`KI-Response gecached unter ${cachePath}`);
+          logger.info(`AI response cached at ${cachePath}`);
         } catch (e) {
-          logger.warn('Fehler beim Schreiben des KI-Caches: ' + (e instanceof Error ? e.message : String(e)));
+          logger.warn('Error writing AI cache: ' + (e instanceof Error ? e.message : String(e)));
         }
       }
     } catch (e) {
-      logger.error('Gemini-SDK-Request fehlgeschlagen: ' + (e instanceof Error ? e.message : String(e)));
+      logger.error('Gemini SDK request failed: ' + (e instanceof Error ? e.message : String(e)));
       summary = '';
     }
   }
   if (provider === 'ollama') {
-    logger.info('Starte Ollama-Request (chat)...');
+    logger.info('Starting Ollama request (chat)...');
     // Retry-Mechanismus für Ollama
     const maxRetries = 5;
     const delayMs = 2000;
     let lastError = null;
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
-        logger.info(`[OLLAMA-DEBUG] Versuch ${attempt}/${maxRetries}`);
-        logger.info(`[OLLAMA-DEBUG] Modell: ${model || 'llama3'}`);
+        logger.info(`[OLLAMA-DEBUG] Attempt ${attempt}/${maxRetries}`);
+        logger.info(`[OLLAMA-DEBUG] Model: ${model || 'llama3'}`);
         logger.info(`[OLLAMA-DEBUG] Prompt: ${prompt}`);
-        logger.info(`[OLLAMA-DEBUG] Input (erster Teil): ${text.substring(0, 500)}... (Länge: ${text.length})`);
+        logger.info(`[OLLAMA-DEBUG] Input (first part): ${text.substring(0, 500)}... (Length: ${text.length})`);
         if (process.env.OLLAMA_HOST) {
           logger.info(`[OLLAMA-DEBUG] OLLAMA_HOST: ${process.env.OLLAMA_HOST}`);
         }
@@ -270,35 +270,35 @@ async function generateAISummary(
           model: model || 'llama3',
           messages: [{ role: 'user', content: prompt + '\n' + text }],
         };
-        logger.info('[OLLAMA-DEBUG] Request-Objekt: ' + JSON.stringify(requestObj));
+        logger.info('[OLLAMA-DEBUG] Request object: ' + JSON.stringify(requestObj));
         const response = await ollama.chat(requestObj);
-        logger.info('[OLLAMA-DEBUG] RAW-Response: ' + JSON.stringify(response));
+        logger.info('[OLLAMA-DEBUG] RAW response: ' + JSON.stringify(response));
         if (!response.message?.content || !response.message.content.trim()) {
-          logger.warn(`[OLLAMA-DEBUG] Antwort ist leer (Versuch ${attempt})!`);
-          lastError = new Error('Ollama: Antwort ist leer');
+          logger.warn(`[OLLAMA-DEBUG] Response is empty (attempt ${attempt})!`);
+          lastError = new Error('Ollama: Response is empty');
         } else {
           summary = response.message.content.trim();
           // Nach erfolgreicher KI-Antwort cachen
           if (cacheDir && summary) {
             try {
               fs.writeFileSync(cachePath, JSON.stringify({ summary }), 'utf-8');
-              logger.info(`KI-Response gecached unter ${cachePath}`);
+              logger.info(`AI response cached at ${cachePath}`);
             } catch (e) {
-              logger.warn('Fehler beim Schreiben des KI-Caches: ' + (e instanceof Error ? e.message : String(e)));
+              logger.warn('Error writing AI cache: ' + (e instanceof Error ? e.message : String(e)));
             }
           }
           return summary;
         }
       } catch (e) {
-        logger.warn(`[OLLAMA-DEBUG] Request fehlgeschlagen (Versuch ${attempt}): ` + (e instanceof Error ? e.stack || e.message : String(e)));
+        logger.warn(`[OLLAMA-DEBUG] Request failed (attempt ${attempt}): ` + (e instanceof Error ? e.stack || e.message : String(e)));
         lastError = e;
       }
       if (attempt < maxRetries) {
-        logger.info(`[OLLAMA-DEBUG] Warte ${delayMs / 1000}s vor erneutem Versuch...`);
+        logger.info(`[OLLAMA-DEBUG] Waiting ${delayMs / 1000}s before retry...`);
         await new Promise(resolve => setTimeout(resolve, delayMs));
       }
     }
-    logger.error('Keine gültige Antwort nach mehreren Versuchen! Letzter Fehler: ' + (lastError instanceof Error ? lastError.stack || lastError.message : String(lastError)));
+    logger.error('No valid response after multiple attempts! Last error: ' + (lastError instanceof Error ? lastError.stack || lastError.message : String(lastError)));
     return '';
   }
   return '';
