@@ -10,11 +10,11 @@ switch (entry.data.knowledgebase) {
     break;
   case 'advanced':
     progress = 66;
-    color = 'bg-primary-300 dark:bg-emerald-800';
+    color = 'bg-sherpa-blue-700';
     break;
   case 'expert':
     progress = 100;
-    color = 'bg-primary-500 dark:bg-emerald-600';
+    color = 'bg-sherpa-blue-900';
     break;
   default:
     progress = 0;
@@ -23,7 +23,7 @@ switch (entry.data.knowledgebase) {
 const layer = JSON.stringify(entry.data.layer);
 ---
 
-<tr class="odd:bg-primary-200 even:bg-primary-100 dark:odd:bg-slate-800 dark:even:bg-slate-900" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
+<tr class="odd:bg-pancho-200 even:bg-antique-brass-400" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
   <td class="px-2 py-3">
       <img
       class="max-h-6 w-full object-contain group-hover:grayscale-0 duration-150 ease-out hover:ease-in"
@@ -35,13 +35,13 @@ const layer = JSON.stringify(entry.data.layer);
       />
     </td>
     <td class="px-2 py-3">
-    <span class="w-full text-center text-gray-700 dark:text-gray-300"
+    <span class="w-full text-center text-gray-700 "
       >{entry.data.name}</span>
   </td>
   <td class="px-2 py-3">
       {
         entry.data.isActive ? (
-          <div class="text-primary-500 dark:text-emerald-600" title="Aktuell in Benutzung">
+          <div class="text-sherpa-blue-900 " title="Aktuell in Benutzung">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ const layer = JSON.stringify(entry.data.layer);
       />
   </td>
   <td class="px-2 py-3">
-    <div class="w-full bg-primary-50 dark:bg-slate-500 rounded-md overflow-hidden">
+    <div class="w-full bg-sherpa-blue-50 rounded-md overflow-hidden">
         <div
           style={`width: ${progress}%`}
           class={`${color} h-2 flex justify-center items-center`}
