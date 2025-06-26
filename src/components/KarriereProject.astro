@@ -36,16 +36,16 @@ const projectsCollection = await getCollection('karriere_projects', (project) =>
   {
     projectsCollection.length > 0 ? (
       <div>
-        <h3 class="text-1xl font-medium leading-10 tracking-tight text-gray-900 dark:text-white">
+        <h3 class="text-1xl font-medium leading-10 tracking-tight text-gray-900 ">
           Projekte bei dieser Firma
         </h3>
-        <dl class="divide-y divide-gray-900/10  dark:divide-white/10 ">
+        <dl class="divide-y divide-gray-900/10  ">
           {projectsCollection.map((project) => (
             <div>
               <dt>
                 <button
                   type="button"
-                  class="flex w-full mt-2 items-start justify-between text-left text-gray-800 dark:text-slate-200  hover:bg-slate-200 dark:hover:bg-slate-800 p-2 rounded-md"
+                  class="flex w-full mt-2 items-start justify-between text-left text-gray-800   hover:bg-slate-200  p-2 rounded-md"
                   aria-controls={project.id}
                   aria-expanded="false"
                 >
@@ -99,7 +99,7 @@ const projectsCollection = await getCollection('karriere_projects', (project) =>
                 class="mt-2 px-2 pr-12 h-0 overflow-hidden transition-all"
                 id={project.id}
               >
-                <p class="text-base leading-7 text-gray-600  dark:text-slate-400 ">
+                <p class="text-base leading-7 text-gray-600   ">
                   {project.data.description}
                 </p>
 
