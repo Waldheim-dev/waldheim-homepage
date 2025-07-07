@@ -42,7 +42,7 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
         {
           page.data.map((project) => {
             return (
-              <div class="bg-antique-brass-400 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full"
+              <div class="bg-antique-brass-300 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full"
                    data-trigger="entry" data-type={project.data?.category}>
                 <div
                   class="mx-auto flex flex-col items-center gap-x-8 gap-y-10 px-6">
@@ -126,13 +126,13 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
 
 
           {page.url.first ? <a href={page.url.first}
-                               class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-400 focus-visible:outline-offset-0    ">Erste Seite</a> : null}
+                               class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Erste Seite</a> : null}
           {page.url.prev ? <a href={page.url.prev}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-400 focus-visible:outline-offset-0    ">Vorherige Seite</a> : null}
+                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Vorherige Seite</a> : null}
           {page.url.next ? <a href={page.url.next}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-400 focus-visible:outline-offset-0    ">Nächste Seite</a> : null}
+                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Nächste Seite</a> : null}
           {page.url.last ? <a href={page.url.last}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-400 focus-visible:outline-offset-0    ">Letzte Seite</a> : null}
+                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Letzte Seite</a> : null}
         </div>
       </nav>
 

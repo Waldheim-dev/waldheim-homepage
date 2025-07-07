@@ -67,7 +67,7 @@ const layer = [
               data-trigger="filter"
               data-filter={entry}
               data-filtered="false"
-              class="bg-antique-brass-400 text-pancho-200 rounded-sm px-2 py-1 first-letter:uppercase"
+              class="bg-antique-brass-300 text-pancho-200 rounded-sm px-2 py-1 first-letter:uppercase"
             >
               {entry}
             </button>
@@ -77,7 +77,8 @@ const layer = [
           data-trigger="filter"
           data-filter="all"
           data-filtered="false"
-          class="bg-antique-brass-400 text-pancho-200 rounded-sm px-2 py-1 first-letter:uppercase"
+          aria-label="Filter zurücksetzen"
+          class="bg-antique-brass-300 text-pancho-200 rounded-sm px-2 py-1 first-letter:uppercase"
         >
             <span class="text-rose-500" title="Filter zurücksetzen">
               <svg
@@ -124,7 +125,7 @@ const layer = [
     <div class="py-12 sm:py-16">
       <div class="mx-auto max-w-2xl text-left px-6 lg:px-8 py-6">
         <table
-          class="w-full border-1 border border-antique-brass-400 rounded-md shadow-md"
+          class="w-full border-1 border border-antique-brass-300 rounded-md shadow-md"
         >
           <thead>
           <tr class="">
@@ -202,11 +203,11 @@ const layer = [
               }
               for (const nextTrigger of triggers) {
                 nextTrigger.classList.remove('bg-sherpa-blue-900');
-                nextTrigger.classList.add('bg-antique-brass-400');
+                nextTrigger.classList.add('bg-antique-brass-300');
                 nextTrigger.setAttribute('data-filtered', 'false');
               }
               if (filtered) {
-                trigger.classList.remove('bg-antique-brass-400');
+                trigger.classList.remove('bg-antique-brass-300');
                 trigger.classList.add('bg-sherpa-blue-900');
                 trigger.setAttribute('data-filtered', 'true');
               }
