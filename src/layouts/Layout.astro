@@ -192,6 +192,48 @@ schema.push(softwareApplicationEcoPremium);
       y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', 'qlyjqk783c');
   </script>
+  <!-- GSAP CDN (Fallback, falls nicht via pnpm installiert) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script is:inline>
+    document.addEventListener('astro:page-load', async () => {
+      if (window.gsap) {
+        // FadeIn + Stagger für alle .gsap-fadein
+        window.gsap.utils.toArray('.gsap-fadein').forEach(function(el, i) {
+          window.gsap.from(el, {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            delay: 0.1 * i,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 95%',
+              toggleActions: 'play none none none',
+            }
+          });
+        });
+        // Micro-Interaction für .gsap-wiggle (z.B. Icons)
+        window.gsap.utils.toArray('.gsap-wiggle').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            window.gsap.to(el, { rotation: 10, yoyo: true, repeat: 1, duration: 0.15, ease: 'power1.inOut' });
+          });
+          el.addEventListener('mouseleave', function() {
+            window.gsap.to(el, { rotation: 0, duration: 0.15, ease: 'power1.inOut' });
+          });
+        });
+        // Button Hover-Scale
+        window.gsap.utils.toArray('a.gsap-btn,button.gsap-btn').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            window.gsap.to(el, { scale: 1.07, duration: 0.18, ease: 'power1.out' });
+          });
+          el.addEventListener('mouseleave', function() {
+            window.gsap.to(el, { scale: 1, duration: 0.18, ease: 'power1.in' });
+          });
+        });
+      }
+    });
+  </script>
 
   <ClientRouter />
 </head>
