@@ -7,12 +7,12 @@ let count = 0;
 
 <div class="py-24 sm:py-32">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-base/7 font-semibold text-sherpa-blue-900 ">Steigern Sie jetzt Ihre Effizienz</h2>
-      <p class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950  sm:text-5xl">Entdecken Sie die vielfältigen Funktionen von Ecodrive – für mehr Transparenz und Kontrolle!</p>
+      <h2 class="text-base/7 font-semibold text-sherpa-blue-900 gsap-fadein">Steigern Sie jetzt Ihre Effizienz</h2>
+      <p class="mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950  sm:text-5xl gsap-fadein">Entdecken Sie die vielfältigen Funktionen von Ecodrive – für mehr Transparenz und Kontrolle!</p>
       <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
 
         { features.map((feature) => (
-        <div class={`relative lg:col-span-${count % 5 === 0 || count % 5 === 1 ? '3' : '2'}`}>
+        <div class={`relative gsap-fadein lg:col-span-${count % 5 === 0 || count % 5 === 1 ? '3' : '2'}`}>
             <div class="absolute inset-px rounded-lg bg-antique-brass-300"></div>
             <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
             <img class="h-80 object-cover object-left" src={feature.data.image} alt={feature.data.name} loading="lazy">
@@ -33,7 +33,7 @@ let count = 0;
   </div>
 </div>
 ) : (
-            <div class="rounded-md bg-sherpa-blue-900 p-4">
+            <div class="rounded-md gsap-fadein bg-sherpa-blue-900 p-4">
   <div class="flex">
     <div class="shrink-0">
       <svg class="size-5 text-pancho-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">

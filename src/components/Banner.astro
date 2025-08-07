@@ -13,7 +13,7 @@ const blog = blogPosts[0];
 ---
 {blog ? (
 <div class="relative">
-  <a class="text-white text-center block" href={`/blog/${blog.id.replace(/^_/, '')}/`}>
+  <a class="text-white text-center block gsap-fadein" href={`/blog/${blog.id.replace(/^_/, '')}/`}>
     <article
       class="flex justify-center items-center gap-x-6 bg-sherpa-blue-900 px-10 sm:px-6 py-3 relative rounded-3xl md:rounded-full shadow-md">
       <p class="text-xs leading-6">

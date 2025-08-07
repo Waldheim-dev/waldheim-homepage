@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+const projects = (await getCollection('projects', ({data}) => data.isTopProject === true)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const categories = await getCollection('projects_kategorie');
+---
+
+<section class="py-24 sm:py-32 overflow-hidden">
+  <div class="mx-auto px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl sm:text-center gsap-fadein">
+      <h2
+        class="text-3xl font-bold tracking-tight text-sherpa-blue-900 sm:text-4xl gsap-fadein"
+      >
+        Vielfalt in Projekten: Meine Referenzen
+      </h2>
+      <p class="my-6 text-lg leading-8 text-sherpa-blue-800 gsap-fadein">
+        Von Webentwicklung über DevSecOps bis zur Verbandssoftware – hier finden Sie eine Auswahl meiner Projekte.
+      </p>
+      <a
+        href="/referenzen/"
+        class="mt-6 rounded-md px-3 py-2 bg-sherpa-blue-900  text-white hover:bg-sherpa-blue-950 gsap-fadein"
+        >Gesamtes Portfolio entdecken</a
+      >
+    </div>
+    <div class="relative isolate pt-12 xl:pb-48 pb-96">
+      <div class="flex absolute gap-16 slide">
+        {
+          projects.map((project) => (
+            <div class="bg-antique-brass-400 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl md:min-w-96">
+              <div class="mx-auto flex md:min-96 flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch gsap-fadein">
+                <div class="-mt-8 sm:w-full md:max-w-1xl xl:-mb-8 gsap-fadein">
+                  <div class="relative aspect-16/9 w-64 md:w-96 h-64 h-full md:-mx-8 xl:mx-0 gsap-fadein">
+                    <div
+                      class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient gsap-fadein" />
+
+                    <img
+                      class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl gsap-fadein"
+                      src={project.data.heroImage}
+                      alt={project.data.title}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="md:min-w-96 xl:flex-auto gsap-fadein">
+                  <figure class="relative isolate pt-6 sm:pt-12 gsap-fadein">
+                    <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9 gsap-fadein">
+                      <p class="gsap-fadein">{project.data.title}</p>
+                    </blockquote>
+                    <div class="font-medium text-slate-300 gsap-fadein">
+                        {categories.find(category => category.id === project.data?.category.id)?.data.name
+                        }
+                    </div>
+                    <figcaption class="mt-8 text-base gsap-fadein">
+                      <a
+                        href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`}
+                        class="rounded-md px-3 py-2 bg-sherpa-blue-900 text-white hover:bg-sherpa-blue-950 gsap-fadein"
+                      >
+                        Projekt ansehen
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  const slide = document.querySelector('.slide');
+  // rem to pixel
+  const gap = 64;
+  const pLeft = 32;
+
+  const innerTime = 2500;
+  const outerTime = innerTime * 2;
+  // change slide to left
+  const changeSlide = () => {
+    const first = slide.firstElementChild;
+
+    slide.style.transition = `transform ${innerTime}ms ease-in-out`;
+    slide.style.transform = `translateX(-${first.offsetWidth + gap}px)`;
+
+    setTimeout(() => {
+      slide.removeChild(first);
+      slide.appendChild(first);
+      slide.style.transition = 'none';
+      slide.style.transform = 'translateX(0)';
+    }, innerTime);
+  };
+
+  // scroll to left, but stop all on hover
+  slide.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+  slide.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(changeSlide, outerTime);
+  });
+  let slideInterval = setInterval(changeSlide, outerTime);
+
+  // scroll to left smothly
+</script>

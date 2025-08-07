@@ -11,7 +11,7 @@ const versions = (await getCollection('roadmap'))
 
         const date = new Date(data.date);
         return (
-          <div>
+          <div class="gsap-fadein">
             <time datetime={data.date} class="flex items-center text-sm/6 font-semibold text-sherpa-blue-900 ">
               <svg viewBox="0 0 4 4" class="mr-4 size-1 flex-none" aria-hidden="true">
                 <circle cx="2" cy="2" r="2" fill="currentColor" />

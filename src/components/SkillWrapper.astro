@@ -19,47 +19,12 @@ const layer = [
 ---
 
 <section>
-  <div>
+  <div class="gsap-fadein">
     <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
       <p class="mt-2 text-lg leading-8  pb-2">
         Filtere die Skills, wie du es dir wünscht
       </p>
-      <div class="mt-2 flex justify-center">
-        <fieldset
-          class="grid grid-cols-2 gap-x-1 rounded-full bg-black/5 p-1 text-center text-xs font-semibold leading-5 text-sherpa-blue-800 "
-        >
-          <legend class="sr-only">Ansicht</legend>
-          <!-- Checked: "bg-sherpa-blue-900 text-white" -->
-          <label
-            class="cursor-pointer rounded-full px-2.5 py-1 bg-sherpa-blue-900  text-white"
-            id="card"
-          >
-            <input
-              type="radio"
-              name="view"
-              id="view-cards"
-              value="card"
-              class="sr-only"
-            />
-            <span>Kartenansicht</span>
-          </label>
-          <!-- Checked: "bg-sherpa-blue-900 text-white" -->
-          <label
-            class="cursor-pointer rounded-full px-2.5 py-1"
-            id="table"
-            for="view-table"
-          >
-            <input
-              type="radio"
-              name="view"
-              id="view-table"
-              value="table"
-              class="sr-only"
-            />
-            <span>Tabellenansicht</span>
-          </label>
-        </fieldset>
-      </div>
+
       <div class="mt-4 flex gap-1 justify-center flex-wrap">
         {
           layer.map((entry) => (
@@ -121,32 +86,9 @@ const layer = [
       </p>
     </div>
   </div>
-  <section class="table-view" data-sorted="name" data-sortDirection="asc">
-    <div class="py-12 sm:py-16">
-      <div class="mx-auto max-w-2xl text-left px-6 lg:px-8 py-6">
-        <table
-          class="w-full border-1 border border-antique-brass-300 rounded-md shadow-md"
-        >
-          <thead>
-          <tr class="">
-            <th class="px-2 py-3"></th>
-            <th class="px-2 py-3" data-sort="name">Skill</th>
-            <th class="px-2 py-3"></th>
-            <th class="px-2 py-3" data-sort="fixedExperience">Erfahrung</th>
-            <th class="px-2 py-3" data-sort="knowledgebase">Skilllevel</th>
-          </tr>
-          </thead>
-          <tbody>
-          {allSkills.map((entry) =>
-            <SkillRow entry={entry} />)}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
   <section class="card-view">
     <div class="py-12 sm:py-16">
-      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6 gsap-fadein">
         <h2
           class="text-3xl font-bold tracking-tight text-sherpa-blue-900  sm:text-4xl"
         >
@@ -158,7 +100,7 @@ const layer = [
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
-          class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6"
+          class="-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6"
         >
           {topSkills.map((entry) =>
             <SkillFlipCard entry={entry} />)}
@@ -166,7 +108,7 @@ const layer = [
       </div>
     </div>
     <div class="py-12 sm:py-16">
-      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
+      <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6 gsap-fadein">
         <h2
           class="text-3xl font-bold tracking-tight text-sherpa-blue-900  sm:text-4xl"
         >
@@ -178,7 +120,7 @@ const layer = [
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
-          class="-mx-6 grid grid-cols-2 gap-2 overflow-hidden sm:mx-0 md:grid-cols-6"
+          class="-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6"
         >
           {otherSkills.map((entry) =>
             <SkillFlipCard entry={entry} />)}
@@ -222,151 +164,6 @@ const layer = [
                   }
                 }
               }
-            });
-          });
-        });
-      </script>
-      <script is:inline data-id="table-script" data-plan="card">
-        document.addEventListener('astro:page-load', () => {
-          const script = document.querySelector('*[data-id="table-script"]');
-          const card = document.querySelector('#card');
-          const table = document.querySelector('#table');
-
-          const cardView = document.querySelector('.card-view');
-          const tableView = document.querySelector('.table-view');
-
-          const dataSort = document.querySelectorAll('[data-sort]');
-
-          if (script.dataset.plan === 'card') {
-            tableView.classList.add('hidden');
-            cardView.classList.remove('hidden');
-          } else {
-            cardView.classList.add('hidden');
-            tableView.classList.remove('hidden');
-          }
-
-          card?.addEventListener('click', () => {
-            script.dataset.plan = 'card';
-            card.classList.add('bg-sherpa-blue-900', 'text-white');
-            table.classList.remove('bg-sherpa-blue-900', 'text-white');
-            cardView.classList.remove('hidden');
-            tableView.classList.add('hidden');
-          });
-
-          table?.addEventListener('click', () => {
-            script.dataset.plan = 'table';
-            table.classList.add('bg-sherpa-blue-900', 'text-white');
-            card.classList.remove('bg-sherpa-blue-900', 'text-white');
-            tableView.classList.remove('hidden');
-            cardView.classList.add('hidden');
-          });
-
-          dataSort.forEach((sort) => {
-            sort.classList.add('cursor-pointer');
-            sort.classList.add('after:transition-all');
-            sort.classList.add('hover:after:content-["↕"]');
-            sort.classList.add('relative');
-            sort.classList.add('after:absolute');
-            sort.classList.add('after:right-2');
-            sort.addEventListener('click', () => {
-              dataSort.forEach((nextSort) => {
-                nextSort.classList.remove('after:content-["↕"]');
-              });
-              sort.classList.add('after:content-["↕"]');
-              // get all rows of table
-              const rows = tableView.querySelectorAll('tbody tr');
-              let sortDirection =
-                tableView.getAttribute('data-sortDirection');
-              const sorted = tableView.getAttribute('data-sorted');
-              // change the direction by same sorted
-              if (sorted === sort.getAttribute('data-sort')) {
-                tableView.setAttribute(
-                  'data-sortDirection',
-                  sortDirection === 'asc' ? 'desc' : 'asc'
-                );
-              } else {
-                tableView.setAttribute(
-                  'data-sorted',
-                  sort.getAttribute('data-sort')
-                );
-                tableView.setAttribute('data-sortDirection', 'asc');
-              }
-              // sort all rows by sorted
-              sortDirection = tableView.getAttribute('data-sortDirection');
-              const tbody = tableView.querySelector('tbody');
-              tbody.innerHTML = '';
-              // convert NodeList to array
-              const sortArray = Array.from(rows);
-              // sort by sorted of all rows
-              const knowledgeNumber = (knowledge) => {
-                if (knowledge === 'basic') {
-                  return 1;
-                } else if (knowledge === 'advanced') {
-                  return 2;
-                } else if (knowledge === 'expert') {
-                  return 3;
-                }
-                return 0;
-              };
-              const timeDiff = (
-                fixedExperience,
-                isActive,
-                sinceLastRollup
-              ) => {
-                const current = new Date();
-                const since = new Date(sinceLastRollup);
-                let dateDiff = current.getFullYear() - since.getFullYear();
-                const months = current.getMonth() - since.getMonth();
-                if (dateDiff <= 0) {
-                  switch (true) {
-                    case months < 4:
-                      dateDiff = 0.25;
-                      break;
-                    case months < 7:
-                      dateDiff = 0.5;
-                      break;
-                    case months < 10:
-                      dateDiff = 0.75;
-                      break;
-                    default:
-                      dateDiff = 1;
-                      break;
-                  }
-                }
-                return isActive
-                  ? dateDiff + fixedExperience
-                  : fixedExperience;
-              };
-              const sortEntrys = sortArray.map((row) => {
-                const data = JSON.parse(row.getAttribute('data-entry'));
-                return {
-                  data: {
-                    ...data,
-                    knowledgebase: knowledgeNumber(data.knowledgebase),
-                    fixedExperience: timeDiff(
-                      data.fixedExperience,
-                      data.isActive,
-                      data.sinceLastRollup
-                    )
-                  },
-                  entitie: row
-                };
-              });
-              sortEntrys.sort((a, b) => {
-                if (sorted === 'name') {
-                  a.data[sorted] = a.data[sorted].toUpperCase();
-                  b.data[sorted] = b.data[sorted].toUpperCase();
-                }
-
-                if (sortDirection === 'asc') {
-                  return a.data[sorted] > b.data[sorted] ? 1 : -1;
-                } else {
-                  return a.data[sorted] < b.data[sorted] ? 1 : -1;
-                }
-              });
-              sortEntrys.forEach((entry) => {
-                tbody.appendChild(entry.entitie);
-              });
             });
           });
         });
