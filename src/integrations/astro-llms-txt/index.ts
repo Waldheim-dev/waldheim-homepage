@@ -148,7 +148,7 @@ export default function llmsTxtIntegration(options: LlmsTxtOptions = {}): AstroI
         logger.info('llms.txt content: ' + llmsTxt);
         // 3. Datei speichern
         const outPath = path.join(distPath, 'llms.txt');
-        fs.writeFileSync(outPath, llmsTxt, 'utf-8');
+        fs.writeFileSync(outPath, llmsTxt, { encoding: 'utf8' });
         logger.info('llms.txt successfully created!');
       },
     },
