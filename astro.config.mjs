@@ -30,9 +30,10 @@ export default defineConfig({
       projectName: 'waldheim.dev',
       description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
       sectionTitle: 'Seitenübersicht',
-      aiProvider: 'openai',
-      aiModel: 'gpt-4.1',
-      aiApiKey: "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"
+      aiProvider: 'gemini',
+      aiModel: 'gemini-2.5-flash-lite',
+      aiApiKey: "AIzaSyB6FddIeVwUhgtsCGaooey-tj9oRxbnTBw",
+      debug: true
     }),
     sentry({
       dsn: 'https://a58f0f0cc113eb469f1110959a44d8d7@o4508774614630400.ingest.de.sentry.io/4508774618759248',
