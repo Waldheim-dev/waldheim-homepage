@@ -28,9 +28,10 @@ const { title, image, video } = Astro.props;
           autoplay
           loop
           muted
+          data-src={video}
         >
           <source
-            src={video} type="video/mp4" />
+            data-src={video} type="video/mp4" />
         </video> : null }
 
     </figure>

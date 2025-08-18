@@ -8,15 +8,16 @@ const { title, subtitle, image, video } = Astro.props;
           { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="lazy"/> : null }
           { video ?
             <video
-              class="object-contains max-sm:max-w-none sm:w-full brightness-50 bg-antique-brass-300 "
+              class="object-contains max-sm:max-w-none sm:w-full brightness-50 bg-antique-brass-300 lazy"
               preload="none"
               poster=""
               autoplay
               loop
               muted
+              data-src={video}
             >
               <source
-                src={video} type="video/mp4" />
+                data-src={video} type="video/mp4" />
             </video> : null }
 
         </figure>
