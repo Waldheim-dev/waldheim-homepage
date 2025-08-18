@@ -13,7 +13,7 @@ import compress from 'astro-compress';
 
 import sentry from '@sentry/astro';
 
-import llmsTxtIntegration from './src/integrations/astro-llms-txt';
+import llmsTxt from '@waldheimdev/astro-ai-llms-txt';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,7 +25,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    llmsTxtIntegration({
+    llmsTxt({
       site: 'https://www.waldheim.dev',
       projectName: 'waldheim.dev',
       description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
