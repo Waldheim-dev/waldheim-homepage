@@ -28,10 +28,10 @@ const { title, image, video } = Astro.props;
           autoplay
           loop
           muted
-          data-src={video}
+          src={video}
         >
           <source
-            data-src={video} type="video/mp4" />
+            src={video} type="video/mp4" />
         </video> : null }
 
     </figure>
@@ -46,7 +46,7 @@ const { title, image, video } = Astro.props;
             >
                 <div>
                     <div
-                        class="mx-auto flex size-12 items-center justify-center rounded-full bg-sherpa-blue-100"
+                        class="mx-auto flex size-12 items-center justify-center rounded-full bg-primary-100"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const { title, image, video } = Astro.props;
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="size-6 text-sherpa-blue-600"
+                            class="size-6 text-primary-900"
                         >
                             <path
                                 stroke-linecap="round"
@@ -136,14 +136,14 @@ const { title, image, video } = Astro.props;
                                 className="sm:col-span-2"
                                 >Ich akzeptiere die <a
                                     href="/datenschutz"
-                                    class="font-semibold text-indigo-600  no-underline hover:underline"
+                                    class="font-semibold text-primary-600 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 no-underline hover:underline"
                                     >Datenschutz&shy;bestimmungen</a
                                 > und willige in die Verarbeitung meiner personenbezogenen
                                 Daten ein. Ich bin mir bewusst, dass ich meine Einwilligung
                                 jederzeit widerrufen kann unter
                                 <a
                                     href="mailto:kontakt@waldheim.dev"
-                                    class="font-semibold text-indigo-600  no-underline hover:underline"
+                                    class="font-semibold text-primary-600 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 no-underline hover:underline"
                                     >kontakt@waldheim.dev</a
                                 >.</Toggle
                             >
@@ -155,12 +155,12 @@ const { title, image, video } = Astro.props;
                 >
                     <button
                         type="submit"
-                        class="gsap-fadein inline-flex w-full justify-center rounded-md bg-sherpa-blue-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sherpa-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
+                        class="gsap-fadein inline-flex w-full justify-center rounded-md bg-primary-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 sm:col-start-2"
                         >Absenden</button
                     >
                     <button
                         type="button" onclick="closeContact()"
-                        class="gsap-fadein mt-3 inline-flex w-full justify-center rounded-md bg-pancho-200  px-3 py-2 text-sm font-semibold text-gray-900  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300  sm:col-start-1 sm:mt-0"
+                        class="gsap-fadein mt-3 inline-flex w-full justify-center rounded-md bg-light-300  px-3 py-2 text-sm font-semibold text-gray-900  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-light-200  sm:col-start-1 sm:mt-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                         >Abbrechen</button
                     >
                 </div>

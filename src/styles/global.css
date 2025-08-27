@@ -11,6 +11,46 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
+@theme {
+  --color-primary-50: #eefffd;
+  --color-primary-100: #c4fffc;
+  --color-primary-200: #89fff9;
+  --color-primary-300: #46fff6;
+  --color-primary-400: #10f1ea;
+  --color-primary-500: #00d4d0;
+  --color-primary-600: #00abab;
+  --color-primary-700: #008688;
+  --color-primary-800: #04686b;
+  --color-primary-900: #084d4f;
+  --color-primary-950: #003236;
+
+  --color-dark-50: #edfcfe;
+  --color-dark-100: #d1f5fc;
+  --color-dark-200: #aaeaf7;
+  --color-dark-300: #6fdaf1;
+  --color-dark-400: #2dc0e3;
+  --color-dark-500: #11a3c9;
+  --color-dark-600: #1183a9;
+  --color-dark-700: #156989;
+  --color-dark-800: #1a5670;
+  --color-dark-900: #1a485f;
+  --color-dark-950: #061923;  
+
+  --color-light-50: #f4f9f7;
+  --color-light-100: #dbece6;
+  --color-light-200: #b6d9cb;
+  --color-light-300: #8abeab;
+  --color-light-400: #65a28e;
+  --color-light-500: #478571;
+  --color-light-600: #376a5b;
+  --color-light-700: #2f564b;
+  --color-light-800: #29463e;
+  --color-light-900: #253c35;
+  --color-light-950: #11221e;
+
+}
+
 @layer base {
   *,
   ::after,

@@ -1,24 +1,2 @@
 RewriteEngine On
 
-# Weiterleitung von /imprint und /imprint/ nach /impressum
-RewriteRule ^imprint/?$ /impressum [R=301,L]
-
-# Weiterleitung von /privacy und /privacy/ nach /datenschutz
-RewriteRule ^privacy/?$ /datenschutz [R=301,L]
-
-# Weiterleitung von /services/ecodrive und /services/ecodrive/ nach /ecodrive
-RewriteRule ^services/ecodrive/?$ /ecodrive [R=301,L]
-
-# Optional: Generelle Regel, um Trailing Slashes zu entfernen (außer bei Verzeichnissen)
-# Das sollte NACH den spezifischen Regeln stehen.
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)/$ /$1 [R=301,L]
-
-# Weiterleitungen für nicht gefundene Seiten (404)
-RewriteRule ^services/devops/?$ /services/devsecops [R=301,L]
-RewriteRule ^about/?$ /ueber-uns [R=301,L]
-RewriteRule ^privacy$ /datenschutz [R=301,L]
-# Weiterleitung aller /projects/* nach /referenzen/*
-RewriteRule ^projects/(.*)$ /referenzen/$1 [R=301,L]
-# Weiterleitung: /blog/{Zahl}/... nach /blog/... 
-RewriteRule ^blog/\d+/(.*)$ /blog/$1 [R=301,L]

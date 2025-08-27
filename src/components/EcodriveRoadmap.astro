@@ -12,42 +12,42 @@ const versions = (await getCollection('roadmap'))
         const date = new Date(data.date);
         return (
           <div class="gsap-fadein">
-            <time datetime={data.date} class="flex items-center text-sm/6 font-semibold text-sherpa-blue-900 ">
+            <time datetime={data.date} class="flex items-center text-sm/6 font-semibold text-light-500 ">
               <svg viewBox="0 0 4 4" class="mr-4 size-1 flex-none" aria-hidden="true">
                 <circle cx="2" cy="2" r="2" fill="currentColor" />
               </svg>
               {date.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}
-              <div class="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0" aria-hidden="true"></div>
+              <div class="absolute -ml-2 h-px w-screen -translate-x-full bg-light-100/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0" aria-hidden="true"></div>
             </time>
             {data.planned ? (
-              <div class="rounded-md bg-antique-brass-300 p-4">
+              <div class="rounded-md bg-light-300 p-4">
   <div class="flex">
     <div class="shrink-0">
-      <svg class="size-5 text-pancho-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+      <svg class="size-5 text-dark-950" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
         <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
       </svg>
     </div>
     <div class="ml-3 flex-1 md:flex md:justify-between">
-      <p class="text-sm text-pancho-200">Version geplant</p>
+      <p class="text-sm text-dark-950">Version geplant</p>
     </div>
   </div>
 </div>
 ) : (
-            <div class="rounded-md bg-sherpa-blue-900 p-4">
+            <div class="rounded-md bg-primary-900 p-4">
   <div class="flex">
     <div class="shrink-0">
-      <svg class="size-5 text-pancho-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+      <svg class="size-5 text-light-100" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
         <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
       </svg>
     </div>
     <div class="ml-3 flex-1 md:flex md:justify-between">
-      <p class="text-sm font-medium text-pancho-200">Version Verfügbar</p>
+      <p class="text-sm font-medium text-light-100">Version Verfügbar</p>
     </div>
   </div>
 </div>
             )}
-            <p class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900 ">Release v{data.version}</p>
-            <p class="mt-1 text-base/7 text-gray-600 ">{data.description}</p>
+            <p class="mt-6 text-lg/8 font-semibold tracking-tight text-light-500">Release v{data.version}</p>
+            <p class="mt-1 text-base/7 text-light-300 ">{data.description}</p>
           </div>
         )})}
     </div>
