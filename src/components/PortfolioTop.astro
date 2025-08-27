@@ -8,24 +8,24 @@ const categories = await getCollection('projects_kategorie');
   <div class="mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-2xl sm:text-center gsap-fadein">
       <h2
-        class="text-3xl font-bold tracking-tight text-sherpa-blue-900 sm:text-4xl gsap-fadein"
+        class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl"
       >
         Vielfalt in Projekten: Meine Referenzen
       </h2>
-      <p class="my-6 text-lg leading-8 text-sherpa-blue-800 gsap-fadein">
+      <p class="my-6 text-lg leading-8 text-light-300">
         Von Webentwicklung über DevSecOps bis zur Verbandssoftware – hier finden Sie eine Auswahl meiner Projekte.
       </p>
       <a
         href="/referenzen/"
-        class="mt-6 rounded-md px-3 py-2 bg-sherpa-blue-900  text-white hover:bg-sherpa-blue-950 gsap-fadein"
+        class="mt-6 rounded-md px-3 py-2 bg-primary-900  text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
         >Gesamtes Portfolio entdecken</a
       >
     </div>
-    <div class="relative isolate pt-12 xl:pb-48 pb-96">
+    <div class="relative isolate pt-16 xl:pb-48 pb-96">
       <div class="flex absolute gap-16 slide">
         {
           projects.map((project) => (
-            <div class="bg-antique-brass-400 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl md:min-w-96">
+            <div class="bg-primary-900 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
               <div class="mx-auto flex md:min-96 flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div class="-mt-8 sm:w-full md:max-w-1xl xl:-mb-8">
                   <div class="relative aspect-16/9 w-64 md:w-96 h-64 h-full md:-mx-8 xl:mx-0">
@@ -52,7 +52,7 @@ const categories = await getCollection('projects_kategorie');
                     <figcaption class="mt-8 text-base">
                       <a
                         href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`}
-                        class="rounded-md px-3 py-2 bg-sherpa-blue-900 text-white hover:bg-sherpa-blue-950"
+                        class="rounded-md px-3 py-2 bg-light-300 text-dark-950 hover:bg-sherpa-blue-950 outline-none"
                       >
                         Projekt ansehen
                       </a>

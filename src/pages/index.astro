@@ -15,7 +15,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 
 const titel = 'waldheim.dev: IT-Lösungen für KMU, Vereine & Startups';
-const description = 'waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service) und Verbandssoftware (SEWOBE). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)';
+const description = 'waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)';
 const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups';
 ---
 
@@ -27,7 +27,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
     <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
       <a
         href="/kontakt"
-        class="gsap-fadein gsap-btn flex gap-1 rounded-md bg-sherpa-blue-900  px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-sherpa-blue-900  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sherpa-blue-600"
+        class="gsap-fadein gsap-btn flex gap-1 rounded-md bg-sherpa-blue-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-sherpa-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >Jetzt beraten lassen
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +44,8 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
         </svg>
       </a>
       <a
-        href="/referenzen/"
-        class="gsap-fadein gsap-btn flex gap-1 transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white"
+        href="/referenzen/1/"
+        class="gsap-fadein gsap-btn flex gap-1 rounded transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >Referenzen
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
               <div
                 class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
               <div
-                class="flex flex-col gap-4 justify-between h-full z-10 relative bg-sherpa-blue-900 text-pancho-200 p-12 shadow-lg rounded-3xl border-1 border-gray-300/30"
+                class="flex flex-col gap-4 justify-between h-full z-10 relative bg-primary-900 text-light-100 p-12 shadow-lg rounded-3xl border-1 border-gray-300/30"
               >
                 <div class="flex flex-col gap-4">
                   <h2
@@ -184,12 +184,12 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             </div>
           </div>
           <div
-            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-antique-brass-300 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
+            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
           >
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800  sm:text-xl"
+                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
                 >
                   DevSecOps für schnellere & sichere Entwicklung
                 </h3>
@@ -202,33 +202,33 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                 </p>
                 <a
                   href="/services/devops/"
-                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white   ::text-slate-800 transition"
+                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
                 >Zu meinem DevSecOps-Services</a
                 >
               </div>
               <figure class=" w-full rounded-2xl overflow-hidden">
               <video
-              class="object-contains max-sm:max-w-none w-full  lazy"
+              class="object-contains max-sm:max-w-none w-full"
               preload="none"
               poster=""
               autoplay
               loop
               muted
-              data-src="/videos/video_devsecops.mp4"
+              src="/videos/video_devsecops.mp4"
             >
               <source
-                data-src="/videos/video_devsecops.mp4" type="video/mp4" />
+                src="/videos/video_devsecops.mp4" type="video/mp4" />
             </video>
             </figure>
             </div>
           </div>
           <div
-            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-antique-brass-300 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
+            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
           >
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800  sm:text-xl"
+                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
                 >
                   Individuelle Softwarelösungen für Ihren Bedarf
                 </h3>
@@ -241,33 +241,33 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
 
                 <a
                   href="/services/entwicklung/"
-                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white   ::text-slate-800 transition"
+                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
                 >Jetzt Projekt anfragen</a
                 >
               </div>
               <figure class=" w-full rounded-2xl overflow-hidden">
               <video
-              class="object-contains max-sm:max-w-none w-full lazy"
+              class="object-contains max-sm:max-w-none w-full"
               preload="none"
               poster=""
               autoplay
               loop
               muted
-              data-src="/videos/video_software.mp4"
+              src="/videos/video_software.mp4"
             >
               <source
-                data-src="/videos/video_software.mp4" type="video/mp4" />
+                src="/videos/video_software.mp4" type="video/mp4" />
             </video>
             </figure>
             </div>
           </div>
           <div
-            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-antique-brass-300 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
+            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
           >
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-slate-800  sm:text-xl"
+                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
                 >
                   Branding, Webdesign & UX – aus einem Guss
                 </h3>
@@ -279,7 +279,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                 </p>
                 <a
                   href="/services/design/"
-                  class="border px-3.5 py-2 rounded-3xl text-slate-800 border-slate-800 hover:bg-slate-800 hover:text-white   ::text-slate-800 transition"
+                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
                 >Design-Philosophie entdecken</a
                 >
               </div>
@@ -292,7 +292,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
             </div>
           </div>
           <div
-            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-sherpa-blue-900 text-pancho-200 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
+            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-sherpa-blue-900 text-light-100 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
           >
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
@@ -309,7 +309,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                 </p>
                 <a
                   href="/services/it-service/"
-                  class="border px-3.5 py-2 rounded-3xl text-pancho-200 border-pancho-200 hover:bg-pancho-200 hover:text-sherpa-blue-900 transition"
+                  class="border px-3.5 py-2 rounded-3xl text-light-100 border-light-100 hover:bg-light-100 hover:text-sherpa-blue-900  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
                 >Mehr über Cloud-Services</a
                 >
               </div>
@@ -323,7 +323,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
           </div>
           
           <div
-            class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-antique-brass-300 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
+            class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
           >
             <div class="flex md:flex-row flex-col gap-4 justify-between">
               <div class="flex flex-col col-auto items-start gap-2">
@@ -333,17 +333,17 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   Ihr Vorteil: Zertifiziertes Know-how
                 </p>
                 <h3
-                  class="text-1xl -mt-2 font-bold tracking-tight text-slate-800  sm:text-2xl"
+                  class="text-1xl -mt-2 font-bold tracking-tight  sm:text-2xl"
                 >
                   Profitieren Sie von meiner Expertise in agilen Methoden und IT-Projekten.
                 </h3>
                 <ul
                   role="list"
-                  class="mt-8 max-w-xl space-y-8 text-slate-800 "
+                  class="mt-8 max-w-xl space-y-8 text-dark-950 "
                 >
                   <li class="flex gap-x-3">
                     <svg
-                      class="mt-1 h-5 w-5 flex-none text-slate-800 "
+                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -355,14 +355,14 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                     </svg>
                     <span
                     >Professional <strong
-                      class="font-semibold text-slate-800 "
+                      class="font-semibold text-dark-950 "
                     >Scrum Master I.</strong
                     > (PSM I) - Scrum.org</span
                     >
                   </li>
                   <li class="flex gap-x-3">
                     <svg
-                      class="mt-1 h-5 w-5 flex-none text-slate-800 "
+                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -374,14 +374,14 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                     </svg>
                     <span
                     >Professional <strong
-                      class="font-semibold text-slate-800 "
+                      class="font-semibold text-dark-950 "
                     >Scrum Master II.</strong
                     > (PSM II) - Scrum.org</span
                     >
                   </li>
                   <li class="flex gap-x-3">
                     <svg
-                      class="mt-1 h-5 w-5 flex-none text-slate-800 "
+                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -393,14 +393,14 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                     </svg>
                     <span
                     >Professional <strong
-                      class="font-semibold text-slate-800 "
+                      class="font-semibold text-dark-950 "
                     >Scrum Product Owner I.</strong
                     > (PSPO I.) - Scrum.org</span
                     >
                   </li>
                   <li class="flex gap-x-3">
                     <svg
-                      class="mt-1 h-5 w-5 flex-none text-slate-800 "
+                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -412,7 +412,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                     </svg>
                     <span
                     >Ausbilder (IHK) <strong
-                      class="font-semibold text-slate-800 "
+                      class="font-semibold text-dark-950 "
                     >Ausbilder für Fachinformatik.</strong
                     ></span
                     >

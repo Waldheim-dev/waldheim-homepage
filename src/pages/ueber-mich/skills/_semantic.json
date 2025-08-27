@@ -5,7 +5,7 @@
   "isActive": true,
   "fixedExperience": 0,
   "sinceLastRollup": "2020-01-01",
-  "knowledgebase": "advanced",
+  "knowledgebase": "expert",
   "isTopSkill": true,
   "isTechStack": false,
   "layer": ["general"]
