@@ -28,10 +28,10 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
   <div class="py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900  gsap-fadein  sm:text-4xl">Referenzen: Meine
+      <div class="mx-auto max-w-2xl text-center gsap-fadein">
+        <h1 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">Referenzen: Meine
           Projekte im Überblick</h1>
-        <p class="mt-2 text-lg leading-8 text-gray-600  gsap-fadein ">Hier finden Sie eine Auswahl meiner
+        <p class="mt-2 text-lg leading-8 text-light-300">Hier finden Sie eine Auswahl meiner
           erfolgreich abgeschlossenen Projekte. Die Liste wird fortlaufend aktualisiert und ist chronologisch geordnet
           (neueste Projekte zuerst).</p>
       </div>
@@ -43,7 +43,7 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
         {
           page.data.map((project) => {
             return (
-              <div class="bg-antique-brass-300 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full"
+              <div class="bg-primary-900 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full gsap-fadein focus-within:ring-2 focus-within:ring-primary-600"
                    data-trigger="entry" data-type={project.data?.category}>
                 <div
                   class="mx-auto flex flex-col items-center gap-x-8 gap-y-10 px-6">
@@ -59,19 +59,19 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
                   <div class="md:min-w-96 xl:flex-auto">
                     <figure class="relative isolate pt-6 sm:pt-12 text-white">
                       <FormattedDate date={project.data.pubDate} />
-                      <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9 gsap-fadein ">
+                      <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                         <p>{project.data.title}</p>
                       </blockquote>
                       <div
-                        class="font-medium text-slate-300 gsap-fadein ">
+                        class="font-medium text-slate-300">
                         {categories.find(category => category.id === project.data?.category.id)?.data.name
                         }</div>
 
                       <p
-                        class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 gsap-fadein ">{project.data.shortDescription}</p>
-                      <figcaption class="mt-8 text-base gsap-fadein ">
+                        class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">{project.data.shortDescription}</p>
+                      <figcaption class="mt-8 text-base">
                         <a href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`} aria-description=""
-                           class="rounded-md px-3 py-2 bg-sherpa-blue-900  text-white hover:bg-wd">Projekt
+                           class="rounded-md px-3 py-2 bg-light-300  text-dark-950 hover:bg-wd outline-none">Projekt
                           ansehen</a>
                       </figcaption>
                     </figure>
@@ -110,32 +110,35 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
         });
       </script>
 
-      <nav class="flex items-center justify-between border-t border-gray-200  px-4 py-3 sm:px-6 mt-4 gsap-fadein "
-           aria-label="Pagination">
-        <div class="hidden sm:block">
-          <p class="text-sm text-gray-700 ">
-            Zeige
-            <span class="font-medium">{ page.start + 1}</span>
-            bis
-            <span class="font-medium">{ page.end + 1}</span>
-            von
-            <span class="font-medium">{page.total}</span>
-            Ergebnissen
-          </p>
-        </div>
-        <div class="flex flex-1 justify-between sm:justify-end gap-2">
+        
+  <div class="py-24 sm:py-32 gsap-fadein ">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <nav class="flex items-center justify-between border-t border-light-200  px-4 py-3 sm:px-6 mt-4"
+  aria-label="Pagination">
+<div class="hidden sm:block">
+ <p class="text-sm text-light-100 ">
+   Zeige
+   <span class="font-medium">{ page.start + 1}</span>
+   bis
+   <span class="font-medium">{ page.end + 1}</span>
+   von
+   <span class="font-medium">{page.total}</span>
+   Ergebnissen
+ </p>
+</div>
+<div class="flex flex-1 justify-between sm:justify-end gap-2">
 
 
-          {page.url.first ? <a href={page.url.first}
-                               class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Erste Seite</a> : null}
-          {page.url.prev ? <a href={page.url.prev}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Vorherige Seite</a> : null}
-          {page.url.next ? <a href={page.url.next}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Nächste Seite</a> : null}
-          {page.url.last ? <a href={page.url.last}
-                              class="relative inline-flex cursor-pointer items-center rounded-md bg-pancho-200 px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-antique-brass-300 focus-visible:outline-offset-0    ">Letzte Seite</a> : null}
-        </div>
-      </nav>
+ {page.url.first ? <a href={page.url.first}
+                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-900 px-3 py-2 text-sm font-semibold text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Erste Seite</a> : null}
+ {page.url.prev ? <a href={page.url.prev}
+                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-900 px-3 py-2 text-sm font-semibold text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Vorherige Seite</a> : null}
+ {page.url.next ? <a href={page.url.next}
+                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-900 px-3 py-2 text-sm font-semibold text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Nächste Seite</a> : null}
+ {page.url.last ? <a href={page.url.last}
+                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-900 px-3 py-2 text-sm font-semibold text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Letzte Seite</a> : null}
+</div>
+</nav></div></div>
 
 
     </div>
