@@ -214,3 +214,49 @@
   99% { --tw-gradient-position: from 356.4deg in oklab; }
   100% { --tw-gradient-position: from 360.0deg in oklab; }
 }
+
+pre {
+    padding: 1rem;
+    margin: .5rem 0;
+    border-radius: 1rem;
+}
+
+.prose h1, .prose-invert h1 {
+    font-size: 3rem !important;
+    line-height: 4rem !important;
+    font-weight: bold !important;
+}
+
+.prose h2, .prose-invert h2 {
+    font-size: 1.5rem !important;
+    line-height: 2.5rem !important;
+    font-weight: bold !important;
+}
+
+.prose p, .prose-invert p {
+    margin: 1rem 0 !important;
+}
+
+.prose a, .prose-invert a {
+    text-decoration: underline !important;
+    text-underline-offset: 4px !important;
+    font-weight: 600 !important;
+    color: var(--color-primary-600) !important;
+}
+
+.prose a:hover, .prose-invert a:hover {
+    color: var(--color-primary-700) !important;
+}
+
+.prose ul, .prose-invert ul {
+    list-style-type: disc !important;
+    margin-left: 1.5rem !important;
+}
+
+.prose ol, .prose-invert ol {
+    list-style-type: decimal !important;
+    margin-left: 1.5rem !important;
+}
+.prose li, .prose-invert li {
+    margin: .5rem 0 !important;
+}
