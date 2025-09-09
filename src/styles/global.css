@@ -215,10 +215,23 @@
   100% { --tw-gradient-position: from 360.0deg in oklab; }
 }
 
-pre {
+.prose pre, .prose-invert pre {
     padding: 1rem;
     margin: .5rem 0;
     border-radius: 1rem;
+}
+
+.prose code, .prose-invert code {
+    font-family: 'Fira Code', monospace !important;
+    font-size: .875rem !important;
+    padding: .2rem .4rem !important;
+    border-radius: .375rem !important;
+}
+
+/* code without pre */
+.prose p code, .prose-invert p code {
+    background-color: var(--background-dark) !important;
+    color: var(--foreground-light) !important;
 }
 
 .prose h1, .prose-invert h1 {
@@ -230,6 +243,29 @@ pre {
 .prose h2, .prose-invert h2 {
     font-size: 1.5rem !important;
     line-height: 2.5rem !important;
+    font-weight: bold !important;
+}
+
+.prose h3, .prose-invert h3 {
+    font-size: 1.25rem !important;
+    line-height: 2rem !important;
+    font-weight: bold !important;
+}
+
+.prose h4, .prose-invert h4 {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+    font-weight: bold !important;
+}
+
+.prose h5, .prose-invert h5 {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: bold !important;
+}
+.prose h6, .prose-invert h6 {
+    font-size: .875rem !important;
+    line-height: 1.25rem !important;
     font-weight: bold !important;
 }
 
