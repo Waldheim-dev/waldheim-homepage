@@ -34,13 +34,6 @@ include:
       rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       remote-dir: /websites/waldheim.dev/www
-  - component: $CI_SERVER_FQDN/forestdesign/ci-components/deploy-sftpssh@~latest
-    inputs:
-      name: deploy-next
-      remote-dir: /websites/waldheim.dev/next
-      rules:
-        - if: $CI_COMMIT_BRANCH == "next"
-
 variables:
   SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
   GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
