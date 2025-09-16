@@ -1,3 +1,21 @@
+# [26.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0...26.1.0) (2025-09-16)
+
+
+### Bug Fixes
+
+* Füge Blogbeitrag über IT-Administration und das Prinzip der minimalen Berechtigungen hinzu ([68b07c2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/68b07c2f68ba0f3101792e42b85ca93908745b74))
+* Füge Blogbeitrag zur Automatisierung von DSGVO-Anfragen mit Go hinzu ([69a73a7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/69a73a7f64e36b627fbd4e8d1742e31baa209b15))
+* Verbesserung der GSAP-Animationen und Fehlerbehandlung in Layout ([a376988](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a37698883776abf1a990ced55420eb116827a006))
+
+
+### Features
+
+* Füge Blogbeitrag über "Security by Design" hinzu ([2c4861e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2c4861ec79ec55e6b8bfbce8632e6e0eb91bd1d5))
+* Füge Blogbeitrag über Schutz vor Cross-Site Scripting (XSS) in Angular hinzu ([cc35713](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/cc357133c6ea6a0f209c6705636fc6c95a06fa1a))
+* Füge Blogbeitrag über sichere API-Gateways für Go-Microservices hinzu ([f9abadb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f9abadbaa551bec3b73505c28bd3f5a9dbbfea2c))
+* Füge Blogbeitrag über Sicherheitsrisiken von VS Code-Erweiterungen und eine Checkliste zur Bewertung hinzu ([dcb932c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/dcb932cce7a1a5da6e2d79fd7bfa94c4c9114c7a))
+* Füge Blogbeitrag zur Monolith-Analyse und Sicherheitsrisiken in Legacy-Code hinzu ([d56986d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d56986ddf7a056cd3eedcbed84e8695fd4a7a82b))
+
 # [26.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.1...26.0.0) (2025-09-16)
 
 
