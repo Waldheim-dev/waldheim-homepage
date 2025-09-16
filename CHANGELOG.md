@@ -1,3 +1,113 @@
+# [26.0.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.1...26.0.0) (2025-09-16)
+
+
+### Bug Fixes
+
+* adjust video class for consistent width on index page ([c2d0ebd](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c2d0ebdac38bac5bb827949537a97cef7140b49e))
+* correct import path for global CSS in Layout.astro ([455d426](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/455d4260cc7f21581c491e5cb82ea8aa0de0ccc3))
+* correct import path for global CSS in Layout.astro ([3e5f86a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3e5f86a0fb3d1be6e1bbfc343c31359aa369eb52))
+* enhance styling and accessibility in HeroBackground and Banner components; update package dependencies ([55ccee0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/55ccee0c445a896465967bfe6b2314d09e1376e9))
+* enhance styling and accessibility in HeroBackground and Banner components; update package dependencies ([b62c322](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b62c322f7562fd9b2b82e99323730b1de7fca6b3))
+* ensure item link is always formatted as a valid HTTPS URL ([d15c676](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d15c67645aac2865438e2388fdb61815e7ffc24b))
+* ensure item link is always formatted as a valid HTTPS URL ([e77c9b2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e77c9b202db6bdd089ea1c0b82adee0e4db94b46))
+* Implement code changes to enhance functionality and improve performance ([bf6b43e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bf6b43e2f5c999bb3538b19121536bc22fe70048))
+* improve accessibility and styling in Footer, HeroBackground, and Nav components ([5d46740](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5d4674022bfc72cf064e56b5d88c9935176e344c))
+* improve accessibility and styling in Footer, HeroBackground, and Nav components ([e3b5e96](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e3b5e96d011798efdce38b1aaf74cb0d3d5b8dab))
+* improve error handling in API requests and enhance logging functionality ([ae4d4c7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ae4d4c7b48227a04137d1a5107a2b9c8ccdab18d))
+* improve error handling in API requests and enhance logging functionality ([d36a19a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d36a19a21afca5ab4741b02cb47d38e6513f17ed))
+* remove disallow rule for services in robots.txt ([f6a9dc8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f6a9dc83f9e2ba0f4a4a224476f810590fa98542))
+* remove disallow rule for services in robots.txt ([46c3e87](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/46c3e875a1dff562327454559796c2d36243cb41))
+* Update .htaccess to enforce www redirection for better SEO ([8e157d0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8e157d03a0542397ad89fbd9230b8135d8f898a0))
+* update background colors and text colors for better contrast and accessibility ([ad166f0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ad166f03cca95cd44726061c366b2d06b9008da4))
+* update background colors and text colors for better contrast and accessibility ([8256582](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8256582ee4dc251843b705640736cec1532ffadb))
+* update blog links to include page number and change version to 26.0.0-prev ([21dc006](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/21dc006f73b67ab4f8bd821d3c40c8ce10bb8381))
+* update blog links to include page number and change version to 26.0.0-prev ([3aab011](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3aab011eb74715642a2279d81ce84893add1360e))
+* update CI configuration to use v26 directory for npm commands and versioning ([06490c9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/06490c95069767428ca75dbce4baeba9275b72e0))
+* update CI configuration to use v26 directory for npm commands and versioning ([a0a4327](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a0a43270e738789aa58148cb0052cdd9c08bc56a))
+* update contact form API endpoint to use new anonymous endpoint ([87fcb02](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/87fcb028d334bf877df78011d74720e5831c8621))
+* update contact form API endpoint to use new anonymous endpoint ([3586080](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/358608059964a3f6abe68dc1bda2439acb875abb))
+* update deployment rules for next branch in CI configuration ([306df88](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/306df8809e3d171d64a4606326fe47ec5750d21c))
+* update deployment rules for next branch in CI configuration ([a21038d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a21038d365f49087fb60ece3a29e03d80e68fb0d))
+* update form field names for consistency in Contact component ([7685893](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7685893119797dd0988bedfe3b32ed46a850c50b))
+* update form field names for consistency in Contact component ([03569aa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/03569aa5d7bfcfba0ccc556ae3f268df2de2c196))
+* update latest deps ([78c94a6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/78c94a6448e963519d277e57433911444140b42e))
+* update log messages to English for consistency and clarity ([6480ee3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6480ee3105391ddc859f43308fc032530af0a4f8))
+* update release configuration and package dependencies to use exact versions ([bfc8073](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bfc8073aa35892f3218bfbff8a5365be6f1f1ef2))
+* update release configuration and package dependencies to use exact versions ([9fe75af](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9fe75af8f985026079f6846b3156ce6dbc3e2d6b))
+* update version in package.json and adjust deployment component in CI configuration ([f5df942](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f5df942024fddd332cff946838afdbd0885ffb0f))
+* update version in package.json and adjust deployment component in CI configuration ([572f3b7](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/572f3b7c47e6471cdfbad0fdd4b613a3c0b3db18))
+* update version in package.json and implement consent management for Google Analytics ([eb5894e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/eb5894e48c74fdc68f3c31cae53dd2ffe6500219))
+* update version in package.json and implement consent management for Google Analytics ([ddd5348](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ddd5348ca065d48a76c451be935750300a22474f))
+* update version numbers for website and ecodrive components ([fbc3291](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/fbc3291618ac77e51b4083ebf13ed6a2c3807e9f))
+* update version numbers for website and ecodrive components ([f85e488](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f85e4886a3c82df276ae79eaaa9e5e6fe51faa13))
+
+
+### Code Refactoring
+
+* rename markdown files and update blog post links to remove prefix; add new JSON files for various services ([d4e4cfc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d4e4cfc6eb47663f0f8956f73cbf0ad0866e17ca))
+* rename markdown files and update blog post links to remove prefix; add new JSON files for various services ([6023ec4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/6023ec4f3576319a6de0aad4cde0a2fd0732500c))
+
+
+### Features
+
+* Add a link to the blog on the homepage and remove the BlogLatest component ([b1271b5](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b1271b5b74248ca33a69d8b00db1a3dba4de57a5))
+* Add additional 301 redirects for improved URL handling and user navigation ([f6f087c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f6f087c1e8a5881c59180762fb7cdad76297fa74))
+* Add lazy loading class to video elements for improved performance ([2cc5bdc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2cc5bdcc473c1deca299d8320a898118294ebe79))
+* add lazy loading to images for improved performance ([c017f8f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c017f8f1b1f6b09c3d41516b48a9113cbab43000))
+* add lazy loading to images for improved performance ([387c87c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/387c87c4c2a441a1d57e9fe5135d72bea7b6bacc))
+* Add llms.txt for enhanced information on digital consulting and AI integration ([31d5fe8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/31d5fe8e2eeb01bab20076f9809575fb61a32c45))
+* add llms.txt integration for AI content summarization in Astro builds ([4eb74a6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/4eb74a63f8298410e8f1098c9ae2bcf715d1e455))
+* Add new blog post on Angular security and GDPR compliance ([eb6a352](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/eb6a3526e597186badb398a0112219a0886443a6))
+* Add new blog post on Infrastructure as Code (IaC) security risks in Terraform ([d885b6c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d885b6cd73868c1680caecfa6d7bd4ea5d42d181))
+* add new blogs based on linkedin ([cf22f81](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/cf22f811f6f47b27dcea8f398b1fc18b1fa35732))
+* add new components and update schema for blog functionality; include pricing service and new content structure ([8518596](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/85185965f810c6d0cc2a3089cb3a6bc797856a84))
+* add new components and update schema for blog functionality; include pricing service and new content structure ([9ba2688](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9ba268808f0a66fb12651621adfa9b21132da8fb))
+* add new features for EcoDrive including vehicle management, trip logging, and service reports ([0854007](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/085400746a2b9d040f0abbe60047c4d557d94db9))
+* add new features for EcoDrive including vehicle management, trip logging, and service reports ([ba12636](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ba126362ab043b963225bdd6c87aeff2255ee1e8))
+* add Socialverse page and navigation links, include SVG logo ([00c13da](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/00c13da36a97e93491669fe0dd51849e4a922323))
+* add Socialverse page and navigation links, include SVG logo ([87aaadf](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/87aaadf3b61fd0b7c9398ba8fd865762b88f42c2))
+* Add video content for DevSecOps and software services on homepage ([619d75e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/619d75e8f9abddaa64dc0999de6622a5a26ab162))
+* Add videos and split contact ([0cb5cbd](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0cb5cbd74c6b3f332058f060f03fff9211c4bea0))
+* Aktualisiere das Veröffentlichungsdatum und den Planungsstatus für Version 1.2 ([16aee87](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/16aee87d12d68aad17933d5891f3324eb5a2bff6))
+* Aktualisiere die Version auf v1.2.0 in der Navigation und der Ecodrive-Seite ([b651b7c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b651b7cf9434433b18ee2550443e8bfe42d1d27a))
+* Enhance prose styles for better readability and consistency across code blocks ([7bd12cc](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7bd12cc3821bd6d29f71a67a8eccf3542e666d74))
+* Enhance UI with GSAP fade-in animations and improve layout styling across multiple components ([8e63e48](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8e63e489164dc556ac134831b3e938b767213c89))
+* Fügen Sie einen neuen Blogbeitrag über Git-Sicherheits-Audits hinzu ([8346cf9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8346cf96dc5272309cdc4867b36629cf6499a7c1))
+* implement contact form and update navigation links to use modal for contact ([e9ef785](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e9ef7859c787f0fe637e8b6a7d07ab5b67e4153f))
+* implement contact form and update navigation links to use modal for contact ([b7c8af8](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b7c8af87a2eb23537c565e582b5b18186eb48a34))
+* implement cookie consent management and update gtag consent handling ([e71a537](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e71a5372b980a2bff5415ff2d33149f6ba551219))
+* implement cookie consent management and update gtag consent handling ([c4ddb3e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c4ddb3e0d848176f062e5a73cc42de1afd8962f3))
+* implement new setup for v26 and new branding with more animations ([8767f7b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8767f7b583685a472eac0888a90ec9564c96ee55))
+* implement new setup for v26 and new branding with more animations ([8b7dd79](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/8b7dd79867f9b44e991701682708e532d9295cc5))
+* refactor blog component structure and implement pagination for blog posts ([2fdc9c2](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2fdc9c2a3a651da67b727bbffd85b496ed99e236))
+* refactor blog component structure and implement pagination for blog posts ([c572cc3](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c572cc31dd78b9ff467ead2bc92333895c854d15))
+* Refactor color scheme in design, devsecops, entwicklung, and socialverse pages; update antique brass color from 400 to 300 for consistency and visual appeal. Remove verbandssoftware page. ([e05c610](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e05c6104caa8682cead5ba0f3e9a0302c9d6a3e6))
+* Refactor navigation menu to include a collapsible 'Produkte' section with sub-menu items for Ecodrive, Socialverse, and Ausgabeschein Generator. Updated styles for better visual hierarchy and added version indicators for products. ([f8459f6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f8459f67966a48f21e212037350f5c74e8d30e4f))
+* Refactor navigation menu to include a collapsible 'Produkte' section with sub-menu items for Ecodrive, Socialverse, and Ausgabeschein Generator. Updated styles for better visual hierarchy and added version indicators for products. ([ee1c550](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ee1c5505dabb47d660d041738272738319d342c4))
+* Refactor styles and update color scheme across service pages; introduce new color palette for improved UI consistency ([b7d0b96](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b7d0b96d6dfbdc2029221bdeef2a67ca8afbae0e))
+* Update AI provider to Gemini and upgrade astro-ai-llms-txt dependency to version 1.1.2 ([5044a03](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5044a0336cf70a2d144249d810f5c842deed26e0))
+* update footer component with Ecodrive links and improve support section ([2609dbb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/2609dbb20d1dc18b7005ae1745dbb3404ee85143))
+* update footer component with Ecodrive links and improve support section ([72d7afa](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/72d7afafa8a078a2ee63417f8038014c54b21658))
+* update pricing information and description in PriceService component ([633ea29](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/633ea29de6b9fa9d704285090570d7ed5d6439ea))
+* update pricing information and description in PriceService component ([540b39b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/540b39bf6f42fba352e462ba9675818e2c4e678d))
+* Update Tailwind CSS configuration and add new color variables; create initial todo list for project planning ([11df85f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/11df85f86650980842f15e532ddc5f4a13db1ad3))
+
+
+### BREAKING CHANGES
+
+* move v26 to new stable
+* Create Release for 2026
+- Optimize for more interaktion
+- Add better SEO
+- Add more AI Features
+- Add more Animations and Gamification
+* move v26 to new stable
+* Create Release for 2026
+- Optimize for more interaktion
+- Add better SEO
+- Add more AI Features
+- Add more Animations and Gamification
+
 # [26.0.0-next.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/25.10.1...26.0.0-next.1) (2025-05-02)
 
 
