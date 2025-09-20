@@ -1,7 +1,7 @@
 ---
 title: "DSGVO-Anfragen automatisieren: Eine Go-Anwendung zur Verwaltung von Betroffenenrechten"
 description: "Ich skizziere die Architektur einer Go-Anwendung, die DSGVO-Anfragen (Auskunft, Löschung) automatisiert und revisionssicher bearbeitet."
-pubDate: "2025-09-24"
+pubDate: "2025-09-15"
 heroImage: "/blogs/dsgvo-anfragen-automatisieren-eine-go-anwendung-zur-verwaltung-von-betroffenenrechten.png"
 author: 'markus-waldheim'
 keywords: DSGVO, Go, Automatisierung, Datenschutz, Compliance, Betroffenenrechte, Softwarearchitektur

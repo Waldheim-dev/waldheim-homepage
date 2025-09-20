@@ -1,7 +1,7 @@
 ---
 title: "Schutz vor Cross-Site Scripting (XSS) in Angular: Meine Verteidigungsstrategie"
 description: "Ich erläutere meine mehrschichtige Strategie, um Angular-Anwendungen robust gegen XSS-Angriffe zu machen."
-pubDate: "2025-09-21"
+pubDate: "2025-09-12"
 heroImage: "/blogs/schutz-vor-cross-site-scripting-xss-in-angular-meine-verteidigungsstrategie.png"
 author: 'markus-waldheim'
 keywords: Angular, XSS, Sicherheit, Frontend-Sicherheit, DevSecOps, Webentwicklung, Content Security Policy

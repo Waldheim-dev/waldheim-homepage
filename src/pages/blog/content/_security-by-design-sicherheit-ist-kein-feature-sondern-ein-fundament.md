@@ -1,7 +1,7 @@
 ---
 title: "Security by Design: Wie ich Sicherheitsanforderungen in den Designprozess integriere"
 description: "Ich zeige, wie ich Sicherheitsüberlegungen von Anfang an in den Designprozess für digitale Produkte einbeziehe, lange bevor die erste Zeile Code geschrieben wird."
-pubDate: "2025-09-26"
+pubDate: "2025-09-17"
 heroImage: "/blogs/security-by-design-sicherheit-ist-kein-feature-sondern-ein-fundament.png"
 author: 'markus-waldheim'
 keywords: Security by Design, DevSecOps, Produktdesign, UX, Sicherheit, Softwareentwicklung, Threat Modeling
