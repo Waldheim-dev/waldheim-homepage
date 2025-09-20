@@ -112,4 +112,4 @@ DSGVO-konformes Logging erfordert einen Paradigmenwechsel: weg vom gedankenlosen
 -----
 
 **Sind Sie unsicher, ob Ihre Log-Dateien versteckte DSGVO-Risiken enthalten?**
-Ich helfe Ihnen, eine Strategie für DSGVO-konformes Logging zu entwickeln und in Ihren Go-Anwendungen zu implementieren. Von der Auswahl der richtigen Tools bis zur Implementierung von Maskierungs-Routinen – lassen Sie uns Ihre Logs sicher machen. [Kontaktieren Sie mich für ein Logging-Konzept.](mailto:beispiel@email.com)
+Ich helfe Ihnen, eine Strategie für DSGVO-konformes Logging zu entwickeln und in Ihren Go-Anwendungen zu implementieren. Von der Auswahl der richtigen Tools bis zur Implementierung von Maskierungs-Routinen – lassen Sie uns Ihre Logs sicher machen. [Kontaktieren Sie mich für ein Logging-Konzept.](/kontakt/)

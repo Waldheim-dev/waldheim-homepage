@@ -73,4 +73,4 @@ Durch die Integration von Compliance-Monitoring direkt in die CI/CD-Pipeline wir
 -----
 
 **Empfinden Sie Compliance-Prüfungen als Bremsklotz für Ihre agilen Entwicklungsprozesse?**
-Ich helfe Ihnen, Compliance-Anforderungen als Code zu definieren und die Überprüfung direkt in Ihre CI/CD-Pipeline zu integrieren. Lassen Sie uns gemeinsam einen automatisierten und revisionssicheren Prozess aufbauen, der Compliance beschleunigt statt verlangsamt. [Kontaktieren Sie mich für die Automatisierung Ihrer Compliance-Checks.](mailto:beispiel@email.com)
+Ich helfe Ihnen, Compliance-Anforderungen als Code zu definieren und die Überprüfung direkt in Ihre CI/CD-Pipeline zu integrieren. Lassen Sie uns gemeinsam einen automatisierten und revisionssicheren Prozess aufbauen, der Compliance beschleunigt statt verlangsamt. [Kontaktieren Sie mich für die Automatisierung Ihrer Compliance-Checks.](/kontakt/)

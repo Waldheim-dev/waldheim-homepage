@@ -121,4 +121,4 @@ Ein professionelles Secrets-Management-System wie HashiCorp Vault ist ein fundam
 -----
 
 **Kämpfen Sie mit der sicheren Verwaltung von Passwörtern und API-Schlüsseln in Ihrer Microservice-Architektur?**
-Ich unterstütze Sie bei der Konzeption und Einführung eines zentralen Secrets-Management-Systems. Lassen Sie uns gemeinsam eine sichere und auditierbare Lösung für Ihre Go-Services aufbauen. [Kontaktieren Sie mich für eine Secrets-Management-Strategie.](mailto:beispiel@email.com)
+Ich unterstütze Sie bei der Konzeption und Einführung eines zentralen Secrets-Management-Systems. Lassen Sie uns gemeinsam eine sichere und auditierbare Lösung für Ihre Go-Services aufbauen. [Kontaktieren Sie mich für eine Secrets-Management-Strategie.](/kontakt/)
