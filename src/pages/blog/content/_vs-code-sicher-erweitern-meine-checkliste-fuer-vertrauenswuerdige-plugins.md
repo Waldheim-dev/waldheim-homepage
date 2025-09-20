@@ -1,7 +1,7 @@
 ---
 title: "VS Code sicher erweitern: Wie ich Plugins auf Sicherheitsrisiken prüfe"
 description: "Ich teile meine Checkliste zur Bewertung von VS Code-Erweiterungen, um zu verhindern, dass die IDE selbst zum Sicherheitsrisiko wird."
-pubDate: "2025-09-25"
+pubDate: "2025-09-16"
 heroImage: "/blogs/vs-code-sicher-erweitern-meine-checkliste-fuer-vertrauenswuerdige-plugins.png"
 author: 'markus-waldheim'
 keywords: VS Code, Sicherheit, Erweiterungen, DevSecOps, IDE, Supply Chain Security, Endpoint Security

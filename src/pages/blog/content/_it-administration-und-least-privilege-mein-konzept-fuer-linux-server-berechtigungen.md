@@ -1,7 +1,7 @@
 ---
 title: "IT-Administration und Least Privilege: Mein Konzept für Linux-Server-Berechtigungen"
 description: "Ich stelle mein Berechtigungskonzept für Linux-Server vor, das auf dem 'Principle of Least Privilege' basiert, um die Angriffsfläche zu minimieren."
-pubDate: "2025-09-23"
+pubDate: "2025-09-14"
 heroImage: "/blogs/it-administration-und-least-privilege-mein-konzept-fuer-linux-server-berechtigungen.png"
 author: 'markus-waldheim'
 keywords: Least Privilege, Linux-Sicherheit, IT-Administration, Berechtigungsmanagement, sudo, DevSecOps, Server Härtung
