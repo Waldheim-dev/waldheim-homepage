@@ -1,3 +1,21 @@
+# [26.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.1.0...26.2.0) (2025-09-20)
+
+
+### Bug Fixes
+
+* update dependencies ([bb8238b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bb8238b8a89a7451b506c1655092a4eac78fcd8f))
+
+
+### Features
+
+* Erhöhe die Blog-Beitragsgrenze auf der Startseite auf 6 ([a945eca](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a945eca1587b15d65767e480d23af93394f1e59c))
+* Füge Blogbeitrag über Compliance-Monitoring in der CI/CD-Pipeline hinzu ([ad4c545](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ad4c545411fdcb4c3d908ee290da203cd8127c81))
+* Füge Blogbeitrag über die Implementierung von Content Security Policy in Angular hinzu ([17d873d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/17d873d4dd209fb64bf6ee71edca8fd0a3af1437))
+* Füge Blogbeitrag über die sichere Migration von PostgreSQL-Datenbanken hinzu ([47d5470](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/47d5470aa3d64af6f975a80770446d60d609a404))
+* Füge Blogbeitrag über DSGVO-konformes Logging in Go-Anwendungen hinzu ([c8fa503](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c8fa503edd237611d5634e6813af9e83c430e377))
+* Füge Blogbeitrag über Geheimnisverwaltung in Microservice-Architekturen hinzu ([b993851](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/b9938518ae7db7bdef941539206c0720f7095b34))
+* Füge Blogbeitrag über Redis als Rate Limiter für Go-APIs hinzu ([1192d69](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1192d697d52c96df8fa5921faac98ebd5359b629))
+
 # [26.1.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.0.0...26.1.0) (2025-09-16)
 
 
