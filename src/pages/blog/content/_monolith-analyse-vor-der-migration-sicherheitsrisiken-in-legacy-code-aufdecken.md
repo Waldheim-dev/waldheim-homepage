@@ -1,7 +1,7 @@
 ---
 title: "Monolith-Analyse vor der Migration: Sicherheitsrisiken in Legacy-Code aufdecken"
 description: "Mein Vorgehen zur systematischen Analyse eines Monolithen, um versteckte Sicherheitslücken zu identifizieren, bevor eine Migration zu Microservices beginnt."
-pubDate: "2025-09-27"
+pubDate: "2025-09-18"
 heroImage: "/blogs/monolith-analyse-vor-der-migration-sicherheitsrisiken-in-legacy-code-aufdecken.png"
 author: 'markus-waldheim'
 keywords: Monolith, Migration, Microservices, Sicherheit, Legacy-Code, Code-Analyse, DevSecOps

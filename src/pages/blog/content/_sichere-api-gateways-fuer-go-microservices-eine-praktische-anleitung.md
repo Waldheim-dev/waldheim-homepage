@@ -1,7 +1,7 @@
 ---
 title: "Sichere API-Gateways für Go-Microservices: Eine praktische Anleitung"
 description: "Dieser Beitrag zeigt, wie ich ein sicheres API-Gateway konfiguriere, um eine Microservice-Architektur nach außen abzusichern."
-pubDate: "2025-09-22"
+pubDate: "2025-09-13"
 heroImage: "/blogs/sichere-api-gateways-fuer-go-microservices-eine-praktische-anleitung.png"
 author: 'markus-waldheim'
 keywords: API Gateway, Go, Microservices, Sicherheit, DevSecOps, Authentifizierung, Rate Limiting
