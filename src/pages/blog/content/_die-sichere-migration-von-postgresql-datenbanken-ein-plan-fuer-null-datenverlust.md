@@ -68,4 +68,4 @@ Eine erfolgreiche und sichere Datenbankmigration ist kein Hexenwerk, sondern das
 -----
 
 **Steht bei Ihnen eine kritische PostgreSQL-Migration an und Sie wollen sicherstellen, dass alles reibungslos und ohne Datenverlust verläuft?**
-Ich unterstütze Sie bei der Planung, dem Testen und der Durchführung Ihrer Datenbankmigration. Lassen Sie uns gemeinsam einen Plan entwickeln, der Ihnen ruhige Nächte garantiert. [Kontaktieren Sie mich für die Planung Ihrer Datenbankmigration.](mailto:beispiel@email.com)
+Ich unterstütze Sie bei der Planung, dem Testen und der Durchführung Ihrer Datenbankmigration. Lassen Sie uns gemeinsam einen Plan entwickeln, der Ihnen ruhige Nächte garantiert. [Kontaktieren Sie mich für die Planung Ihrer Datenbankmigration.](/kontakt/)
