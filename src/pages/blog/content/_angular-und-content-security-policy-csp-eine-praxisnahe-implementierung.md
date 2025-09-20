@@ -115,5 +115,5 @@ Die Implementierung einer Content Security Policy ist eine der effektivsten Maß
 -----
 
 **Möchten Sie die Sicherheit Ihrer Angular-Anwendung mit einer robusten Content Security Policy auf die nächste Stufe heben?**
-Ich helfe Ihnen bei der Analyse, Erstellung und Implementierung einer maßgeschneiderten CSP, die auf Ihre Anwendung zugeschnitten ist, und unterstütze Sie bei der Einrichtung des Reportings. [Kontaktieren Sie mich für ein Frontend-Security-Audit.](mailto:beispiel@email.com)
+Ich helfe Ihnen bei der Analyse, Erstellung und Implementierung einer maßgeschneiderten CSP, die auf Ihre Anwendung zugeschnitten ist, und unterstütze Sie bei der Einrichtung des Reportings. [Kontaktieren Sie mich für ein Frontend-Security-Audit.](/kontakt/)
 

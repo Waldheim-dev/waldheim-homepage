@@ -121,4 +121,4 @@ Rate Limiting ist eine fundamentale Sicherheitsebene für jede moderne API. Es s
 -----
 
 **Ist Ihre API anfällig für Brute-Force-Angriffe oder Überlastung durch einzelne Clients?**
-Ich helfe Ihnen bei der Konzeption und Implementierung einer maßgeschneiderten Rate-Limiting-Strategie für Ihre Go-basierten APIs. Lassen Sie uns gemeinsam einen robusten Schutzwall für Ihre Dienste errichten. [Kontaktieren Sie mich für ein API-Sicherheits-Review.](mailto:beispiel@email.com)
+Ich helfe Ihnen bei der Konzeption und Implementierung einer maßgeschneiderten Rate-Limiting-Strategie für Ihre Go-basierten APIs. Lassen Sie uns gemeinsam einen robusten Schutzwall für Ihre Dienste errichten. [Kontaktieren Sie mich für ein API-Sicherheits-Review.](/kontakt/)
