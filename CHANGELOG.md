@@ -1,3 +1,16 @@
+# [26.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.2.0...26.3.0) (2025-09-20)
+
+
+### Bug Fixes
+
+* aktualisiere Kontaktlinks in Blogbeiträgen auf relative URLs ([f2597cb](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/f2597cbb1e62b6e2a43aa7877b6e4cf8e8fcadea))
+* aktualisiere Veröffentlichungsdaten in mehreren Blogbeiträgen ([e179a34](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e179a34222b91ea7c69b69fe0eb41fe8ff48e711))
+
+
+### Features
+
+* Add new blog posts on Go, Redis, AI ethics, architecture decisions, state management, and performance optimization ([e64b272](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e64b2722dcb692db24417300d3804a2257c9c444))
+
 # [26.2.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.1.0...26.2.0) (2025-09-20)
 
 
