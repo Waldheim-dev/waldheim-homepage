@@ -8,6 +8,11 @@ import Blog from '../components/Blog.astro';
 import EcodriveClaim from '../components/EcodriveClaim.astro';
 import PriceEcodrive from '../components/PriceEcodrive.astro';
 import SkillWrapper from '../components/SkillWrapper.astro';
+import type { Fragment } from 'astro/runtime/server/index.js';
+import PriceSilvacore from '../components/PriceSilvacore.astro';
+import PriceSocialverse from '../components/PriceSocialverse.astro';
+import SilvacoreClaim from '../components/SilvacoreClaim.astro';
+import SocialverseClaim from '../components/SocialverseClaim.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -451,6 +456,12 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
 
       <EcodriveClaim />
       <PriceEcodrive />
+
+      <SocialverseClaim />
+      <PriceSocialverse />
+
+      <SilvacoreClaim />
+      <PriceSilvacore />
     </main>
   </div>
 </Layout>
