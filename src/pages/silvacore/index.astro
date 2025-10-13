@@ -1,0 +1,150 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+import PriceEcodrive from '../../components/PriceEcodrive.astro';
+import EcodriveRoadmap from '../../components/EcodriveRoadmap.astro';
+import EcodriveFeatures from '../../components/EcodriveFeatures.astro';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: Astro.url.host
+},{
+  name: 'Socialverse',
+  link: Astro.url.href
+}]);
+const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren"
+const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!"
+const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren"
+
+---
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <div class='relative isolate pt-14'>
+    <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
+      <div
+        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
+    </div>
+    <div class='py-24 sm:py-32 lg:pb-40'>
+      <div class='mx-auto max-w-7xl px-6 lg:px-8'>
+        <div class='mx-auto max-w-2xl text-center'>
+          <div class='mt-24 sm:mt-32 lg:mt-16'>
+            <span
+              class='inline-flex items-center space-x-2 text-sm font-medium leading-6 text-light-300 gsap-fadein '
+            >
+              <span>Aktuell in <span class='version'>Closed Alpha</span></span>
+            </span>
+          </div>
+
+          <h1
+            class='text-4xl font-bold tracking-tight text-light-100 sm:text-6xl gsap-fadein '
+          >
+            Silvacore: Deine digitale Hausverwaltung
+          </h1>
+          <p class='mt-6 text-lg leading-8 text-light-300 gsap-fadein '>
+            Silvacore ist die ideale Software für die digitale Hausverwaltung. Verwalte deine Immobilien effizient und DSGVO-konform. Behalte den Überblick über Mieter, Verträge und Finanzen – alles an einem Ort.
+          </p>
+          <div class='mt-10 flex items-center justify-center gap-x-6'>
+            <a
+              href='#' disabled="true"
+              target='_blank'
+              rel="noopener noreferrer"
+              class='rounded-md bg-primary-900  gsap-fadein gsap-wiggle px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-700  focus-visible:outline-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2'
+            >Silvacore installieren (Noch nicht verfügbar)</a
+            >
+          </div>
+        </div>
+
+        <div class='relative isolate'>
+          <div
+            class='blur-sm absolute inset-0 rounded-1xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient' />
+
+          <img
+            src='/silvacore/silvacore_dashboard.png'
+            alt="Silvacore Dashboard"
+            loading="lazy"
+            width="2432"
+            height="1442"
+            class='relative z-10 mt-16 rounded-md bg-pancho-200/5 shadow-2xl ring-1 ring-white/10 sm:mt-24'
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
+      aria-hidden='true'>
+      <div
+        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
+        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'>
+      </div>
+    </div>
+  </div>
+
+  <div class="overflow-hidden py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div
+        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+      >
+        <div class="lg:pr-8 lg:pt-4">
+          <div class="lg:max-w-lg">
+            <h2
+              class="text-base font-semibold leading-7 text-light-500  gsap-fadein "
+            >
+              WEG Verwaltung
+            </h2>
+            <p
+              class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein "
+            >
+              Einfacher geht's nicht!
+            </p>
+            <p class="mt-6 text-lg leading-8 text-light-500  gsap-fadein ">
+              Silvacore ist ein praktischs Tool um deine Immobilien effizient und DSGVO-konform zu verwalten. Behalte den Überblick über Mieter, Verträge und Finanzen – alles an einem Ort.
+            </p>
+            <dl
+              class="mt-10 max-w-xl space-y-8 text-base leading-7 text-light-500  lg:max-w-none"
+            >
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-light-300 gsap-fadein ">
+                  <i class="absolute left-1 top-1 fa-solid fa-users text-primary-900"
+                  ></i>
+                    Eigentümer, Mieter & Verträge verwalten
+                </dt>
+                <dd class="inline gsap-fadein ">
+                    Verwalte alle Daten deiner Eigentümer, Mieter und Verträge zentral und übersichtlich.
+                </dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-light-300 gsap-fadein ">
+                  <i
+                    class="absolute left-1 top-1 fa-solid fa-chart-line-up-down text-primary-900"
+                  ></i>
+                    Finanzübersicht & Abrechnung
+                </dt>
+                <dd class="inline gsap-fadein ">
+                  Behalte die Finanzen im Blick! Silvacore bietet eine umfassende Übersicht über Einnahmen und Ausgaben sowie eine einfache Abrechnung.
+                </dd>
+              </div>
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-light-300 gsap-fadein ">
+                  <i
+                    class="absolute left-1 top-1 fa-solid fa-lock-hashtag text-primary-900"
+                  ></i>
+                    DSGVO-konform & sicher
+                </dt>
+                <dd class="inline gsap-fadein ">
+                  Silvacore erfüllt alle Anforderungen der DSGVO und sorgt für eine sichere Speicherung und Verarbeitung deiner Daten.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <img
+          src="/silvacore/silvacore_users.png"
+          alt="Silvacore Dashboard"
+          loading="lazy"
+          class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+          width="2432"
+          height="1442"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
