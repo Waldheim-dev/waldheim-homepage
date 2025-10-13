@@ -4,6 +4,8 @@ import { SchemaUtils } from '../../utils/schema';
 import PriceEcodrive from '../../components/PriceEcodrive.astro';
 import EcodriveRoadmap from '../../components/EcodriveRoadmap.astro';
 import EcodriveFeatures from '../../components/EcodriveFeatures.astro';
+import type { Fragment } from 'astro/runtime/server/index.js';
+import PriceSocialverse from '../../components/PriceSocialverse.astro';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: Astro.url.host
@@ -147,4 +149,5 @@ const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Re
       </div>
     </div>
   </div>
+      <PriceSocialverse />
 </Layout>
