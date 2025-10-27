@@ -1,0 +1,110 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Repository klonen',
+    time: '2 Minuten',
+    description: 'Silvacore herunterladen',
+    details: ['git clone https://github.com/...', 'In Projektverzeichnis wechseln']
+  },
+  {
+    number: '2',
+    title: 'Deployment wählen',
+    time: '5-15 Minuten',
+    description: 'Docker Compose oder Kubernetes',
+    details: ['docker-compose up -d (empfohlen)', 'oder: helm install silvacore', 'Umgebungsvariablen konfigurieren']
+  },
+  {
+    number: '3',
+    title: "Los geht's!",
+    time: 'Sofort',
+    description: 'Erste WEG anlegen',
+    details: ['https://localhost:8080 aufrufen', 'Admin-Account erstellen', 'Erste WEG konfigurieren']
+  }
+];
+---
+
+<div class="bg-dark-950/50 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Überschrift -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-base font-semibold leading-7 text-green-400 gsap-fadein">
+        Installation
+      </h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein" id="installation">
+        In 3 Schritten zu Ihrer WEG-Verwaltung
+      </p>
+      <p class="mt-6 text-lg leading-8 text-light-400 gsap-fadein">
+        Self-Hosted auf Ihrer eigenen Infrastruktur - volle Datenkontrolle!
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="mx-auto mt-16 max-w-5xl">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        {steps.map((step, index) => (
+          <div class="relative flex flex-col rounded-2xl bg-dark-900/50 p-8 border border-green-500/20 gsap-fadein" style={`animation-delay: ${index * 0.15}s`}>
+            <div class="flex items-center gap-x-4 mb-6">
+              <div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary-800 text-2xl font-bold text-white">
+                {step.number}
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-light-100">{step.title}</h3>
+                <p class="text-sm text-green-400">{step.time}</p>
+              </div>
+            </div>
+            <p class="text-base text-light-300 mb-4">{step.description}</p>
+            <ul class="space-y-2">
+              {step.details.map((detail) => (
+                <li class="flex gap-x-2 text-sm text-light-300">
+                  <span class="text-green-400">→</span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mx-auto mt-16 max-w-2xl text-center">
+      <div class="rounded-3xl bg-primary-900/10 p-8 sm:p-10 border-2 border-green-500/40 gsap-fadein">
+        <h3 class="text-xl sm:text-2xl font-bold text-light-100 mb-4">
+          Bereit für die Installation?
+        </h3>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <a
+            href="https://github.com/waldheim-dev/silvacore"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-x-2 rounded-md bg-primary-800 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-700"
+          >
+            <i class="fa-brands fa-github"></i>
+            Zu GitHub
+          </a>
+                    <a
+            href="/silvacore/#features"
+            class="px-8 py-4 bg-light-500/10 text-white border border-light-500/30 rounded-lg font-semibold hover:bg-light-500/20 transition-all duration-300"
+          >
+            Mehr erfahren <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-xs sm:text-sm text-light-400">
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-green-400"></i>
+            <span>Open Source</span>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-green-400"></i>
+            <span>Self-Hosted</span>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-check text-green-400"></i>
+            <span>Volle Datenkontrolle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

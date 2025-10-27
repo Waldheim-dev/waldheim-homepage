@@ -1,0 +1,106 @@
+---
+// Problem-Section
+const problems = [
+  {
+    icon: 'fa-table',
+    title: 'Excel-Chaos',
+    description: 'Nebenkostenabrechnungen mit unzähligen Tabellen, fehleranfällig und zeitaufwendig'
+  },
+  {
+    icon: 'fa-scale-balanced',
+    title: 'Rechtsunsicherheit',
+    description: 'WEG-Gesetz § 28 Vermögensberichte? HKVO § 6a monatliche Verbrauchsberichte?'
+  },
+  {
+    icon: 'fa-eye-slash',
+    title: 'Intransparenz',
+    description: 'Eigentümer fordern Einblick, Sie verlieren den Überblick'
+  },
+  {
+    icon: 'fa-sack-dollar',
+    title: 'Teure Softwarelösungen',
+    description: '50+ € pro WEG/Monat bei etablierten Anbietern'
+  }
+];
+
+const solutions = [
+  {
+    icon: 'fa-chart-line',
+    title: 'Professionell',
+    items: ['Alle Funktionen inklusive', 'Automatisierte Abrechnungen', 'Echtzeit-Übersichten']
+  },
+  {
+    icon: 'fa-hand-holding-dollar',
+    title: 'Fair & Transparent',
+    items: ['1. WEG kostenlos', 'Ab 5 € pro WEG/Monat', 'Keine versteckten Kosten']
+  },
+  {
+    icon: 'fa-shield-check',
+    title: 'Sicher & Compliant',
+    items: ['DSGVO-konform (EU-Server)', 'WEG-Gesetz & HKVO-ready', 'Rollenbasierte Zugriffe']
+  }
+];
+---
+
+<!-- Problem & Solution Section -->
+<section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+  <div class='mx-auto max-w-7xl'>
+    <!-- Problem Section -->
+    <div class='mx-auto max-w-2xl text-center mb-16'>
+      <h2 class='gsap-fadein text-base font-semibold text-red-400 mb-4' style='animation-delay: 0s'>
+        <i class='fa-solid fa-triangle-exclamation text-red-400 mr-2' aria-hidden='true'></i>
+        Das Problem
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
+        WEG-Verwaltung ist <span class='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500'>komplex</span>. Wir machen sie einfach.
+      </p>
+    </div>
+    
+    <div class='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32'>
+      {problems.map((problem, index) => (
+        <div class='gsap-fadein bg-dark-900/50 border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300' style={`animation-delay: ${0.3 + index * 0.1}s`}>
+          <div class='w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-xl flex items-center justify-center mb-4'>
+            <i class={`fa-solid ${problem.icon} text-red-400 text-xl`}></i>
+          </div>
+          <h3 class='text-lg font-bold text-white mb-2'>{problem.title}</h3>
+          <p class='text-light-300 text-sm'>{problem.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Solution Section -->
+    <div class='mx-auto max-w-2xl text-center mb-16'>
+      <h2 class='gsap-fadein text-base font-semibold text-green-400 mb-4' style='animation-delay: 0.7s'>
+        <i class='fa-solid fa-lightbulb text-green-400 mr-2' aria-hidden='true'></i>
+        Die Lösung
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.85s'>
+        Alles an einem Ort. Für einen <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>fairen Preis</span>.
+      </p>
+      <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 1.0s'>
+        Silvacore vereint alle Aufgaben der WEG-Verwaltung in einer intuitiven Plattform
+      </p>
+    </div>
+
+    <div class='grid md:grid-cols-3 gap-8'>
+      {solutions.map((solution, index) => (
+        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style={`animation-delay: ${1.15 + index * 0.15}s`}>
+          <div class='flex items-center gap-4 mb-6'>
+            <div class='w-12 h-12 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center flex-shrink-0'>
+              <i class={`fa-solid ${solution.icon} text-green-400 text-xl`}></i>
+            </div>
+            <h3 class='text-xl font-bold text-white'>{solution.title}</h3>
+          </div>
+          <ul class='space-y-3'>
+            {solution.items.map((item) => (
+              <li class='flex items-start gap-3 text-light-300'>
+                <i class='fa-solid fa-check text-green-400 mt-1' aria-label='Enthalten' role='img'></i>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

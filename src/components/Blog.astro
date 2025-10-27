@@ -19,7 +19,7 @@ if (limits) {
         IT-Wissen, Trends & Insights – Mein Blog</h2>
       <p class="mt-2 text-lg leading-8 text-light-300 gsap-fadein">
         Bleiben Sie auf dem Laufenden mit aktuellen Beiträgen zu DevSecOps, Webentwicklung, Smart Home und mehr.</p>
-        <a href="/blog/1/" class="mt-4 inline-block rounded-md bg-primary-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 gsap-fadein">Zum Blog</a>
+        <a href="/blog/1/" class="mt-4 inline-block rounded-xl bg-primary-800 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-lg hover:shadow-primary-500/50 hover:bg-primary-800 transition-all duration-300 gsap-fadein">Zum Blog</a>
     </div>
     <div
       class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 gsap-fadein">
@@ -27,16 +27,16 @@ if (limits) {
         blogPosts.map(async (post) => {
 
           return (
-            <a href={`/blog/${post.id.replace(/^_/, '')}/`} class="gsap-fadein rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+            <a href={`/blog/${post.id.replace(/^_/, '')}/`} class="gsap-fadein rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
               <article
-                class="relative isolate flex flex-col h-full justify-end overflow-hidden rounded-2xl bg-gray-900 pt-80 sm:pt-48 lg:pt-80">
+                class="relative isolate flex flex-col h-full justify-end overflow-hidden rounded-2xl bg-dark-950 pt-80 sm:pt-48 lg:pt-80">
                 <img
                   src={post.data.heroImage} loading="lazy"
                   alt={post.data.title} class="absolute inset-0 -z-10 h-full w-full object-cover">
-                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-dark-900/10"></div>
 
                 <div class="relative isolate flex flex-col bg-primary-900/40  backdrop-blur-xs justify-end p-8 pt-4">
-                  <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                  <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-light-300">
                     <FormattedDate date={post.data.pubDate} />
                   </div>
                   <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
@@ -44,7 +44,7 @@ if (limits) {
                     {post.data.title}
                   </h3>
                   <p
-                    class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 line-clamp-2">{post.data.description}</p>
+                    class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-light-300 line-clamp-2">{post.data.description}</p>
                 </div>
               </article>
             </a>

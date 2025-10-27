@@ -17,7 +17,7 @@ const categories = await getCollection('projects_kategorie');
       </p>
       <a
         href="/referenzen/"
-        class="mt-6 rounded-md px-3 py-2 bg-primary-900  text-light-100 hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+        class="mt-6 rounded-xl px-6 py-3 bg-primary-800 text-white hover:bg-primary-800 shadow-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 inline-block font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
         >Gesamtes Portfolio entdecken</a
       >
     </div>
@@ -25,7 +25,7 @@ const categories = await getCollection('projects_kategorie');
       <div class="flex absolute gap-16 slide">
         {
           projects.map((project) => (
-            <div class="bg-primary-900 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+            <div class="bg-gradient-to-br from-dark-900/50 to-dark-950 border border-blue-500/20 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl hover:border-blue-500/40 transition-all duration-300 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-blue-500">
               <div class="mx-auto flex md:min-96 flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                 <div class="-mt-8 sm:w-full md:max-w-1xl xl:-mb-8">
                   <div class="relative aspect-16/9 w-64 md:w-96 h-64 h-full md:-mx-8 xl:mx-0">
@@ -52,9 +52,10 @@ const categories = await getCollection('projects_kategorie');
                     <figcaption class="mt-8 text-base">
                       <a
                         href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`}
-                        class="rounded-md px-3 py-2 bg-light-300 text-dark-950 hover:bg-sherpa-blue-950 outline-none"
+                        class="rounded-lg px-4 py-2 bg-primary-800 border border-primary-500/30 text-white hover:shadow-lg hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
                       >
                         Projekt ansehen
+                        <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
                       </a>
                     </figcaption>
                   </figure>

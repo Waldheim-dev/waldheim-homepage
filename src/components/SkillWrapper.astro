@@ -18,21 +18,22 @@ const layer = [
 ];
 ---
 
-<section>
-  <div class="gsap-fadein">
-    <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6">
-      <p class="mt-2 text-lg leading-8  pb-2">
+<section class="bg-gradient-to-b from-dark-950 to-dark-900 py-24 sm:py-32">
+  <div class="gsap-fadein px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-10">
+      <p class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
+        <i class="fa-solid fa-filter text-blue-400 mr-2" aria-hidden="true"></i>
         Filtere die Skills, wie du es dir wünscht
       </p>
 
-      <div class="mt-4 flex gap-1 justify-center flex-wrap">
+      <div class="gsap-fadein mt-6 flex gap-2 justify-center flex-wrap" style="animation-delay: 0.15s">
         {
           layer.map((entry) => (
             <button
               data-trigger="filter"
               data-filter={entry}
               data-filtered="false"
-              class="bg-light-500 text-dark-950 rounded-sm px-2 py-1 cursor-pointer gsap-wiggle first-letter:uppercase"
+              class="bg-dark-900/50 border border-blue-500/30 text-white rounded-lg px-4 py-2 cursor-pointer hover:bg-blue-500/10 hover:border-blue-500/50 transition-all duration-300 first-letter:uppercase font-medium"
             >
               {entry}
             </button>
@@ -43,45 +44,20 @@ const layer = [
           data-filter="all"
           data-filtered="false"
           aria-label="Filter zurücksetzen"
-          class="bg-light-500 text-dark-950 rounded-sm px-2 py-1 first-letter:uppercase cursor-pointer gsap-wiggle"
+          class="bg-dark-900/50 border border-red-500/30 text-white rounded-lg px-4 py-2 first-letter:uppercase cursor-pointer hover:bg-red-500/10 hover:border-red-500/50 transition-all duration-300 flex items-center gap-2"
         >
-            <span class="text-rose-500" title="Filter zurücksetzen">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-4"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </span>
+          <i class="fa-solid fa-rotate-left text-red-400" aria-hidden="true"></i>
+          Zurücksetzen
         </button>
       </div>
-      <p class="mt-2 text-lg leading-8 ">
+      
+      <p class="gsap-fadein mt-6 text-lg text-light-300" style="animation-delay: 0.3s">
+        <i class="fa-solid fa-hand-pointer text-blue-400 mr-2" aria-hidden="true"></i>
         Klicke auf die Karte, um mehr zu erfahren.
       </p>
-      <p
-        class="mt-2 text-lg justify-center items-center leading-8  flex gap-0.5"
-      >
-          <span class="text-light-500" title="Mein empfohlender Techstack">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6"
-            >
-              <path
-                d="M5.507 4.048A3 3 0 0 1 7.785 3h8.43a3 3 0 0 1 2.278 1.048l1.722 2.008A4.533 4.533 0 0 0 19.5 6h-15c-.243 0-.482.02-.715.056l1.722-2.008Z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                d="M1.5 10.5a3 3 0 0 1 3-3h15a3 3 0 1 1 0 6h-15a3 3 0 0 1-3-3Zm15 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm2.25.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM4.5 15a3 3 0 1 0 0 6h15a3 3 0 1 0 0-6h-15Zm11.25 3.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM19.5 18a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </span>
+      
+      <p class="gsap-fadein mt-4 text-lg text-light-300 flex gap-2 justify-center items-center" style="animation-delay: 0.45s">
+        <i class="fa-solid fa-server text-green-400 text-xl" aria-hidden="true"></i>
         = Mein empfohlender Techstack
       </p>
     </div>
@@ -89,19 +65,15 @@ const layer = [
   <section class="card-view">
     <div class="py-12 sm:py-16">
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6 gsap-fadein">
-        <h2
-          class="text-3xl font-bold tracking-tight text-light-100  sm:text-4xl"
-        >
-          Top Skills (<span class="top-counter">{topSkills.length}</span>)
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4">
+          Top Skills <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">(<span class="top-counter">{topSkills.length}</span>)</span>
         </h2>
-        <p class="mt-2 text-lg leading-8 text-light-500">
+        <p class="text-xl text-light-300">
           Aktuell im Trend oder Produktiv im Einsatz.
         </p>
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="-mx-2 lg:-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6 gsap-fadein"
-        >
+        <div class="-mx-2 lg:-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6 gsap-fadein">
           {topSkills.map((entry) =>
             <SkillFlipCard entry={entry} />)}
         </div>
@@ -109,19 +81,15 @@ const layer = [
     </div>
     <div class="py-12 sm:py-16">
       <div class="mx-auto max-w-2xl text-center px-6 lg:px-8 py-6 gsap-fadein">
-        <h2
-          class="text-3xl font-bold tracking-tight text-light-100  sm:text-4xl"
-        >
-          Weitere Skills (<span class="counter">{otherSkills.length}</span>)
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4">
+          Weitere Skills <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">(<span class="counter">{otherSkills.length}</span>)</span>
         </h2>
-        <p class="mt-2 text-lg leading-8 text-light-500">
-          Learn how to grow your business with our expert advice.
+        <p class="text-xl text-light-300">
+          Fundierte Kenntnisse und ständige Weiterentwicklung.
         </p>
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="-mx-2 lg:-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6 gsap-fadein"
-        >
+        <div class="-mx-2 lg:-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6 gsap-fadein">
           {otherSkills.map((entry) =>
             <SkillFlipCard entry={entry} />)}
         </div>
@@ -144,13 +112,13 @@ const layer = [
                 filtered = false;
               }
               for (const nextTrigger of triggers) {
-                nextTrigger.classList.remove('bg-sherpa-blue-900');
-                nextTrigger.classList.add('bg-antique-brass-300');
+                nextTrigger.classList.remove('bg-blue-600', 'text-white');
+                nextTrigger.classList.add('bg-dark-900/50', 'text-light-300');
                 nextTrigger.setAttribute('data-filtered', 'false');
               }
               if (filtered) {
-                trigger.classList.remove('bg-antique-brass-300');
-                trigger.classList.add('bg-sherpa-blue-900');
+                nextTrigger.classList.remove('bg-dark-900/50', 'text-light-300');
+                nextTrigger.classList.add('bg-blue-600', 'text-white');
                 trigger.setAttribute('data-filtered', 'true');
               }
               for (const card of cards) {

@@ -61,39 +61,30 @@ const skills = await getCollection('skills');
 
 <HeroBackground title={title} subtitle={description} image={heroImage} class="" />
 
-{
+  {
   client && overview ? (
   <div class="py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div
         class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div class="lg:pr-4">
-          <div class="relative focus-within:ring-2 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600 rounded-3xl">
+          <div class="relative group overflow-hidden rounded-3xl bg-dark-900/50 border border-light-500/20 hover:border-light-500/40 transition-all duration-300">
             <div
-              class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
+              class="absolute -inset-2 bg-gradient-to-r from-primary-500/20 via-emerald-500/20 to-cyan-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div
-              class="relative overflow-hidden rounded-3xl bg-primary-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+              class="relative overflow-hidden rounded-3xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
               <img loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
+                class="absolute inset-0 h-full w-full object-cover brightness-75 saturate-50"
                 src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
                 alt={client.name}
               />
-              <div class="absolute inset-0 bg-primary-900 mix-blend-multiply" />
-              <div
-                class="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                aria-hidden="true"
-              >
-                <div
-                  class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#6b9e78] to-[#366544] opacity-40"
-                  style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-                />
-              </div>
+              <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-dark-900/90 to-dark-950/95" />
               <figure class="relative isolate">
                 <h2 class="text-white">{client.name}</h2>
                 {client.web ? (
                   <a
                     href={client.web.url}
-                    class="flex gap-1 text-white outline-none"
+                    class="flex gap-1 text-primary-400 hover:text-primary-300 transition-colors outline-none"
                     rel="nofollow"
                   >
                     {client.web.name}
@@ -146,7 +137,7 @@ const skills = await getCollection('skills');
             <div class="mt-10 flex">
               <a
                 href={client.web?.url}
-                class="text-base font-semibold leading-7 text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 rounded-md"
+                class="text-base font-semibold leading-7 text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded-md"
                 rel="nofollow"
               >
                 Mehr über diese Firma <span aria-hidden="true">&rarr;</span>
@@ -158,13 +149,12 @@ const skills = await getCollection('skills');
     </div>
   </div>
   ) : null
-  }
-
-  <!-- Problem -->
+  }  <!-- Problem -->
   {
   problem ? (
-  <div class="relative isolate overflow-hidden bg-primary-900 gsap-fadein">
-    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+  <div class="relative isolate overflow-hidden bg-dark-900/30 border-y border-light-500/20 gsap-fadein">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-cyan-500/5 to-purple-500/5"></div>
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8 relative">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">
           Das Problem
@@ -175,25 +165,6 @@ const skills = await getCollection('skills');
         />
       </div>
     </div>
-    <svg
-      viewBox="0 0 1024 1024"
-      class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
-      aria-hidden="true"
-    >
-      <circle
-        cx="512"
-        cy="512"
-        r="512"
-        fill="url(#8d958450-c69f-4251-94bc-4e091a323369)"
-        fill-opacity="0.7"
-      />
-      <defs>
-        <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
-          <stop stop-color="#7775D6" />
-          <stop offset="1" stop-color="#E935C1" />
-        </radialGradient>
-      </defs>
-    </svg>
   </div>
     ) : null
   }
@@ -227,8 +198,9 @@ const skills = await getCollection('skills');
 
 {
   solution ? (
-  <div class="bg-primary-900 gsap-fadein">
-    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+  <div class="relative isolate overflow-hidden bg-dark-900/30 border-y border-light-500/20 gsap-fadein">
+    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-green-400/5 to-primary-500/5"></div>
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8 relative">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">
           Unsere Lösung
@@ -437,27 +409,27 @@ const skills = await getCollection('skills');
     </div>
   </div>
 
-  <div class="fixed transition-all cursor-pointer hidden inset-0 bg-slate-900/10 backdrop-blur-xs p-20"
+  <div class="fixed transition-all cursor-pointer hidden inset-0 bg-slate-900/90 backdrop-blur-sm p-20"
        data-trigger="modal" aria-hidden="true">
-    <div class="relative h-full w-full rounded-lg overflow-hidden">
+    <div class="relative h-full w-full rounded-lg overflow-hidden border border-light-500/30">
       <img src="" alt="Platzhalter" loading="lazy" class="h-full w-full object-contain drop-shadow-xl"
            data-trigger="image-placeholder" />
 
-      <button class="absolute right-0 top-0 bg-primary-900 hover:bg-primary-700 cursor-pointer rounded-bl-md p-4" data-trigger="close">
+      <button class="absolute right-0 top-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-bl-md p-4 transition-all" data-trigger="close" aria-label="Bild schließen">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </button>
 
-      <button class="absolute left-0 bottom-0 bg-primary-900 hover:bg-primary-700 cursor-pointer rounded-tr-md p-4" data-trigger="previmage">
+      <button class="absolute left-0 bottom-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-tr-md p-4 transition-all" data-trigger="previmage" aria-label="Vorheriges Bild">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </svg>
       </button>
 
-      <button class="absolute right-0 bottom-0 bg-primary-900 hover:bg-primary-700 cursor-pointer rounded-tl-md p-4" data-trigger="nextimage">
+      <button class="absolute right-0 bottom-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-tl-md p-4 transition-all" data-trigger="nextimage" aria-label="Nächstes Bild">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -539,9 +511,9 @@ const skills = await getCollection('skills');
 
 {
   tags && tags.length > 0 ? (
-    <div class='bg-primary-900 text-light-100'>
-
-    <div class='mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-8'>
+    <div class='relative bg-dark-900/30 border-y border-light-500/20 text-light-100'>
+    <div class='absolute inset-0 bg-gradient-to-r from-primary-500/5 via-purple-500/5 to-cyan-500/5'></div>
+    <div class='relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-8'>
   <div class='mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12'>
   <div class='flex items-center gap-12'>
   <h2 class='text-2xl font-bold lg:text-3xl'>
@@ -551,7 +523,7 @@ const skills = await getCollection('skills');
   </div>
   <div class="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:mt-0">
   {tags.map((item) => (
-  <span class='inline-flex items-center rounded-md bg-light-300 px-2 py-1 text-xs font-medium text-dark-950 ring-1 ring-inset ring-light-500/10'>
+  <span class='inline-flex items-center rounded-md bg-primary-500/10 border border-primary-500/30 px-2 py-1 text-xs font-medium text-primary-300'>
   {item}
   </span>
   ))}

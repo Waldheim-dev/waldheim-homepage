@@ -7,26 +7,39 @@ const karriere = (await getCollection('karriere')).sort(
 );
 ---
 
-<div class="px-6 py-24 sm:py-32 lg:px-8 gsap-fadein">
-  <div class="mx-auto max-w-2xl text-center">
-    <p class="text-base font-semibold leading-7 text-light-100">Mein beruflicher Weg</p>
-    <h2 class="mt-2 text-4xl font-bold tracking-tight text-light-100 sm:text-6xl">Karriere-Highlights</h2>
-    <p class="mt-6 text-lg leading-8 text-light-300">Hier ist ein Überblick über meine bisherigen beruflichen Stationen und aktuellen Projekte.  Diese Informationen spiegeln meine persönliche Erfahrung wider.</p>
+<section class="px-6 py-24 sm:py-32 lg:px-8 bg-gradient-to-b from-dark-900 to-dark-950">
+  <div class="mx-auto max-w-2xl text-center mb-16">
+    <p class="gsap-fadein text-base font-semibold text-primary-400 mb-4" style="animation-delay: 0s">
+      <i class="fa-solid fa-briefcase text-primary-400 mr-2" aria-hidden="true"></i>
+      Mein beruflicher Weg
+    </p>
+    <h2 class="gsap-fadein text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6" style="animation-delay: 0.15s">
+      Karriere-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Highlights</span>
+    </h2>
+    <p class="gsap-fadein text-xl text-light-300" style="animation-delay: 0.3s">
+      Hier ist ein Überblick über meine bisherigen beruflichen Stationen und aktuellen Projekte. Diese Informationen spiegeln meine persönliche Erfahrung wider.
+    </p>
   </div>
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 divide-y divide-gray-900/10 ">
-    { karriere.map(kar => (  /*  Ersetze 'karriere' und 'kar' durch deine tatsächlichen Variablen-Namen */
-      <div class="mx-auto max-w-4xl pb-12 divide-y divide-gray-900/10">
+  
+  <div class="mx-auto max-w-7xl px-6 space-y-12">
+    { karriere.map((kar, index) => (
+      <div class="gsap-fadein mx-auto max-w-4xl bg-dark-900/50 border border-primary-500/20 rounded-2xl p-8 hover:border-primary-500/40 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300" style={`animation-delay: ${0.45 + index * 0.1}s`}>
         <div class="mx-auto">
-          <p class="text-base font-semibold leading-7 text-light-100"><FormattedDate date={kar.data.from} /> - {kar.data.to ? (<FormattedDate date={kar.data.to} />) : ('heute')}
+          <div class="flex items-center gap-2 text-base font-semibold text-primary-400 mb-3">
+            <i class="fa-solid fa-calendar text-primary-400" aria-hidden="true"></i>
+            <FormattedDate date={kar.data.from} /> - {kar.data.to ? (<FormattedDate date={kar.data.to} />) : ('heute')}
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-2">{kar.data.company}</h3>
+          <p class="text-lg text-light-100 font-medium mb-3">
+            <i class="fa-solid fa-user-tie text-primary-400 mr-2" aria-hidden="true"></i>
+            {kar.data.position}
           </p>
-          <h2 class="text-2xl font-bold leading-10 tracking-tight text-light-100">{kar.data.company}</h2>
-          <p class="text-base leading-7 text-light-300 font-medium">{kar.data.position}</p>
-          <p class="text-base leading-7 text-light-300">{kar.data.description}</p>
+          <p class="text-base text-light-300">{kar.data.description}</p>
         </div>
         { kar.data.projects && (
-          <KarriereProject projects={kar.data.projects} /> /* Ersetze 'KarriereProject' durch deine tatsächliche Komponente */
+          <KarriereProject projects={kar.data.projects} />
         )}
       </div>
     ))}
   </div>
-</div>
+</section>

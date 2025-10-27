@@ -1,135 +1,270 @@
 ---
+// SaaS Pricing Tiers
+const pricingTiers = [
+  {
+    id: 'free',
+    name: 'Starter',
+    price: '0',
+    period: 'kostenlos',
+    description: 'Perfekt zum Testen und für kleine Verwaltungen',
+    features: [
+      'Bis zu 3 WEGs',
+      'Unbegrenzte Eigentümer & Einheiten',
+      '5 GB Dokumentenspeicher',
+      'Basis-Support (E-Mail)',
+      'Alle Kern-Features inklusive',
+      'HKVO §6a konform'
+    ],
+    cta: 'Kostenlos starten',
+    href: 'https://app.silvacore.de/register',
+    highlighted: false
+  },
+  {
+    id: 'professional',
+    name: 'Professional',
+    price: '29',
+    period: 'pro Monat',
+    description: 'Für professionelle Hausverwaltungen',
+    features: [
+      'Bis zu 20 WEGs',
+      'Unbegrenzte Nutzer',
+      '50 GB Dokumentenspeicher',
+      'Prioritäts-Support (E-Mail & Telefon)',
+      'API-Zugriff',
+      'Erweiterte Analytics',
+      'Backup & Recovery',
+      'SLA: 99.9% Uptime-Garantie'
+    ],
+    cta: 'Professional wählen',
+    href: 'https://app.silvacore.de/register?plan=professional',
+    highlighted: true,
+    badge: 'Beliebteste Wahl'
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise',
+    price: 'Custom',
+    period: 'auf Anfrage',
+    description: 'Für große Verwaltungen mit individuellen Anforderungen',
+    features: [
+      'Unbegrenzte WEGs',
+      'Dedizierter Account Manager',
+      'Unbegrenzter Speicher',
+      '24/7 Premium-Support',
+      'On-Premise Option verfügbar',
+      'SSO & SAML',
+      'Individuelle Anpassungen',
+      'SLA: 99.95% Uptime-Garantie',
+      'Audit-Logs & Compliance-Reports'
+    ],
+    cta: 'Kontakt aufnehmen',
+    href: '#contact',
+    highlighted: false
+  }
+];
+
+const competitorsComparison = [
+  { name: 'Silvacore SaaS', price20: '29 €', price50: '~99 €', total3Years: '1.044 € - 3.564 €', hkvo: true },
+  { name: 'Silvacore Self-Hosted', price20: '0 €*', price50: '0 €*', total3Years: '~500 € (Server)', hkvo: true },
+  { name: 'immocloud', price20: '26 €', price50: '40 €', total3Years: '936 € - 1.440 €', hkvo: false },
+  { name: 'Immoware24', price20: '44-54 €', price50: '~80 €', total3Years: '1.584 € - 2.880 €', hkvo: true },
+  { name: 'Win-CASA', price20: '29 €', price50: '~49 €', total3Years: '1.044 € - 1.764 €', hkvo: false },
+  { name: 'etg24', price20: '75 €', price50: '~125 €', total3Years: '2.700 € - 4.500 €', hkvo: false },
+  { name: 'casavi', price20: '199 €', price50: '~349 €', total3Years: '7.164 € - 12.564 €', hkvo: 'Add-on' },
+  { name: 'Domus', price20: '150-250 €', price50: '~400 €', total3Years: '8.400 € - 16.000 €', hkvo: false },
+  { name: 'Haufe axera', price20: '449+ €', price50: '~649+ €', total3Years: '19.164 € - 28.000 €', hkvo: true }
+];
+
+const competitorsSavings = [
+  { name: 'Silvacore SaaS', monthly: 29, threeYears: 1044, savings: 0 },
+  { name: 'Haufe axera', monthly: 449, threeYears: 16164, savings: 15120 },
+  { name: 'Domus', monthly: 200, threeYears: 7200, savings: 6156 },
+  { name: 'casavi', monthly: 199, threeYears: 7164, savings: 6120 }
+];
 ---
 
-<div class="py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto px-6 lg:px-8 pt-16">
-      <div class="mx-auto max-w-4xl text-center gsap-fadein">
-        <h2
-          class="text-base font-semibold leading-7 text-light-300 "
-        >
-          Silvacore: Preise & Verfügbarkeit
-        </h2>
-        <p
-          class="mt-2 text-4xl font-bold tracking-tight text-light-100  sm:text-5xl"
-        >
-          Transparente Preise für Silvacore
-        </p>
-      </div>
-      <p
-        class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 gsap-fadein"
-      >
-        Silvacore bietet flexible Preispläne, die auf die Bedürfnisse von Einzelpersonen und Unternehmen zugeschnitten sind. Wählen Sie den Plan, der am besten zu Ihnen passt, und profitieren Sie von den Vorteilen einer effizienten Hausverwaltung.
+<section id='pricing' class='py-20 px-6 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16 gsap-fadein'>
+      <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+        Einfache, transparente <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Preise</span>
+      </h2>
+      <p class='text-xl text-light-300 max-w-3xl mx-auto'>
+        Wählen Sie zwischen <strong class='text-white'>managed SaaS</strong> mit 99.9% Uptime-Garantie oder <strong class='text-white'>self-hosted</strong> Open Source – kostenlos
       </p>
-      <div
-        class="isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-2"
-      >
+    </div>
+
+    <div class='grid md:grid-cols-3 gap-8 mb-20'>
+      {pricingTiers.map((tier, index) => (
         <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 ring-1 ring-light-500 transition-all hover:bg-primary-900/50"
-          id="free"
+          class={`gsap-fadein relative bg-gradient-to-br ${tier.highlighted ? 'from-primary-900/30 to-dark-900' : 'from-dark-900 to-dark-950'} border ${tier.highlighted ? 'border-green-500/50' : 'border-light-500/10'} rounded-2xl p-8 ${tier.highlighted ? 'shadow-2xl shadow-green-500/20 scale-105' : 'shadow-xl'} transition-all duration-300 hover:shadow-2xl hover:-translate-y-1`}
+          style={`animation-delay: ${index * 0.15}s`}
         >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-free"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-seedling text-light-100 "></i> Free
-            </h3>
+          {tier.badge && (
+            <div class='absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500/10 border border-green-500/30 text-green-300 px-4 py-1 rounded-full text-sm font-bold'>
+              {tier.badge}
+            </div>
+          )}
+          
+          <div class='mb-6'>
+            <h3 class='text-2xl font-bold text-white mb-2'>{tier.name}</h3>
+            <div class='flex items-baseline mb-2'>
+              {tier.price === 'Custom' ? (
+                <span class='text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>
+                  Individuell
+                </span>
+              ) : (
+                <>
+                  <span class='text-5xl font-bold text-white'>{tier.price}</span>
+                  <span class='text-2xl text-light-300 ml-2'>€</span>
+                </>
+              )}
+            </div>
+            <p class='text-light-300 text-sm'>{tier.period}</p>
+            <p class='text-light-400 mt-3'>{tier.description}</p>
           </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Lerne die Software kennen und probiere sie aus.
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >0,00€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/Monat</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-freelancer'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-pancho-200/10 text-white hover:bg-pancho-200/20 focus-visible:outline-white'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
+
+          <ul class='space-y-3 mb-8'>
+            {tier.features.map((feature) => (
+              <li class='flex items-start gap-3 text-light-300'>
+                <i class='fa-solid fa-check text-green-400 mt-1' aria-label='Enthalten' role='img'></i>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={tier.href}
+            class={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+              tier.highlighted
+                ? 'bg-green-500/10 border border-green-500/30 text-green-300 hover:shadow-lg hover:shadow-green-400/50'
+                : 'bg-light-500/10 text-white border border-light-500/30 hover:bg-light-500/20'
+            }`}
           >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>1</strong> WEG</span>
-            </li>
+            {tier.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class='gsap-fadein bg-gradient-to-br from-blue-900/20 to-dark-900 border border-blue-500/30 rounded-2xl p-8 mb-16' style='animation-delay: 0.45s'>
+      <div class='flex flex-col md:flex-row items-center gap-6'>
+        <div class='flex-shrink-0'>
+          <i class='fa-brands fa-docker text-6xl text-blue-400' aria-label='Docker' role='img'></i>
+        </div>
+        <div class='flex-1'>
+          <h3 class='text-2xl font-bold text-white mb-2'>
+            <i class='fa-solid fa-server text-blue-400 mr-2' aria-label='Self-Hosted' role='img'></i>
+            Self-Hosted / On-Premise
+          </h3>
+          <p class='text-light-300 mb-4'>
+            Nutzen Sie Silvacore <strong class='text-white'>kostenlos</strong> auf Ihrer eigenen Infrastruktur – Open Source unter <abbr title='GNU Affero General Public License Version 3'>AGPL-3.0</abbr>.
+            Perfekt für volle Datenkontrolle und individuelle Anpassungen.
+          </p>
+          <ul class='grid md:grid-cols-2 gap-2 text-light-300 text-sm'>
+            <li><i class='fa-solid fa-check text-green-400 mr-2' aria-label='Enthalten' role='img'></i>Keine monatlichen Kosten</li>
+            <li><i class='fa-solid fa-check text-green-400 mr-2' aria-label='Enthalten' role='img'></i>100% Datenkontrolle</li>
+            <li><i class='fa-solid fa-check text-green-400 mr-2' aria-label='Enthalten' role='img'></i>Unbegrenzte WEGs</li>
+            <li><i class='fa-solid fa-check text-green-400 mr-2' aria-label='Enthalten' role='img'></i>Community-Support</li>
           </ul>
         </div>
-        <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 bg-primary-900/10 ring-2 ring-primary-800  transition-all hover:bg-primary-900/50"
-          id="payperuse"
+        <a
+          href='#deployment'
+          class='flex-shrink-0 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/50'
         >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-basic"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-house text-light-100 "></i> Weitere WEG
-            </h3>
-            <p
-              class="rounded-full bg-primary-900  px-2.5 py-1 text-xs font-semibold leading-5 text-white"
-            >
-              Empfehlung
-            </p>
-          </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Zahle was du verbrauchst.
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >5,00€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/WEG</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-startup'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary-900 text-white shadow-xs hover:bg-primary-900 focus-visible:outline-primary-500'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
-          >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>1</strong> weitere WEG</span>
-            </li>
-          </ul>
-        </div>
+          <i class='fa-solid fa-download mr-2' aria-hidden='true'></i>
+          Installation
+        </a>
       </div>
     </div>
+
+    <div class='gsap-fadein mb-16' style='animation-delay: 0.6s'>
+      <h3 class='text-3xl font-bold text-white text-center mb-8'>
+        <i class='fa-solid fa-chart-bar text-green-400 mr-3' aria-hidden='true'></i>
+        Preisvergleich: Silvacore vs. Wettbewerb
+      </h3>
+      <p class='text-light-300 text-center mb-8 max-w-3xl mx-auto'>
+        Vergleichen Sie Silvacore SaaS mit anderen WEG-Verwaltungslösungen am Markt. 
+        Unsere Preise beziehen sich auf den <strong class='text-white'>Professional-Plan (bis 20 WEGs)</strong> – 
+        ideal für professionelle Hausverwaltungen.
+      </p>
+
+      <div tabindex="0" class='overflow-x-auto rounded-xl border border-light-500/20'>
+        <table class='w-full' role='table' aria-label='Preisvergleich mit Wettbewerbern'>
+          <thead class='bg-dark-950'>
+            <tr>
+              <th scope='col' class='px-4 sm:px-6 py-4 text-left text-xs sm:text-sm font-semibold text-light-100'>Anbieter</th>
+              <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-light-100'>20 WEGs</th>
+              <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-light-100'>50 WEGs</th>
+              <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-light-100'>
+                <abbr title='Heizkostenverordnung §6a - digitale Zwischenablesung'>HKVO §6a</abbr>
+              </th>
+              <th scope='col' class='px-4 sm:px-6 py-4 text-right text-xs sm:text-sm font-semibold text-light-100'>3 Jahre Total</th>
+            </tr>
+          </thead>
+          <tbody class='divide-y divide-light-500/10'>
+            {competitorsComparison.map((comp, index) => (
+              <tr 
+                class={`gsap-fadein hover:bg-light-500/5 transition-colors ${comp.name.includes('Silvacore') ? 'bg-primary-900/10 border-l-4 border-green-500' : 'bg-dark-900/50'}`}
+                style={`animation-delay: ${0.7 + index * 0.05}s`}
+              >
+                <td class='px-4 sm:px-6 py-4 text-sm sm:text-base font-medium text-white'>
+                  {comp.name.includes('Silvacore') && <i class='fa-solid fa-star text-green-400 mr-2' aria-label='Unsere Lösung' role='img'></i>}
+                  {comp.name}
+                </td>
+                <td class='px-4 sm:px-6 py-4 text-center text-sm sm:text-base text-light-300'>{comp.price20}</td>
+                <td class='px-4 sm:px-6 py-4 text-center text-sm sm:text-base text-light-300'>{comp.price50}</td>
+                <td class='px-4 sm:px-6 py-4 text-center'>
+                  {comp.hkvo === true && <i class='fa-solid fa-check text-green-400 text-lg' aria-label='HKVO §6a inklusive' role='img'></i>}
+                  {comp.hkvo === false && <i class='fa-solid fa-xmark text-red-400 text-lg' aria-label='HKVO §6a nicht verfügbar' role='img'></i>}
+                  {comp.hkvo === 'Add-on' && <span class='text-xs text-orange-400 font-semibold'>💰 Add-on</span>}
+                </td>
+                <td class='px-4 sm:px-6 py-4 text-right text-sm sm:text-base font-semibold text-light-100'>{comp.total3Years}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class='mt-6 text-sm text-light-400 text-center'>
+        <p>* Self-hosted: Kostenlos, aber eigene Server-Kosten (~15-50 €/Monat je nach Provider)</p>
+        <p class='mt-2'>
+          <i class='fa-solid fa-info-circle mr-2' aria-label='Information' role='img'></i>
+          Preise basieren auf öffentlichen Informationen (Stand: Dezember 2024). Einige Anbieter nennen keine öffentlichen Preise.
+        </p>
+      </div>
+    </div>
+
+    <div class='gsap-fadein bg-gradient-to-br from-green-900/10 to-dark-900 border border-green-500/30 rounded-2xl p-8' style='animation-delay: 0.9s'>
+      <h3 class='text-2xl sm:text-3xl font-bold text-white text-center mb-6'>
+        <i class='fa-solid fa-piggy-bank text-green-400 mr-3' aria-hidden='true'></i>
+        Ihr Sparpotenzial mit Silvacore Professional
+      </h3>
+      <p class='text-light-300 text-center mb-8 max-w-2xl mx-auto'>
+        Mit <strong class='text-white'>29 € pro Monat</strong> für bis zu 20 WEGs sparen Sie über 3 Jahre erheblich gegenüber Premium-Anbietern:
+      </p>
+
+      <div class='grid md:grid-cols-3 gap-6'>
+        {competitorsSavings.filter(comp => comp.savings > 0).map((comp, index) => (
+          <div class='gsap-fadein bg-dark-950/50 border border-light-500/20 rounded-xl p-6 text-center' style={`animation-delay: ${1.0 + index * 0.1}s`}>
+            <p class='text-light-400 mb-2'>vs. {comp.name}</p>
+            <p class='text-4xl font-bold text-green-400 mb-2'>
+              {comp.savings.toLocaleString('de-DE')} €
+            </p>
+            <p class='text-sm text-light-400'>Ersparnis über 3 Jahre</p>
+            <div class='mt-4 pt-4 border-t border-light-500/10'>
+              <p class='text-xs text-light-500'>
+                {comp.name}: {comp.monthly} €/Monat<br/>
+                Silvacore: 29 €/Monat
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p class='text-center text-green-400 font-semibold text-lg mt-8'>
+        💰 Sparen Sie bis zu <strong class='text-2xl'>15.120 €</strong> über 3 Jahre gegenüber Haufe axera!
+      </p>
+    </div>
   </div>
-</div>
+</section>
