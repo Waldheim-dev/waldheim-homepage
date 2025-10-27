@@ -32,39 +32,17 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
     <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
       <a
         href="/kontakt"
-        class="gsap-fadein gsap-btn flex gap-1 rounded-md bg-sherpa-blue-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-sherpa-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-      >Jetzt beraten lassen
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="animate-pulse w-5 h-5 gsap-wiggle"
-        >
-          <path
-            d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
-          ></path>
-          <path
-            d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
-          ></path>
-        </svg>
+        class="gsap-fadein gsap-btn flex items-center gap-2 rounded-lg bg-primary-800 border border-primary-500/30 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-lg hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300"
+      >
+        <i class='fa-solid fa-envelope animate-pulse' aria-hidden='true'></i>
+        Jetzt beraten lassen
       </a>
       <a
         href="/referenzen/1/"
-        class="gsap-fadein gsap-btn flex gap-1 rounded transform transform-all transform-ease-in-out text-sm font-semibold leading-6 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-      >Referenzen
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6 gsap-wiggle"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-        </svg>
+        class="gsap-fadein gsap-btn flex items-center gap-2 rounded-lg bg-dark-900/50 border border-light-500/30 px-6 py-3 text-sm font-semibold text-white hover:bg-dark-900 hover:border-blue-500/50 transition-all duration-300"
+      >
+        Referenzen
+        <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
       </a>
     </div>
   </HeroBackground>
@@ -72,377 +50,172 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
   <div>
     <main>
 
-      <section
-        class="bento-service relative isolate"
-      >
-
-        <div
-          class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row"
-        >
-          <div
-            class="realtive lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1 "
-          >
-            <div
-              class="bento-card gsap-fadein relative lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 h-full"
-            >
-              <div
-                class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
-              <div
-                class="flex flex-col gap-4 justify-between h-full z-10 relative bg-primary-900 text-light-100 p-12 shadow-lg rounded-3xl border-1 border-gray-300/30"
-              >
+      <section class="bento-service relative isolate">
+        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row">
+          <!-- Main Principles Card -->
+          <div class="relative lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1">
+            <div class="bento-card gsap-fadein relative lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 h-full">
+              <div class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
+              <div class="flex flex-col gap-4 justify-between h-full z-10 relative bg-gradient-to-r from-primary-800 to-primary-900 text-light-100 p-12 shadow-lg rounded-3xl border-1 border-gray-300/30">
                 <div class="flex flex-col gap-4">
-                  <h2
-                    class="text-3xl font-bold tracking-tight sm:text-6xl"
-                  >
-                    So arbeite ich: Meine Prinzipien für Ihren Erfolg
+                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl">
+                    So arbeite ich: Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Prinzipien</span> für Ihren Erfolg
                   </h2>
-                  <p
-                    class="relative mt-6 text-lg leading-8 sm:max-w-md lg:max-w-none"
-                  >
-                    Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und
-                    Kundenorientierung.
+                  <p class="relative mt-4 text-lg leading-8 sm:max-w-md lg:max-w-none text-light-300">
+                    Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und Kundenorientierung.
                   </p>
-                  <ul
-                    role="list"
-                    class="mt-8 max-w-xl space-y-8 "
-                  >
-                    <li class="flex gap-x-3">
-                      <svg
-                        class="mt-1 h-5 w-5 flex-none "
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                      <span
-                      ><strong class="font-semibold "
-                      >Qualität:</strong
-                      >  Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span
-                      >
+                  <ul role="list" class="mt-6 space-y-4">
+                    <li class="flex gap-x-3 items-start">
+                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-white">Qualität:</strong> Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span>
                     </li>
-                    <li class="flex gap-x-3">
-                      <svg
-                        class="mt-1 h-5 w-5 flex-none "
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                      <span
-                      ><strong class="font-semibold "
-                      >Zuverlässigkeit:</strong
-                      > Auf meine IT-Lösungen und meinen Support können Sie zählen.</span
-                      >
+                    <li class="flex gap-x-3 items-start">
+                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-white">Zuverlässigkeit:</strong> Auf meine IT-Lösungen und meinen Support können Sie zählen.</span>
                     </li>
-                    <li class="flex gap-x-3">
-                      <svg
-                        class="mt-1 h-5 w-5 flex-none "
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                      <span
-                      ><strong class="font-semibold "
-                      >Nachvollziehbarkeit:</strong
-                      > Alle Schritte werden detailliert dokumentiert.</span
-                      >
+                    <li class="flex gap-x-3 items-start">
+                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-white">Nachvollziehbarkeit:</strong> Alle Schritte werden detailliert dokumentiert.</span>
                     </li>
-                    <li class="flex gap-x-3">
-                      <svg
-                        class="mt-1 h-5 w-5 flex-none "
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                      <span
-                      ><strong class="font-semibold "
-                      >Passgenauigkeit:</strong
-                      > Ich entwickel Lösungen, die perfekt zu Ihren Anforderungen passen.</span
-                      >
+                    <li class="flex gap-x-3 items-start">
+                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-white">Passgenauigkeit:</strong> Ich entwickle Lösungen, die perfekt zu Ihren Anforderungen passen.</span>
                     </li>
                   </ul>
                 </div>
-                <img
-                  src="/bento/cert.webp"
-                  loading="lazy"
-                  alt="Qualität bei Waldheim.dev"
-                />
+                <img src="/bento/cert.webp" loading="lazy" alt="Qualität bei Waldheim.dev" class="rounded-lg" />
               </div>
             </div>
           </div>
-          <div
-            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
-          >
+          <!-- DevSecOps Card -->
+          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-purple-900/30 to-dark-900 text-white border border-purple-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-purple-500/40 transition-all duration-300">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
-                <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
-                >
-                  DevSecOps für schnellere & sichere Entwicklung
+                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
+                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>DevSecOps</span> für schnellere & sichere Entwicklung
                 </h3>
-
-                <p
-                  class="relative mb-6 text-lg text-slate-700  sm:max-w-md lg:max-w-none"
-                >
-                  Ich automatisiere Ihre Entwicklungspipeline, integrieren Sicherheit von Anfang an und verkürzen Ihre
-                  Release-Zyklen.
+                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                  Ich automatisiere Ihre Entwicklungspipeline, integriere Sicherheit von Anfang an und verkürze Ihre Release-Zyklen.
                 </p>
                 <a
-                  href="/services/devops/"
-                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
-                >Zu meinem DevSecOps-Services</a
+                  href="/services/devsecops/"
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border border-purple-500/50 hover:bg-purple-500/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-all"
                 >
+                  Zu meinen DevSecOps-Services
+                  <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
+                </a>
               </div>
-              <figure class=" w-full rounded-2xl overflow-hidden">
-              <video
-              class="object-contains max-sm:max-w-none w-full"
-              preload="none"
-              poster=""
-              autoplay
-              loop
-              muted
-              src="/videos/video_devsecops.mp4"
-            >
-              <source
-                src="/videos/video_devsecops.mp4" type="video/mp4" />
-            </video>
-            </figure>
+              <figure class="w-full rounded-2xl overflow-hidden">
+                <video class="object-contain max-sm:max-w-none w-full" preload="none" poster="" autoplay loop muted src="/videos/video_devsecops.mp4">
+                  <source src="/videos/video_devsecops.mp4" type="video/mp4" />
+                </video>
+              </figure>
             </div>
           </div>
-          <div
-            class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
-          >
+
+          <!-- Entwicklung Card -->
+          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-blue-900/30 to-dark-900 text-white border border-blue-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-blue-500/40 transition-all duration-300">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
-                <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
-                >
-                  Individuelle Softwarelösungen für Ihren Bedarf
+                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
+                  Individuelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Softwarelösungen</span> für Ihren Bedarf
                 </h3>
-                <p
-                  class="relative mb-6 text-lg text-slate-700  sm:max-w-md lg:max-w-none"
-                >
-                  Ich entwickel Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen
-                  passt.
+                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                  Ich entwickle Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen passt.
                 </p>
-
                 <a
                   href="/services/entwicklung/"
-                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
-                >Jetzt Projekt anfragen</a
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border border-blue-500/50 hover:bg-blue-500/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
                 >
+                  Jetzt Projekt anfragen
+                  <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
+                </a>
               </div>
-              <figure class=" w-full rounded-2xl overflow-hidden">
-              <video
-              class="object-contains max-sm:max-w-none w-full"
-              preload="none"
-              poster=""
-              autoplay
-              loop
-              muted
-              src="/videos/video_software.mp4"
-            >
-              <source
-                src="/videos/video_software.mp4" type="video/mp4" />
-            </video>
-            </figure>
+              <figure class="w-full rounded-2xl overflow-hidden">
+                <video class="object-contain max-sm:max-w-none w-full" preload="none" poster="" autoplay loop muted src="/videos/video_software.mp4">
+                  <source src="/videos/video_software.mp4" type="video/mp4" />
+                </video>
+              </figure>
             </div>
           </div>
-          <div
-            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30 rounded-3xl overflow-hidden p-12 shadow-lg"
-          >
+
+          <!-- Design Card -->
+          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-pink-900/30 to-dark-900 text-white border border-pink-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-pink-500/40 transition-all duration-300">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
-                <h3
-                  class="text-lg -mt-2 font-bold tracking-tight text-dark-950  sm:text-xl"
-                >
-                  Branding, Webdesign & UX – aus einem Guss
+                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
+                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Branding, Webdesign & UX</span> – aus einem Guss
                 </h3>
-
-                <p
-                  class="relative mb-6 text-lg text-slate-700  sm:max-w-md lg:max-w-none"
-                >
-                  Ich entwickel ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
+                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                  Ich entwickle ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
                 </p>
                 <a
                   href="/services/design/"
-                  class="border px-3.5 py-2 rounded-3xl text-dark-950 border-dark-950 hover:bg-dark-950 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
-                >Design-Philosophie entdecken</a
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border border-pink-500/50 hover:bg-pink-500/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600 transition-all"
                 >
+                  Design-Philosophie entdecken
+                  <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
+                </a>
               </div>
-              <img
-                src="/bento/design.webp"
-                loading="lazy"
-                class="-m-6"
-                alt="Design"
-              />
+              <img src="/bento/design.webp" loading="lazy" class="-m-6 rounded-lg" alt="Design" />
             </div>
           </div>
-          <div
-            class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-sherpa-blue-900 text-light-100 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
-          >
+          <!-- IT-Service / Cloud Card -->
+          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-green-900/30 to-dark-900 text-white border border-green-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-green-500/40 transition-all duration-300">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
-                <h3
-                  class="text-lg -mt-2 font-bold tracking-tight sm:text-xl"
-                >
-                  Sichere Cloud-Lösungen & IT-Service
+                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
+                  Sichere <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Cloud-Lösungen</span> & IT-Service
                 </h3>
-                <p
-                  class="relative mb-6 text-lg sm:max-w-md lg:max-w-none"
-                >
-                  Ich migriere Ihre IT in die Cloud, sorgen für maximale Sicherheit und ermöglichen ortsunabhängiges
-                  Arbeiten.
+                <p class="relative mb-6 text-lg text-light-300">
+                  Ich migriere Ihre IT in die Cloud, sorge für maximale Sicherheit und ermögliche ortsunabhängiges Arbeiten.
                 </p>
                 <a
                   href="/services/it-service/"
-                  class="border px-3.5 py-2 rounded-3xl text-light-100 border-light-100 hover:bg-light-100 hover:text-sherpa-blue-900  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition"
-                >Mehr über Cloud-Services</a
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border border-green-500/50 hover:bg-green-500/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 transition-all"
                 >
+                  Mehr über Cloud-Services
+                  <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
+                </a>
               </div>
-              <img
-                src="/bento/security.webp"
-                loading="lazy"
-                class="-m-6"
-                alt="Security"
-              />
+              <img src="/bento/security.webp" loading="lazy" class="-m-6 rounded-lg" alt="Security" />
             </div>
           </div>
           
-          <div
-            class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-light-300 text-dark-950 border-1 border-gray-300/30   rounded-3xl overflow-hidden p-12 shadow-lg"
-          >
-            <div class="flex md:flex-row flex-col gap-4 justify-between">
-              <div class="flex flex-col col-auto items-start gap-2">
-                <p
-                  class="text-base font-semibold leading-5 text-sherpa-blue-900 "
-                >
+          <!-- Certifications Card -->
+          <div class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-gradient-to-br from-blue-900/20 to-dark-900 text-white border border-blue-500/20 rounded-3xl overflow-hidden p-12 shadow-lg">
+            <div class="flex md:flex-row flex-col gap-8 justify-between items-start">
+              <div class="flex flex-col flex-1 gap-4">
+                <p class="text-base font-semibold text-blue-400">
+                  <i class='fa-solid fa-award text-blue-400 mr-2' aria-hidden='true'></i>
                   Ihr Vorteil: Zertifiziertes Know-how
                 </p>
-                <h3
-                  class="text-1xl -mt-2 font-bold tracking-tight  sm:text-2xl"
-                >
-                  Profitieren Sie von meiner Expertise in agilen Methoden und IT-Projekten.
+                <h3 class="text-2xl font-bold tracking-tight sm:text-3xl">
+                  Profitieren Sie von meiner <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Expertise</span> in agilen Methoden
                 </h3>
-                <ul
-                  role="list"
-                  class="mt-8 max-w-xl space-y-8 text-dark-950 "
-                >
-                  <li class="flex gap-x-3">
-                    <svg
-                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    <span
-                    >Professional <strong
-                      class="font-semibold text-dark-950 "
-                    >Scrum Master I.</strong
-                    > (PSM I) - Scrum.org</span
-                    >
+                <ul role="list" class="mt-4 space-y-4 text-light-300">
+                  <li class="flex gap-x-3 items-start">
+                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-white">Scrum Master I.</strong> (PSM I) - Scrum.org</span>
                   </li>
-                  <li class="flex gap-x-3">
-                    <svg
-                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    <span
-                    >Professional <strong
-                      class="font-semibold text-dark-950 "
-                    >Scrum Master II.</strong
-                    > (PSM II) - Scrum.org</span
-                    >
+                  <li class="flex gap-x-3 items-start">
+                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-white">Scrum Master II.</strong> (PSM II) - Scrum.org</span>
                   </li>
-                  <li class="flex gap-x-3">
-                    <svg
-                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    <span
-                    >Professional <strong
-                      class="font-semibold text-dark-950 "
-                    >Scrum Product Owner I.</strong
-                    > (PSPO I.) - Scrum.org</span
-                    >
+                  <li class="flex gap-x-3 items-start">
+                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-white">Scrum Product Owner I.</strong> (PSPO I.) - Scrum.org</span>
                   </li>
-                  <li class="flex gap-x-3">
-                    <svg
-                      class="mt-1 h-5 w-5 flex-none text-dark-950 "
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    <span
-                    >Ausbilder (IHK) <strong
-                      class="font-semibold text-dark-950 "
-                    >Ausbilder für Fachinformatik.</strong
-                    ></span
-                    >
+                  <li class="flex gap-x-3 items-start">
+                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Ausbilder (IHK) <strong class="font-semibold text-white">Ausbilder für Fachinformatik.</strong></span>
                   </li>
                 </ul>
               </div>
-              <div class="relative flex gap-2 flex-wrap">
-                <img
-                  src="/bento/PSMI.png"
-                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
-                  loading="lazy"
-                  alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1."
-                />
-                <img
-                  src="/bento/PSMII.png"
-                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
-                  loading="lazy"
-                  alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2."
-                />
-                <img
-                  src="/bento/PSPOI.png"
-                  class="sm:h-40 sm:w-40 w-[33%] aspect-square"
-                  loading="lazy"
-                  alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1."
-                />
+              <div class="relative flex gap-2 flex-wrap justify-center md:justify-end">
+                <img src="/bento/PSMI.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1." />
+                <img src="/bento/PSMII.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2." />
+                <img src="/bento/PSPOI.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1." />
               </div>
             </div>
           </div>

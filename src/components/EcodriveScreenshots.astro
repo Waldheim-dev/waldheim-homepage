@@ -1,0 +1,141 @@
+---
+const screenshots = [
+  {
+    title: 'Dashboard: Vollständiger Überblick',
+    description: 'Ihr persönliches Cockpit mit allen wichtigen Informationen auf einen Blick. Verbrauch, Kosten, letzte Fahrten und anstehende Wartungen – alles übersichtlich dargestellt.',
+    image: '/ecodrive/ecodrive_dashboard.PNG',
+    alt: 'Ecodrive Dashboard mit Verbrauchsübersicht, Kostenanalyse und Fahrzeugstatistiken',
+    features: [
+      'Live-Verbrauchsanalyse',
+      'Kostenübersicht auf Monatsbasis',
+      'Wartungserinnerungen',
+      'Tankstatistiken mit Trends'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Tankbuch: Jeden Cent im Blick',
+    description: 'Erfassen Sie Tankungen in Sekunden und analysieren Sie Ihren Verbrauch detailliert. Mit automatischer Berechnung von Durchschnittsverbrauch und Kosten pro Kilometer.',
+    image: '/ecodrive/ecodrive_fuel_log.PNG',
+    alt: 'Ecodrive Tankbuch mit Tankprotokoll und Verbrauchsanalyse',
+    features: [
+      'Schnelle Tankerfassung per App',
+      'Automatische Verbrauchsberechnung',
+      'Preisentwicklung pro Liter',
+      'Export für Steuererklärung'
+    ],
+    side: 'right'
+  },
+  {
+    title: 'Fahrtenbuch: Finanzamt-konform',
+    description: 'Das digitale Fahrtenbuch erfüllt alle gesetzlichen Anforderungen. GPS-gestützt, manipulationssicher und mit einem Klick exportierbar.',
+    image: '/ecodrive/ecodrive_mileage_log.PNG',
+    alt: 'Ecodrive Fahrtenbuch mit GPS-Tracking und Routenaufzeichnung',
+    features: [
+      'GPS-Tracking automatisch',
+      'Geschäftlich/Privat-Trennung',
+      'Finanzamt-konforme Exporte',
+      '1%-Regelung Kalkulator'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Wartungsplaner: Nie mehr vergessen',
+    description: 'Behalten Sie alle Service-Intervalle im Blick. Ecodrive erinnert Sie automatisch an anstehende Inspektionen, TÜV und Ölwechsel.',
+    image: '/ecodrive/ecodrive_service_log.PNG',
+    alt: 'Ecodrive Service-Log mit Wartungshistorie und Erinnerungen',
+    features: [
+      'Automatische Erinnerungen',
+      'Servicehistorie komplett',
+      'Kostenübersicht Werkstatt',
+      'Garantie-Tracking'
+    ],
+    side: 'right'
+  },
+  {
+    title: 'Multi-Fahrzeug-Verwaltung',
+    description: 'Verwalten Sie beliebig viele Fahrzeuge mit der Pro-Version. Perfekt für Familien mit mehreren Autos oder kleine Fuhrparks.',
+    image: '/ecodrive/ecodrive_vehicle_switch.PNG',
+    alt: 'Ecodrive Fahrzeugwechsel für Fuhrparkverwaltung',
+    features: [
+      'Unbegrenzte Fahrzeuge (Pro)',
+      'Schneller Fahrzeugwechsel',
+      'Vergleichsstatistiken',
+      'Gesamt-Kostenübersicht'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Reports & Analytics',
+    description: 'Professionelle Auswertungen und Berichte für Ihre Buchhaltung. Filtern Sie nach Zeiträumen, exportieren Sie als PDF oder Excel.',
+    image: '/ecodrive/ecodrive_fuel_reports.PNG',
+    alt: 'Ecodrive Reports mit detaillierten Statistiken und Diagrammen',
+    features: [
+      'Monatliche/Jährliche Reports',
+      'PDF & Excel Export',
+      'Diagramme & Grafiken',
+      'Steuer-Kategorisierung'
+    ],
+    side: 'right'
+  }
+];
+---
+
+<section class='py-20 px-6 bg-dark-950'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16 gsap-fadein'>
+      <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+        Alle Features im <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Detail</span>
+      </h2>
+      <p class='text-xl text-light-300 max-w-3xl mx-auto'>
+        Entdecken Sie, wie Ecodrive Ihnen hilft, Fahrzeugkosten zu senken und den Überblick zu behalten
+      </p>
+    </div>
+
+    <div class='space-y-32'>
+      {screenshots.map((screenshot, index) => (
+        <div class={`gsap-fadein flex flex-col ${screenshot.side === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`} style={`animation-delay: ${index * 0.15}s`}>
+          <div class='flex-1'>
+            <h3 class='text-3xl font-bold text-white mb-4'>
+              {screenshot.title}
+            </h3>
+            <p class='text-lg text-light-300 mb-6'>
+              {screenshot.description}
+            </p>
+            <ul class='space-y-3'>
+              {screenshot.features.map((feature) => (
+                <li class='flex items-start gap-3 text-light-300'>
+                  <i class='fa-solid fa-check-circle text-green-400 text-xl mt-1' aria-label='Feature enthalten' role='img'></i>
+                  <span class='text-lg'>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class='flex-1'>
+            <div class='relative'>
+              <div class='absolute -inset-4 bg-gradient-to-r from-green-400/20 to-emerald-500/20 rounded-2xl blur-xl'></div>
+              <img
+                src={screenshot.image}
+                alt={screenshot.alt}
+                loading='lazy'
+                class='relative rounded-xl shadow-2xl border border-light-500/10 hover:scale-105 transition-transform duration-300'
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class='mt-20 text-center gsap-fadein' style='animation-delay: 0.9s'>
+      <a
+        href='https://www.eco-drive.app'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='inline-flex items-center gap-2 px-8 py-4 bg-green-500/10 border border-green-500/30 text-green-300 font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-green-400/50 transition-all duration-300'
+      >
+        <i class='fa-solid fa-rocket' aria-hidden='true'></i>
+        Jetzt kostenlos starten
+      </a>
+    </div>
+  </div>
+</section>

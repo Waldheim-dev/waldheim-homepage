@@ -1,0 +1,124 @@
+---
+const screenshots = [
+  {
+    title: 'Dashboard - Übersichtlich & Intuitiv',
+    description: 'Alle wichtigen Kennzahlen auf einen Blick: Aktive WEGs, Finanzübersicht, ausstehende Aufgaben und Benachrichtigungen.',
+    image: '/silvacore/silvacore_dashboard.png',
+    alt: 'Screenshot des Silvacore Dashboards mit Übersicht über WEGs, Finanzen und Benachrichtigungen',
+    features: ['Echtzeit-Statistiken', 'Schnellzugriff auf WEGs', 'Aufgaben-Dashboard']
+  },
+  {
+    title: 'WEG-Verwaltung - Alle Details zentral',
+    description: 'Umfassende Verwaltung jeder WEG: Eigentümer, Einheiten, Verträge, Dokumente und finanzielle Details an einem Ort.',
+    image: '/silvacore/silvacore_wegdetails.png',
+    alt: 'Screenshot der detaillierten WEG-Verwaltungsansicht mit Eigentümerdaten, Einheiten und Finanzinformationen',
+    features: ['Eigentümerverwaltung', 'Einheiten & Verteilung', 'Wirtschaftsplan']
+  },
+//   {
+//     title: 'Finanzen & Buchhaltung - GoBD-konform',
+//     description: 'Vollständige Finanzverwaltung mit automatischer Buchung, Mahnwesen und rechtssicheren Reports gemäß WEG-Gesetz.',
+//     image: '/silvacore/silvacore_finanzen.png',
+//     alt: 'Screenshot der Finanzverwaltung mit Buchungsübersicht, Kontoauszügen und automatischer Zahlungszuordnung',
+//     features: ['Automatische Buchung', 'Mahnwesen', 'DATEV-Export']
+//   },
+  {
+    title: 'Verbrauchsabrechnung - HKVO §6a ready',
+    description: 'Komplette Erfassung und Abrechnung von Heiz- und Wasserkosten. Unterjährige Verbrauchsinformationen (UVI) per Knopfdruck.',
+    image: '/silvacore/silvacore_verbrauch.png',
+    alt: 'Screenshot der Verbrauchsabrechnung mit Heizkostenverordnung-konformen Berichten und UVI-Funktionen',
+    features: ['HKVO §6a Compliance', 'Automatische UVI', 'Zählerdaten-Import']
+  },
+  {
+    title: 'Dokumentenmanagement - Versioniert & Sicher',
+    description: 'Zentrales DMS mit Versionierung, Volltextsuche und automatischer Kategorisierung.',
+    image: '/silvacore/silvacore_dokumenten.png',
+    alt: 'Screenshot des Dokumentenmanagementsystems mit strukturierter Ordnerstruktur, Suchfunktion und Versionskontrolle',
+    features: ['Volltextsuche', 'Versionierung', 'DSGVO-konform']
+  },
+  {
+    title: 'Rechteverwaltung - Granular & Sicher',
+    description: 'Feingranulare Berechtigungen für Verwalter, Beiräte und Eigentümer. Mandantentrennung auf Datenbankebene.',
+    image: '/silvacore/silvacore_userverwaltung.png',
+    alt: 'Screenshot der Benutzerverwaltung mit Rollen, Berechtigungen und mandantenfähiger Zugriffskontrolle',
+    features: ['Rollenbasiert (RBAC)', 'Mandantenfähig', 'Audit-Log']
+  }
+];
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-base font-semibold leading-7 text-green-400 gsap-fadein">
+        Einblicke in Silvacore
+      </h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein">
+        Moderne Software, die begeistert
+      </p>
+      <p class="mt-6 text-lg leading-8 text-light-400 gsap-fadein">
+        Intuitive Bedienung trifft auf professionelle Funktionen. Sehen Sie selbst, wie Silvacore Ihren Arbeitsalltag vereinfacht.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-16 space-y-20">
+      {screenshots.map((screenshot, index) => (
+        <div class={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center gsap-fadein`}>
+          <!-- Screenshot -->
+          <div class="w-full lg:w-1/2">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-green-500/20/20 hover:ring-primary-900/50 transition-all duration-300">
+              <img 
+                src={screenshot.image} 
+                alt={screenshot.alt}
+                class="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- Overlay gradient for better readability -->
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-950/50 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-2xl sm:text-3xl font-bold text-light-100 mb-4">
+              {screenshot.title}
+            </h3>
+            <p class="text-base sm:text-lg text-light-400 mb-6">
+              {screenshot.description}
+            </p>
+            <ul class="space-y-3" role="list">
+              {screenshot.features.map((feature) => (
+                <li class="flex items-center gap-3">
+                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-900/20 flex items-center justify-center">
+                    <i class="fa-solid fa-check text-green-400 text-sm" aria-hidden="true"></i>
+                  </div>
+                  <span class="text-sm sm:text-base text-light-300">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Weitere Screenshots Hinweis -->
+    <div class="mx-auto mt-16 max-w-2xl text-center gsap-fadein">
+      <div class="rounded-2xl bg-dark-900/50 p-6 sm:p-8 border border-green-500/20/20">
+        <i class="fa-solid fa-images text-green-400 text-4xl mb-4" aria-hidden="true"></i>
+        <h3 class="text-lg sm:text-xl font-bold text-light-100 mb-2">Noch mehr entdecken</h3>
+        <p class="text-sm sm:text-base text-light-400 mb-4">
+          Dies sind nur einige Beispiele. Silvacore bietet noch viele weitere Funktionen wie Lieferantenmanagement, 
+          automatische Benachrichtigungen, Protokoll-Assistenten und vieles mehr.
+        </p>
+        <a 
+          href="/silvacore/#installation" 
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-800 text-white font-semibold hover:bg-primary-800 transition-colors"
+          aria-label="Zur Installation springen und Silvacore selbst ausprobieren"
+        >
+          <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+          Jetzt selbst testen
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

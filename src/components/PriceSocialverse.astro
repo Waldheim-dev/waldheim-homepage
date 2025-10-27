@@ -1,253 +1,117 @@
 ---
 ---
 
-<div class="py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto px-6 lg:px-8 pt-16">
-      <div class="mx-auto max-w-4xl text-center gsap-fadein">
-        <h2
-          class="text-base font-semibold leading-7 text-light-300 "
-        >
-          Socialverse: Preise & Verfügbarkeit
-        </h2>
-        <p
-          class="mt-2 text-4xl font-bold tracking-tight text-light-100  sm:text-5xl"
-        >
-          Transparente Preise für Socialverse
-        </p>
-      </div>
-      <p
-        class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 gsap-fadein"
-      >
-        Socialverse bietet flexible Preispläne, die auf die Bedürfnisse von Einzelpersonen und Unternehmen zugeschnitten sind. Wählen Sie den Plan, der am besten zu Ihnen passt, und profitieren Sie von den Vorteilen einer effizienten Marketing- und CRM-Lösung.
+<section id="pricing" class="py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950">
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-4xl text-center mb-16 gsap-fadein">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Einfache, transparente <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Preise</span>
+      </h2>
+      <p class="text-xl text-light-300 max-w-3xl mx-auto">
+        Socialverse bietet flexible Preispläne für effiziente Marketing- und CRM-Lösungen. Wählen Sie den Plan, der am besten zu Ihnen passt.
       </p>
-      <div
-        class="isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-4"
-      >
-        <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 ring-1 ring-light-500 transition-all hover:bg-primary-900/50"
-          id="free"
-        >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-free"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-seedling text-light-100 "></i> Free
-            </h3>
+    </div>
+    
+    <div class="isolate mx-auto mt-10 grid max-w-lg grid-cols-1 gap-8 lg:mx-0 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
+      <!-- Free Tier -->
+      <div class="gsap-fadein relative bg-gradient-to-br from-dark-900 to-dark-950 border border-light-500/10 rounded-2xl p-8 xl:p-10 shadow-xl hover:border-purple-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" style="animation-delay: 0.1s">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-white mb-2">
+            <i class="fa-regular fa-seedling text-purple-400"></i> Free
+          </h3>
+          <p class="text-light-400 mb-4">Lerne die Software kennen und probiere sie aus.</p>
+          <div class="flex items-baseline mb-2">
+            <span class="text-5xl font-bold text-white">0</span>
+            <span class="text-2xl text-light-300 ml-2">€</span>
           </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Lerne die Software kennen und probiere sie aus.
-            <br> <strong><i class="fa-solid fa-fx fa-check-circle text-light-100"></i> Verfügbar</strong>
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >0,00€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/Monat</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-freelancer'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-pancho-200/10 text-white hover:bg-pancho-200/20 focus-visible:outline-white'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
-          >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>5</strong> AI Prompts</span>
-            </li>
-          </ul>
+          <p class="text-light-300 text-sm">pro Monat</p>
         </div>
-        <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 ring-1 ring-light-500 transition-all hover:bg-primary-900/50"
-          id="basic"
-        >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-basic"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-car-side text-light-100 "></i> PayPerUse
-            </h3>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span><strong>5</strong> AI Prompts</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- PayPerUse Tier -->
+      <div class="gsap-fadein relative bg-gradient-to-br from-dark-900 to-dark-950 border border-light-500/10 rounded-2xl p-8 xl:p-10 shadow-xl hover:border-purple-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" style="animation-delay: 0.2s">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-white mb-2">
+            <i class="fa-regular fa-car-side text-purple-400"></i> PayPerUse
+          </h3>
+          <p class="text-light-400 mb-4">Zahle was du verbrauchst.</p>
+          <div class="flex items-baseline mb-2">
+            <span class="text-5xl font-bold text-white">0,33</span>
+            <span class="text-2xl text-light-300 ml-2">€</span>
           </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Zahle was du verbrauchst.
-            <br> <strong><i class="fa-solid fa-fx fa-check-circle text-light-100"></i> Verfügbar</strong>
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >0,33€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/Prompt</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-startup'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary-900 text-white shadow-xs hover:bg-primary-900 focus-visible:outline-primary-500'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
-          >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>1</strong> AI Prompts</span>
-            </li>
-          </ul>
+          <p class="text-light-300 text-sm">pro Prompt</p>
         </div>
-        <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 bg-primary-900/10 ring-2 ring-primary-800  transition-all hover:bg-primary-900/50"
-          id="pro"
-        >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-pro"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-rocket-launch text-light-100 "></i> Pro
-            </h3>
-            <p
-              class="rounded-full bg-primary-900  px-2.5 py-1 text-xs font-semibold leading-5 text-white"
-            >
-              Empfehlung
-            </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span><strong>1</strong> AI Prompt pro Kauf</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pro Tier (Highlighted) -->
+      <div class="gsap-fadein relative bg-gradient-to-br from-purple-900/20 to-dark-900 border-2 border-purple-500/50 rounded-2xl p-8 xl:p-10 shadow-2xl shadow-purple-500/20 scale-105 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" style="animation-delay: 0.3s">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-500/10 border border-purple-500/30 text-purple-300 px-4 py-1 rounded-full text-sm font-bold">
+          Beliebteste Wahl
+        </div>
+        
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-white mb-2">
+            <i class="fa-regular fa-rocket-launch text-purple-400"></i> Pro
+          </h3>
+          <p class="text-light-400 mb-4">Optimal für mittlere Unternehmen</p>
+          <div class="flex items-baseline mb-2">
+            <span class="text-5xl font-bold text-white">31,35</span>
+            <span class="text-2xl text-light-300 ml-2">€</span>
           </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Optimial für Mittlere Unternehmen
-            <br> <strong><i class="fa-solid fa-fx fa-check-circle text-light-100"></i> Verfügbar</strong>
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >31,35€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/Monat</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-enterprise'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-pancho-200/10 text-white hover:bg-pancho-200/20 focus-visible:outline-white'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
-          >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>100</strong> AI Prompts</span>
-            </li>
-          </ul>
+          <p class="text-light-300 text-sm">pro Monat</p>
         </div>
-        <div
-          class="gsap-fadein rounded-3xl p-8 xl:p-10 ring-1 ring-light-500 transition-all hover:bg-primary-900/50"
-          id="premium"
-        >
-          <div class="flex items-center justify-between gap-x-4">
-            <h3
-              id="tier-premium"
-              class="text-lg font-semibold leading-8 text-light-100 "
-            >
-              <i class="fa-regular fa-planet-ringed text-light-100 "></i> Premium
-            </h3>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span><strong>100</strong> AI Prompts pro Monat</span>
+          </li>
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span>Prioritäts-Support</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Premium Tier -->
+      <div class="gsap-fadein relative bg-gradient-to-br from-dark-900 to-dark-950 border border-light-500/10 rounded-2xl p-8 xl:p-10 shadow-xl hover:border-purple-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" style="animation-delay: 0.4s">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-white mb-2">
+            <i class="fa-regular fa-planet-ringed text-purple-400"></i> Premium
+          </h3>
+          <p class="text-light-400 mb-4">Optimal für große Firmen</p>
+          <div class="flex items-baseline mb-2">
+            <span class="text-5xl font-bold text-white">313,50</span>
+            <span class="text-2xl text-light-300 ml-2">€</span>
           </div>
-          <p class="mt-4 text-sm leading-6 text-light-300 ">
-            Optimal für große Firmen.
-            <br> <strong><i class="fa-solid fa-fx fa-check-circle text-light-100"></i> Verfügbar</strong>
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <!-- Price, update based on frequency toggle state -->
-            <span
-              class="price text-4xl font-bold tracking-tight text-light-100 "
-            >313,50€</span
-            >
-            <!-- Payment frequency, update based on frequency toggle state -->
-            <span
-              class="frequency text-sm font-semibold leading-6 text-light-300 "
-            >/Monat</span
-            >
-          </p>
-          <!--<a href='#' aria-describedby='tier-enterprise'-->
-          <!--   class='mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-pancho-200/10 text-white hover:bg-pancho-200/20 focus-visible:outline-white'>Buy-->
-          <!--  plan</a>-->
-          <ul
-            role="list"
-            class="mt-8 space-y-3 text-sm leading-6 text-light-300  xl:mt-10"
-          >
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>1000</strong> AI Prompts</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg
-                class="h-6 w-5 flex-none text-light-100 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              Alle AI-Funktionen
-            </li>
-          </ul>
+          <p class="text-light-300 text-sm">pro Monat</p>
         </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span><strong>1000</strong> AI Prompts pro Monat</span>
+          </li>
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span>Alle AI-Funktionen</span>
+          </li>
+          <li class="flex items-start gap-3 text-light-300">
+            <i class="fa-solid fa-check text-purple-400 mt-1"></i>
+            <span>24/7 Premium-Support</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+</section>

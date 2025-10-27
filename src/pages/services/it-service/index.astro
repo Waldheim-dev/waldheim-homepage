@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
+import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -19,90 +20,173 @@ const description = "Zuverlässiger IT-Service: Netzwerk, Computer, Server (Wind
 const keywords = "IT-Service, IT-Support, IT-Wartung, IT-Beratung, IT-Administration, Netzwerktechnik, Windows, macOS, Linux, Server, Cloud-Migration, Augsburg, München"
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <!-- Hero Section -->
+  <ServiceHero 
+    title="IT-Service"
+    subtitle="Zuverlässiger & professioneller"
+    description="Von Netzwerk-Installation über Server-Wartung bis zur Cloud-Migration – ich kümmere mich um Ihre komplette IT-Infrastruktur. Windows, macOS, Linux – alles aus einer Hand."
+    gradient="green"
+    icon="fa-server"
+    badge="Support für Ihre IT"
+  />
 
-  <div class='relative isolate px-6 pt-14 lg:px-8'>
-    <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#97bea0] to-[#6b9e78] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
-    <div class='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
-      <div class='text-center'>
-        <h1 class='text-4xl font-bold tracking-tight text-light-100  sm:text-6xl gsap-fadein '>Umfassender IT-Service – von der Hardware bis zur Cloud</h1>
-        <p class='mt-6 text-lg leading-8 text-light-300  gsap-fadein '>Ich unterstütze Sie in allen Bereichen der IT: Von der Beschaffung und Installation von Geräten über die Wartung Ihrer Systeme bis hin zur sicheren Cloud-Verwaltung.</p>
-        <div class='mt-10 flex items-center justify-center gap-x-6'>
-          <a href="/kontakt"
-             class='rounded-md gsap-fadein  bg-primary-900 gsap-wiggle px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-700  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600'>Kostenlose Erstberatung</a>
-        </div>
-      </div>
-    </div>
-    <div
-      class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
-      aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#97bea0] to-[#6b9e78] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
-  </div>
-
-  <div class='py-24 sm:py-32'>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-      <div class='mx-auto max-w-2xl lg:text-center'>
-        <h2 class='text-base font-semibold leading-7 text-light-500  gsap-fadein '>Professioneller IT-Service</h2>
-        <p class='mt-2 text-3xl font-bold tracking-tight text-light-100  gsap-fadein  sm:text-4xl'>
-          Konzentrieren Sie sich auf Ihr Kerngeschäft – ich kümmere mich um Ihre IT!
+  <!-- Main Features Section -->
+  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900' id='leistungen'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='mx-auto max-w-2xl text-center mb-16'>
+        <h2 class='gsap-fadein text-base font-semibold text-green-400 mb-4' style='animation-delay: 0s'>
+          <i class='fa-solid fa-headset text-green-400 mr-2' aria-hidden='true'></i>
+          Professioneller IT-Service
+        </h2>
+        <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
+          Konzentrieren Sie sich auf Ihr <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Kerngeschäft</span>
         </p>
-        <p class='mt-6 text-lg leading-8 text-light-300  gsap-fadein '>
+        <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
           Professionelle IT-Administration spart Zeit und Nerven. Ich biete Ihnen flexible Lösungen – von der einmaligen Unterstützung bis zur langfristigen Betreuung.
         </p>
       </div>
-      <div class='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-        <dl class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-computer'></i>
-              </div>
-              Geräte-Installation &amp; Konfiguration
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>
-              Ich beschaffe, installiere und konfiguriere Ihre IT-Geräte (PCs, Laptops, Server, etc.) – schnell, zuverlässig und nach Ihren individuellen Anforderungen.
-            </dd>
+      
+      <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.45s'>
+          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-laptop text-green-400 text-2xl'></i>
           </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-cloud'></i>
-              </div>
-              Cloud-Services &amp; -Verwaltung
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich unterstütze Sie bei der Auswahl, Einrichtung und Verwaltung Ihrer Cloud-Dienste (z.B. E-Mail, Datenspeicherung, Sicherheitslösungen).
-            </dd>
+          <h3 class='text-xl font-bold text-white mb-4'>Geräte-Installation & Konfiguration</h3>
+          <p class='text-light-300'>
+            Ich beschaffe, installiere und konfiguriere Ihre IT-Geräte (PCs, Laptops, Server, etc.) – schnell, zuverlässig und nach Ihren individuellen Anforderungen.
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.6s'>
+          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-cloud text-green-400 text-2xl'></i>
           </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-lock'></i>
-              </div>
-              IT-Sicherheit
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich sorge für die Sicherheit Ihrer IT-Systeme und Daten – durch regelmäßige Überprüfungen, Updates und die Implementierung bewährter Sicherheitsmaßnahmen.
-            </dd>
+          <h3 class='text-xl font-bold text-white mb-4'>Cloud-Services & -Verwaltung</h3>
+          <p class='text-light-300'>
+            Ich unterstütze Sie bei der Auswahl, Einrichtung und Verwaltung Ihrer Cloud-Dienste (z.B. E-Mail, Datenspeicherung, Sicherheitslösungen).
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.75s'>
+          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-shield text-green-400 text-2xl'></i>
           </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-rotate'></i>
-              </div>
-              Wartung, Updates &amp; Support
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich halte Ihre Systeme auf dem neuesten Stand, führe regelmäßige Wartungsarbeiten durch und stehe Ihnen bei Problemen schnell und kompetent zur Seite.
-            </dd>
+          <h3 class='text-xl font-bold text-white mb-4'>IT-Sicherheit</h3>
+          <p class='text-light-300'>
+            Ich sorge für die Sicherheit Ihrer IT-Systeme und Daten – durch regelmäßige Überprüfungen, Updates und die Implementierung bewährter Sicherheitsmaßnahmen.
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.9s'>
+          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-wrench text-green-400 text-2xl'></i>
           </div>
-        </dl>
+          <h3 class='text-xl font-bold text-white mb-4'>Wartung, Updates & Support</h3>
+          <p class='text-light-300'>
+            Ich halte Ihre Systeme auf dem neuesten Stand, führe regelmäßige Wartungsarbeiten durch und stehe Ihnen bei Problemen schnell und kompetent zur Seite.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Remote & Partner Info -->
+  <section class="py-24 px-6 bg-dark-950">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-4xl">
+        <div class="gsap-fadein bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 rounded-2xl p-10" style="animation-delay: 0s">
+          <div class="flex items-start gap-6">
+            <div class="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-handshake text-green-400 text-3xl"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-4">Remote-First mit Partner-Netzwerk</h2>
+              <p class="text-light-300 mb-4">
+                Ich arbeite ausschließlich <strong class="text-white">remote</strong> und biete IT-Support für Unternehmen deutschlandweit. Für größere Projekte oder spezialisierte Anforderungen arbeite ich mit einem <strong class="text-white">zuverlässigen Partner-Netzwerk</strong> zusammen – so erhalten Sie auch bei höherem Bedarf die volle Mannpower.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200">
+                  <i class='fa-solid fa-house-laptop text-green-400' aria-hidden='true'></i>
+                  <span>100% Remote</span>
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200">
+                  <i class='fa-solid fa-users text-green-400' aria-hidden='true'></i>
+                  <span>Partner für Zusatzkapazität</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-6 bg-gradient-to-b from-dark-950 to-dark-900">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <h2 class="gsap-fadein text-base font-semibold text-green-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-circle-question text-green-400 mr-2' aria-hidden='true'></i>
+          Häufig gestellte Fragen
+        </h2>
+        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
+          <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Fragen & Antworten</span> zum IT-Service
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
+            Bieten Sie auch vor-Ort-Support an?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Nein, ich arbeite ausschließlich remote. Für vor-Ort-Einsätze vermittle ich gerne vertrauenswürdige Partner aus meinem Netzwerk.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
+            Wie schnell reagieren Sie bei Ausfällen?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Remote-Support innerhalb von 4 Stunden (während Geschäftszeiten). Für kritische Systeme biete ich auch Priority-Support mit &lt;2h Reaktionszeit an.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
+            Müssen wir langfristige Verträge abschließen?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Nein! Wartungsverträge sind monatsweise kündbar. Projektbasierte Arbeiten werden individuell abgerechnet.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
+            Welche Betriebssysteme unterstützen Sie?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Windows (10/11, Server 2016-2022), macOS (Ventura+), Linux (Ubuntu, Debian, CentOS). Hybrid-Umgebungen sind kein Problem.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
+            Was passiert bei größeren Projekten (z.B. 50+ Geräte)?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Für größere Projekte aktiviere ich mein Partner-Netzwerk. So erhalten Sie die nötige Mannpower, ohne die Qualität zu verlieren – alles remote koordiniert.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <PriceService />
 

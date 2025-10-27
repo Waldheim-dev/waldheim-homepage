@@ -6,15 +6,13 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
 <nav class="flex relative justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-full text-light-100">
     <div class="flex items-center gap-4">
-        <a href="/" class="-m-1.5 flex items-center gap-1 text-light-100 rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+        <a href="/" class="-m-1.5 flex items-center gap-1 text-light-100 rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
           <img class="h-8 w-auto block logo" src="/waldheim.dev.png" alt="Waldheim.dev Logo" loading="lazy">
           <span>Waldheim.dev</span>
         </a>
         <span
-          class="inline-flex items-center gap-x-1.5 rounded-md bg-primary-900 px-2 py-1 text-xs font-medium text-light-100">
-        <svg class="h-1.5 w-1.5 fill-light-100" viewBox="0 0 6 6" aria-hidden="true">
-          <circle cx="3" cy="3" r="3" />
-        </svg>
+          class="inline-flex items-center gap-x-1.5 rounded-md bg-primary-800 px-2 py-1 text-xs font-medium text-light-100">
+        <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
         v{version}
       </span>
     </div>
@@ -23,77 +21,63 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
     <div class="lg:hidden" role="dialog" aria-modal="false" style="display: none;">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div
-        class="nav-sidebar absolute bg-primary-900 mt-24 left-1/2 top-0 translate-x-[-50%] rounded-3xl z-10 w-full max-w-96 mx-auto overflow-y-auto max-h-[calc(75vh)] px-6 py-6 shadow-lg">
+        class="nav-sidebar absolute bg-primary-800 mt-24 left-1/2 top-0 translate-x-[-50%] rounded-3xl z-10 w-full max-w-96 mx-auto overflow-y-auto max-h-[calc(75vh)] px-6 py-6 shadow-lg">
       
         <div class="flow-root">
-          <div class="-my-6 divide-y divide-antique-brass-300/10">
+          <div class="-my-6 divide-y divide-light-500/10">
             <div class="space-y-2 py-6">
 
                 <div class="block">
                 <button type="button"
-                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100"
+                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100"
                         aria-controls="disclosure-1" aria-expanded="false">
-                  <!--class='block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100'> -->
+                  <!--class='block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100'> -->
                   Produkte
-                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd" />
-                  </svg>
+                  <i class="fa-solid fa-chevron-down text-lg" aria-hidden="true"></i>
                 </button>
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2 border-l-2 border-light-300 ml-1 px-2" id="disclosure-2" hidden>
                   <a href="/ecodrive/"
-                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Ecodrive</span>
                     <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       v1.2.0
                     </span>
                   </a>
                   <a href="/socialverse/"
-                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Socialverse</span>
                     <span
                     class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                  <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                    <circle cx="3" cy="3" r="3" />
-                  </svg>
+                  <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                   Beta
                 </span>
                   </a>
                   <a href="/silvacore/"
-                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Silvacore</span>
                     <span
                     class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                  <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                    <circle cx="3" cy="3" r="3" />
-                  </svg>
+                  <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                   Alpha
                 </span>
                   </a>
                   <a href="https://gitlab.com/mwaldheim/ausgabeschein-generator" target="_blank"
-                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Ausgabeschein Generator</span>
                     <span
                     class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                  <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                    <circle cx="3" cy="3" r="3" />
-                  </svg>
+                  <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                   v2.16.3
                 </span>
                   </a><a href="https://www.npmjs.com/package/@waldheimdev/astro-ai-llms-txt" target="_blank"
-                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                      class="mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Astro AI llms.txt Generator</span>
                     <span
                     class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                  <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                    <circle cx="3" cy="3" r="3" />
-                  </svg>
+                  <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                   v1.1.3
                 </span>
                   </a>
@@ -101,57 +85,49 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
               </div>
               <div class="block">
                 <button type="button"
-                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100"
+                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100"
                         aria-controls="disclosure-1" aria-expanded="false">
-                  <!--class='block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100'> -->
+                  <!--class='block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100'> -->
                   Services
-                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd"
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd" />
-                  </svg>
+                  <i class="fa-solid fa-chevron-down text-lg" aria-hidden="true"></i>
                 </button>
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
                 <div class="mt-2 space-y-2 border-l-2 border-light-300 ml-1 px-2" id="disclosure-2" hidden>
                   <a href="/services/devsecops/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Effiziente Entwicklung / DevSecOps</span>
                   </a>
                   <a href="/services/entwicklung/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Softwareentwicklung</span>
                   </a>
                   <a href="/services/design/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Design / UX</span>
                   </a>
                   <a href="/services/it-service/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>IT-Service</span>
                   </a>
                   <a href="/services/smarthome/"
-                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">
+                     class="mobile-subnav-item flex items-center  rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">
                     <span>Smarthome</span>
                   </a>
                 </div>
               </div>
               <a href="/referenzen/1/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">Referenzen</a>
+                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">Referenzen</a>
               <a href="/ueber-mich/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">Über
+                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">Über
                 mich</a>
               <a href="/blog/1/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-700 hover:text-light-100 text-light-100">Blog</a>
+                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-800 hover:text-light-100 text-light-100">Blog</a>
             </div>
             <div class="py-6">
               <a href="https://forestdesign.atlassian.net/servicedesk/customer/portals" target="_blank"
-                 class="flex justify-between gap-1 rounded-md text-light-100 bg-primary-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+                 class="flex justify-between gap-1 rounded-md text-light-100 bg-primary-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
                 Help Center
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd"
-                        d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902.848.137 1.705.248 2.57.331v3.443a.75.75 0 001.28.53l3.58-3.579a.78.78 0 01.527-.224 41.202 41.202 0 005.183-.5c1.437-.232 2.43-1.49 2.43-2.903V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zm0 7a1 1 0 100-2 1 1 0 000 2zM8 8a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z"
-                        clip-rule="evenodd" />
-                </svg>
+                <i class="fa-solid fa-comments text-lg" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -161,37 +137,26 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
     <div class="flex justify-center space-x-4 items-center">
       <div class="block lg:hidden">
         <button type="button"
-                class="inline-flex cursor-pointer items-center justify-center rounded-md p-2.5 button-toggle text-light-300 hover:bg-primary-900 hover:text-light-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600  ">
+                class="inline-flex cursor-pointer items-center justify-center rounded-md p-2.5 button-toggle text-light-300 hover:bg-primary-800 hover:text-light-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500  ">
           <span class="sr-only">Öffne Menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-               aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-2">
         <div class="relative dropdown">
           <button type="button"
-                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-light-300 hover:bg-primary-900 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-light-300 hover:bg-primary-800 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                   aria-expanded="false">
             <span>Produkte</span>
-            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clip-rule="evenodd" />
-            </svg>
+            <i class="fa-solid fa-chevron-down text-sm" aria-hidden="true"></i>
           </button>
 
           <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-10 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-200 opacity-0 translate-y-1">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-900 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
+            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-800 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
               <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-chart-line text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/ecodrive/" class="font-semibold text-light-100 outline-none">
@@ -200,22 +165,16 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
                       <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       v1.2.0
                     </span>
                     </a>
                     <p class="mt-1 text-light-100">Ist dein Fahrverhalten Eco?</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
-                  </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-globe text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
 
                   </div>
                   <div>
@@ -225,22 +184,16 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
                       <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       Beta
                     </span>
                     </a>
                     <p class="mt-1 text-light-100">Mikro AI CRM/CMS</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-house text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
 
                   </div>
                   <div>
@@ -250,22 +203,16 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
                       <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       Alpha
                     </span>
                     </a>
                     <p class="mt-1 text-light-100">Hausverwaltungssoftware</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-clipboard-list text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
 
                   </div>
                   <div>
@@ -275,21 +222,16 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
                       <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       v2.16.3
                     </span>
                     </a>
                     <p class="mt-1 text-light-100">Netbox Plugin</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-</svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-sparkles text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
 
 
                   </div>
@@ -300,9 +242,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
                       <span
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-light-100 bg-primary-900">
-                      <svg class="h-1.5 w-1.5 fill-light-100 " viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3" />
-                      </svg>
+                      <i class="fa-solid fa-circle text-light-100 text-[6px]" aria-hidden="true"></i>
                       v1.1.3
                     </span>
                     </a>
@@ -316,27 +256,18 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
         <div class="relative dropdown">
           <button type="button"
-                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-light-300 hover:bg-primary-900 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-light-300 hover:bg-primary-800 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                   aria-expanded="false">
             <span>Mein Service</span>
-            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clip-rule="evenodd" />
-            </svg>
+            <i class="fa-solid fa-chevron-down text-sm" aria-hidden="true"></i>
           </button>
 
           <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-10 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-200 opacity-0 translate-y-1">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-900 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
+            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-primary-800 text-sm/6 shadow-lg ring-1 ring-gray-900/5 lg:max-w-3xl">
               <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-rotate text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/services/devsecops/" class="font-semibold text-light-100 outline-none">
@@ -346,14 +277,9 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-light-100">Optimierung der Entwicklung bei euch</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-code text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/services/entwicklung/" class="font-semibold text-light-100 outline-none">
@@ -363,14 +289,9 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-light-100">Webseiten, Plugins und kleinere Softwareprojekte</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-palette text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/services/design/" class="font-semibold text-light-100 outline-none">
@@ -380,14 +301,9 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-light-100">Print und digitales Design</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-desktop text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/services/it-service/" class="font-semibold text-light-100 outline-none">
@@ -397,13 +313,9 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
                     <p class="mt-1 text-light-100">IT-Service, PC, Network und Administrierung</p>
                   </div>
                 </div>
-                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-700 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
-                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-700 group-hover:bg-primary-950 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                         stroke="currentColor"
-                         class="h-6 w-6 text-light-100 group-hover:text-light-300">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
+                <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-800 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-600">
+                  <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-primary-800 group-hover:bg-primary-950 transition-all">
+                    <i class="fa-solid fa-house text-xl text-light-100 group-hover:text-light-300" aria-hidden="true"></i>
                     
                   </div>
                   <div>
@@ -419,22 +331,18 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
           </div>
         </div>
         <a href="/referenzen/1/"
-           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-900 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Referenzen</a>
+           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-800 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Referenzen</a>
         <a href="/ueber-mich/"
-           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-900 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Über
+           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-800 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Über
           Mich</a>
         <a href="/blog/1/"
-           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-900 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Blog</a>
+           class="text-sm font-semibold leading-6 text-light-300 hover:bg-primary-800 hover:text-light-100 px-2 py-0.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Blog</a>
       </div>
       <div class="hidden lg:flex ">
           <a href="/kontakt"
-             class="flex align-center gap-1 rounded-md text-light-100 bg-primary-700 px-3.5 py-2.5 text-sm font-semibold shadow-xs hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">
+             class="flex align-center gap-1 rounded-md text-light-100 bg-primary-800 px-3.5 py-2.5 text-sm font-semibold shadow-xs hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
             <span>Kontakt</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-              <path fill-rule="evenodd"
-                    d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902.848.137 1.705.248 2.57.331v3.443a.75.75 0 001.28.53l3.58-3.579a.78.78 0 01.527-.224 41.202 41.202 0 005.183-.5c1.437-.232 2.43-1.49 2.43-2.903V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zm0 7a1 1 0 100-2 1 1 0 000 2zM8 8a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z"
-                    clip-rule="evenodd" />
-            </svg>
+            <i class="fa-solid fa-comments text-lg" aria-hidden="true"></i>
           </a>
       </div>
     </div>

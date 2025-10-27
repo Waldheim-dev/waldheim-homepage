@@ -1,10 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
-import PriceEcodrive from '../../components/PriceEcodrive.astro';
-import EcodriveRoadmap from '../../components/EcodriveRoadmap.astro';
-import EcodriveFeatures from '../../components/EcodriveFeatures.astro';
-import type { Fragment } from 'astro/runtime/server/index.js';
+import SocialverseScreenshots from '../../components/SocialverseScreenshots.astro';
+import SocialverseFeatures from '../../components/SocialverseFeatures.astro';
+import SocialverseComparison from '../../components/SocialverseComparison.astro';
 import PriceSocialverse from '../../components/PriceSocialverse.astro';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -13,141 +12,99 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Socialverse',
   link: Astro.url.href
 }]);
-const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren"
-const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!"
-const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren"
+const titel = "Socialverse: AI-CRM & Marketing-Automation made in Germany"
+const description = "Socialverse: DSGVO-konforme Lead-Generierung und Marketing-Automation mit KI. Automatisierte Kampagnen, Lead-Scoring und Multi-Channel-Integration für moderne Unternehmen."
+const keywords = "Socialverse, CRM, Marketing-Automation, AI, Lead-Generierung, DSGVO, GPT-4, Social Media, Campaign Management, Lead-Scoring"
 
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <!-- Hero Section -->
   <div class='relative isolate pt-14'>
+    <!-- Background Gradient (Purple/Pink) -->
     <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
       <div
-        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-purple-500 to-pink-500 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
         style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
     </div>
+
     <div class='py-24 sm:py-32 lg:pb-40'>
       <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div class='mx-auto max-w-2xl text-center'>
-          <div class='mt-24 sm:mt-32 lg:mt-16'>
-            <span
-              class='inline-flex items-center space-x-2 text-sm font-medium leading-6 text-light-300 gsap-fadein '
-            >
-              <span>Aktuell in <span class='version'>Closed Beta</span></span>
+        <div class='mx-auto max-w-3xl text-center'>
+          <!-- Closed Beta Badge -->
+          <div class='mt-24 sm:mt-32 lg:mt-16 gsap-fadein'>
+            <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 text-sm font-medium text-purple-300'>
+              <i class='fa-solid fa-flask' aria-hidden='true'></i>
+              Closed Beta – Q1 2026
+              <span class='bg-purple-500 text-white px-2 py-0.5 rounded-full text-xs font-bold'>50% Early Bird</span>
             </span>
           </div>
 
-          <h1
-            class='text-4xl font-bold tracking-tight text-light-100 sm:text-6xl gsap-fadein '
-          >
-            Socialverse: AI für CRM und Marketing
+          <!-- Hero Title with Gradient -->
+          <h1 class='text-5xl md:text-7xl font-bold tracking-tight text-white mt-6 gsap-fadein' style='animation-delay: 0.1s'>
+            AI-CRM & Marketing-<br />
+            <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>Automation</span>
           </h1>
-          <p class='mt-6 text-lg leading-8 text-light-300 gsap-fadein '>
-            Erfasse Leads DSGVO-konform und erstelle automatisierte Marketing-Kampagnen mit Socialverse. Die Software ist ideal für Unternehmen, die ihre Kundenbeziehungen optimieren und ihre Marketingstrategien automatisieren möchten.
+
+          <p class='mt-6 text-xl leading-8 text-light-300 gsap-fadein max-w-2xl mx-auto' style='animation-delay: 0.2s'>
+            Lead-Generierung mit <strong class='text-white'>KI-Scoring</strong>, automatisierte Multi-Channel-Kampagnen und <strong class='text-white'>GPT-4 Content-Generierung</strong>. 
+            DSGVO-konform <span class='text-purple-400'>made in Germany 🇩🇪</span>
           </p>
-          <div class='mt-10 flex items-center justify-center gap-x-6'>
+
+          <!-- Hero CTAs -->
+          <div class='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 gsap-fadein' style='animation-delay: 0.3s'>
             <a
-              href='#' disabled="true"
-              target='_blank'
-              rel="noopener noreferrer"
-              class='rounded-md bg-primary-900  gsap-fadein gsap-wiggle px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-700  focus-visible:outline-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2'
-            >Socialverse installieren (Noch nicht verfügbar)</a
+              href='/kontakt'
+              class='group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 inline-flex items-center gap-2'
             >
+              <i class='fa-solid fa-user-plus' aria-hidden='true'></i>
+              Beta-Zugang anfragen
+              <i class='fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform' aria-hidden='true'></i>
+            </a>
+                        <a
+              href='/socialverse/#features'
+              class='px-8 py-4 bg-light-500/10 text-white border border-light-500/30 rounded-lg font-semibold hover:bg-light-500/20 transition-all duration-300'
+            >
+              Features entdecken
+              <i class='fa-solid fa-arrow-down animate-bounce' aria-hidden='true'></i>
+            </a>
           </div>
         </div>
 
-        <div class='relative isolate'>
-          <div
-            class='blur-sm absolute inset-0 rounded-1xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient' />
-
+        <!-- Hero Dashboard Screenshot with Gradient Glow -->
+        <div class='relative isolate mt-16 sm:mt-24 gsap-fadein' style='animation-delay: 0.4s'>
+          <div class='absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity'></div>
           <img
             src='/socialverse/socialverse_dashboard.png'
-            alt="Socialverse Dashboard"
-            loading="lazy"
+            alt="Socialverse AI-Dashboard mit Lead-Scoring und Campaign Analytics"
+            loading="eager"
             width="2432"
             height="1442"
-            class='relative z-10 mt-16 rounded-md bg-pancho-200/5 shadow-2xl ring-1 ring-white/10 sm:mt-24'
+            class='relative z-10 rounded-xl bg-dark-950/50 shadow-2xl ring-1 ring-purple-500/20 w-full'
           />
         </div>
       </div>
     </div>
-    <div
-      class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
-      aria-hidden='true'>
+
+    <!-- Bottom Gradient -->
+    <div class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]' aria-hidden='true'>
       <div
-        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#6b9e78] to-[#498059] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
+        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-purple-500 to-pink-500 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
         style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'>
       </div>
     </div>
   </div>
 
-  <div class="overflow-hidden py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div
-        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-      >
-        <div class="lg:pr-8 lg:pt-4">
-          <div class="lg:max-w-lg">
-            <h2
-              class="text-base font-semibold leading-7 text-light-500  gsap-fadein "
-            >
-              Kampagne gestartet
-            </h2>
-            <p
-              class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein "
-            >
-              Einfacher geht's nicht!
-            </p>
-            <p class="mt-6 text-lg leading-8 text-light-500  gsap-fadein ">
-              Socialverse ist ein praktischs Tool um automatisierte Marketing-Kampagnen zu erstellen. Die Software ist ideal für Unternehmen, die ihre Kundenbeziehungen optimieren und ihre Marketingstrategien automatisieren möchten.
-            </p>
-            <dl
-              class="mt-10 max-w-xl space-y-8 text-base leading-7 text-light-500  lg:max-w-none"
-            >
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-light-300 gsap-fadein ">
-                  <i class="absolute left-1 top-1 fa-solid fa-car text-primary-900"
-                  ></i>
-                  Kampagne erstellen
-                </dt>
-                <dd class="inline gsap-fadein ">
-                  Erstelle mit n8n über einen einfachen Workflow eine Kampagne. Wähle die Zielgruppe und den Inhalt aus und starte die Kampagne.
-                </dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-light-300 gsap-fadein ">
-                  <i
-                    class="absolute left-1 top-1 fa-solid fa-chart-line-up-down text-primary-900"
-                  ></i>
-                  Prüfe die Ergebnisse
-                </dt>
-                <dd class="inline gsap-fadein ">
-                  Nichts geht ohne dein Einverständnis! Du kannst die Ergebnisse der Kampagne jederzeit einsehen und korrigieren.
-                </dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-light-300 gsap-fadein ">
-                  <i
-                    class="absolute left-1 top-1 fa-solid fa-lock-hashtag text-primary-900"
-                  ></i>
-                  Automatische Veröffentlichung
-                </dt>
-                <dd class="inline gsap-fadein ">
-                  n8n veröffentlicht die Kampagne automatisch auf den von dir gewählten Kanälen. Du kannst die Veröffentlichung jederzeit stoppen.
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-        <img
-          src="/socialverse/socialverse_campaigns.png"
-          alt="Ecodrive Dashboard Darkmode"
-          loading="lazy"
-          class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-          width="2432"
-          height="1442"
-        />
-      </div>
-    </div>
+  <!-- Screenshot Showcase -->
+  <div id='features'>
+    <SocialverseScreenshots />
   </div>
-      <PriceSocialverse />
+
+  <!-- Features & Roadmap -->
+  <SocialverseFeatures />
+
+  <!-- Comparison -->
+  <SocialverseComparison />
+
+  <!-- Pricing -->
+  <PriceSocialverse />
 </Layout>

@@ -45,7 +45,7 @@ const projectsCollection = await getCollection('karriere_projects', (project) =>
               <dt>
                 <button
                   type="button"
-                  class="flex w-full mt-2 items-start justify-between text-left text-light-300  hover:bg-light-800  p-2 rounded-md"
+                  class="flex w-full mt-2 items-start justify-between text-left text-light-300 hover:bg-primary-500/10 hover:border hover:border-primary-500/20 p-2 rounded-md transition-all"
                   aria-controls={project.id}
                   aria-expanded="false"
                 >
@@ -59,7 +59,7 @@ const projectsCollection = await getCollection('karriere_projects', (project) =>
                     )}
                     )
                   </span>
-                  <span class="ml-6 flex h-7 items-center">
+                  <span class="ml-6 flex h-7 items-center text-primary-400">
                     <svg
                       class="h-6 w-6"
                       fill="none"

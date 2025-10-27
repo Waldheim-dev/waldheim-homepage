@@ -1,0 +1,507 @@
+---
+// CRM & Marketing Automation Comparison (Stand: Dezember 2024)
+const competitorsComparison = [
+  {
+    name: 'Socialverse',
+    logo: '🚀',
+    pricing: 'Early Bird: 49€/Monat',
+    regularPrice: 'Später: 99€/Monat',
+    highlight: true,
+    aiFeatures: 'GPT-4 nativ',
+    gdpr: true,
+    germanHost: true,
+    support: 'Direkt vom Entwickler',
+    contacts5k: '49€/Monat',
+    color: 'purple'
+  },
+  {
+    name: 'HubSpot',
+    logo: '🟠',
+    pricing: 'Starter: 18€/Nutzer/Monat',
+    regularPrice: 'Pro: ~890$/Monat',
+    highlight: false,
+    aiFeatures: 'Breeze AI (GPT-basiert)',
+    gdpr: true,
+    germanHost: true,
+    support: 'Chat, E-Mail, Telefon (DE)',
+    contacts5k: '~4.500€/Jahr',
+    color: 'orange'
+  },
+  {
+    name: 'Salesforce',
+    logo: '☁️',
+    pricing: 'Starter: 25€/Nutzer/Monat',
+    regularPrice: 'Pro Suite: 100€/Nutzer/Monat',
+    highlight: false,
+    aiFeatures: 'Einstein AI (führend)',
+    gdpr: true,
+    germanHost: true,
+    support: 'Enterprise-Support',
+    contacts5k: '~6.000€/Jahr',
+    color: 'blue'
+  },
+  {
+    name: 'Zoho',
+    logo: '🔷',
+    pricing: 'Standard: 14$/Nutzer/Monat',
+    regularPrice: 'Enterprise: 40$/Nutzer/Monat',
+    highlight: false,
+    aiFeatures: 'Zia AI (solide)',
+    gdpr: true,
+    germanHost: false,
+    support: 'E-Mail, Chat (DE)',
+    contacts5k: '~1.380€/Jahr',
+    color: 'red'
+  },
+  {
+    name: 'Pipedrive',
+    logo: '🟢',
+    pricing: 'Essential: 14$/Nutzer/Monat',
+    regularPrice: 'Professional: 49$/Nutzer/Monat',
+    highlight: false,
+    aiFeatures: 'AI Sales Assistant',
+    gdpr: true,
+    germanHost: true,
+    support: 'Chat, E-Mail (DE)',
+    contacts5k: '~3.300€/Jahr',
+    color: 'green'
+  },
+  {
+    name: 'ActiveCampaign',
+    logo: '💙',
+    pricing: 'Plus: ab 49$/Monat',
+    regularPrice: 'Professional: ab 149$/Monat',
+    highlight: false,
+    aiFeatures: 'Automation Builder AI',
+    gdpr: true,
+    germanHost: false,
+    support: 'E-Mail-Support',
+    contacts5k: '~120$/Monat',
+    color: 'blue'
+  },
+  {
+    name: 'Mailchimp',
+    logo: '🐵',
+    pricing: 'Essentials: ab 13€/Monat',
+    regularPrice: 'Premium: 350€/Monat',
+    highlight: false,
+    aiFeatures: 'Content AI (begrenzt)',
+    gdpr: false,
+    germanHost: false,
+    support: 'E-Mail-Support',
+    contacts5k: '~200€/Monat',
+    color: 'yellow'
+  },
+  {
+    name: 'Brevo',
+    logo: '📧',
+    pricing: 'Starter: 25€/Monat',
+    regularPrice: 'Business: 65€/Monat',
+    highlight: false,
+    aiFeatures: 'Aura AI',
+    gdpr: true,
+    germanHost: false,
+    support: 'E-Mail-Support',
+    contacts5k: '~25€/Monat (volumenbasiert)',
+    color: 'teal'
+  },
+  {
+    name: 'CleverReach',
+    logo: '🇩🇪',
+    pricing: 'Essential: 15€/Monat',
+    regularPrice: 'Enterprise: Individuell',
+    highlight: false,
+    aiFeatures: false,
+    gdpr: true,
+    germanHost: true,
+    support: 'E-Mail, Telefon (DE)',
+    contacts5k: '~50€/Monat',
+    color: 'gray'
+  }
+];
+
+const comparisonFeatures = [
+  {
+    name: 'Generative KI (Content & E-Mail)',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: true,
+    activecampaign: true,
+    mailchimp: 'Begrenzt',
+    brevo: true,
+    cleverreach: false,
+    note: 'GPT-basierte Content-Erstellung für E-Mails, Posts & Blogs'
+  },
+  {
+    name: 'Prädiktives Lead-Scoring',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: true,
+    activecampaign: true,
+    mailchimp: false,
+    brevo: false,
+    cleverreach: false,
+    note: 'KI analysiert Lead-Qualität automatisch'
+  },
+  {
+    name: 'Multi-Channel-Kampagnen',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: 'Add-on',
+    activecampaign: true,
+    mailchimp: true,
+    brevo: true,
+    cleverreach: false,
+    note: 'Facebook, Instagram, LinkedIn, E-Mail, WhatsApp'
+  },
+  {
+    name: 'DSGVO-konform (DE-Server)',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: false,
+    pipedrive: true,
+    activecampaign: false,
+    mailchimp: false,
+    brevo: false,
+    cleverreach: true,
+    note: 'Server in Deutschland für höchste Datensicherheit'
+  },
+  {
+    name: 'Social Media Automation',
+    socialverse: true,
+    hubspot: true,
+    salesforce: 'Add-on',
+    zoho: true,
+    pipedrive: false,
+    activecampaign: true,
+    mailchimp: 'Begrenzt',
+    brevo: 'Begrenzt',
+    cleverreach: false,
+    note: 'Automatisches Posting & Scheduling auf Social Channels'
+  },
+  {
+    name: 'Marketing Workflows/Automation',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: 'Begrenzt',
+    activecampaign: true,
+    mailchimp: true,
+    brevo: true,
+    cleverreach: true,
+    note: 'Visuelle Workflow-Builder für Automatisierung'
+  },
+  {
+    name: 'CRM integriert',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: true,
+    activecampaign: true,
+    mailchimp: 'Basic',
+    brevo: 'Basic',
+    cleverreach: false,
+    note: 'Vollständiges CRM mit Kontakt- & Deal-Management'
+  },
+  {
+    name: 'A/B-Testing',
+    socialverse: 'Q3 2026',
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: false,
+    activecampaign: true,
+    mailchimp: true,
+    brevo: true,
+    cleverreach: true,
+    note: 'Kampagnen-Varianten automatisch testen'
+  },
+  {
+    name: 'Konversationelle KI (Chatbots)',
+    socialverse: 'Q2 2026',
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: 'Add-on',
+    activecampaign: false,
+    mailchimp: false,
+    brevo: false,
+    cleverreach: false,
+    note: 'KI-gesteuerte Chatbots für Lead-Qualifizierung'
+  },
+  {
+    name: 'API-Zugriff',
+    socialverse: 'Q2 2026',
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: true,
+    activecampaign: true,
+    mailchimp: true,
+    brevo: true,
+    cleverreach: true,
+    note: 'REST-API für eigene Integrationen'
+  },
+  {
+    name: 'Deutschsprachiger Support',
+    socialverse: true,
+    hubspot: true,
+    salesforce: true,
+    zoho: true,
+    pipedrive: true,
+    activecampaign: false,
+    mailchimp: false,
+    brevo: false,
+    cleverreach: true,
+    note: 'Support in deutscher Sprache verfügbar'
+  }
+];
+---
+
+<section class='py-20 px-6 bg-dark-950'>
+  <div class='max-w-7xl mx-auto'>
+    <!-- Section Header -->
+    <div class='text-center mb-16 gsap-fadein'>
+      <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+        Warum <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>Socialverse</span>?
+      </h2>
+      <p class='text-xl text-light-300 max-w-3xl mx-auto'>
+        Vergleichen Sie Socialverse mit den Marktführern. Made in Germany, DSGVO-konform und mit modernster KI.
+      </p>
+    </div>
+
+    <!-- Competitors Comparison Cards -->
+    <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20'>
+      {competitorsComparison.map((competitor, index) => (
+        <div 
+          class={`gsap-fadein rounded-xl p-6 border-2 transition-all duration-300 ${
+            competitor.highlight 
+              ? 'bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-500 shadow-lg shadow-purple-500/20' 
+              : 'bg-dark-900/50 border-light-500/10 hover:border-purple-500/30'
+          }`}
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          {competitor.highlight && (
+            <div class='bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4'>
+              ⭐ Empfehlung
+            </div>
+          )}
+          <div class='text-5xl mb-4'>{competitor.logo}</div>
+          <h3 class='text-2xl font-bold text-white mb-2'>{competitor.name}</h3>
+          <div class='mb-4'>
+            <p class='text-lg font-semibold text-purple-400'>{competitor.pricing}</p>
+            <p class='text-sm text-light-400'>{competitor.regularPrice}</p>
+          </div>
+          <div class='space-y-2 text-sm'>
+            <div class='flex items-center gap-2'>
+              {competitor.aiFeatures ? (
+                <i class='fa-solid fa-check-circle text-green-400' aria-hidden='true'></i>
+              ) : (
+                <i class='fa-solid fa-times-circle text-red-400' aria-hidden='true'></i>
+              )}
+              <span class='text-light-300 text-xs'>{typeof competitor.aiFeatures === 'string' ? competitor.aiFeatures : 'KI-Features'}</span>
+            </div>
+            <div class='flex items-center gap-2'>
+              {competitor.gdpr === true ? (
+                <i class='fa-solid fa-check-circle text-green-400' aria-hidden='true'></i>
+              ) : (
+                <i class='fa-solid fa-times-circle text-red-400' aria-hidden='true'></i>
+              )}
+              <span class='text-light-300'>DSGVO: {competitor.gdpr === true ? 'Vollständig' : 'Eingeschränkt'}</span>
+            </div>
+            <div class='flex items-center gap-2'>
+              {competitor.germanHost ? (
+                <i class='fa-solid fa-check-circle text-green-400' aria-hidden='true'></i>
+              ) : (
+                <i class='fa-solid fa-times-circle text-red-400' aria-hidden='true'></i>
+              )}
+              <span class='text-light-300'>DE-Server {competitor.germanHost ? '🇩🇪' : '🌍'}</span>
+            </div>
+            <div class='mt-4 pt-4 border-t border-light-500/10'>
+              <p class='text-xs text-light-400'>
+                <i class='fa-solid fa-headset text-purple-400 mr-1' aria-hidden='true'></i>
+                {competitor.support}
+              </p>
+              <p class='text-xs text-light-500 mt-2'>
+                5.000 Kontakte: {competitor.contacts5k}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Detailed Feature Comparison Table -->
+    <div class='gsap-fadein bg-dark-900/30 border border-light-500/10 rounded-2xl p-8' style='animation-delay: 0.5s'>
+      <h3 class='text-2xl font-bold text-white mb-8 text-center'>
+        Detaillierter Feature-Vergleich: Top 9 CRM & Marketing-Plattformen
+      </h3>
+      
+      <div tabindex="0" class='overflow-x-auto'>
+        <table class='w-full min-w-max text-left text-xs' role='table' aria-label='Feature-Vergleich zwischen CRM & Marketing-Plattformen'>
+          <thead>
+            <tr class='border-b border-light-500/20'>
+              <th class='py-3 px-2 text-white font-semibold whitespace-nowrap'>Feature</th>
+              <th class='py-3 px-2 text-center whitespace-nowrap'>
+                <div class='text-purple-400 font-bold'>Socialverse</div>
+              </th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>HubSpot</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>Salesforce</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>Zoho</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>Pipedrive</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>ActiveCampaign</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>Mailchimp</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>Brevo</th>
+              <th class='py-3 px-2 text-center text-light-300 whitespace-nowrap'>CleverReach</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparisonFeatures.map((feature, index) => (
+              <tr class='border-b border-light-500/10 hover:bg-dark-900/50 transition-colors'>
+                <td class='py-3 px-2'>
+                  <div class='text-white font-medium text-xs'>{feature.name}</div>
+                  <div class='text-xs text-light-400 mt-1'>{feature.note}</div>
+                </td>
+                <td class='py-3 px-2 text-center bg-purple-900/10'>
+                  {typeof feature.socialverse === 'string' ? (
+                    <span class='text-xs font-semibold text-purple-400'>{feature.socialverse}</span>
+                  ) : feature.socialverse ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.hubspot === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.hubspot}</span>
+                  ) : feature.hubspot ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.salesforce === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.salesforce}</span>
+                  ) : feature.salesforce ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.zoho === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.zoho}</span>
+                  ) : feature.zoho ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.pipedrive === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.pipedrive}</span>
+                  ) : feature.pipedrive ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.activecampaign === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.activecampaign}</span>
+                  ) : feature.activecampaign ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.mailchimp === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.mailchimp}</span>
+                  ) : feature.mailchimp ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.brevo === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.brevo}</span>
+                  ) : feature.brevo ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+                <td class='py-3 px-2 text-center'>
+                  {typeof feature.cleverreach === 'string' ? (
+                    <span class='text-xs font-semibold text-yellow-400'>{feature.cleverreach}</span>
+                  ) : feature.cleverreach ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-lg' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-lg' aria-label='Nicht verfügbar' role='img'></i>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class='mt-6 text-sm text-light-400 text-center'>
+        <p>
+          <i class='fa-solid fa-info-circle mr-2' aria-label='Information' role='img'></i>
+          Preise basieren auf öffentlichen Informationen (Stand: Dezember 2024). Genaue Preise variieren je nach Kontaktzahl und Features.
+        </p>
+      </div>
+    </div>
+
+    <!-- USP Section -->
+    <div class='mt-16 gsap-fadein' style='animation-delay: 0.7s'>
+      <div class='grid md:grid-cols-3 gap-6 mb-8'>
+        <div class='bg-gradient-to-br from-green-900/20 to-dark-900 border border-green-500/30 rounded-xl p-6 text-center'>
+          <i class='fa-solid fa-shield-check text-green-400 text-4xl mb-4' aria-hidden='true'></i>
+          <h4 class='text-white font-bold text-lg mb-2'>Made in Germany 🇩🇪</h4>
+          <p class='text-light-400 text-sm'>
+            Server in Deutschland – 100% DSGVO-konform ohne Datentransfer in Drittländer
+          </p>
+        </div>
+        
+        <div class='bg-gradient-to-br from-purple-900/20 to-dark-900 border border-purple-500/30 rounded-xl p-6 text-center'>
+          <i class='fa-solid fa-robot text-purple-400 text-4xl mb-4' aria-hidden='true'></i>
+          <h4 class='text-white font-bold text-lg mb-2'>Native GPT-4 Integration</h4>
+          <p class='text-light-400 text-sm'>
+            KI-Content-Generierung ohne Aufpreis – bei HubSpot Pro ab 890$/Monat
+          </p>
+        </div>
+        
+        <div class='bg-gradient-to-br from-blue-900/20 to-dark-900 border border-blue-500/30 rounded-xl p-6 text-center'>
+          <i class='fa-solid fa-piggy-bank text-blue-400 text-4xl mb-4' aria-hidden='true'></i>
+          <h4 class='text-white font-bold text-lg mb-2'>Unschlagbares Preis-Leistungs-Verhältnis</h4>
+          <p class='text-light-400 text-sm'>
+            49€/Monat vs. HubSpot ~4.500€/Jahr oder Salesforce ~6.000€/Jahr (5 Nutzer, 5.000 Kontakte)
+          </p>
+        </div>
+      </div>
+
+      <div class='text-center bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl px-8 py-6'>
+        <p class='text-white font-bold text-xl mb-2'>
+          💰 Sparpotenzial: Bis zu <span class='text-purple-400'>15.000€ über 3 Jahre</span> gegenüber HubSpot Professional
+        </p>
+        <p class='text-light-400 text-sm'>
+          Mit Socialverse erhalten KMU Enterprise-Features zu Startup-Preisen – ohne Kompromisse bei KI-Power oder Datenschutz.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

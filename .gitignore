@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+playwright-report/
+screenshots/
+tmp/
+test-results/
+/*.md
+!/README.md

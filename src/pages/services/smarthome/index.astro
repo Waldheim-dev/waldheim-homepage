@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
+import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -19,86 +20,236 @@ const description = "Unabhängige Smart Home Beratung & Konzepte: Wir helfen Ihn
 const keywords = "Smart Home, Hausautomation, IoT, unabhängige Beratung, Smart Home Installation, Konzepte, Eigenbau"
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <!-- Hero Section -->
+  <ServiceHero 
+    title="Smart Home"
+    subtitle="Unabhängiges & sicheres"
+    description="Keine teuren Systeme mit Herstellerbindung! Ich zeige Ihnen, wie Sie mit Home Assistant & Co. Ihr eigenes Smart Home aufbauen – kostengünstig, sicher und selbstbestimmt. Von der Planung bis zur Umsetzung."
+    gradient="orange"
+    icon="fa-house-signal"
+    badge="Open Source & unabhängig"
+  />
 
-  <div class='relative isolate px-6 pt-14 lg:px-8'>
-    <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#97bea0] to-[#6b9e78] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
-    <div class='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
-      <div class='text-center'>
-        <h1 class='text-4xl font-bold tracking-tight text-light-100  sm:text-6xl gsap-fadein '>Ihr unabhängiges Smart Home – einfach, sicher, selbstbestimmt</h1>
-        <p class='mt-6 text-lg leading-8 text-light-300  gsap-fadein '>Viele Smart-Home-Systeme sind teuer, unflexibel und binden Sie an bestimmte Hersteller oder Apps. Ich zeige Ihnen, wie Sie mit bewährten Open-Source-Lösungen wie Home Assistant Ihr *eigenes* Smart Home System aufbauen – kostengünstig, sicher und ganz nach Ihren Wünschen.</p>
-        <div class='mt-10 flex items-center justify-center gap-x-6'>
-          <a href="/kontakt"
-             class='rounded-md gsap-fadein  bg-primary-900 gsap-wiggle px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600'>Kostenlose Erstberatung</a>
+  <!-- Main Features Section -->
+  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900' id='leistungen'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='mx-auto max-w-2xl text-center mb-16'>
+        <h2 class='gsap-fadein text-base font-semibold text-orange-400 mb-4' style='animation-delay: 0s'>
+          <i class='fa-solid fa-home text-orange-400 mr-2' aria-hidden='true'></i>
+          Individuelle Smart Home Beratung
+        </h2>
+        <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
+          Intelligente <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Vernetzung</span> – ganz nach Ihren Vorstellungen
+        </p>
+        <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
+          Ich unterstütze Sie bei der Planung und Umsetzung Ihres individuellen Smart Homes – mit dem Fokus auf offene Systeme und volle Kontrolle für Sie.
+        </p>
+      </div>
+      
+      <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.45s'>
+          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-microchip text-orange-400 text-2xl'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-4'>Geräteauswahl & -konfiguration</h3>
+          <p class='text-light-300'>
+            Oft reichen günstige Geräte wie Raspberry Pis für ein leistungsstarkes Smart Home. Ich berate Sie herstellerunabhängig und helfe Ihnen bei der Auswahl und Konfiguration der passenden Hardware.
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.6s'>
+          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-network-wired text-orange-400 text-2xl'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-4'>Zentrale Steuerung & Vernetzung</h3>
+          <p class='text-light-300'>
+            Ich zeige Ihnen, wie Sie Ihre Geräte zentral steuern – mit etablierten Systemen wie Home Assistant, MQTT und Node-RED. Keine Insellösungen, sondern ein integriertes System!
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.75s'>
+          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-lock text-orange-400 text-2xl'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-4'>Sicherheit & Datenschutz</h3>
+          <p class='text-light-300'>
+            Ich lege größten Wert auf Sicherheit. Durch lokale Steuerung und den Verzicht auf unnötige Cloud-Dienste behalten Sie die volle Kontrolle über Ihre Daten.
+          </p>
+        </div>
+        
+        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.9s'>
+          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
+            <i class='fa-solid fa-wrench text-orange-400 text-2xl'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-4'>Wartung, Updates & Support</h3>
+          <p class='text-light-300'>
+            Ich zeige Ihnen, wie Sie Ihr System selbstständig warten und aktualisieren. Und wenn Sie doch einmal Hilfe benötigen, stehe ich Ihnen zur Seite.
+          </p>
         </div>
       </div>
     </div>
-    <div
-      class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]'
-      aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#97bea0] to-[#6b9e78] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
-  </div>
+  </section>
 
-  <div class='py-24 sm:py-32'>
-    <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-      <div class='mx-auto max-w-2xl lg:text-center'>
-        <h2 class='text-base font-semibold leading-7 text-light-500  gsap-fadein '>Individuelle Smart Home Beratung</h2>
-        <p class='mt-2 text-3xl font-bold tracking-tight text-light-100  gsap-fadein  sm:text-4xl'>Intelligente Vernetzung – ganz nach Ihren Vorstellungen</p>
-        <p class='mt-6 text-lg leading-8 text-light-300  gsap-fadein '>Ich unterstütze Sie bei der Planung und Umsetzung Ihres individuellen Smart Homes – mit dem Fokus auf offene Systeme und volle Kontrolle für Sie.</p>
+  <!-- System Comparison -->
+  <section class="py-24 px-6 bg-dark-950">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <h2 class="gsap-fadein text-base font-semibold text-orange-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-scale-balanced text-orange-400 mr-2' aria-hidden='true'></i>
+          System-Vergleich
+        </h2>
+        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
+          Welches Smart Home System <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>passt zu Ihnen?</span>
+        </p>
       </div>
-      <div class='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-        <dl class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-computer'></i>
-              </div>
-              Geräteauswahl &amp; -konfiguration
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>
-              Oft reichen günstige Geräte wie Raspberry Pis für ein leistungsstarkes Smart Home. Ich berate Sie herstellerunabhängig und helfe Ihnen bei der Auswahl und Konfiguration der passenden Hardware.
-            </dd>
-          </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-cloud'></i>
-              </div>
-              Zentrale Steuerung &amp; Vernetzung
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich zeige Ihnen, wie Sie Ihre Geräte zentral steuern – mit etablierten Systemen wie Home Assistant, MQTT und Node-RED.  Keine Insellösungen, sondern ein integriertes System!
-            </dd>
-          </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-lock'></i>
-              </div>
-              Sicherheit &amp; Datenschutz
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich lege größten Wert auf Sicherheit.  Durch lokale Steuerung und den Verzicht auf unnötige Cloud-Dienste behalten Sie die volle Kontrolle über Ihre Daten.
-            </dd>
-          </div>
-          <div class='relative pl-16 gsap-fadein '>
-            <dt class='text-base font-semibold leading-7 text-light-100 '>
-              <div class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900 '>
-                <i class='fa-regular text-white fa-rotate'></i>
-              </div>
-              Wartung, Updates &amp; Support
-            </dt>
-            <dd class='mt-2 text-base leading-7 text-light-300 '>Ich zeige Ihnen, wie Sie Ihr System selbstständig warten und aktualisieren.  Und wenn Sie doch einmal Hilfe benötigen, stehe ich Ihnen zur Seite.
-            </dd>
-          </div>
-        </dl>
+      
+      <div tabindex="0" class="overflow-x-auto rounded-xl border border-orange-500/20">
+        <table class="w-full text-left">
+          <thead class="bg-dark-800">
+            <tr>
+              <th class="px-6 py-4 text-light-100">Kriterium</th>
+              <th class="px-6 py-4 text-light-100">Google/Alexa</th>
+              <th class="px-6 py-4 text-light-100">Apple HomeKit</th>
+              <th class="px-6 py-4 text-light-100 bg-orange-500/10">
+                <i class='fa-solid fa-crown text-orange-400 mr-2' aria-hidden='true'></i>
+                Home Assistant
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-light-500/10">
+              <td class="px-6 py-4 text-light-300 font-semibold">Kosten</td>
+              <td class="px-6 py-4 text-light-300">€</td>
+              <td class="px-6 py-4 text-light-300">€€</td>
+              <td class="px-6 py-4 text-green-400 bg-orange-500/5">€ (günstig)</td>
+            </tr>
+            <tr class="border-t border-light-500/10">
+              <td class="px-6 py-4 text-light-300 font-semibold">Datenschutz</td>
+              <td class="px-6 py-4">
+                <span class="text-red-400"><i class='fa-solid fa-xmark' aria-hidden='true'></i> Cloud</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Cloud</span>
+              </td>
+              <td class="px-6 py-4 bg-orange-500/5">
+                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Lokal</span>
+              </td>
+            </tr>
+            <tr class="border-t border-light-500/10">
+              <td class="px-6 py-4 text-light-300 font-semibold">Flexibilität</td>
+              <td class="px-6 py-4">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Begrenzt</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Begrenzt</span>
+              </td>
+              <td class="px-6 py-4 bg-orange-500/5">
+                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i> Sehr hoch</span>
+              </td>
+            </tr>
+            <tr class="border-t border-light-500/10">
+              <td class="px-6 py-4 text-light-300 font-semibold">Komplexität</td>
+              <td class="px-6 py-4">
+                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Einfach</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Einfach</span>
+              </td>
+              <td class="px-6 py-4 bg-orange-500/5">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Mittel</span>
+              </td>
+            </tr>
+            <tr class="border-t border-light-500/10">
+              <td class="px-6 py-4 text-light-300 font-semibold">Automatisierung</td>
+              <td class="px-6 py-4">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Basic</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Basic</span>
+              </td>
+              <td class="px-6 py-4 bg-orange-500/5">
+                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i> Sehr hoch</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <p class="text-light-300">
+          <i class='fa-solid fa-lightbulb text-orange-400 mr-2' aria-hidden='true'></i>
+          <strong class="text-white">Empfehlung:</strong> Home Assistant für maximale Kontrolle, Datenschutz und Flexibilität!
+        </p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-6 bg-gradient-to-b from-dark-900 to-dark-950">
+    <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <h2 class="gsap-fadein text-base font-semibold text-orange-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-circle-question text-orange-400 mr-2' aria-hidden='true'></i>
+          Häufig gestellte Fragen
+        </h2>
+        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
+          <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Fragen & Antworten</span> zu Smart Home
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
+            Kann ich meine Alexa/Google-Geräte weiter nutzen?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Ja! Home Assistant kann diese einbinden und als Sprachassistent-Schnittstelle nutzen – Sie behalten Ihre gewohnten Geräte.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
+            Brauche ich technisches Wissen?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Grundkenntnisse helfen, aber ich begleite Sie durch den gesamten Prozess. Optional biete ich auch Schulungen an (2h Workshop = 150€, remote).
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
+            Was passiert bei Internet-Ausfall?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Lokale Automatisierungen (z.B. Licht-Schalter, Sensoren) laufen weiter! Nur Cloud-abhängige Dienste (z.B. Wetter-Updates) fallen aus.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
+            Wie sicher ist Home Assistant?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> Sehr sicher! Läuft lokal (kein Cloud-Zwang), Updates selbst kontrollierbar, keine Daten an Dritte. Ich helfe bei der sicheren Einrichtung.
+          </p>
+        </div>
+        
+        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
+          <h3 class="text-xl font-bold text-white mb-4">
+            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
+            Arbeiten Sie vor Ort oder remote?
+          </h3>
+          <p class="text-light-300 pl-10">
+            <strong class="text-white">A:</strong> 100% remote! Konzeption, Beratung und Support erfolgen über Videocalls. Die Hardware-Installation können Sie selbst vornehmen (mit meiner Anleitung) oder über lokale Partner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <PriceService />
 

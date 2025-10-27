@@ -1,0 +1,91 @@
+---
+const comparisonFeatures = [
+  { feature: 'Preis (20 WEGs/Monat)', silvacore: '29 €', competitors: '29-449 €', note: 'Silvacore günstiger als Haufe, casavi, Domus' },
+  { feature: 'Starter WEG gratis', silvacore: true, competitors: false },
+  { feature: 'HKVO §6a Compliance', silvacore: 'Inklusive', competitors: 'Nur bei 3/8 Anbietern', note: 'Haufe, Immoware24, casavi (Add-on)' },
+  { feature: 'Verbrauchsabrechnung', silvacore: 'Inklusive', competitors: 'Oft Aufpreis' },
+  { feature: 'Dokumentenmanagement', silvacore: '10 GB/WEG', competitors: '5-10 GB', note: 'Unbegrenzter Speicher nur bei Premium-Tarifen' },
+  { feature: 'Monatlich kündbar', silvacore: true, competitors: 'Oft 12-24 Monate', note: 'Enterprise-Lösungen meist jährliche Verträge' },
+  { feature: 'Offene API', silvacore: true, competitors: 'Nur Enterprise', note: 'Haufe, Domus, casavi haben APIs' },
+  { feature: 'Made in Germany', silvacore: true, competitors: true },
+  { feature: 'Support', silvacore: 'Deutsch, KI-Bot, GitHub & Ticket', competitors: 'E-Mail oder KI-Bot', note: 'Domus Support wird kritisiert' },
+  { feature: 'Einrichtungsgebühren', silvacore: '0 €', competitors: '0-5.000 €', note: 'Enterprise: 2.000-5.000 € Einrichtung' },
+  { feature: 'Schulungskosten', silvacore: '0 € (Self-Service)', competitors: '0-2.000 €', note: 'Enterprise oft 1.000-2.000 € Schulung' },
+];
+---
+
+<section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+  <div class='mx-auto max-w-7xl'>
+    <div class='mx-auto max-w-2xl text-center mb-16'>
+      <h2 class='gsap-fadein text-base font-semibold text-green-400 mb-4' style='animation-delay: 0s'>
+        <i class='fa-solid fa-chart-mixed text-green-400 mr-2' aria-hidden='true'></i>
+        Warum Silvacore?
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
+        Der <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Unterschied</span> zu anderen Lösungen
+      </p>
+      <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
+        Feature-Vergleich mit etablierten WEG-Verwaltungslösungen
+      </p>
+    </div>
+
+    <div tabindex="0" class='gsap-fadein overflow-x-auto rounded-xl border border-light-500/20' style='animation-delay: 0.45s'>
+      <table class='w-full min-w-[640px]' role='table' aria-label='Feature-Vergleich: Silvacore vs. Wettbewerber'>
+        <thead class='bg-dark-950'>
+          <tr>
+            <th scope='col' class='px-4 sm:px-6 py-4 text-left text-xs sm:text-sm font-semibold text-light-100'>Feature</th>
+            <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-green-400'>
+              <i class='fa-solid fa-star mr-1' aria-hidden='true'></i>Silvacore
+            </th>
+            <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-light-100'>
+              <abbr title='immocloud, Immoware24, Win-CASA, etg24, casavi, Domus, Haufe axera'>Wettbewerber</abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody class='divide-y divide-light-500/10'>
+          {comparisonFeatures.map((item, index) => (
+            <tr class='gsap-fadein hover:bg-light-500/5 transition-colors bg-dark-900/50' style={`animation-delay: ${0.6 + index * 0.05}s`}>
+              <td class='px-4 sm:px-6 py-4 text-xs sm:text-sm font-medium text-white'>
+                {item.feature}
+                {item.note && (
+                  <span class='block text-xs text-light-400 mt-1 font-normal' role='note'>
+                    <i class='fa-solid fa-circle-info text-green-400 mr-1' aria-hidden='true'></i>{item.note}
+                  </span>
+                )}
+              </td>
+              <td class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm'>
+                {typeof item.silvacore === 'boolean' ? (
+                  item.silvacore ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-xl' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-xl' aria-label='Nicht verfügbar' role='img'></i>
+                  )
+                ) : (
+                  <span class='font-semibold text-green-400'>
+                    {item.silvacore}
+                  </span>
+                )}
+              </td>
+              <td class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm'>
+                {typeof item.competitors === 'boolean' ? (
+                  item.competitors ? (
+                    <i class='fa-solid fa-check-circle text-green-400 text-xl' aria-label='Verfügbar' role='img'></i>
+                  ) : (
+                    <i class='fa-solid fa-times-circle text-red-400 text-xl' aria-label='Nicht verfügbar' role='img'></i>
+                  )
+                ) : (
+                  <span class='text-light-300'>{item.competitors}</span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    
+    <p class='mt-6 text-sm text-light-400 text-center gsap-fadein' style='animation-delay: 1.2s'>
+      <i class='fa-solid fa-info-circle text-green-400 mr-2' aria-label='Information' role='img'></i>
+      <strong>Analysierte Wettbewerber:</strong> immocloud, Immoware24, Win-CASA, etg24, casavi, Domus, Haufe axera (Stand: Oktober 2025)
+    </p>
+  </div>
+</section>
