@@ -2,11 +2,11 @@
   "name": "GitHub",
   "image": "/brands/github-icon-1.svg",
   "productive": true,
-  "isActive": false,
+  "isActive": true,
   "fixedExperience": 2,
   "sinceLastRollup": "",
   "knowledgebase": "advanced",
-  "isTopSkill": false,
+  "isTopSkill": true,
   "isTechStack": false,
-  "layer": ["general"]
+  "layer": ["infrastructure", "general"]
 }

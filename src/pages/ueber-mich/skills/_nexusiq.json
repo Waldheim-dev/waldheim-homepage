@@ -8,5 +8,5 @@
   "knowledgebase": "basic",
   "isTopSkill": false,
   "isTechStack": false,
-  "layer": ["general"]
+  "layer": ["security", "quality"]
 }

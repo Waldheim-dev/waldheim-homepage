@@ -1,0 +1,69 @@
+---
+/**
+ * RelatedServices Component
+ * Zeigt verwandte Service-Links am Ende einer Service-Seite
+ * Verbessert Internal Linking für SEO
+ */
+
+interface Service {
+  title: string;
+  href: string;
+  icon: string;
+  description: string;
+  color: 'purple' | 'blue' | 'green' | 'orange' | 'pink';
+}
+
+interface Props {
+  services: Service[];
+  headline?: string;
+}
+
+const { 
+  services, 
+  headline = 'Weitere Services für Ihre digitale Transformation' 
+} = Astro.props;
+
+const colorClasses = {
+  purple: 'border-purple-500/20 hover:border-purple-500/40 text-purple-400',
+  blue: 'border-blue-500/20 hover:border-blue-500/40 text-blue-400',
+  green: 'border-green-500/20 hover:border-green-500/40 text-green-400',
+  orange: 'border-orange-500/20 hover:border-orange-500/40 text-orange-400',
+  pink: 'border-pink-500/20 hover:border-pink-500/40 text-pink-400',
+};
+---
+
+<section class="py-24 px-6 bg-dark-950">
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        {headline}
+      </h2>
+      <p class="text-lg text-light-300">
+        Entdecken Sie, wie unsere Services sich perfekt ergänzen
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {services.map((service) => (
+        <a 
+          href={service.href}
+          class={`group bg-dark-900/50 border ${colorClasses[service.color]} rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:shadow-${service.color}-500/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-${service.color}-500`}
+        >
+          <div class={`w-14 h-14 bg-${service.color}-500/10 border border-${service.color}-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <i class={`${service.icon} ${colorClasses[service.color]} text-2xl`} aria-hidden="true"></i>
+          </div>
+          <h3 class={`text-xl font-bold text-white mb-3 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_var(--tw-shadow-color)] group-hover:text-${service.color}-400 group-hover:shadow-${service.color}-400/50`}>
+            {service.title}
+          </h3>
+          <p class="text-light-300 mb-6">
+            {service.description}
+          </p>
+          <span class={`inline-flex items-center gap-2 ${colorClasses[service.color]} font-semibold group-hover:gap-4 transition-all duration-300`}>
+            Mehr erfahren
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

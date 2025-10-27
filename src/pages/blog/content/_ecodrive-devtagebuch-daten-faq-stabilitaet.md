@@ -2,7 +2,7 @@
 title: "Ecodrive DevTagebuch: Datenvisualisierung, FAQ & Stabilität"
 description: "Neues aus der Ecodrive-Entwicklung: Diagramme, Metriken, FAQ-Bereich und Fokus auf Stabilität. Alle Infos im DevTagebuch."
 pubDate: "2025-03-19"
-heroImage: ""
+heroImage: "/ecodrive/ecodrive_dashboard.webp"
 author: 'markus-waldheim'
 keywords: "ecodrive, DevTagebuch, Datenvisualisierung, FAQ, Stabilität, Entwicklung, Metriken"
 ---

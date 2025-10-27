@@ -2,7 +2,7 @@
 title: "ecodrive 1.0: Die kostenlose Effizienz-App für deinen Spritverbrauch"
 description: "Starte jetzt mit ecodrive 1.0, optimiere deinen Verbrauch und spare bares Geld. Alle Features und Ausblick auf kommende Updates."
 pubDate: "2025-03-19"
-heroImage: ""
+heroImage: "/ecodrive/ecodrive_dashboard.webp"
 author: 'markus-waldheim'
 keywords: "ecodrive, Effizienz, Spritkosten, kostenlose App, Fahrzeugverwaltung, Tankprotokoll, sparen"
 ---

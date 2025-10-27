@@ -2,7 +2,7 @@
 title: "Ecodrive DevTagebuch #1: Benutzereinladungen & Co. 👨‍💻"
 description: "Ecodrive-Update: Benutzereinladungen & neue Features! Visualisierung, Importe & FAQs verbessern die Fahrzeugverwaltung. Ihr Feedback zählt!"
 pubDate: "2025-02-24"
-heroImage: "https://images.unsplash.com/photo-1512236258305-32fb110fdb01?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/ecodrive/ecodrive_dashboard.webp"
 author: 'markus-waldheim'
 keywords: Ecodrive, Spritkosten, Spritsparen, Verbrauch, Effizienz, Fahrzeugverwaltung, Tankprotokoll, App, kostenlos, Fuhrparkverwaltung, Fahrtenbuch, Nachhaltigkeit, CO2-Reduktion, Fahrzeugrechner, Vorschau
 ---

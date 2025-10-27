@@ -11,6 +11,8 @@
     "test:visual": "playwright test",
     "test:visual:ui": "playwright test --ui",
     "test:visual:headed": "playwright test --headed",
+    "test:seo": "playwright test tests/seo-validation.spec.ts --reporter=list",
+    "test:seo:ui": "playwright test tests/seo-validation.spec.ts --ui",
     "lighthouse": "lhci autorun",
     "lighthouse:collect": "lhci collect",
     "lighthouse:assert": "lhci assert"

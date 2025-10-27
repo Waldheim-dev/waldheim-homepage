@@ -1,6 +1,13 @@
 User-agent: *
 Allow: /
-Disallow: /datenschutz/
-Disallow: /impressum/
+
+# Nur Utility-Seiten blockieren (haben bereits noindex Meta-Tag)
+Disallow: /danke/
+Disallow: /test-*
+Disallow: /*?*utm_source=
+Disallow: /*?*ref=
+
+# Datenschutz/Impressum NICHT blockieren (rechtlich wichtig!)
+# Diese haben noindex Meta-Tag, was für Indexierung ausreicht
 
 Sitemap: https://www.waldheim.dev/sitemap-index.xml
