@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+import RelatedServices from '../../../components/RelatedServices.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -17,7 +18,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 
 const titel = "Webdesign, Branding & UX/UI Design | waldheim.dev";
-const description = "Professionelles Webdesign, Branding, Printmedien und UX/UI-Design. Wir schaffen überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse.";
+const description = "Webdesign Augsburg & München: Professionelles Branding, UX/UI-Design, Printmedien. Überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse aus Bayern.";
 const keywords = "Webdesign, Branding, Corporate Design, Logo Design, Printmedien, UI Design, UX Design, User Experience, User Interface, Grafikdesign, Responsive Design";
 
 // Structured Data: Service
@@ -351,6 +352,32 @@ const ogImage = 'https://waldheim.dev/services/design-og.jpg';
 
 
   <PriceService />
+
+  <RelatedServices 
+    services={[
+      {
+        title: "Webentwicklung & Software",
+        href: "/services/entwicklung/",
+        icon: "fa-solid fa-code",
+        description: "Moderne Webanwendungen, APIs und maßgeschneiderte Softwarelösungen – technisch umgesetzt, was wir designen.",
+        color: "blue"
+      },
+      {
+        title: "DevSecOps & Automatisierung",
+        href: "/services/devsecops/",
+        icon: "fa-solid fa-shield-check",
+        description: "CI/CD-Pipelines, Kubernetes, GitOps – sichere Deployment-Prozesse für Ihre Design-Systeme.",
+        color: "purple"
+      },
+      {
+        title: "IT-Service & Cloud",
+        href: "/services/it-service/",
+        icon: "fa-solid fa-cloud",
+        description: "Cloud-Hosting, SSL-Zertifikate, Performance-Optimierung – Ihre Designs schnell und sicher ausgeliefert.",
+        color: "green"
+      }
+    ]}
+  />
 
   <Partner />
 

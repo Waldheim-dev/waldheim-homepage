@@ -1,0 +1,82 @@
+---
+/**
+ * TrackedButton Component
+ * 
+ * A reusable button/link component with built-in Google Analytics tracking.
+ * 
+ * Usage:
+ * <TrackedButton 
+ *   href="/kontakt" 
+ *   trackEvent="service_inquiry"
+ *   trackCategory="contact"
+ *   trackLabel="Hero CTA"
+ *   variant="primary"
+ * >
+ *   Jetzt beraten lassen
+ * </TrackedButton>
+ */
+
+interface Props {
+  href: string;
+  trackEvent: string;
+  trackCategory?: string;
+  trackLabel?: string;
+  trackValue?: number;
+  variant?: 'primary' | 'secondary' | 'gradient-green' | 'gradient-purple' | 'ghost';
+  icon?: string;
+  iconPosition?: 'left' | 'right';
+  class?: string;
+}
+
+const {
+  href,
+  trackEvent,
+  trackCategory = 'button',
+  trackLabel,
+  trackValue,
+  variant = 'primary',
+  icon,
+  iconPosition = 'right',
+  class: className = ''
+} = Astro.props;
+
+// Variant-spezifische Klassen
+const variantClasses = {
+  primary: 'bg-primary-800 border border-primary-500/30 text-white hover:shadow-lg hover:shadow-primary-500/50',
+  secondary: 'bg-dark-900/50 border border-light-500/30 text-white hover:bg-dark-900 hover:border-blue-500/50',
+  'gradient-green': 'bg-gradient-to-r from-green-400 to-emerald-500 text-dark-950 hover:shadow-lg hover:shadow-green-400/50',
+  'gradient-purple': 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-purple-500/50',
+  ghost: 'bg-transparent border border-light-500/50 text-white hover:bg-light-500/10'
+};
+
+const baseClasses = 'inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-300 gsap-fadein gsap-btn';
+const finalClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
+---
+
+<a
+  href={href}
+  class={finalClasses}
+  data-track-event={trackEvent}
+  data-track-category={trackCategory}
+  data-track-label={trackLabel}
+  data-track-value={trackValue}
+>
+  {icon && iconPosition === 'left' && (
+    <i class={icon} aria-hidden="true"></i>
+  )}
+  <slot />
+  {icon && iconPosition === 'right' && (
+    <i class={icon} aria-hidden="true"></i>
+  )}
+</a>
+
+<style>
+  /* Smooth hover scale effect */
+  a:hover {
+    transform: scale(1.02);
+  }
+  
+  a:active {
+    transform: scale(0.98);
+  }
+</style>

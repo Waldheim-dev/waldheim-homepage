@@ -1,19 +1,27 @@
 ---
-const { title, subtitle, image, video } = Astro.props;
+const { title, subtitle, image, video, posterImage } = Astro.props;
+
+// Video-Poster: Ersetze .mp4 mit -poster.jpg
+const defaultPoster = video ? video.replace('.mp4', '-poster.webp') : '';
+const poster = posterImage || defaultPoster;
 ---
 
 <div class="relative isolate">
     <div aria-hidden="true" class="absolute max-sm:w-full sm:inset-0 flex justify-center items-center py-12 px-3 md:px-12">
       <figure class="rounded-3xl overflow-hidden relative w-full h-full">
-          { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="lazy"/> : null }
+          { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="eager" width="1920" height="1080"/> : null }
           { video ?
             <video
               class="object-contains max-sm:max-w-none sm:w-full brightness-50"
-              preload="none"
-              poster=""
+              width="1920"
+              height="1080"
+              style="aspect-ratio: 16/9;"
+              preload="metadata"
+              poster={poster}
               autoplay
               loop
               muted
+              playsinline
               src={video}
             >
               <source

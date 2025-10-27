@@ -2,7 +2,7 @@
 title: "Ecodrive DevTagebuch #1: Benutzereinladungen & neue Features"
 description: "Einblick in die Entwicklung von ecodrive: Benutzereinladungen, Charts, Tenant-Wechsel und mehr. Community-Feedback willkommen!"
 pubDate: "2025-03-19"
-heroImage: ""
+heroImage: "/ecodrive/ecodrive_dashboard.webp"
 author: 'markus-waldheim'
 keywords: "ecodrive, DevTagebuch, Benutzereinladungen, Charts, FAQ, Entwicklung, Community"
 ---

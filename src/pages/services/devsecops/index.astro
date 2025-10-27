@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+import RelatedServices from '../../../components/RelatedServices.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -17,7 +18,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 
 const titel = 'DevSecOps Services - Automatisierung & Sicherheit | waldheim.dev';
-const description = 'Optimieren Sie Ihre Softwareentwicklung mit DevSecOps: Automatisierung, Sicherheit und Effizienz für GitHub & GitLab. Wir beschleunigen Ihre Entwicklungsprozesse mit CI/CD, Kubernetes und GitOps.';
+const description = 'DevSecOps-Beratung Augsburg & München: CI/CD-Automatisierung, Kubernetes, GitOps und Security. Wir optimieren Ihre Entwicklungsprozesse remote & vor Ort in Bayern.';
 const keywords = 'DevSecOps, DevOps, Continuous Integration, Continuous Delivery, CI/CD, Automatisierung, GitHub, GitLab, Sicherheit, Softwareentwicklung, Kubernetes, Docker, GitOps';
 
 // Structured Data: Service
@@ -506,6 +507,32 @@ const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
   </section>
 
   <PriceService />
+
+  <RelatedServices 
+    services={[
+      {
+        title: 'Softwareentwicklung',
+        href: '/services/entwicklung/',
+        icon: 'fa-solid fa-code',
+        description: 'Maßgeschneiderte Webanwendungen mit modernsten Technologien – von der Konzeption bis zum Go-Live.',
+        color: 'blue'
+      },
+      {
+        title: 'IT-Service & Support',
+        href: '/services/it-service/',
+        icon: 'fa-solid fa-server',
+        description: 'Zuverlässiger IT-Support für Netzwerke, Server und Cloud-Migrationen – vor Ort in Augsburg/München.',
+        color: 'green'
+      },
+      {
+        title: 'Webdesign & UX/UI',
+        href: '/services/design/',
+        icon: 'fa-solid fa-palette',
+        description: 'Professionelles Design für Markenidentität, Webseiten und benutzerfreundliche Interfaces.',
+        color: 'pink'
+      }
+    ]}
+  />
 
   <Partner />
 </Layout>
