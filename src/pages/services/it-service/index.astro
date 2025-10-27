@@ -4,22 +4,57 @@ import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 },{
-  name: 'Service',
-  link: Astro.url.hostname
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
 }, {
   name: 'IT-Service',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/services/it-service'
 }]);
 
-const titel = "IT-Service, Support & Netzwerktechnik - waldheim.dev"
-const description = "Zuverlässiger IT-Service: Netzwerk, Computer, Server (Windows, macOS, Linux) & Cloud-Migrationen. Ihr Partner für IT-Support in Augsburg, München und Umgebung."
-const keywords = "IT-Service, IT-Support, IT-Wartung, IT-Beratung, IT-Administration, Netzwerktechnik, Windows, macOS, Linux, Server, Cloud-Migration, Augsburg, München"
+const titel = "IT-Service, Support & Netzwerktechnik | Augsburg | waldheim.dev";
+const description = "Zuverlässiger IT-Service: Netzwerk, Computer, Server (Windows, macOS, Linux) & Cloud-Migrationen. Ihr Partner für IT-Support in Augsburg, München und Umgebung.";
+const keywords = "IT-Service, IT-Support, IT-Wartung, IT-Beratung, IT-Administration, Netzwerktechnik, Windows, macOS, Linux, Server, Cloud-Migration, Augsburg, München, Bayern";
+
+// Structured Data: Service
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'IT-Service & Support',
+  provider: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  serviceType: 'IT Support',
+  areaServed: ['Augsburg', 'München', 'Bayern', 'DE'],
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '70',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '70',
+      priceCurrency: 'EUR',
+      unitText: 'Stunde'
+    }
+  }
+};
+
+const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[serviceSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <ServiceHero 
     title="IT-Service"

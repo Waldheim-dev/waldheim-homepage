@@ -140,7 +140,7 @@ const projects = defineCollection({
 
     tags: z.array(z.string()).optional(),
     techStack: z.array(reference('skills')).optional(),
-    category: reference('project_kategorie'),
+    category: reference('projects_kategorie'),
 
     general: z.array(z.string()).optional(),
     frontend: z.array(z.string()).optional(),
