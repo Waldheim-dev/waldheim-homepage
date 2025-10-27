@@ -24,7 +24,33 @@ export default defineConfig({
 
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        // Test-Seiten nicht in Sitemap aufnehmen
+        return !page.includes('/test-') && 
+               !page.includes('/astro-ai-llms-txt');
+      },
+      changefreq: 'weekly',
+      lastmod: new Date(),
+      serialize: (item) => {
+        // Prioritäten nach URL-Muster setzen
+        if (item.url === 'https://www.waldheim.dev/') {
+          item.priority = 1.0; // Homepage
+        } else if (item.url.includes('/services/') || 
+                   item.url.includes('/silvacore/') ||
+                   item.url.includes('/ecodrive/') ||
+                   item.url.includes('/socialverse/')) {
+          item.priority = 0.9; // Hauptprodukte/Services
+        } else if (item.url.includes('/blog/')) {
+          item.priority = 0.7; // Blog-Artikel
+        } else if (item.url.includes('/referenzen/')) {
+          item.priority = 0.8; // Referenzen
+        } else {
+          item.priority = 0.6; // Sonstige
+        }
+        return item;
+      }
+    }),
     llmsTxt({
       site: 'https://www.waldheim.dev',
       projectName: 'waldheim.dev',
@@ -53,5 +79,5 @@ export default defineConfig({
   },
   compressHTML: true,
   scopedStyleStrategy: 'class',
-  trailingSlash: 'ignore'
+  trailingSlash: 'always', // Konsistente URLs: immer mit /
 });

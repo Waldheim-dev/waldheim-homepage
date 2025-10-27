@@ -16,7 +16,16 @@ export interface Props {
   robots?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Canonical URL ohne Query-Parameter & mit normalisiertem Trailing Slash
+let canonicalPath = Astro.url.pathname;
+
+// Trailing Slash hinzufügen (falls nicht vorhanden und keine Datei)
+if (!canonicalPath.endsWith('/') && !canonicalPath.includes('.')) {
+  canonicalPath += '/';
+}
+
+// Canonical ohne Query-Parameter (verhindert Duplikate durch ?utm_source etc.)
+const canonicalURL = new URL(canonicalPath, Astro.site).href;
 
 const organisationSchema = SchemaUtils.getOrganizationSchema({
   name: 'Waldheim.dev',

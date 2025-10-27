@@ -5,8 +5,8 @@
   "isActive": true,
   "fixedExperience": 0,
   "sinceLastRollup": "2002-01-01",
-  "knowledgebase": "advanced",
-  "isTopSkill": false,
+  "knowledgebase": "expert",
+  "isTopSkill": true,
   "isTechStack": false,
   "layer": ["system"]
 }

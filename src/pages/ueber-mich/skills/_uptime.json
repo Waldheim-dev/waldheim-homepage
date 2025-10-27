@@ -1,5 +1,5 @@
 {
-  "name": "Uptime",
+  "name": "Uptime Kuma",
   "image": "/brands/prometheus.svg",
   "productive": true,
   "isActive": true,
@@ -8,5 +8,5 @@
   "knowledgebase": "basic",
   "isTopSkill": false,
   "isTechStack": false,
-  "layer": ["general"]
+  "layer": ["infrastructure", "general"]
 }

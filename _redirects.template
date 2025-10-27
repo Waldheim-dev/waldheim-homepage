@@ -1,0 +1,112 @@
+# Netlify/Vercel Redirects Configuration
+# Dokumentation: https://docs.netlify.com/routing/redirects/
+
+# =============================================================================
+# WICHTIG: Diese Datei wird nach public/_redirects kopiert
+# Alle URLs aus Google Search Console "Nicht gefunden (404)" hier eintragen
+# =============================================================================
+
+# Format: /alte-url /neue-url STATUS_CODE
+# STATUS_CODE: 301 (permanent), 302 (temporary), 410 (gone/gelöscht)
+
+# -----------------------------------------------------------------------------
+# 1. LEGACY REDIRECTS (Alte URLs → Neue Struktur)
+# -----------------------------------------------------------------------------
+# TODO: Aus Google Search Console exportieren und hier eintragen
+# Beispiele:
+
+# /old-blog-url           /blog/new-slug/              301
+# /alte-service-seite     /services/neue-kategorie/    301
+# /produkte/old-name      /silvacore/                  301
+
+# -----------------------------------------------------------------------------
+# 2. TRAILING SLASH REDIRECTS (falls nötig)
+# -----------------------------------------------------------------------------
+# Normalerweise durch Astro Config gelöst (trailingSlash: 'always')
+# Falls manuelle Weiterleitungen nötig:
+
+# /services               /services/                   301
+# /silvacore              /silvacore/                  301
+# /ecodrive               /ecodrive/                   301
+
+# -----------------------------------------------------------------------------
+# 3. GELÖSCHTE INHALTE (410 Gone - sagt Google "nie wieder anfragen")
+# -----------------------------------------------------------------------------
+# Für Spam, temporäre Test-Seiten, die nie wiederkommen
+
+# /spam-seite             /                            410
+# /alter-test             /                            410
+
+# -----------------------------------------------------------------------------
+# 4. DOMAIN-WEITERLEITUNG (www vs. non-www)
+# -----------------------------------------------------------------------------
+# Falls nicht auf Server-Level (nginx/Apache) konfiguriert:
+
+# http://waldheim.dev/*   https://www.waldheim.dev/:splat   301!
+# https://waldheim.dev/*  https://www.waldheim.dev/:splat   301!
+
+# -----------------------------------------------------------------------------
+# 5. SPEZIELLE WEITERLEITUNGEN
+# -----------------------------------------------------------------------------
+
+# Alte Kontakt-URLs
+# /kontakt.html           /kontakt/                    301
+
+# Alte Blog-Struktur
+# /blog/:year/:month/:slug  /blog/:slug/               301
+
+# Alte Produkt-URLs
+# /products/*             /silvacore/                  301
+
+# -----------------------------------------------------------------------------
+# 6. CATCH-ALL (Fallback für nicht definierte URLs)
+# -----------------------------------------------------------------------------
+# Vorsicht: Kann zu viele Weiterleitungen erzeugen!
+# Besser: Jede 404 einzeln in GSC prüfen und hier eintragen
+
+# /* /404.html 404
+
+# =============================================================================
+# ANLEITUNG: 404-Fehler aus Google Search Console beheben
+# =============================================================================
+#
+# 1. Google Search Console öffnen
+#    → "Indexierung" → "Seiten" → "Nicht gefunden (404)"
+#
+# 2. CSV exportieren mit allen 404-URLs
+#
+# 3. Für jede URL entscheiden:
+#    a) Wichtiger Content → Seite wiederherstellen
+#    b) Umgezogen → 301 Redirect zur neuen URL
+#    c) Gelöscht/Spam → 410 Gone
+#
+# 4. Redirects hier eintragen
+#
+# 5. Datei nach public/_redirects kopieren:
+#    cp _redirects.template public/_redirects
+#
+# 6. Build & Deploy
+#
+# 7. Nach 1-2 Wochen: GSC prüfen, ob 404-Fehler weg sind
+#
+# =============================================================================
+
+# Beispiel-Template zum Ausfüllen:
+# --------------------------------
+# [Ihre 404-URL aus GSC]  [Ziel-URL]  [301 oder 410]
+
+# Beispiel für echte Weiterleitungen:
+# /alte-unterseite-xyz    /neue-unterseite-abc/  301
+# /veraltetes-produkt     /silvacore/             301
+# /blog/2023/alter-post   /blog/neuer-post/       301
+
+# =============================================================================
+# NÄCHSTE SCHRITTE
+# =============================================================================
+# [ ] 1. Google Search Console → 404-URLs exportieren
+# [ ] 2. Diese Datei ausfüllen mit tatsächlichen URLs
+# [ ] 3. Nach public/_redirects kopieren
+# [ ] 4. Build ausführen: pnpm build
+# [ ] 5. Deploy
+# [ ] 6. Nach 1 Woche GSC prüfen
+# =============================================================================

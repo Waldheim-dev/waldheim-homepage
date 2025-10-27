@@ -6,7 +6,7 @@
   "fixedExperience": 0,
   "sinceLastRollup": "2013-01-01",
   "knowledgebase": "advanced",
-  "isTopSkill": false,
+  "isTopSkill": true,
   "isTechStack": false,
   "layer": ["system"]
 }

@@ -1,0 +1,315 @@
+---
+/**
+ * Button Tracking Examples
+ * 
+ * Praktische Beispiele für alle gängigen Button-Typen mit GA4 Tracking
+ */
+import TrackedButton from '../components/TrackedButton.astro';
+---
+
+<!-- ===== HOMEPAGE HERO ===== -->
+<section>
+  <h1>Hero Section</h1>
+  
+  <!-- Primary CTA -->
+  <TrackedButton
+    href="/kontakt"
+    trackEvent="cta_homepage_contact"
+    trackCategory="hero"
+    trackLabel="Jetzt beraten lassen"
+    variant="primary"
+    icon="fa-solid fa-envelope"
+    iconPosition="left"
+  >
+    Jetzt beraten lassen
+  </TrackedButton>
+  
+  <!-- Secondary CTA -->
+  <TrackedButton
+    href="/referenzen/1/"
+    trackEvent="cta_homepage_references"
+    trackCategory="hero"
+    trackLabel="Referenzen"
+    variant="secondary"
+    icon="fa-solid fa-arrow-right"
+  >
+    Referenzen
+  </TrackedButton>
+</section>
+
+<!-- ===== SERVICE CARDS ===== -->
+<section>
+  <h2>Service Cards</h2>
+  
+  <!-- DevSecOps -->
+  <TrackedButton
+    href="/services/devsecops/"
+    trackEvent="cta_service_devsecops"
+    trackCategory="service_card"
+    trackLabel="DevSecOps Services"
+    variant="ghost"
+    icon="fa-solid fa-arrow-right"
+    class="!px-4 !py-2 !rounded-full border-purple-500/50 hover:bg-purple-500/20"
+  >
+    Zu meinen DevSecOps-Services
+  </TrackedButton>
+  
+  <!-- Entwicklung -->
+  <TrackedButton
+    href="/services/entwicklung/"
+    trackEvent="cta_service_development"
+    trackCategory="service_card"
+    trackLabel="Projekt anfragen"
+    variant="ghost"
+    icon="fa-solid fa-arrow-right"
+    class="!px-4 !py-2 !rounded-full border-blue-500/50 hover:bg-blue-500/20"
+  >
+    Jetzt Projekt anfragen
+  </TrackedButton>
+  
+  <!-- Design -->
+  <TrackedButton
+    href="/services/design/"
+    trackEvent="cta_service_design"
+    trackCategory="service_card"
+    trackLabel="Design-Philosophie"
+    variant="ghost"
+    icon="fa-solid fa-arrow-right"
+    class="!px-4 !py-2 !rounded-full border-pink-500/50 hover:bg-pink-500/20"
+  >
+    Design-Philosophie entdecken
+  </TrackedButton>
+  
+  <!-- IT-Service -->
+  <TrackedButton
+    href="/services/it-service/"
+    trackEvent="cta_service_it"
+    trackCategory="service_card"
+    trackLabel="Cloud-Services"
+    variant="ghost"
+    icon="fa-solid fa-arrow-right"
+    class="!px-4 !py-2 !rounded-full border-green-500/50 hover:bg-green-500/20"
+  >
+    Mehr über Cloud-Services
+  </TrackedButton>
+</section>
+
+<!-- ===== SILVACORE PRICING ===== -->
+<section>
+  <h2>Silvacore Pricing</h2>
+  
+  <!-- Free Plan -->
+  <TrackedButton
+    href="https://app.silvacore.de/register"
+    trackEvent="silvacore_signup"
+    trackCategory="pricing"
+    trackLabel="Silvacore Free"
+    trackValue={0}
+    variant="gradient-green"
+    icon="fa-solid fa-rocket"
+  >
+    Kostenlos starten
+  </TrackedButton>
+  
+  <!-- Professional Plan -->
+  <TrackedButton
+    href="https://app.silvacore.de/register?plan=professional"
+    trackEvent="silvacore_signup"
+    trackCategory="pricing"
+    trackLabel="Silvacore Professional"
+    trackValue={29}
+    variant="gradient-green"
+    icon="fa-solid fa-crown"
+  >
+    Professional wählen
+  </TrackedButton>
+  
+  <!-- Enterprise (Contact) -->
+  <TrackedButton
+    href="/kontakt"
+    trackEvent="silvacore_demo_request"
+    trackCategory="pricing"
+    trackLabel="Silvacore Enterprise"
+    variant="secondary"
+    icon="fa-solid fa-paper-plane"
+  >
+    Kontakt aufnehmen
+  </TrackedButton>
+</section>
+
+<!-- ===== ECODRIVE PRICING ===== -->
+<section>
+  <h2>Ecodrive Pricing</h2>
+  
+  <!-- Free Plan -->
+  <TrackedButton
+    href="https://ecodrive.app/register"
+    trackEvent="ecodrive_signup_start"
+    trackCategory="pricing"
+    trackLabel="Ecodrive Free"
+    trackValue={0}
+    variant="gradient-green"
+  >
+    Kostenlos testen
+  </TrackedButton>
+  
+  <!-- Premium Plan -->
+  <TrackedButton
+    href="https://ecodrive.app/register?plan=premium"
+    trackEvent="ecodrive_trial_start"
+    trackCategory="pricing"
+    trackLabel="Ecodrive Premium"
+    trackValue={4.99}
+    variant="gradient-green"
+    icon="fa-solid fa-star"
+  >
+    Premium wählen
+  </TrackedButton>
+</section>
+
+<!-- ===== SOCIALVERSE ===== -->
+<section>
+  <h2>Socialverse</h2>
+  
+  <!-- Waitlist -->
+  <TrackedButton
+    href="https://socialverse.app/waitlist"
+    trackEvent="socialverse_waitlist"
+    trackCategory="product"
+    trackLabel="Socialverse Waitlist"
+    variant="gradient-purple"
+    icon="fa-solid fa-bell"
+  >
+    Auf Warteliste setzen
+  </TrackedButton>
+  
+  <!-- Info Request -->
+  <TrackedButton
+    href="/kontakt"
+    trackEvent="socialverse_info_request"
+    trackCategory="product"
+    trackLabel="Socialverse Info"
+    variant="secondary"
+  >
+    Mehr erfahren
+  </TrackedButton>
+</section>
+
+<!-- ===== MANUELLES TRACKING (ohne TrackedButton) ===== -->
+<section>
+  <h2>Manuelles Tracking mit data-attributes</h2>
+  
+  <!-- Standard Link mit Tracking -->
+  <a 
+    href="/services/devsecops"
+    data-track-event="cta_service_devsecops"
+    data-track-category="manual"
+    data-track-label="DevSecOps Manual"
+    class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-800 text-white"
+  >
+    DevSecOps Services
+    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+  </a>
+  
+  <!-- Button mit Tracking -->
+  <button
+    data-track-event="button_click"
+    data-track-category="form"
+    data-track-label="Newsletter Subscribe"
+    class="px-6 py-3 bg-green-500 text-white rounded-lg"
+  >
+    Newsletter abonnieren
+  </button>
+</section>
+
+<!-- ===== PROGRAMMATISCHES TRACKING ===== -->
+<section>
+  <h2>Programmatisches Tracking</h2>
+  
+  <button id="customAction">Custom Action</button>
+</section>
+
+<script>
+  import { trackEvent, EVENTS } from '../utils/tracking';
+  
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.getElementById('customAction');
+    
+    btn?.addEventListener('click', () => {
+      trackEvent(EVENTS.BUTTON_CLICK, {
+        category: 'custom',
+        label: 'Custom Action Button',
+        button_text: 'Custom Action',
+        button_location: window.location.pathname
+      });
+      
+      console.log('✅ Custom event tracked!');
+    });
+  });
+</script>
+
+<!-- ===== VIDEO TRACKING ===== -->
+<section>
+  <h2>Video Tracking</h2>
+  
+  <video id="heroVideo" src="/videos/video_chip.mp4" controls></video>
+</section>
+
+<script>
+  import { trackVideo } from '../utils/tracking';
+  
+  document.addEventListener('astro:page-load', () => {
+    const video = document.getElementById('heroVideo') as HTMLVideoElement;
+    if (video) {
+      trackVideo(video, 'Hero Video Chip');
+    }
+  });
+</script>
+
+<!-- ===== EXTERNE LINKS ===== -->
+<section>
+  <h2>Externe Links</h2>
+  
+  <!-- GitHub -->
+  <a 
+    href="https://github.com/waldheimdev"
+    data-track-event="external_link_click"
+    data-track-category="social"
+    data-track-label="GitHub"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-github"></i>
+    GitHub
+  </a>
+  
+  <!-- LinkedIn -->
+  <a 
+    href="https://linkedin.com/in/waldheimdev"
+    data-track-event="external_link_click"
+    data-track-category="social"
+    data-track-label="LinkedIn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-linkedin"></i>
+    LinkedIn
+  </a>
+</section>
+
+<style>
+  section {
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+  
+  button, a {
+    margin: 0.5rem;
+  }
+</style>

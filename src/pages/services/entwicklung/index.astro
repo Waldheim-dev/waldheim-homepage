@@ -4,6 +4,7 @@ import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+import RelatedServices from '../../../components/RelatedServices.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -17,7 +18,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 
 const titel = 'Softwareentwicklung & Webentwicklung | waldheim.dev';
-const description = 'Maßgeschneiderte Software- & Webentwicklung, Toolings, Schulungen + Scrum/Product Owner Expertise. Wir entwickeln hochwertige Lösungen und geben unser Wissen weiter.';
+const description = 'Webentwicklung Augsburg & München: Maßgeschneiderte Web-Apps, Toolings, Scrum/Product Owner Expertise. Professionelle Softwareentwicklung in Bayern.';
 const keywords = 'Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen, TypeScript, React, Angular';
 
 // Structured Data: Service
@@ -266,7 +267,7 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
       
       <div class="grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <div class="gsap-fadein relative lg:col-span-3 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.3s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-performance.png" alt="Lichtgeschwindigkeit" loading="lazy">
+          <img class="h-80 w-full object-cover" src="/bento/bento-01-performance.webp" alt="Lighthouse Performance Score 100 – Optimierte Webentwicklung für maximale Ladegeschwindigkeit" loading="lazy">
           <div class="p-10">
             <h3 class="text-blue-400 font-semibold mb-2">Performance</h3>
             <p class="text-2xl font-bold text-white mb-3">Lichtgeschwindigkeit</p>
@@ -275,7 +276,7 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
         </div>
         
         <div class="gsap-fadein relative lg:col-span-3 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.45s">
-          <img class="h-80 w-full object-cover lg:object-right" src="/bento/bento-01-releases.png" alt="Push to deploy" loading="lazy">
+          <img class="h-80 w-full object-cover lg:object-right" src="/bento/bento-01-releases.webp" alt="CI/CD Pipeline mit GitHub Actions – Automatisches Deployment bei jedem Push" loading="lazy">
           <div class="p-10">
             <h3 class="text-blue-400 font-semibold mb-2">Releases</h3>
             <p class="text-2xl font-bold text-white mb-3">Push to deploy</p>
@@ -284,7 +285,7 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
         </div>
         
         <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.6s">
-          <img class="h-80 w-full object-cover object-left" src="/bento/bento-01-speed.png" alt="Zugriff für jeden" loading="lazy">
+          <img class="h-80 w-full object-cover object-left" src="/bento/bento-01-speed.webp" alt="WCAG 2.1 AA Konformität – Barrierefreie Webentwicklung für alle Nutzer" loading="lazy">
           <div class="p-10">
             <h3 class="text-blue-400 font-semibold mb-2">Barrierefreiheit</h3>
             <p class="text-2xl font-bold text-white mb-3">Zugriff für jeden</p>
@@ -293,7 +294,7 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
         </div>
         
         <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.75s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-network.png" alt="Testen ideal je nach Projekt" loading="lazy">
+          <img class="h-80 w-full object-cover" src="/bento/bento-01-network.webp" alt="Playwright Testing Framework – Unit-Tests, Integrationstests und E2E-Tests für zuverlässige Software" loading="lazy">
           <div class="p-10">
             <h3 class="text-blue-400 font-semibold mb-2">Teststrategien</h3>
             <p class="text-2xl font-bold text-white mb-3">Testen ideal je nach Projekt</p>
@@ -302,7 +303,7 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
         </div>
         
         <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.9s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-integrations.png" alt="Einbindung und Nutzung diverser Integrationen" loading="lazy">
+          <img class="h-80 w-full object-cover" src="/bento/bento-01-integrations.webp" alt="API-Integrationen mit Stripe, Sentry, Google Analytics – Moderne Webentwicklung mit Drittanbieter-Tools" loading="lazy">
           <div class="p-10">
             <h3 class="text-blue-400 font-semibold mb-2">Integrationen</h3>
             <p class="text-2xl font-bold text-white mb-3">Einbindung diverser Integrationen</p>
@@ -457,3 +458,35 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
 
   <!-- Quality Bento Grid -->
   <section class="py-24 px-6 bg-dark-900">
+</section>
+
+  <PriceService />
+
+  <RelatedServices 
+    services={[
+      {
+        title: "DevSecOps & Automatisierung",
+        href: "/services/devsecops/",
+        icon: "fa-solid fa-shield-check",
+        description: "CI/CD-Pipelines, Kubernetes, GitOps – Automatisierung und Sicherheit für Ihre Entwicklungsprozesse.",
+        color: "purple"
+      },
+      {
+        title: "Webdesign & UX/UI",
+        href: "/services/design/",
+        icon: "fa-solid fa-palette",
+        description: "Professionelles Design für Markenidentität, Webseiten und benutzerfreundliche Interfaces.",
+        color: "pink"
+      },
+      {
+        title: "Smart Home Beratung",
+        href: "/services/smarthome/",
+        icon: "fa-solid fa-house-signal",
+        description: "Unabhängige Beratung für Ihr individuelles Smart Home System – ohne Herstellerbindung.",
+        color: "orange"
+      }
+    ]}
+  />
+
+  <Partner />
+</Layout>

@@ -1,5 +1,5 @@
 {
-  "name": "msSQL",
+  "name": "MS SQL Server",
   "image": "/brands/microsoft-sql-server-1.svg",
   "productive": true,
   "isActive": false,
@@ -8,5 +8,5 @@
   "knowledgebase": "basic",
   "isTopSkill": false,
   "isTechStack": false,
-  "layer": ["database"]
+  "layer": ["database", "backend"]
 }

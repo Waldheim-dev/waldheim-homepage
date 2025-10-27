@@ -4,6 +4,7 @@ import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+import RelatedServices from '../../../components/RelatedServices.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -224,6 +225,32 @@ const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
   </section>
 
   <PriceService />
+
+  <RelatedServices 
+    services={[
+      {
+        title: "DevSecOps & Automatisierung",
+        href: "/services/devsecops/",
+        icon: "fa-solid fa-shield-check",
+        description: "Automatisierte Deployments, Monitoring und Security – für maximale Verfügbarkeit Ihrer IT-Infrastruktur.",
+        color: "purple"
+      },
+      {
+        title: "Webentwicklung & Software",
+        href: "/services/entwicklung/",
+        icon: "fa-solid fa-code",
+        description: "Individuelle Webanwendungen, Dashboards und Tools – perfekt integriert in Ihre IT-Landschaft.",
+        color: "blue"
+      },
+      {
+        title: "Smart Home Beratung",
+        href: "/services/smarthome/",
+        icon: "fa-solid fa-house-signal",
+        description: "Unabhängige Smart Home Lösungen – auch für Ihr Home-Office oder kleine Büros.",
+        color: "orange"
+      }
+    ]}
+  />
 
   <Partner />
 
