@@ -1,0 +1,227 @@
+---
+const competitorsComparison = [
+  { 
+    name: 'Ecodrive', 
+    price: 'Kostenlos', 
+    proPriceYear: '29,99 €/Jahr',
+    techno: 'Smartphone GPS',
+    features: 'Unbegrenzt',
+    fahrtenbuch: true, 
+    multiVehicle: 'Pro',
+    exportoption: true,
+    datev: false,
+    support: 'E-Mail + Community',
+    highlight: true
+  },
+  { 
+    name: 'Vimcar', 
+    price: '0 € (Hardware)', 
+    proPriceYear: '24,90 €/Monat (298,80 €/Jahr)',
+    techno: 'OBD2-Stecker',
+    features: 'Premium',
+    fahrtenbuch: true, 
+    multiVehicle: true,
+    exportoption: true,
+    datev: true,
+    support: 'E-Mail + Telefon',
+    highlight: false
+  },
+  { 
+    name: 'FLEETIZE', 
+    price: '0 € (Hardware)', 
+    proPriceYear: '19,95 €/Monat (239,40 €/Jahr)',
+    techno: 'OBD2-Stecker',
+    features: 'Premium',
+    fahrtenbuch: true, 
+    multiVehicle: true,
+    exportoption: true,
+    datev: true,
+    support: 'E-Mail + Chat',
+    highlight: false
+  },
+  { 
+    name: 'Driversnote', 
+    price: 'Kostenlos (15 Fahrten)', 
+    proPriceYear: '11 €/Monat (132 €/Jahr)',
+    techno: 'Smartphone GPS + iBeacon',
+    features: 'Basis',
+    fahrtenbuch: true, 
+    multiVehicle: 'Premium',
+    exportoption: true,
+    datev: false,
+    support: 'E-Mail',
+    highlight: false
+  },
+  { 
+    name: 'KFZ Fahrtenbuch', 
+    price: 'Kostenlos (manuell)', 
+    proPriceYear: '4,19 €/Monat (50,28 €/Jahr)',
+    techno: 'Smartphone GPS',
+    features: 'Basis',
+    fahrtenbuch: true, 
+    multiVehicle: 'Pro Plus',
+    exportoption: true,
+    datev: false,
+    support: 'FAQ',
+    highlight: false
+  },
+  { 
+    name: 'TRONITY (E-Autos)', 
+    price: 'Kostenlos (Basis)', 
+    proPriceYear: '7,99 €/Monat (95,88 €/Jahr)',
+    techno: 'Fahrzeug-API (hardwarefrei)',
+    features: 'EV-optimiert',
+    fahrtenbuch: true, 
+    multiVehicle: true,
+    exportoption: true,
+    datev: false,
+    support: 'E-Mail',
+    highlight: false
+  }
+];
+
+const comparisonFeatures = [
+  { feature: 'Tankbuch / Kostenerfassung', ecodrive: true, note: 'Mit Verbrauchsanalyse & Statistiken' },
+  { feature: 'Fahrtenbuch (GoBD-konform)', ecodrive: true, note: 'GPS-gestützt & manipulationssicher nach §8 EStG' },
+  { feature: 'Automatische Fahrterkennung', ecodrive: true, note: 'GPS-basiert, keine Hardware nötig' },
+  { feature: 'Wartungsplaner', ecodrive: true, note: 'Automatische Erinnerungen inkl. TÜV/AU' },
+  { feature: 'Kostenrechner (1%-Regelung)', ecodrive: true, note: 'Vergleich: 1%-Regelung vs. Fahrtenbuch' },
+  { feature: 'Multi-Fahrzeug (Pro)', ecodrive: true, note: 'Unbegrenzte Anzahl Fahrzeuge' },
+  { feature: 'E-Auto Ladekosten-Tracking', ecodrive: true, note: 'kWh-Erfassung & Ladestationen' },
+  { feature: 'Dark Mode', ecodrive: true, note: 'Automatisch & manuell schaltbar' },
+  { feature: 'PWA (Offline)', ecodrive: true, note: 'Funktioniert ohne Internet' },
+  { feature: 'CSV/Excel Export', ecodrive: true, note: 'Für Buchhaltung & Steuerberater' },
+  { feature: 'DATEV-Schnittstelle', ecodrive: false, note: 'Geplant für Q2 2026' },
+  { feature: 'OBD2-Hardware erforderlich', ecodrive: false, note: 'Rein App-basiert (Vorteil!)' },
+  { feature: 'API-Zugriff', ecodrive: false, note: 'Geplant für Q3 2026' },
+  { feature: 'Team-/Flottenmanagement', ecodrive: false, note: 'In Entwicklung für 2026' }
+];
+---
+
+<section class='py-20 px-6 bg-gradient-to-b from-dark-900 via-dark-950 to-dark-900'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16 gsap-fadein'>
+      <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+        Warum <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Ecodrive</span>?
+      </h2>
+      <p class='text-xl text-light-300 max-w-3xl mx-auto'>
+        Der Vergleich mit führenden Fahrtenbuch-Apps zeigt: Ecodrive bietet mehr Features – zu einem unschlagbaren Preis
+      </p>
+    </div>
+
+    <!-- Pricing Comparison Table -->
+    <div tabindex="0" class='gsap-fadein mb-20 overflow-x-auto rounded-xl border border-light-500/20' style='animation-delay: 0.15s'>
+      <table class='w-full min-w-max' role='table' aria-label='Preisvergleich Fahrtenbuch-Apps'>
+        <thead class='bg-dark-950'>
+          <tr>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-left text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>Anbieter</th>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>Technologie</th>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>Basis</th>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>Pro/Jahr</th>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>
+              <abbr title="DATEV-Integration für Steuerberater">DATEV</abbr>
+            </th>
+            <th scope='col' class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-light-100 whitespace-nowrap'>Support</th>
+          </tr>
+        </thead>
+        <tbody class='divide-y divide-light-500/10'>
+          {competitorsComparison.map((comp, index) => (
+            <tr 
+              class={`gsap-fadein hover:bg-light-500/5 transition-colors ${comp.highlight ? 'bg-primary-900/10 border-l-4 border-green-500' : 'bg-dark-900/50'}`}
+              style={`animation-delay: ${0.3 + index * 0.05}s`}
+            >
+              <td class='px-3 sm:px-4 py-4 text-xs sm:text-sm font-medium text-white whitespace-nowrap'>
+                {comp.highlight && <i class='fa-solid fa-star text-green-400 mr-2' aria-label='Unsere Empfehlung' role='img'></i>}
+                {comp.name}
+              </td>
+              <td class='px-3 sm:px-4 py-4 text-center text-xs text-light-300'>{comp.techno}</td>
+              <td class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm text-light-300'>{comp.price}</td>
+              <td class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm font-semibold text-green-400 whitespace-nowrap'>{comp.proPriceYear}</td>
+              <td class='px-3 sm:px-4 py-4 text-center'>
+                {comp.datev ? (
+                  <i class='fa-solid fa-check text-green-400 text-lg' aria-label='DATEV-Integration verfügbar' role='img'></i>
+                ) : (
+                  <i class='fa-solid fa-xmark text-red-400 text-lg' aria-label='Keine DATEV-Integration' role='img'></i>
+                )}
+              </td>
+              <td class='px-3 sm:px-4 py-4 text-center text-xs sm:text-sm text-light-300'>{comp.support}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Feature Comparison -->
+    <div class='gsap-fadein' style='animation-delay: 0.45s'>
+      <h3 class='text-3xl font-bold text-white text-center mb-12'>
+        Feature-Vergleich im Detail
+      </h3>
+      
+      <div class='grid md:grid-cols-2 gap-6'>
+        {comparisonFeatures.map((item, index) => (
+          <div 
+            class='gsap-fadein bg-dark-900/50 border border-light-500/10 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300'
+            style={`animation-delay: ${0.6 + index * 0.05}s`}
+          >
+            <div class='flex items-start gap-4'>
+              <div class='flex-shrink-0'>
+                {item.ecodrive ? (
+                  <i class='fa-solid fa-check-circle text-green-400 text-2xl' aria-label='Verfügbar' role='img'></i>
+                ) : (
+                  <i class='fa-solid fa-clock text-orange-400 text-2xl' aria-label='In Planung' role='img'></i>
+                )}
+              </div>
+              <div class='flex-1'>
+                <h4 class='text-lg font-semibold text-white mb-1'>{item.feature}</h4>
+                <p class='text-sm text-light-400'>{item.note}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- USP Section -->
+    <div class='mt-20 gsap-fadein bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8 text-center' style='animation-delay: 0.9s'>
+      <h3 class='text-2xl font-bold text-white mb-4'>
+        <i class='fa-solid fa-trophy text-green-400 mr-2' aria-hidden='true'></i>
+        Ecodrive: Dein Vorsprung
+      </h3>
+      <p class='text-lg text-light-300 max-w-3xl mx-auto mb-6'>
+        <strong class='text-white'>Kostenlos starten, nur upgraden wenn's sich lohnt.</strong> 
+        Keine versteckten Kosten, keine Kreditkarte erforderlich. 
+      </p>
+      <div class='grid md:grid-cols-3 gap-6 mt-8'>
+        <div class='bg-dark-900/50 border border-light-500/20 rounded-xl p-6'>
+          <div class='text-4xl mb-3'>🚫</div>
+          <h4 class='text-lg font-semibold text-white mb-2'>Keine Hardware</h4>
+          <p class='text-sm text-light-400'>
+            Anders als Vimcar oder FLEETIZE benötigt Ecodrive <strong class='text-white'>keinen OBD2-Stecker</strong> – 
+            keine Batterie-Belastung, keine Kompatibilitätsprobleme.
+          </p>
+        </div>
+        <div class='bg-dark-900/50 border border-light-500/20 rounded-xl p-6'>
+          <div class='text-4xl mb-3'>💶</div>
+          <h4 class='text-lg font-semibold text-white mb-2'>10x günstiger als Vimcar</h4>
+          <p class='text-sm text-light-400'>
+            <strong class='text-white'>29,99 € pro Jahr</strong> statt 298,80 €/Jahr bei Vimcar – 
+            spare <strong class='text-green-400'>268,81 €</strong> jährlich!
+          </p>
+        </div>
+        <div class='bg-dark-900/50 border border-light-500/20 rounded-xl p-6'>
+          <div class='text-4xl mb-3'>🇩🇪</div>
+          <h4 class='text-lg font-semibold text-white mb-2'>Made in Germany</h4>
+          <p class='text-sm text-light-400'>
+            <strong class='text-white'>100% DSGVO-konform</strong>, Server in Deutschland, 
+            GoBD-konforme Exporte nach §8 EStG.
+          </p>
+        </div>
+      </div>
+      <p class='text-sm text-light-400 mt-8'>
+        <i class='fa-solid fa-lightbulb text-yellow-400 mr-2' aria-hidden='true'></i>
+        <strong class='text-white'>Durchschnittliche Steuerersparnis mit Fahrtenbuch:</strong> 
+        2.500 - 2.800 € pro Jahr (Quelle: Vimcar, FLEETIZE)
+      </p>
+    </div>
+  </div>
+</section>

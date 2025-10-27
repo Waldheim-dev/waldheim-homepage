@@ -1,0 +1,63 @@
+---
+const testimonials = [
+  {
+    quote: 'Silvacore hat unsere WEG-Verwaltung revolutioniert. Die Nebenkostenabrechnung ist jetzt in 30 Minuten erledigt – früher brauchten wir einen ganzen Arbeitstag!',
+    author: 'Maria Schmidt',
+    role: 'Property Managerin, 12 WEGs',
+    image: '/markus/portrait.webp'
+  },
+  {
+    quote: 'Endlich verstehe ich, wohin meine Nebenkosten fließen. Die monatlichen Verbrauchsberichte sind Gold wert.',
+    author: 'Thomas Müller',
+    role: 'Eigentümer in München',
+    image: '/markus/portrait.webp'
+  },
+  {
+    quote: 'Der Preis ist unschlagbar. Für 45 € manage ich 10 WEGs – früher zahlte ich 300 € bei meinem alten Anbieter.',
+    author: 'Petra Klein',
+    role: 'Kleine Hausverwaltung',
+    image: '/markus/portrait.webp'
+  }
+];
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-base font-semibold leading-7 text-green-400 gsap-fadein">
+        Testimonials
+      </h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein">
+        Das sagen unsere Kunden
+      </p>
+    </div>
+    
+    <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((testimonial, index) => (
+          <div class="flex flex-col justify-between rounded-2xl bg-dark-900/50 p-8 border border-green-500/20 gsap-fadein" style={`animation-delay: ${index * 0.1}s`}>
+            <div>
+              <div class="flex gap-x-1 text-green-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="mt-4 text-base leading-7 text-light-300">
+                <p>"{testimonial.quote}"</p>
+              </div>
+            </div>
+            <div class="mt-6 flex items-center gap-x-4">
+              <img class="h-12 w-12 rounded-full bg-gray-50" src={testimonial.image} alt={testimonial.author} loading="lazy" />
+              <div>
+                <div class="font-semibold text-light-100">{testimonial.author}</div>
+                <div class="text-sm text-light-300">{testimonial.role}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

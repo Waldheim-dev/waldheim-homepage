@@ -1,0 +1,147 @@
+---
+const screenshots = [
+  {
+    title: 'AI-gestütztes CRM Dashboard',
+    description: 'Ihr intelligentes Kommandozentrum für modernes Marketing. KI-Analysen, Lead-Scoring und automatisierte Kampagnen – alles an einem Ort.',
+    image: '/socialverse/socialverse_dashboard.png',
+    alt: 'Socialverse Dashboard mit AI-gestützten Marketing-Analytics',
+    features: [
+      'Echtzeit Lead-Analytics',
+      'AI-Kampagnen-Empfehlungen',
+      'Performance-Metriken',
+      'DSGVO-konforme Speicherung'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Lead-Management mit KI',
+    description: 'Erfassen und qualifizieren Sie Leads automatisch. Unsere KI bewertet Leads nach Conversion-Wahrscheinlichkeit und schlägt optimale Aktionen vor.',
+    image: '/socialverse/socialverse_leads.png',
+    alt: 'Socialverse Lead-Management mit KI-Scoring',
+    features: [
+      'Automatisches Lead-Scoring',
+      'Smart Segmentierung',
+      'Lead-Nurturing-Workflows',
+      'Duplikaterkennung mit KI'
+    ],
+    side: 'right'
+  },
+  {
+    title: 'Kampagnen-Automation',
+    description: 'Erstellen Sie Multi-Channel-Kampagnen mit wenigen Klicks. Die KI optimiert Timing, Inhalte und Zielgruppen für maximale Conversion.',
+    image: '/socialverse/socialverse_campaigns.png',
+    alt: 'Socialverse Kampagnen-Management mit Automation',
+    features: [
+      'Multi-Channel Kampagnen',
+      'A/B-Testing automatisch',
+      'Personalisierte Inhalte',
+      'Performance-Tracking'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Social Media Integration',
+    description: 'Verbinden Sie alle Ihre Social-Media-Kanäle und steuern Sie sie zentral. Von Lead-Generierung bis Engagement-Tracking.',
+    image: '/socialverse/socialverse_socials.png',
+    alt: 'Socialverse Social-Media-Integration für Lead-Generierung',
+    features: [
+      'Facebook & Instagram Ads',
+      'LinkedIn Lead Gen Forms',
+      'Twitter/X Engagement',
+      'Automatisches Posting'
+    ],
+    side: 'right'
+  },
+  {
+    title: 'AI-Assistent für Marketing',
+    description: 'Ihr persönlicher Marketing-Assistent powered by AI. Generiert Texte, optimiert Kampagnen und gibt datenbasierte Empfehlungen.',
+    image: '/socialverse/socialverse_ai.png',
+    alt: 'Socialverse AI-Assistent für Marketing-Automation',
+    features: [
+      'Content-Generierung (GPT-4)',
+      'Automatische Optimierung',
+      'Trend-Analyse',
+      'Konkurrenz-Monitoring'
+    ],
+    side: 'left'
+  },
+  {
+    title: 'Detaillierte Lead-Profile',
+    description: 'Vollständige 360°-Sicht auf jeden Lead. Interaktionshistorie, Engagement-Score und automatisch erstellte Next-Best-Actions.',
+    image: '/socialverse/socialverse_lead.png',
+    alt: 'Socialverse detailliertes Lead-Profil mit Interaktionshistorie',
+    features: [
+      '360°-Kontaktansicht',
+      'Interaktionshistorie',
+      'Engagement-Timeline',
+      'Automatische Anreicherung'
+    ],
+    side: 'right'
+  }
+];
+---
+
+<section class='py-20 px-6 bg-dark-950'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='text-center mb-16 gsap-fadein'>
+      <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+        KI-Power für Ihr <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>Marketing</span>
+      </h2>
+      <p class='text-xl text-light-300 max-w-3xl mx-auto'>
+        Entdecken Sie, wie Socialverse künstliche Intelligenz nutzt, um Ihr Marketing zu revolutionieren
+      </p>
+    </div>
+
+    <div class='space-y-32'>
+      {screenshots.map((screenshot, index) => (
+        <div class={`gsap-fadein flex flex-col ${screenshot.side === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`} style={`animation-delay: ${index * 0.15}s`}>
+          <div class='flex-1'>
+            <h3 class='text-3xl font-bold text-white mb-4'>
+              {screenshot.title}
+            </h3>
+            <p class='text-lg text-light-300 mb-6'>
+              {screenshot.description}
+            </p>
+            <ul class='space-y-3'>
+              {screenshot.features.map((feature) => (
+                <li class='flex items-start gap-3 text-light-300'>
+                  <i class='fa-solid fa-sparkles text-purple-400 text-xl mt-1' aria-label='Feature enthalten' role='img'></i>
+                  <span class='text-lg'>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class='flex-1'>
+            <div class='relative'>
+              <div class='absolute -inset-4 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-2xl blur-xl'></div>
+              <img
+                src={screenshot.image}
+                alt={screenshot.alt}
+                loading='lazy'
+                class='relative rounded-xl shadow-2xl border border-light-500/10 hover:scale-105 transition-transform duration-300'
+              />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class='mt-20 text-center gsap-fadein bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-12' style='animation-delay: 0.9s'>
+      <h3 class='text-3xl font-bold text-white mb-4'>
+        <i class='fa-solid fa-lock text-purple-400 mr-2' aria-hidden='true'></i>
+        Closed Beta – Jetzt Zugang sichern!
+      </h3>
+      <p class='text-lg text-light-300 max-w-2xl mx-auto mb-6'>
+        Socialverse befindet sich aktuell in der <strong class='text-white'>Closed Beta</strong>. 
+        Werden Sie Early Adopter und sichern Sie sich lebenslangen Zugang zu einem Sonderpreis!
+      </p>
+      <a
+        href='/kontakt'
+        class='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300'
+      >
+        <i class='fa-solid fa-envelope' aria-hidden='true'></i>
+        Beta-Zugang anfragen
+      </a>
+    </div>
+  </div>
+</section>
