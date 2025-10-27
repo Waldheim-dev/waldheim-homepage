@@ -10,7 +10,10 @@
     "astro": "astro",
     "test:visual": "playwright test",
     "test:visual:ui": "playwright test --ui",
-    "test:visual:headed": "playwright test --headed"
+    "test:visual:headed": "playwright test --headed",
+    "lighthouse": "lhci autorun",
+    "lighthouse:collect": "lhci collect",
+    "lighthouse:assert": "lhci assert"
   },
   "dependencies": {
     "@astrojs/mdx": "4.3.7",
@@ -31,6 +34,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.56.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
@@ -51,6 +55,7 @@
     "playwright": "^1.56.1",
     "prettier": "3.6.x",
     "semantic-release": "24.2.9",
+    "sharp": "^0.34.4",
     "ts-node": "10.9.x",
     "typescript": "5.9.x"
   },

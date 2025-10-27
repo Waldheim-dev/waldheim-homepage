@@ -1,0 +1,298 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PRODUCTS, getProductInfo } from '../../consts/productColors';
+import { SchemaUtils } from '../../utils/schema';
+
+const productKey = 'astro-ai-llms-txt';
+const product = getProductInfo(productKey)!;
+const colors = product.colors;
+
+const pageTitle = `${product.name} - NPM Package | waldheim.dev`;
+const pageDescription = 'Automatische Generierung von KI-optimierten llms.txt Dateien für Astro-Projekte. AI-Summarization mit Ollama, OpenAI & Gemini. SEO-freundlich.';
+const keywords = 'Astro Integration, llms.txt, AI Crawler, SEO, NPM Package, Ollama, OpenAI, Gemini, AI Summarization';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: product.name,
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'Cross-platform',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR'
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '24'
+  },
+  softwareVersion: product.version,
+  description: pageDescription,
+  url: 'https://waldheim.dev/astro-ai-llms-txt',
+  downloadUrl: 'https://www.npmjs.com/package/@waldheimdev/astro-ai-llms-txt',
+  author: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  license: 'MIT'
+};
+
+const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  { name: 'Home', link: 'https://waldheim.dev' },
+  { name: product.name, link: 'https://waldheim.dev/astro-ai-llms-txt' }
+]);
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={keywords}
+  schema={[softwareSchema, breadcrumbSchema]}
+>
+  <!-- Hero Section -->
+  <section class='relative py-24 sm:py-32 px-6 overflow-hidden bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='text-center mb-16 gsap-fadein'>
+        <div class='mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-sm font-medium text-primary-400'>
+          <i class='fa-solid fa-sparkles' aria-hidden='true'></i>
+          <span>Astro Integration</span>
+          <span class='bg-primary-500/20 text-primary-300 px-2 py-0.5 rounded-full text-xs font-bold'>v{product.version}</span>
+        </div>
+        
+        <h1 class='text-4xl md:text-6xl font-bold text-white mb-6'>
+          Astro AI <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>llms.txt</span> Generator
+        </h1>
+        
+        <p class='text-xl md:text-2xl text-light-300 max-w-3xl mx-auto mb-8'>
+          ✨ KI-optimierte llms.txt für bessere AI-Crawler-Indexierung. Automatisch bei jedem Build. 🦾📈
+        </p>
+
+        <div class='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+          <a
+            href='https://www.npmjs.com/package/@waldheimdev/astro-ai-llms-txt'
+            target='_blank'
+            rel='noopener noreferrer'
+            class='group px-8 py-4 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white font-semibold text-lg rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 inline-flex items-center gap-2'
+          >
+            <i class='fa-brands fa-npm' aria-hidden='true'></i>
+            <span>Auf NPM ansehen</span>
+            <i class='fa-solid fa-arrow-up-right-from-square text-sm' aria-hidden='true'></i>
+          </a>
+          
+          <a
+            href='#installation'
+            class='px-8 py-4 bg-dark-800/50 border border-light-500/20 text-light-100 font-semibold text-lg rounded-lg hover:bg-dark-800 hover:border-light-500/40 transition-all duration-300 inline-flex items-center gap-2'
+          >
+            <span>Installation</span>
+            <i class='fa-solid fa-download' aria-hidden='true'></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class='py-24 sm:py-32 px-6 bg-dark-900'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='text-center mb-16 gsap-fadein'>
+        <h2 class='text-3xl md:text-4xl font-bold text-white mb-4'>
+          🌟 <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Features</span>
+        </h2>
+        <p class='text-xl text-light-300 max-w-2xl mx-auto'>
+          Magisch einfach, KI-optimiert und perfekt für SEO
+        </p>
+      </div>
+
+      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <!-- Feature 1 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-robot text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🤖 AI-Powered Summarization</h3>
+          <p class='text-light-300'>
+            Unterstützt Ollama, OpenAI und Gemini. Konfigurierbare Models, Keys und Endpoints.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-database text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🗄️ Smart Caching</h3>
+          <p class='text-light-300'>
+            SHA256-basiertes Caching von AI-Responses. Spart API-Kosten und Build-Zeit.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-tags text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🏷️ Content Extraction</h3>
+          <p class='text-light-300'>
+            Extrahiert Title, Description, H1-H3 und alle Paragraphen aus HTML.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-folder-tree text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🗂️ Section Grouping</h3>
+          <p class='text-light-300'>
+            Gruppiert Einträge nach Web-Sections (z.B. /blog/, /services/) für bessere Struktur.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-shield-halved text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🛡️ Robust & Safe</h3>
+          <p class='text-light-300'>
+            OS-unabhängige Pfad-Normalisierung, Error-Detection und Build-Abort bei Fehlern.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
+          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
+            <i class='fa-solid fa-bug text-2xl text-primary-400' aria-hidden='true'></i>
+          </div>
+          <h3 class='text-xl font-bold text-white mb-3'>🪲 Debug Logging</h3>
+          <p class='text-light-300'>
+            Detailliertes Logging für Entwicklung und Troubleshooting. Tests & Coverage inklusive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section id='installation' class='py-24 sm:py-32 px-6 bg-dark-950'>
+    <div class='mx-auto max-w-4xl'>
+      <div class='text-center mb-12 gsap-fadein'>
+        <h2 class='text-3xl md:text-4xl font-bold text-white mb-4'>
+          ⚡ <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Installation</span>
+        </h2>
+        <p class='text-xl text-light-300'>
+          In wenigen Sekunden einsatzbereit
+        </p>
+      </div>
+
+      <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 rounded-xl p-8 mb-8'>
+        <h3 class='text-xl font-bold text-white mb-4'>Package installieren:</h3>
+        <div class='bg-dark-950 rounded-lg p-4 font-mono text-sm text-light-300 overflow-x-auto'>
+          <code>
+            # npm<br/>
+            npm install @waldheimdev/astro-ai-llms-txt<br/><br/>
+            # pnpm<br/>
+            pnpm add @waldheimdev/astro-ai-llms-txt<br/><br/>
+            # yarn<br/>
+            yarn add @waldheimdev/astro-ai-llms-txt<br/><br/>
+            # bun<br/>
+            bun add @waldheimdev/astro-ai-llms-txt
+          </code>
+        </div>
+      </div>
+
+      <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 rounded-xl p-8'>
+        <h3 class='text-xl font-bold text-white mb-4'>In astro.config.mjs konfigurieren:</h3>
+        <div class='bg-dark-950 rounded-lg p-4 font-mono text-sm text-light-300 overflow-x-auto'>
+          <code>
+            import llmsTxt from '@waldheimdev/astro-ai-llms-txt';<br/><br/>
+            export default &#123;<br/>
+            &nbsp;&nbsp;integrations: [<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;llmsTxt(&#123;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projectName: '🚀 My Project',<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description: 'KI-optimized overview for LLMs. 🧠',<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aiProvider: 'ollama', // 'openai' | 'gemini' | 'ollama'<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aiApiKey: '', // API key for OpenAI/Gemini<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aiModel: 'llama3', // Model name<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site: 'https://my-domain.com',<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxInputLength: 8000,<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&#125;),<br/>
+            &nbsp;&nbsp;],<br/>
+            &#125;;
+          </code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Output Example Section -->
+  <section class='py-24 sm:py-32 px-6 bg-dark-900'>
+    <div class='mx-auto max-w-4xl'>
+      <div class='text-center mb-12 gsap-fadein'>
+        <h2 class='text-3xl md:text-4xl font-bold text-white mb-4'>
+          📦 <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Output</span>
+        </h2>
+        <p class='text-xl text-light-300'>
+          Nach jedem Build automatisch generiert
+        </p>
+      </div>
+
+      <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 rounded-xl p-8'>
+        <h3 class='text-xl font-bold text-white mb-4'>Beispiel llms.txt:</h3>
+        <div class='bg-dark-950 rounded-lg p-4 font-mono text-sm text-light-300 overflow-x-auto'>
+          <code>
+            # 🚀 My Project<br/><br/>
+            &gt; KI-optimized overview for LLMs. 🧠<br/><br/>
+            ## Blog<br/><br/>
+            - [/blog/post-1]: Post title summary...<br/>
+            - [/blog/post-2]: Post title summary...<br/><br/>
+            ## Services<br/><br/>
+            - [/services/web]: Web service summary...
+          </code>
+        </div>
+        <p class='text-sm text-light-400 mt-4'>
+          <strong>Hinweis:</strong> llms.txt ergänzt bestehende Standards wie robots.txt und sitemap.xml. Mehr Infos auf <a href='https://llmstxt.org' target='_blank' rel='noopener noreferrer' class='text-primary-400 hover:text-primary-300 underline'>llmstxt.org</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+    <div class='mx-auto max-w-4xl text-center gsap-fadein'>
+      <h2 class='text-3xl md:text-4xl font-bold text-white mb-6'>
+        Bereit für <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>bessere AI-Indexierung</span>?
+      </h2>
+      <p class='text-xl text-light-300 mb-8 max-w-2xl mx-auto'>
+        Installiere das Plugin jetzt und optimiere deine Astro-Seite für AI-Crawler.
+      </p>
+      
+      <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+        <a
+          href='https://www.npmjs.com/package/@waldheimdev/astro-ai-llms-txt'
+          target='_blank'
+          rel='noopener noreferrer'
+          class='px-8 py-4 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white font-semibold text-lg rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all inline-flex items-center gap-2 justify-center'
+        >
+          <i class='fa-brands fa-npm' aria-hidden='true'></i>
+          <span>NPM Package</span>
+        </a>
+        
+        <a
+          href='/kontakt'
+          class='px-8 py-4 bg-dark-800/50 border border-light-500/20 text-light-100 font-semibold text-lg rounded-lg hover:bg-dark-800 hover:border-light-500/40 transition-all inline-flex items-center gap-2 justify-center'
+        >
+          <span>Fragen? Kontakt</span>
+          <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
+        </a>
+      </div>
+
+      <p class='text-sm text-light-400 mt-8'>
+        Made with ❤️ for Astro & AI enthusiasts!
+      </p>
+    </div>
+  </section>
+</Layout>

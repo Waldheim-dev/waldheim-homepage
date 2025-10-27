@@ -4,23 +4,57 @@ import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import { SchemaUtils } from '../../../utils/schema';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 },{
-  name: 'Service',
-  link: Astro.url.hostname
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
 }, {
   name: 'Design',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/services/design'
 }]);
 
-const titel = "Webdesign, Branding & UX/UI Design - waldheim.dev"
-const description = "Professionelles Webdesign, Branding, Printmedien und UX/UI-Design. Wir schaffen überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse."
-const keywords = "Webdesign, Branding, Corporate Design, Logo Design, Printmedien, UI Design, UX Design, User Experience, User Interface, Grafikdesign"
+const titel = "Webdesign, Branding & UX/UI Design | waldheim.dev";
+const description = "Professionelles Webdesign, Branding, Printmedien und UX/UI-Design. Wir schaffen überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse.";
+const keywords = "Webdesign, Branding, Corporate Design, Logo Design, Printmedien, UI Design, UX Design, User Experience, User Interface, Grafikdesign, Responsive Design";
 
+// Structured Data: Service
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Webdesign, Branding & UX/UI Design',
+  provider: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  serviceType: 'Design Consulting',
+  areaServed: 'DE',
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '70',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '70',
+      priceCurrency: 'EUR',
+      unitText: 'Stunde'
+    }
+  }
+};
+
+const ogImage = 'https://waldheim.dev/services/design-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[serviceSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <ServiceHero 
     title="Design"

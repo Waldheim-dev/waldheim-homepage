@@ -4,22 +4,57 @@ import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import { SchemaUtils } from '../../../utils/schema';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 }, {
-  name: 'Service',
-  link: Astro.url.hostname
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
 }, {
-  name: 'DevOps',
-  link: Astro.url.href
+  name: 'DevSecOps',
+  link: 'https://waldheim.dev/services/devsecops'
 }]);
 
-const titel = 'DevSecOps Services - Automatisierung & Sicherheit - waldheim.dev';
-const description = 'Optimieren Sie Ihre Softwareentwicklung mit DevSecOps: Automatisierung, Sicherheit und Effizienz für GitHub & GitLab. Wir beschleunigen Ihre Entwicklungsprozesse';
-const keywords = 'DevSecOps, DevOps, Continuous Integration, Continuous Delivery, CI/CD, Automatisierung, GitHub, GitLab, Sicherheit, Softwareentwicklung';
+const titel = 'DevSecOps Services - Automatisierung & Sicherheit | waldheim.dev';
+const description = 'Optimieren Sie Ihre Softwareentwicklung mit DevSecOps: Automatisierung, Sicherheit und Effizienz für GitHub & GitLab. Wir beschleunigen Ihre Entwicklungsprozesse mit CI/CD, Kubernetes und GitOps.';
+const keywords = 'DevSecOps, DevOps, Continuous Integration, Continuous Delivery, CI/CD, Automatisierung, GitHub, GitLab, Sicherheit, Softwareentwicklung, Kubernetes, Docker, GitOps';
+
+// Structured Data: Service
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'DevSecOps Beratung & Implementierung',
+  provider: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  serviceType: 'DevSecOps Consulting',
+  areaServed: 'DE',
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '70',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '70',
+      priceCurrency: 'EUR',
+      unitText: 'Stunde'
+    }
+  }
+};
+
+const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[serviceSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <ServiceHero 
     title="DevSecOps"

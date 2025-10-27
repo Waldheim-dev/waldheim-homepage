@@ -4,22 +4,57 @@ import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 }, {
-  name: 'Service',
-  link: Astro.url.hostname
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
 }, {
   name: 'Softwareentwicklung',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/services/entwicklung'
 }]);
 
-const titel = 'Softwareentwicklung & Webentwicklung - waldheim.dev';
+const titel = 'Softwareentwicklung & Webentwicklung | waldheim.dev';
 const description = 'Maßgeschneiderte Software- & Webentwicklung, Toolings, Schulungen + Scrum/Product Owner Expertise. Wir entwickeln hochwertige Lösungen und geben unser Wissen weiter.';
-const keywords = 'Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen';
+const keywords = 'Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen, TypeScript, React, Angular';
+
+// Structured Data: Service
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Softwareentwicklung & Webentwicklung',
+  provider: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  serviceType: 'Software Development',
+  areaServed: 'DE',
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '70',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '70',
+      priceCurrency: 'EUR',
+      unitText: 'Stunde'
+    }
+  }
+};
+
+const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[serviceSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <ServiceHero 
     title="Entwicklung"
