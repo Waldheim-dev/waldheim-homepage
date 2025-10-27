@@ -1,104 +1,231 @@
 ---
 import { getCollection } from 'astro:content';
+
 const projects = (await getCollection('projects', ({data}) => data.isTopProject === true)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const categories = await getCollection('projects_kategorie');
 ---
 
-<section class="py-24 sm:py-32 overflow-hidden">
+<section class="py-24 sm:py-32 overflow-x-hidden">
   <div class="mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-2xl sm:text-center gsap-fadein">
-      <h2
-        class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl"
-      >
+      <h2 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">
         Vielfalt in Projekten: Meine Referenzen
       </h2>
       <p class="my-6 text-lg leading-8 text-light-300">
         Von Webentwicklung über DevSecOps bis zur Verbandssoftware – hier finden Sie eine Auswahl meiner Projekte.
       </p>
       <a
-        href="/referenzen/"
-        class="mt-6 rounded-xl px-6 py-3 bg-primary-800 text-white hover:bg-primary-800 shadow-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 inline-block font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
-        >Gesamtes Portfolio entdecken</a
-      >
+        href="/referenzen/1/"
+        class="mt-6 rounded-xl px-6 py-3 bg-primary-800 text-white hover:bg-primary-800 shadow-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 inline-block font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+        Gesamtes Portfolio entdecken
+      </a>
     </div>
-    <div class="relative isolate pt-16 xl:pb-48 pb-96">
-      <div class="flex absolute gap-16 slide">
-        {
-          projects.map((project) => (
-            <div class="bg-gradient-to-br from-dark-900/50 to-dark-950 border border-blue-500/20 gsap-fadein pb-12 sm:pb-36 xl:pb-8 rounded-2xl hover:border-blue-500/40 transition-all duration-300 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-blue-500">
-              <div class="mx-auto flex md:min-96 flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-                <div class="-mt-8 sm:w-full md:max-w-1xl xl:-mb-8">
-                  <div class="relative aspect-16/9 w-64 md:w-96 h-64 h-full md:-mx-8 xl:mx-0">
-                    <div
-                      class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
-
-                    <img
-                      class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                      src={project.data.heroImage}
-                      alt={project.data.title}
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <div class="md:min-w-96 xl:flex-auto">
-                  <figure class="relative isolate pt-6 sm:pt-12">
-                    <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                      <p class="gsap-fadein">{project.data.title}</p>
-                    </blockquote>
-                    <div class="font-medium text-slate-300">
-                        {categories.find(category => category.id === project.data?.category.id)?.data.name
-                        }
-                    </div>
-                    <figcaption class="mt-8 text-base">
-                      <a
-                        href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`}
-                        class="rounded-lg px-4 py-2 bg-primary-800 border border-primary-500/30 text-white hover:shadow-lg hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
-                      >
-                        Projekt ansehen
-                        <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
-                      </a>
-                    </figcaption>
-                  </figure>
+    <div class="relative isolate pt-16">
+      <div class="flex gap-4 sm:gap-8 md:gap-16 slide overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8">
+        {projects.map((project) => (
+          <div class="group relative bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 gsap-fadein rounded-2xl transition-all duration-300 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary-500 hover:shadow-xl hover:shadow-primary-500/20 min-w-[320px] sm:min-w-[400px] md:min-w-[500px] snap-center flex-shrink-0">
+            {/* Ambient Glow on Hover */}
+            <div class="absolute -inset-1 bg-gradient-to-r from-primary-500/0 via-cyan-500/0 to-primary-500/0 group-hover:from-primary-500/10 group-hover:via-cyan-500/10 group-hover:to-primary-500/10 rounded-2xl blur-xl transition-all duration-300 -z-20"></div>
+            <div class="mx-auto flex w-full max-w-2xl flex-col items-center gap-x-8 gap-y-8 px-6 lg:px-8">
+              <div class="-mt-8 w-full">
+                <div class="relative aspect-video w-full max-w-2xl mx-auto overflow-hidden rounded-3xl">
+                  {/* Subtle static gradient background */}
+                  <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-cyan-500/20 to-purple-500/20 blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-300 -z-10" />
+                  <img
+                    class="relative z-10 h-full w-full rounded-2xl bg-dark-800 object-cover shadow-2xl ring-1 ring-white/10 group-hover:scale-105 transition-transform duration-500"
+                    src={project.data.heroImage}
+                    alt={project.data.title}
+                    loading="lazy"
+                  />
                 </div>
               </div>
+              <div class="w-full max-w-2xl pb-8">
+                <figure class="relative isolate pt-6">
+                  <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                    <p class="gsap-fadein">{project.data.title}</p>
+                  </blockquote>
+                  <div class="font-medium text-light-400 mt-2">
+                    {categories.find(category => category.id === project.data?.category.id)?.data.name}
+                  </div>
+                  <figcaption class="mt-8 text-base">
+                    <a
+                      href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`}
+                      class="rounded-lg px-4 py-2 bg-primary-800 border border-primary-500/30 text-white hover:shadow-lg hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+                      Projekt ansehen
+                      <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
-          ))
-        }
+          </div>
+        ))}
+      </div>
+      
+      {/* Slide Indicators - Progress Pills */}
+      <div class="flex justify-center gap-2 mt-8" role="group" aria-label="Projekt-Indikator">
+        {projects.map((_, index) => (
+          <button
+            class="slide-indicator relative h-1 rounded-full bg-light-500/30 hover:bg-primary-500/50 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 overflow-hidden"
+            style={`width: ${100 / projects.length}%; max-width: 80px; min-width: 40px;`}
+            data-index={index}
+            aria-label={`Zu Projekt ${index + 1} springen`}
+          >
+            <div class="indicator-progress absolute inset-0 bg-primary-500 shadow-sm shadow-primary-500/50 origin-left scale-x-0 transition-none"></div>
+          </button>
+        ))}
       </div>
     </div>
   </div>
 </section>
 <script is:inline>
-  const slide = document.querySelector('.slide');
-  // rem to pixel
-  const gap = 64;
-  const pLeft = 32;
-
-  const innerTime = 2500;
-  const outerTime = innerTime * 2;
-  // change slide to left
-  const changeSlide = () => {
-    const first = slide.firstElementChild;
-
-    slide.style.transition = `transform ${innerTime}ms ease-in-out`;
-    slide.style.transform = `translateX(-${first.offsetWidth + gap}px)`;
-
-    setTimeout(() => {
-      slide.removeChild(first);
-      slide.appendChild(first);
-      slide.style.transition = 'none';
-      slide.style.transform = 'translateX(0)';
-    }, innerTime);
-  };
-
-  // scroll to left, but stop all on hover
-  slide.addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
+  document.addEventListener('astro:page-load', () => {
+    const slide = document.querySelector('.slide');
+    const indicators = document.querySelectorAll('.slide-indicator');
+    const progressBars = document.querySelectorAll('.indicator-progress');
+    if (!slide || !indicators.length) return;
+    
+    const getGap = () => {
+      if (window.innerWidth < 640) return 16;
+      if (window.innerWidth < 768) return 32;
+      return 64;
+    };
+    
+    let gap = getGap();
+    window.addEventListener('resize', () => { gap = getGap(); });
+    
+    const innerTime = 2500;
+    const outerTime = innerTime * 2;
+    let currentIndex = 0;
+    let progressAnimation = null;
+    
+    // Update active indicator and start progress animation
+    const updateIndicators = (animated = true) => {
+      const scrollLeft = slide.scrollLeft;
+      const cardWidth = slide.firstElementChild?.offsetWidth || 0;
+      const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+      
+      if (activeIndex !== currentIndex) {
+        currentIndex = activeIndex;
+      }
+      
+      progressBars.forEach((bar, index) => {
+        if (index < currentIndex) {
+          // Completed slides - full
+          bar.style.transform = 'scaleX(1)';
+          bar.style.transition = 'none';
+        } else if (index === currentIndex) {
+          // Active slide - animate
+          bar.style.transition = 'none';
+          bar.style.transform = 'scaleX(0)';
+          
+          if (animated) {
+            // Start animation after a tiny delay
+            setTimeout(() => {
+              bar.style.transition = `transform ${outerTime}ms linear`;
+              bar.style.transform = 'scaleX(1)';
+            }, 50);
+          }
+        } else {
+          // Future slides - empty
+          bar.style.transform = 'scaleX(0)';
+          bar.style.transition = 'none';
+        }
+      });
+      
+      // Update aria-current
+      indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+          indicator.setAttribute('aria-current', 'true');
+        } else {
+          indicator.removeAttribute('aria-current');
+        }
+      });
+    };
+    
+    // Click indicator to jump to slide
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        const cardWidth = slide.firstElementChild?.offsetWidth || 0;
+        slide.style.scrollBehavior = 'smooth';
+        slide.scrollLeft = index * (cardWidth + gap);
+        clearInterval(slideInterval);
+        currentIndex = index;
+        updateIndicators(true);
+        slideInterval = setInterval(changeSlide, outerTime);
+      });
+    });
+    
+    // Listen to scroll events
+    slide.addEventListener('scroll', () => {
+      const scrollLeft = slide.scrollLeft;
+      const cardWidth = slide.firstElementChild?.offsetWidth || 0;
+      const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+      
+      if (newIndex !== currentIndex) {
+        currentIndex = newIndex;
+        updateIndicators(false); // Don't animate on manual scroll
+      }
+    });
+    
+    // Initial update
+    updateIndicators(true);
+    
+    const changeSlide = () => {
+      const first = slide.firstElementChild;
+      if (!first) return;
+      slide.style.scrollBehavior = 'smooth';
+      slide.scrollLeft += first.offsetWidth + gap;
+      
+      setTimeout(() => {
+        if (slide.scrollLeft >= slide.scrollWidth - slide.clientWidth - 10) {
+          slide.style.scrollBehavior = 'auto';
+          slide.scrollLeft = 0;
+          currentIndex = 0;
+        }
+        updateIndicators(true);
+      }, innerTime);
+    };
+    
+    let slideInterval = setInterval(changeSlide, outerTime);
+    
+    const pauseSlider = () => {
+      clearInterval(slideInterval);
+      // Pause the current progress bar
+      progressBars[currentIndex].style.animationPlayState = 'paused';
+    };
+    
+    const resumeSlider = () => {
+      slideInterval = setInterval(changeSlide, outerTime);
+      // Resume the current progress bar
+      progressBars[currentIndex].style.animationPlayState = 'running';
+    };
+    
+    slide.addEventListener('mouseenter', pauseSlider);
+    slide.addEventListener('mouseleave', resumeSlider);
+    slide.addEventListener('focusin', pauseSlider);
+    slide.addEventListener('focusout', resumeSlider);
+    
+    let touchStartX = 0;
+    slide.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      pauseSlider();
+    });
+    
+    slide.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > 50) {
+        slide.style.scrollBehavior = 'smooth';
+        if (diff > 0) {
+          slide.scrollLeft += slide.firstElementChild.offsetWidth + gap;
+        } else {
+          slide.scrollLeft -= slide.firstElementChild.offsetWidth + gap;
+        }
+      }
+      
+      resumeSlider();
+    });
   });
-  slide.addEventListener('mouseleave', () => {
-    slideInterval = setInterval(changeSlide, outerTime);
-  });
-  let slideInterval = setInterval(changeSlide, outerTime);
-
-  // scroll to left smothly
 </script>

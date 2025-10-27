@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
+import { getProductInfo } from '../../consts/productColors';
 import PriceSilvacore from '../../components/PriceSilvacore.astro';
 import SilvaCoreProblem from '../../components/SilvaCoreProblem.astro';
 import SilvacoreFeatures from '../../components/SilvacoreFeatures.astro';
@@ -11,19 +13,64 @@ import SilvacoreComparison from '../../components/SilvacoreComparison.astro';
 import SilvacoreScreenshots from '../../components/SilvacoreScreenshots.astro';
 import SilvacoreRoadmap from '../../components/SilvacoreRoadmap.astro';
 
+const product = getProductInfo('silvacore')!;
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.host
+  link: 'https://waldheim.dev'
 },{
   name: 'Silvacore',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/silvacore'
 }]);
-const titel = "Silvacore: Professionelle WEG-Verwaltung | 1. WEG kostenlos"
-const description = "Die moderne Cloud-Lösung für Wohnungseigentümergemeinschaften in Deutschland. Rechtssicher, DSGVO-konform und made in Germany. 1. WEG kostenlos, jede weitere nur 5 € / Monat."
-const keywords = "WEG-Verwaltung, Wohnungseigentümergemeinschaft, Hausverwaltung, DSGVO, Nebenkostenabrechnung, HKVO, Property Management, Immobilienverwaltung"
 
+const titel = "Silvacore: Professionelle WEG-Verwaltung | 1. WEG kostenlos | waldheim.dev";
+const description = "Die moderne Cloud-Lösung für Wohnungseigentümergemeinschaften in Deutschland. Rechtssicher, DSGVO-konform und made in Germany. 1. WEG kostenlos, jede weitere nur 5 € / Monat.";
+const keywords = "WEG-Verwaltung, Wohnungseigentümergemeinschaft, Hausverwaltung, DSGVO, Nebenkostenabrechnung, HKVO, Property Management, Immobilienverwaltung, Cloud-Verwaltung";
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: product.name,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Starter (1 WEG)',
+      price: '0',
+      priceCurrency: 'EUR',
+      billingDuration: 'P1M'
+    },
+    {
+      '@type': 'Offer',
+      name: 'Pro (unbegrenzt WEGs)',
+      price: '5',
+      priceCurrency: 'EUR',
+      billingDuration: 'P1M'
+    }
+  ],
+  softwareVersion: product.version,
+  releaseNotes: 'Closed Alpha - Vollständige WEG-Verwaltung',
+  description: description,
+  url: 'https://waldheim.dev/silvacore',
+  author: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  featureList: 'WEG-Verwaltung, DSGVO-konform, Nebenkostenabrechnung, Protokollverwaltung, Cloud-basiert'
+};
+
+const ogImage = 'https://waldheim.dev/silvacore/silvacore-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <section class='relative isolate pt-14 pb-20 px-6 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950'>
     <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
@@ -94,12 +141,11 @@ const keywords = "WEG-Verwaltung, Wohnungseigentümergemeinschaft, Hausverwaltun
 
       <div class='gsap-fadein relative max-w-5xl mx-auto' style='animation-delay: 0.9s'>
         <div class='absolute inset-0 bg-gradient-to-r from-green-400/20 via-emerald-500/20 to-green-400/20 blur-3xl -z-10'></div>
-        <img
+        <Image
           src='/silvacore/silvacore_dashboard.png'
           alt="Silvacore Dashboard-Übersicht mit Statistiken zu WEGs, Finanzen und aktuellen Aufgaben. Zeigt eine moderne, benutzerfreundliche Oberfläche mit Echtzeitdaten."
-          loading="lazy"
-          width="2432"
-          height="1442"
+          width={2291}
+          height={1304}
           class='rounded-2xl shadow-2xl border border-light-500/20'
         />
       </div>

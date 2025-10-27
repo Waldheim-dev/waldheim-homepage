@@ -1,24 +1,61 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
+import { getProductInfo } from '../../consts/productColors';
 import PriceEcodrive from '../../components/PriceEcodrive.astro';
 import EcodriveRoadmap from '../../components/EcodriveRoadmap.astro';
 import EcodriveFeatures from '../../components/EcodriveFeatures.astro';
 import EcodriveScreenshots from '../../components/EcodriveScreenshots.astro';
 import EcodriveComparison from '../../components/EcodriveComparison.astro';
+
+const product = getProductInfo('ecodrive')!;
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.host
+  link: 'https://waldheim.dev'
 },{
   name: 'Ecodrive',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/ecodrive'
 }]);
-const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren"
-const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!"
-const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren"
 
+const titel = "Ecodrive: Nachhaltig & kosteneffizient fahren | waldheim.dev";
+const description = "Ecodrive: Die Software für nachhaltiges und kostenbewusstes Fahren. Protokollierung, Analyse und Kostenübersicht für alle Fahrzeugtypen. Senken Sie Ihren CO2-Fußabdruck und sparen Sie Geld!";
+const keywords = "Ecodrive, Nachhaltigkeit, Sprit sparen, Fahrertraining, CO2-Reduktion, Kostenübersicht, Fahrzeugdaten, Protokollierung, umweltfreundliches Fahren, Fahrtenbuch";
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: product.name,
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Web, iOS, Android',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/PreOrder'
+  },
+  softwareVersion: product.version,
+  releaseNotes: 'Closed Alpha Version - Registrierung erforderlich',
+  description: description,
+  url: 'https://waldheim.dev/ecodrive',
+  author: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  screenshot: 'https://waldheim.dev/ecodrive/screenshot.png'
+};
+
+const ogImage = 'https://waldheim.dev/ecodrive/og-image.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <div class='relative isolate pt-14'>
     <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
       <div

@@ -2,17 +2,19 @@
 
 const {title} = Astro.props;
 ---
-<div class="bg-dark-900">
+<div class="bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950">
   <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="relative isolate overflow-hidden bg-dark-950/50 border border-blue-500/30 px-6 py-24 text-center shadow-2xl sm:rounded-2xl sm:px-16">
+    <div class="relative isolate overflow-hidden bg-dark-900/50 backdrop-blur-sm border border-light-500/20 hover:border-primary-500/30 px-6 py-24 text-center shadow-2xl shadow-primary-500/10 sm:rounded-2xl sm:px-16 transition-all duration-300 group">
+      
+      <!-- Ambient Glow on Hover -->
+      <div class="absolute -inset-2 bg-gradient-to-r from-primary-500/10 via-cyan-500/10 to-primary-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+      
       <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl gsap-fadein">Boost your productivity today</h2>
       <p class="mx-auto mt-6 max-w-xl text-pretty text-lg/8 text-light-300 gsap-fadein">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#" class="rounded-xl bg-primary-800 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-lg hover:shadow-primary-500/50 hover:bg-primary-800 transition-all duration-300 gsap-fadein">Get started</a>
-        <a href="#" class="text-sm/6 font-semibold text-blue-400 hover:text-blue-300 transition-colors gsap-fadein">Learn more <span aria-hidden="true">→</span></a>
+        <a href="#" class="rounded-xl bg-gradient-to-r from-primary-500/90 to-primary-600/90 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-primary-500/50 transition-all duration-300 gsap-fadein focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Get started</a>
+        <a href="#" class="text-sm/6 font-semibold text-primary-400 hover:text-primary-300 transition-colors gsap-fadein focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Learn more <span aria-hidden="true">→</span></a>
       </div>
-      <!-- Background gradient decoration -->
-      <div class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-x-1/2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl rounded-full" aria-hidden="true"></div>
     </div>
   </div>
 </div>

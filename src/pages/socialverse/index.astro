@@ -1,23 +1,62 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
+import { getProductInfo } from '../../consts/productColors';
 import SocialverseScreenshots from '../../components/SocialverseScreenshots.astro';
 import SocialverseFeatures from '../../components/SocialverseFeatures.astro';
 import SocialverseComparison from '../../components/SocialverseComparison.astro';
 import PriceSocialverse from '../../components/PriceSocialverse.astro';
+
+const product = getProductInfo('socialverse')!;
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.host
+  link: 'https://waldheim.dev'
 },{
   name: 'Socialverse',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/socialverse'
 }]);
-const titel = "Socialverse: AI-CRM & Marketing-Automation made in Germany"
-const description = "Socialverse: DSGVO-konforme Lead-Generierung und Marketing-Automation mit KI. Automatisierte Kampagnen, Lead-Scoring und Multi-Channel-Integration für moderne Unternehmen."
-const keywords = "Socialverse, CRM, Marketing-Automation, AI, Lead-Generierung, DSGVO, GPT-4, Social Media, Campaign Management, Lead-Scoring"
 
+const titel = "Socialverse: AI-CRM & Marketing-Automation made in Germany | waldheim.dev";
+const description = "Socialverse: DSGVO-konforme Lead-Generierung und Marketing-Automation mit KI. Automatisierte Kampagnen, Lead-Scoring und Multi-Channel-Integration für moderne Unternehmen.";
+const keywords = "Socialverse, CRM, Marketing-Automation, AI, Lead-Generierung, DSGVO, GPT-4, Social Media, Campaign Management, Lead-Scoring, KI-Marketing";
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: product.name,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/PreOrder',
+    priceValidUntil: '2026-03-31'
+  },
+  softwareVersion: product.version,
+  releaseNotes: 'Closed Beta - Early Bird 50% Rabatt',
+  description: description,
+  url: 'https://waldheim.dev/socialverse',
+  author: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  featureList: 'AI-gestützte Lead-Generierung, Marketing-Automation, DSGVO-konform, Multi-Channel-Integration'
+};
+
+const ogImage = 'https://waldheim.dev/socialverse/socialverse.svg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <div class='relative isolate pt-14'>
     <!-- Background Gradient (Purple/Pink) -->
@@ -73,12 +112,11 @@ const keywords = "Socialverse, CRM, Marketing-Automation, AI, Lead-Generierung, 
         <!-- Hero Dashboard Screenshot with Gradient Glow -->
         <div class='relative isolate mt-16 sm:mt-24 gsap-fadein' style='animation-delay: 0.4s'>
           <div class='absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity'></div>
-          <img
+          <Image
             src='/socialverse/socialverse_dashboard.png'
             alt="Socialverse AI-Dashboard mit Lead-Scoring und Campaign Analytics"
-            loading="eager"
-            width="2432"
-            height="1442"
+            width={1200}
+            height={800}
             class='relative z-10 rounded-xl bg-dark-950/50 shadow-2xl ring-1 ring-purple-500/20 w-full'
           />
         </div>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import { SchemaUtils } from '../utils/schema';
 import HeroBackground from '../components/HeroBackground.astro';
@@ -16,15 +17,60 @@ import SocialverseClaim from '../components/SocialverseClaim.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.href
+  link: 'https://waldheim.dev'
 }]);
 
-const titel = 'waldheim.dev: IT-Lösungen für KMU, Vereine & Startups';
+// Organization Schema
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'waldheim.dev',
+  url: 'https://waldheim.dev',
+  logo: 'https://waldheim.dev/waldheim.dev.svg',
+  description: 'IT-Dienstleistungen für KMU, Vereine & Startups: DevSecOps, Webentwicklung, Design, IT-Service, Smart Home',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Werner-Haas-Str. 8',
+    addressLocality: 'Augsburg',
+    postalCode: '86153',
+    addressCountry: 'DE',
+    addressRegion: 'Bayern'
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Kundenservice',
+    email: 'kontakt@waldheim.dev'
+  },
+  areaServed: ['Augsburg', 'München', 'Bayern', 'DE', 'AT', 'CH']
+};
+
+// WebSite Schema
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'waldheim.dev',
+  url: 'https://waldheim.dev',
+  description: 'Professionelle IT-Dienstleistungen: DevSecOps, Webentwicklung, Design, IT-Service',
+  publisher: {
+    '@type': 'Organization',
+    name: 'waldheim.dev'
+  }
+};
+
+const titel = 'waldheim.dev: IT-Lösungen für KMU, Vereine & Startups | Augsburg';
 const description = 'waldheim.dev: Ihr Partner für hochwertige IT-Dienstleistungen (DevSecOps, Entwicklung, Design, IT-Service). Qualität zum fairen Preis (70€/Std.). Kontaktieren Sie uns! (Augsburg, München, DACH)';
-const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups';
+const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups, Cloud, Smart Home';
+
+const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
 ---
 
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[organizationSchema, websiteSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <HeroBackground title="Nachhaltige IT-Lösungen aus einer Hand"
                   subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
 
@@ -83,7 +129,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                     </li>
                   </ul>
                 </div>
-                <img src="/bento/cert.webp" loading="lazy" alt="Qualität bei Waldheim.dev" class="rounded-lg" />
+                <Image src="/bento/cert.webp" alt="Qualität bei Waldheim.dev" class="rounded-lg" width={600} height={546} />
               </div>
             </div>
           </div>
@@ -157,7 +203,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
                 </a>
               </div>
-              <img src="/bento/design.webp" loading="lazy" class="-m-6 rounded-lg" alt="Design" />
+              <Image src="/bento/design.webp" alt="Design" class="-m-6 rounded-lg" width={600} height={480} />
             </div>
           </div>
           <!-- IT-Service / Cloud Card -->
@@ -178,7 +224,7 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                   <i class='fa-solid fa-arrow-right text-sm' aria-hidden='true'></i>
                 </a>
               </div>
-              <img src="/bento/security.webp" loading="lazy" class="-m-6 rounded-lg" alt="Security" />
+              <Image src="/bento/security.webp" alt="Security" class="-m-6 rounded-lg" width={600} height={600} />
             </div>
           </div>
           
@@ -213,9 +259,9 @@ const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwick
                 </ul>
               </div>
               <div class="relative flex gap-2 flex-wrap justify-center md:justify-end">
-                <img src="/bento/PSMI.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1." />
-                <img src="/bento/PSMII.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2." />
-                <img src="/bento/PSPOI.png" class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" loading="lazy" alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1." />
+                <Image src="/bento/PSMI.png" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 1." class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" width={400} height={400} />
+                <Image src="/bento/PSMII.png" alt="Markus Waldheim - Zertifizierter Professional Scrum Master 2." class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" width={400} height={400} />
+                <Image src="/bento/PSPOI.png" alt="Markus Waldheim - Zertifizierter Professional Scrum Product Owner 1." class="sm:h-40 sm:w-40 w-[33%] aspect-square rounded-lg shadow-lg" width={400} height={400} />
               </div>
             </div>
           </div>

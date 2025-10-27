@@ -112,7 +112,151 @@ test.describe('Barrierefreiheit (A11y) Tests', () => {
       .withTags(['wcag2a', 'wcag2aa'])
       .analyze();
     
-    console.log('\n�� ECODRIVE:');
+    console.log('\n📊 ECODRIVE:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('Ausgabeschein Generator', async ({ page }) => {
+    await page.goto('/ausgabeschein-generator');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 AUSGABESCHEIN GENERATOR:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('Astro AI llms.txt Generator', async ({ page }) => {
+    await page.goto('/astro-ai-llms-txt');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 ASTRO AI LLMS.TXT:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('DevSecOps Service', async ({ page }) => {
+    await page.goto('/services/devsecops');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 DEVSECOPS:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('Design Service', async ({ page }) => {
+    await page.goto('/services/design');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 DESIGN:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('IT-Service', async ({ page }) => {
+    await page.goto('/services/it-service');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 IT-SERVICE:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
+  test('Smarthome Service', async ({ page }) => {
+    await page.goto('/services/smarthome');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 SMARTHOME:');
     console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
     console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
     

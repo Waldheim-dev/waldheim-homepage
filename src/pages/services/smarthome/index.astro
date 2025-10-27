@@ -4,22 +4,57 @@ import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 },{
-  name: 'Service',
-  link: Astro.url.hostname
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
 }, {
-  name: 'Smarthome',
-  link: Astro.url.href
+  name: 'Smart Home',
+  link: 'https://waldheim.dev/services/smarthome'
 }]);
 
-const titel = "Smart Home Konzepte & Beratung - waldheim.dev"
-const description = "Unabhängige Smart Home Beratung & Konzepte: Wir helfen Ihnen, Ihr individuelles, kostengünstiges Smart Home System zu planen und umzusetzen – ohne Herstellerbindung."
-const keywords = "Smart Home, Hausautomation, IoT, unabhängige Beratung, Smart Home Installation, Konzepte, Eigenbau"
+const titel = "Smart Home Konzepte & Beratung | Unabhängig | waldheim.dev";
+const description = "Unabhängige Smart Home Beratung & Konzepte: Wir helfen Ihnen, Ihr individuelles, kostengünstiges Smart Home System zu planen und umzusetzen – ohne Herstellerbindung.";
+const keywords = "Smart Home, Hausautomation, IoT, unabhängige Beratung, Smart Home Installation, Konzepte, Eigenbau, Home Assistant, MQTT, Z-Wave, Zigbee";
+
+// Structured Data: Service
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Smart Home Beratung & Konzepte',
+  provider: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  serviceType: 'Smart Home Consulting',
+  areaServed: 'DE',
+  description: description,
+  offers: {
+    '@type': 'Offer',
+    price: '70',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '70',
+      priceCurrency: 'EUR',
+      unitText: 'Stunde'
+    }
+  }
+};
+
+const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[serviceSchema, breadCrumbSchema]}
+  image={ogImage}
+>
   <!-- Hero Section -->
   <ServiceHero 
     title="Smart Home"
