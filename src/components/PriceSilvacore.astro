@@ -2,17 +2,17 @@
 // SaaS Pricing Tiers
 const pricingTiers = [
   {
-    id: 'free',
+    id: 'starter',
     name: 'Starter',
     price: '0',
     period: 'kostenlos',
     description: 'Perfekt zum Testen und für kleine Verwaltungen',
     features: [
-      'Bis zu 3 WEGs',
+      'Bis zu 1 WEG',
       'Unbegrenzte Eigentümer & Einheiten',
       '5 GB Dokumentenspeicher',
-      'Basis-Support (E-Mail)',
       'Alle Kern-Features inklusive',
+      'Basis-Support',
       'HKVO §6a konform'
     ],
     cta: 'Kostenlos starten',
@@ -22,18 +22,20 @@ const pricingTiers = [
   {
     id: 'professional',
     name: 'Professional',
-    price: '29',
+    price: '25',
     period: 'pro Monat',
     description: 'Für professionelle Hausverwaltungen',
     features: [
-      'Bis zu 20 WEGs',
+      'Bis zu 6 WEGs',
       'Unbegrenzte Nutzer',
-      '50 GB Dokumentenspeicher',
-      'Prioritäts-Support (E-Mail & Telefon)',
+      '30 GB Dokumentenspeicher',
+      'Prioritäts-Support',
       'API-Zugriff',
-      'Erweiterte Analytics',
       'Backup & Recovery',
-      'SLA: 99.9% Uptime-Garantie'
+      'SLA: 99.9% Uptime-Garantie',
+      'HKVO §6a konform',
+      'Alle Kern-Features inklusive',
+      'Unbegrenzte Eigentümer & Einheiten'
     ],
     cta: 'Professional wählen',
     href: 'https://portal.waldheim.dev',
@@ -43,29 +45,32 @@ const pricingTiers = [
   {
     id: 'enterprise',
     name: 'Enterprise',
-    price: 'Custom',
-    period: 'auf Anfrage',
+    price: '4',
+    period: 'pro WEG',
     description: 'Für große Verwaltungen mit individuellen Anforderungen',
     features: [
       'Unbegrenzte WEGs',
       'Dedizierter Account Manager',
       'Unbegrenzter Speicher',
-      '24/7 Premium-Support',
       'On-Premise Option verfügbar',
-      'SSO & SAML',
-      'Individuelle Anpassungen',
       'SLA: 99.95% Uptime-Garantie',
-      'Audit-Logs & Compliance-Reports'
+      'Unbegrenzte Eigentümer & Einheiten',
+      'Alle Kern-Features inklusive',
+      'HKVO §6a konform',
+      'Unbegrenzte Nutzer',
+      'API-Zugriff',
+      'Prioritäts-Support',
+      'Ab 50 Stück nutzbar',
     ],
-    cta: 'Im Portal anfragen',
+    cta: 'Enterprise wählen',
     href: 'https://portal.waldheim.dev',
     highlighted: false
   }
 ];
 
 const competitorsComparison = [
-  { name: 'Silvacore SaaS', price20: '29 €', price50: '~99 €', total3Years: '1.044 € - 3.564 €', hkvo: true },
-  { name: 'Silvacore Self-Hosted', price20: '0 €*', price50: '0 €*', total3Years: '~500 € (Server)', hkvo: true },
+  { name: 'Silvacore SaaS', price20: '25 €', price50: '~75 €', total3Years: '900 € - 2.700 €', hkvo: true },
+  // { name: 'Silvacore Self-Hosted', price20: '0 €*', price50: '0 €*', total3Years: '~500 € (Server)', hkvo: true },
   { name: 'immocloud', price20: '26 €', price50: '40 €', total3Years: '936 € - 1.440 €', hkvo: false },
   { name: 'Immoware24', price20: '44-54 €', price50: '~80 €', total3Years: '1.584 € - 2.880 €', hkvo: true },
   { name: 'Win-CASA', price20: '29 €', price50: '~49 €', total3Years: '1.044 € - 1.764 €', hkvo: false },
@@ -76,10 +81,10 @@ const competitorsComparison = [
 ];
 
 const competitorsSavings = [
-  { name: 'Silvacore SaaS', monthly: 29, threeYears: 1044, savings: 0 },
-  { name: 'Haufe axera', monthly: 449, threeYears: 16164, savings: 15120 },
-  { name: 'Domus', monthly: 200, threeYears: 7200, savings: 6156 },
-  { name: 'casavi', monthly: 199, threeYears: 7164, savings: 6120 }
+  { name: 'Silvacore SaaS', monthly: 25, threeYears: 900, savings: 0 },
+  { name: 'Haufe axera', monthly: 449, threeYears: 16164, savings: 15264 },
+  { name: 'Domus', monthly: 200, threeYears: 7200, savings: 6300 },
+  { name: 'casavi', monthly: 199, threeYears: 7164, savings: 6264 }
 ];
 ---
 
@@ -187,8 +192,8 @@ const competitorsSavings = [
       </h3>
       <p class='text-light-300 text-center mb-8 max-w-3xl mx-auto'>
         Vergleichen Sie Silvacore SaaS mit anderen WEG-Verwaltungslösungen am Markt. 
-        Unsere Preise beziehen sich auf den <strong class='text-white'>Professional-Plan (bis 20 WEGs)</strong> – 
-        ideal für professionelle Hausverwaltungen.
+        Unsere Preise beziehen sich auf den <strong class='text-white'>Professional-Plan (bis 6 WEGs für 25€/Monat)</strong> – 
+        skalierbar durch zusätzliche WEG-Lizenzen (je 4€/Monat).
       </p>
 
       <div tabindex="0" class='overflow-x-auto rounded-xl border border-light-500/20'>
@@ -243,7 +248,7 @@ const competitorsSavings = [
         Ihr Sparpotenzial mit Silvacore Professional
       </h3>
       <p class='text-light-300 text-center mb-8 max-w-2xl mx-auto'>
-        Mit <strong class='text-white'>29 € pro Monat</strong> für bis zu 20 WEGs sparen Sie über 3 Jahre erheblich gegenüber Premium-Anbietern:
+        Mit <strong class='text-white'>25 € pro Monat</strong> für bis zu 6 WEGs (skalierbar mit +4€/WEG) sparen Sie über 3 Jahre erheblich gegenüber Premium-Anbietern:
       </p>
 
       <div class='grid md:grid-cols-3 gap-6'>
@@ -257,7 +262,7 @@ const competitorsSavings = [
             <div class='mt-4 pt-4 border-t border-light-500/10'>
               <p class='text-xs text-light-500'>
                 {comp.name}: {comp.monthly} €/Monat<br/>
-                Silvacore: 29 €/Monat
+                Silvacore: 25 €/Monat
               </p>
             </div>
           </div>
@@ -265,7 +270,7 @@ const competitorsSavings = [
       </div>
 
       <p class='text-center text-green-400 font-semibold text-lg mt-8'>
-        💰 Sparen Sie bis zu <strong class='text-2xl'>15.120 €</strong> über 3 Jahre gegenüber Haufe axera!
+        💰 Sparen Sie bis zu <strong class='text-2xl'>15.264 €</strong> über 3 Jahre gegenüber Haufe axera!
       </p>
     </div>
   </div>
