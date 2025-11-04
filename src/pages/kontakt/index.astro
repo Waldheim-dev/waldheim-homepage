@@ -1,22 +1,4 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { SchemaUtils } from '../../utils/schema';
-import Contact from '../../components/Contact.astro';
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home'
-}, {
-  name: 'Danke',
-  link: Astro.url.href
-}]);
-
-const titel = "Datenschutz - waldheim.dev"
-const description = "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten auf waldheim.dev gemäß DSGVO."
-const keywords = "Datenschutz, Datenschutzerklärung, DSGVO, Privatsphäre, Datensicherheit"
+// Redirect to customer portal
+return Astro.redirect('https://portal.waldheim.dev', 301);
 ---
-
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]} robots="noindex">
-  <main class="mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-24 sm:py-64 lg:px-8">
-    <Contact video="videos/video_assistentin.mp4"/>
-  </main>
-
-</Layout>
