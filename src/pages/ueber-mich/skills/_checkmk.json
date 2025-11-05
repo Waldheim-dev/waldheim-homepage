@@ -1,6 +1,6 @@
 {
   "name": "CheckMK",
-  "image": "/brands/checkmk_icon_main.png",
+  "image": "/brands/checkmk_icon_main.webp",
   "productive": true,
   "isActive": false,
   "fixedExperience": 0.5,
