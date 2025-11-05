@@ -59,6 +59,25 @@ pnpm preview
 | `pnpm test:seo` | SEO Validation Tests |
 | `pnpm lighthouse` | Lighthouse Performance Audit |
 
+### 🛠️ Utility Scripts
+
+| Script | Beschreibung |
+|--------|--------------|
+| `./scripts/convert-pngs-to-webp.sh` | Konvertiert alle PNGs im `public/`-Ordner zu WebP |
+| `./scripts/convert-missing-webp.sh` | Konvertiert nur fehlende WebP-Dateien |
+| `./scripts/optimize-images.sh` | Optimiert Bilder (Komprimierung) |
+| `./scripts/generate-video-posters.sh` | Generiert Video-Vorschaubilder |
+| `./scripts/fix-trailing-slashes.sh` | Korrigiert Trailing Slashes in Links |
+
+**Beispiel:**
+```bash
+# Alle PNGs zu WebP konvertieren (Qualität: 85)
+./scripts/convert-pngs-to-webp.sh
+
+# Mit benutzerdefinierter Qualität (0-100)
+./scripts/convert-pngs-to-webp.sh 90
+```
+
 ---
 
 ## 🎨 Design System: Glow-Glass-Style

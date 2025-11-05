@@ -15,6 +15,11 @@ const {
   frontend,
   backend,
   design,
+  devops,
+  features,
+  products,
+  security,
+  testing,
   problem,
   solution,
   assets,
@@ -363,7 +368,134 @@ const skills = await getCollection('skills');
             </div>
           ) : null
         }
+        {
+          devops && devops.length > 0 ? (
+            <div class="gsap-fadein">
+              <dt class="text-base font-semibold leading-7 text-light-300">
+                <div
+                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
+                  <svg
+                    class="h-6 w-6 text-light-100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+
+                  </svg>
+                </div>
+                DevOps
+              </dt>
+              <dd class="mt-1 text-base leading-7 text-light-100">
+                <ul class="list-disc ml-5">
+                  {devops.map((item) => (
+                    <li set:html={item} class="" />
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
+        {
+          features && features.length > 0 ? (
+            <div class="gsap-fadein">
+              <dt class="text-base font-semibold leading-7 text-light-300">
+                <div
+                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
+                  <svg
+                    class="h-6 w-6 text-light-100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
+
+                  </svg>
+                </div>
+                Features
+              </dt>
+              <dd class="mt-1 text-base leading-7 text-light-100">
+                <ul class="list-disc ml-5">
+                  {features.map((item) => (
+                    <li set:html={item} class="" />
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
+        {
+          security && security.length > 0 ? (
+            <div class="gsap-fadein">
+              <dt class="text-base font-semibold leading-7 text-light-300">
+                <div
+                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
+                  <svg
+                    class="h-6 w-6 text-light-100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+
+                  </svg>
+                </div>
+                Security
+              </dt>
+              <dd class="mt-1 text-base leading-7 text-light-100">
+                <ul class="list-disc ml-5">
+                  {security.map((item) => (
+                    <li set:html={item} class="" />
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
+        {
+          testing && testing.length > 0 ? (
+            <div class="gsap-fadein">
+              <dt class="text-base font-semibold leading-7 text-light-300">
+                <div
+                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
+                  <svg
+                    class="h-6 w-6 text-light-100"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+
+                  </svg>
+                </div>
+                Testing
+              </dt>
+              <dd class="mt-1 text-base leading-7 text-light-100">
+                <ul class="list-disc ml-5">
+                  {testing.map((item) => (
+                    <li set:html={item} class="" />
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
       </dl>
+    </div>
+  </div>
+</div>
+<div class=' px-6 py-6 lg:px-8'>
+  <div class='mx-auto max-w-3xl text-base leading-7 text-light-100 '></div>
+    <div class="mt-16 prose-invert w-full max-w-auto">
+      <slot />
     </div>
   </div>
 </div>

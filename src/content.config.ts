@@ -146,6 +146,11 @@ const projects = defineCollection({
     frontend: z.array(z.string()).optional(),
     backend: z.array(z.string()).optional(),
     design: z.array(z.string()).optional(),
+    devops: z.array(z.string()).optional(),
+    features: z.array(z.string()).optional(),
+    products: z.array(z.string()).optional(),
+    security: z.array(z.string()).optional(),
+    testing: z.array(z.string()).optional(),
 
 
     problem: z.string().optional(),
