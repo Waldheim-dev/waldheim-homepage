@@ -1,0 +1,12 @@
+{
+  "name": "Valkey",
+  "image": "/brands/valkey.webp",
+  "productive": false,
+  "isActive": false,
+  "fixedExperience": 1,
+  "sinceLastRollup": "",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["database"]
+}
