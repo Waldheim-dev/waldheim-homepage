@@ -5,6 +5,9 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Flyer, Eintri
 shortDescription: "Design von Werbematerialien für den Kinderfasching 2023."
 pubDate: "2023-02-01"
 category: "design"
+year: 2023
+eventSeries: "fasching"
+nextYear: "mv-obermeitingen/2024/fasching"
 heroImage: "referenzen/mvo-obermeitingen/fasching_2023.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/fasching_2023.jpg",

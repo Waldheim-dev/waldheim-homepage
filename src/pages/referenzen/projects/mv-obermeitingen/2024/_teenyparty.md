@@ -5,6 +5,10 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Social Media 
 shortDescription: "Design von Werbematerialien für eine Teenyparty."
 pubDate: "2024-02-02"
 category: "design"
+year: 2024
+eventSeries: "teenyparty"
+previousYear: "mv-obermeitingen/2024/teenyparty"
+nextYear: "mv-obermeitingen/2025/teenyparty"
 heroImage: "referenzen/mvo-obermeitingen/teenieparty.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/teenieparty.jpg"

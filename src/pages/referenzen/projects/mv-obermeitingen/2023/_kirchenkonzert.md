@@ -5,6 +5,9 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Flyer) für d
 shortDescription: "Design von Werbematerialien für ein Kirchenkonzert."
 pubDate: "2023-04-17"
 category: "design"
+year: 2023
+eventSeries: "kirchenkonzert"
+nextYear: "mv-obermeitingen/2025/kirchenkonzert"
 heroImage: "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"

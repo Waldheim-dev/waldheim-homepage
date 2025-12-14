@@ -25,9 +25,27 @@ const {
   assets,
   shortDescription,
   overview,
+  year,
+  eventSeries,
+  previousYear,
+  nextYear,
 } = Astro.props;
 
 const skills = await getCollection('skills');
+
+// Lade Vorjahres- und Folgejahresprojekt, falls vorhanden
+let previousYearProject = null;
+let nextYearProject = null;
+
+if (previousYear) {
+  const allProjects = await getCollection('projects');
+  previousYearProject = allProjects.find(p => p.id.replace(/^_/, '').replace(/\/_/, '/') === previousYear);
+}
+
+if (nextYear) {
+  const allProjects = await getCollection('projects');
+  nextYearProject = allProjects.find(p => p.id.replace(/^_/, '').replace(/\/_/, '/') === nextYear);
+}
 ---
 
 <style>
@@ -65,6 +83,71 @@ const skills = await getCollection('skills');
 
 
 <HeroBackground title={title} subtitle={description} image={heroImage} class="" />
+
+  <!-- Jahres-Navigation für Event-Serien -->
+  {
+    (eventSeries && year && (previousYearProject || nextYearProject)) ? (
+      <div class="py-8 border-b border-light-500/20 gsap-fadein">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="bg-dark-900/50 border border-primary-500/20 rounded-xl p-6">
+            <div class="flex items-center justify-between">
+              <div class="flex-1">
+                {previousYearProject ? (
+                  <a 
+                    href={`/referenzen/${previousYear}/`} 
+                    class="group inline-flex items-center gap-2 text-light-300 hover:text-primary-400 transition-colors"
+                    aria-label={`Vorjahresprojekt: ${previousYearProject.data.title}`}
+                  >
+                    <i class="fa-solid fa-arrow-left text-primary-500 group-hover:text-primary-400 transition-colors" aria-hidden="true"></i>
+                    <div class="text-left">
+                      <div class="text-xs text-light-500">Vorheriges Jahr</div>
+                      <div class="font-semibold">{previousYearProject.data.year || previousYearProject.data.title}</div>
+                    </div>
+                  </a>
+                ) : (
+                  <div class="opacity-50">
+                    <div class="text-xs text-light-500">Vorheriges Jahr</div>
+                    <div class="text-sm text-light-400">Nicht verfügbar</div>
+                  </div>
+                )}
+              </div>
+              
+              <div class="flex-shrink-0 text-center px-6">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-calendar-days text-2xl text-primary-500" aria-hidden="true"></i>
+                  <div>
+                    <div class="text-xs text-light-500 uppercase tracking-wider">Event-Serie</div>
+                    <div class="text-xl font-bold text-white">{year}</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex-1 text-right">
+                {nextYearProject ? (
+                  <a 
+                    href={`/referenzen/${nextYear}/`} 
+                    class="group inline-flex items-center gap-2 text-light-300 hover:text-primary-400 transition-colors"
+                    aria-label={`Folgejahresprojekt: ${nextYearProject.data.title}`}
+                  >
+                    <div class="text-right">
+                      <div class="text-xs text-light-500">Nächstes Jahr</div>
+                      <div class="font-semibold">{nextYearProject.data.year || nextYearProject.data.title}</div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-primary-500 group-hover:text-primary-400 transition-colors" aria-hidden="true"></i>
+                  </a>
+                ) : (
+                  <div class="opacity-50">
+                    <div class="text-xs text-light-500">Nächstes Jahr</div>
+                    <div class="text-sm text-light-400">Nicht verfügbar</div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : null
+  }
 
   {
   client && overview ? (

@@ -5,6 +5,9 @@ description: "Design und Erstellung von Werbematerialien (Plakate) für die Sere
 shortDescription: "Design von Werbematerialien für eine Serenade."
 pubDate: "2023-06-05"
 category: "design"
+year: 2023
+eventSeries: "serenade"
+nextYear: "mv-obermeitingen/2024/serenade"
 heroImage: "referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
