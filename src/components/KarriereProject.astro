@@ -2,12 +2,42 @@
 import { getCollection } from 'astro:content';
 import FormattedDate from './FormattedDate.astro';
 import SkillCards from './SkillCards.astro';
-const { projects } = Astro.props;
 
-const projectsCollection = await getCollection('karriere_projects', (project) => {
-  return (projects.filter((pr) => pr.id === project.id.replace(/^_/, ''))).sort((a, b) => {
-    return new Date(b.data.from) - new Date(a.data.from);
-  });
+interface Props {
+  projects?: any[];
+  projectReferences?: any[];
+  showAllReferences?: boolean;
+  companyName?: string;
+}
+
+const { projects, projectReferences, showAllReferences, companyName } = Astro.props;
+
+const projectsCollection = projects 
+  ? await getCollection('karriere_projects', (project) => {
+      return projects.some((pr) => pr.id === project.id.replace(/^_/, ''));
+    })
+  : [];
+
+projectsCollection.sort((a, b) => {
+  return b.data.from.valueOf() - a.data.from.valueOf();
+});
+
+const referencedProjects = showAllReferences
+  ? await getCollection('projects')  // Zeige ALLE Projekte
+  : projectReferences 
+    ? await getCollection('projects', (project) => {
+        // Manuelle References: Projekt-IDs haben Format: "_waldheim-dev/_homepage"
+        // References haben Format: "waldheim-dev/homepage"
+        const projectIdClean = project.id.replace(/^_/, '').replace(/\/_/g, '/');
+        return projectReferences.some((ref) => {
+          const refIdClean = ref.id.replace(/^_/, '').replace(/\/_/g, '/');
+          return refIdClean === projectIdClean;
+        });
+      })
+    : [];
+
+referencedProjects.sort((a, b) => {
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 });
 
 ---
@@ -113,4 +143,49 @@ const projectsCollection = await getCollection('karriere_projects', (project) =>
       </div>
     ) : null
   }
+  
+  {referencedProjects.length > 0 && (
+    <div class="mt-8">
+      <h3 class="text-1xl font-medium leading-10 tracking-tight text-light-100 mb-4">
+        <i class="fa-solid fa-folder-open text-primary-400 mr-2" aria-hidden="true"></i>
+        Referenzen & Portfolio
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {referencedProjects.map((project) => (
+          <a 
+            href={`/referenzen/${project.id.replace(/\/_/g, '/')}/`}
+            class="group relative bg-dark-800/50 border border-primary-500/20 hover:border-primary-500/40 rounded-lg p-4 transition-all hover:shadow-lg hover:shadow-primary-500/20"
+            aria-label={`Referenz ${project.data.title} ansehen`}
+          >
+            {/* Ambient Glow on Hover */}
+            <div class="absolute inset-0 bg-linear-to-r from-primary-500/5 via-cyan-500/5 to-purple-500/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+            
+            <div class="flex items-start gap-3">
+              {project.data.heroImage && (
+                <img 
+                  src={`/${project.data.heroImage}`} 
+                  alt="" 
+                  aria-hidden="true"
+                  class="w-16 h-16 rounded object-cover border border-primary-500/20"
+                />
+              )}
+              <div class="flex-1 min-w-0">
+                <h4 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors line-clamp-2 mb-1">
+                  {project.data.title}
+                </h4>
+                <p class="text-xs text-light-400 line-clamp-2">
+                  {project.data.shortDescription || project.data.description}
+                </p>
+                {project.data.category && (
+                  <span class="inline-block mt-2 text-xs bg-primary-500/10 border border-primary-500/30 text-primary-400 px-2 py-0.5 rounded">
+                    {project.data.category.id}
+                  </span>
+                )}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
 </div>
