@@ -5,6 +5,9 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Banner, Bons,
 shortDescription: "Design von Werbematerialien für das Vatertagsfest 2023."
 pubDate: "2023-05-18"
 category: "design"
+year: 2023
+eventSeries: "vatertag"
+nextYear: "mv-obermeitingen/2024/vatertag"
 heroImage: "referenzen/mvo-obermeitingen/vatertagsfest_2023_plakat_a3.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/vatertagsfest_2023_plakat_a3.jpg",

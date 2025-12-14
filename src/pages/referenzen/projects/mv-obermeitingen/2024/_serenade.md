@@ -5,6 +5,10 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Social Media 
 shortDescription: "Design von Werbematerialien für eine Serenade."
 pubDate: "2024-05-10"
 category: "design"
+year: 2024
+eventSeries: "serenade"
+previousYear: "mv-obermeitingen/2023/serenade"
+nextYear: "mv-obermeitingen/2025/serenade"
 heroImage: "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg",
