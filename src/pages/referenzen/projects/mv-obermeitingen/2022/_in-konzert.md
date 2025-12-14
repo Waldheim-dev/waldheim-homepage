@@ -5,6 +5,9 @@ description: "Entwurf und Erstellung von Werbematerialien (Plakate, Flyer, Ticke
 shortDescription: "Design und Produktion von Werbematerialien für eine Konzertveranstaltung."
 pubDate: "2022-11-18"
 category: "design"
+year: 2022
+eventSeries: "in-konzert"
+nextYear: "mv-obermeitingen/2024/in_konzert"
 heroImage: "referenzen/mvo-obermeitingen/in_konzert_2022.jpg"
 assets: [
     "referenzen/mvo-obermeitingen/in_konzert_2022.jpg",

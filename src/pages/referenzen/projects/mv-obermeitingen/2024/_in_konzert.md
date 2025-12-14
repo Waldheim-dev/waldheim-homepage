@@ -5,6 +5,10 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Eintrittskart
 shortDescription: "Design von Werbematerialien für das Konzert 'In Konzert 2024'."
 pubDate: "2023-12-27" # Datum angepasst, da es sich um ein Event *vor* der Veröffentlichung handelt.  PubDate sollte *nach* dem Event liegen.
 category: "design"
+year: 2024
+eventSeries: "in-konzert"
+previousYear: "mv-obermeitingen/2022/in-konzert"
+nextYear: "mv-obermeitingen/2025/in_konzert"
 heroImage: "referenzen/mvo-obermeitingen/in_konzert_2024.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/in_konzert_2024.jpg",

@@ -5,6 +5,10 @@ description: "Design und Erstellung von Werbematerialien (Plakate, Preislisten, 
 shortDescription: "Design von Werbematerialien für das Vatertagsfest 2024."
 pubDate: "2024-04-04"
 category: "design"
+year: 2024
+eventSeries: "vatertag"
+previousYear: "mv-obermeitingen/2023/vatertag"
+nextYear: "mv-obermeitingen/2025/vatertag"
 heroImage: "referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg",

@@ -169,6 +169,12 @@ const projects = defineCollection({
       link: z.string().optional()
     })).optional(),
 
+    // Jahres-basierte Event-Serien
+    year: z.number().optional(), // Jahr des Events (z.B. 2023, 2024)
+    eventSeries: z.string().optional(), // Name der Event-Serie (z.B. "fasching", "serenade")
+    previousYear: z.string().optional(), // Pfad zum Vorjahresprojekt (z.B. "mv-obermeitingen/2023/fasching")
+    nextYear: z.string().optional(), // Pfad zum Folgejahresprojekt (z.B. "mv-obermeitingen/2024/fasching")
+
     // Transform string to Date object
     pubDate: z
       .string()
