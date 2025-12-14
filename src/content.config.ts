@@ -84,6 +84,8 @@ const karriere = defineCollection({
     isCurrent: z.boolean(),
     location: z.string(),
     projects: z.array(reference('karriere_projects')).optional(),
+    projectReferences: z.array(reference('projects')).optional(),
+    showAllReferences: z.boolean().optional(),
   }),
 });
 

@@ -7,14 +7,14 @@ const karriere = (await getCollection('karriere')).sort(
 );
 ---
 
-<section class="px-6 py-24 sm:py-32 lg:px-8 bg-gradient-to-b from-dark-900 to-dark-950">
+<section class="px-6 py-24 sm:py-32 lg:px-8 bg-linear-to-b from-dark-900 to-dark-950">
   <div class="mx-auto max-w-2xl text-center mb-16">
     <p class="gsap-fadein text-base font-semibold text-primary-400 mb-4" style="animation-delay: 0s">
       <i class="fa-solid fa-briefcase text-primary-400 mr-2" aria-hidden="true"></i>
       Mein beruflicher Weg
     </p>
     <h2 class="gsap-fadein text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6" style="animation-delay: 0.15s">
-      Karriere-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Highlights</span>
+      Karriere-<span class="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-cyan-400">Highlights</span>
     </h2>
     <p class="gsap-fadein text-xl text-light-300" style="animation-delay: 0.3s">
       Hier ist ein Überblick über meine bisherigen beruflichen Stationen und aktuellen Projekte. Diese Informationen spiegeln meine persönliche Erfahrung wider.
@@ -36,8 +36,13 @@ const karriere = (await getCollection('karriere')).sort(
           </p>
           <p class="text-base text-light-300">{kar.data.description}</p>
         </div>
-        { kar.data.projects && (
-          <KarriereProject projects={kar.data.projects} />
+        { (kar.data.projects || kar.data.projectReferences || kar.data.showAllReferences) && (
+          <KarriereProject 
+            projects={kar.data.projects} 
+            projectReferences={kar.data.projectReferences}
+            showAllReferences={kar.data.showAllReferences}
+            companyName={kar.data.company}
+          />
         )}
       </div>
     ))}
