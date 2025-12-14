@@ -1,3 +1,31 @@
+# [26.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.3.0...26.4.0) (2025-12-14)
+
+
+### Bug Fixes
+
+* Add missing WebP conversion script and new WebP image ([3945649](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/3945649c4aacda63499cf045707fa2b122d79376))
+* Add trailing slashes to internal links for consistency ([8619876](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/86198766f9055386a746d0ec143e0c7800e60794))
+* Refactor code structure for improved readability and maintainability ([a2b959f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/a2b959f20638fb5859110e541f056af3147714ac))
+* Update contact information and address in Datenschutz and Impressum pages ([95e93c6](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/95e93c63eec7258289312f61c6befda601d01715))
+* Update links to redirect to the customer portal and adjust button texts for clarity ([348142a](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/348142a4f4cce6d3e39695941028245d3b791da2))
+* Update pricing tiers and features for improved clarity and accuracy ([7acb705](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7acb705606c11ede06486ec5c9a0d45eb717c5f3))
+
+
+### Features
+
+* Add AGB page with legal information and links in the footer ([149ec3e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/149ec3e83561c79c274990a03b045048bde377ca))
+* add AI layer to skills and update related configurations ([ba7e68b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/ba7e68be75668cb43ea7fd11b529d9b3d0fe4893))
+* Add design documentation for MV Obermeitingen events from 2022 to 2026 ([af2f0d9](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/af2f0d9412c0eb84f04cc97a226ab288f2e7be74))
+* Add Related Services component to service pages for enhanced navigation ([003816f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/003816f3efc1ed3e378d6c2ac33aa9ec80e9fbdc))
+* Add script for converting PNGs to WebP format and create new blog and project pages for the Waldheim Customer Portal ([5b89b96](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/5b89b968ab87edcb3f9c46584f0770455b18f1d7))
+* erweitere Karriere-Komponente um Projektreferenzen und verbessere die Anzeige von Projekten ([e0afa29](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/e0afa2920e5383515883656c8074702ffb1b30f9))
+* Füge Preis- und Verfügbarkeitsseiten für Silvacore und Socialverse hinzu, aktualisiere Ecodrive-Links und Texte ([64da07e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/64da07e21676edb2d419f0a281fa477715768003))
+* Füge Redis SVG und zugehörige JSON-Daten für Fähigkeiten hinzu ([7e38c4d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/7e38c4de2e050d33551f3f255b1a10fbb9087508))
+* Füge Silvacore-Dokumentation und neue Bilder hinzu, aktualisiere Beta-Status in Socialverse ([97aa794](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/97aa7940f2c8221ecf8ee1e8c4ccf86435191eef))
+* Refactor and consolidate test suite: ([16f3e8b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/16f3e8b186bbc7a0a49266a7faf2d9dbcba54eb8))
+* Refactor icon colors and update content for Silvacore and Ecodrive pages ([1818c53](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1818c53476df5c28bb25280f69f3f095ce1b2144))
+* Update PortfolioTop component layout and improve slider functionality ([755bae0](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/755bae0742c5a904e7ad82fd67caeb410786c560))
+
 # [26.3.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.2.0...26.3.0) (2025-09-20)
 
 
