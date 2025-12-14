@@ -1,8 +1,9 @@
 {
     "from": "2022-02-01",
     "company": "Waldheim.dev",
-    "position": "Inhaber",
-    "description": "Im Jahr 2022 habe ich das Kleingewerbe Waldheim.dev gegründet. Hier biete ich Dienstleistungen im Bereich Softwareentwicklung, DevSecOps. IT-Service und Designleistungen an.",
+    "position": "Inhaber & IT-Berater",
+    "description": "Im Februar 2022 habe ich das Kleingewerbe Waldheim.dev gegründet, um KMU, Vereine und Startups im Raum Augsburg/München professionelle IT-Dienstleistungen anzubieten. Mein Fokus liegt auf DevSecOps, moderner Webentwicklung (Frontend & Backend), Cloud-Infrastruktur, Design/UX und IT-Service. Mit den eigenen SaaS-Produkten Silvacore (WEG-Verwaltung), Ecodrive (Fuhrparkverwaltung) und Socialverse (AI-CRM) entwickle ich innovative Lösungen für spezifische Branchen. Dabei stehen Qualität, Zuverlässigkeit und maßgeschneiderte Lösungen im Mittelpunkt – von der Beratung über die Entwicklung bis zum Support.",
     "isCurrent": true,
-    "location": "Obermeitingen"
+    "location": "Obermeitingen",
+    "showAllReferences": true
 }
