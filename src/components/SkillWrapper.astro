@@ -14,7 +14,8 @@ const layer = [
   'general',
   'system',
   'security',
-  'database'
+  'database',
+  'ai'
 ];
 ---
 
@@ -117,8 +118,8 @@ const layer = [
                 nextTrigger.setAttribute('data-filtered', 'false');
               }
               if (filtered) {
-                nextTrigger.classList.remove('bg-dark-900/50', 'text-light-300');
-                nextTrigger.classList.add('bg-blue-600', 'text-white');
+                trigger.classList.remove('bg-dark-900/50', 'text-light-300');
+                trigger.classList.add('bg-blue-600', 'text-white');
                 trigger.setAttribute('data-filtered', 'true');
               }
               for (const card of cards) {
