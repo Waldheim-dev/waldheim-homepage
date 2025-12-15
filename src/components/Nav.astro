@@ -9,6 +9,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 const ecodrive = getProductInfo('ecodrive')!;
 const socialverse = getProductInfo('socialverse')!;
 const silvacore = getProductInfo('silvacore')!;
+const aether = getProductInfo('aether')!;
 const ausgabeschein = getProductInfo('ausgabeschein-generator')!;
 const astroAi = getProductInfo('astro-ai-llms-txt')!;
 
@@ -78,6 +79,15 @@ const smarthomeColors = getServiceColors('smarthome');
                     class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${silvacore.colors.badgeBg} ${silvacore.colors.badgeBorder} ${silvacore.colors.badgeText}`}>
                   <i class={`fa-solid fa-circle text-${silvacore.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
                   {silvacore.status !== 'stable' ? `${silvacore.status}` : `v${silvacore.version}`}
+                </span>
+                  </a>
+                  <a href="/aether/"
+                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-dark-800/70 hover:shadow-md hover:shadow-${aether.colors.glowColor}/20 text-light-100 transition-all`}>
+                    <span>Aether</span>
+                    <span
+                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
+                  <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                  {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
                 </span>
                   </a>
                   <a href="/ausgabeschein-generator/"
@@ -227,6 +237,25 @@ const smarthomeColors = getServiceColors('smarthome');
                     </span>
                     </a>
                     <p class="mt-1 text-light-300">Hausverwaltungssoftware</p>
+                  </div>
+                </div>
+                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-dark-800/70 ${aether.colors.hoverShadow} transition-all`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-dark-800/70 border ${aether.colors.badgeBorder} group-hover:bg-dark-800 group-hover:shadow-lg group-hover:shadow-${aether.colors.glowColor}/30 transition-all`}>
+                    <i class={`fa-solid fa-atom text-xl text-${aether.colors.iconColor}`} aria-hidden="true"></i>
+
+                  </div>
+                  <div>
+                    <a href="/aether/" class="font-semibold text-light-100 outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+                      Aether
+                      <span class="absolute inset-0"></span>
+
+                      <span
+                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
+                      <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                      {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
+                    </span>
+                    </a>
+                    <p class="mt-1 text-light-300">Dateitransfer</p>
                   </div>
                 </div>
                 <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-dark-800/70 ${ausgabeschein.colors.hoverShadow} transition-all`}>
