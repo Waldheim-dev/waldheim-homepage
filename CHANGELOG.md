@@ -1,3 +1,10 @@
+# [26.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.4.0...26.5.0) (2025-12-15)
+
+
+### Features
+
+* Add Aether landing page components including FAQ, Features, Hero, and Pricing sections ([d40e87f](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/d40e87f22bb6b376f90082fc5cb289d03de6aa53))
+
 # [26.4.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.3.0...26.4.0) (2025-12-14)
 
 
