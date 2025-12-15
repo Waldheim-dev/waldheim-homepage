@@ -76,6 +76,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-green-400/20',
     },
   },
+  aether: {
+    name: 'Aether',
+    version: '1.0.0',
+    status: 'beta',
+    releaseDate: '2025-12-15',
+    colors: {
+      name: 'Aether',
+      primary: 'red-500',
+      secondary: 'rose-600',
+      glowColor: 'red-500/50',
+      badgeBg: 'bg-red-500/10',
+      badgeBorder: 'border-red-500/30',
+      badgeText: 'text-red-400',
+      iconColor: 'red-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-red-500/20',
+    },
+  },
   'ausgabeschein-generator': {
     name: 'Ausgabeschein Generator',
     version: '2.16.2',
