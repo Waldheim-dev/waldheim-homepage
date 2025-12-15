@@ -1,0 +1,88 @@
+---
+// Aether FAQ Section
+const faqs = [
+  {
+    question: 'Wie funktioniert Auto-Burn?',
+    answer: 'Auto-Burn löscht hochgeladene Dateien automatisch nach Ablauf der Speicherdauer. Bei Particle nach 24 Stunden, bei Wave nach 30 Tagen, bei Matter nach 1 Jahr. Es bleiben keine Spuren zurück – weder auf unseren Servern noch in Backups.'
+  },
+  {
+    question: 'Ist Aether wirklich sicher?',
+    answer: 'Ja. Alle Übertragungen sind mit TLS 1.3 verschlüsselt. Optional kannst du Links zusätzlich mit Passwörtern schützen (ab Wave). Dateien werden in deutschen Rechenzentren gespeichert, unterliegen der DSGVO und werden nach Ablauf unwiderruflich gelöscht.'
+  },
+  {
+    question: 'Wo werden meine Dateien gespeichert?',
+    answer: 'Alle Dateien werden auf Servern in Deutschland (Frankfurt, München) gespeichert. Wir nutzen DSGVO-konforme Rechenzentren mit ISO 27001 Zertifizierung. Keine Daten verlassen die EU.'
+  },
+  {
+    question: 'Kann ich Aether kostenlos testen?',
+    answer: 'Ja! Particle ist komplett kostenlos und erfordert keine Anmeldung. Lade Dateien bis 100 MB hoch und teste Auto-Burn. Für größere Dateien und erweiterte Features kannst du jederzeit auf Wave oder Matter upgraden.'
+  },
+  {
+    question: 'Gibt es API-Zugriff?',
+    answer: 'API-Zugriff ist für Q1 2026 geplant. Du kannst dann via REST-API Dateien hochladen, Links generieren und Status abrufen. Perfekt für CI/CD-Pipelines und Automatisierungen. API wird ab Wave-Tier verfügbar sein.'
+  },
+  {
+    question: 'Was passiert, wenn ich kündige?',
+    answer: 'Dein Account bleibt bis zum Ende der Abrechnungsperiode aktiv. Nach Ablauf werden alle Dateien gemäß Auto-Burn gelöscht. Du kannst vor Ablauf wichtige Dateien herunterladen. Keine Vendor Lock-ins, keine versteckten Kosten.'
+  },
+  {
+    question: 'Wie viele Dateien kann ich gleichzeitig hochladen?',
+    answer: 'Particle: 1 Datei gleichzeitig. Wave: bis zu 5 Dateien parallel. Matter: bis zu 20 Dateien parallel. Die Uploads werden automatisch über unsere CDN-Edge-Nodes beschleunigt.'
+  },
+  {
+    question: 'Kann ich Links widerrufen?',
+    answer: 'Ja, ab Wave-Tier kannst du jeden Link individuell widerrufen – auch nachträglich. Der Link wird sofort ungültig und die Datei bleibt für andere Links weiterhin verfügbar.'
+  }
+];
+---
+
+<section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+  <div class='mx-auto max-w-4xl'>
+    <div class='text-center mb-16'>
+      <h2 class='gsap-fadein text-base font-semibold text-red-400 mb-4'>
+        <i class='fa-solid fa-circle-question text-red-400 mr-2' aria-hidden='true'></i>
+        FAQ
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
+        Häufig gestellte <span class='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-rose-500'>Fragen</span>
+      </p>
+      <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
+        Alles, was du über Aether wissen musst.
+      </p>
+    </div>
+
+    <div class='space-y-6'>
+      {faqs.map((faq, index) => (
+        <details class='gsap-fadein group bg-dark-900/50 border border-red-500/20 rounded-xl hover:border-red-500/40 transition-all' style={`animation-delay: ${0.45 + index * 0.05}s`}>
+          <summary class='cursor-pointer px-6 py-5 flex items-start gap-4 list-none'>
+            <i class='fa-solid fa-chevron-right text-red-400 mt-1 group-open:rotate-90 transition-transform flex-shrink-0' aria-hidden='true'></i>
+            <span class='text-lg font-semibold text-white flex-1'>{faq.question}</span>
+          </summary>
+          <div class='px-6 pb-6 pl-14'>
+            <p class='text-light-300 leading-relaxed'>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Additional Help -->
+    <div class='gsap-fadein mt-16 text-center p-8 bg-gradient-to-br from-red-900/20 to-rose-900/20 border border-red-500/30 rounded-2xl' style='animation-delay: 0.9s'>
+      <h3 class='text-2xl font-bold text-white mb-4'>Noch Fragen?</h3>
+      <p class='text-light-300 mb-6'>
+        Unser Support-Team hilft dir gerne weiter.
+      </p>
+      <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+        <a 
+          href='https://portal.waldheim.dev' 
+          target='_blank'
+          rel='noopener noreferrer'
+          class='gsap-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-red-500 to-rose-600 text-white font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all'
+          aria-label='Zum Waldheim Kundenportal für Support'
+        >
+          <i class='fa-solid fa-headset' aria-hidden='true'></i>
+          Support im Portal
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
