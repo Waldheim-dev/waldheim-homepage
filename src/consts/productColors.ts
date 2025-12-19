@@ -79,7 +79,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   aether: {
     name: 'Aether',
     version: '1.0.0',
-    status: 'beta',
+    status: 'stable',
     releaseDate: '2025-12-15',
     colors: {
       name: 'Aether',
