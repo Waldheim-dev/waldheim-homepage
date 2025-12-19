@@ -1,3 +1,10 @@
+## [26.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.5.0...26.5.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* Mark Aether product as stable, update its release notes, and upgrade dependencies and package manager. ([967637d](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/967637dde026b12bf090ff1ce6ce0eb0e8804038))
+
 # [26.5.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.4.0...26.5.0) (2025-12-15)
 
 
