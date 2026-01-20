@@ -26,7 +26,7 @@ const layer = JSON.stringify(entry.data.layer)
   <div class='flip-card-inner group bg-dark-900/50 border border-light-500/20 gap-1 rounded-xl hover:border-light-500/30 transition-all duration-300 h-36'>
   <div class='flip-front flex flex-col justify-center items-center gap-2 p-8 sm:p-10 relative'>
       <img
-        class='max-h-12 w-full object-contain group-hover:brightness-110 transition-all duration-150'
+        class={`max-h-12 w-full object-contain group-hover:brightness-110 transition-all duration-150 ${entry.data.invertImage ? 'invert' : ''}`}
         loading='lazy'
         src={entry.data.image} alt={entry.data.name} width='50'
         height='50'>

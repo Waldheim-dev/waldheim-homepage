@@ -40,6 +40,7 @@ const skills = defineCollection({
   fixedExperience: z.number(),
   isTopSkill: z.boolean(),
   isTechStack: z.boolean(),
+  invertImage: z.boolean().optional(),
   sinceLastRollup: z
     .string()
     .optional()
