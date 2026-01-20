@@ -8,5 +8,6 @@
   "knowledgebase": "expert",
   "isTopSkill": true,
   "isTechStack": false,
+  "invertImage": true,
   "layer": ["general"]
 }
