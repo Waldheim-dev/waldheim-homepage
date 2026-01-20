@@ -1,0 +1,117 @@
+---
+// WetterApp Claim Section für Homepage
+import { getProductInfo } from '../consts/productColors';
+
+const waetherapp = getProductInfo('waetherapp')!;
+---
+
+<section class='py-16 px-6 bg-gradient-to-b from-dark-900 via-blue-950/10 to-dark-900'>
+  <div class='mx-auto max-w-7xl'>
+    <div class='grid md:grid-cols-2 gap-12 items-center'>
+      <!-- Text Content -->
+      <div class='gsap-fadein'>
+        <div class='mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30'>
+          <i class='fa-solid fa-cloud-sun text-blue-400' aria-hidden='true'></i>
+          <span class='text-blue-400 font-semibold'>Open Source</span>
+          <span
+            class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
+            <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden='true'></i>
+            {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
+          </span>
+        </div>
+
+        <h2 class='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>WetterApp</span> – Präzise Wettervorhersagen
+        </h2>
+
+        <p class='text-xl text-light-300 mb-6 leading-relaxed'>
+          Elegante, Open-Source Wetter-App mit Multi-Provider-Support. Echtzeit-Daten, Unwetterwarnungen, 
+          interaktives Radar und Standortvergleich – alles kostenlos und werbefrei.
+        </p>
+
+        <div class='grid grid-cols-2 gap-4 mb-8'>
+          <div class='flex items-start gap-3'>
+            <i class='fa-solid fa-cloud text-blue-400 text-xl mt-1' aria-hidden='true'></i>
+            <div>
+              <h3 class='text-white font-semibold mb-1'>Multi-Provider</h3>
+              <p class='text-light-400 text-sm'>4 Wetter-APIs integriert</p>
+            </div>
+          </div>
+          <div class='flex items-start gap-3'>
+            <i class='fa-solid fa-bell text-blue-400 text-xl mt-1' aria-hidden='true'></i>
+            <div>
+              <h3 class='text-white font-semibold mb-1'>Warnungen</h3>
+              <p class='text-light-400 text-sm'>Push-Benachrichtigungen</p>
+            </div>
+          </div>
+          <div class='flex items-start gap-3'>
+            <i class='fa-solid fa-clock-rotate-left text-blue-400 text-xl mt-1' aria-hidden='true'></i>
+            <div>
+              <h3 class='text-white font-semibold mb-1'>Historische Daten</h3>
+              <p class='text-light-400 text-sm'>Wetterdaten der Vergangenheit</p>
+            </div>
+          </div>
+          <div class='flex items-start gap-3'>
+            <i class='fa-brands fa-gitlab text-blue-400 text-xl mt-1' aria-hidden='true'></i>
+            <div>
+              <h3 class='text-white font-semibold mb-1'>Open Source</h3>
+              <p class='text-light-400 text-sm'>100% kostenlos & transparent</p>
+            </div>
+          </div>
+        </div>
+
+        <div class='flex flex-col sm:flex-row gap-4'>
+          <a 
+            href='/waetherapp/' 
+            class='gsap-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all'
+            aria-label='Mehr über WetterApp erfahren'
+          >
+            <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
+            Mehr erfahren
+          </a>
+          <a 
+            href='https://wetter.waldheim.dev' 
+            class='gsap-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-dark-800 border border-blue-500/30 text-white font-semibold hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/30 transition-all'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='WetterApp kostenlos nutzen'
+          >
+            <i class='fa-solid fa-rocket' aria-hidden='true'></i>
+            Kostenlos nutzen
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual Content -->
+      <div class='relative gsap-fadein'>
+        <div class='relative group'>
+          <!-- Ambient Glow -->
+          <div class='absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-cyan-500/20 to-blue-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10'></div>
+          
+          <!-- Screenshot -->
+          <img 
+            src='/waetherapp/screenshot.png' 
+            alt='WetterApp Dashboard mit Wettervorhersage, Radar und Standortvergleich' 
+            class='relative rounded-xl shadow-2xl border border-light-500/20 w-full hover:scale-105 transition-transform duration-500'
+            loading='lazy'
+          />
+        </div>
+
+        <!-- Floating Stats -->
+        <div class='absolute -bottom-6 -left-6 bg-dark-800/90 backdrop-blur-sm border border-blue-500/30 rounded-lg p-4 shadow-xl'>
+          <div class='flex items-center gap-3'>
+            <div class='flex items-center gap-2'>
+              <i class='fa-solid fa-code-branch text-blue-400' aria-hidden='true'></i>
+              <span class='text-light-100 font-semibold'>v{waetherapp.version}</span>
+            </div>
+            <div class='w-px h-6 bg-light-500/20'></div>
+            <div class='flex items-center gap-2'>
+              <i class='fa-solid fa-download text-cyan-400' aria-hidden='true'></i>
+              <span class='text-light-300 text-sm'>Open Source</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
