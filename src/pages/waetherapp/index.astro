@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+import WaetherappHero from '../../components/WaetherappHero.astro';
+import WaetherappFeatures from '../../components/WaetherappFeatures.astro';
+import WaetherappScreenshots from '../../components/WaetherappScreenshots.astro';
+import WaetherappProviders from '../../components/WaetherappProviders.astro';
+import WaetherappTech from '../../components/WaetherappTech.astro';
+import WaetherappFree from '../../components/WaetherappFree.astro';
+import CTAPlain from '../../components/CTAPlain.astro';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  {
+    name: 'Home',
+    link: 'https://waldheim.dev'
+  },
+  {
+    name: 'WetterApp',
+    link: 'https://waldheim.dev/waetherapp'
+  }
+]);
+
+const titel = 'WetterApp: Kostenlose Wetter-Software | waldheim.dev';
+const description =
+  'WetterApp: Moderne, kostenlose Wetter-Anwendung mit Multi-Provider-System, intelligenter Fallback und 7-Tage-Vorhersage. Selbstgehostet oder Cloud – vollständig Open Source!';
+const keywords =
+  'WetterApp, Wetter, Vorhersage, Wetterdaten, Open Source, kostenlos, Self-Hosting, Docker, Multi-Provider, Fallback, Wetteralarm, Luftqualität';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'WetterApp',
+  applicationCategory: 'Utilities',
+  operatingSystem: 'Web',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock'
+  },
+  softwareVersion: '1.0.0',
+  description: description,
+  url: 'https://waldheim.dev/waetherapp',
+  author: {
+    '@type': 'Organization',
+    name: 'waldheim.dev',
+    url: 'https://waldheim.dev'
+  },
+  sourceCode: {
+    '@type': 'CreativeWork',
+    url: 'https://gitlab.com/waldheim.dev-services/waetherapp',
+    license: 'https://opensource.org/licenses/MIT'
+  },
+  screenshot: 'https://waldheim.dev/waetherapp/screenshot.png'
+};
+
+const ogImage = 'https://waldheim.dev/waetherapp/og-image.jpg';
+---
+
+<Layout title={titel} description={description} keywords={keywords} ogImage={ogImage}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadCrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+
+  <!-- Hero Section -->
+  <WaetherappHero />
+
+  <!-- Features Section -->
+  <WaetherappFeatures />
+
+  <!-- Screenshots Section -->
+  <WaetherappScreenshots />
+
+  <!-- Providers Section -->
+  <WaetherappProviders />
+
+  <!-- Technology Section -->
+  <WaetherappTech />
+
+  <!-- Pricing / Free Section -->
+  <WaetherappFree />
+
+  <!-- Final CTA -->
+  <CTAPlain
+    title="Bereit für moderne Wetterdaten?"
+    description="Starte jetzt kostenlos mit WetterApp. Keine Kreditkarte erforderlich."
+    primaryCTA={{
+      label: 'Zur App',
+      href: 'https://wetter.waldheim.dev',
+      target: '_blank'
+    }}
+    secondaryCTA={{
+      label: 'GitLab ansehen',
+      href: 'https://gitlab.com/waldheim.dev-services/waetherapp',
+      target: '_blank'
+    }}
+  />
+</Layout>
