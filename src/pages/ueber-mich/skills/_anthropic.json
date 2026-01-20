@@ -1,0 +1,12 @@
+{
+  "name": "Anthropic",
+  "image": "/brands/claude-ai-icon.png",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2025-12-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": true,
+  "isTechStack": true,
+  "layer": ["ai", "general"]
+}
