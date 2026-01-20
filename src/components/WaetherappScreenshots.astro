@@ -1,0 +1,95 @@
+---
+interface Screenshot {
+  src: string;
+  alt: string;
+  title: string;
+}
+
+const screenshots: Screenshot[] = [
+  {
+    src: '/waetherapp/01-main-view-tokyo.png',
+    alt: 'WetterApp Hauptansicht mit aktuellen Wetterdaten für Tokyo',
+    title: 'Hauptansicht'
+  },
+  {
+    src: '/waetherapp/05-main-view-dark-mode.png',
+    alt: 'WetterApp Dark Mode mit Echtzeit-Wetterdaten',
+    title: 'Dark Mode'
+  },
+  {
+    src: '/waetherapp/02-comparison-cards.png',
+    alt: 'Vergleich mehrerer Standorte in der WetterApp',
+    title: 'Mehrere Standorte'
+  },
+  {
+    src: '/waetherapp/03-alerts-settings.png',
+    alt: 'Wetteralarme und Einstellungen',
+    title: 'Wetteralarme'
+  },
+  {
+    src: '/waetherapp/07-comparison-table.png',
+    alt: 'Detaillierte Vergleichstabelle',
+    title: 'Detailvergleich'
+  },
+  {
+    src: '/waetherapp/06-comparison-dark-mode.png',
+    alt: 'Vergleichsansicht im Dark Mode',
+    title: 'Vergleich Dark'
+  }
+];
+---
+
+<section class="py-24 sm:py-32 px-6 bg-dark-900">
+  <div class="container mx-auto max-w-7xl">
+    <!-- Header -->
+    <div class="text-center mb-16 space-y-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-white">
+        Einblicke in die App
+      </h2>
+      <p class="text-xl text-light-300 max-w-2xl mx-auto">
+        Moderne UI, optimiert für Desktop und Mobile
+      </p>
+    </div>
+    
+    <!-- Screenshots Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {screenshots.map((screenshot) => (
+        <div class="relative group">
+          <!-- Ambient Glow -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 
+                      blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-xl"></div>
+          
+          <!-- Screenshot Card -->
+          <div class="relative bg-dark-950/50 border border-light-500/20 
+                      hover:border-light-500/40 rounded-xl overflow-hidden
+                      hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300
+                      aspect-[4/3]">
+            
+            <!-- Image -->
+            <img 
+              src={screenshot.src}
+              alt={screenshot.alt}
+              loading="lazy"
+              class="w-full h-full object-cover object-top"
+              width="800"
+              height="600"
+            />
+            
+            <!-- Title Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-950/95 to-transparent p-4">
+              <h3 class="text-white font-semibold text-sm">{screenshot.title}</h3>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Info -->
+    <div class="mt-12 text-center">
+      <p class="text-light-400 text-sm">
+        <i class="fa-solid fa-mobile-screen text-blue-400 mr-2" aria-hidden="true"></i>
+        Responsive Design – funktioniert auf allen Geräten
+      </p>
+    </div>
+  </div>
+</section>

@@ -8,6 +8,7 @@ category: "design"
 year: 2025
 eventSeries: "fasching"
 previousYear: "mv-obermeitingen/2024/fasching"
+nextYear: "mv-obermeitingen/2026/fasching"
 heroImage: "referenzen/mvo-obermeitingen/fasching_2025.jpg"
 assets: [
   "referenzen/mvo-obermeitingen/fasching_2025.jpg"

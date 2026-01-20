@@ -200,6 +200,30 @@ test.describe('Barrierefreiheit (A11y) Tests', () => {
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 
+  test('WetterApp', async ({ page }) => {
+    await page.goto('/waetherapp');
+    await page.waitForLoadState('networkidle');
+    
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    
+    console.log('\n📊 WETTERAPP:');
+    console.log(`  ✅ Passed: ${accessibilityScanResults.passes.length}`);
+    console.log(`  ⚠️  Violations: ${accessibilityScanResults.violations.length}`);
+    
+    if (accessibilityScanResults.violations.length > 0) {
+      console.log('\n🚨 VIOLATIONS:');
+      accessibilityScanResults.violations.forEach((violation, i) => {
+        console.log(`\n${i + 1}. ${violation.id} (${violation.impact})`);
+        console.log(`   ${violation.description}`);
+        console.log(`   Affected: ${violation.nodes.length} element(s)`);
+      });
+    }
+    
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+
   test('DevSecOps Service', async ({ page }) => {
     await page.goto('/services/devsecops');
     await page.waitForLoadState('networkidle');

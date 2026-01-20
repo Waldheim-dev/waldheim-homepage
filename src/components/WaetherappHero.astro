@@ -1,0 +1,106 @@
+---
+import WaetherappHeroBackground from './WaetherappHeroBackground.astro';
+
+interface Props {
+  variant?: 'default' | 'gradient';
+}
+
+const { variant = 'default' } = Astro.props;
+---
+
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-dark-950">
+  <WaetherappHeroBackground />
+  
+  <div class="container mx-auto px-6 sm:px-8 relative z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Left: Content -->
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2">
+          <i class="fa-solid fa-cloud text-blue-400" aria-hidden="true"></i>
+          <span class="text-blue-300 text-sm font-medium">Kostenlose Wetter-App</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          Moderne <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Wetter-</span>
+          vorhersage
+        </h1>
+        
+        <p class="text-xl text-light-300 max-w-xl">
+          Echtzeit-Wetterdaten mit intelligentem Multi-Provider-System. Genaue Vorhersagen, automatisches Fallback, kostenlos und open-source.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a 
+            href="/waetherapp/#features"
+            class="bg-gradient-to-r from-blue-400 to-cyan-400 text-dark-950 px-8 py-4 rounded-lg font-semibold 
+                   hover:shadow-lg hover:shadow-blue-400/50 transition-all duration-300"
+            aria-label="Zu den Features scrollen"
+          >
+            <i class="fa-solid fa-arrow-down mr-2" aria-hidden="true"></i>
+            Features entdecken
+          </a>
+          
+          <a 
+            href="https://wetter.waldheim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-dark-800 border border-light-500/20 text-white px-8 py-4 rounded-lg font-semibold 
+                   hover:border-light-500/40 hover:shadow-lg transition-all duration-300"
+            aria-label="Zur WetterApp öffnen (neues Fenster)"
+          >
+            <i class="fa-solid fa-arrow-up-right mr-2" aria-hidden="true"></i>
+            Zur App
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right: Visual -->
+      <div class="relative hidden md:block">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 blur-3xl -z-10"></div>
+        
+        <div class="relative bg-dark-800/50 border border-blue-500/20 rounded-2xl p-8 backdrop-blur-sm
+                    group hover:border-blue-500/40 transition-all duration-300">
+          <div class="absolute -inset-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 
+                      blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+          
+          <div class="space-y-4">
+            <!-- Weather Widget Preview -->
+            <div class="bg-dark-900/80 rounded-xl p-6 space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-light-200 font-semibold">Dein Standort</h3>
+                  <p class="text-light-400 text-sm">Berlin, Deutschland</p>
+                </div>
+                <i class="fa-solid fa-cloud-sun text-5xl text-yellow-300" aria-hidden="true"></i>
+              </div>
+              
+              <div class="grid grid-cols-3 gap-3 pt-4 border-t border-light-500/10">
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-blue-300">22°C</p>
+                  <p class="text-light-400 text-xs">Temp</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-cyan-300">65%</p>
+                  <p class="text-light-400 text-xs">Feuchte</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-blue-300">12 km/h</p>
+                  <p class="text-light-400 text-xs">Wind</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Multi-Provider Badge -->
+            <div class="bg-dark-900/80 rounded-xl p-4 flex items-center gap-3">
+              <i class="fa-solid fa-shield-halved text-green-400" aria-hidden="true"></i>
+              <div>
+                <p class="text-light-200 text-sm font-semibold">Intelligenter Fallback</p>
+                <p class="text-light-400 text-xs">4 Wetter-Provider</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,14 +3,16 @@ title: "Werbematerialien 'In Konzert 2026': MV Obermeitingen"
 isTopProject: false
 description: "Design und Erstellung von Werbematerialien (Plakate, Eintrittskarten, Programmhefte, Social Media Grafiken) für das 'In Konzert 2026' des Musikvereins Obermeitingen. Modernes, ansprechendes und wiederverwendbares Design."
 shortDescription: "Design von Werbematerialien für das Konzert 'In Konzert 2026'."
-pubDate: "2025-12-27"
+pubDate: "2026-01-10"
 category: "design"
 year: 2026
 eventSeries: "in-konzert"
 previousYear: "mv-obermeitingen/2025/in_konzert"
 heroImage: "referenzen/mvo-obermeitingen/in_konzert_2026.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/in_konzert_2026.jpg"
+  "referenzen/mvo-obermeitingen/in_konzert_2026.jpg",
+  "referenzen/mvo-obermeitingen/in_konzert_2026_pkt.jpg",
+  "referenzen/mvo-obermeitingen/in_konzert_eintrittskarte_2026.jpg"
 ]
 overview: [
   {

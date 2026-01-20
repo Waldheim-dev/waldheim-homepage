@@ -127,6 +127,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-primary-500/20',
     },
   },
+  waetherapp: {
+    name: 'WetterApp',
+    version: '1.0.0',
+    status: 'stable',
+    releaseDate: '2026-01-20',
+    colors: {
+      name: 'WetterApp',
+      primary: 'blue-400',
+      secondary: 'cyan-400',
+      glowColor: 'blue-400/50',
+      badgeBg: 'bg-blue-500/10',
+      badgeBorder: 'border-blue-500/30',
+      badgeText: 'text-blue-400',
+      iconColor: 'blue-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-blue-400/20',
+    },
+  },
 };
 
 // Rückwärtskompatibilität: Nur Farben
