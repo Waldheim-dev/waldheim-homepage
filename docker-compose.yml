@@ -21,7 +21,7 @@ services:
       - traefik.http.middlewares.redirect-to-non-www.redirectregex.replacement=https://waldheim.dev/$${1}
       - traefik.http.middlewares.redirect-to-non-www.redirectregex.permanent=true
     ports:
-      - 8084:80
+      - 8105:80
     env_file: .env
     environment:
       PORT: ${WEB_PORT}
@@ -33,7 +33,6 @@ services:
     networks:
       - proxy
       - default
-
 
 networks:
   proxy:
