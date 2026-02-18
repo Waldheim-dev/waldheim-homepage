@@ -1,4 +1,16 @@
 ---
-// Redirect to customer portal
-return Astro.redirect('https://portal.waldheim.dev', 301);
+import Layout from '../../layouts/Layout.astro';
+// Diese Seite ist ein Redirect, sollte aber für SEO korrekt markiert sein, falls sie gecrawlt wird
 ---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, follow">
+    <meta http-equiv="refresh" content="0;url=https://portal.waldheim.dev">
+    <title>Kontakt - Waldheim.dev</title>
+</head>
+<body>
+    <p>Leite weiter zum <a href="https://portal.waldheim.dev">Kundenportal</a>...</p>
+</body>
+</html>

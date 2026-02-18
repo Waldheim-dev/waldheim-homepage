@@ -17,8 +17,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/devsecops'
 }]);
 
-const titel = 'DevSecOps Services - Automatisierung & Sicherheit | waldheim.dev';
-const description = 'DevSecOps-Beratung Augsburg & München: CI/CD-Automatisierung, Kubernetes, GitOps und Security. Wir optimieren Ihre Entwicklungsprozesse remote & vor Ort in Bayern.';
+const titel = 'DevSecOps Beratung Augsburg & München | Waldheim.dev';
+const description = 'Professionelle DevSecOps-Beratung in Augsburg & München. CI/CD-Automatisierung, Kubernetes & Security für Ihr Unternehmen. Jetzt beraten lassen!';
 const keywords = 'DevSecOps, DevOps, Continuous Integration, Continuous Delivery, CI/CD, Automatisierung, GitHub, GitLab, Sicherheit, Softwareentwicklung, Kubernetes, Docker, GitOps';
 
 // Structured Data: Service
@@ -341,27 +341,28 @@ const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
   <PriceService />
 
   <RelatedServices 
+    headline="Passende Tools & Services"
     services={[
       {
-        title: 'Softwareentwicklung',
-        href: '/services/entwicklung/',
-        icon: 'fa-solid fa-code',
-        description: 'Maßgeschneiderte Webanwendungen mit modernsten Technologien – von der Konzeption bis zum Go-Live.',
-        color: 'blue'
+        title: "Aether: Sicherer Datentransfer",
+        href: "/aether/",
+        icon: "fa-solid fa-atom",
+        description: "High-Performance Data Transmission – ein Beispiel für unsere Cloud- & DevOps-Kompetenz.",
+        color: "pink"
       },
       {
-        title: 'IT-Service & Support',
-        href: '/services/it-service/',
-        icon: 'fa-solid fa-server',
-        description: 'Zuverlässiger IT-Support für Netzwerke, Server und Cloud-Migrationen – vor Ort in Augsburg/München.',
-        color: 'green'
+        title: "Astro AI: llms.txt Tool",
+        href: "/astro-ai-llms-txt/",
+        icon: "fa-solid fa-sparkles",
+        description: "Unser NPM-Package für KI-optimierte SEO-Schnittstellen in Astro-Projekten.",
+        color: "blue"
       },
       {
-        title: 'Webdesign & UX/UI',
-        href: '/services/design/',
-        icon: 'fa-solid fa-palette',
-        description: 'Professionelles Design für Markenidentität, Webseiten und benutzerfreundliche Interfaces.',
-        color: 'pink'
+        title: "Softwareentwicklung",
+        href: "/services/entwicklung/",
+        icon: "fa-solid fa-code",
+        description: "Wir bauen die Software, die wir mit DevSecOps sicher und schnell deployen.",
+        color: "blue"
       }
     ]}
   />

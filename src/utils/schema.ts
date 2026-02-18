@@ -21,12 +21,12 @@ interface Organization {
   name: string;
   description: string;
   email: string;
-  address: {
-    streetAddress: string;
-    addressLocality: string;
-    addressCountry: string;
-    addressRegion: string;
-    postalCode: string;
+  address?: {
+    streetAddress?: string;
+    addressLocality?: string;
+    addressCountry?: string;
+    addressRegion?: string;
+    postalCode?: string;
   };
 }
 
@@ -83,7 +83,7 @@ export class SchemaUtils {
   static getOrganizationSchema(
     organization: Organization,
   ) {
-    return {
+    const schema: any = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       url: organization.url,
@@ -91,15 +91,20 @@ export class SchemaUtils {
       name: organization.name,
       description: organization.description,
       email: organization.email,
-      address: {
+    };
+
+    if (organization.address) {
+      schema.address = {
         '@type': 'PostalAddress',
         streetAddress: organization.address.streetAddress,
         addressLocality: organization.address.addressLocality,
         addressCountry: organization.address.addressCountry,
         addressRegion: organization.address.addressRegion,
         postalCode: organization.address.postalCode,
-      },
-    };
+      };
+    }
+
+    return schema;
   }
 
   static getSoftwareApplicationSchema(app: SoftwareApplication) {

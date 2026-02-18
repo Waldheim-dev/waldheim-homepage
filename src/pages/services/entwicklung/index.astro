@@ -17,8 +17,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/entwicklung'
 }]);
 
-const titel = 'Softwareentwicklung & Webentwicklung | waldheim.dev';
-const description = 'Webentwicklung Augsburg & München: Maßgeschneiderte Web-Apps, Toolings, Scrum/Product Owner Expertise. Professionelle Softwareentwicklung in Bayern.';
+const titel = 'Softwareentwicklung Augsburg & München | Webentwicklung | Waldheim.dev';
+const description = 'Individuelle Softwareentwicklung & Webentwicklung in Augsburg und München. Maßgeschneiderte Lösungen für KMU & Verbände. Jetzt Projekt anfragen!';
 const keywords = 'Softwareentwicklung, Webentwicklung, Webanwendungen, Tooling, Individualsoftware, Programmierung, Scrum, Product Owner, Schulungen, TypeScript, React, Angular';
 
 // Structured Data: Service
@@ -289,27 +289,28 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
   <PriceService />
 
   <RelatedServices 
+    headline="Passende Lösungen & Ergänzungen"
     services={[
+      {
+        title: "Ecodrive: Smartes Fuhrparkmanagement",
+        href: "/ecodrive/",
+        icon: "fa-solid fa-car-side",
+        description: "Beispiel für eine von uns entwickelte SaaS-Lösung: Effiziente Fahrtenbuch- und Tankverwaltung.",
+        color: "green"
+      },
+      {
+        title: "Socialverse: KI-Marketing",
+        href: "/socialverse/",
+        icon: "fa-solid fa-rocket",
+        description: "KI-gestützte Marketing-Automation und CRM für KMU – modernste Cloud-Entwicklung in der Praxis.",
+        color: "purple"
+      },
       {
         title: "DevSecOps & Automatisierung",
         href: "/services/devsecops/",
         icon: "fa-solid fa-shield-check",
-        description: "CI/CD-Pipelines, Kubernetes, GitOps – Automatisierung und Sicherheit für Ihre Entwicklungsprozesse.",
-        color: "purple"
-      },
-      {
-        title: "Webdesign & UX/UI",
-        href: "/services/design/",
-        icon: "fa-solid fa-palette",
-        description: "Professionelles Design für Markenidentität, Webseiten und benutzerfreundliche Interfaces.",
-        color: "pink"
-      },
-      {
-        title: "Smart Home Beratung",
-        href: "/services/smarthome/",
-        icon: "fa-solid fa-house-signal",
-        description: "Unabhängige Beratung für Ihr individuelles Smart Home System – ohne Herstellerbindung.",
-        color: "orange"
+        description: "Wir automatisieren Ihre Prozesse, damit Sie sich voll auf die Entwicklung konzentrieren können.",
+        color: "blue"
       }
     ]}
   />
