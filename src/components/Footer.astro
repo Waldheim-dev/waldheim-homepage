@@ -2,49 +2,55 @@
 const date = new Date();
 
 import fs from 'node:fs';
-const version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
+let version = '0.0.0';
+try {
+  const pkg = JSON.parse(fs.readFileSync('./package.json').toString());
+  version = pkg.version;
+} catch (e) {
+  console.error('Could not read package.json version');
+}
 ---
 
-<footer class="bg-dark-900/80 backdrop-blur-lg border-t border-light-500/10 text-light-100" aria-labelledby="footer-heading">
+<footer class="bg-meg-surface-dark/80 backdrop-blur-xl border-t border-meg-border-dark text-meg-text-primary-dark" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="space-y-8">
 
-        <a href="/" class="-m-1.5 p-1.5 flex items-center gap-2 rounded-lg hover:bg-dark-800/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+        <a href="/" class="-m-1.5 p-1.5 flex items-center gap-2 rounded-lg hover:bg-meg-surface-dark/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
           <img class="h-8 w-auto" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
           <span class="font-semibold">Waldheim.dev</span>
         </a>
-        <p class="text-sm leading-5 text-light-300">Let's build a better tomorrow, together</p>
+        <p class="text-sm leading-5 text-meg-text-secondary">Let's build a better tomorrow, together</p>
         <div class="flex space-x-6">
           <a href="https://www.linkedin.com/in/markus-waldheim-03827a312/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
              aria-label="Besuche uns auf LinkedIn"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-linkedin text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" rel="noopener noreferrer" title="Xing" aria-label="Besuche uns auf Xing"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-xing text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://gitlab.com/mwaldheim" target="_blank" rel="noopener noreferrer" title="Gitlab" aria-label="Besuche unsere GitLab-Projekte"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-gitlab text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://github.com/Waldheim-dev" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Besuche unsere GitHub-Repositories"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://www.twitch.tv/blackbird995" target="_blank" rel="noopener noreferrer" title="Twitch" aria-label="Folge uns auf Twitch"
-             class="text-light-300 hover:text-purple-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-purple-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-twitch text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://twitter.com/my_codec" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Folge uns auf Twitter"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-brands fa-twitter text-xl" aria-hidden="true"></i>
           </a>
           <a href="https://www.designenlassen.de/profil/622353" target="_blank" rel="noopener noreferrer" title="Designenlassen.de"
              aria-label="Finde uns auf Designenlassen.de"
-             class="text-light-300 hover:text-primary-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
+             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
             <i class="fa-solid fa-pen-ruler text-xl" aria-hidden="true"></i>
           </a>
         </div>
@@ -56,133 +62,121 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a href="/services/entwicklung/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Entwicklung</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Entwicklung</a>
               </li>
               <li>
                 <a href="/services/design/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Design / UX</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Design / UX</a>
               </li>
               <li>
                 <a href="/services/it-service/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">IT-Service</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">IT-Service</a>
               </li>
               <li>
                 <a href="/services/devsecops/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">DevSecOps</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">DevSecOps</a>
               </li>
               <li>
                 <a href="/services/smarthome/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Smarthome</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Smarthome</a>
               </li>
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-bold leading-4">Produkte</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Produkte</h3>
             <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a href="/ecodrive/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Ecodrive</a>
-              </li>
-              <li>
-                <a href="/silvacore/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Silvacore</a>
-              </li>
-              <li>
-                <a href="/socialverse/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Socialverse</a>
-              </li>
+              {[
+                { name: 'Ecodrive', href: '/ecodrive/' },
+                { name: 'Silvacore', href: '/silvacore/' },
+                { name: 'Socialverse', href: '/socialverse/' },
+                { name: 'Aether', href: '/aether/' },
+                { name: 'WetterApp', href: '/waetherapp/' },
+                { name: 'Ausgabeschein', href: '/ausgabeschein-generator/' },
+                { name: 'Astro AI', href: '/astro-ai-llms-txt/' }
+              ].map((item) => (
+                <li>
+                  <a href={item.href}
+                     class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">{item.name}</a>
+                </li>
+              ))}
             </ul>
-            <h3 class="text-sm font-bold leading-4 mt-8">Produkt-Links</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest mt-8">App-Links</h3>
             <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a href="https://www.eco-drive.app" target="_blank" rel="noopener noreferrer"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Ecodrive App
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://app.silvacore.de" target="_blank" rel="noopener noreferrer"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Silvacore App
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://billing.stripe.com/p/login/9AQ6s7gS4aC981ifYY" target="_blank" rel="noopener noreferrer"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Ecodrive Kundenportal
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                </a>
-              </li>
+              {[
+                { name: 'Ecodrive App', href: 'https://www.eco-drive.app' },
+                { name: 'Silvacore App', href: 'https://app.silvacore.de' },
+                { name: 'Aether App', href: 'https://aether.waldheim.dev' },
+                { name: 'WetterApp', href: 'https://wetter.waldheim.dev' },
+                { name: 'Kundenportal', href: 'https://portal.waldheim.dev' }
+              ].map((item) => (
+                <li>
+                  <a href={item.href}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+                    {item.name}
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-bold leading-4">Firma</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Firma</h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a href="https://climate.stripe.com/1QAkEH" target="_blank"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Climate-Programm
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Climate-Programm
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="/blog/1/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Blog</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Blog</a>
               </li>
               <li>
                 <a href="mailto:kontakt@waldheim.dev"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Bug
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Bug
                   melden
-                  <i class="fa-solid fa-envelope text-sm" aria-hidden="true"></i>
+                  <i class="fa-solid fa-envelope text-[10px]" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="https://www.waldheim-it.de/" target="_blank"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Waldheim
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim
                   IT-Beratung
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-            <h3 class="text-sm font-bold leading-4 mt-4">Support</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a href="https://forestdesign.atlassian.net/servicedesk/customer/portals"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Help
-                  Center
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://billing.stripe.com/p/login/9AQ6s7gS4aC981ifYY"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Ecodrive
-                  Kundenportal
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
           </div>
           <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-bold leading-4">Rechtliches</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Rechtliches</h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
                 <a href="/agb/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">AGB</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">AGB</a>
               </li>
               <li>
                 <a href="/datenschutz/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Datenschutz</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Datenschutz</a>
+              </li>
+              <li>
+                <a href="/widerrufsbelehrung/"
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Widerruf</a>
               </li>
               <li>
                 <a href="/impressum/"
-                   class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Impressum</a>
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Impressum</a>
               </li>
               <li>
                 <button type="button" data-cc="show-preferencesModal"
                         aria-label="Cookie-Einstellungen verwalten"
-                        class="text-sm leading-4 text-light-300 hover:text-primary-400 transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">
-                  Cookie-Einstellungen
-                  <i class="fa-solid fa-sliders text-sm" aria-hidden="true"></i>
+                        class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent cursor-pointer">
+                  Cookies
+                  <i class="fa-solid fa-sliders text-[10px]" aria-hidden="true"></i>
                 </button>
               </li>
             </ul>
@@ -191,17 +185,17 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
       </div>
     </div>
     <div
-      class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row md:justify-between md:items-center">
-      <p class="text-xs leading-5">&copy; {date.getFullYear()} Waldheim.dev. Alle
+      class="mt-16 border-t border-meg-border-dark pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row md:justify-between md:items-center">
+      <p class="text-xs leading-5 text-meg-text-secondary">&copy; {date.getFullYear()} Waldheim.dev. Alle
         Rechte vorbehalten.</p>
 
       <span class="text-xs flex flex-row items-center gap-2 mt-4 md:mt-0">
       <span
-        class="inline-flex items-center gap-x-1.5 rounded-lg bg-primary-500/10 border border-primary-500/30 px-2 py-1 text-xs font-medium text-primary-400">
-        <i class="fa-solid fa-circle text-primary-400 text-[6px]" aria-hidden="true"></i>
+        class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-xs font-medium text-meg-accent">
+        <i class="fa-solid fa-circle text-meg-accent text-[6px]" aria-hidden="true"></i>
         v{version}
       </span>
-        <span class="text-light-300">Design und Entwicklung by <a href="https://www.waldheim.dev" class="underline hover:text-primary-400 transition-colors rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Waldheim.dev</a></span>
+        <span class="text-meg-text-secondary">Design und Entwicklung by <a href="https://www.waldheim.dev" class="underline hover:text-meg-accent transition-colors rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim.dev</a></span>
         </span>
     </div>
   </div>

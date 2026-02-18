@@ -52,13 +52,15 @@ if (nextYear) {
     h1 {
         font-size: 3rem !important;
         line-height: 4rem !important;
-        font-weight: bold !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.05em !important;
     }
 
     h2 {
         font-size: 1.5rem !important;
         line-height: 2.5rem !important;
-        font-weight: bold !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.025em !important;
     }
 
     p {
@@ -87,37 +89,43 @@ if (nextYear) {
   <!-- Jahres-Navigation für Event-Serien -->
   {
     (eventSeries && year && (previousYearProject || nextYearProject)) ? (
-      <div class="py-8 border-b border-light-500/20 gsap-fadein">
+      <div class="py-8 border-b border-meg-border-dark gsap-fadein bg-meg-bg-dark">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="bg-dark-900/50 border border-primary-500/20 rounded-xl p-6">
+          <div class="bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 shadow-sm">
             <div class="flex items-center justify-between">
               <div class="flex-1">
                 {previousYearProject ? (
                   <a 
                     href={`/referenzen/${previousYear}/`} 
-                    class="group inline-flex items-center gap-2 text-light-300 hover:text-primary-400 transition-colors"
+                    class="group inline-flex items-center gap-3 text-meg-text-secondary hover:text-meg-accent transition-all"
                     aria-label={`Vorjahresprojekt: ${previousYearProject.data.title}`}
                   >
-                    <i class="fa-solid fa-arrow-left text-primary-500 group-hover:text-primary-400 transition-colors" aria-hidden="true"></i>
+                    <div class="flex items-center justify-center size-10 rounded-full bg-meg-surface-dark border border-meg-border-dark group-hover:border-meg-accent/50 group-hover:bg-meg-accent/10 transition-all">
+                      <i class="fa-solid fa-arrow-left text-meg-accent" aria-hidden="true"></i>
+                    </div>
                     <div class="text-left">
-                      <div class="text-xs text-light-500">Vorheriges Jahr</div>
-                      <div class="font-semibold">{previousYearProject.data.year || previousYearProject.data.title}</div>
+                      <div class="text-[10px] uppercase tracking-wider opacity-60">Vorheriges Jahr</div>
+                      <div class="font-semibold text-meg-text-primary-dark">{previousYearProject.data.year || previousYearProject.data.title}</div>
                     </div>
                   </a>
                 ) : (
-                  <div class="opacity-50">
-                    <div class="text-xs text-light-500">Vorheriges Jahr</div>
-                    <div class="text-sm text-light-400">Nicht verfügbar</div>
+                  <div class="opacity-30 flex items-center gap-3">
+                    <div class="size-10 rounded-full border border-meg-border-dark flex items-center justify-center">
+                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-xs uppercase tracking-wider">Erstes Jahr</div>
                   </div>
                 )}
               </div>
               
-              <div class="flex-shrink-0 text-center px-6">
+              <div class="flex-shrink-0 text-center px-6 border-x border-meg-border-dark">
                 <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-calendar-days text-2xl text-primary-500" aria-hidden="true"></i>
+                  <div class="p-2 rounded-lg bg-meg-accent/10 text-meg-accent">
+                    <i class="fa-solid fa-calendar-days text-xl" aria-hidden="true"></i>
+                  </div>
                   <div>
-                    <div class="text-xs text-light-500 uppercase tracking-wider">Event-Serie</div>
-                    <div class="text-xl font-bold text-white">{year}</div>
+                    <div class="text-[10px] text-meg-text-secondary uppercase tracking-widest font-bold">Event-Serie</div>
+                    <div class="text-2xl font-black text-meg-text-primary-dark tracking-tighter">{year}</div>
                   </div>
                 </div>
               </div>
@@ -126,19 +134,23 @@ if (nextYear) {
                 {nextYearProject ? (
                   <a 
                     href={`/referenzen/${nextYear}/`} 
-                    class="group inline-flex items-center gap-2 text-light-300 hover:text-primary-400 transition-colors"
+                    class="group inline-flex items-center gap-3 text-meg-text-secondary hover:text-meg-accent transition-all flex-row-reverse"
                     aria-label={`Folgejahresprojekt: ${nextYearProject.data.title}`}
                   >
-                    <div class="text-right">
-                      <div class="text-xs text-light-500">Nächstes Jahr</div>
-                      <div class="font-semibold">{nextYearProject.data.year || nextYearProject.data.title}</div>
+                    <div class="flex items-center justify-center size-10 rounded-full bg-meg-surface-dark border border-meg-border-dark group-hover:border-meg-accent/50 group-hover:bg-meg-accent/10 transition-all">
+                      <i class="fa-solid fa-arrow-right text-meg-accent" aria-hidden="true"></i>
                     </div>
-                    <i class="fa-solid fa-arrow-right text-primary-500 group-hover:text-primary-400 transition-colors" aria-hidden="true"></i>
+                    <div class="text-right">
+                      <div class="text-[10px] uppercase tracking-wider opacity-60">Nächstes Jahr</div>
+                      <div class="font-semibold text-meg-text-primary-dark">{nextYearProject.data.year || nextYearProject.data.title}</div>
+                    </div>
                   </a>
                 ) : (
-                  <div class="opacity-50">
-                    <div class="text-xs text-light-500">Nächstes Jahr</div>
-                    <div class="text-sm text-light-400">Nicht verfügbar</div>
+                  <div class="opacity-30 flex items-center gap-3 flex-row-reverse">
+                    <div class="size-10 rounded-full border border-meg-border-dark flex items-center justify-center">
+                      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-xs uppercase tracking-wider text-right">Aktuellstes</div>
                   </div>
                 )}
               </div>
@@ -149,106 +161,108 @@ if (nextYear) {
     ) : null
   }
 
-  {
-  client && overview ? (
-  <div class="py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div
-        class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div class="lg:pr-4">
-          <div class="relative group overflow-hidden rounded-3xl bg-dark-900/50 border border-light-500/20 hover:border-light-500/40 transition-all duration-300">
-            <div
-              class="absolute -inset-2 bg-gradient-to-r from-primary-500/20 via-emerald-500/20 to-cyan-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div
-              class="relative overflow-hidden rounded-3xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-              <img loading="lazy"
-                class="absolute inset-0 h-full w-full object-cover brightness-75 saturate-50"
-                src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
-                alt={client.name}
-              />
-              <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-dark-900/90 to-dark-950/95" />
-              <figure class="relative isolate">
-                <h2 class="text-white">{client.name}</h2>
-                {client.web ? (
-                  <a
-                    href={client.web.url}
-                    class="flex gap-1 text-primary-400 hover:text-primary-300 transition-colors outline-none"
-                    rel="nofollow"
-                  >
-                    {client.web.name}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6"
+    {
+    client && overview ? (
+    <div class="py-24 sm:py-32 bg-meg-bg-dark">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div class="lg:pr-4">
+            <div class="relative group overflow-hidden rounded-2xl bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/30 transition-all duration-300 shadow-sm">
+              <div
+                class="absolute -inset-2 bg-gradient-to-r from-meg-accent/10 via-sky-400/10 to-violet-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div
+                class="relative overflow-hidden rounded-2xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+                <img loading="lazy"
+                  class="absolute inset-0 h-full w-full object-cover brightness-50 saturate-50 group-hover:scale-105 transition-transform duration-700"
+                  src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
+                  alt={client.name}
+                />
+                <div class="absolute inset-0 bg-gradient-to-br from-meg-surface-dark/80 via-meg-surface-dark/90 to-meg-bg-dark/95" />
+                <figure class="relative isolate">
+                  <h2 class="text-meg-text-primary-dark text-3xl font-bold tracking-tight">{client.name}</h2>
+                  {client.web ? (
+                    <a
+                      href={client.web.url}
+                      class="flex items-center gap-2 text-meg-accent hover:text-sky-400 transition-colors mt-2 font-medium"
+                      rel="nofollow"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                      />
-                    </svg>
-                  </a>
-                ) : null}
-              </figure>
-            </div>
-          </div>
-
-        </div>
-        <div class="gsap-fadein">
-          <div class="text-base leading-7 text-light-100  lg:max-w-lg">
-            <p class="text-base font-semibold leading-7 text-light-500">
-              Firmenwerte
-            </p>
-            <div class="max-w-xl">
-              {client.shortDescription ? (
-                <p class="mt-6">{client.shortDescription}</p>
-              ) : null}
-              <p class="mt-6">{client.description}</p>
-            </div>
-          </div>
-          <dl class="mt-10 flex flex-wrap gap-8 border-t border-gray-900/10 pt-10">
-            {overview.map((item) => (
-              <div class="">
-                <dt class="text-sm font-semibold leading-6 text-light-100">
-                  {item.title}
-                </dt>
-                <dd class="mt-2 text-3xl font-bold leading-10 tracking-tight text-light-500">
-                  {item.meta}
-                </dd>
+                      {client.web.name}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="size-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    </a>
+                  ) : null}
+                </figure>
               </div>
-            ))}
-          </dl>
-          {client.web ? (
-            <div class="mt-10 flex">
-              <a
-                href={client.web?.url}
-                class="text-base font-semibold leading-7 text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 rounded-md"
-                rel="nofollow"
-              >
-                Mehr über diese Firma <span aria-hidden="true">&rarr;</span>
-              </a>
             </div>
-          ) : null}
+  
+          </div>
+          <div class="gsap-fadein">
+            <div class="text-base leading-7 text-meg-text-primary-dark lg:max-w-lg">
+              <p class="text-sm font-bold uppercase tracking-widest text-meg-accent">
+                Klient & Firmenwerte
+              </p>
+              <div class="max-w-xl">
+                {client.shortDescription ? (
+                  <p class="mt-6 text-lg text-meg-text-secondary leading-relaxed">{client.shortDescription}</p>
+                ) : null}
+                <p class="mt-6 text-meg-text-secondary leading-relaxed">{client.description}</p>
+              </div>
+            </div>
+            <dl class="mt-10 flex flex-wrap gap-8 border-t border-meg-border-dark pt-10">
+              {overview.map((item) => (
+                <div class="bg-meg-surface-dark/30 rounded-xl p-4 border border-meg-border-dark shadow-sm">
+                  <dt class="text-xs font-bold uppercase tracking-wider text-meg-text-secondary opacity-70">
+                    {item.title}
+                  </dt>
+                  <dd class="mt-1 text-2xl font-black tracking-tight text-meg-accent">
+                    {item.meta}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            {client.web ? (
+              <div class="mt-10 flex">
+                <a
+                  href={client.web?.url}
+                  class="inline-flex items-center gap-2 text-base font-semibold leading-7 text-meg-text-primary-dark hover:text-meg-accent transition-colors group"
+                  rel="nofollow"
+                >
+                  Mehr über diese Firma 
+                  <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  ) : null
-  }  <!-- Problem -->
+    ) : null
+    }
+    <!-- Problem -->
   {
   problem ? (
-  <div class="relative isolate overflow-hidden bg-dark-900/30 border-y border-light-500/20 gsap-fadein">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-cyan-500/5 to-purple-500/5"></div>
+  <div class="relative isolate overflow-hidden bg-meg-surface-dark/30 border-y border-meg-border-dark gsap-fadein">
+    <div class="absolute inset-0 bg-gradient-to-r from-meg-accent/5 via-sky-400/5 to-meg-accent/5 opacity-50"></div>
     <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8 relative">
-      <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">
-          Das Problem
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-meg-text-primary-dark sm:text-4xl">
+          Die Herausforderung
         </h2>
         <p
-          class="mx-auto mt-6 text-lg leading-8 text-light-200"
+          class="mx-auto mt-6 text-lg leading-8 text-meg-text-secondary max-w-2xl"
           set:text={problem}
         />
       </div>
@@ -259,13 +273,18 @@ if (nextYear) {
 
 {
   techStack && techStack.length > 0 ? (
-  <div class=" py-24 sm:py-32 gsap-fadein">
+  <div class="py-24 sm:py-32 gsap-fadein bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <h2 class="text-center text-lg font-semibold leading-8 text-light-100">
-        Mit welchem Tech-Stack habe ich gearbeitet?
-      </h2>
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          Tech Stack
+        </h2>
+        <p class="text-3xl font-bold text-meg-text-primary-dark tracking-tight">
+          Eingesetzte Technologien & Werkzeuge
+        </p>
+      </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="-mx-6 grid grid-cols-2 gap-2 sm:mx-0 md:grid-cols-6">
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
           {techStack.map(async (item) => {
             const skill = skills.find((skill) => skill.id.replace(/^_/, '') === item.id);
             return (
@@ -286,15 +305,15 @@ if (nextYear) {
 
 {
   solution ? (
-  <div class="relative isolate overflow-hidden bg-dark-900/30 border-y border-light-500/20 gsap-fadein">
-    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-green-400/5 to-primary-500/5"></div>
+  <div class="relative isolate overflow-hidden bg-meg-surface-dark/30 border-y border-meg-border-dark gsap-fadein">
+    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-meg-accent/5 to-sky-400/5 opacity-50"></div>
     <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8 relative">
-      <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">
-          Unsere Lösung
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-meg-text-primary-dark sm:text-4xl">
+          Die Lösung
         </h2>
         <p
-          class="mx-auto mt-6 text-lg leading-8 text-light-200"
+          class="mx-auto mt-6 text-lg leading-8 text-meg-text-secondary max-w-2xl"
           set:text={solution}
         />
       </div>
@@ -303,44 +322,37 @@ if (nextYear) {
     ) : null
   }
 
-<div class="py-24 sm:py-32">
+<div class="py-24 sm:py-32 bg-meg-bg-dark">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div
       class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      <h2
-        class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein"
-      >
-        Auf was habe ich geachtet?
-      </h2>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          Fokus & Details
+        </h2>
+        <p class="text-3xl font-bold tracking-tight text-meg-text-primary-dark sm:text-4xl gsap-fadein">
+          Worauf kam es an?
+        </p>
+      </div>
       <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
         {
           design && design.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-rose-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
-                    />
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10 text-rose-500 border border-rose-500/20">
+                  <i class="fa-solid fa-palette" aria-hidden="true"></i>
                 </div>
-                Design
+                Design & UX
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {design.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-rose-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -349,36 +361,21 @@ if (nextYear) {
         }
         {
           frontend && frontend.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-sky-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/10 text-sky-500 border border-sky-500/20">
+                  <i class="fa-solid fa-code" aria-hidden="true"></i>
                 </div>
                 Frontend
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {frontend.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-sky-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -387,31 +384,21 @@ if (nextYear) {
         }
         {
           backend && backend.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-meg-accent/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"
-                    />
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-meg-accent/10 text-meg-accent border border-meg-accent/20">
+                  <i class="fa-solid fa-server" aria-hidden="true"></i>
                 </div>
                 Backend
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {backend.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-meg-accent mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -420,31 +407,21 @@ if (nextYear) {
         }
         {
           general && general.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-emerald-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-                    />
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                  <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
                 </div>
                 Allgemein
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {general.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-emerald-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -453,28 +430,21 @@ if (nextYear) {
         }
         {
           devops && devops.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-violet-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-500/10 text-violet-500 border border-violet-500/20">
+                  <i class="fa-solid fa-infinity" aria-hidden="true"></i>
                 </div>
                 DevOps
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {devops.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-violet-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -483,88 +453,21 @@ if (nextYear) {
         }
         {
           features && features.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-amber-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
                 <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
-
-                  </svg>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
                 </div>
-                Features
+                Key Features
               </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
                   {features.map((item) => (
-                    <li set:html={item} class="" />
-                  ))}
-                </ul>
-              </dd>
-            </div>
-          ) : null
-        }
-        {
-          security && security.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
-                <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-
-                  </svg>
-                </div>
-                Security
-              </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
-                  {security.map((item) => (
-                    <li set:html={item} class="" />
-                  ))}
-                </ul>
-              </dd>
-            </div>
-          ) : null
-        }
-        {
-          testing && testing.length > 0 ? (
-            <div class="gsap-fadein">
-              <dt class="text-base font-semibold leading-7 text-light-300">
-                <div
-                  class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                  <svg
-                    class="h-6 w-6 text-light-100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-
-                  </svg>
-                </div>
-                Testing
-              </dt>
-              <dd class="mt-1 text-base leading-7 text-light-100">
-                <ul class="list-disc ml-5">
-                  {testing.map((item) => (
-                    <li set:html={item} class="" />
+                    <li class="flex gap-2">
+                      <span class="text-amber-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
                   ))}
                 </ul>
               </dd>
@@ -575,9 +478,59 @@ if (nextYear) {
     </div>
   </div>
 </div>
-<div class=' px-6 py-6 lg:px-8'>
-  <div class='mx-auto max-w-3xl text-base leading-7 text-light-100 '>
-    <div class="mt-16 prose-invert w-full max-w-auto">
+        {
+          security && security.length > 0 ? (
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-emerald-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                  <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                </div>
+                Security
+              </dt>
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
+                  {security.map((item) => (
+                    <li class="flex gap-2">
+                      <span class="text-emerald-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
+        {
+          testing && testing.length > 0 ? (
+            <div class="gsap-fadein bg-meg-surface-dark/50 p-8 rounded-2xl border border-meg-border-dark shadow-sm hover:border-indigo-500/30 transition-all duration-300">
+              <dt class="text-lg font-bold leading-7 text-meg-text-primary-dark flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500 border border-indigo-500/20">
+                  <i class="fa-solid fa-vial" aria-hidden="true"></i>
+                </div>
+                Qualitätssicherung
+              </dt>
+              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+                <ul class="space-y-3">
+                  {testing.map((item) => (
+                    <li class="flex gap-2">
+                      <span class="text-indigo-500 mt-1.5 size-1.5 rounded-full bg-current shrink-0"></span>
+                      <span set:html={item} />
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ) : null
+        }
+      </dl>
+    </div>
+  </div>
+</div>
+<div class=' px-6 py-6 lg:px-8 bg-meg-bg-dark'>
+  <div class='mx-auto max-w-3xl text-base leading-7 text-meg-text-primary-dark'>
+    <div class="mt-16 prose prose-invert prose-meg w-full max-w-none">
       <slot />
     </div>
   </div>
@@ -585,22 +538,23 @@ if (nextYear) {
 
 {
   assets && assets.length > 0 ? (
-  <div class="py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-(--breakpoint-2xl) px-4 md:px-8">
-      <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-        <div class="flex items-center gap-12">
-          <h2 class="text-2xl font-bold text-light-100 lg:text-3xl">
-            Assets
-          </h2>
-        </div>
+  <div class="py-24 sm:py-32 bg-meg-bg-dark">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mb-12">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          Galerie
+        </h2>
+        <p class="text-3xl font-bold tracking-tight text-meg-text-primary-dark sm:text-4xl">
+          Visuelle Eindrücke
+        </p>
       </div>
 
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
         {assets.map((image) => {
           const small =
-            'group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80';
+            'group relative flex h-48 items-end overflow-hidden rounded-2xl bg-meg-surface-dark border border-meg-border-dark shadow-sm md:h-80';
           const large =
-            'group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80';
+            'group relative flex h-48 items-end overflow-hidden rounded-2xl bg-meg-surface-dark border border-meg-border-dark shadow-sm md:col-span-2 md:h-80';
           return (
             <span
               class={
@@ -613,10 +567,11 @@ if (nextYear) {
                   <img
                     src={image}
                     loading="lazy"
-                    alt="Asset"
+                    alt="Projekt Asset"
                     data-trigger="image"
-                    class="absolute cursor-pointer inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                    class="absolute cursor-pointer inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
                   />
+                  <div class="absolute inset-0 bg-gradient-to-t from-meg-bg-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </span>
           );
         })}
@@ -624,34 +579,51 @@ if (nextYear) {
     </div>
   </div>
 
-  <div class="fixed transition-all cursor-pointer hidden inset-0 bg-slate-900/90 backdrop-blur-sm p-20"
+  <div class="fixed transition-all cursor-pointer hidden inset-0 bg-meg-bg-dark/95 backdrop-blur-xl z-[100] p-4 sm:p-20"
        data-trigger="modal" aria-hidden="true">
-    <div class="relative h-full w-full rounded-lg overflow-hidden border border-light-500/30">
-      <img src="" alt="Platzhalter" loading="lazy" class="h-full w-full object-contain drop-shadow-xl"
+    <div class="relative h-full w-full rounded-2xl overflow-hidden border border-meg-border-dark shadow-2xl">
+      <img src="" alt="Vollbild Ansicht" loading="lazy" class="h-full w-full object-contain"
            data-trigger="image-placeholder" />
 
-      <button class="absolute right-0 top-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-bl-md p-4 transition-all" data-trigger="close" aria-label="Bild schließen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-             class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
+      <button class="absolute right-4 top-4 bg-meg-surface-dark/80 backdrop-blur-md hover:bg-meg-accent text-white cursor-pointer rounded-xl p-3 transition-all border border-meg-border-dark" data-trigger="close" aria-label="Bild schließen">
+        <i class="fa-solid fa-xmark text-xl"></i>
       </button>
 
-      <button class="absolute left-0 bottom-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-tr-md p-4 transition-all" data-trigger="previmage" aria-label="Vorheriges Bild">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-             class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-        </svg>
+      <button class="absolute left-4 bottom-4 bg-meg-surface-dark/80 backdrop-blur-md hover:bg-meg-accent text-white cursor-pointer rounded-xl p-3 transition-all border border-meg-border-dark" data-trigger="previmage" aria-label="Vorheriges Bild">
+        <i class="fa-solid fa-chevron-left text-xl"></i>
       </button>
 
-      <button class="absolute right-0 bottom-0 bg-primary-800 hover:shadow-lg hover:shadow-primary-500/50 cursor-pointer rounded-tl-md p-4 transition-all" data-trigger="nextimage" aria-label="Nächstes Bild">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-             class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-        </svg>
+      <button class="absolute right-4 bottom-4 bg-meg-surface-dark/80 backdrop-blur-md hover:bg-meg-accent text-white cursor-pointer rounded-xl p-3 transition-all border border-meg-border-dark" data-trigger="nextimage" aria-label="Nächstes Bild">
+        <i class="fa-solid fa-chevron-right text-xl"></i>
       </button>
     </div>
   </div>
+    ) : null
+  }
+
+{
+  tags && tags.length > 0 ? (
+    <div class='relative bg-meg-surface-dark/30 border-y border-meg-border-dark text-meg-text-primary-dark'>
+    <div class='absolute inset-0 bg-gradient-to-r from-meg-accent/5 via-sky-400/5 to-violet-500/5 opacity-50'></div>
+    <div class='relative mx-auto max-w-7xl px-6 py-24 sm:py-32 flex flex-col items-center justify-between lg:px-8'>
+  <div class='mb-8 text-center'>
+    <h2 class='text-sm font-bold uppercase tracking-widest text-meg-accent mb-2'>
+      Kategorisierung
+    </h2>
+    <p class='text-2xl font-bold lg:text-3xl'>Projekt Tags</p>
+  </div>
+  <div class="mt-4 flex flex-wrap items-center justify-center gap-3 max-w-2xl">
+  {tags.map((item) => (
+  <span class='inline-flex items-center rounded-full bg-meg-surface-dark border border-meg-border-dark px-4 py-1.5 text-xs font-semibold text-meg-text-secondary hover:border-meg-accent/50 hover:text-meg-accent transition-all cursor-default shadow-sm'>
+    <span class="size-1.5 rounded-full bg-meg-accent/40 mr-2"></span>
+    {item}
+  </span>
+  ))}
+  </div>
+  </div>
+  </div>
+  ) : null
+  }
   <script is:inline>
     const images = document.querySelectorAll('[data-trigger="image"]');
     const close = document.querySelector('[data-trigger="close"]');
@@ -721,29 +693,3 @@ if (nextYear) {
       }
     });
   </script>
-    ) : null
-  }
-
-{
-  tags && tags.length > 0 ? (
-    <div class='relative bg-dark-900/30 border-y border-light-500/20 text-light-100'>
-    <div class='absolute inset-0 bg-gradient-to-r from-primary-500/5 via-purple-500/5 to-cyan-500/5'></div>
-    <div class='relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:flex-col lg:items-center lg:justify-between lg:px-8'>
-  <div class='mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12'>
-  <div class='flex items-center gap-12'>
-  <h2 class='text-2xl font-bold lg:text-3xl'>
-  Tags
-  </h2>
-  </div>
-  </div>
-  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:mt-0">
-  {tags.map((item) => (
-  <span class='inline-flex items-center rounded-md bg-primary-500/10 border border-primary-500/30 px-2 py-1 text-xs font-medium text-primary-300'>
-  {item}
-  </span>
-  ))}
-  </div>
-  </div>
-  </div>
-  ) : null
-  }

@@ -26,14 +26,11 @@ const description = 'Entdecken Sie unsere Referenzprojekte: Webentwicklung, Soft
 const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Referenzen, Portfolio, Webdesign';
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
-  <div class="py-24 sm:py-32">
+  <div class="py-24 sm:py-32 bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center gsap-fadein">
-        <h1 class="text-3xl font-bold tracking-tight text-light-100 sm:text-4xl">Referenzen: Meine
-          Projekte im Überblick</h1>
-        <p class="mt-2 text-lg leading-8 text-light-300">Hier finden Sie eine Auswahl meiner
-          erfolgreich abgeschlossenen Projekte. Die Liste wird fortlaufend aktualisiert und ist chronologisch geordnet
-          (neueste Projekte zuerst).</p>
+        <h1 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark sm:text-5xl">Referenzen: Meine Projekte</h1>
+        <p class="mt-4 text-lg leading-8 text-meg-text-secondary">Chronologisch geordnet – Qualität in jedem Pixel und jeder Codezeile.</p>
       </div>
 
       <div
@@ -43,36 +40,41 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
         {
           page.data.map((project) => {
             return (
-              <div class="relative bg-dark-900/50 border border-primary-500/20 pb-28 sm:pb-36 xl:pb-16 rounded-2xl sm:min-w-96 max-w-full gsap-fadein hover:border-primary-500/40 transition-all duration-300"
+              <div class="relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark pb-28 sm:pb-36 xl:pb-16 rounded-2xl max-w-full gsap-fadein hover:border-meg-accent/30 transition-all duration-300 group shadow-sm"
                    data-trigger="entry" data-type={project.data?.category}>
                 <div
                   class="mx-auto flex flex-col items-center gap-x-8 gap-y-10 px-6">
                   <div class="-mt-8 w-full max-w-1xl xl:-mb-8">
-                    <div class="relative aspect-16/9 w-full md:-mx-8 xl:mx-0 group">
+                    <div class="relative aspect-16/9 w-full md:-mx-8 xl:mx-0">
                       <div
-                        class="absolute -inset-2 bg-gradient-to-r from-primary-500/20 via-cyan-500/20 to-purple-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                        class="absolute -inset-2 bg-gradient-to-r from-meg-accent/10 via-sky-400/10 to-violet-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
 
-                      <img class="relative z-10 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl border border-light-500/20"
+                      <img class="relative z-10 h-full w-full rounded-2xl bg-meg-bg-dark object-cover shadow-2xl border border-meg-border-dark"
                            src={project.data.heroImage} alt={project.data.title} loading="lazy">
                     </div>
                   </div>
                   <div class="md:min-w-96 xl:flex-auto">
-                    <figure class="relative isolate pt-6 sm:pt-12 text-white">
-                      <FormattedDate date={project.data.pubDate} />
-                      <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                    <figure class="relative isolate pt-6 sm:pt-12 text-meg-text-primary-dark">
+                      <div class="flex items-center gap-2 text-meg-accent font-bold text-xs uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <FormattedDate date={project.data.pubDate} />
+                      </div>
+                      <blockquote class="text-xl font-bold leading-8 text-meg-text-primary-dark sm:text-2xl sm:leading-9">
                         <p>{project.data.title}</p>
                       </blockquote>
                       <div
-                        class="font-medium text-slate-300">
+                        class="font-medium text-meg-text-secondary mt-1">
                         {categories.find(category => category.id === project.data?.category.id)?.data.name
                         }</div>
 
                       <p
-                        class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">{project.data.shortDescription}</p>
+                        class="mt-4 flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-meg-text-secondary line-clamp-3">{project.data.shortDescription}</p>
                       <figcaption class="mt-8 text-base">
                         <a href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`} aria-label={`Projekt ${project.data.title} ansehen`}
-                           class="rounded-md px-3 py-2 bg-primary-800 text-white hover:shadow-lg hover:shadow-primary-500/50 transition-all outline-none">Projekt
-                          ansehen</a>
+                           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-meg-accent text-white font-bold hover:shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all outline-none">
+                           Projekt ansehen
+                           <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
                       </figcaption>
                     </figure>
                   </div>
@@ -90,11 +92,11 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
         buttons.forEach(button => {
           button.addEventListener('click', () => {
             buttons.forEach(btn => {
-              btn.classList.remove('bg-blue-600', 'text-white');
-              btn.classList.add('bg-dark-900/50', 'text-light-300', 'border-light-500/30');
+              btn.classList.remove('bg-meg-accent', 'text-white');
+              btn.classList.add('bg-meg-surface-dark/50', 'text-meg-text-secondary', 'border-meg-border-dark');
             });
-            button.classList.add('bg-blue-600', 'text-white');
-            button.classList.remove('bg-dark-900/50', 'text-light-300', 'border-light-500/30');
+            button.classList.add('bg-meg-accent', 'text-white');
+            button.classList.remove('bg-meg-surface-dark/50', 'text-meg-text-secondary', 'border-meg-border-dark');
 
             const filter = button.getAttribute('data-filter');
 
@@ -111,32 +113,38 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
       </script>
 
         
-  <div class="py-24 sm:py-32 gsap-fadein ">
+  <div class="py-24 gsap-fadein">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-  <nav class="flex items-center justify-between border-t border-light-200  px-4 py-3 sm:px-6 mt-4"
-  aria-label="Pagination">
+      <nav class="flex items-center justify-between border-t border-meg-border-dark px-4 py-6 sm:px-6 mt-4 bg-meg-surface-dark/30 backdrop-blur-md rounded-2xl shadow-sm"
+      aria-label="Pagination">
 <div class="hidden sm:block">
- <p class="text-sm text-light-100 ">
+ <p class="text-sm text-meg-text-secondary">
    Zeige
-   <span class="font-medium">{ page.start + 1}</span>
+   <span class="font-bold text-meg-text-primary-dark">{ page.start + 1}</span>
    bis
-   <span class="font-medium">{ page.end + 1}</span>
+   <span class="font-bold text-meg-text-primary-dark">{ page.end + 1}</span>
    von
-   <span class="font-medium">{page.total}</span>
+   <span class="font-bold text-meg-text-primary-dark">{page.total}</span>
    Ergebnissen
  </p>
 </div>
-<div class="flex flex-1 justify-between sm:justify-end gap-2">
+<div class="flex flex-1 justify-between sm:justify-end gap-3">
 
 
  {page.url.first ? <a href={page.url.first}
-                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Erste Seite</a> : null}
+                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Erste</a> : null}
  {page.url.prev ? <a href={page.url.prev}
-                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Vorherige Seite</a> : null}
+                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
+                     <i class="fa-solid fa-chevron-left mr-2 text-xs"></i>
+                     Vorherige
+                     </a> : null}
  {page.url.next ? <a href={page.url.next}
-                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Nächste Seite</a> : null}
+                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
+                     Nächste
+                     <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                     </a> : null}
  {page.url.last ? <a href={page.url.last}
-                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Letzte Seite</a> : null}
+                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Letzte</a> : null}
 </div>
 </nav></div></div>
 

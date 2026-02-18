@@ -11,27 +11,27 @@ interface Props {
 const { title, subtitle, description, gradient, icon, badge } = Astro.props;
 
 const gradientClasses = {
-  blue: 'from-blue-400 to-cyan-500',
-  purple: 'from-purple-400 to-pink-500',
-  green: 'from-green-400 to-emerald-500',
-  orange: 'from-orange-400 to-red-500',
-  pink: 'from-pink-400 to-rose-500'
+  blue: 'from-meg-accent to-sky-400',
+  purple: 'from-violet-400 to-fuchsia-500',
+  green: 'from-emerald-400 to-meg-accent',
+  orange: 'from-orange-400 to-amber-500',
+  pink: 'from-rose-400 to-pink-500'
 };
 
 const gradientBg = {
-  blue: 'from-blue-500 to-cyan-500',
-  purple: 'from-purple-500 to-pink-500',
-  green: 'from-green-500 to-emerald-500',
-  orange: 'from-orange-500 to-red-500',
-  pink: 'from-pink-500 to-rose-500'
+  blue: 'from-meg-accent to-sky-600',
+  purple: 'from-violet-600 to-fuchsia-600',
+  green: 'from-emerald-600 to-meg-accent',
+  orange: 'from-orange-600 to-amber-600',
+  pink: 'from-rose-600 to-pink-600'
 };
 ---
 
-<section class='relative isolate pt-14 overflow-hidden'>
+<section class='relative isolate pt-14 overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark'>
   <!-- Background Gradient -->
   <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
     <div
-      class={`relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr ${gradientBg[gradient]} opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]`}
+      class={`relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr ${gradientBg[gradient]} opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]`}
       style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
   </div>
 
@@ -41,8 +41,8 @@ const gradientBg = {
         <!-- Badge (optional) -->
         {badge && (
           <div class='mt-24 sm:mt-32 lg:mt-16 gsap-fadein'>
-            <span class={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-${gradient}-500/10 border border-${gradient}-500/30 text-sm font-medium text-${gradient}-300`}>
-              <i class={`fa-solid ${icon}`} aria-hidden='true'></i>
+            <span class={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-sm font-bold text-meg-text-primary-dark shadow-sm`}>
+              <i class={`fa-solid ${icon} text-meg-accent`} aria-hidden='true'></i>
               {badge}
             </span>
           </div>
@@ -50,19 +50,19 @@ const gradientBg = {
 
         <!-- Icon Circle -->
         <div class='gsap-fadein mt-8' style='animation-delay: 0.1s'>
-          <div class={`w-20 h-20 mx-auto rounded-full bg-gradient-to-br ${gradientBg[gradient]} flex items-center justify-center shadow-lg shadow-${gradient}-500/30`}>
-            <i class={`fa-solid ${icon} text-white text-3xl`} aria-hidden='true'></i>
+          <div class={`w-20 h-20 mx-auto rounded-2xl bg-meg-surface-dark border border-meg-border-dark flex items-center justify-center shadow-xl shadow-meg-accent/5`}>
+            <i class={`fa-solid ${icon} text-meg-accent text-3xl`} aria-hidden='true'></i>
           </div>
         </div>
 
         <!-- Title with Gradient -->
-        <h1 class='text-5xl md:text-7xl font-bold tracking-tight text-white mt-6 gsap-fadein' style='animation-delay: 0.2s'>
-          {subtitle}<br />
+        <h1 class='text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mt-6 gsap-fadein' style='animation-delay: 0.2s'>
+          <span class="opacity-60">{subtitle}</span><br />
           <span class={`text-transparent bg-clip-text bg-gradient-to-r ${gradientClasses[gradient]}`}>{title}</span>
         </h1>
 
         <!-- Description -->
-        <p class='mt-6 text-xl leading-8 text-light-300 gsap-fadein max-w-2xl mx-auto' style='animation-delay: 0.3s'>
+        <p class='mt-6 text-xl leading-8 text-meg-text-secondary gsap-fadein max-w-2xl mx-auto' style='animation-delay: 0.3s'>
           {description}
         </p>
 
@@ -72,7 +72,7 @@ const gradientBg = {
             href='https://portal.waldheim.dev'
             target='_blank'
             rel='noopener noreferrer'
-            class={`group px-8 py-4 bg-gradient-to-r ${gradientBg[gradient]} text-white font-bold text-lg rounded-lg hover:shadow-lg hover:shadow-${gradient}-500/50 transition-all duration-300 inline-flex items-center gap-2`}
+            class={`group px-8 py-4 bg-meg-accent text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2`}
           >
             <i class='fa-solid fa-calendar-check' aria-hidden='true'></i>
             Jetzt im Portal anfragen
@@ -80,7 +80,7 @@ const gradientBg = {
           </a>
           <a
             href={`${Astro.url.pathname}#leistungen`}
-            class={`px-8 py-4 bg-dark-900/50 border border-${gradient}-500/30 text-white font-semibold text-lg rounded-lg hover:bg-dark-900 hover:border-${gradient}-500 transition-all duration-300 inline-flex items-center gap-2`}
+            class={`px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-semibold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center gap-2`}
           >
             Leistungen ansehen
             <i class='fa-solid fa-arrow-down animate-bounce' aria-hidden='true'></i>
@@ -88,12 +88,14 @@ const gradientBg = {
         </div>
 
         <!-- Pricing Badge -->
-        <div class='mt-8 gsap-fadein' style='animation-delay: 0.5s'>
-          <div class={`inline-flex items-center gap-3 bg-dark-900/50 border border-${gradient}-500/20 rounded-full px-6 py-3`}>
-            <i class='fa-solid fa-tag text-${gradient}-400 text-xl' aria-hidden='true'></i>
+        <div class='mt-12 gsap-fadein' style='animation-delay: 0.5s'>
+          <div class={`inline-flex items-center gap-3 bg-meg-surface-dark/80 backdrop-blur-xl border border-meg-border-dark rounded-2xl px-6 py-3 shadow-sm`}>
+            <div class="size-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+              <i class='fa-solid fa-tag text-lg' aria-hidden='true'></i>
+            </div>
             <div class='text-left'>
-              <p class='text-white font-bold text-lg'>Ab 70€/Stunde</p>
-              <p class='text-light-400 text-xs'>Transparent & fair kalkuliert</p>
+              <p class='text-meg-text-primary-dark font-black text-lg leading-none'>Ab 70€ / Std.</p>
+              <p class='text-meg-text-secondary text-[10px] uppercase tracking-widest font-bold mt-1'>Transparent & fair</p>
             </div>
           </div>
         </div>

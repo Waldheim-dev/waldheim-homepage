@@ -13,11 +13,11 @@ const {
 <div class={className}>
     <label
         for={name}
-        class="block text-sm font-semibold text-white"
+        class="block text-sm font-bold text-meg-text-primary-dark uppercase tracking-widest opacity-70"
         >{label}
-        {isRequired ? <span class="text-rose-400">*</span> : null}</label
+        {isRequired ? <span class="text-rose-400 font-black ml-1">*</span> : null}</label
     >
-    <div class="mt-2.5">
+    <div class="mt-2">
         <textarea
             name={name}
             id={name}
@@ -25,7 +25,7 @@ const {
             required={isRequired}
             placeholder={placeholder}
             rows={rows}
-            class="block w-full rounded-xl bg-dark-800 border border-light-500/20 px-4 py-3 text-base text-white placeholder:text-light-500/40 focus:border-blue-500/40 focus:bg-dark-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+            class="block w-full rounded-xl bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-3 text-base text-meg-text-primary-dark placeholder:text-meg-text-secondary placeholder:opacity-40 focus:border-meg-accent/50 focus:bg-meg-surface-dark focus:ring-4 focus:ring-meg-accent/10 focus:outline-none transition-all duration-300"
         ></textarea>
     </div>
 </div>

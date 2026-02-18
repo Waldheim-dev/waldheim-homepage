@@ -10,40 +10,21 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 
 const titel = "Impressum - waldheim.dev"
-const description = "Rechtliche Angaben und Kontaktinformationen zu waldheim.dev."
-const keywords = "Impressum, rechtliche Hinweise, Anbieterkennzeichnung, Kontakt, Werner-Haas-Str. 8, 86153 Augsburg"
+const description = "Rechtliche Angaben und Kontaktinformationen zu Waldheim.dev."
+const keywords = "Impressum, rechtliche Hinweise, Anbieterkennzeichnung, Kontakt, Waldheim.dev"
 ---
 
-<style>
-    h1 {
-        font-size: 3rem !important;
-        line-height: 4rem !important;
-        font-weight: bold !important;
-    }
-
-    h2 {
-        font-size: 1.5rem !important;
-        line-height: 2.5rem !important;
-        font-weight: bold !important;
-    }
-
-    p {
-        margin: 1rem 0 !important;
-    }
-</style>
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]} robots="noindex">
-  <div class="px-6 py-32 lg:px-8">
+  <div class="px-6 py-32 lg:px-8 bg-meg-bg-dark">
     <div
-      class="mx-auto max-w-3xl text-base leading-7 text-light-100 "
+      class="mx-auto max-w-3xl text-base leading-7 text-meg-text-primary-dark"
     >
-      <div class="container prose-invert ">
-        <h1>Impressum</h1>
+      <div class="prose prose-invert prose-meg w-full max-w-none">
+        <h1 class="text-4xl font-black tracking-tighter sm:text-5xl mb-8">Impressum</h1>
         <h2 id="m46">Diensteanbieter</h2>
         <p>
           Waldheim.dev<br />
-          (Vertreter: Markus Waldheim)<br />
-          Zugspitzstraße 28<br />
-          86836 Obermeitingen
+          (Vertreter: Markus Waldheim)
         </p>
 
         <h2 id="m56">Kontaktmöglichkeiten</h2>

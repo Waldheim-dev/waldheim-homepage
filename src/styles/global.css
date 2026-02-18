@@ -49,6 +49,30 @@
   --color-light-900: #253c35;
   --color-light-950: #11221e;
 
+  /* Modern Enterprise Glass (MEG) Tokens */
+  --color-meg-bg-light: #f8fafc;
+  --color-meg-bg-dark: #020617;
+  --color-meg-surface-light: #ffffff;
+  --color-meg-surface-dark: #0f172a;
+  --color-meg-accent: #0ea5e9;
+  --color-meg-border-light: rgba(226, 232, 240, 0.5); /* slate-200/50 */
+  --color-meg-border-dark: rgba(30, 41, 59, 0.5);   /* slate-800/50 */
+  --color-meg-text-primary-light: #0f172a;
+  --color-meg-text-primary-dark: #f8fafc;
+  --color-meg-text-secondary: #64748b; /* slate-500 */
+
+  /* Glassmorphism Utilities */
+  --bg-meg-glass-light: rgba(255, 255, 255, 0.7);
+  --bg-meg-glass-dark: rgba(15, 23, 42, 0.7);
+}
+
+@utility meg-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+@utility meg-card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 @layer base {
@@ -61,94 +85,69 @@
   }
 }
 
-/* Cookie Consent - Glow-Glass-Style */
+/* Cookie Consent - Modern Enterprise Glass Style */
 .cc--tailwind {
     /* Background - Glass Effect */
-    --cc-bg: rgba(6, 25, 35, 0.95);
-    --cc-text: rgb(219, 236, 230);
+    --cc-bg: rgba(15, 23, 42, 0.95);
+    --cc-text: #f8fafc;
     
-    /* Primary Button - Glow Effect */
-    --cc-primary-color: rgb(0, 212, 208);
-    --cc-btn-primary-bg: rgb(4, 104, 107);
-    --cc-btn-primary-color: rgb(255, 255, 255);
-    --cc-btn-primary-hover-bg: rgb(0, 171, 171);
-    --cc-btn-primary-hover-color: rgb(255, 255, 255);
-    --cc-btn-primary-border-color: rgba(0, 212, 208, 0.3);
+    /* Primary Button - MEG Accent */
+    --cc-primary-color: #0ea5e9;
+    --cc-btn-primary-bg: #0ea5e9;
+    --cc-btn-primary-color: #ffffff;
+    --cc-btn-primary-hover-bg: #38bdf8;
+    --cc-btn-primary-hover-color: #ffffff;
+    --cc-btn-primary-border-color: rgba(14, 165, 233, 0.3);
     
-    /* Secondary Button - Subtle Glow */
-    --cc-secondary-color: rgb(138, 190, 171);
-    --cc-btn-secondary-bg: rgba(4, 104, 107, 0.2);
-    --cc-btn-secondary-color: rgb(0, 212, 208);
-    --cc-btn-secondary-hover-bg: rgba(0, 171, 171, 0.3);
-    --cc-btn-secondary-hover-color: rgb(16, 241, 234);
-    --cc-btn-secondary-border-color: rgba(0, 212, 208, 0.3);
+    /* Secondary Button - Glass Style */
+    --cc-secondary-color: #64748b;
+    --cc-btn-secondary-bg: rgba(30, 41, 59, 0.5);
+    --cc-btn-secondary-color: #f8fafc;
+    --cc-btn-secondary-hover-bg: rgba(30, 41, 59, 0.8);
+    --cc-btn-secondary-hover-color: #ffffff;
+    --cc-btn-secondary-border-color: rgba(226, 232, 240, 0.1);
     
     /* Category Blocks - Glass Cards */
-    --cc-cookie-category-block-bg: rgba(26, 72, 95, 0.3);
-    --cc-cookie-category-block-border: rgba(138, 190, 171, 0.2);
-    --cc-cookie-category-block-hover-bg: rgba(26, 72, 95, 0.5);
-    --cc-cookie-category-block-hover-border: rgba(138, 190, 171, 0.4);
+    --cc-cookie-category-block-bg: rgba(30, 41, 59, 0.3);
+    --cc-cookie-category-block-border: rgba(226, 232, 240, 0.1);
+    --cc-cookie-category-block-hover-bg: rgba(30, 41, 59, 0.5);
+    --cc-cookie-category-block-hover-border: rgba(14, 165, 233, 0.3);
     
-    /* Expanded Category - Enhanced Glass */
-    --cc-cookie-category-expanded-block-bg: rgba(26, 72, 95, 0.5);
-    --cc-cookie-category-expanded-block-hover-bg: rgba(26, 72, 95, 0.6);
-    
-    /* Toggle - Glow on Active */
-    --cc-toggle-bg-off: rgba(138, 190, 171, 0.2);
-    --cc-toggle-bg-on: rgb(0, 212, 208);
-    --cc-toggle-bg-readonly: rgba(138, 190, 171, 0.1);
-    --cc-toggle-knob-bg: rgb(255, 255, 255);
-    --cc-toggle-knob-icon-color: rgb(6, 25, 35);
-    
-    /* Borders & Separators - Subtle Glow */
-    --cc-separator-border-color: rgba(138, 190, 171, 0.2);
-    --cc-footer-border-color: rgba(138, 190, 171, 0.2);
-    --cc-footer-bg: rgba(6, 25, 35, 0.8);
+    /* Toggle - MEG Accent */
+    --cc-toggle-bg-off: rgba(100, 116, 139, 0.3);
+    --cc-toggle-bg-on: #0ea5e9;
+    --cc-toggle-knob-bg: #ffffff;
     
     /* Overlay - Backdrop Blur */
-    --cc-overlay-bg: rgba(6, 25, 35, 0.9) !important;
+    --cc-overlay-bg: rgba(2, 6, 23, 0.8) !important;
     
     /* Link Colors */
-    --cc-link-color: rgb(16, 241, 234);
-    --cc-link-hover-color: rgb(70, 255, 246);
-}
-
-/* Dark Mode - ist Standard, daher identisch */
-@media screen and (prefers-color-scheme: dark) {
-    .cc--tailwind {
-        --cc-bg: rgba(6, 25, 35, 0.95);
-        --cc-text: rgb(219, 236, 230);
-        --cc-btn-primary-bg: rgb(4, 104, 107);
-        --cc-btn-secondary-bg: rgba(4, 104, 107, 0.2);
-        --cc-cookie-category-block-bg: rgba(26, 72, 95, 0.3);
-        --cc-cookie-category-block-border: rgba(138, 190, 171, 0.2);
-    }
+    --cc-link-color: #0ea5e9;
+    --cc-link-hover-color: #38bdf8;
 }
 
 /* Glow-Effekte für Buttons */
 .cc--tailwind .cm__btn-primary {
-    box-shadow: 0 4px 14px 0 rgba(0, 212, 208, 0.3);
+    box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.3);
+    border-radius: 0.75rem;
     transition: all 0.3s ease;
 }
 
 .cc--tailwind .cm__btn-primary:hover {
-    box-shadow: 0 6px 20px 0 rgba(0, 212, 208, 0.5);
+    box-shadow: 0 6px 20px 0 rgba(14, 165, 233, 0.5);
+    transform: translateY(-1px);
 }
 
 .cc--tailwind .cm__btn-secondary {
-    border: 1px solid var(--cc-btn-secondary-border-color);
+    border-radius: 0.75rem;
     transition: all 0.3s ease;
-}
-
-.cc--tailwind .cm__btn-secondary:hover {
-    box-shadow: 0 4px 14px 0 rgba(0, 212, 208, 0.2);
 }
 
 /* Glass-Effekt für Modal */
 .cc--tailwind .cm {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(138, 190, 171, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(226, 232, 240, 0.1);
     border-radius: 1rem;
 }
 
@@ -262,6 +261,25 @@
   100% { --tw-gradient-position: from 360.0deg in oklab; }
 }
 
+.prose-meg {
+    --tw-prose-body: var(--color-meg-text-secondary);
+    --tw-prose-headings: var(--color-meg-text-primary-dark);
+    --tw-prose-lead: var(--color-meg-text-secondary);
+    --tw-prose-links: var(--color-meg-accent);
+    --tw-prose-bold: var(--color-meg-text-primary-dark);
+    --tw-prose-counters: var(--color-meg-accent);
+    --tw-prose-bullets: var(--color-meg-accent);
+    --tw-prose-hr: var(--color-meg-border-dark);
+    --tw-prose-quotes: var(--color-meg-text-primary-dark);
+    --tw-prose-quote-borders: var(--color-meg-accent);
+    --tw-prose-captions: var(--color-meg-text-secondary);
+    --tw-prose-code: var(--color-meg-text-primary-dark);
+    --tw-prose-pre-code: var(--color-meg-text-primary-dark);
+    --tw-prose-pre-bg: var(--color-meg-surface-dark);
+    --tw-prose-th-borders: var(--color-meg-border-dark);
+    --tw-prose-td-borders: var(--color-meg-border-dark);
+}
+
 .prose pre, .prose-invert pre {
     padding: 1rem;
     margin: .5rem 0;
@@ -324,11 +342,13 @@
     text-decoration: underline !important;
     text-underline-offset: 4px !important;
     font-weight: 600 !important;
-    color: var(--color-primary-600) !important;
+    color: var(--color-meg-accent) !important;
+    transition: all 0.3s ease;
 }
 
 .prose a:hover, .prose-invert a:hover {
-    color: var(--color-primary-700) !important;
+    color: #38bdf8 !important; /* sky-400 */
+    opacity: 0.8;
 }
 
 .prose ul, .prose-invert ul {

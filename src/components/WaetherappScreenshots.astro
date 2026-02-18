@@ -39,15 +39,15 @@ const screenshots: Screenshot[] = [
 ];
 ---
 
-<section class="py-24 sm:py-32 px-6 bg-dark-900">
+<section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
   <div class="container mx-auto max-w-7xl">
     <!-- Header -->
-    <div class="text-center mb-16 space-y-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-white">
-        Einblicke in die App
+    <div class="text-center mb-16">
+      <h2 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+        UI Showcase
       </h2>
-      <p class="text-xl text-light-300 max-w-2xl mx-auto">
-        Moderne UI, optimiert für Desktop und Mobile
+      <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark">
+        Einblicke in die <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">App</span>
       </p>
     </div>
     
@@ -55,29 +55,21 @@ const screenshots: Screenshot[] = [
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {screenshots.map((screenshot) => (
         <div class="relative group">
-          <!-- Ambient Glow -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 
-                      blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-xl"></div>
+          <div class="absolute -inset-0.5 bg-gradient-to-br from-meg-accent/10 to-sky-400/10 blur opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl"></div>
           
           <!-- Screenshot Card -->
-          <div class="relative bg-dark-950/50 border border-light-500/20 
-                      hover:border-light-500/40 rounded-xl overflow-hidden
-                      hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300
-                      aspect-[4/3]">
-            
-            <!-- Image -->
+          <div class="relative bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden shadow-sm group-hover:border-meg-accent/30 transition-all aspect-[4/3]">
             <img 
               src={screenshot.src}
               alt={screenshot.alt}
               loading="lazy"
-              class="w-full h-full object-cover object-top"
+              class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700"
               width="800"
               height="600"
             />
             
-            <!-- Title Overlay -->
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-950/95 to-transparent p-4">
-              <h3 class="text-white font-semibold text-sm">{screenshot.title}</h3>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-meg-bg-dark/80 to-transparent p-6">
+              <h3 class="text-meg-text-primary-dark font-bold text-sm tracking-tight">{screenshot.title}</h3>
             </div>
           </div>
         </div>
@@ -85,11 +77,13 @@ const screenshots: Screenshot[] = [
     </div>
     
     <!-- Info -->
-    <div class="mt-12 text-center">
-      <p class="text-light-400 text-sm">
-        <i class="fa-solid fa-mobile-screen text-blue-400 mr-2" aria-hidden="true"></i>
-        Responsive Design – funktioniert auf allen Geräten
-      </p>
+    <div class="mt-16 text-center">
+      <div class="inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full shadow-sm">
+        <i class="fa-solid fa-mobile-screen text-meg-accent text-xs"></i>
+        <p class="text-meg-text-secondary text-[10px] font-black uppercase tracking-widest">
+          Fully Responsive & Optimized
+        </p>
+      </div>
     </div>
   </div>
 </section>

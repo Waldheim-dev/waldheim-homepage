@@ -197,7 +197,7 @@ import TrackedButton from '../components/TrackedButton.astro';
 
 <!-- ===== MANUELLES TRACKING (ohne TrackedButton) ===== -->
 <section>
-  <h2>Manuelles Tracking mit data-attributes</h2>
+  <h2 class="text-xl font-bold text-meg-text-primary-dark mb-6">Manuelles Tracking</h2>
   
   <!-- Standard Link mit Tracking -->
   <a 
@@ -205,7 +205,7 @@ import TrackedButton from '../components/TrackedButton.astro';
     data-track-event="cta_service_devsecops"
     data-track-category="manual"
     data-track-label="DevSecOps Manual"
-    class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-800 text-white"
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-meg-accent text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
   >
     DevSecOps Services
     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
@@ -216,7 +216,7 @@ import TrackedButton from '../components/TrackedButton.astro';
     data-track-event="button_click"
     data-track-category="form"
     data-track-label="Newsletter Subscribe"
-    class="px-6 py-3 bg-green-500 text-white rounded-lg"
+    class="px-6 py-3 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark rounded-xl font-bold hover:border-meg-accent/50 transition-all"
   >
     Newsletter abonnieren
   </button>

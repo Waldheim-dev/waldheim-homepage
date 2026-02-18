@@ -53,21 +53,21 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
   schema={[softwareSchema, breadcrumbSchema]}
 >
   <!-- Hero Section -->
-  <section class='relative py-24 sm:py-32 px-6 overflow-hidden bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950'>
+  <section class='relative py-24 sm:py-32 px-6 overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark'>
     <div class='mx-auto max-w-7xl'>
       <div class='text-center mb-16 gsap-fadein'>
-        <div class='mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 text-sm font-medium text-primary-400'>
-          <i class='fa-solid fa-clipboard-list' aria-hidden='true'></i>
-          <span>Netbox Plugin</span>
-          <span class='bg-primary-500/20 text-primary-300 px-2 py-0.5 rounded-full text-xs font-bold'>v{product.version}</span>
+        <div class='mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark shadow-sm backdrop-blur-md'>
+          <i class='fa-solid fa-clipboard-list text-meg-accent' aria-hidden='true'></i>
+          <span class='text-meg-text-primary-dark font-bold text-sm tracking-tight'>Netbox Plugin</span>
+          <span class='bg-meg-accent/20 text-meg-accent px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-tighter ml-2'>v{product.version}</span>
         </div>
         
-        <h1 class='text-4xl md:text-6xl font-bold text-white mb-6'>
-          Ausgabeschein <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Generator</span>
+        <h1 class='text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-8'>
+          Ausgabeschein <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Generator</span>
         </h1>
         
-        <p class='text-xl md:text-2xl text-light-300 max-w-3xl mx-auto mb-8'>
-          Effiziente Ausgabeschein-Verwaltung basierend auf Netbox. Open Source und einfach zu integrieren.
+        <p class='text-xl md:text-2xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed'>
+          Automatisierte Ausgabeschein-Verwaltung für IT-Assets. Nahtlos integriert in Netbox.
         </p>
 
         <div class='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -75,21 +75,20 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
             href='https://gitlab.com/mwaldheim/ausgabeschein-generator'
             target='_blank'
             rel='noopener noreferrer'
-            class='group px-8 py-4 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white font-semibold text-lg rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 inline-flex items-center gap-2'
+            class='w-full sm:w-auto group px-8 py-4 bg-meg-accent text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-meg-accent/30 transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-2'
           >
-            <i class='fa-brands fa-gitlab' aria-hidden='true'></i>
+            <i class='fa-brands fa-gitlab text-2xl' aria-hidden='true'></i>
             <span>Auf GitLab ansehen</span>
-            <i class='fa-solid fa-arrow-up-right-from-square text-sm' aria-hidden='true'></i>
           </a>
           
           <a
             href='https://portal.waldheim.dev'
             target='_blank'
             rel='noopener noreferrer'
-            class='px-8 py-4 bg-dark-800/50 border border-light-500/20 text-light-100 font-semibold text-lg rounded-lg hover:bg-dark-800 hover:border-light-500/40 transition-all duration-300 inline-flex items-center gap-2'
+            class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center justify-center gap-2'
           >
-            <span>Individualisierung im Portal anfragen</span>
-            <i class='fa-solid fa-arrow-up-right-from-square' aria-hidden='true'></i>
+            <span>Customizing anfragen</span>
+            <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
           </a>
         </div>
       </div>
@@ -97,201 +96,101 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
   </section>
 
   <!-- Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-dark-900'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark'>
     <div class='mx-auto max-w-7xl'>
       <div class='text-center mb-16 gsap-fadein'>
-        <h2 class='text-3xl md:text-4xl font-bold text-white mb-4'>
-          Basierend auf <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Netbox</span>
+        <h2 class='text-sm font-bold uppercase tracking-widest text-meg-accent mb-4'>
+          Asset Management
         </h2>
-        <p class='text-xl text-light-300 max-w-2xl mx-auto'>
-          Dieses Tool gibt dir die Möglichkeit, auf die Netbox-Verwaltung zuzugreifen und Ausgabescheine effizient zu generieren.
+        <p class='text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
+          Perfekt für <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Netbox</span>
         </p>
       </div>
 
       <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        <!-- Feature 1 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-solid fa-plug text-2xl text-primary-400' aria-hidden='true'></i>
+        {[
+          { icon: 'fa-plug', title: 'Netbox Integration', desc: 'Nahtloser Zugriff auf deine Netbox-Devices und User-Daten.' },
+          { icon: 'fa-brands fa-osi', title: 'Open Source', desc: 'Transparenz und Flexibilität durch GitLab Open Source Lizenz.' },
+          { icon: 'fa-rocket', title: 'Fast Setup', desc: 'Schnelle Einrichtung als Angular-App oder Netbox-Plugin.' },
+          { icon: 'fa-file-pdf', title: 'PDF Generation', desc: 'Professionelle Ausgabequittungen direkt als PDF exportieren.' },
+          { icon: 'fa-code', title: 'Highly Adaptable', desc: 'Einfach erweiterbar durch modulare Angular-Architektur.' },
+          { icon: 'fa-brands fa-docker', title: 'Docker Support', desc: 'Optimiert für den Einsatz in Docker-Umgebungen.' }
+        ].map((feat, i) => (
+          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 transition-all duration-300 group shadow-sm' style={`animation-delay: ${i * 0.1}s`}>
+            <div class='size-14 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-inner'>
+              <i class={`fa-solid ${feat.icon} text-2xl text-meg-accent`} aria-hidden='true'></i>
+            </div>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-3'>{feat.title}</h3>
+            <p class='text-meg-text-secondary text-sm leading-relaxed'>{feat.desc}</p>
           </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Netbox Integration</h3>
-          <p class='text-light-300'>
-            Nahtlose Integration in deine bestehende Netbox-Infrastruktur. Kein separates System nötig.
-          </p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-brands fa-osi text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Open Source</h3>
-          <p class='text-light-300'>
-            Vollständig Open Source auf GitLab verfügbar. Transparenz und Community-getrieben.
-          </p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-solid fa-rocket text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Einfache Installation</h3>
-          <p class='text-light-300'>
-            Schnelle Einrichtung als Netbox-Plugin. Detaillierte Dokumentation auf GitLab verfügbar.
-          </p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-solid fa-file-pdf text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Ausgabescheine</h3>
-          <p class='text-light-300'>
-            Generiere professionelle Ausgabescheine direkt aus deiner Netbox-Verwaltung.
-          </p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-solid fa-code text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Anpassbar</h3>
-          <p class='text-light-300'>
-            Individualisiere das Plugin nach deinen Anforderungen. Fork auf GitLab und passe es an.
-          </p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-6 transition-all group'>
-          <div class='w-14 h-14 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-            <i class='fa-brands fa-docker text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-3'>Docker-Support</h3>
-          <p class='text-light-300'>
-            Läuft in der Netbox-Docker-Umgebung. Test-Image verfügbar für einfache Evaluation.
-          </p>
-        </div>
+        ))}
       </div>
+    </div>
+  </section>
     </div>
   </section>
 
   <!-- Installation Section -->
-  <section class='py-24 sm:py-32 px-6 bg-dark-900'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark border-y border-meg-border-dark'>
     <div class='mx-auto max-w-5xl'>
       <div class='text-center mb-16 gsap-fadein'>
-        <h2 class='text-3xl md:text-4xl font-bold text-white mb-4'>
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>Installation</span> in 3 Schritten
+        <h2 class='text-sm font-bold uppercase tracking-widest text-meg-accent mb-4'>
+          Setup
         </h2>
-        <p class='text-xl text-light-300 max-w-2xl mx-auto'>
-          Der Ausgabeschein-Generator ist als standalone Angular-Anwendung verfügbar und läuft hinter jedem beliebigen Webserver.
+        <p class='text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
+          <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Installation</span> in 3 Schritten
         </p>
       </div>
 
-      <div class='space-y-8'>
+      <div class='grid gap-8'>
         <!-- Step 1 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-8 transition-all group'>
-          <div class='flex items-start gap-4 mb-6'>
-            <div class='flex-shrink-0 w-12 h-12 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-              <span class='text-2xl font-bold text-primary-400'>1</span>
+        <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 shadow-sm group hover:border-meg-accent/30 transition-all'>
+          <div class='flex flex-col md:flex-row items-start gap-6'>
+            <div class='size-12 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center shrink-0 shadow-inner group-hover:border-meg-accent/50 transition-all'>
+              <span class='text-2xl font-black text-meg-accent'>1</span>
             </div>
             <div class='flex-1'>
-              <h3 class='text-2xl font-bold text-white mb-3'>Release herunterladen</h3>
-              <p class='text-light-300 mb-4'>
-                Lade die neueste Version von GitLab herunter. Dort findest du die kompilierten Dateien unter "Compiled Files".
-              </p>
-              <a
-                href='https://gitlab.com/mwaldheim/ausgabeschein-generator/-/releases'
-                target='_blank'
-                rel='noopener noreferrer'
-                class='inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 text-primary-400 font-semibold rounded-lg hover:bg-primary-500/20 hover:shadow-md hover:shadow-primary-500/30 transition-all'
-              >
-                <i class='fa-brands fa-gitlab' aria-hidden='true'></i>
+              <h3 class='text-2xl font-bold text-meg-text-primary-dark mb-3'>Release laden</h3>
+              <p class='text-meg-text-secondary text-sm mb-6'>Lade die neueste Version von GitLab herunter.</p>
+              <a href='https://gitlab.com/mwaldheim/ausgabeschein-generator/-/releases' target='_blank' class='inline-flex items-center gap-2 px-4 py-2 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-sm rounded-lg hover:border-meg-accent/50 transition-all'>
+                <i class='fa-brands fa-gitlab'></i>
                 <span>Zu den Releases</span>
-                <i class='fa-solid fa-arrow-up-right-from-square text-sm' aria-hidden='true'></i>
               </a>
             </div>
           </div>
         </div>
 
         <!-- Step 2 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-8 transition-all group'>
-          <div class='flex items-start gap-4 mb-6'>
-            <div class='flex-shrink-0 w-12 h-12 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-              <span class='text-2xl font-bold text-primary-400'>2</span>
+        <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 shadow-sm group hover:border-meg-accent/30 transition-all'>
+          <div class='flex flex-col md:flex-row items-start gap-6'>
+            <div class='size-12 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center shrink-0 shadow-inner group-hover:border-meg-accent/50 transition-all'>
+              <span class='text-2xl font-black text-meg-accent'>2</span>
             </div>
             <div class='flex-1'>
-              <h3 class='text-2xl font-bold text-white mb-3'>Dateien entpacken</h3>
-              <p class='text-light-300 mb-4'>
-                Entpacke das heruntergeladene Archiv. Du erhältst direkt den <code class='bg-dark-800 text-primary-400 px-2 py-1 rounded font-mono text-sm'>browser</code>-Ordner – das ist die fertige Angular-Anwendung.
-              </p>
-              <div class='bg-dark-800/70 border border-light-500/10 rounded-lg p-4 font-mono text-sm'>
-                <div class='text-light-300'>
-                  <span class='text-primary-400'>ausgabeschein-generator/</span><br>
-                  <span class='ml-4 text-light-500'>└── browser/</span><br>
-                  <span class='ml-8 text-light-400'>├── index.html</span><br>
-                  <span class='ml-8 text-light-400'>├── main.*.js</span><br>
-                  <span class='ml-8 text-light-400'>└── ...</span>
-                </div>
+              <h3 class='text-2xl font-bold text-meg-text-primary-dark mb-3'>Entpacken</h3>
+              <p class='text-meg-text-secondary text-sm mb-6'>Kopiere den <code class="text-meg-accent">browser</code>-Ordner auf deinen Webserver.</p>
+              <div class='bg-meg-bg-dark rounded-xl p-4 border border-meg-border-dark font-mono text-xs text-meg-text-secondary'>
+                <span class='text-meg-accent'>dist/</span><br/>
+                <span class='ml-4'>└── browser/</span><br/>
+                <span class='ml-8 opacity-50'>├── index.html</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Step 3 -->
-        <div class='gsap-fadein bg-dark-900/50 border border-light-500/20 hover:border-primary-500/40 rounded-xl p-8 transition-all group'>
-          <div class='flex items-start gap-4 mb-6'>
-            <div class='flex-shrink-0 w-12 h-12 bg-primary-500/10 border border-primary-500/30 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-500/30 transition-all'>
-              <span class='text-2xl font-bold text-primary-400'>3</span>
+        <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 shadow-sm group hover:border-meg-accent/30 transition-all'>
+          <div class='flex flex-col md:flex-row items-start gap-6'>
+            <div class='size-12 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center shrink-0 shadow-inner group-hover:border-meg-accent/50 transition-all'>
+              <span class='text-2xl font-black text-meg-accent'>3</span>
             </div>
             <div class='flex-1'>
-              <h3 class='text-2xl font-bold text-white mb-3'>Webserver konfigurieren</h3>
-              <p class='text-light-300 mb-4'>
-                Stelle den <code class='bg-dark-800 text-primary-400 px-2 py-1 rounded font-mono text-sm'>browser</code>-Ordner hinter einen Webserver (nginx, Apache, etc.) und die Anwendung ist einsatzbereit.
-              </p>
-              
-              <!-- Nginx Beispiel -->
-              <div class='mb-4'>
-                <p class='text-light-100 font-semibold mb-2 flex items-center gap-2'>
-                  <i class='fa-solid fa-server text-primary-400' aria-hidden='true'></i>
-                  Beispiel: nginx
-                </p>
-                <div class='bg-dark-800/70 border border-light-500/10 rounded-lg p-4 font-mono text-sm overflow-x-auto'>
-                  <pre class='text-light-300'><code>server &#123;
-    listen 80;
-    server_name ausgabeschein.example.com;
-
-    root /var/www/ausgabeschein-generator/browser;
-    index index.html;
-
-    location / &#123;
-        try_files $uri $uri/ /index.html;
-    &#125;
+              <h3 class='text-2xl font-bold text-meg-text-primary-dark mb-3'>Config</h3>
+              <p class='text-meg-text-secondary text-sm mb-6'>Konfiguriere deine Nginx/Apache Site als SPA.</p>
+              <div class='bg-meg-bg-dark rounded-xl p-4 border border-meg-border-dark font-mono text-xs text-meg-text-secondary overflow-x-auto'>
+                <pre><code>location / &#123;
+    try_files $uri $uri/ /index.html;
 &#125;</code></pre>
-                </div>
-              </div>
-
-              <!-- Apache Beispiel -->
-              <div>
-                <p class='text-light-100 font-semibold mb-2 flex items-center gap-2'>
-                  <i class='fa-solid fa-server text-primary-400' aria-hidden='true'></i>
-                  Beispiel: Apache
-                </p>
-                <div class='bg-dark-800/70 border border-light-500/10 rounded-lg p-4 font-mono text-sm overflow-x-auto'>
-                  <pre class='text-light-300'><code>&lt;VirtualHost *:80&gt;
-    ServerName ausgabeschein.example.com
-    DocumentRoot /var/www/ausgabeschein-generator/browser
-
-    &lt;Directory /var/www/ausgabeschein-generator/browser&gt;
-        Options -Indexes +FollowSymLinks
-        AllowOverride All
-        Require all granted
-        FallbackResource /index.html
-    &lt;/Directory&gt;
-&lt;/VirtualHost&gt;</code></pre>
-                </div>
               </div>
             </div>
           </div>
@@ -299,51 +198,46 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
       </div>
 
       <!-- Hinweis -->
-      <div class='mt-8 gsap-fadein bg-primary-500/5 border border-primary-500/20 rounded-xl p-6'>
+      <div class='mt-12 gsap-fadein bg-meg-accent/5 border border-meg-accent/20 rounded-2xl p-8'>
         <div class='flex items-start gap-4'>
-          <div class='flex-shrink-0'>
-            <i class='fa-solid fa-circle-info text-2xl text-primary-400' aria-hidden='true'></i>
-          </div>
-          <div>
-            <h4 class='text-lg font-bold text-white mb-2'>Hinweis</h4>
-            <p class='text-light-300'>
-              Die Anwendung ist eine Single Page Application (SPA). Achte darauf, dass dein Webserver alle Anfragen an <code class='bg-dark-800 text-primary-400 px-2 py-1 rounded font-mono text-sm'>index.html</code> weiterleitet (wie in den Beispielen gezeigt).
-            </p>
-          </div>
+          <i class='fa-solid fa-circle-info text-2xl text-meg-accent mt-1'></i>
+          <p class='text-meg-text-secondary text-sm leading-relaxed'>
+            <strong>Wichtig:</strong> Die Anwendung ist eine SPA. Alle Requests müssen serverseitig an die <code class='text-meg-accent font-black'>index.html</code> geleitet werden.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark'>
     <div class='mx-auto max-w-4xl text-center gsap-fadein'>
-      <h2 class='text-3xl md:text-4xl font-bold text-white mb-6'>
-        Bereit für <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-500'>effiziente Verwaltung</span>?
+      <h2 class='text-4xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-8'>
+        Optimierte <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Asset-Ausgabe</span>
       </h2>
-      <p class='text-xl text-light-300 mb-8 max-w-2xl mx-auto'>
-        Starte jetzt mit dem Ausgabeschein Generator oder kontaktiere mich für individuelle Anpassungen und Support.
+      <p class='text-xl text-meg-text-secondary mb-12 max-w-2xl mx-auto'>
+        Starte jetzt oder kontaktiere mich für individuellen Netbox-Support.
       </p>
       
-      <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+      <div class='flex flex-col sm:flex-row gap-4 justify-center items-center'>
         <a
           href='https://gitlab.com/mwaldheim/ausgabeschein-generator'
           target='_blank'
           rel='noopener noreferrer'
-          class='px-8 py-4 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white font-semibold text-lg rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all inline-flex items-center gap-2 justify-center'
+          class='w-full sm:w-auto px-8 py-4 bg-meg-accent text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-meg-accent/30 transition-all hover:scale-[1.02] inline-flex items-center justify-center gap-2'
         >
-          <i class='fa-brands fa-gitlab' aria-hidden='true'></i>
+          <i class='fa-brands fa-gitlab text-2xl'></i>
           <span>GitLab Repository</span>
         </a>
         
-                  <a
+        <a
           href='https://portal.waldheim.dev'
           target='_blank'
           rel='noopener noreferrer'
-          class='px-8 py-4 bg-dark-800/50 border border-light-500/20 text-light-100 font-semibold text-lg rounded-lg hover:bg-dark-800 hover:border-light-500/40 transition-all inline-flex items-center gap-2 justify-center'
+          class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all inline-flex items-center justify-center gap-2'
         >
           <span>Fragen? Kundenportal</span>
-          <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
+          <i class='fa-solid fa-arrow-right'></i>
         </a>
       </div>
     </div>

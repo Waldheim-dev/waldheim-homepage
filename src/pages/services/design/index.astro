@@ -66,286 +66,164 @@ const ogImage = 'https://waldheim.dev/services/design-og.jpg';
     badge="Design trifft Funktion"
   />
   <!-- Main Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900' id='leistungen'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark' id='leistungen'>
     <div class='mx-auto max-w-7xl'>
       <div class='mx-auto max-w-2xl text-center mb-16'>
-        <h2 class='gsap-fadein text-base font-semibold text-pink-400 mb-4' style='animation-delay: 0s'>
-          <i class='fa-solid fa-palette text-pink-400 mr-2' aria-hidden='true'></i>
-          Gutes Design
+        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4' style='animation-delay: 0s'>
+          <i class='fa-solid fa-palette mr-2' aria-hidden='true'></i>
+          Kreativ-Services
         </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
-          Design, das <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>wirkt</span> und begeistert
+        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+          Design, das <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>wirkt</span> und begeistert
         </p>
-        <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
+        <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
           Ich gestalte für Sie überzeugende Designs – für Printmedien und digitale Anwendungen.
         </p>
       </div>
       
       <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        <div class='gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-2xl p-8 hover:border-pink-500/40 transition-all duration-300' style='animation-delay: 0.45s'>
-          <div class='w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-print text-pink-400 text-2xl'></i>
+        {[
+          { title: 'Print-Design', desc: 'Plakate, Flyer, Visitenkarten – hochwertig und zielgruppengerecht.', icon: 'fa-print' },
+          { title: 'UI/UX Design', desc: 'Intuitive Benutzeroberflächen unter Berücksichtigung der Barrierefreiheit.', icon: 'fa-mobile-screen' },
+          { title: 'Logo Design', desc: 'Einzigartige Logos, passend zu Ihrer Marke und für jeden Einsatzzweck.', icon: 'fa-paint-brush' },
+          { title: 'Corporate Design', desc: 'Stimmige Gesamtkonzepte – von der Idee bis zum fertigen Brand-Book.', icon: 'fa-briefcase' }
+        ].map((feat, i) => (
+          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/30 hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 group' style={`animation-delay: ${0.45 + i * 0.15}s`}>
+            <div class='w-14 h-14 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
+              <i class={`fa-solid ${feat.icon} text-rose-400 text-2xl`}></i>
+            </div>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-4'>{feat.title}</h3>
+            <p class='text-meg-text-secondary leading-relaxed'>{feat.desc}</p>
           </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Professionelles Print-Design</h3>
-          <p class='text-light-300'>
-            Von Veranstaltungsplakaten und Flyern bis hin zu Visitenkarten und Briefpapier – ich gestalte Ihre
-            Printmedien hochwertig und zielgruppengerecht.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-2xl p-8 hover:border-pink-500/40 transition-all duration-300' style='animation-delay: 0.6s'>
-          <div class='w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-mobile-screen text-pink-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Benutzerfreundliches UI/UX Design</h3>
-          <p class='text-light-300'>
-            Ich gestalte intuitive und ansprechende Benutzeroberflächen für Ihre Software oder Website – unter Berücksichtigung der Barrierefreiheit (BITV 2.0).
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-2xl p-8 hover:border-pink-500/40 transition-all duration-300' style='animation-delay: 0.75s'>
-          <div class='w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-paint-brush text-pink-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Individuelle Logos</h3>
-          <p class='text-light-300'>
-            Ich entwickle einzigartige Logos in verschiedenen Stilen und Formaten – passend zu Ihrer Marke und für jeden Einsatzzweck.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-2xl p-8 hover:border-pink-500/40 transition-all duration-300' style='animation-delay: 0.9s'>
-          <div class='w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-briefcase text-pink-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Ganzheitliches Corporate Design</h3>
-          <p class='text-light-300'>
-            Ich entwickle ein stimmiges Corporate Design für Ihr Unternehmen – von der Visitenkarte bis zum Webauftritt, von der Idee bis zum fertigen Konzept.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Design Process Section -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-pink-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-diagram-project text-pink-400 mr-2' aria-hidden='true'></i>
-          Mein Prozess
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-diagram-project mr-2' aria-hidden='true'></i>
+          Der Ablauf
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Strukturierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Designprozess</span> in 3 Schritten
-        </p>
-        <p class="gsap-fadein text-xl text-light-300" style="animation-delay: 0.3s">
-          Ich gestalte Ihre Designs nach einem bewährten, effizienten Prozess – für optimale Ergebnisse und maximale Transparenz.
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Strukturierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Prozess</span>
         </p>
       </div>
       
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-3xl font-bold text-pink-400">1</span>
+        {[
+          { step: '1', title: 'Analyse & Briefing', desc: 'Wir besprechen remote Ihre Ziele, Zielgruppe und Wünsche.' },
+          { step: '2', title: 'Konzept & Entwurf', desc: 'Entwicklung erster Designideen auf Basis Ihrer Anforderungen.' },
+          { step: '3', title: 'Feedback & Finalisierung', desc: 'Iterative Umsetzung Ihrer Wünsche via Figma oder Miro.' }
+        ].map((item, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/20 transition-all shadow-sm group" style={`animation-delay: ${0.45 + i * 0.15}s`}>
+            <div class="w-14 h-14 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center mb-6 group-hover:border-rose-500/50 transition-all">
+              <span class="text-3xl font-black text-rose-400">{item.step}</span>
+            </div>
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">{item.title}</h3>
+            <p class="text-meg-text-secondary leading-relaxed">{item.desc}</p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">Analyse & Briefing</h3>
-          <p class="text-light-300">
-            Wir besprechen remote Ihre Ziele, Zielgruppe und Wünsche. Ich analysiere bestehende Materialien und sammle alle notwendigen Informationen.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-3xl font-bold text-pink-400">2</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Konzept & Entwurf</h3>
-          <p class="text-light-300">
-            Auf Basis des Briefings entwickle ich erste Designideen und Konzepte. Dabei berücksichtige ich Ihre Anforderungen und aktuelle Designtrends.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <span class="text-3xl font-bold text-pink-400">3</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Feedback & Umsetzung</h3>
-          <p class="text-light-300">
-            Sie erhalten die Entwürfe zur Ansicht (über Figma/Miro) und geben mir Ihr Feedback. Ich setze Ihre Änderungswünsche um und finalisiere das Design.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Design Tools Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-950 to-dark-900">
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-pink-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-toolbox text-pink-400 mr-2' aria-hidden='true'></i>
-          Meine Design-Werkzeuge
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-toolbox mr-2' aria-hidden='true'></i>
+          Werkzeuge
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Professionelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Tools</span> für beste Ergebnisse
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Professionelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Tools</span>
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-6" style="animation-delay: 0.3s">
-          <h3 class="text-sm font-semibold text-pink-400 mb-3">Design & Prototyping</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Figma</span>
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Illustrator</span>
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Photoshop</span>
+        {[
+          { label: 'Design & Prototyping', tools: ['Figma', 'Illustrator', 'Photoshop'] },
+          { label: 'UI-Kits & Frameworks', tools: ['TailwindCSS', 'Material Design'] },
+          { label: 'Print & Publishing', tools: ['InDesign', 'Affinity Publisher'] }
+        ].map((stack, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 hover:border-rose-500/20 transition-all shadow-sm" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-4">{stack.label}</h3>
+            <div class="flex flex-wrap gap-2">
+              {stack.tools.map(tool => (
+                <span class="px-3 py-1 bg-meg-bg-dark/50 border border-meg-border-dark rounded-lg text-sm text-meg-text-secondary font-medium">
+                  {tool}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-6" style="animation-delay: 0.45s">
-          <h3 class="text-sm font-semibold text-pink-400 mb-3">UI-Kits & Frameworks</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">TailwindCSS</span>
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Material Design</span>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-6" style="animation-delay: 0.6s">
-          <h3 class="text-sm font-semibold text-pink-400 mb-3">Print & Publishing</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">InDesign</span>
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Illustrator</span>
-            <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full text-sm text-light-200">Affinity Publisher</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-8 text-center">
-        <div class="gsap-fadein inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200" style="animation-delay: 0.75s">
-          <i class='fa-solid fa-house-laptop text-green-400' aria-hidden='true'></i>
-          <span>100% Remote Arbeit</span>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Design Principles Section -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-pink-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-lightbulb text-pink-400 mr-2' aria-hidden='true'></i>
-          Design-Philosophie
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-lightbulb mr-2' aria-hidden='true'></i>
+          Philosophie
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Prinzipien</span> für gutes Design
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Prinzipien</span>
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-bullseye text-pink-400 text-2xl"></i>
+        {[
+          { title: 'Funktion vor Ästhetik', desc: 'Schönes Design muss vor allem FUNKTIONIEREN. Usability steht an erster Stelle.', icon: 'fa-bullseye' },
+          { title: 'Inklusives Design', desc: 'Barrierefreiheit ist Standard. Ich entwickle für ALLE Nutzer.', icon: 'fa-universal-access' },
+          { title: 'Mobile First', desc: 'Ich designe zuerst für kleine Bildschirme, dann für Desktop.', icon: 'fa-mobile-screen' },
+          { title: 'Iterativer Prozess', desc: 'Feedback-Schleifen statt Einmal-Abnahme. Dialog schafft Qualität.', icon: 'fa-arrows-rotate' }
+        ].map((princ, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/30 transition-all group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <div class="w-14 h-14 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class={`fa-solid ${princ.icon} text-rose-400 text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">{princ.title}</h3>
+            <p class="text-meg-text-secondary leading-relaxed">{princ.desc}</p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">Funktion vor Ästhetik</h3>
-          <p class="text-light-300">
-            Schönes Design muss vor allem FUNKTIONIEREN. Usability und User Experience stehen an erster Stelle.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-universal-access text-pink-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Barrierefreiheit = Standard</h3>
-          <p class="text-light-300">
-            Kontraste, Schriftgrößen, Screenreader-Support – ich entwickle für ALLE Nutzer, nicht nur für einige.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-mobile-screen text-pink-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Mobile First</h3>
-          <p class="text-light-300">
-            70%+ aller Nutzer sind mobil unterwegs. Ich designe zuerst für kleine Bildschirme, dann für Desktop.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <div class="w-14 h-14 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-arrows-rotate text-pink-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Iterativer Prozess</h3>
-          <p class="text-light-300">
-            Feedback-Schleifen statt "einmal abgenickt". Design entwickelt sich durch Dialog mit Ihnen weiter.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-900 to-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-pink-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-circle-question text-pink-400 mr-2' aria-hidden='true'></i>
-          Häufig gestellte Fragen
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4" style="animation-delay: 0s">
+          FAQ
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Fragen & Antworten</span> zum Design
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Antworten</span>
         </p>
       </div>
       
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-pink-400 mr-3' aria-hidden='true'></i>
-            Liefern Sie auch Druckdaten?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Ja! Print-ready PDF (CMYK, 300dpi) inkl. Schnittmarken und Farbprofilen – direkt bereit für die Druckerei.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-pink-400 mr-3' aria-hidden='true'></i>
-            Erstellen Sie auch Illustrationen/Icons?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Icons ja (vektorbasiert, skalierbar). Komplexe Illustrationen (z.B. Character Design) auf Anfrage oder über spezialisierte Partner.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-pink-400 mr-3' aria-hidden='true'></i>
-            Wie viele Entwürfe erhalte ich?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Standard: 2-3 Konzepte zur Auswahl. Danach: 2 Revisions-Runden inklusive. Weitere Anpassungen nach Aufwand.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-pink-400 mr-3' aria-hidden='true'></i>
-            Arbeiten Sie mit Brand Guidelines?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Selbstverständlich! Ich halte mich strikt an bestehende Corporate Design-Vorgaben (Farben, Schriften, Logos, Tonalität).
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-pink-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-pink-400 mr-3' aria-hidden='true'></i>
-            Arbeiten Sie vor Ort oder remote?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> 100% remote! Alle Design-Sprints, Feedbackrunden und Abnahmen führe ich über Figma, Miro und Videokonferenzen durch.
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto space-y-4">
+        {[
+          { q: 'Liefern Sie auch Druckdaten?', a: 'Ja! Print-ready PDF (CMYK, 300dpi) inkl. Schnittmarken und Farbprofilen – direkt bereit für die Druckerei.' },
+          { q: 'Wie viele Entwürfe erhalte ich?', a: 'Standard: 2-3 Konzepte zur Auswahl. Danach: 2 Revisions-Runden inklusive. Weitere Anpassungen nach Aufwand.' },
+          { q: 'Arbeiten Sie mit Brand Guidelines?', a: 'Selbstverständlich! Ich halte mich strikt an bestehende Corporate Design-Vorgaben Ihres Unternehmens.' }
+        ].map((faq, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
+              <span class="text-rose-400 font-black">Q</span> {faq.q}
+            </h3>
+            <p class="text-meg-text-secondary pl-7 leading-relaxed">
+              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
