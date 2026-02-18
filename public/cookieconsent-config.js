@@ -198,7 +198,7 @@ CookieConsent.run({
                         },
                         {
                             title: "Weitere Informationen",
-                            description: "Wenn Sie Fragen zu meiner Cookie-Politik und Ihren Wahlmöglichkeiten haben, wenden Sie sich bitte an <a class=\„cc__link\“ href=\„mailto:kontakt@waldheim.dev“>Kontaktieren Sie mich</a>."
+                            description: "Wenn Sie Fragen zu meiner Cookie-Politik und Ihren Wahlmöglichkeiten haben, wenden Sie sich bitte an <a class=\"cc__link\" href=\"mailto:kontakt@waldheim.dev\">Kontaktieren Sie mich</a>."
                         }
                     ]
                 }

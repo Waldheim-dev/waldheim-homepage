@@ -67,147 +67,79 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
   />
 
   <!-- Main Features Section -->
-  <section class="py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900" id="leistungen">
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark" id="leistungen">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-laptop-code text-blue-400 mr-2' aria-hidden='true'></i>
-          Entwicklung
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-laptop-code mr-2' aria-hidden='true'></i>
+          Leistungsspektrum
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Gemeinsam realisieren wir Ihre <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Vision</span>!
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Gemeinsam realisieren wir Ihre <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Vision</span>!
         </p>
-        <p class="gsap-fadein text-xl text-light-300" style="animation-delay: 0.3s">
-          Ich entwickle individuelle Websites, Webanwendungen, Plugins und Microservices – präzise auf Ihre
-          Anforderungen zugeschnitten.
+        <p class="gsap-fadein text-xl text-meg-text-secondary" style="animation-delay: 0.3s">
+          Individuelle Softwarelösungen, präzise auf Ihre Anforderungen zugeschnitten.
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.45s">
-          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-globe text-blue-400 text-2xl"></i>
+        {[
+          { title: 'Individuelle Websites', desc: 'Modernste technische Standards mit Astro, React oder WordPress.', icon: 'fa-globe' },
+          { title: 'Plugin-Entwicklung', desc: 'Maßgeschneiderte Erweiterungen für Ihre bestehenden Plattformen.', icon: 'fa-plug' },
+          { title: 'Microservices', desc: 'Unabhängige, skalierbare Dienste für Ihre IT-Landschaft.', icon: 'fa-server' },
+          { title: 'Open Source', desc: 'Engagement in der Community und öffentlich zugängliche Lösungen.', icon: 'fa-brands fa-github' }
+        ].map((feat, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 hover:shadow-lg hover:shadow-meg-accent/5 transition-all duration-300 group" style={`animation-delay: ${0.45 + i * 0.15}s`}>
+            <div class="w-14 h-14 bg-meg-accent/10 border border-meg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class={`${feat.icon.startsWith('fa-') ? 'fa-solid' : ''} ${feat.icon} text-meg-accent text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">{feat.title}</h3>
+            <p class="text-meg-text-secondary leading-relaxed">{feat.desc}</p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">Individuelle Websites</h3>
-          <p class="text-light-300">
-            Ob mit WordPress, Astro oder als reine HTML-Lösung – ich setze Ihre Website nach Ihren Wünschen
-            und den neuesten technischen Standards um.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.6s">
-          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-plug text-blue-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Plugin-Entwicklung</h3>
-          <p class="text-light-300">
-            Benötigen Sie ein spezielles Plugin für WordPress oder eine andere Plattform? Ich entwickle
-            maßgeschneiderte Erweiterungen für Ihre bestehende Software.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.75s">
-          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-solid fa-server text-blue-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Microservices</h3>
-          <p class="text-light-300">
-            Ich entwickle unabhängige, skalierbare Microservices, die sich nahtlos in Ihre bestehende
-            IT-Landschaft integrieren lassen.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.9s">
-          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6">
-            <i class="fa-brands fa-github text-blue-400 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-4">Open Source</h3>
-          <p class="text-light-300">
-            Ich engagiere mich in der Open-Source-Community und entwickle öffentlich zugängliche
-            Softwarelösungen.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Tech Stack Section -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-toolbox text-blue-400 mr-2' aria-hidden='true'></i>
-          Mein Tech-Stack
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-toolbox mr-2' aria-hidden='true'></i>
+          Technologie-Stack
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Moderne <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Technologien</span> für Ihr Projekt
-        </p>
-        <p class="gsap-fadein text-xl text-light-300 mb-6" style="animation-delay: 0.3s">
-          Ich arbeite ausschließlich remote mit bewährten und modernen Technologien
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Moderne <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Frameworks</span>
         </p>
       </div>
       
       <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 0.45s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">Frontend</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Astro</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Angular</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Vue.js</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">TailwindCSS</span>
+        {[
+          { label: 'Frontend', tools: ['Astro', 'Angular', 'Vue.js', 'TailwindCSS'] },
+          { label: 'Backend', tools: ['Node.js', 'Python', 'PHP', 'Go'] },
+          { label: 'Datenbanken', tools: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'] },
+          { label: 'CMS', tools: ['WordPress', 'Strapi', 'Contentful'] },
+          { label: 'APIs', tools: ['REST', 'GraphQL', 'gRPC'] },
+          { label: 'Qualität', tools: ['Playwright', 'Vitest', 'Jest'] }
+        ].map((stack, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 hover:border-meg-accent/20 transition-all shadow-sm" style={`animation-delay: ${0.45 + i * 0.1}s`}>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-meg-accent mb-4">{stack.label}</h3>
+            <div class="flex flex-wrap gap-2">
+              {stack.tools.map(tool => (
+                <span class="px-3 py-1 bg-meg-bg-dark/50 border border-meg-border-dark rounded-lg text-sm text-meg-text-secondary font-medium">
+                  {tool}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 0.6s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">Backend</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Node.js</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Python</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">PHP</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">C#</span>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 0.75s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">Datenbanken</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">PostgreSQL</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">MySQL</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">MongoDB</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Redis</span>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 0.9s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">CMS & Frameworks</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">WordPress</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Strapi</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Contentful</span>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 1.05s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">APIs & Integration</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">REST</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">GraphQL</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">gRPC</span>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6" style="animation-delay: 1.2s">
-          <h3 class="text-sm font-semibold text-blue-400 mb-3">Testing & Qualität</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Playwright</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Vitest</span>
-            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-light-200">Jest</span>
-          </div>
-        </div>
+        ))}
       </div>
+    </div>
+  </section>
       
       <div class="mt-8 text-center">
-        <div class="gsap-fadein inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200" style="animation-delay: 1.35s">
+        <div class="gsap-fadein inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-emerald-400" style="animation-delay: 1.35s">
           <i class='fa-solid fa-house-laptop text-green-400' aria-hidden='true'></i>
           <span>100% Remote Arbeit</span>
         </div>
@@ -216,36 +148,30 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
   </section>
 
   <!-- Mission Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-950 to-dark-900">
+  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-        <h2 class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0s">
-          Meine Mission: <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Qualität, Sicherheit, Nachhaltigkeit</span>
+        <h2 class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0s">
+          Meine Mission: <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Qualität & Sicherheit</span>
         </h2>
         <div class="mt-10 flex flex-col gap-x-16 gap-y-12 lg:flex-row">
           <div class="lg:flex-1">
-            <p class="gsap-fadein text-xl text-light-300 mb-8" style="animation-delay: 0.15s">
-              Ich lege Wert auf Qualität bis ins Detail – für jedes Endgerät und mit einem starken Fokus auf
-              Sicherheit.
+            <p class="gsap-fadein text-xl text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.15s">
+              Ich lege Wert auf Qualität bis ins Detail – für jedes Endgerät und mit einem starken Fokus auf Sicherheit.
             </p>
-            <p class="gsap-fadein text-base text-light-400" style="animation-delay: 0.3s">
-              Viele Agenturen vernachlässigen die Sicherheit. Ich nicht! Ich biete Ihnen langfristige, stabile
-              und sichere Softwarelösungen – zu fairen Preisen. Jedes Projekt wird mit einer umfassenden
-              Dokumentation und einem Sicherheitsbericht ausgeliefert. Auch langfristiger Support und
-              Anpassungen sind selbstverständlich.
+            <p class="gsap-fadein text-base text-meg-text-secondary leading-relaxed opacity-80" style="animation-delay: 0.3s">
+              Viele Agenturen vernachlässigen die Sicherheit. Ich biete Ihnen langfristige, stabile und sichere Softwarelösungen – zu fairen Preisen. Jedes Projekt wird mit einer umfassenden Dokumentation und einem Sicherheitsbericht ausgeliefert.
             </p>
           </div>
           <div class="lg:flex lg:items-center">
-            <div class="space-y-8">
-              <div class="gsap-fadein" style="animation-delay: 0.45s">
-                <div class="text-5xl font-bold text-white mb-2">10+</div>
-                <div class="text-light-300">Jahre Erfahrung in Software- und Webentwicklung</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div class="gsap-fadein bg-meg-surface-dark/50 p-6 rounded-2xl border border-meg-border-dark shadow-sm" style="animation-delay: 0.45s">
+                <div class="text-5xl font-black text-meg-text-primary-dark mb-2 tracking-tighter">10+</div>
+                <div class="text-sm font-bold uppercase tracking-widest text-meg-accent">Jahre Erfahrung</div>
               </div>
-              <div class="gsap-fadein" style="animation-delay: 0.6s">
-                <div class="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 text-transparent bg-clip-text mb-2">
-                  Effizienzsteigerung
-                </div>
-                <div class="text-light-300">KI-gestützte Entwicklung</div>
+              <div class="gsap-fadein bg-meg-surface-dark/50 p-6 rounded-2xl border border-meg-border-dark shadow-sm" style="animation-delay: 0.6s">
+                <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400 mb-2 tracking-tighter">AI-Driven</div>
+                <div class="text-sm font-bold uppercase tracking-widest text-meg-accent">Effizienz-Boost</div>
               </div>
             </div>
           </div>
@@ -255,210 +181,110 @@ const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
   </section>
 
   <!-- Quality Bento Grid -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-900 to-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
-      <h2 class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
-        <i class='fa-solid fa-medal text-blue-400 mr-2' aria-hidden='true'></i>
+      <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4" style="animation-delay: 0s">
         High-Quality
       </h2>
-      <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-16" style="animation-delay: 0.15s">
-        Entwicklung mit <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Qualität</span>
+      <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-16" style="animation-delay: 0.15s">
+        Entwicklung mit <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Anspruch</span>
       </p>
       
-      <div class="grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-        <div class="gsap-fadein relative lg:col-span-3 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.3s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-performance.webp" alt="Lighthouse Performance Score 100 – Optimierte Webentwicklung für maximale Ladegeschwindigkeit" loading="lazy">
-          <div class="p-10">
-            <h3 class="text-blue-400 font-semibold mb-2">Performance</h3>
-            <p class="text-2xl font-bold text-white mb-3">Lichtgeschwindigkeit</p>
-            <p class="text-light-300">Die Entwicklung wird in der Performance so optimiert, dass wir keine unnötigen oder langsamen Prozesse haben.</p>
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-6 lg:grid-rows-2">
+        {[
+          { span: 'lg:col-span-3', img: '/bento/bento-01-performance.webp', tag: 'Performance', title: 'Lichtgeschwindigkeit', desc: 'Optimierte Prozesse für maximale Ladegeschwindigkeit.' },
+          { span: 'lg:col-span-3', img: '/bento/bento-01-releases.webp', tag: 'Releases', title: 'Push to deploy', desc: 'Automatisierte CI/CD-Pipelines für fehlerfreie Updates.' },
+          { span: 'lg:col-span-2', img: '/bento/bento-01-speed.webp', tag: 'Barrierefreiheit', title: 'Inklusiv', desc: 'Einhaltung der WCAG-Standards für universellen Zugriff.' },
+          { span: 'lg:col-span-2', img: '/bento/bento-01-network.webp', tag: 'Testing', title: 'Zuverlässig', desc: 'Automatisierte Unit-, Integration- und E2E-Tests.' },
+          { span: 'lg:col-span-2', img: '/bento/bento-01-integrations.webp', tag: 'Integrationen', title: 'Vernetzt', desc: 'Nahtlose Einbindung Ihrer bestehenden Tool-Landschaft.' }
+        ].map((item, i) => (
+          <div class={`gsap-fadein relative ${item.span} bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl overflow-hidden hover:border-meg-accent/30 transition-all duration-300 group shadow-sm`} style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <div class="h-48 overflow-hidden">
+              <img class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700" src={item.img} alt={item.title} loading="lazy">
+            </div>
+            <div class="p-8">
+              <h3 class="text-meg-accent text-xs font-bold uppercase tracking-widest mb-2">{item.tag}</h3>
+              <p class="text-xl font-bold text-meg-text-primary-dark mb-2">{item.title}</p>
+              <p class="text-meg-text-secondary text-sm leading-relaxed">{item.desc}</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="gsap-fadein relative lg:col-span-3 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.45s">
-          <img class="h-80 w-full object-cover lg:object-right" src="/bento/bento-01-releases.webp" alt="CI/CD Pipeline mit GitHub Actions – Automatisches Deployment bei jedem Push" loading="lazy">
-          <div class="p-10">
-            <h3 class="text-blue-400 font-semibold mb-2">Releases</h3>
-            <p class="text-2xl font-bold text-white mb-3">Push to deploy</p>
-            <p class="text-light-300">Die CI/CD wird so eingerichtet, dass wir bei jedem Push auf das Repository ein automatisches Deployment haben.</p>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.6s">
-          <img class="h-80 w-full object-cover object-left" src="/bento/bento-01-speed.webp" alt="WCAG 2.1 AA Konformität – Barrierefreie Webentwicklung für alle Nutzer" loading="lazy">
-          <div class="p-10">
-            <h3 class="text-blue-400 font-semibold mb-2">Barrierefreiheit</h3>
-            <p class="text-2xl font-bold text-white mb-3">Zugriff für jeden</p>
-            <p class="text-light-300">Die Entwicklung erfolgt immer mit der Einhaltung von grundlegenden Barrierefreiheiten.</p>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.75s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-network.webp" alt="Playwright Testing Framework – Unit-Tests, Integrationstests und E2E-Tests für zuverlässige Software" loading="lazy">
-          <div class="p-10">
-            <h3 class="text-blue-400 font-semibold mb-2">Teststrategien</h3>
-            <p class="text-2xl font-bold text-white mb-3">Testen ideal je nach Projekt</p>
-            <p class="text-light-300">Die Teststrategien werden individuell auf das Projekt angepasst - Unit-Tests, Integrationstests oder End-to-End-Tests.</p>
-          </div>
-        </div>
-        
-        <div class="gsap-fadein relative lg:col-span-2 bg-gradient-to-br from-dark-900 to-dark-950 border border-blue-500/20 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300" style="animation-delay: 0.9s">
-          <img class="h-80 w-full object-cover" src="/bento/bento-01-integrations.webp" alt="API-Integrationen mit Stripe, Sentry, Google Analytics – Moderne Webentwicklung mit Drittanbieter-Tools" loading="lazy">
-          <div class="p-10">
-            <h3 class="text-blue-400 font-semibold mb-2">Integrationen</h3>
-            <p class="text-2xl font-bold text-white mb-3">Einbindung diverser Integrationen</p>
-            <p class="text-light-300">Durch die Verbindung Ihrer Tools optimiere ich Ihre Prozesse um unnötige Schritte zu vermeiden.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Quality Guarantees -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-certificate text-blue-400 mr-2' aria-hidden='true'></i>
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-certificate mr-2' aria-hidden='true'></i>
           Qualitätsversprechen
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Garantien</span> für Sie
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Garantien</span> für Sie
         </p>
       </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 0.3s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-universal-access text-blue-400 text-xl"></i>
+        {[
+          { title: '100% WCAG 2.0 AA', desc: 'Barrierefreiheit bei Web-Projekten', icon: 'fa-universal-access' },
+          { title: 'Lighthouse >90', desc: 'Performance & Best Practices', icon: 'fa-gauge-high' },
+          { title: 'Automatisierte Tests', desc: 'Min. 70% Code Coverage', icon: 'fa-vial' },
+          { title: 'Security Audit', desc: 'OWASP Top 10 Check', icon: 'fa-shield-halved' },
+          { title: 'Vollständige Doku', desc: 'Code + User Guide', icon: 'fa-book' },
+          { title: 'Git-Repository', desc: 'Mit sauberer History', icon: 'fa-brands fa-git-alt' }
+        ].map((item, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 text-center shadow-sm hover:border-meg-accent/30 transition-all group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <div class="size-12 bg-meg-accent/10 border border-meg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <i class={`${item.icon.startsWith('fa-') ? 'fa-solid' : ''} ${item.icon} text-meg-accent text-xl`}></i>
+            </div>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-2">{item.title}</h3>
+            <p class="text-sm text-meg-text-secondary">{item.desc}</p>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">100% WCAG 2.0 AA</h3>
-          <p class="text-sm text-light-300">Barrierefreiheit bei Web-Projekten</p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 0.45s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-gauge-high text-blue-400 text-xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Lighthouse &gt;90</h3>
-          <p class="text-sm text-light-300">Performance & Best Practices</p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 0.6s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-vial text-blue-400 text-xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Automatisierte Tests</h3>
-          <p class="text-sm text-light-300">Min. 70% Code Coverage</p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 0.75s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-shield-halved text-blue-400 text-xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Security Audit</h3>
-          <p class="text-sm text-light-300">OWASP Top 10 Check</p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 0.9s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-solid fa-book text-blue-400 text-xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Vollständige Doku</h3>
-          <p class="text-sm text-light-300">Code + User Guide</p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-6 text-center" style="animation-delay: 1.05s">
-          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fa-brands fa-git-alt text-blue-400 text-xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Git-Repository</h3>
-          <p class="text-sm text-light-300">Mit sauberer History</p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-900 to-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-blue-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-circle-question text-blue-400 mr-2' aria-hidden='true'></i>
-          Häufig gestellte Fragen
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4" style="animation-delay: 0s">
+          FAQ
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Fragen & Antworten</span> zur Entwicklung
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Antworten</span> zur Entwicklung
         </p>
       </div>
       
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-blue-400 mr-3' aria-hidden='true'></i>
-            Entwickeln Sie auch Mobile Apps?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Aktuell nur Progressive Web Apps (PWA), die auf allen Geräten funktionieren. Für native iOS/Android-Apps empfehle ich spezialisierte Partner.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-blue-400 mr-3' aria-hidden='true'></i>
-            WordPress oder Custom-Lösung?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Kommt auf Ihren Anwendungsfall an:<br>
-            <span class="text-light-400 block mt-2 pl-4">
-              • <strong>WordPress</strong> → CMS-Bedarf, schneller Launch, kleines bis mittleres Budget<br>
-              • <strong>Custom</strong> → Komplexe Logik, maximale Performance, Skalierbarkeit
-            </span>
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-blue-400 mr-3' aria-hidden='true'></i>
-            Bieten Sie Wartungsverträge an?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Ja! Ab 150€/Monat (Updates, Backups, Monitoring, 2h Support). Größere Pakete mit erweiterten Leistungen auf Anfrage.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-blue-400 mr-3' aria-hidden='true'></i>
-            Arbeiten Sie vor Ort oder remote?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> 100% remote! Alle Entwicklungsarbeiten, Meetings und Reviews führe ich über moderne Remote-Tools durch – deutschlandweit und international.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-blue-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-blue-400 mr-3' aria-hidden='true'></i>
-            Wie lange dauert ein typisches Projekt?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Abhängig vom Umfang:<br>
-            <span class="text-light-400 block mt-2 pl-4">
-              • Landing Page: 1-2 Wochen<br>
-              • Corporate Website: 3-4 Wochen<br>
-              • Web-App: 6-10 Wochen<br>
-              • Microservice: 2-3 Wochen
-            </span>
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto space-y-4">
+        {[
+          { q: 'Entwickeln Sie auch Mobile Apps?', a: 'Aktuell fokussiere ich mich auf Progressive Web Apps (PWA), die nativ-ähnliche Erlebnisse auf allen Geräten bieten.' },
+          { q: 'WordPress oder Custom-Lösung?', a: 'Das kommt auf Ihr Ziel an. WordPress für Content-Fokus und schnellen Start, Custom für maximale Performance und Skalierbarkeit.' },
+          { q: 'Bieten Sie Wartungsverträge an?', a: 'Ja! Sicherheit und Aktualität sind essentiell. Ich biete verschiedene Wartungspakete ab 150€/Monat an.' },
+          { q: 'Wie lange dauert ein Projekt?', a: 'Abhängig vom Umfang: Landing Pages 1-2 Wochen, Web-Apps 6-10 Wochen.' }
+        ].map((faq, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
+              <span class="text-meg-accent font-black">Q</span> {faq.q}
+            </h3>
+            <p class="text-meg-text-secondary pl-7 leading-relaxed">
+              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Quality Bento Grid -->
-  <section class="py-24 px-6 bg-dark-900">
-</section>
+  <div class="py-12 bg-meg-bg-dark border-t border-meg-border-dark text-center">
+    <div class="gsap-fadein inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-emerald-400">
+      <i class='fa-solid fa-house-laptop' aria-hidden='true'></i>
+      <span>100% Remote Workflow</span>
+    </div>
+  </div>
 
   <PriceService />
 

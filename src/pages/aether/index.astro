@@ -77,12 +77,12 @@ const ogImage = '/products/aether-og.jpg';
   <AetherHero />
   
   <!-- Intro Section -->
-  <section class='py-16 px-6 bg-gradient-to-b from-dark-950 to-dark-900'>
+  <section class='py-16 px-6 bg-meg-bg-dark'>
     <div class='mx-auto max-w-4xl'>
-      <div class='gsap-fadein prose prose-invert prose-lg max-w-none'>
-        <p class='text-xl text-light-300 leading-relaxed text-center'>
-          Aether ist unser neuer Dienst für schnellen, sicheren und mystischen Dateitransfer. 
-          Entwickelt für Developer, Kreative und Profis, die Dateien ohne Umwege teilen wollen – 
+      <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-10 rounded-2xl shadow-sm text-center'>
+        <p class='text-xl text-meg-text-secondary leading-relaxed max-w-2xl mx-auto'>
+          Aether ist unser Dienst für schnellen, sicheren und mystischen Dateitransfer. 
+          Entwickelt für Developer und Profis, die Dateien ohne Umwege teilen wollen – 
           von flüchtigen Momenten bis zu langfristigen Archiven.
         </p>
       </div>
@@ -92,113 +92,54 @@ const ogImage = '/products/aether-og.jpg';
   <AetherPricing />
   
   <!-- Pricing Table -->
-  <section id='pricing-comparison' class='py-16 px-6 bg-gradient-to-b from-dark-950 to-dark-900'>
+  <section id='pricing-comparison' class='py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark'>
     <div class='mx-auto max-w-6xl'>
-      <div class='text-center mb-12'>
-        <h2 class='gsap-fadein text-3xl md:text-4xl font-bold text-white mb-4'>
-          Detaillierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-rose-500'>Vergleich</span>
+      <div class='text-center mb-16'>
+        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4'>
+          Feature-Matrix
         </h2>
-        <p class='gsap-fadein text-lg text-light-300' style='animation-delay: 0.15s'>
-          Alle Features im Überblick
+        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
+          Detaillierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Vergleich</span>
         </p>
       </div>
 
-      <div class='gsap-fadein overflow-x-auto' tabindex='0' role='region' aria-label='Aether Pricing Vergleichstabelle' style='animation-delay: 0.3s'>
+      <div class='gsap-fadein overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm' style='animation-delay: 0.3s'>
         <table class='w-full text-left border-collapse'>
-          <thead class='bg-dark-800'>
+          <thead class='bg-meg-surface-dark/50 text-meg-text-primary-dark'>
             <tr>
-              <th class='px-6 py-4 text-light-100 font-semibold border-b border-red-500/20'>Feature</th>
-              <th class='px-6 py-4 text-light-100 font-semibold border-b border-red-500/20 text-center'>Particle</th>
-              <th class='px-6 py-4 text-light-100 font-semibold border-b border-red-500/20 text-center bg-red-900/20'>Wave</th>
-              <th class='px-6 py-4 text-light-100 font-semibold border-b border-red-500/20 text-center'>Matter</th>
+              <th class='px-6 py-4 font-bold border-b border-meg-border-dark'>Feature</th>
+              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center'>Particle</th>
+              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center bg-rose-500/5'>Wave</th>
+              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center'>Matter</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Max. Dateigröße</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>100 MB</td>
-              <td class='px-6 py-4 text-center text-white font-semibold bg-red-900/10'>5 GB</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>50 GB</td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Speicherdauer</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>24 Stunden</td>
-              <td class='px-6 py-4 text-center text-white font-semibold bg-red-900/10'>30 Tage</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>1 Jahr</td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Links pro Datei</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>1</td>
-              <td class='px-6 py-4 text-center text-white font-semibold bg-red-900/10'>10</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>50</td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Passwortschutz</td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-xmark text-light-600' aria-label='Nicht enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center bg-red-900/10'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Link-Widerruf</td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-xmark text-light-600' aria-label='Nicht enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center bg-red-900/10'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Echtzeit-Tracking</td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-xmark text-light-600' aria-label='Nicht enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center bg-red-900/10'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-check text-red-400' aria-label='Enthalten'></i>
-              </td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>Support</td>
-              <td class='px-6 py-4 text-center text-light-400'>Community</td>
-              <td class='px-6 py-4 text-center text-white font-semibold bg-red-900/10'>E-Mail</td>
-              <td class='px-6 py-4 text-center text-white font-semibold'>Premium</td>
-            </tr>
-            <tr class='border-b border-red-500/10 hover:bg-dark-900/30 transition-colors'>
-              <td class='px-6 py-4 text-light-300'>API-Zugriff</td>
-              <td class='px-6 py-4 text-center'>
-                <i class='fa-solid fa-xmark text-light-600' aria-label='Nicht enthalten'></i>
-              </td>
-              <td class='px-6 py-4 text-center bg-red-900/10'>
-                <span class='text-xs text-light-500'>Q1 2026</span>
-              </td>
-              <td class='px-6 py-4 text-center'>
-                <span class='text-xs text-light-500'>Q1 2026</span>
-              </td>
-            </tr>
-            <tr class='bg-dark-800/50'>
-              <td class='px-6 py-5 text-light-100 font-bold'>Preis</td>
-              <td class='px-6 py-5 text-center'>
-                <span class='text-2xl font-bold text-white'>Kostenlos</span>
-              </td>
-              <td class='px-6 py-5 text-center bg-red-900/20'>
-                <span class='text-2xl font-bold text-white'>€8</span>
-                <span class='text-light-400 text-sm block'>/Monat</span>
-              </td>
-              <td class='px-6 py-5 text-center'>
-                <span class='text-2xl font-bold text-white'>€24</span>
-                <span class='text-light-400 text-sm block'>/Monat</span>
-              </td>
+          <tbody class="text-meg-text-secondary">
+            {[
+              { f: 'Max. Dateigröße', c1: '100 MB', c2: '5 GB', c3: '50 GB' },
+              { f: 'Speicherdauer', c1: '24 Stunden', c2: '30 Tage', c3: '1 Jahr' },
+              { f: 'Links pro Datei', c1: '1', c2: '10', c3: '50' },
+              { f: 'Passwortschutz', c1: false, c2: true, c3: true },
+              { f: 'Link-Widerruf', c1: false, c2: true, c3: true },
+              { f: 'API-Zugriff', c1: false, c2: 'Q1 2026', c3: 'Q1 2026' }
+            ].map((row) => (
+              <tr class='border-b border-meg-border-dark/50 hover:bg-meg-accent/5 transition-colors'>
+                <td class='px-6 py-4 font-bold text-meg-text-primary-dark'>{row.f}</td>
+                <td class='px-6 py-4 text-center'>
+                  {typeof row.c1 === 'boolean' ? (row.c1 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c1}
+                </td>
+                <td class='px-6 py-4 text-center bg-rose-500/5 font-medium text-meg-text-primary-dark'>
+                  {typeof row.c2 === 'boolean' ? (row.c2 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c2}
+                </td>
+                <td class='px-6 py-4 text-center'>
+                  {typeof row.c3 === 'boolean' ? (row.c3 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c3}
+                </td>
+              </tr>
+            ))}
+            <tr class='bg-meg-surface-dark/50'>
+              <td class='px-6 py-6 text-meg-text-primary-dark font-black uppercase tracking-widest text-xs'>Preis</td>
+              <td class='px-6 py-6 text-center'><span class='text-2xl font-black text-meg-text-primary-dark tracking-tight'>Free</span></td>
+              <td class='px-6 py-6 text-center bg-rose-500/10'><span class='text-2xl font-black text-rose-400 tracking-tight'>€8</span><span class='text-xs block opacity-60'>/ Monat</span></td>
+              <td class='px-6 py-6 text-center'><span class='text-2xl font-black text-meg-text-primary-dark tracking-tight'>€24</span><span class='text-xs block opacity-60'>/ Monat</span></td>
             </tr>
           </tbody>
         </table>

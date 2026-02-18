@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home'
+}, {
+  name: 'Widerrufsbelehrung',
+  link: Astro.url.href
+}]);
+
+const titel = "Widerrufsbelehrung - waldheim.dev"
+const description = "Widerrufsbelehrung für digitale Dienstleistungen und Software-Abonnements von waldheim.dev."
+const keywords = "Widerrufsbelehrung, Widerrufsrecht, Rücktritt, Vertragswiderruf, digitale Inhalte"
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]} robots="noindex">
+  <div class="px-6 py-32 lg:px-8 bg-meg-bg-dark">
+    <div class="mx-auto max-w-3xl text-base leading-7 text-meg-text-primary-dark">
+      <div class="prose prose-invert prose-meg w-full max-w-none">
+        <h1 class="text-4xl font-black tracking-tighter sm:text-5xl mb-8">Widerrufsbelehrung</h1>
+        
+        <p class="text-meg-accent font-bold">Stand: 18. Februar 2026</p>
+
+        <section>
+          <h2>Widerrufsrecht</h2>
+          <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
+          <p>Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.</p>
+          <p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Waldheim.dev, E-Mail: kontakt@waldheim.dev) mittels einer eindeutigen Erklärung (z. B. eine E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.</p>
+          <p>Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+        </section>
+
+        <section>
+          <h2>Folgen des Widerrufs</h2>
+          <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.</p>
+          <p>Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.</p>
+        </section>
+
+        <section>
+          <h2>Erlöschen des Widerrufsrechts</h2>
+          <p>Das Widerrufsrecht erlischt bei einem Vertrag über die Lieferung von nicht auf einem körperlichen Datenträger befindlichen digitalen Inhalten auch dann, wenn wir mit der Ausführung des Vertrags begonnen haben, nachdem Sie ausdrücklich zugestimmt haben, dass wir mit der Ausführung des Vertrags vor Ablauf der Widerrufsfrist beginnen, und Ihre Kenntnis davon bestätigt haben, dass Sie durch Ihre Zustimmung mit Beginn der Ausführung des Vertrags Ihr Widerrufsrecht verlieren.</p>
+        </section>
+
+        <section>
+          <h2>Widerrufsformular</h2>
+          <p>(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es uns per E-Mail zurück.)</p>
+          <div class="bg-meg-surface-dark/50 p-6 rounded-2xl border border-meg-border-dark italic text-sm">
+            <p>An:<br/>
+            Waldheim.dev<br/>
+            E-Mail: kontakt@waldheim.dev</p>
+            
+            <p>Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)</p>
+            <p>Bestellt am (*)/erhalten am (*)</p>
+            <p>Name des/der Verbraucher(s)</p>
+            <p>Anschrift des/der Verbraucher(s)</p>
+            <p>Datum</p>
+            <p>(*) Unzutreffendes streichen.</p>
+          </div>
+        </section>
+
+        <hr class="my-12 border-meg-border-dark" />
+        
+        <p class="text-sm text-meg-text-secondary">
+          Ende der Widerrufsbelehrung.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

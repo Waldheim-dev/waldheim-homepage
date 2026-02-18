@@ -41,32 +41,38 @@ const keywords = "IT-Blog, Technologie-Blog, DevSecOps, Webentwicklung, Smart Ho
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema, ...articleSchema]}>
   <Blog blog={page.data}/>
   
-  <div class="py-24 sm:py-32 gsap-fadein ">
+  <div class="py-24 gsap-fadein">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-  <nav class="flex items-center justify-between border-t border-light-200  px-4 py-3 sm:px-6 mt-4"
-  aria-label="Pagination">
+      <nav class="flex items-center justify-between border-t border-meg-border-dark px-4 py-6 sm:px-6 mt-4 bg-meg-surface-dark/30 backdrop-blur-md rounded-2xl shadow-sm"
+      aria-label="Pagination">
 <div class="hidden sm:block">
- <p class="text-sm text-light-100 ">
+ <p class="text-sm text-meg-text-secondary">
    Zeige
-   <span class="font-medium">{ page.start + 1}</span>
+   <span class="font-bold text-meg-text-primary-dark">{ page.start + 1}</span>
    bis
-   <span class="font-medium">{ page.end + 1}</span>
+   <span class="font-bold text-meg-text-primary-dark">{ page.end + 1}</span>
    von
-   <span class="font-medium">{page.total}</span>
+   <span class="font-bold text-meg-text-primary-dark">{page.total}</span>
    Ergebnissen
  </p>
 </div>
-<div class="flex flex-1 justify-between sm:justify-end gap-2">
+<div class="flex flex-1 justify-between sm:justify-end gap-3">
 
 
  {page.url.first ? <a href={page.url.first}
-                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Erste Seite</a> : null}
+                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Erste</a> : null}
  {page.url.prev ? <a href={page.url.prev}
-                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Vorherige Seite</a> : null}
+                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
+                     <i class="fa-solid fa-chevron-left mr-2 text-xs"></i>
+                     Vorherige
+                     </a> : null}
  {page.url.next ? <a href={page.url.next}
-                     class="relative inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Nächste Seite</a> : null}
+                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
+                     Nächste
+                     <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                     </a> : null}
  {page.url.last ? <a href={page.url.last}
-                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-md bg-primary-800 border border-primary-500/30 px-3 py-2 text-sm font-semibold text-light-100 hover:shadow-lg hover:shadow-primary-500/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">Letzte Seite</a> : null}
+                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Letzte</a> : null}
 </div>
 </nav></div></div>
 </Layout>

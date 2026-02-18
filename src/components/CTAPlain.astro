@@ -21,14 +21,14 @@ const {
   secondaryCTA = { label: "Learn more", href: "#" }
 } = Astro.props;
 ---
-<div class="bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950">
+<div class="bg-meg-bg-dark border-t border-meg-border-dark">
   <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
     <div class="max-w-2xl">
-      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl gsap-fadein">
+      <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark sm:text-5xl gsap-fadein">
         {title}
       </h2>
       {description && (
-        <p class="mt-4 text-lg text-light-300 gsap-fadein">{description}</p>
+        <p class="mt-4 text-lg text-meg-text-secondary gsap-fadein">{description}</p>
       )}
     </div>
     <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
@@ -36,7 +36,7 @@ const {
         href={primaryCTA.href}
         target={primaryCTA.target}
         rel={primaryCTA.target === '_blank' ? 'noopener noreferrer' : undefined}
-        class="rounded-xl bg-gradient-to-r from-primary-500/90 to-primary-600/90 px-6 py-3 gsap-fadein text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:shadow-primary-500/50 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+        class="rounded-xl bg-meg-accent px-8 py-4 gsap-fadein text-lg font-bold text-white shadow-xl shadow-meg-accent/20 hover:shadow-meg-accent/40 hover:scale-[1.02] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
       >
         {primaryCTA.label}
       </a>
@@ -45,7 +45,7 @@ const {
           href={secondaryCTA.href}
           target={secondaryCTA.target}
           rel={secondaryCTA.target === '_blank' ? 'noopener noreferrer' : undefined}
-          class="text-sm/6 font-semibold text-primary-400 hover:text-primary-300 transition-colors gsap-fadein focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+          class="text-lg font-bold text-meg-text-primary-dark hover:text-meg-accent transition-all gsap-fadein focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
         >
           {secondaryCTA.label} <span aria-hidden="true">→</span>
         </a>

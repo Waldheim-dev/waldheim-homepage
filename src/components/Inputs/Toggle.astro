@@ -9,17 +9,13 @@ const {
 ---
 
 <label
-    class={'flex gap-x-4 cursor-pointer ' + className}
+    class={'flex gap-x-4 cursor-pointer group ' + className}
     for={name}
-    (click)={(e: MouseEvent) => {
-        console.log(e);
-    }}
 >
-    <div class="flex h-6 items-center group">
-        <!-- Enabled: "bg-blue-500", Not Enabled: "bg-dark-800" -->
+    <div class="flex h-6 items-center">
         <button
             type="button"
-            class="flex w-8 flex-none rounded-full cursor-pointer bg-dark-800 border border-light-500/20 has-checked:bg-gradient-to-r has-checked:from-blue-500 has-checked:to-purple-600 p-px transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+            class="flex w-10 flex-none rounded-full cursor-pointer bg-meg-surface-dark border border-meg-border-dark p-1 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent peer-checked:bg-meg-accent shadow-inner"
             role="switch"
             aria-checked="false"
             onclick="toggleButton(this)"
@@ -34,13 +30,13 @@ const {
                 aria-hidden="true"
             />
             <span class="sr-only">{label}</span>
-            <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
             <span
                 aria-hidden="true"
-                class="size-4 peer-checked:translate-x-3.5 transform rounded-full bg-white shadow-lg transition duration-300 ease-in-out"
+                class="size-4 peer-checked:translate-x-4 translate-x-0 transform rounded-full bg-white shadow-md ring-1 ring-meg-border-dark transition-transform duration-300 ease-in-out"
             ></span>
         </button>
-    </div><span class="text-sm text-light-300">
+    </div>
+    <span class="text-sm font-medium text-meg-text-secondary group-hover:text-meg-text-primary-dark transition-colors leading-6">
         <slot />
     </span>
 </label>

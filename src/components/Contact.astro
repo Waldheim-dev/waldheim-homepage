@@ -37,42 +37,35 @@ const { title, image, video } = Astro.props;
     </figure>
   </div>
     <div class="py-24 sm:py-32 lg:pb-40 z-10 relative"><div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center bg-dark-900/50 rounded-2xl border border-blue-500/30 shadow-2xl backdrop-blur-md">
+      <div class="mx-auto max-w-2xl text-center bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl shadow-sm">
             <form
                 method="POST"
                 onsubmit="callSubmit()"
                 id="contact-form"
-                class="relative transform overflow-hidden rounded-2xl px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:p-6"
+                class="relative transform overflow-hidden rounded-2xl px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:p-10"
             >
                 <div>
                     <div
-                        class="mx-auto flex size-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/30"
+                        class="mx-auto flex size-12 items-center justify-center rounded-xl bg-meg-accent/10 border border-meg-accent/30"
                     >
-                        <i class="fa-solid fa-envelope text-blue-400 text-xl" aria-hidden="true"></i>
+                        <i class="fa-solid fa-envelope text-meg-accent text-xl" aria-hidden="true"></i>
                     </div>
-                    <div class="mt-3 text-center sm:mt-5">
+                    <div class="mt-6 text-center">
                         <h3
-                            class="text-xl font-bold text-white gsap-fadein"
+                            class="text-2xl font-black tracking-tighter text-meg-text-primary-dark gsap-fadein"
                             id="modal-title"
                         >
                             Kontaktformular
                         </h3>
-                        <div class="mt-2">
+                        <div class="mt-4">
                             <p
-                                class="text-sm text-light-300 gsap-fadein"
+                                class="text-sm text-meg-text-secondary leading-relaxed gsap-fadein"
                             >
-                                Ich beantworte deine Fragen - schnell und
-                                unkompliziert. Du hast Fragen zu meinen Service
-                                oder willst ein Angebot anfordern? Dann fülle
-                                einfach das Kontaktformular aus und ich melde
-                                mich schnellstmöglich bei dir. Gib mir am besten
-                                so viele Details in der Anfrage wie nur möglich,
-                                damit ich mich bestmöglich auf deine Anfrage
-                                vorbereiten kann.
+                                Ich beantworte deine Fragen schnell und unkompliziert. Nutze dieses Formular für Projektanfragen oder Support. Ich melde mich zeitnah bei dir zurück.
                             </p>
                         </div>
                     </div>
-                    <div class="mt-3 sm:mt-5">
+                    <div class="mt-10">
                         <div
                             class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
                         >
@@ -123,31 +116,24 @@ const { title, image, video } = Astro.props;
                                 className="sm:col-span-2"
                                 >Ich akzeptiere die <a
                                     href="/datenschutz/"
-                                    class="font-semibold text-blue-400 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 no-underline hover:underline hover:text-blue-300 transition-colors"
+                                    class="font-bold text-meg-accent hover:underline transition-colors"
                                     >Datenschutz&shy;bestimmungen</a
-                                > und willige in die Verarbeitung meiner personenbezogenen
-                                Daten ein. Ich bin mir bewusst, dass ich meine Einwilligung
-                                jederzeit widerrufen kann unter
-                                <a
-                                    href="mailto:kontakt@waldheim.dev"
-                                    class="font-semibold text-blue-400 rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 no-underline hover:underline hover:text-blue-300 transition-colors"
-                                    >kontakt@waldheim.dev</a
-                                >.</Toggle
+                                > und willige in die Verarbeitung meiner Daten ein.</Toggle
                             >
                         </div>
                     </div>
                 </div>
                 <div
-                    class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3"
+                    class="mt-10 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-4"
                 >
                     <button
                         type="submit"
-                        class="gsap-fadein inline-flex w-full justify-center rounded-xl px-6 py-3 text-sm font-semibold text-white bg-primary-800 hover:bg-primary-800 shadow-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 sm:col-start-2"
+                        class="gsap-fadein w-full flex justify-center items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold text-white bg-meg-accent shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all sm:col-start-2"
                         >Absenden</button
                     >
                     <button
                         type="button" onclick="closeContact()"
-                        class="gsap-fadein mt-3 inline-flex w-full justify-center rounded-xl bg-dark-800 border border-light-500/20 px-3 py-2 text-sm font-semibold text-light-200 hover:bg-dark-700 hover:border-light-500/30 transition-all duration-300 sm:col-start-1 sm:mt-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                        class="gsap-fadein mt-3 w-full flex justify-center items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-6 py-3 text-sm font-bold text-meg-text-primary-dark hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all sm:col-start-1 sm:mt-0"
                         >Abbrechen</button
                     >
                 </div>

@@ -65,122 +65,87 @@ referencedProjects.sort((a, b) => {
 <div>
   {
     projectsCollection.length > 0 ? (
-      <div>
-        <h3 class="text-1xl font-medium leading-10 tracking-tight text-light-100">
-          Projekte bei dieser Firma
-        </h3>
-        <dl class="divide-y divide-light-100/10 ">
+      <div class="mb-10">
+        <h4 class="text-sm font-bold uppercase tracking-widest text-meg-text-primary-dark opacity-60 mb-6">
+          Projekte bei {companyName}
+        </h4>
+        <div class="space-y-4">
           {projectsCollection.map((project) => (
-            <div>
+            <div class="border border-meg-border-dark rounded-xl overflow-hidden bg-meg-bg-dark/30 shadow-sm">
               <dt>
                 <button
                   type="button"
-                  class="flex w-full mt-2 items-start justify-between text-left text-light-300 hover:bg-primary-500/10 hover:border hover:border-primary-500/20 p-2 rounded-md transition-all"
+                  class="flex w-full items-center justify-between text-left text-meg-text-primary-dark hover:bg-meg-accent/5 p-4 transition-all group"
                   aria-controls={project.id}
                   aria-expanded="false"
                 >
-                  <span class="text-base font-medium leading-7">
-                    {project.data.name} (
-                    <FormattedDate date={project.data.from} /> -{' '}
-                    {project.data.to ? (
-                      <FormattedDate date={project.data.to} />
-                    ) : (
-                      'heute'
-                    )}
-                    )
+                  <span class="text-base font-bold tracking-tight">
+                    {project.data.name}
+                    <span class="ml-2 text-xs font-medium text-meg-text-secondary opacity-60">
+                      <FormattedDate date={project.data.from} /> -{' '}
+                      {project.data.to ? (<FormattedDate date={project.data.to} />) : ('heute')}
+                    </span>
                   </span>
-                  <span class="ml-6 flex h-7 items-center text-primary-400">
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                      aria-expanded="false"
-                      data-slot="icon"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 6v12m6-6H6"
-                      />
+                  <span class="ml-6 flex h-7 items-center text-meg-accent group-hover:scale-110 transition-transform">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
                     </svg>
-                    <svg
-                      class="hidden h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                      aria-expanded="true"
-                      data-slot="icon"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M18 12H6"
-                      />
+                    <svg class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
                     </svg>
                   </span>
                 </button>
               </dt>
               <dd
-                class="mt-2 px-2 pr-12 h-0 overflow-hidden transition-all"
+                class="h-0 overflow-hidden transition-all duration-300"
                 id={project.id}
               >
-                <p class="text-base leading-7 text-light-500">
-                  {project.data.description}
-                </p>
+                <div class="p-6 pt-0">
+                  <p class="text-sm leading-relaxed text-meg-text-secondary mb-6">
+                    {project.data.description}
+                  </p>
 
-                {project.data.techstack && (
-                  <SkillCards skills={project.data.techstack} />
-                )}
+                  {project.data.techstack && (
+                    <div class="bg-meg-surface-dark/50 rounded-xl p-4 border border-meg-border-dark shadow-inner">
+                      <SkillCards skills={project.data.techstack} />
+                    </div>
+                  )}
+                </div>
               </dd>
             </div>
           ))}
-        </dl>
+        </div>
       </div>
     ) : null
   }
   
   {referencedProjects.length > 0 && (
-    <div class="mt-8">
-      <h3 class="text-1xl font-medium leading-10 tracking-tight text-light-100 mb-4">
-        <i class="fa-solid fa-folder-open text-primary-400 mr-2" aria-hidden="true"></i>
-        Referenzen & Portfolio
-      </h3>
+    <div class="mt-12">
+      <h4 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-folder-open"></i>
+        Portfolio-Referenzen
+      </h4>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {referencedProjects.map((project) => (
           <a 
             href={`/referenzen/${project.id.replace(/\/_/g, '/')}/`}
-            class="group relative bg-dark-800/50 border border-primary-500/20 hover:border-primary-500/40 rounded-lg p-4 transition-all hover:shadow-lg hover:shadow-primary-500/20"
-            aria-label={`Referenz ${project.data.title} ansehen`}
+            class="group relative bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark hover:border-meg-accent/30 rounded-xl p-4 transition-all shadow-sm"
           >
-            {/* Ambient Glow on Hover */}
-            <div class="absolute inset-0 bg-linear-to-r from-primary-500/5 via-cyan-500/5 to-purple-500/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
-            
-            <div class="flex items-start gap-3">
+            <div class="flex items-center gap-4">
               {project.data.heroImage && (
                 <img 
                   src={`/${project.data.heroImage}`} 
                   alt="" 
-                  aria-hidden="true"
-                  class="w-16 h-16 rounded object-cover border border-primary-500/20"
+                  class="size-14 rounded-lg object-cover border border-meg-border-dark group-hover:border-meg-accent/20 transition-colors"
                 />
               )}
               <div class="flex-1 min-w-0">
-                <h4 class="text-sm font-semibold text-white group-hover:text-primary-400 transition-colors line-clamp-2 mb-1">
+                <h5 class="text-sm font-bold text-meg-text-primary-dark group-hover:text-meg-accent transition-colors truncate">
                   {project.data.title}
-                </h4>
-                <p class="text-xs text-light-400 line-clamp-2">
-                  {project.data.shortDescription || project.data.description}
+                </h5>
+                <p class="text-[10px] uppercase font-black tracking-widest text-meg-text-secondary opacity-60 mt-1">
+                  {project.data.category.id}
                 </p>
-                {project.data.category && (
-                  <span class="inline-block mt-2 text-xs bg-primary-500/10 border border-primary-500/30 text-primary-400 px-2 py-0.5 rounded">
-                    {project.data.category.id}
-                  </span>
-                )}
               </div>
             </div>
           </a>
