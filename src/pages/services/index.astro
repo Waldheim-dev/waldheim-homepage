@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: 'https://waldheim.dev'
+}, {
+  name: 'Services',
+  link: Astro.url.href
+}]);
+
+const titel = 'Services & IT-Dienstleistungen | Waldheim.dev';
+const description = 'Entdecken Sie unsere Services: DevSecOps, Webentwicklung, Design, IT-Service und Smart Home. Professionelle Lösungen für Ihren digitalen Erfolg.';
+---
+
+<Layout title={titel} description={description} schema={[breadCrumbSchema]}>
+  <div class="px-6 py-32 lg:px-8 bg-meg-bg-dark">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="text-4xl font-black tracking-tighter sm:text-6xl text-meg-text-primary-dark">Meine Services</h1>
+      <p class="mt-6 text-lg leading-8 text-meg-text-secondary">
+        Ich biete Ihnen ein breites Spektrum an IT-Dienstleistungen, um Ihr Unternehmen digital voranzubringen.
+      </p>
+    </div>
+    
+    <div class="mx-auto max-w-7xl mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        { name: 'Entwicklung', href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent' },
+        { name: 'Design / UX', href: '/services/design/', icon: 'fa-pen-ruler', color: 'text-rose-400' },
+        { name: 'IT-Service', href: '/services/it-service/', icon: 'fa-cloud', color: 'text-emerald-400' },
+        { name: 'DevSecOps', href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400' },
+        { name: 'Smarthome', href: '/services/smarthome/', icon: 'fa-house-signal', color: 'text-sky-400' }
+      ].map((service) => (
+        <a href={service.href} class="group relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-8 rounded-2xl hover:border-meg-accent/30 transition-all">
+          <div class={`size-12 rounded-xl bg-meg-bg-dark border border-meg-border-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+            <i class={`fa-solid ${service.icon} ${service.color} text-xl`}></i>
+          </div>
+          <h2 class="text-xl font-bold text-meg-text-primary-dark mb-4">{service.name}</h2>
+          <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+            Professionelle Unterstützung und Beratung im Bereich {service.name.toLowerCase()}.
+          </p>
+          <span class="text-meg-accent text-sm font-bold flex items-center gap-2">
+            Mehr erfahren
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,38 +1,34 @@
 # waldheim.dev
 
-Waldheim.dev ist eine moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Die Website bietet Informationen zu Projekten, Kompetenzen, Technologien und Dienstleistungen rund um Webentwicklung, Cloud, DevOps, KI und digitale Transformation.
+> Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation.
+> Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.
 
-## Zusammenfassung
-- **Zielgruppe:** Unternehmen, Agenturen, Entwickler:innen, Entscheider:innen
-- **Schwerpunkte:** Webentwicklung, Cloud, DevOps, KI, Automatisierung, Beratung
-- **Technologien:** Astro, TypeScript, TailwindCSS, Docker, CI/CD, LLMs (OpenAI, Gemini)
-- **Kontakt:** [Impressum & Kontakt](https://waldheim.dev/impressum)
+## Seitenübersicht
 
-## Wichtige Informationsquellen
-- [Über mich / Skills](https://waldheim.dev/ueber-mich)
-- [Projekte](https://waldheim.dev/projekte)
-- [Blog](https://waldheim.dev/blog)
-- [Impressum](https://waldheim.dev/impressum)
-- [Datenschutz](https://waldheim.dev/datenschutz)
+- [Startseite](https://www.waldheim.dev/)
+  - Übersicht der Dienstleistungen und Prinzipien
+  - Referenzprojekte und Kundenstimmen
 
-## Vertiefende Dokumente (Markdown)
-- [Skills (Markdown)](https://waldheim.dev/ueber-mich/skills.md)
-- [Projekte (Markdown)](https://waldheim.dev/projekte.md)
-- [Technologien (Markdown)](https://waldheim.dev/technologien.md)
+- [Services](https://www.waldheim.dev/services/)
+  - [Entwicklung](https://www.waldheim.dev/services/entwicklung/): Maßgeschneiderte Softwarelösungen & Webanwendungen
+  - [Design / UX](https://www.waldheim.dev/services/design/): UI/UX Design, Branding & Webdesign
+  - [IT-Service](https://www.waldheim.dev/services/it-service/): IT-Infrastruktur, Cloud-Migration & Support
+  - [DevSecOps](https://www.waldheim.dev/services/devsecops/): CI/CD Pipelines, Containerisierung & Security
+  - [Smarthome](https://www.waldheim.dev/services/smarthome/): Home Assistant Integration & Automation
 
-## LLMs & KI-Integration
-- Die Website ist für KI-Systeme und LLMs optimiert.
-- LLMs wie OpenAI GPT und Google Gemini werden für interne Automatisierung und Content-Optimierung genutzt.
-- KI-relevante Metadaten und strukturierte Daten werden bereitgestellt.
+- [Produkte](https://www.waldheim.dev/)
+  - [Silvacore](https://www.waldheim.dev/silvacore/): Cloud-basierte WEG-Verwaltung
+  - [Ecodrive](https://www.waldheim.dev/ecodrive/): Fuhrparkmanagement & Fahrtenbuch
+  - [Socialverse](https://www.waldheim.dev/socialverse/): AI-gestütztes CRM & Marketing-Automation
+  - [Aether](https://www.waldheim.dev/aether/): Sicherer Dateitransfer
+  - [WetterApp](https://www.waldheim.dev/waetherapp/): Open Source Wetter-Anwendung
 
-## Hinweise für KI-Systeme
-- Bitte bevorzugt die oben genannten Markdown-Quellen für strukturierte Informationen.
-- Die Sitemap ist unter `/sitemap.xml` verfügbar.
-- robots.txt unter `/robots.txt`.
+- [Informationen](https://www.waldheim.dev/ueber-mich/)
+  - [Über mich](https://www.waldheim.dev/ueber-mich/): Profil von Markus Waldheim
+  - [Blog](https://www.waldheim.dev/blog/1/): Fachartikel zu Tech-Themen
+  - [Referenzen](https://www.waldheim.dev/referenzen/1/): Projektportfolio
 
-## Weitere Informationen
-- [llmstxt.org – Spezifikation & Community](https://llmstxt.org)
-- [GitHub: llms.txt Standard](https://github.com/llmstxt/llmstxt)
-
----
-*llms.txt – Stand: Mai 2025. Feedback willkommen.*
+- [Rechtliches](https://www.waldheim.dev/impressum/)
+  - [Impressum](https://www.waldheim.dev/impressum/)
+  - [Datenschutz](https://www.waldheim.dev/datenschutz/)
+  - [AGB](https://www.waldheim.dev/agb/)

@@ -145,7 +145,15 @@ test.describe('SEO Validation Tests', () => {
 
     for (const { path, name } of utilityPages) {
       test(`${name} hat noindex Meta-Tag`, async ({ page }) => {
-        await page.goto(path);
+        const response = await page.goto(path);
+        
+        // Wenn es ein Redirect ist (wie bei /kontakt/), ist das auch okay für SEO
+        if (path === '/kontakt/') {
+          await page.waitForURL('https://portal.waldheim.dev/**', { timeout: 10000 });
+          expect(page.url()).toContain('portal.waldheim.dev');
+          return;
+        }
+
         await page.waitForLoadState('networkidle');
         
         // Diese Seiten SOLLTEN noindex haben
