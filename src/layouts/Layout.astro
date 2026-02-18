@@ -31,16 +31,41 @@ const organisationSchema = SchemaUtils.getOrganizationSchema({
   name: 'Waldheim.dev',
   url: Astro.url.href,
   logo: new URL('/waldheim.dev.svg', Astro.url).href,
-  description: 'Waldheim.dev - Design, Beratung und Entwicklung',
+  description: 'Waldheim.dev - Design, Beratung und Entwicklung in Augsburg & München.',
   email: 'kontakt@waldheim.dev',
   address: {
-    streetAddress: 'Werner-Haas-Str. 8',
-    postalCode: '86153',
     addressLocality: 'Augsburg',
-    addressCountry: 'DE',
-    addressRegion: 'Bayern'
+    addressRegion: 'Bayern',
+    addressCountry: 'DE'
   }
 });
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Waldheim.dev',
+  image: new URL('/waldheim.dev.png', Astro.url).href,
+  url: 'https://www.waldheim.dev',
+  telephone: '',
+  priceRange: '€€',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Augsburg',
+    addressRegion: 'Bayern',
+    addressCountry: 'DE'
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 48.3705,
+    longitude: 10.8978
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00'
+  }
+};
 
 const softwareApplicationEcoFree = SchemaUtils.getSoftwareApplicationSchema({
   name: 'Ecodrive Free',
@@ -88,6 +113,7 @@ const {
 } = Astro.props;
 
 schema.push(organisationSchema);
+schema.push(localBusinessSchema);
 schema.push(softwareApplicationEcoFree);
 schema.push(softwareApplicationEcoBasic);
 schema.push(softwareApplicationEcoPro);
@@ -148,6 +174,10 @@ schema.push(softwareApplicationEcoPremium);
 
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalURL} />
+  <link rel="alternate" hreflang="de-DE" href={canonicalURL} />
+  <link rel="alternate" hreflang="de-AT" href={canonicalURL} />
+  <link rel="alternate" hreflang="de-CH" href={canonicalURL} />
+  <link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
   <!-- sherpa-blue Meta Tags -->
   <title>{title}</title>

@@ -1,0 +1,79 @@
+# waldheim.dev - Vollständige Dokumentation
+
+> Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation.
+> Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.
+
+## Inhalte
+
+### Startseite
+Die zentrale Anlaufstelle für alle Dienstleistungen von waldheim.dev. Hier finden Sie einen Überblick über die Expertise in Softwareentwicklung, IT-Consulting und modernen Web-Technologien.
+
+### Dienstleistungen (Services)
+
+#### Entwicklung
+Maßgeschneiderte Softwareentwicklung für individuelle Anforderungen.
+- Tech-Stack: Angular, React, Astro, Node.js, Python, Go
+- Fokus: Performance, Skalierbarkeit, Clean Code
+
+#### Design / UX
+Benutzerzentriertes Design für Web und Mobile.
+- Leistungen: UI/UX Design, Prototyping, Branding, Design Systeme
+- Tools: Figma, Adobe XD
+
+#### IT-Service
+Umfassende Betreuung Ihrer IT-Landschaft.
+- Cloud-Migration (AWS, Azure, Hetzner)
+- Server-Administration (Linux/Windows)
+- Netzwerktechnik & Security
+
+#### DevSecOps
+Integration von Sicherheit in den Entwicklungsprozess.
+- CI/CD Pipelines (GitLab CI, GitHub Actions)
+- Containerisierung (Docker, Kubernetes)
+- Infrastructure as Code (Terraform, Ansible)
+
+#### Smarthome
+Intelligente Haussteuerung für mehr Komfort und Effizienz.
+- Beratung & Planung
+- Umsetzung mit Home Assistant
+- Integration von IoT-Geräten
+
+### Produkte
+
+#### Silvacore
+Eine moderne SaaS-Lösung für die Verwaltung von Wohnungseigentümergemeinschaften (WEG).
+- Features: Abrechnungen, Dokumentenmanagement, Eigentümerportal
+- Fokus: DSGVO-konform, Benutzerfreundlich, Automatisierung
+
+#### Ecodrive
+Digitales Fahrtenbuch und Fuhrparkmanagement.
+- Zielgruppe: Unternehmen und Selbstständige
+- Funktionen: GPS-Tracking, Finanzamt-konforme Berichte, Kostenanalyse
+
+#### Socialverse
+AI-gestütztes CRM-System für modernes Kundenbeziehungsmanagement.
+- Features: Lead-Scoring, Automatisierte Kommunikation, Social Media Integration
+
+#### Aether
+Dienst für den sicheren und verschlüsselten Dateitransfer.
+- Fokus: Sicherheit, Ephemeral Storage (selbstlöschend), Einfachheit
+
+#### WetterApp
+Eine Open-Source Wetter-Anwendung.
+- Features: Lokale Vorhersagen, Radar, Unwetterwarnungen
+
+### Über mich
+Markus Waldheim - Full Stack Developer & IT-Consultant.
+- Erfahrung: 10+ Jahre in der IT-Branche
+- Zertifizierungen: Scrum Master, Cloud Architect
+
+### Blog
+Regelmäßige Artikel zu Themen wie:
+- Webentwicklung & Frameworks
+- IT-Sicherheit & Datenschutz
+- Cloud Computing & DevOps Trends
+
+### Kontakt & Rechtliches
+- Impressum: Anbieterkennzeichnung
+- Datenschutz: Informationen zur Datenverarbeitung
+- AGB: Allgemeine Geschäftsbedingungen

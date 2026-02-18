@@ -15,6 +15,8 @@ import sentry from '@sentry/astro';
 
 import llmsTxt from '@waldheimdev/astro-ai-llms-txt';
 
+import 'dotenv/config';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -27,8 +29,8 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         // Test-Seiten nicht in Sitemap aufnehmen
-        return !page.includes('/test-') && 
-               !page.includes('/astro-ai-llms-txt');
+        return !page.includes('/test-') &&
+          !page.includes('/astro-ai-llms-txt');
       },
       changefreq: 'weekly',
       lastmod: new Date(),
@@ -36,10 +38,10 @@ export default defineConfig({
         // Prioritäten nach URL-Muster setzen
         if (item.url === 'https://www.waldheim.dev/') {
           item.priority = 1.0; // Homepage
-        } else if (item.url.includes('/services/') || 
-                   item.url.includes('/silvacore/') ||
-                   item.url.includes('/ecodrive/') ||
-                   item.url.includes('/socialverse/')) {
+        } else if (item.url.includes('/services/') ||
+          item.url.includes('/silvacore/') ||
+          item.url.includes('/ecodrive/') ||
+          item.url.includes('/socialverse/')) {
           item.priority = 0.9; // Hauptprodukte/Services
         } else if (item.url.includes('/blog/')) {
           item.priority = 0.7; // Blog-Artikel
@@ -57,8 +59,9 @@ export default defineConfig({
       description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
       sectionTitle: 'Seitenübersicht',
       aiProvider: 'gemini',
-      aiModel: 'gemini-2.5-flash-lite',
-      aiApiKey: "REDACTED_GOOGLE_API_KEY",
+      aiModel: 'gemini-2-5-flash',
+      aiApiKey: process.env.GEMINI_API_KEY,
+      llmsFull: true,
       debug: true
     }),
     sentry({
