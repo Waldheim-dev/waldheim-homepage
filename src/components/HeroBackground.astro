@@ -32,9 +32,11 @@ const poster = posterImage || defaultPoster;
     </div>
     <div class="py-24 sm:py-32 lg:pb-40 z-10 relative">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center bg-dark-900/50 p-12 rounded-2xl border border-blue-500/30 shadow-2xl backdrop-blur-md">
-                <h1 class="text-balance text-5xl font-bold tracking-tight text-white sm:text-7xl gsap-fadein">{title}</h1>
-                <p class="mt-8 text-pretty text-lg font-medium text-light-300 sm:text-xl/8 gsap-fadein">{subtitle}</p>
+            <div class="mx-auto max-w-3xl text-center bg-meg-surface-dark/50 p-12 rounded-2xl border border-meg-border-dark shadow-2xl backdrop-blur-xl">
+                <h1 class="text-balance text-5xl font-bold tracking-tight text-meg-text-primary-dark sm:text-7xl gsap-fadein">
+                  {title.split(' ').map((word: string, i: number) => i === 0 ? word : ' ' + word)}
+                </h1>
+                <p class="mt-8 text-pretty text-lg font-medium text-meg-text-secondary sm:text-xl/8 gsap-fadein">{subtitle}</p>
                 <slot />
             </div>
         </div>

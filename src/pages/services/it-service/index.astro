@@ -67,87 +67,62 @@ const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
   />
 
   <!-- Main Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900' id='leistungen'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark' id='leistungen'>
     <div class='mx-auto max-w-7xl'>
       <div class='mx-auto max-w-2xl text-center mb-16'>
-        <h2 class='gsap-fadein text-base font-semibold text-green-400 mb-4' style='animation-delay: 0s'>
-          <i class='fa-solid fa-headset text-green-400 mr-2' aria-hidden='true'></i>
-          Professioneller IT-Service
+        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4' style='animation-delay: 0s'>
+          <i class='fa-solid fa-headset mr-2' aria-hidden='true'></i>
+          Support-Fokus
         </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
-          Konzentrieren Sie sich auf Ihr <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Kerngeschäft</span>
+        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+          Konzentrieren Sie sich auf Ihr <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Kerngeschäft</span>
         </p>
-        <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
-          Professionelle IT-Administration spart Zeit und Nerven. Ich biete Ihnen flexible Lösungen – von der einmaligen Unterstützung bis zur langfristigen Betreuung.
+        <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
+          Professionelle IT-Administration spart Zeit und Nerven. Ich biete Ihnen flexible Lösungen – remote und effizient.
         </p>
       </div>
       
       <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.45s'>
-          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-laptop text-green-400 text-2xl'></i>
+        {[
+          { title: 'Installation & Setup', desc: 'Beschaffung und Konfiguration Ihrer IT-Geräte – schnell und zuverlässig.', icon: 'fa-laptop' },
+          { title: 'Cloud-Services', desc: 'Auswahl, Einrichtung und Verwaltung moderner Cloud-Dienste für Ihr Team.', icon: 'fa-cloud' },
+          { title: 'IT-Sicherheit', desc: 'Maximaler Schutz durch regelmäßige Audits und bewährte Sicherheitsmaßnahmen.', icon: 'fa-shield' },
+          { title: 'Wartung & Support', desc: 'Systeme auf dem neuesten Stand halten mit schnellem Priority-Support.', icon: 'fa-wrench' }
+        ].map((feat, i) => (
+          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 group' style={`animation-delay: ${0.45 + i * 0.15}s`}>
+            <div class='w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
+              <i class={`fa-solid ${feat.icon} text-emerald-400 text-2xl`}></i>
+            </div>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-4'>{feat.title}</h3>
+            <p class='text-meg-text-secondary leading-relaxed'>{feat.desc}</p>
           </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Geräte-Installation & Konfiguration</h3>
-          <p class='text-light-300'>
-            Ich beschaffe, installiere und konfiguriere Ihre IT-Geräte (PCs, Laptops, Server, etc.) – schnell, zuverlässig und nach Ihren individuellen Anforderungen.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.6s'>
-          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-cloud text-green-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Cloud-Services & -Verwaltung</h3>
-          <p class='text-light-300'>
-            Ich unterstütze Sie bei der Auswahl, Einrichtung und Verwaltung Ihrer Cloud-Dienste (z.B. E-Mail, Datenspeicherung, Sicherheitslösungen).
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.75s'>
-          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-shield text-green-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>IT-Sicherheit</h3>
-          <p class='text-light-300'>
-            Ich sorge für die Sicherheit Ihrer IT-Systeme und Daten – durch regelmäßige Überprüfungen, Updates und die Implementierung bewährter Sicherheitsmaßnahmen.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-2xl p-8 hover:border-green-500/40 transition-all duration-300' style='animation-delay: 0.9s'>
-          <div class='w-14 h-14 bg-green-500/10 border border-green-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-wrench text-green-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Wartung, Updates & Support</h3>
-          <p class='text-light-300'>
-            Ich halte Ihre Systeme auf dem neuesten Stand, führe regelmäßige Wartungsarbeiten durch und stehe Ihnen bei Problemen schnell und kompetent zur Seite.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Remote & Partner Info -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-4xl">
-        <div class="gsap-fadein bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 rounded-2xl p-10" style="animation-delay: 0s">
-          <div class="flex items-start gap-6">
-            <div class="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-handshake text-green-400 text-3xl"></i>
+        <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-10 shadow-sm group hover:border-emerald-500/30 transition-all" style="animation-delay: 0s">
+          <div class="flex flex-col md:flex-row items-start gap-8">
+            <div class="size-16 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-handshake text-emerald-400 text-3xl"></i>
             </div>
             <div>
-              <h2 class="text-2xl font-bold text-white mb-4">Remote-First mit Partner-Netzwerk</h2>
-              <p class="text-light-300 mb-4">
-                Ich arbeite ausschließlich <strong class="text-white">remote</strong> und biete IT-Support für Unternehmen deutschlandweit. Für größere Projekte oder spezialisierte Anforderungen arbeite ich mit einem <strong class="text-white">zuverlässigen Partner-Netzwerk</strong> zusammen – so erhalten Sie auch bei höherem Bedarf die volle Mannpower.
+              <h2 class="text-2xl font-black tracking-tight text-meg-text-primary-dark mb-4">Remote-First mit Partner-Netzwerk</h2>
+              <p class="text-meg-text-secondary mb-6 leading-relaxed">
+                Ich arbeite ausschließlich <strong class="text-meg-text-primary-dark">remote</strong> und biete IT-Support für Unternehmen deutschlandweit. Für größere Projekte aktiviere ich ein <strong class="text-meg-text-primary-dark">zuverlässiges Partner-Netzwerk</strong> – volle Mannpower bei höchster Qualität.
               </p>
               <div class="flex flex-wrap gap-3">
-                <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200">
-                  <i class='fa-solid fa-house-laptop text-green-400' aria-hidden='true'></i>
-                  <span>100% Remote</span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-meg-bg-dark/50 border border-meg-border-dark rounded-full text-xs font-bold text-meg-text-secondary uppercase tracking-widest">
+                  <i class='fa-solid fa-house-laptop text-emerald-400' aria-hidden='true'></i>
+                  100% Remote
                 </span>
-                <span class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-light-200">
-                  <i class='fa-solid fa-users text-green-400' aria-hidden='true'></i>
-                  <span>Partner für Zusatzkapazität</span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-meg-bg-dark/50 border border-meg-border-dark rounded-full text-xs font-bold text-meg-text-secondary uppercase tracking-widest">
+                  <i class='fa-solid fa-users text-emerald-400' aria-hidden='true'></i>
+                  Partner-Scale
                 </span>
               </div>
             </div>
@@ -158,68 +133,33 @@ const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-950 to-dark-900">
+  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-green-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-circle-question text-green-400 mr-2' aria-hidden='true'></i>
-          Häufig gestellte Fragen
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4" style="animation-delay: 0s">
+          Support-Check
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Fragen & Antworten</span> zum IT-Service
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Antworten</span>
         </p>
       </div>
       
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
-            Bieten Sie auch vor-Ort-Support an?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Nein, ich arbeite ausschließlich remote. Für vor-Ort-Einsätze vermittle ich gerne vertrauenswürdige Partner aus meinem Netzwerk.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
-            Wie schnell reagieren Sie bei Ausfällen?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Remote-Support innerhalb von 4 Stunden (während Geschäftszeiten). Für kritische Systeme biete ich auch Priority-Support mit &lt;2h Reaktionszeit an.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
-            Müssen wir langfristige Verträge abschließen?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Nein! Wartungsverträge sind monatsweise kündbar. Projektbasierte Arbeiten werden individuell abgerechnet.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
-            Welche Betriebssysteme unterstützen Sie?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Windows (10/11, Server 2016-2022), macOS (Ventura+), Linux (Ubuntu, Debian, CentOS). Hybrid-Umgebungen sind kein Problem.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-green-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-green-400 mr-3' aria-hidden='true'></i>
-            Was passiert bei größeren Projekten (z.B. 50+ Geräte)?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Für größere Projekte aktiviere ich mein Partner-Netzwerk. So erhalten Sie die nötige Mannpower, ohne die Qualität zu verlieren – alles remote koordiniert.
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto space-y-4">
+        {[
+          { q: 'Vor-Ort-Support möglich?', a: 'Ich arbeite 100% remote. Für physische Einsätze vermittle ich gerne Partner aus meinem Netzwerk.' },
+          { q: 'Reaktionszeit bei Ausfällen?', a: 'Remote Innerhalb von 4h (regulär) oder <2h mit Priority-Support.' },
+          { q: 'Langfristige Bindung?', a: 'Nein, Wartungsverträge sind monatlich kündbar. Volle Flexibilität.' },
+          { q: 'Betriebssysteme?', a: 'Windows, macOS und Linux. Auch in Hybrid-Umgebungen.' }
+        ].map((faq, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
+              <span class="text-emerald-400 font-black">Q</span> {faq.q}
+            </h3>
+            <p class="text-meg-text-secondary pl-7 leading-relaxed">
+              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

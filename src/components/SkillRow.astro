@@ -23,10 +23,35 @@ switch (entry.data.knowledgebase) {
 const layer = JSON.stringify(entry.data.layer);
 ---
 
-<tr class="odd:bg-dark-900/30 even:bg-dark-900/50" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
-  <td class="px-2 py-3">
+---
+const { entry } = Astro.props;
+import TimeDiff from './TimeDiff.astro';
+let progress = 0;
+let color = '';
+switch (entry.data.knowledgebase) {
+  case 'basic':
+    progress = 33;
+    color = 'bg-rose-500';
+    break;
+  case 'advanced':
+    progress = 66;
+    color = 'bg-meg-accent/60';
+    break;
+  case 'expert':
+    progress = 100;
+    color = 'bg-meg-accent';
+    break;
+  default:
+    progress = 0;
+}
+
+const layer = JSON.stringify(entry.data.layer);
+---
+
+<tr class="odd:bg-meg-surface-dark/30 even:bg-meg-surface-dark/50 hover:bg-meg-accent/5 transition-colors" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
+  <td class="px-4 py-4">
       <img
-      class="max-h-6 w-full object-contain group-hover:grayscale-0 duration-150 ease-out hover:ease-in"
+      class={`max-h-6 w-full object-contain duration-300 ${entry.data.invertImage ? 'invert opacity-70' : 'opacity-90'}`}
       loading="lazy"
       src={entry.data.image}
       alt={entry.data.name}
@@ -34,39 +59,36 @@ const layer = JSON.stringify(entry.data.layer);
       height="50"
       />
     </td>
-    <td class="px-2 py-3">
-    <span class="w-full text-center text-light-100 "
+    <td class="px-4 py-4">
+    <span class="text-sm font-bold text-meg-text-primary-dark"
       >{entry.data.name}</span>
   </td>
-  <td class="px-2 py-3">
+  <td class="px-4 py-4">
       {
         entry.data.isActive ? (
-          <div class="text-blue-400" title="Aktuell in Benutzung">
-            <i class="fa-solid fa-circle-check text-xl"></i>
+          <div class="text-emerald-400" title="Aktuell in Benutzung">
+            <i class="fa-solid fa-circle-check text-base"></i>
           </div>
         ) : (
-          <div class="text-rose-500" title="Derzeit pausiert">
-            <i class="fa-solid fa-circle-pause text-xl"></i>
+          <div class="text-rose-500/50" title="Derzeit pausiert">
+            <i class="fa-solid fa-circle-pause text-base"></i>
           </div>
         )
       }
     </td>
-    <td class="px-2 py-3">
+    <td class="px-4 py-4 text-sm text-meg-text-secondary">
       <TimeDiff
         sinceLastRollup={entry.data.sinceLastRollup}
         isActive={entry.data.isActive}
         fixedExperience={entry.data.fixedExperience}
       />
   </td>
-  <td class="px-2 py-3">
-    <div class="w-full bg-dark-900 rounded-md overflow-hidden">
+  <td class="px-4 py-4">
+    <div class="w-full bg-meg-bg-dark border border-meg-border-dark rounded-full h-1.5 overflow-hidden shadow-inner">
         <div
           style={`width: ${progress}%`}
-          class={`${color} h-2 flex justify-center items-center`}
+          class={`${color} h-full transition-all duration-1000`}
         >
-          <span class="text-xs leading-none text-white sm-only hidden"
-            >{entry.data.knowledgebase}</span
-          >
         </div>
       </div>
   </td>

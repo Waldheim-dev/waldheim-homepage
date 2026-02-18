@@ -67,222 +67,124 @@ const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
   />
 
   <!-- Main Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 to-dark-900' id='leistungen'>
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark' id='leistungen'>
     <div class='mx-auto max-w-7xl'>
       <div class='mx-auto max-w-2xl text-center mb-16'>
-        <h2 class='gsap-fadein text-base font-semibold text-orange-400 mb-4' style='animation-delay: 0s'>
-          <i class='fa-solid fa-home text-orange-400 mr-2' aria-hidden='true'></i>
-          Individuelle Smart Home Beratung
+        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4' style='animation-delay: 0s'>
+          <i class='fa-solid fa-house mr-2' aria-hidden='true'></i>
+          Konzept-Beratung
         </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
-          Intelligente <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Vernetzung</span> – ganz nach Ihren Vorstellungen
+        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+          Intelligente <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Vernetzung</span> – herstellerunabhängig
         </p>
-        <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
-          Ich unterstütze Sie bei der Planung und Umsetzung Ihres individuellen Smart Homes – mit dem Fokus auf offene Systeme und volle Kontrolle für Sie.
+        <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
+          Ich unterstütze Sie bei der Planung Ihres individuellen Smart Homes – Fokus auf offene Systeme und volle Kontrolle.
         </p>
       </div>
       
       <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.45s'>
-          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-microchip text-orange-400 text-2xl'></i>
+        {[
+          { title: 'Hardware-Beratung', desc: 'Herstellerunabhängige Auswahl passender Geräte (z.B. Raspberry Pi, Zigbee, Z-Wave).', icon: 'fa-microchip' },
+          { title: 'Zentrale Steuerung', desc: 'Vernetzung mit Home Assistant, MQTT und Node-RED – keine Insellösungen.', icon: 'fa-network-wired' },
+          { title: 'Sicherheit & Privacy', desc: 'Lokale Steuerung ohne Cloud-Zwang für maximale Kontrolle über Ihre Daten.', icon: 'fa-lock' },
+          { title: 'Support & Wartung', desc: 'Anleitung zur Selbsthilfe und kompetente Unterstützung bei Erweiterungen.', icon: 'fa-wrench' }
+        ].map((feat, i) => (
+          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300 group' style={`animation-delay: ${0.45 + i * 0.15}s`}>
+            <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
+              <i class={`fa-solid ${feat.icon} text-orange-400 text-2xl`}></i>
+            </div>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-4'>{feat.title}</h3>
+            <p class='text-meg-text-secondary leading-relaxed'>{feat.desc}</p>
           </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Geräteauswahl & -konfiguration</h3>
-          <p class='text-light-300'>
-            Oft reichen günstige Geräte wie Raspberry Pis für ein leistungsstarkes Smart Home. Ich berate Sie herstellerunabhängig und helfe Ihnen bei der Auswahl und Konfiguration der passenden Hardware.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.6s'>
-          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-network-wired text-orange-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Zentrale Steuerung & Vernetzung</h3>
-          <p class='text-light-300'>
-            Ich zeige Ihnen, wie Sie Ihre Geräte zentral steuern – mit etablierten Systemen wie Home Assistant, MQTT und Node-RED. Keine Insellösungen, sondern ein integriertes System!
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.75s'>
-          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-lock text-orange-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Sicherheit & Datenschutz</h3>
-          <p class='text-light-300'>
-            Ich lege größten Wert auf Sicherheit. Durch lokale Steuerung und den Verzicht auf unnötige Cloud-Dienste behalten Sie die volle Kontrolle über Ihre Daten.
-          </p>
-        </div>
-        
-        <div class='gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-2xl p-8 hover:border-orange-500/40 transition-all duration-300' style='animation-delay: 0.9s'>
-          <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-6'>
-            <i class='fa-solid fa-wrench text-orange-400 text-2xl'></i>
-          </div>
-          <h3 class='text-xl font-bold text-white mb-4'>Wartung, Updates & Support</h3>
-          <p class='text-light-300'>
-            Ich zeige Ihnen, wie Sie Ihr System selbstständig warten und aktualisieren. Und wenn Sie doch einmal Hilfe benötigen, stehe ich Ihnen zur Seite.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- System Comparison -->
-  <section class="py-24 px-6 bg-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-orange-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-scale-balanced text-orange-400 mr-2' aria-hidden='true'></i>
-          System-Vergleich
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4" style="animation-delay: 0s">
+          <i class='fa-solid fa-scale-balanced mr-2' aria-hidden='true'></i>
+          Vergleich
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          Welches Smart Home System <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>passt zu Ihnen?</span>
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Smart Home <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Ökosysteme</span>
         </p>
       </div>
       
-      <div tabindex="0" class="overflow-x-auto rounded-xl border border-orange-500/20">
-        <table class="w-full text-left">
-          <thead class="bg-dark-800">
+      <div tabindex="0" class="overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm">
+        <table class="w-full text-left border-collapse">
+          <thead class="bg-meg-surface-dark/50 text-meg-text-primary-dark">
             <tr>
-              <th class="px-6 py-4 text-light-100">Kriterium</th>
-              <th class="px-6 py-4 text-light-100">Google/Alexa</th>
-              <th class="px-6 py-4 text-light-100">Apple HomeKit</th>
-              <th class="px-6 py-4 text-light-100 bg-orange-500/10">
-                <i class='fa-solid fa-crown text-orange-400 mr-2' aria-hidden='true'></i>
+              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Kriterium</th>
+              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Google/Alexa</th>
+              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Apple HomeKit</th>
+              <th class="px-6 py-4 font-bold border-b border-meg-border-dark bg-orange-500/5 text-orange-400">
+                <i class='fa-solid fa-crown mr-2' aria-hidden='true'></i>
                 Home Assistant
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="border-t border-light-500/10">
-              <td class="px-6 py-4 text-light-300 font-semibold">Kosten</td>
-              <td class="px-6 py-4 text-light-300">€</td>
-              <td class="px-6 py-4 text-light-300">€€</td>
-              <td class="px-6 py-4 text-green-400 bg-orange-500/5">€ (günstig)</td>
-            </tr>
-            <tr class="border-t border-light-500/10">
-              <td class="px-6 py-4 text-light-300 font-semibold">Datenschutz</td>
-              <td class="px-6 py-4">
-                <span class="text-red-400"><i class='fa-solid fa-xmark' aria-hidden='true'></i> Cloud</span>
-              </td>
-              <td class="px-6 py-4">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Cloud</span>
-              </td>
-              <td class="px-6 py-4 bg-orange-500/5">
-                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Lokal</span>
-              </td>
-            </tr>
-            <tr class="border-t border-light-500/10">
-              <td class="px-6 py-4 text-light-300 font-semibold">Flexibilität</td>
-              <td class="px-6 py-4">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Begrenzt</span>
-              </td>
-              <td class="px-6 py-4">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Begrenzt</span>
-              </td>
-              <td class="px-6 py-4 bg-orange-500/5">
-                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i> Sehr hoch</span>
-              </td>
-            </tr>
-            <tr class="border-t border-light-500/10">
-              <td class="px-6 py-4 text-light-300 font-semibold">Komplexität</td>
-              <td class="px-6 py-4">
-                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Einfach</span>
-              </td>
-              <td class="px-6 py-4">
-                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i> Einfach</span>
-              </td>
-              <td class="px-6 py-4 bg-orange-500/5">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Mittel</span>
-              </td>
-            </tr>
-            <tr class="border-t border-light-500/10">
-              <td class="px-6 py-4 text-light-300 font-semibold">Automatisierung</td>
-              <td class="px-6 py-4">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Basic</span>
-              </td>
-              <td class="px-6 py-4">
-                <span class="text-orange-400"><i class='fa-solid fa-triangle-exclamation' aria-hidden='true'></i> Basic</span>
-              </td>
-              <td class="px-6 py-4 bg-orange-500/5">
-                <span class="text-green-400"><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i><i class='fa-solid fa-check' aria-hidden='true'></i> Sehr hoch</span>
-              </td>
-            </tr>
+          <tbody class="text-meg-text-secondary">
+            {[
+              { f: 'Kosten', c1: '€', c2: '€€', c3: '€ (günstig)', c3color: 'text-emerald-400' },
+              { f: 'Datenschutz', c1: 'Cloud (kritisch)', c2: 'Cloud', c3: 'Lokal (top)', c3color: 'text-emerald-400' },
+              { f: 'Flexibilität', c1: 'Begrenzt', c2: 'Begrenzt', c3: 'Sehr hoch', c3color: 'text-emerald-400' },
+              { f: 'Komplexität', c1: 'Einfach', c2: 'Einfach', c3: 'Mittel', c3color: 'text-orange-400' },
+              { f: 'Automatisierung', c1: 'Basic', c2: 'Basic', c3: 'Sehr hoch', c3color: 'text-emerald-400' }
+            ].map((row) => (
+              <tr class="border-b border-meg-border-dark/50 hover:bg-meg-accent/5 transition-colors">
+                <td class="px-6 py-4 font-bold text-meg-text-primary-dark">{row.f}</td>
+                <td class="px-6 py-4">{row.c1}</td>
+                <td class="px-6 py-4">{row.c2}</td>
+                <td class={`px-6 py-4 bg-orange-500/5 font-medium ${row.c3color}`}>{row.c3}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
       
       <div class="mt-8 text-center">
-        <p class="text-light-300">
-          <i class='fa-solid fa-lightbulb text-orange-400 mr-2' aria-hidden='true'></i>
-          <strong class="text-white">Empfehlung:</strong> Home Assistant für maximale Kontrolle, Datenschutz und Flexibilität!
-        </p>
+        <div class="gsap-fadein inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full shadow-sm">
+          <i class='fa-solid fa-lightbulb text-orange-400 text-xs' aria-hidden='true'></i>
+          <p class="text-meg-text-secondary text-[10px] font-black uppercase tracking-widest">
+            Empfehlung: <span class="text-meg-text-primary-dark">Home Assistant</span> für maximale Freiheit
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-gradient-to-b from-dark-900 to-dark-950">
+  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-base font-semibold text-orange-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-circle-question text-orange-400 mr-2' aria-hidden='true'></i>
-          Häufig gestellte Fragen
+        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4" style="animation-delay: 0s">
+          Support
         </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6" style="animation-delay: 0.15s">
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Fragen & Antworten</span> zu Smart Home
+        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Antworten</span>
         </p>
       </div>
       
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.3s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
-            Kann ich meine Alexa/Google-Geräte weiter nutzen?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Ja! Home Assistant kann diese einbinden und als Sprachassistent-Schnittstelle nutzen – Sie behalten Ihre gewohnten Geräte.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.45s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
-            Brauche ich technisches Wissen?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Grundkenntnisse helfen, aber ich begleite Sie durch den gesamten Prozess. Optional biete ich auch Schulungen an (2h Workshop = 150€, remote).
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.6s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
-            Was passiert bei Internet-Ausfall?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Lokale Automatisierungen (z.B. Licht-Schalter, Sensoren) laufen weiter! Nur Cloud-abhängige Dienste (z.B. Wetter-Updates) fallen aus.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.75s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
-            Wie sicher ist Home Assistant?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> Sehr sicher! Läuft lokal (kein Cloud-Zwang), Updates selbst kontrollierbar, keine Daten an Dritte. Ich helfe bei der sicheren Einrichtung.
-          </p>
-        </div>
-        
-        <div class="gsap-fadein bg-dark-900/50 border border-orange-500/20 rounded-xl p-8" style="animation-delay: 0.9s">
-          <h3 class="text-xl font-bold text-white mb-4">
-            <i class='fa-solid fa-q text-orange-400 mr-3' aria-hidden='true'></i>
-            Arbeiten Sie vor Ort oder remote?
-          </h3>
-          <p class="text-light-300 pl-10">
-            <strong class="text-white">A:</strong> 100% remote! Konzeption, Beratung und Support erfolgen über Videocalls. Die Hardware-Installation können Sie selbst vornehmen (mit meiner Anleitung) oder über lokale Partner.
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto space-y-4">
+        {[
+          { q: 'Alexa/Google-Integration?', a: 'Ja! Home Assistant bindet diese als Sprach-Schnittstelle ein. Sie behalten Ihre gewohnten Geräte.' },
+          { q: 'Internet-Ausfall?', a: 'Lokale Automatisierungen laufen weiter! Nur Cloud-Dienste (z.B. Wetter) sind kurzzeitig offline.' },
+          { q: 'Wie sicher ist das?', a: 'Sehr sicher, da alles lokal läuft. Kein Cloud-Zwang, keine Datenweitergabe an Dritte.' },
+          { q: 'Arbeiten Sie vor Ort?', a: 'Ich berate 100% remote. Die Installation ist dank meiner Anleitung oft selbst machbar.' }
+        ].map((faq, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
+              <span class="text-orange-400 font-black">Q</span> {faq.q}
+            </h3>
+            <p class="text-meg-text-secondary pl-7 leading-relaxed">
+              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

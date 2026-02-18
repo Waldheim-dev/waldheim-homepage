@@ -14,67 +14,66 @@ const comparisonFeatures = [
 ];
 ---
 
-<section class='py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-900 to-dark-950'>
+<section class='py-24 sm:py-32 px-6 bg-meg-bg-dark border-t border-meg-border-dark'>
   <div class='mx-auto max-w-7xl'>
     <div class='mx-auto max-w-2xl text-center mb-16'>
-      <h2 class='gsap-fadein text-base font-semibold text-green-400 mb-4' style='animation-delay: 0s'>
-        <i class='fa-solid fa-chart-mixed text-green-400 mr-2' aria-hidden='true'></i>
-        Warum Silvacore?
+      <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4' style='animation-delay: 0s'>
+        Marktvergleich
       </h2>
-      <p class='gsap-fadein text-4xl md:text-5xl font-bold text-white mb-6' style='animation-delay: 0.15s'>
-        Der <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Unterschied</span> zu anderen Lösungen
+      <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+        Der <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Unterschied</span>
       </p>
-      <p class='gsap-fadein text-xl text-light-300' style='animation-delay: 0.3s'>
-        Feature-Vergleich mit etablierten WEG-Verwaltungslösungen
+      <p class='gsap-fadein text-xl text-meg-text-secondary max-w-3xl mx-auto' style='animation-delay: 0.3s'>
+        Feature-Vergleich mit etablierten WEG-Verwaltungslösungen.
       </p>
     </div>
 
-    <div tabindex="0" class='gsap-fadein overflow-x-auto rounded-xl border border-light-500/20' style='animation-delay: 0.45s'>
-      <table class='w-full min-w-[640px]' role='table' aria-label='Feature-Vergleich: Silvacore vs. Wettbewerber'>
-        <thead class='bg-dark-950'>
-          <tr>
-            <th scope='col' class='px-4 sm:px-6 py-4 text-left text-xs sm:text-sm font-semibold text-light-100'>Feature</th>
-            <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-green-400'>
+    <div tabindex="0" class='gsap-fadein overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm' style='animation-delay: 0.45s'>
+      <table class='w-full min-w-[640px] border-collapse' role='table'>
+        <thead>
+          <tr class='border-b border-meg-border-dark'>
+            <th scope='col' class='px-6 py-4 text-left text-[10px] font-black uppercase tracking-widest text-meg-text-secondary'>Feature</th>
+            <th scope='col' class='px-6 py-4 text-center bg-emerald-500/5 text-[10px] font-black uppercase tracking-widest text-emerald-400'>
               <i class='fa-solid fa-star mr-1' aria-hidden='true'></i>Silvacore
             </th>
-            <th scope='col' class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold text-light-100'>
-              <abbr title='immocloud, Immoware24, Win-CASA, etg24, casavi, Domus, Haufe axera'>Wettbewerber</abbr>
+            <th scope='col' class='px-6 py-4 text-center text-[10px] font-black uppercase tracking-widest text-meg-text-secondary'>
+              Wettbewerber
             </th>
           </tr>
         </thead>
-        <tbody class='divide-y divide-light-500/10'>
+        <tbody class='divide-y divide-meg-border-dark'>
           {comparisonFeatures.map((item, index) => (
-            <tr class='gsap-fadein hover:bg-light-500/5 transition-colors bg-dark-900/50' style={`animation-delay: ${0.6 + index * 0.05}s`}>
-              <td class='px-4 sm:px-6 py-4 text-xs sm:text-sm font-medium text-white'>
-                {item.feature}
+            <tr class='gsap-fadein hover:bg-meg-accent/5 transition-colors' style={`animation-delay: ${0.6 + index * 0.05}s`}>
+              <td class='px-6 py-4'>
+                <div class='text-sm font-bold text-meg-text-primary-dark'>{item.feature}</div>
                 {item.note && (
-                  <span class='block text-xs text-light-400 mt-1 font-normal' role='note'>
-                    <i class='fa-solid fa-circle-info text-green-400 mr-1' aria-hidden='true'></i>{item.note}
-                  </span>
+                  <div class='text-[10px] text-meg-text-secondary mt-1 opacity-60 uppercase font-black tracking-tighter'>
+                    {item.note}
+                  </div>
                 )}
               </td>
-              <td class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm'>
+              <td class='px-6 py-4 text-center bg-emerald-500/5'>
                 {typeof item.silvacore === 'boolean' ? (
                   item.silvacore ? (
-                    <i class='fa-solid fa-check-circle text-green-400 text-xl' aria-label='Verfügbar' role='img'></i>
+                    <i class='fa-solid fa-check-circle text-emerald-400 text-xl'></i>
                   ) : (
-                    <i class='fa-solid fa-times-circle text-red-400 text-xl' aria-label='Nicht verfügbar' role='img'></i>
+                    <i class='fa-solid fa-times-circle text-rose-500/40 text-xl'></i>
                   )
                 ) : (
-                  <span class='font-semibold text-green-400'>
+                  <span class='text-sm font-black text-emerald-400 tracking-tight'>
                     {item.silvacore}
                   </span>
                 )}
               </td>
-              <td class='px-4 sm:px-6 py-4 text-center text-xs sm:text-sm'>
+              <td class='px-6 py-4 text-center text-sm text-meg-text-secondary'>
                 {typeof item.competitors === 'boolean' ? (
                   item.competitors ? (
-                    <i class='fa-solid fa-check-circle text-green-400 text-xl' aria-label='Verfügbar' role='img'></i>
+                    <i class='fa-solid fa-check-circle text-meg-text-secondary text-xl opacity-40'></i>
                   ) : (
-                    <i class='fa-solid fa-times-circle text-red-400 text-xl' aria-label='Nicht verfügbar' role='img'></i>
+                    <i class='fa-solid fa-times-circle text-rose-500/40 text-xl'></i>
                   )
                 ) : (
-                  <span class='text-light-300'>{item.competitors}</span>
+                  <span class='font-medium'>{item.competitors}</span>
                 )}
               </td>
             </tr>
@@ -83,9 +82,13 @@ const comparisonFeatures = [
       </table>
     </div>
     
-    <p class='mt-6 text-sm text-light-400 text-center gsap-fadein' style='animation-delay: 1.2s'>
-      <i class='fa-solid fa-info-circle text-green-400 mr-2' aria-label='Information' role='img'></i>
-      <strong>Analysierte Wettbewerber:</strong> immocloud, Immoware24, Win-CASA, etg24, casavi, Domus, Haufe axera (Stand: Oktober 2025)
-    </p>
+    <div class='mt-12 text-center gsap-fadein' style='animation-delay: 1.2s'>
+      <div class="inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full shadow-sm">
+        <i class="fa-solid fa-info-circle text-meg-accent text-xs"></i>
+        <p class="text-meg-text-secondary text-[10px] font-black uppercase tracking-widest">
+          Datenstand: Oktober 2025 – Basierend auf öffentlichen Preislisten
+        </p>
+      </div>
+    </div>
   </div>
 </section>

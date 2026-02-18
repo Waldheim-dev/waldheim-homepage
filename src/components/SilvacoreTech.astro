@@ -64,111 +64,108 @@ const techStack = [
 ];
 ---
 
-<div class="py-24 sm:py-32">
+<div class="py-24 sm:py-32 bg-meg-bg-dark border-t border-meg-border-dark">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <!-- Technologie Überschrift -->
     <div class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-base font-semibold leading-7 text-green-400 gsap-fadein">
-        Technologie & Sicherheit
+      <h2 class="text-sm font-bold uppercase tracking-widest text-emerald-400 gsap-fadein">
+        Architektur
       </h2>
-      <p class="mt-2 text-3xl font-bold tracking-tight text-light-100 sm:text-4xl gsap-fadein">
+      <p class="mt-2 text-3xl font-black tracking-tighter text-meg-text-primary-dark sm:text-4xl gsap-fadein">
         Enterprise-Grade Technologie
       </p>
-      <p class="mt-6 text-lg leading-8 text-light-400 gsap-fadein">
-        Self-Hosted per Docker Compose oder Kubernetes - volle Kontrolle über Ihre Daten
+      <p class="mt-6 text-lg leading-8 text-meg-text-secondary gsap-fadein">
+        Hochperformantes Backend, skalierbare Cloud-Infrastruktur und maximale Sicherheit.
       </p>
     </div>
 
     <!-- Sicherheitsfeatures -->
     <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-      <h3 class="text-xl font-bold text-light-100 mb-8 gsap-fadein">🔒 Sicherheit</h3>
+      <h3 class="text-xl font-bold text-meg-text-primary-dark mb-10 gsap-fadein tracking-tight flex items-center gap-3">
+        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Cyber Security
+      </h3>
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3">
         {securityFeatures.map((feature, index) => (
-          <div class="flex flex-col gsap-fadein" style={`animation-delay: ${index * 0.05}s`}>
-            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-light-100">
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900">
-                <i class={`fa-solid ${feature.icon} text-white`}></i>
+          <div class="flex flex-col gsap-fadein bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark rounded-2xl p-6 shadow-sm group hover:border-meg-accent/30 transition-all" style={`animation-delay: ${index * 0.05}s`}>
+            <dt class="flex items-center gap-x-4 text-base font-bold leading-7 text-meg-text-primary-dark">
+              <div class="flex size-10 items-center justify-center rounded-xl bg-meg-bg-dark border border-meg-border-dark shadow-inner group-hover:scale-110 transition-transform">
+                <i class={`fa-solid ${feature.icon} text-emerald-400`}></i>
               </div>
               {feature.title}
             </dt>
-            <dd class="mt-4 flex flex-auto flex-col text-sm leading-7 text-light-400">
-              <p class="flex-auto">{feature.description}</p>
+            <dd class="mt-4 text-sm leading-relaxed text-meg-text-secondary">
+              {feature.description}
             </dd>
           </div>
         ))}
       </dl>
     </div>
 
-    <!-- Performance -->
-    <div class="mx-auto mt-16 max-w-2xl lg:max-w-none">
-      <h3 class="text-xl font-bold text-light-100 mb-8 gsap-fadein">⚡ Performance</h3>
+    <!-- Performance & Scale -->
+    <div class="mx-auto mt-24 max-w-2xl lg:max-w-none">
+      <h3 class="text-xl font-bold text-meg-text-primary-dark mb-10 gsap-fadein tracking-tight flex items-center gap-3">
+        <i class="fa-solid fa-bolt text-meg-accent"></i> Performance & Scale
+      </h3>
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
-        <div class="rounded-2xl bg-dark-900/50 p-6 border border-green-500/20 gsap-fadein">
-          <div class="text-3xl font-bold text-green-400">{"< 200ms"}</div>
-          <div class="mt-2 text-sm text-light-400">Antwortzeiten (p95)</div>
-        </div>
-        <div class="rounded-2xl bg-dark-900/50 p-6 border border-green-500/20 gsap-fadein">
-          <div class="text-3xl font-bold text-green-400">99,9%</div>
-          <div class="mt-2 text-sm text-light-400">Uptime SLA</div>
-        </div>
-        <div class="rounded-2xl bg-dark-900/50 p-6 border border-green-500/20 gsap-fadein">
-          <div class="text-3xl font-bold text-green-400">Kubernetes</div>
-          <div class="mt-2 text-sm text-light-400">Horizontal skalierbar</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tech Stack -->
-    <div class="mx-auto mt-16 max-w-2xl lg:max-w-none">
-      <h3 class="text-xl font-bold text-light-100 mb-8 gsap-fadein">🛠️ Technologie-Stack</h3>
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {techStack.map((item, index) => (
-          <div class="rounded-lg bg-dark-900/50 p-4 border border-green-500/20 gsap-fadein" style={`animation-delay: ${index * 0.05}s`}>
-            <div class="text-sm font-semibold text-light-100">{item.name}</div>
-            <div class={`mt-1 text-xs ${item.color}`}>{item.tech}</div>
+        {[
+          { label: 'Antwortzeiten (p95)', value: '< 200ms', color: 'emerald' },
+          { label: 'Uptime SLA', value: '99,9%', color: 'meg-accent' },
+          { label: 'Horizontal skalierbar', value: 'Kubernetes', color: 'violet' }
+        ].map(stat => (
+          <div class="rounded-2xl bg-meg-surface-dark/50 backdrop-blur-md p-8 border border-meg-border-dark shadow-sm group hover:border-meg-accent/30 transition-all text-center">
+            <div class={`text-4xl font-black text-${stat.color === 'emerald' ? 'emerald-400' : stat.color === 'violet' ? 'violet-400' : 'meg-accent'} tracking-tighter mb-2 group-hover:scale-105 transition-transform`}>{stat.value}</div>
+            <div class="text-[10px] uppercase font-black tracking-widest text-meg-text-secondary opacity-60">{stat.label}</div>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Compliance Tabelle -->
-    <div class="mx-auto mt-16 max-w-4xl">
-      <h3 class="text-xl font-bold text-light-100 mb-8 gsap-fadein">📜 Rechtssicherheit & Compliance</h3>
-      <div class="overflow-hidden rounded-lg bg-dark-900/50 border border-green-500/20">
-        <table class="min-w-full divide-y divide-light-500">
+    <!-- Tech Stack -->
+    <div class="mx-auto mt-24 max-w-2xl lg:max-w-none">
+      <h3 class="text-xl font-bold text-meg-text-primary-dark mb-10 gsap-fadein tracking-tight flex items-center gap-3">
+        <i class="fa-solid fa-layer-group text-violet-400"></i> Modern Stack
+      </h3>
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+        {techStack.map((item, index) => (
+          <div class="rounded-xl bg-meg-bg-dark border border-meg-border-dark p-4 shadow-inner group hover:border-meg-accent/20 transition-all" style={`animation-delay: ${index * 0.05}s`}>
+            <div class="text-[10px] uppercase font-black tracking-widest text-meg-text-secondary opacity-60 mb-1">{item.name}</div>
+            <div class={`text-sm font-bold text-meg-text-primary-dark`}>{item.tech}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Compliance -->
+    <div class="mx-auto mt-24 max-w-4xl">
+      <h3 class="text-xl font-bold text-meg-text-primary-dark mb-10 gsap-fadein tracking-tight flex items-center gap-3">
+        <i class="fa-solid fa-file-contract text-emerald-400"></i> Compliance
+      </h3>
+      <div class="overflow-hidden rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 shadow-sm">
+        <table class="w-full border-collapse">
           <thead>
-            <tr>
-              <th class="px-6 py-3 text-left text-sm font-semibold text-light-100">Anforderung</th>
-              <th class="px-6 py-3 text-left text-sm font-semibold text-light-100">Silvacore-Lösung</th>
-              <th class="px-6 py-3 text-left text-sm font-semibold text-light-100">Status</th>
+            <tr class="border-b border-meg-border-dark">
+              <th class="px-6 py-4 text-left text-[10px] font-black uppercase tracking-widest text-meg-text-secondary">Anforderung</th>
+              <th class="px-6 py-4 text-left text-[10px] font-black uppercase tracking-widest text-meg-text-secondary">Implementierung</th>
+              <th class="px-6 py-4 text-left text-[10px] font-black uppercase tracking-widest text-meg-text-secondary">Status</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-light-500">
+          <tbody class="divide-y divide-meg-border-dark">
             {compliance.map((item) => (
-              <tr class="gsap-fadein">
-                <td class="px-6 py-4 text-sm font-medium text-light-100">{item.requirement}</td>
-                <td class="px-6 py-4 text-sm text-light-300">{item.solution}</td>
-                <td class="px-6 py-4 text-sm">
-                  {item.status === 'konform' ? (
-                    <span class="inline-flex items-center gap-x-1.5 rounded-md bg-green-900/50 px-2 py-1 text-xs font-medium text-green-400">
-                      <svg class="h-1.5 w-1.5 fill-green-400" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" /></svg>
-                      Konform
-                    </span>
-                  ) : (
-                    <span class="inline-flex items-center gap-x-1.5 rounded-md bg-blue-900/50 px-2 py-1 text-xs font-medium text-blue-400">
-                      <svg class="h-1.5 w-1.5 fill-blue-400" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" /></svg>
-                      Vorbereitet
-                    </span>
-                  )}
+              <tr class="hover:bg-meg-accent/5 transition-colors">
+                <td class="px-6 py-4 text-sm font-bold text-meg-text-primary-dark">{item.requirement}</td>
+                <td class="px-6 py-4 text-sm text-meg-text-secondary">{item.solution}</td>
+                <td class="px-6 py-4">
+                  <span class={`inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-[10px] font-black uppercase tracking-tighter ${
+                    item.status === 'konform' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-meg-accent/10 text-meg-accent'
+                  }`}>
+                    {item.status}
+                  </span>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p class="mt-6 text-sm text-light-400 italic gsap-fadein">
-        <strong>Hinweis:</strong> Silvacore bietet technische Werkzeuge. Rechtliche Beratung ersetzen wir nicht. Konsultieren Sie bei Fragen einen Fachanwalt.
-      </p>
     </div>
   </div>
 </div>

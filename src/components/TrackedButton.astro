@@ -42,14 +42,14 @@ const {
 
 // Variant-spezifische Klassen
 const variantClasses = {
-  primary: 'bg-primary-800 border border-primary-500/30 text-white hover:shadow-lg hover:shadow-primary-500/50',
-  secondary: 'bg-dark-900/50 border border-light-500/30 text-white hover:bg-dark-900 hover:border-blue-500/50',
-  'gradient-green': 'bg-gradient-to-r from-green-400 to-emerald-500 text-dark-950 hover:shadow-lg hover:shadow-green-400/50',
-  'gradient-purple': 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-purple-500/50',
-  ghost: 'bg-transparent border border-light-500/50 text-white hover:bg-light-500/10'
+  primary: 'bg-meg-accent text-white hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] border border-white/10',
+  secondary: 'bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark hover:bg-meg-surface-dark hover:border-meg-accent/50 hover:shadow-lg hover:shadow-meg-accent/5',
+  'gradient-green': 'bg-gradient-to-r from-emerald-400 to-meg-accent text-white hover:shadow-lg hover:shadow-emerald-400/30',
+  'gradient-purple': 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white hover:shadow-lg hover:shadow-violet-500/30',
+  ghost: 'bg-transparent border border-meg-border-dark text-meg-text-secondary hover:text-meg-text-primary-dark hover:bg-meg-surface-dark/50 hover:border-meg-accent/30'
 };
 
-const baseClasses = 'inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all duration-300 gsap-fadein gsap-btn';
+const baseClasses = 'inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300 ease-in-out gsap-fadein gsap-btn';
 const finalClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
 ---
 

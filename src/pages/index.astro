@@ -27,18 +27,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'waldheim.dev',
+  name: 'Waldheim.dev',
   url: 'https://waldheim.dev',
   logo: 'https://waldheim.dev/waldheim.dev.svg',
   description: 'IT-Dienstleistungen für KMU, Vereine & Startups: DevSecOps, Webentwicklung, Design, IT-Service, Smart Home',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Werner-Haas-Str. 8',
-    addressLocality: 'Augsburg',
-    postalCode: '86153',
-    addressCountry: 'DE',
-    addressRegion: 'Bayern'
-  },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Kundenservice',
@@ -109,40 +101,40 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
       <section class="bento-service relative isolate">
         <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row">
           <!-- Main Principles Card -->
-          <div class="relative lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1">
-            <div class="bento-card gsap-fadein relative lg:row-span-3 lg:col-span-2 md:col-span-6 sm:col-span-6 col-span-1 h-full">
-              <div class="blur-sm absolute inset-0 rounded-3xl transition-all -translate-x-0 translate-y-0 bg-conic-180 from-pink-500 via-cyan-500 to-violet-500 animate-rotate_gradient" />
-              <div class="flex flex-col gap-4 justify-between h-full z-10 relative bg-gradient-to-r from-primary-800 to-primary-900 text-light-100 p-12 shadow-lg rounded-3xl border-1 border-gray-300/30">
+          <div class="relative lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1 group">
+            <div class="bento-card gsap-fadein relative h-full">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent to-sky-600 rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-500" />
+              <div class="flex flex-col gap-4 justify-between h-full z-10 relative bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark p-10 shadow-sm rounded-2xl border border-meg-border-dark hover:border-meg-accent/30 transition-all duration-300">
                 <div class="flex flex-col gap-4">
                   <h2 class="text-3xl font-bold tracking-tight sm:text-5xl">
-                    So arbeite ich: Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Prinzipien</span> für Ihren Erfolg
+                    So arbeite ich: Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Prinzipien</span> für Ihren Erfolg
                   </h2>
-                  <p class="relative mt-4 text-lg leading-8 sm:max-w-md lg:max-w-none text-light-300">
+                  <p class="relative mt-4 text-lg leading-8 sm:max-w-md lg:max-w-none text-meg-text-secondary">
                     Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und Kundenorientierung.
                   </p>
                   <ul role="list" class="mt-6 space-y-4">
                     <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-white">Qualität:</strong> Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span>
+                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-meg-text-primary-dark">Qualität:</strong> Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span>
                     </li>
                     <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-white">Zuverlässigkeit:</strong> Auf meine IT-Lösungen und meinen Support können Sie zählen.</span>
+                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-meg-text-primary-dark">Zuverlässigkeit:</strong> Auf meine IT-Lösungen und meinen Support können Sie zählen.</span>
                     </li>
                     <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-white">Nachvollziehbarkeit:</strong> Alle Schritte werden detailliert dokumentiert.</span>
+                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-meg-text-primary-dark">Nachvollziehbarkeit:</strong> Alle Schritte werden detailliert dokumentiert.</span>
                     </li>
                     <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-white">Passgenauigkeit:</strong> Ich entwickle Lösungen, die perfekt zu Ihren Anforderungen passen.</span>
+                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                      <span><strong class="font-semibold text-meg-text-primary-dark">Passgenauigkeit:</strong> Ich entwickle Lösungen, die perfekt zu Ihren Anforderungen passen.</span>
                     </li>
                   </ul>
                 </div>
                 <Image 
                   src="/bento/cert.webp" 
                   alt="Qualität bei Waldheim.dev" 
-                  class="rounded-lg" 
+                  class="rounded-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
                   width={600} 
                   height={546}
                   loading="eager"
@@ -152,13 +144,13 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
             </div>
           </div>
           <!-- DevSecOps Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-purple-900/30 to-dark-900 text-white border border-purple-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-purple-500/40 transition-all duration-300">
+          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 group">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>DevSecOps</span> für schnellere & sichere Entwicklung
+                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>DevSecOps</span> für schnellere & sichere Entwicklung
                 </h3>
-                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
                   Ich automatisiere Ihre Entwicklungspipeline, integriere Sicherheit von Anfang an und verkürze Ihre Release-Zyklen.
                 </p>
                 <TrackedButton
@@ -168,12 +160,12 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
                   trackLabel="DevSecOps Services"
                   variant="ghost"
                   icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full border-purple-500/50 hover:bg-purple-500/20"
+                  class="!px-4 !py-2 !rounded-full group-hover:bg-violet-500/10 group-hover:border-violet-500/30 group-hover:text-violet-400 transition-all"
                 >
                   Zu meinen DevSecOps-Services
                 </TrackedButton>
               </div>
-              <figure class="w-full rounded-2xl overflow-hidden">
+              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-violet-500/30 transition-all">
                 <video 
                   class="object-contain max-sm:max-w-none w-full" 
                   width="1920"
@@ -194,13 +186,13 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
           </div>
 
           <!-- Entwicklung Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-blue-900/30 to-dark-900 text-white border border-blue-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-blue-500/40 transition-all duration-300">
+          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-meg-accent/40 hover:shadow-lg hover:shadow-meg-accent/5 transition-all duration-300 group">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  Individuelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Softwarelösungen</span> für Ihren Bedarf
+                  Individuelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Softwarelösungen</span> für Ihren Bedarf
                 </h3>
-                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
                   Ich entwickle Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen passt.
                 </p>
                 <TrackedButton
@@ -210,12 +202,12 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
                   trackLabel="Projekt anfragen"
                   variant="ghost"
                   icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full border-blue-500/50 hover:bg-blue-500/20"
+                  class="!px-4 !py-2 !rounded-full group-hover:bg-meg-accent/10 group-hover:border-meg-accent/30 group-hover:text-meg-accent transition-all"
                 >
                   Jetzt Projekt anfragen
                 </TrackedButton>
               </div>
-              <figure class="w-full rounded-2xl overflow-hidden">
+              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-meg-accent/30 transition-all">
                 <video 
                   class="object-contain max-sm:max-w-none w-full" 
                   width="1920"
@@ -236,13 +228,13 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
           </div>
 
           <!-- Design Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-pink-900/30 to-dark-900 text-white border border-pink-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-pink-500/40 transition-all duration-300">
+          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-rose-500/40 hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 group">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500'>Branding, Webdesign & UX</span> – aus einem Guss
+                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Branding, Webdesign & UX</span> – aus einem Guss
                 </h3>
-                <p class="relative mb-6 text-lg text-light-300 sm:max-w-md lg:max-w-none">
+                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
                   Ich entwickle ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
                 </p>
                 <TrackedButton
@@ -252,12 +244,12 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
                   trackLabel="Design-Philosophie"
                   variant="ghost"
                   icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full border-pink-500/50 hover:bg-pink-500/20"
+                  class="!px-4 !py-2 !rounded-full group-hover:bg-rose-500/10 group-hover:border-rose-500/30 group-hover:text-rose-400 transition-all"
                 >
                   Design-Philosophie entdecken
                 </TrackedButton>
               </div>
-              <figure class="w-full rounded-2xl overflow-hidden">
+              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-rose-500/30 transition-all">
                 <video 
                   class="object-contain max-sm:max-w-none w-full" 
                   width="1280"
@@ -278,13 +270,13 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
             </div>
           </div>
           <!-- IT-Service / Cloud Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-gradient-to-br from-green-900/30 to-dark-900 text-white border border-green-500/20 rounded-3xl overflow-hidden p-12 shadow-lg hover:border-green-500/40 transition-all duration-300">
+          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 group">
             <div class="flex flex-col gap-4 justify-between h-full">
               <div class="flex flex-col items-start gap-2">
                 <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  Sichere <span class='text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500'>Cloud-Lösungen</span> & IT-Service
+                  Sichere <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500'>Cloud-Lösungen</span> & IT-Service
                 </h3>
-                <p class="relative mb-6 text-lg text-light-300">
+                <p class="relative mb-6 text-lg text-meg-text-secondary">
                   Ich migriere Ihre IT in die Cloud, sorge für maximale Sicherheit und ermögliche ortsunabhängiges Arbeiten.
                 </p>
                 <TrackedButton
@@ -294,12 +286,12 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
                   trackLabel="Cloud-Services"
                   variant="ghost"
                   icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full border-green-500/50 hover:bg-green-500/20"
+                  class="!px-4 !py-2 !rounded-full group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 group-hover:text-emerald-400 transition-all"
                 >
                   Mehr über Cloud-Services
                 </TrackedButton>
               </div>
-              <figure class="w-full rounded-2xl overflow-hidden">
+              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-emerald-500/30 transition-all">
                 <video 
                   class="object-contain max-sm:max-w-none w-full" 
                   width="1280"
@@ -321,36 +313,36 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
           </div>
           
           <!-- Certifications Card -->
-          <div class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-gradient-to-br from-blue-900/20 to-dark-900 text-white border border-blue-500/20 rounded-3xl overflow-hidden p-12 shadow-lg">
+          <div class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-meg-accent/30 transition-all duration-300 group">
             <div class="flex md:flex-row flex-col gap-8 justify-between items-start">
               <div class="flex flex-col flex-1 gap-4">
-                <p class="text-base font-semibold text-blue-400">
-                  <i class='fa-solid fa-award text-blue-400 mr-2' aria-hidden='true'></i>
+                <p class="text-base font-semibold text-meg-accent">
+                  <i class='fa-solid fa-award text-meg-accent mr-2' aria-hidden='true'></i>
                   Ihr Vorteil: Zertifiziertes Know-how
                 </p>
                 <h3 class="text-2xl font-bold tracking-tight sm:text-3xl">
-                  Profitieren Sie von meiner <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500'>Expertise</span> in agilen Methoden
+                  Profitieren Sie von meiner <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Expertise</span> in agilen Methoden
                 </h3>
-                <ul role="list" class="mt-4 space-y-4 text-light-300">
+                <ul role="list" class="mt-4 space-y-4 text-meg-text-secondary">
                   <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-white">Scrum Master I.</strong> (PSM I) - Scrum.org</span>
+                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Master I.</strong> (PSM I) - Scrum.org</span>
                   </li>
                   <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-white">Scrum Master II.</strong> (PSM II) - Scrum.org</span>
+                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Master II.</strong> (PSM II) - Scrum.org</span>
                   </li>
                   <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-white">Scrum Product Owner I.</strong> (PSPO I.) - Scrum.org</span>
+                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Product Owner I.</strong> (PSPO I.) - Scrum.org</span>
                   </li>
                   <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-blue-400 text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Ausbilder (IHK) <strong class="font-semibold text-white">Ausbilder für Fachinformatik.</strong></span>
+                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
+                    <span>Ausbilder (IHK) <strong class="font-semibold text-meg-text-primary-dark">Ausbilder für Fachinformatik.</strong></span>
                   </li>
                 </ul>
               </div>
-              <figure class="w-full md:w-auto rounded-2xl overflow-hidden m-[auto]">
+              <figure class="w-full md:w-auto rounded-xl overflow-hidden m-[auto] ring-1 ring-meg-border-dark group-hover:ring-meg-accent/30 transition-all">
                 <video 
                   class="object-contain w-full md:w-[400px]" 
                   width="1920"
