@@ -5,23 +5,27 @@
  * Verbessert Internal Linking für SEO
  */
 
-interface Service {
-  title: string;
-  href: string;
-  icon: string;
-  description: string;
-  color: 'purple' | 'blue' | 'green' | 'orange' | 'pink';
-}
+import { SERVICES, type Service } from '../consts/services';
 
 interface Props {
-  services: Service[];
+  services?: Service[];
   headline?: string;
+  exclude?: string;
 }
 
 const { 
-  services, 
-  headline = 'Weitere Services für Ihre digitale Transformation' 
+  services: manualServices, 
+  headline = 'Weitere Services für Ihre digitale Transformation',
+  exclude
 } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const services = manualServices || SERVICES.filter(s => {
+    if (exclude && s.key === exclude) return false;
+    const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+    const normalizedHref = s.href.endsWith('/') ? s.href : `${s.href}/`;
+    return normalizedPath !== normalizedHref;
+});
 
 const colorClasses = {
   purple: 'border-violet-500/20 hover:border-violet-500/40 text-violet-400',
@@ -35,7 +39,7 @@ const colorClasses = {
 <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-2xl text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+      <h2 class="text-3xl md:text-4xl font-black tracking-normal text-meg-text-primary-dark mb-4">
         {headline}
       </h2>
       <p class="text-lg text-meg-text-secondary">

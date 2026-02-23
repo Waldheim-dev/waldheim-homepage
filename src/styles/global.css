@@ -55,6 +55,7 @@
   --color-meg-surface-light: #ffffff;
   --color-meg-surface-dark: #0f172a;
   --color-meg-accent: #0ea5e9;
+  --meg-accent-rgb: 14, 165, 233;
   --color-meg-border-light: rgba(226, 232, 240, 0.5); /* slate-200/50 */
   --color-meg-border-dark: rgba(30, 41, 59, 0.5);   /* slate-800/50 */
   --color-meg-text-primary-light: #0f172a;
