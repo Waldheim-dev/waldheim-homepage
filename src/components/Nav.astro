@@ -464,12 +464,26 @@ const smarthomeColors = getServiceColors('smarthome');
       };
 
       const toggleDropdowns = (e) => {
+        e.stopPropagation();
         const dropdown = e.currentTarget;
         const menu = dropdown.querySelector('.dropdown-menu');
         const trigger = dropdown.querySelector('.dropdown-trigger');
         const icon = dropdown.querySelector('.fa-chevron-down');
         const isOpen = menu?.classList.contains('opacity-100');
         
+        // Close all other dropdowns
+        dropdowns.forEach(d => {
+          if (d !== dropdown) {
+            const m = d.querySelector('.dropdown-menu');
+            const t = d.querySelector('.dropdown-trigger');
+            const i = d.querySelector('.fa-chevron-down');
+            m?.classList.remove('opacity-100', 'translate-y-0', 'flex');
+            m?.classList.add('opacity-0', 'translate-y-1', 'hidden');
+            t?.setAttribute('aria-expanded', 'false');
+            i?.classList.remove('rotate-180');
+          }
+        });
+
         if (isOpen) {
           menu?.classList.remove('opacity-100', 'translate-y-0', 'flex');
           menu?.classList.add('opacity-0', 'translate-y-1', 'hidden');
@@ -482,6 +496,19 @@ const smarthomeColors = getServiceColors('smarthome');
           icon?.classList.add('rotate-180');
         }
       };
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', () => {
+        dropdowns.forEach(d => {
+          const m = d.querySelector('.dropdown-menu');
+          const t = d.querySelector('.dropdown-trigger');
+          const i = d.querySelector('.fa-chevron-down');
+          m?.classList.remove('opacity-100', 'translate-y-0', 'flex');
+          m?.classList.add('opacity-0', 'translate-y-1', 'hidden');
+          t?.setAttribute('aria-expanded', 'false');
+          i?.classList.remove('rotate-180');
+        });
+      });
 
       const mobileToggleDropdowns = (e) => {
         const dropdown = e.currentTarget;

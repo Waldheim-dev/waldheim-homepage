@@ -8,5 +8,6 @@
   "knowledgebase": "advanced",
   "isTopSkill": false,
   "isTechStack": false,
+  "invertImage": true,
   "layer": ["quality", "frontend"]
 }

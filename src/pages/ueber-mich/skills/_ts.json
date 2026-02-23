@@ -8,5 +8,5 @@
   "knowledgebase": "expert",
   "isTopSkill": true,
   "isTechStack": true,
-  "layer": ["frontend"]
+  "layer": ["frontend", "backend"]
 }
