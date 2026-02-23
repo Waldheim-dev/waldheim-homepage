@@ -83,4 +83,7 @@ export default defineConfig({
   compressHTML: true,
   scopedStyleStrategy: 'class',
   trailingSlash: 'always', // Konsistente URLs: immer mit /
+  image: {
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+  },
 });
