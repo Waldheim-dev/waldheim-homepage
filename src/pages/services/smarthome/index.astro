@@ -5,6 +5,7 @@ import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
+import Blog from '../../../components/Blog.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -17,9 +18,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/smarthome'
 }]);
 
-const titel = "Smart Home Konzepte & Beratung | Unabhängig | waldheim.dev";
-const description = "Smart Home Beratung Augsburg & München: Unabhängige Planung und Umsetzung Ihres individuellen Smart Home Systems – ohne Herstellerbindung. Kompetenz aus Bayern.";
-const keywords = "Smart Home, Hausautomation, IoT, unabhängige Beratung, Smart Home Installation, Konzepte, Eigenbau, Home Assistant, MQTT, Z-Wave, Zigbee";
+const titel = "Smart Home Beratung Augsburg & München | Unabhängig | Waldheim.dev";
+const description = "Unabhängige Smart Home Beratung in Augsburg & München. Planung und Umsetzung Ihres sicheren Zuhauses mit Home Assistant – ohne Herstellerbindung.";
+const keywords = "Smart Home Augsburg, Hausautomation München, Home Assistant Beratung, IoT Sicherheit Bayern, Unabhängige Smart Home Planung";
 
 // Structured Data: Service
 const serviceSchema = {
@@ -48,12 +49,32 @@ const serviceSchema = {
 };
 
 const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
+
+// Structured Data: FAQ
+const faqSchema = SchemaUtils.getFAQSchema([
+  {
+    question: 'Alexa/Google-Integration?',
+    answer: 'Ja! Home Assistant bindet diese als Sprach-Schnittstelle ein. Sie behalten Ihre gewohnten Geräte.'
+  },
+  {
+    question: 'Internet-Ausfall?',
+    answer: 'Lokale Automatisierungen laufen weiter! Nur Cloud-Dienste (z.B. Wetter) sind kurzzeitig offline.'
+  },
+  {
+    question: 'Wie sicher ist das?',
+    answer: 'Sehr sicher, da alles lokal läuft. Kein Cloud-Zwang, keine Datenweitergabe an Dritte.'
+  },
+  {
+    question: 'Arbeiten Sie vor Ort?',
+    answer: 'Ich berate 100% remote. Die Installation ist dank meiner Anleitung oft selbst machbar.'
+  }
+]);
 ---
 <Layout 
   title={titel} 
   description={description} 
   keywords={keywords} 
-  schema={[serviceSchema, breadCrumbSchema]}
+  schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
   <!-- Hero Section -->
@@ -190,6 +211,8 @@ const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
   </section>
 
   <PriceService />
+
+  <Blog limits={2} />
 
   <RelatedServices />
 

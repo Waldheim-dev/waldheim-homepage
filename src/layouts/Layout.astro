@@ -40,6 +40,19 @@ const organisationSchema = SchemaUtils.getOrganizationSchema({
   }
 });
 
+const personSchema = SchemaUtils.getPersonSchema({
+  name: 'Markus Waldheim',
+  url: 'https://waldheim.dev',
+  jobTitle: 'Software Architect & IT Consultant',
+  description: 'Experte für DevSecOps, individuelle Softwareentwicklung und Cloud-Architekturen.',
+  image: new URL('/markus/markus_waldheim.webp', Astro.url).href,
+  sameAs: [
+    'https://www.linkedin.com/in/markus-waldheim-03827a312/',
+    'https://github.com/Waldheim-dev',
+    'https://gitlab.com/mwaldheim'
+  ]
+});
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -113,6 +126,7 @@ const {
 } = Astro.props;
 
 schema.push(organisationSchema);
+schema.push(personSchema);
 schema.push(localBusinessSchema);
 schema.push(softwareApplicationEcoFree);
 schema.push(softwareApplicationEcoBasic);
