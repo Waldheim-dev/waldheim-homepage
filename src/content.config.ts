@@ -155,6 +155,10 @@ const projects = defineCollection({
     security: z.array(z.string()).optional(),
     testing: z.array(z.string()).optional(),
 
+    results: z.array(z.object({
+      value: z.string(),
+      label: z.string()
+    })).optional(),
 
     problem: z.string().optional(),
 
@@ -184,5 +188,17 @@ const projects = defineCollection({
   })
 });
 
+const testimonials = defineCollection({
+  loader: glob({pattern: '**\/*.json', base: "./src/pages/testimonials"}),
+  schema: z.object({
+    quote: z.string(),
+    author: z.string(),
+    role: z.string(),
+    company: z.string().optional(),
+    image: z.string().optional(),
+    stars: z.number().min(1).max(5).default(5)
+  })
+});
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { blog, authors, skills, karriere_projects, karriere, roadmap, projects_kategorie, projects, features };
+export const collections = { blog, authors, skills, karriere_projects, karriere, roadmap, projects_kategorie, projects, features, testimonials };

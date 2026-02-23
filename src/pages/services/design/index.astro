@@ -4,6 +4,7 @@ import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
+import Blog from '../../../components/Blog.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
@@ -17,9 +18,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/design'
 }]);
 
-const titel = "Webdesign, Branding & UX/UI Design | waldheim.dev";
-const description = "Webdesign Augsburg & München: Professionelles Branding, UX/UI-Design, Printmedien. Überzeugende Markenauftritte und benutzerfreundliche digitale Erlebnisse aus Bayern.";
-const keywords = "Webdesign, Branding, Corporate Design, Logo Design, Printmedien, UI Design, UX Design, User Experience, User Interface, Grafikdesign, Responsive Design";
+const titel = "Webdesign & UX/UI Design Augsburg | München | Waldheim.dev";
+const description = "Professionelles Webdesign & Branding in Augsburg & München. Wir gestalten benutzerfreundliche UX/UI-Interfaces und digitale Erlebnisse. Jetzt anfragen!";
+const keywords = "Webdesign Augsburg, UI Design München, UX Design Bayern, Branding, Corporate Design, Logo Design, Grafikdesign, Responsive Design";
 
 // Structured Data: Service
 const serviceSchema = {
@@ -48,12 +49,28 @@ const serviceSchema = {
 };
 
 const ogImage = 'https://waldheim.dev/services/design-og.jpg';
+
+// Structured Data: FAQ
+const faqSchema = SchemaUtils.getFAQSchema([
+  {
+    question: 'Liefern Sie auch Druckdaten?',
+    answer: 'Ja! Print-ready PDF (CMYK, 300dpi) inkl. Schnittmarken und Farbprofilen – direkt bereit für die Druckerei.'
+  },
+  {
+    question: 'Wie viele Entwürfe erhalte ich?',
+    answer: 'Standard: 2-3 Konzepte zur Auswahl. Danach: 2 Revisions-Runden inklusive. Weitere Anpassungen nach Aufwand.'
+  },
+  {
+    question: 'Arbeiten Sie mit Brand Guidelines?',
+    answer: 'Selbstverständlich! Ich halte mich strikt an bestehende Corporate Design-Vorgaben Ihres Unternehmens.'
+  }
+]);
 ---
 <Layout 
   title={titel} 
   description={description} 
   keywords={keywords} 
-  schema={[serviceSchema, breadCrumbSchema]}
+  schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
   <!-- Hero Section -->
@@ -230,6 +247,8 @@ const ogImage = 'https://waldheim.dev/services/design-og.jpg';
 
 
   <PriceService />
+
+  <Blog limits={2} />
 
   <RelatedServices />
 

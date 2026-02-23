@@ -17,6 +17,8 @@ import SocialverseClaim from '../components/SocialverseClaim.astro';
 import AetherClaim from '../components/AetherClaim.astro';
 import WaetherappClaim from '../components/WaetherappClaim.astro';
 import TrackedButton from '../components/TrackedButton.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FreeTools from '../components/FreeTools.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -70,17 +72,27 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
                   subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
 
                   video="/videos/video_chip.mp4">
-    <div class="mt-10 flex items-center justify-center flex-wrap gap-x-6">
+    <div class="mt-10 flex items-center justify-center flex-wrap gap-4">
+      <TrackedButton
+        href="https://calendly.com/markus-waldheim/30min"
+        target="_blank"
+        trackEvent="cta_homepage_calendly"
+        trackCategory="hero"
+        trackLabel="Beratungsgespräch buchen"
+        variant="primary"
+        icon="fa-solid fa-calendar-check animate-pulse"
+        iconPosition="left"
+      >
+        Beratungsgespräch buchen
+      </TrackedButton>
       <TrackedButton
         href="/kontakt/"
         trackEvent="cta_homepage_contact"
         trackCategory="hero"
-        trackLabel="Jetzt beraten lassen"
-        variant="primary"
-        icon="fa-solid fa-envelope animate-pulse"
-        iconPosition="left"
+        trackLabel="Individuelle Anfrage"
+        variant="secondary"
       >
-        Jetzt beraten lassen
+        Individuelle Anfrage
       </TrackedButton>
       <TrackedButton
         href="/referenzen/1/"
@@ -364,9 +376,11 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
         </div>
       </section>
       <PortfolioTop />
+      <Testimonials />
       <PriceService />
 
       <Blog limits={6} />
+      <FreeTools />
       <SkillWrapper />
 
       <EcodriveClaim />

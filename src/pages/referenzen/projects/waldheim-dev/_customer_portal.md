@@ -3,6 +3,20 @@ title: "Customer Portal: Lizenz- und Abonnement-Verwaltung für Waldheim-Produkt
 isTopProject: true
 description: "Entwicklung des Customer Portals: Eine zentrale Plattform zur Verwaltung von Lizenzen, Support-Tickets und Abonnements für alle Waldheim-Produkte (Ecodrive, Socialverse, Silvacore). Mit vollständiger Stripe-Integration, Multi-User-System und Produktmonitoring."
 shortDescription: "Entwicklung des Customer Portals für Lizenz- und Abonnement-Verwaltung."
+results:
+  - value: "100%"
+    label: "Code Coverage"
+  - value: "3"
+    label: "SaaS Produkte"
+  - value: "Multi"
+    label: "Tenant Architecture"
+overview:
+  - title: "Branche"
+    meta: "SaaS & Lizenzmanagement"
+  - title: "Tech-Basis"
+    meta: "Go & HTMX"
+  - title: "Sicherheit"
+    meta: "2FA & Passkey"
 pubDate: "2025-11-05"
 category: "entwicklung"
 heroImage: "referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp"

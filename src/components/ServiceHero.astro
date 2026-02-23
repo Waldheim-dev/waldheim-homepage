@@ -69,21 +69,22 @@ const gradientBg = {
         <!-- CTAs -->
         <div class='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 gsap-fadein' style='animation-delay: 0.4s'>
           <a
-            href='https://portal.waldheim.dev'
+            href='https://calendly.com/markus-waldheim/30min'
             target='_blank'
             rel='noopener noreferrer'
             class={`group px-8 py-4 bg-meg-accent text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2`}
           >
             <i class='fa-solid fa-calendar-check' aria-hidden='true'></i>
-            Jetzt im Portal anfragen
+            Beratungsgespräch buchen
             <i class='fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform' aria-hidden='true'></i>
           </a>
           <a
-            href={`${Astro.url.pathname}#leistungen`}
+            href='https://portal.waldheim.dev'
+            target='_blank'
+            rel='noopener noreferrer'
             class={`px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-semibold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center gap-2`}
           >
-            Leistungen ansehen
-            <i class='fa-solid fa-arrow-down animate-bounce' aria-hidden='true'></i>
+            Kundenportal
           </a>
         </div>
 
