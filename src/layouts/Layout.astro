@@ -306,13 +306,45 @@ schema.push(softwareApplicationEcoPremium);
           window.gsap.to(el, { scale: 1, duration: 0.18, ease: 'power1.in' });
         });
       });
+
+      // Mouse Follower
+      const cursorBlur = document.getElementById('cursor-blur');
+      if (cursorBlur) {
+        window.addEventListener('mousemove', (e) => {
+          window.gsap.to(cursorBlur, {
+            x: e.clientX,
+            y: e.clientY,
+            xPercent: -50,
+            yPercent: -50,
+            duration: 0.6,
+            ease: 'power2.out'
+          });
+        });
+      }
     });
   });
 </script>
 
   <ClientRouter />
+  <style is:global>
+    #cursor-blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      filter: blur(80px);
+      will-change: transform;
+      mix-blend-mode: screen;
+    }
+  </style>
 </head>
 <body class="bg-meg-bg-dark text-meg-text-primary-dark flex-col gap-4 selection:bg-meg-accent selection:text-white antialiased transition-colors duration-300 ease-in-out">
+<div id="cursor-blur"></div>
 <header class="sticky top-0 z-50 max-w-7xl max-sm:w-full mx-auto py-2 px-2">
   <Nav />
 </header>

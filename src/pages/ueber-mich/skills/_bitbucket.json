@@ -8,5 +8,5 @@
   "knowledgebase": "advanced",
   "isTopSkill": false,
   "isTechStack": false,
-  "layer": ["general"]
+  "layer": ["infrastructure", "general"]
 }
