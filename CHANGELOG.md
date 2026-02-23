@@ -1,3 +1,21 @@
+# [26.6.0](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.5.1...26.6.0) (2026-02-23)
+
+
+### Bug Fixes
+
+* downgrade eslint to version 9.11.x for compatibility ([c168d18](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/c168d18675490a3358c264f08c22c9f9aa44101e))
+
+
+### Features
+
+* Add invertImage property to skills for conditional image styling ([9169df4](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/9169df496a6638dbb706caabf76adce326616b2f))
+* Add new icons for Anthropic and Google Gemini, update Gemini image path ([0b13545](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/0b13545a36ff8957e67f65dcb2f65d5ee30b7f53))
+* Add remote image patterns for Unsplash in Astro configuration ([08fa135](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/08fa1357bac758ed7a11e815f8a6fb6a621b612c))
+* Add Waetherapp component and related pages for weather application ([1143c1b](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/1143c1bcc469097f7660bce3cebce02fa6217449))
+* Enhance service pages with new components and structured data ([bbb39d1](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/bbb39d17665f40d7b848a4678f755aafb3564344))
+* Refactor components and improve styles ([adb175e](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/adb175e8cbd364ec564fd356f9365cdf8133a7a7))
+* Update design and deps ([def778c](https://gitlab.com/forestdesign/waldheim.dev.homepage/commit/def778cbc5dffc8b1ba54807ebc7672e57150dce))
+
 ## [26.5.1](https://gitlab.com/forestdesign/waldheim.dev.homepage/compare/26.5.0...26.5.1) (2025-12-19)
 
 
