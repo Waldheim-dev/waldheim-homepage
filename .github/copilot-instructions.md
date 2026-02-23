@@ -90,56 +90,54 @@ Diese Datei enthält wichtige Richtlinien und Best Practices für die Entwicklun
 
 ### 📐 Pattern Library
 
-#### Pattern 1: Hero Section
+#### Pattern 1: Hero Section (Service)
 ```astro
-<section class="py-24 sm:py-32 px-6 bg-gradient-to-b from-dark-950 via-dark-900 to-dark-950">
-  <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
-    Dein Titel <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">mit Highlight</span>
-  </h1>
-  <a href="#cta" class="bg-gradient-to-r from-green-400 to-emerald-500 text-dark-950 
-                        px-8 py-4 rounded-lg font-semibold 
-                        hover:shadow-lg hover:shadow-green-400/50 transition-all">
-    Call to Action
-  </a>
-</section>
+<ServiceHero 
+  title="Service Name"
+  subtitle="Catchy subtitle"
+  description="..."
+  gradient="blue"
+  icon="fa-code"
+  badge="Expertise"
+/>
 ```
 
-#### Pattern 2: Feature Cards
+#### Pattern 2: Related Services (Dynamic)
 ```astro
-<div class="bg-dark-900/50 border border-light-500/20 
-            hover:border-light-500/40 rounded-xl p-6 
-            transition-all group">
-  <!-- Ambient Glow on Hover -->
-  <div class="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-cyan-500/5 to-purple-500/5 
-              rounded-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
-  
-  <h3 class="text-xl font-bold text-white mb-3">Feature Titel</h3>
-  <p class="text-light-300">Beschreibung...</p>
-</div>
+<!-- Standard implementation: Automatically filters current page -->
+<RelatedServices />
+
+<!-- With manual exclusion if URL logic differs -->
+<RelatedServices exclude="service-key" />
 ```
 
-#### Pattern 3: Pricing Tables
-```astro
-<div tabindex="0" class="overflow-x-auto rounded-xl border border-light-500/20">
-  <table class="w-full text-left">
-    <thead class="bg-dark-800">
-      <tr>
-        <th class="px-6 py-4 text-light-100">Feature</th>
-        <th class="px-6 py-4 text-light-100">Free</th>
-        <th class="px-6 py-4 text-light-100">Pro</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="border-t border-light-500/10">
-        <td class="px-6 py-4 text-light-300">Feature Name</td>
-        <td class="px-6 py-4">
-          <i class="fa-solid fa-check text-green-400" aria-label="Enthalten"></i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+#### Pattern 3: Case Study (Markdown Frontmatter)
+```yaml
+layout: "../../../layouts/ProjectLayout.astro"
+title: "Project Title"
+results:
+  - value: "-80%"
+    label: "Time Saved"
+  - value: "99.9%"
+    label: "Uptime"
+problem: "The specific client challenge..."
+solution: "The technical and strategic approach..."
+techStack: ["go", "kubernetes", "tailwind"] # Use skill slugs from src/pages/ueber-mich/skills/
 ```
+
+---
+
+## 🎨 Skill & Logo Guidelines
+
+### Logo Inversion for Dark Mode
+When adding a new skill in `src/pages/ueber-mich/skills/*.json`, use `"invertImage": true` for logos that should appear pure white.
+The component uses `filter: brightness(0) invert(1)` to ensure clarity on dark backgrounds.
+
+### Skill Categorization
+- **Backend:** `go`, `nodejs`, `ts`, `java`, `php`, `kafka`, `postgresql`.
+- **Frontend:** `angular`, `vue`, `react`, `astro`, `ts`.
+- **Infrastructure:** `kubernetes`, `docker`, `terraform`, `fluxcd`, `git`, `gitlab`.
+- **Quality:** `playwright`, `vitest`, `jest`, `cypress`, `sonarqube`.
 
 ---
 

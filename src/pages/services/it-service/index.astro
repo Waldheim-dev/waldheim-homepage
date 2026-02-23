@@ -5,6 +5,7 @@ import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
+import Blog from '../../../components/Blog.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -17,9 +18,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/it-service'
 }]);
 
-const titel = "IT-Service, Support & Netzwerktechnik | Augsburg | waldheim.dev";
-const description = "Zuverlässiger IT-Service: Netzwerk, Computer, Server (Windows, macOS, Linux) & Cloud-Migrationen. Ihr Partner für IT-Support in Augsburg, München und Umgebung.";
-const keywords = "IT-Service, IT-Support, IT-Wartung, IT-Beratung, IT-Administration, Netzwerktechnik, Windows, macOS, Linux, Server, Cloud-Migration, Augsburg, München, Bayern";
+const titel = "IT-Service & Support Augsburg & München | Waldheim.dev";
+const description = "Zuverlässiger IT-Service in Augsburg & München: Netzwerke, Server-Wartung (Windows, macOS, Linux) & Cloud-Migrationen. Ihr IT-Partner aus Bayern.";
+const keywords = "IT-Service Augsburg, IT-Support München, Netzwerktechnik Bayern, Windows Support, macOS Administration, Server-Wartung, Cloud-Migration";
 
 // Structured Data: Service
 const serviceSchema = {
@@ -48,12 +49,32 @@ const serviceSchema = {
 };
 
 const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
+
+// Structured Data: FAQ
+const faqSchema = SchemaUtils.getFAQSchema([
+  {
+    question: 'Vor-Ort-Support möglich?',
+    answer: 'Ich arbeite 100% remote. Für physische Einsätze vermittle ich gerne Partner aus meinem Netzwerk.'
+  },
+  {
+    question: 'Reaktionszeit bei Ausfällen?',
+    answer: 'Remote Innerhalb von 4h (regulär) oder <2h mit Priority-Support.'
+  },
+  {
+    question: 'Langfristige Bindung?',
+    answer: 'Nein, Wartungsverträge sind monatlich kündbar. Volle Flexibilität.'
+  },
+  {
+    question: 'Betriebssysteme?',
+    answer: 'Windows, macOS und Linux. Auch in Hybrid-Umgebungen.'
+  }
+]);
 ---
 <Layout 
   title={titel} 
   description={description} 
   keywords={keywords} 
-  schema={[serviceSchema, breadCrumbSchema]}
+  schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
   <!-- Hero Section -->
@@ -165,6 +186,8 @@ const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
   </section>
 
   <PriceService />
+
+  <Blog limits={2} />
 
   <RelatedServices />
 

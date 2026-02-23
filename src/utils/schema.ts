@@ -39,7 +39,49 @@ interface SoftwareApplication {
   billingFrequency: string;
 }
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Person {
+  name: string;
+  url: string;
+  jobTitle: string;
+  sameAs: string[]; // Links to LinkedIn, GitHub, etc.
+  description: string;
+  image: string;
+}
+
 export class SchemaUtils {
+  static getPersonSchema(person: Person) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: person.name,
+      url: person.url,
+      jobTitle: person.jobTitle,
+      description: person.description,
+      image: person.image,
+      sameAs: person.sameAs
+    };
+  }
+
+  static getFAQSchema(faqs: FAQ[]) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    };
+  }
+
   static getBreadcrumbSchema(
     breadcrumb: BreadCrumb[],
   ) {
