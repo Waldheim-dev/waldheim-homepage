@@ -11,8 +11,6 @@ import compressor from 'astro-compressor';
 
 import compress from 'astro-compress';
 
-import sentry from '@sentry/astro';
-
 import llmsTxt from '@waldheimdev/astro-ai-llms-txt';
 
 import 'dotenv/config';
@@ -63,13 +61,6 @@ export default defineConfig({
       aiApiKey: process.env.GEMINI_API_KEY,
       llmsFull: true,
       debug: true
-    }),
-    sentry({
-      dsn: 'https://a58f0f0cc113eb469f1110959a44d8d7@o4508774614630400.ingest.de.sentry.io/4508774618759248',
-      sourceMapsUploadOptions: {
-        project: 'waldheim-dev',
-        authToken: process.env.SENTRY_AUTH_TOKEN,
-      },
     }),
     compress(),
     compressor({ gzip: true }),
