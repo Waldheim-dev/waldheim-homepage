@@ -1,0 +1,73 @@
+---
+// Obsidian Gemini Agent Hero Section
+---
+
+<section class='relative isolate pt-14 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark'>
+  <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
+    <div
+      class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-indigo-500/20 to-violet-600/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+      style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
+  </div>
+
+  <div class='mx-auto max-w-7xl'>
+    <div class='mx-auto max-w-4xl text-center'>
+      <!-- Badge -->
+      <div class='gsap-fadein mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark shadow-sm'>
+        <i class='fa-solid fa-brain-circuit text-indigo-400' aria-hidden='true'></i>
+        <span class='text-meg-text-primary-dark font-bold text-sm tracking-tight'>Autonomer AI Agent für Obsidian</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class='gsap-fadein text-4xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6 leading-tight' style='animation-delay: 0.15s'>
+        Gemini AI Agent
+      </h1>
+
+      <p class='gsap-fadein text-2xl md:text-3xl font-bold mb-8' style='animation-delay: 0.3s'>
+        <span class='text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500'>
+          Die Zukunft des vernetzten Denkens.
+        </span>
+      </p>
+
+      <!-- Subheadline -->
+      <p class='gsap-fadein text-xl md:text-2xl text-meg-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed' style='animation-delay: 0.45s'>
+        Integrieren Sie Google Gemini direkt in Ihren Wissens-Workflow. Ein autonomer Agent, der Ihren Vault versteht, steuert und erweitert.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class='gsap-fadein flex flex-col sm:flex-row gap-4 justify-center items-center' style='animation-delay: 0.6s'>
+        <a 
+          href='https://github.com/Waldheim-dev/obsidian-gemini-agent' 
+          target='_blank'
+          class='gsap-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 text-white font-bold text-lg hover:shadow-xl hover:shadow-indigo-500/20 transition-all hover:scale-[1.02]'
+          aria-label='Auf GitHub ansehen'
+        >
+          <i class='fa-brands fa-github' aria-hidden='true'></i>
+          GitHub Repository
+        </a>
+        <a 
+          href='#features' 
+          class='gsap-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg hover:bg-meg-surface-dark hover:border-indigo-500/50 transition-all'
+          aria-label='Features entdecken'
+        >
+          <i class='fa-solid fa-list-check' aria-hidden='true'></i>
+          Features entdecken
+        </a>
+      </div>
+
+      <!-- Tech Highlights -->
+      <div class='gsap-fadein mt-16 flex flex-wrap justify-center gap-6 text-meg-text-secondary text-sm' style='animation-delay: 0.75s'>
+        {[
+          { icon: 'fa-bolt-lightning', text: 'Function Calling' },
+          { icon: 'fa-shield-halved', text: 'Privacy-First' },
+          { icon: 'fa-code', text: 'Open Source' },
+          { icon: 'fa-sparkles', text: 'Auto-Modus' }
+        ].map(item => (
+          <div class='flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl shadow-sm'>
+            <i class={`fa-solid ${item.icon} text-indigo-400`} aria-hidden='true'></i>
+            <span class="font-semibold">{item.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

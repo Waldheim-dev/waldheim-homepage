@@ -144,6 +144,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-blue-400/20',
     },
   },
+  'obsidian-gemini-agent': {
+    name: 'Obsidian Gemini Agent',
+    version: '1.0.0',
+    status: 'stable',
+    releaseDate: '2026-03-11',
+    colors: {
+      name: 'Obsidian Gemini Agent',
+      primary: 'indigo-400',
+      secondary: 'violet-500',
+      glowColor: 'indigo-400/50',
+      badgeBg: 'bg-indigo-500/10',
+      badgeBorder: 'border-indigo-500/30',
+      badgeText: 'text-indigo-400',
+      iconColor: 'indigo-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-indigo-400/20',
+    },
+  },
 };
 
 // Rückwärtskompatibilität: Nur Farben
