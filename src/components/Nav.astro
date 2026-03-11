@@ -11,6 +11,7 @@ const socialverse = getProductInfo('socialverse')!;
 const silvacore = getProductInfo('silvacore')!;
 const aether = getProductInfo('aether')!;
 const waetherapp = getProductInfo('waetherapp')!;
+const obsidianGeminiAgent = getProductInfo('obsidian-gemini-agent')!;
 const ausgabeschein = getProductInfo('ausgabeschein-generator')!;
 const astroAi = getProductInfo('astro-ai-llms-txt')!;
 
@@ -107,6 +108,15 @@ const smarthomeColors = getServiceColors('smarthome');
                     class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
                   <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
                   {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
+                </span>
+                  </a>
+                  <a href="/obsidian-gemini-agent/"
+                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${obsidianGeminiAgent.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
+                    <span>Obsidian Gemini Agent</span>
+                    <span
+                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
+                  <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                  {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
                 </span>
                   </a>
                   <a href="/astro-ai-llms-txt/"
@@ -324,7 +334,26 @@ const smarthomeColors = getServiceColors('smarthome');
                     </a>
                     <p class="mt-1 text-meg-text-secondary">Wetter und Vorhersage</p>
                   </div>
-                </div>              </div>
+                </div>
+                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                    <i class={`fa-solid fa-brain-circuit text-xl text-${obsidianGeminiAgent.colors.iconColor}`} aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <a href="/obsidian-gemini-agent/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+                      Obsidian Gemini Agent
+                      <span class="absolute inset-0"></span>
+
+                      <span
+                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
+                      <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                      {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
+                    </span>
+                    </a>
+                    <p class="mt-1 text-meg-text-secondary">Autonomes Obsidian-Plugin</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
