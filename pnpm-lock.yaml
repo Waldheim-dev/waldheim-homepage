@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 5.0.0
-        version: 5.0.0(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))
+        version: 5.0.0(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))
       '@astrojs/sitemap':
         specifier: 3.7.1
         version: 3.7.1
@@ -18,17 +18,17 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       '@google/genai':
-        specifier: 1.44.0
-        version: 1.44.0
+        specifier: 1.45.0
+        version: 1.45.0
       '@tailwindcss/vite':
         specifier: 4.2.1
         version: 4.2.1(vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))
       '@waldheimdev/astro-ai-llms-txt':
         specifier: ^1.2.3
-        version: 1.2.3(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(ws@8.19.0)(zod@3.25.76)
+        version: 1.2.3(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(ws@8.19.0)(zod@3.25.76)
       astro:
-        specifier: 6.0.2
-        version: 6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
+        specifier: 6.0.4
+        version: 6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
       astro-compress:
         specifier: 2.3.9
         version: 2.3.9(@types/node@25.4.0)(jiti@2.6.1)(rollup@4.59.0)(typescript@5.9.3)
@@ -37,7 +37,7 @@ importers:
         version: 1.3.0
       astro-seo-schema:
         specifier: 5.2.0
-        version: 5.2.0(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(schema-dts@1.1.5)
+        version: 5.2.0(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(schema-dts@1.1.5)
       gsap:
         specifier: ^3.14.2
         version: 3.14.2
@@ -604,8 +604,8 @@ packages:
     resolution: {integrity: sha512-RwDO9NWOVdUdO2yDzyTx5cA1PjyqwPmTqAtfJZa82ap+OS4H89IZ4Jhr5VCEtS6Ij94L5if411CgF0BzI+/b7Q==}
     engines: {node: '>=6'}
 
-  '@google/genai@1.44.0':
-    resolution: {integrity: sha512-kRt9ZtuXmz+tLlcNntN/VV4LRdpl6ZOu5B1KbfNgfR65db15O6sUQcwnwLka8sT/V6qysD93fWrgJHF2L7dA9A==}
+  '@google/genai@1.45.0':
+    resolution: {integrity: sha512-+sNRWhKiRibVgc4OKi7aBJJ0A7RcoVD8tGG+eFkqxAWRjASDW+ktS9lLwTDnAxZICzCVoeAdu8dYLJVTX60N9w==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -1664,8 +1664,8 @@ packages:
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@6.0.2:
-    resolution: {integrity: sha512-aYCU9QcaV3QlOxO+JU2lR4xazVuPaH7oFhc990H/fhbWLMm1MWlRnjfnti1gYMm9N9l7gqPb3t7JsQBlUEQXIg==}
+  astro@6.0.4:
+    resolution: {integrity: sha512-1piLJCPTL/x7AMO2cjVFSTFyRqKuC3W8sSEySCt1aJio+p/wGs5H3K+Xr/rE9ftKtknLUtjxCqCE7/0NsXfGpQ==}
     engines: {node: ^20.19.1 || >=22.12.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -5824,12 +5824,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@5.0.0(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))':
+  '@astrojs/mdx@5.0.0(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))':
     dependencies:
       '@astrojs/markdown-remark': 7.0.0
       '@mdx-js/mdx': 3.1.1
       acorn: 8.16.0
-      astro: 6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
+      astro: 6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
       es-module-lexer: 2.0.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -6134,7 +6134,7 @@ snapshots:
 
   '@fortawesome/fontawesome-pro@7.2.0': {}
 
-  '@google/genai@1.44.0':
+  '@google/genai@1.45.0':
     dependencies:
       google-auth-library: 10.6.1
       p-retry: 4.6.2
@@ -7080,11 +7080,11 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@waldheimdev/astro-ai-llms-txt@1.2.3(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(ws@8.19.0)(zod@3.25.76)':
+  '@waldheimdev/astro-ai-llms-txt@1.2.3(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(ws@8.19.0)(zod@3.25.76)':
     dependencies:
       '@anthropic-ai/sdk': 0.76.0(zod@3.25.76)
-      '@google/genai': 1.44.0
-      astro: 6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
+      '@google/genai': 1.45.0
+      astro: 6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
       cheerio: 1.2.0
       fast-glob: 3.3.3
       ollama: 0.6.3
@@ -7305,9 +7305,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-seo-schema@5.2.0(astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(schema-dts@1.1.5):
+  astro-seo-schema@5.2.0(astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3))(schema-dts@1.1.5):
     dependencies:
-      astro: 6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
+      astro: 6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3)
       schema-dts: 1.1.5
 
   astro@5.16.8(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3):
@@ -7412,7 +7412,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@6.0.2(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3):
+  astro@6.0.4(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.59.0)(terser@5.44.1)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 3.0.0
       '@astrojs/internal-helpers': 0.8.0
