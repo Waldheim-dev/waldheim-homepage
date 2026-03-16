@@ -14,48 +14,58 @@ try {
 <footer class="bg-meg-surface-dark/80 backdrop-blur-xl border-t border-meg-border-dark text-meg-text-primary-dark" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="space-y-8">
+    <div class="space-y-12">
+      <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+        <div class="space-y-4">
+          <a href="/" class="-m-1.5 inline-flex items-center gap-2 rounded-lg p-1.5 hover:bg-meg-surface-dark/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <img class="h-8 w-auto" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
+            <span class="font-semibold">Waldheim.dev</span>
+          </a>
+          <p class="text-sm leading-5 text-meg-text-secondary">Let&apos;s build a better tomorrow, together</p>
+        </div>
 
-        <a href="/" class="-m-1.5 p-1.5 flex items-center gap-2 rounded-lg hover:bg-meg-surface-dark/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-          <img class="h-8 w-auto" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
-          <span class="font-semibold">Waldheim.dev</span>
-        </a>
-        <p class="text-sm leading-5 text-meg-text-secondary">Let's build a better tomorrow, together</p>
-        <div class="flex space-x-6">
+        <div class="flex flex-wrap gap-x-4 gap-y-4 sm:justify-end">
           <a href="https://www.linkedin.com/in/markus-waldheim-03827a312/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
              aria-label="Besuche uns auf LinkedIn"
-             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-linkedin text-xl" aria-hidden="true"></i>
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-meg-accent hover:scale-110 hover:border-meg-accent/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i>
           </a>
           <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" rel="noopener noreferrer" title="Xing" aria-label="Besuche uns auf Xing"
-             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-xing text-xl" aria-hidden="true"></i>
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-emerald-400 hover:scale-110 hover:border-emerald-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-brands fa-xing text-2xl" aria-hidden="true"></i>
           </a>
           <a href="https://gitlab.com/mwaldheim" target="_blank" rel="noopener noreferrer" title="Gitlab" aria-label="Besuche unsere GitLab-Projekte"
-             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-gitlab text-xl" aria-hidden="true"></i>
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-orange-400 hover:scale-110 hover:border-orange-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-brands fa-gitlab text-2xl" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/Waldheim-dev" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Besuche unsere GitHub-Repositories"
-             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
+          <a href="https://github.com/Waldheim-dev" target="_blank" rel="noopener noreferrer" title="GitHub Waldheim.dev" aria-label="Besuche unsere GitHub-Repositories"
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-indigo-400 hover:scale-110 hover:border-indigo-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-brands fa-github text-2xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/mwaldheim" target="_blank" rel="noopener noreferrer" title="GitHub Markus" aria-label="Besuche Markus auf GitHub"
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-indigo-400 hover:scale-110 hover:border-indigo-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <span class="fa-layers relative fa-fw text-2xl" aria-hidden="true">
+              <i class="fa-brands fa-github" data-fa-transform="shrink-4 up-1"></i>
+              <i class="fa-solid fa-user text-[11px] text-meg-accent absolute -bottom-1 -right-1" data-fa-transform="down-8 right-7"></i>
+            </span>
           </a>
           <a href="https://www.twitch.tv/blackbird995" target="_blank" rel="noopener noreferrer" title="Twitch" aria-label="Folge uns auf Twitch"
-             class="text-meg-text-secondary hover:text-purple-400 hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-twitch text-xl" aria-hidden="true"></i>
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-purple-400 hover:scale-110 hover:border-purple-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-brands fa-twitch text-2xl" aria-hidden="true"></i>
           </a>
           <a href="https://www.designenlassen.de/profil/622353" target="_blank" rel="noopener noreferrer" title="Designenlassen.de"
              aria-label="Finde uns auf Designenlassen.de"
-             class="text-meg-text-secondary hover:text-meg-accent hover:scale-110 transition-all rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-solid fa-pen-ruler text-xl" aria-hidden="true"></i>
+             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-meg-accent hover:scale-110 hover:border-meg-accent/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+            <i class="fa-solid fa-pen-ruler text-2xl" aria-hidden="true"></i>
           </a>
         </div>
       </div>
-      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-3 md:gap-8">
+
+      <div class="rounded-2xl border border-meg-border-dark bg-meg-surface-dark/40 p-6 sm:p-8">
+        <nav aria-label="Footer Navigation" class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
-            <h3 class="text-sm font-bold leading-4">Services</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <h3 class="text-sm font-bold leading-4 uppercase tracking-widest text-meg-text-primary-dark">Services</h3>
+            <ul role="list" class="mt-5 space-y-3">
               <li>
                 <a href="/services/entwicklung/"
                    class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Entwicklung</a>
@@ -78,9 +88,10 @@ try {
               </li>
             </ul>
           </div>
-          <div class="mt-10 md:mt-0">
+
+          <div>
             <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Produkte</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <ul role="list" class="mt-5 space-y-3">
               {[
                 { name: 'Ecodrive', href: '/ecodrive/' },
                 { name: 'Silvacore', href: '/silvacore/' },
@@ -98,9 +109,10 @@ try {
               ))}
             </ul>
           </div>
-          <div class="mt-10 md:mt-0">
+
+          <div>
             <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">App-Links</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <ul role="list" class="mt-5 space-y-3">
               {[
                 { name: 'Ecodrive App', href: 'https://www.eco-drive.app' },
                 { name: 'Silvacore App', href: 'https://app.silvacore.de' },
@@ -120,11 +132,10 @@ try {
               ))}
             </ul>
           </div>
-        </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
+
           <div>
             <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Firma</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <ul role="list" class="mt-5 space-y-3">
               <li>
                 <a href="https://climate.stripe.com/1QAkEH" target="_blank"
                    class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Climate-Programm
@@ -137,23 +148,22 @@ try {
               </li>
               <li>
                 <a href="mailto:kontakt@waldheim.dev"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Bug
-                  melden
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Bug melden
                   <i class="fa-solid fa-envelope text-[10px]" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
                 <a href="https://www.waldheim-it.de/" target="_blank"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim
-                  IT-Beratung
+                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim IT-Beratung
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="mt-10 md:mt-0">
+
+          <div>
             <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Rechtliches</h3>
-            <ul role="list" class="mt-6 space-y-4">
+            <ul role="list" class="mt-5 space-y-3">
               <li>
                 <a href="/agb/"
                    class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">AGB</a>
@@ -180,7 +190,7 @@ try {
               </li>
             </ul>
           </div>
-        </div>
+        </nav>
       </div>
     </div>
     <div
