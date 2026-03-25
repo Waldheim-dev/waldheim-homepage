@@ -161,6 +161,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-indigo-400/20',
     },
   },
+  suite: {
+    name: 'Waldheim Suite',
+    version: '0.1.0',
+    status: 'alpha',
+    releaseDate: '2026-Q3',
+    colors: {
+      name: 'Waldheim Suite',
+      primary: 'meg-accent',
+      secondary: 'sky-400',
+      glowColor: 'meg-accent/50',
+      badgeBg: 'bg-meg-accent/10',
+      badgeBorder: 'border-meg-accent/30',
+      badgeText: 'text-meg-accent',
+      iconColor: 'meg-accent',
+      hoverShadow: 'hover:shadow-lg hover:shadow-meg-accent/20',
+    },
+  },
 };
 
 // Rückwärtskompatibilität: Nur Farben

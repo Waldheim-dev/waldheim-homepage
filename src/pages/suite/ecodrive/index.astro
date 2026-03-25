@@ -1,0 +1,206 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { SchemaUtils } from '../../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  { name: 'Home', link: 'https://waldheim.dev' },
+  { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
+  { name: 'Ecodrive', link: 'https://waldheim.dev/suite/ecodrive' },
+]);
+
+const titel = 'Ecodrive – Flotten, Routen & CO₂ | Waldheim Suite';
+const description =
+  'Ecodrive: Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, CO₂-Tracking, Fahrten-Protokoll und ESG-Reporting. Teil der Waldheim Suite.';
+const keywords =
+  'Ecodrive, Flottenmanagement, Fahrzeugverwaltung, Routenplanung, CO2-Tracking, ESG, Nachhaltigkeit, Fahrten, Waldheim Suite';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Ecodrive',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: description,
+  url: 'https://waldheim.dev/suite/ecodrive',
+  author: { '@type': 'Organization', name: 'waldheim.dev', url: 'https://waldheim.dev' },
+};
+
+const features = [
+  {
+    icon: 'fa-car-side',
+    title: 'Fahrzeugverwaltung',
+    description: 'Vollständige Flottenverwaltung: Fahrzeuge erfassen, Stammdaten pflegen, Zustand und Verfügbarkeit tracken.',
+  },
+  {
+    icon: 'fa-route',
+    title: 'Routenplanung',
+    description: 'Fahrten planen und optimieren – mit automatischer Distanzberechnung und Routenvorschlägen.',
+  },
+  {
+    icon: 'fa-leaf',
+    title: 'CO₂-Tracking',
+    description: 'Echtzeit-CO₂-Bilanz pro Fahrzeug, Fahrer und Zeitraum – für fundierte Nachhaltigkeitsentscheidungen.',
+  },
+  {
+    icon: 'fa-clipboard-list',
+    title: 'Fahrten-Protokoll',
+    description: 'Lückenloses digitales Fahrtenbuch mit automatischer Erfassung von Strecke, Zeit und Verbrauch.',
+  },
+  {
+    icon: 'fa-chart-pie',
+    title: 'ESG-Reporting',
+    description: 'Automatisierte ESG-Reports für Ihre Nachhaltigkeitsberichterstattung – CSRD-konform und auditierbar.',
+  },
+  {
+    icon: 'fa-gauge-high',
+    title: 'KPI-Dashboard',
+    description: 'Fahrzeuge, aktive Fahrzeuge, Fahrten, CO₂ (kg) und Distanz (km) auf einen Blick.',
+  },
+];
+
+const kpis = [
+  { value: 'Fahrzeuge', icon: 'fa-car-side', color: 'teal' },
+  { value: 'Aktive Fahrzeuge', icon: 'fa-check-circle', color: 'teal' },
+  { value: 'CO₂ (kg)', icon: 'fa-leaf', color: 'teal' },
+  { value: 'Distanz (km)', icon: 'fa-route', color: 'teal' },
+];
+---
+
+<Layout
+  title={titel}
+  description={description}
+  keywords={keywords}
+  schema={[softwareSchema, breadCrumbSchema]}
+>
+  <!-- Breadcrumb -->
+  <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/suite/" class="hover:text-meg-accent transition-colors font-semibold">Waldheim Suite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-teal-400 font-bold">Ecodrive</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+      <div
+        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-teal-500/20 to-emerald-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      ></div>
+    </div>
+    <div class="max-w-7xl mx-auto py-16 sm:py-24">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="gsap-fadein mb-4">
+          <span class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-3 py-1.5 rounded-full text-xs font-bold">
+            <i class="fa-solid fa-grid-2 text-[10px]" aria-hidden="true"></i>
+            Teil der Waldheim Suite
+          </span>
+        </div>
+        <div class="gsap-fadein mb-6" style="animation-delay: 0.1s">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-sm font-bold text-teal-400">
+            <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+            Closed Alpha
+          </span>
+        </div>
+        <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Ecodrive
+        </h1>
+        <p class="gsap-fadein text-2xl font-bold text-teal-400 mb-6" style="animation-delay: 0.2s">
+          Flotten, Routen & CO₂
+        </p>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.3s">
+          Intelligentes Flottenmanagement für nachhaltige Unternehmen: Fahrzeugverwaltung, Routenplanung,
+          CO₂-Tracking und ESG-Reporting – vollständig integriert.
+        </p>
+        <div class="gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.45s">
+          <a
+            href="https://portal.waldheim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto group px-8 py-4 bg-teal-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+            Zugang anfragen
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+          </a>
+          <a
+            href="/suite/"
+            class="w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-teal-500/40 transition-all duration-300 inline-flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Zurück zur Suite
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI Highlights -->
+  <section class="py-16 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="eco-kpis-heading">
+    <div class="max-w-7xl mx-auto">
+      <h2 id="eco-kpis-heading" class="sr-only">KPI-Metriken</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {kpis.map((kpi, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 border border-teal-500/20 rounded-2xl p-6 text-center" style={`animation-delay: ${i * 0.1}s`}>
+            <i class={`fa-solid ${kpi.icon} text-teal-400 text-2xl mb-3`} aria-hidden="true"></i>
+            <p class="text-meg-text-primary-dark font-bold">{kpi.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="eco-features-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-teal-400 mb-4">
+          <i class="fa-solid fa-list-check mr-2" aria-hidden="true"></i>
+          Features
+        </p>
+        <h2 id="eco-features-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
+          Nachhaltige Mobilität
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {features.map((feat, i) => (
+          <div class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10 transition-all" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 mb-4">
+              <i class={`fa-solid ${feat.icon} text-teal-400 text-xl`} aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-2">{feat.title}</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{feat.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-eco-heading">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="gsap-fadein bg-meg-surface-dark/50 border border-teal-500/20 rounded-3xl p-12">
+        <i class="fa-solid fa-leaf text-4xl text-teal-400 mb-6" aria-hidden="true"></i>
+        <h2 id="cta-eco-heading" class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+          Nachhaltiger fahren
+        </h2>
+        <p class="text-xl text-meg-text-secondary mb-8">
+          Beantragen Sie frühen Zugang zu Ecodrive über das Waldheim Kundenportal.
+        </p>
+        <a
+          href="https://portal.waldheim.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-teal-500/30 transition-all duration-300 hover:scale-[1.02]"
+        >
+          <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+          Zum Kundenportal
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

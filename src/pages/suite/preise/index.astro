@@ -1,0 +1,282 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { SchemaUtils } from '../../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  { name: 'Home', link: 'https://waldheim.dev' },
+  { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
+  { name: 'Preise', link: 'https://waldheim.dev/suite/preise' },
+]);
+
+const titel = 'Preise – Waldheim Suite | Waldheim.dev';
+const description =
+  'Ein Preis, alle Module: Die Waldheim Suite als vollständig integrierte Business-Suite für den DACH-Mittelstand. Transparentes Seat-basiertes Modell ohne versteckte Kosten.';
+const keywords =
+  'Waldheim Suite Preise, SaaS Pricing, per Seat, CRM ERP Suite, Mittelstand, DACH, Flatrate';
+
+const modules = [
+  { icon: 'fa-network-wired', name: 'Socialverse CRM', desc: 'Pipeline, Deals, Kontakte, Revenue-Workflows', color: 'text-violet-400', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
+  { icon: 'fa-boxes-stacking', name: 'Forge ERP', desc: 'Produkte, Projekte, Aufträge, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
+  { icon: 'fa-folder-open', name: 'Aether', desc: 'Dokumente, Assets, Wissens-Objekte', color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20' },
+  { icon: 'fa-truck', name: 'Ecodrive', desc: 'Flotten, Routen, CO₂, ESG-Reporting', color: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
+  { icon: 'fa-headset', name: 'Customer Portal', desc: 'Tickets, Rechnungen, Abo-Verwaltung', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
+];
+
+const included = [
+  'Alle 5 Module inklusive',
+  'Unbegrenzte Mandanten-Isolation (Multi-Tenant)',
+  'Single Sign-On über das Kundenportal',
+  'App Switcher zwischen allen Modulen',
+  'DSGVO-konforme Datenhaltung in Deutschland',
+  'Stripe-Abo, monatlich kündbar',
+  'Audit-Log & Rollen-/Rechteverwaltung (RBAC)',
+  'E-Mail-Support mit SLA',
+];
+
+const faqs = [
+  {
+    q: 'Was ist in einem Seat enthalten?',
+    a: 'Ein Seat gibt einem Benutzer vollen Zugang zu allen gebuchten Modulen der Suite. Module sind nicht einzeln buchbar – die Suite kommt als Paket.'
+  },
+  {
+    q: 'Wo werden meine Daten gespeichert?',
+    a: 'Alle Daten werden ausschließlich auf Servern in Deutschland gehostet. Die Verarbeitung erfolgt vollständig DSGVO-konform.'
+  },
+  {
+    q: 'Kann ich monatlich kündigen?',
+    a: 'Ja. Abonnements laufen monatlich und können jederzeit zum Ende des Abrechnungszeitraums gekündigt werden. Keine Mindestvertragslaufzeit.'
+  },
+  {
+    q: 'Gibt es eine kostenlose Testphase?',
+    a: 'Im Early Access können Sie die Suite mit einem Seat kostenlos ausprobieren. Der Zugang erfolgt auf Anfrage über unser Kontaktformular.'
+  },
+  {
+    q: 'Was bedeutet Multi-Tenant?',
+    a: 'Jeder Kunde erhält einen eigenen, vollständig isolierten Mandanten. Ihre Daten sind strikt von denen anderer Kunden getrennt – technisch und organisatorisch.'
+  },
+];
+---
+
+<Layout
+  title={titel}
+  description={description}
+  keywords={keywords}
+  schema={[breadCrumbSchema]}
+>
+  <!-- Hero -->
+  <section class="relative isolate px-6 pt-32 pb-16 bg-meg-bg-dark">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+      <div
+        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-meg-accent/20 to-sky-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      ></div>
+    </div>
+
+    <div class="mx-auto max-w-3xl text-center gsap-fadein">
+      <a href="/suite/" class="inline-flex items-center gap-2 text-sm text-meg-text-secondary hover:text-meg-accent transition-colors mb-8">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Zurück zur Suite-Übersicht
+      </a>
+      <p class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+        <i class="fa-solid fa-tag mr-2" aria-hidden="true"></i>
+        Preise & Pakete
+      </p>
+      <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+        Ein Preis.<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Alle Module.</span>
+      </h1>
+      <p class="text-xl text-meg-text-secondary leading-relaxed">
+        Keine Tier-Verwirrung, keine versteckten Modul-Aufpreise.<br />
+        Die Waldheim Suite kommt als vollständiges Paket – pro Seat, pro Monat.
+      </p>
+    </div>
+  </section>
+
+  <!-- Single Price Card -->
+  <section class="px-6 pb-16 bg-meg-bg-dark">
+    <div class="mx-auto max-w-2xl">
+      <div class="gsap-fadein relative group">
+        <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700" aria-hidden="true"></div>
+        <div class="relative bg-meg-surface-dark border border-meg-accent/30 rounded-3xl p-10 shadow-2xl shadow-meg-accent/10">
+          <!-- Badge -->
+          <div class="flex items-center justify-between mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-meg-accent/10 border border-meg-accent/30 text-meg-accent text-xs font-black uppercase tracking-widest">
+              <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>
+              Early Access
+            </span>
+            <span class="text-meg-text-secondary text-sm font-semibold">Monatlich kündbar</span>
+          </div>
+
+          <!-- Price -->
+          <div class="mb-8">
+            <p class="text-meg-text-secondary text-sm font-semibold uppercase tracking-widest mb-2">Waldheim Suite</p>
+            <div class="flex items-end gap-2">
+              <span class="text-7xl font-black text-meg-text-primary-dark tracking-tighter">€49</span>
+              <div class="pb-3 text-meg-text-secondary">
+                <span class="text-lg font-bold">/Seat</span>
+                <br />
+                <span class="text-sm">/Monat</span>
+              </div>
+            </div>
+            <p class="mt-3 text-meg-text-secondary text-sm leading-relaxed">
+              Basispreis ab <strong class="text-meg-text-primary-dark">€299/Monat</strong> · inklusive 5 Seats.
+              Jeder weitere Seat <strong class="text-meg-text-primary-dark">€49/Monat</strong>.
+            </p>
+          </div>
+
+          <!-- Modules included -->
+          <div class="mb-8">
+            <p class="text-xs font-black uppercase tracking-widest text-meg-text-secondary mb-4">Enthaltene Module</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {modules.map(mod => (
+                <div class={`flex items-center gap-3 p-3 rounded-xl ${mod.bg} border ${mod.border}`}>
+                  <i class={`fa-solid ${mod.icon} ${mod.color} text-sm w-4 text-center`} aria-hidden="true"></i>
+                  <span class="text-meg-text-primary-dark font-semibold text-sm">{mod.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- What's included -->
+          <ul class="space-y-3 mb-10">
+            {included.map(item => (
+              <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
+                <i class="fa-solid fa-check-circle text-meg-accent text-base shrink-0" aria-hidden="true"></i>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/kontakt/"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] hover:shadow-meg-accent/30 transition-all"
+            >
+              <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              Early Access anfragen
+            </a>
+            <a
+              href="https://portal.waldheim.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              Zum Kundenportal
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise / Custom -->
+  <section class="px-6 py-16 bg-meg-bg-dark border-t border-meg-border-dark">
+    <div class="mx-auto max-w-3xl text-center gsap-fadein">
+      <div class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-10">
+        <i class="fa-solid fa-building text-3xl text-meg-accent mb-4" aria-hidden="true"></i>
+        <h2 class="text-2xl font-black text-meg-text-primary-dark mb-3">Großkunden & Enterprise</h2>
+        <p class="text-meg-text-secondary leading-relaxed mb-6 max-w-xl mx-auto">
+          Mehr als 25 Seats, individuelle SLA, Compliance-Anforderungen oder ein maßgeschneidertes Onboarding?
+          Wir erstellen Ihnen ein individuelles Angebot.
+        </p>
+        <a
+          href="/kontakt/"
+          class="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
+        >
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          Angebot anfragen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module Detail Grid -->
+  <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mb-16 gsap-fadein">
+        <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+          Was ist <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">enthalten?</span>
+        </h2>
+        <p class="text-meg-text-secondary text-xl">Jedes Modul vollständig – kein Modul-Aufpreis, kein Feature-Gate.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {modules.map((mod, i) => (
+          <div
+            class={`gsap-fadein group bg-meg-surface-dark/50 backdrop-blur-xl border ${mod.border} rounded-2xl p-6 hover:scale-[1.02] transition-all`}
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class={`size-12 ${mod.bg} border ${mod.border} rounded-xl flex items-center justify-center mb-5`}>
+              <i class={`fa-solid ${mod.icon} ${mod.color} text-xl`} aria-hidden="true"></i>
+            </div>
+            <h3 class="text-meg-text-primary-dark font-black text-lg mb-2">{mod.name}</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{mod.desc}</p>
+          </div>
+        ))}
+        <!-- Nexus (operator badge) -->
+        <div class="gsap-fadein group bg-meg-surface-dark/30 border border-meg-border-dark rounded-2xl p-6 opacity-60" style="animation-delay: 0.4s">
+          <div class="size-12 bg-sky-500/10 border border-sky-500/20 rounded-xl flex items-center justify-center mb-5">
+            <i class="fa-solid fa-shield-halved text-sky-400 text-xl" aria-hidden="true"></i>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <h3 class="text-meg-text-primary-dark font-black text-lg">Nexus Admin</h3>
+            <span class="text-[10px] font-black uppercase tracking-widest bg-sky-500/10 border border-sky-500/20 text-sky-400 px-2 py-0.5 rounded-md">Operator</span>
+          </div>
+          <p class="text-meg-text-secondary text-sm leading-relaxed">Plattform-Administration, Tenant-Verwaltung, Billing-Ops – für interne Nutzung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
+    <div class="mx-auto max-w-3xl">
+      <div class="text-center mb-16 gsap-fadein">
+        <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">Häufige Fragen</h2>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((faq, i) => (
+          <div
+            class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-meg-accent/30 transition-all"
+            style={`animation-delay: ${i * 0.07}s`}
+          >
+            <h3 class="text-meg-text-primary-dark font-bold text-base mb-2 flex items-start gap-3">
+              <i class="fa-solid fa-circle-question text-meg-accent mt-0.5 shrink-0" aria-hidden="true"></i>
+              {faq.q}
+            </h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed pl-7">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
+    <div class="mx-auto max-w-3xl text-center gsap-fadein">
+      <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+        Bereit für die Suite?
+      </h2>
+      <p class="text-meg-text-secondary text-xl mb-10">Jetzt Early Access anfragen – wir melden uns innerhalb von 24 Stunden.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/kontakt/"
+          class="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
+        >
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Early Access anfragen
+        </a>
+        <a
+          href="https://portal.waldheim.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          Kundenportal öffnen
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
