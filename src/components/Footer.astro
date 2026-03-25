@@ -90,46 +90,39 @@ try {
           </div>
 
           <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Produkte</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Suite</h3>
             <ul role="list" class="mt-5 space-y-3">
-              {[
-                { name: 'Ecodrive', href: '/ecodrive/' },
-                { name: 'Silvacore', href: '/silvacore/' },
-                { name: 'Socialverse', href: '/socialverse/' },
-                { name: 'Aether', href: '/aether/' },
-                { name: 'WetterApp', href: '/waetherapp/' },
-                { name: 'Obsidian Gemini Agent', href: '/obsidian-gemini-agent/' },
-                { name: 'Ausgabeschein', href: '/ausgabeschein-generator/' },
-                { name: 'Astro AI', href: '/astro-ai-llms-txt/' }
-              ].map((item) => (
-                <li>
-                  <a href={item.href}
-                     class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">{item.name}</a>
-                </li>
-              ))}
+              <li><a href="/suite/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Übersicht</a></li>
+              <li><a href="/suite/socialverse/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Socialverse CRM</a></li>
+              <li><a href="/suite/forge/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Forge ERP</a></li>
+              <li><a href="/suite/aether/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Aether</a></li>
+              <li><a href="/suite/ecodrive/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Ecodrive</a></li>
+              <li><a href="/suite/portal/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Customer Portal</a></li>
+              <li><a href="/suite/preise/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Preise</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">App-Links</h3>
+            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Open Source</h3>
             <ul role="list" class="mt-5 space-y-3">
-              {[
-                { name: 'Ecodrive App', href: 'https://www.eco-drive.app' },
-                { name: 'Silvacore App', href: 'https://app.silvacore.de' },
-                { name: 'Aether App', href: 'https://aether.waldheim.dev' },
-                { name: 'WetterApp', href: 'https://wetter.waldheim.dev' },
-                { name: 'Kundenportal', href: 'https://portal.waldheim.dev' }
-              ].map((item) => (
-                <li>
-                  <a href={item.href}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                    {item.name}
-                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/waetherapp/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">WetterApp</a>
+              </li>
+              <li>
+                <a href="/obsidian-gemini-agent/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Obsidian Gemini Agent</a>
+              </li>
+              <li>
+                <a href="/ausgabeschein-generator/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Ausgabeschein Generator</a>
+              </li>
+              <li>
+                <a href="/astro-ai-llms-txt/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Astro AI llms.txt</a>
+              </li>
+              <li>
+                <a href="https://portal.waldheim.dev" target="_blank" rel="noopener noreferrer" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+                  Kundenportal
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                </a>
+              </li>
             </ul>
           </div>
 
