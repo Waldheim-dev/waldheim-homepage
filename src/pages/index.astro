@@ -6,20 +6,11 @@ import HeroBackground from '../components/HeroBackground.astro';
 import PortfolioTop from '../components/PortfolioTop.astro';
 import PriceService from '../components/PriceService.astro';
 import Blog from '../components/Blog.astro';
-import EcodriveClaim from '../components/EcodriveClaim.astro';
-import PriceEcodrive from '../components/PriceEcodrive.astro';
 import SkillWrapper from '../components/SkillWrapper.astro';
-import type { Fragment } from 'astro/runtime/server/index.js';
-import PriceSilvacore from '../components/PriceSilvacore.astro';
-import PriceSocialverse from '../components/PriceSocialverse.astro';
-import SilvacoreClaim from '../components/SilvacoreClaim.astro';
-import SocialverseClaim from '../components/SocialverseClaim.astro';
-import AetherClaim from '../components/AetherClaim.astro';
-import WaetherappClaim from '../components/WaetherappClaim.astro';
-import ObsidianGeminiClaim from '../components/ObsidianGeminiClaim.astro';
 import TrackedButton from '../components/TrackedButton.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FreeTools from '../components/FreeTools.astro';
+import SuiteClaim from '../components/SuiteClaim.astro';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
@@ -384,20 +375,7 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
       <FreeTools />
       <SkillWrapper />
 
-      <EcodriveClaim />
-      <PriceEcodrive />
-
-      <SocialverseClaim />
-      <PriceSocialverse />
-
-      <SilvacoreClaim />
-      <PriceSilvacore />
-
-      <AetherClaim />
-
-      <ObsidianGeminiClaim />
-
-      <WaetherappClaim />
+      <SuiteClaim />
     </main>
   </div>
 </Layout>

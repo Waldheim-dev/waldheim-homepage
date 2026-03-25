@@ -6,10 +6,7 @@ import { PRODUCTS, SERVICE_COLORS, getProductInfo, getServiceColors } from '../c
 const version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
 
 // Get product info (with versions)
-const ecodrive = getProductInfo('ecodrive')!;
-const socialverse = getProductInfo('socialverse')!;
-const silvacore = getProductInfo('silvacore')!;
-const aether = getProductInfo('aether')!;
+const suite = getProductInfo('suite')!;
 const waetherapp = getProductInfo('waetherapp')!;
 const obsidianGeminiAgent = getProductInfo('obsidian-gemini-agent')!;
 const ausgabeschein = getProductInfo('ausgabeschein-generator')!;
@@ -50,48 +47,61 @@ const smarthomeColors = getServiceColors('smarthome');
                 <div class="block">
                 <button type="button"
                         class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark"
-                        aria-controls="mobile-products" aria-expanded="false" aria-label="Produkte Menü öffnen">
-                  Produkte
+                        aria-controls="mobile-products" aria-expanded="false" aria-label="Suite Menü öffnen">
+                  Suite
                   <i class="fa-solid fa-chevron-down text-lg transition-transform" aria-hidden="true"></i>
                 </button>
-                <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                <!-- 'Suite' sub-menu -->
                 <div class="mt-2 space-y-2 border-l-2 border-meg-accent/30 ml-1 px-2" id="mobile-products" hidden>
-                  <a href="/ecodrive/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${ecodrive.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Ecodrive</span>
-                    <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${ecodrive.colors.badgeBg} ${ecodrive.colors.badgeBorder} ${ecodrive.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ecodrive.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ecodrive.status !== 'stable' ? `${ecodrive.status}` : `v${ecodrive.version}`}
+                  <a href="/suite/"
+                     class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-meg-accent/20 text-meg-text-primary-dark transition-all`}>
+                    <span>Übersicht</span>
+                    <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${suite.colors.badgeBg} ${suite.colors.badgeBorder} ${suite.colors.badgeText}`}>
+                      <i class={`fa-solid fa-circle text-${suite.colors.iconColor} text-[6px] animate-pulse`} aria-hidden="true"></i>
+                      {suite.status}
                     </span>
                   </a>
-                  <a href="/socialverse/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${socialverse.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Socialverse</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${socialverse.colors.badgeBg} ${socialverse.colors.badgeBorder} ${socialverse.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${socialverse.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {socialverse.status !== 'stable' ? `${socialverse.status}` : `v${socialverse.version}`}
-                </span>
+                  <a href="/suite/socialverse/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-violet-400/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-users-gear text-violet-400 text-sm" aria-hidden="true"></i>
+                    <span>Socialverse CRM</span>
                   </a>
-                  <a href="/silvacore/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${silvacore.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Silvacore</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${silvacore.colors.badgeBg} ${silvacore.colors.badgeBorder} ${silvacore.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${silvacore.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {silvacore.status !== 'stable' ? `${silvacore.status}` : `v${silvacore.version}`}
-                </span>
+                  <a href="/suite/forge/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-amber-400/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-hammer text-amber-400 text-sm" aria-hidden="true"></i>
+                    <span>Forge ERP</span>
                   </a>
-                  <a href="/aether/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${aether.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
+                  <a href="/suite/aether/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-rose-400/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-folder-open text-rose-400 text-sm" aria-hidden="true"></i>
                     <span>Aether</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
-                </span>
                   </a>
+                  <a href="/suite/ecodrive/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-teal-400/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-car-side text-teal-400 text-sm" aria-hidden="true"></i>
+                    <span>Ecodrive</span>
+                  </a>
+                  <a href="/suite/portal/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-emerald-400/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-headset text-emerald-400 text-sm" aria-hidden="true"></i>
+                    <span>Customer Portal</span>
+                  </a>
+                  <a href="/suite/preise/"
+                     class="mobile-subnav-item flex items-center gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-meg-accent/20 text-meg-text-primary-dark transition-all">
+                    <i class="fa-solid fa-tag text-meg-accent text-sm" aria-hidden="true"></i>
+                    <span>Preise</span>
+                  </a>
+                </div>
+              </div>
+              <div class="block">
+                <button type="button"
+                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark"
+                        aria-controls="mobile-opensource" aria-expanded="false" aria-label="Open Source Menü öffnen">
+                  Open Source
+                  <i class="fa-solid fa-chevron-down text-lg transition-transform" aria-hidden="true"></i>
+                </button>
+                <!-- 'Open Source' sub-menu -->
+                <div class="mt-2 space-y-2 border-l-2 border-emerald-500/30 ml-1 px-2" id="mobile-opensource" hidden>
                   <a href="/ausgabeschein-generator/"
                       class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${ausgabeschein.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
                     <span>Ausgabeschein Generator</span>
@@ -195,162 +205,132 @@ const smarthomeColors = getServiceColors('smarthome');
           <button type="button"
                   class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
                   aria-expanded="false"
-                  aria-label="Produkte Menü">
-            <span>Produkte</span>
+                  aria-label="Suite Menü">
+            <span>Suite</span>
             <i class="fa-solid fa-chevron-down text-sm transition-transform" aria-hidden="true"></i>
           </button>
 
           <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-300 opacity-0 translate-y-2">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark text-sm/6 shadow-2xl shadow-meg-accent/5 lg:max-w-3xl">
+            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark text-sm/6 shadow-2xl shadow-meg-accent/5">
+              <div class="grid grid-cols-1 gap-y-1 p-4">
+                <!-- Suite main entry -->
+                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-accent/20`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-accent/10 border border-meg-accent/30 group-hover:bg-meg-accent/20 group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                    <i class="fa-solid fa-grid-2 text-xl text-meg-accent" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <a href="/suite/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+                      Waldheim Suite
+                      <span class="absolute inset-0"></span>
+                      <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${suite.colors.badgeBg} ${suite.colors.badgeBorder} ${suite.colors.badgeText}`}>
+                        <i class={`fa-solid fa-circle text-${suite.colors.iconColor} text-[6px] animate-pulse`} aria-hidden="true"></i>
+                        {suite.status}
+                      </span>
+                    </a>
+                    <p class="mt-1 text-meg-text-secondary">CRM · ERP · Dokumente · Flotten · Portal – alles verbunden</p>
+                  </div>
+                </div>
+                <!-- Module links -->
+                <div class="px-4 pt-1 pb-2 grid grid-cols-2 gap-2">
+                  {[
+                    { icon: 'fa-users-gear', label: 'Socialverse CRM', color: 'text-violet-400', href: '/suite/socialverse/' },
+                    { icon: 'fa-hammer', label: 'Forge ERP', color: 'text-amber-400', href: '/suite/forge/' },
+                    { icon: 'fa-folder-open', label: 'Aether', color: 'text-rose-400', href: '/suite/aether/' },
+                    { icon: 'fa-car-side', label: 'Ecodrive', color: 'text-teal-400', href: '/suite/ecodrive/' },
+                    { icon: 'fa-headset', label: 'Customer Portal', color: 'text-emerald-400', href: '/suite/portal/' },
+                  ].map(mod => (
+                    <a href={mod.href} class="flex items-center gap-2 text-xs text-meg-text-secondary hover:text-meg-text-primary-dark transition-colors rounded-lg px-2 py-1.5 hover:bg-meg-surface-dark/70">
+                      <i class={`fa-solid ${mod.icon} ${mod.color} text-xs`} aria-hidden="true"></i>
+                      {mod.label}
+                    </a>
+                  ))}
+                </div>
+                <!-- Pricing link -->
+                <div class="px-4 pb-3 border-t border-meg-border-dark/50 mt-1 pt-2">
+                  <a href="/suite/preise/" class="flex items-center gap-2 text-xs text-meg-accent hover:text-meg-accent/80 transition-colors font-semibold rounded-lg px-2 py-1.5 hover:bg-meg-accent/5">
+                    <i class="fa-solid fa-tag text-xs" aria-hidden="true"></i>
+                    Preise & Übersicht
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative dropdown">
+          <button type="button"
+                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
+                  aria-expanded="false"
+                  aria-label="Open Source Menü">
+            <span>Open Source</span>
+            <i class="fa-solid fa-chevron-down text-sm transition-transform" aria-hidden="true"></i>
+          </button>
+
+          <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-300 opacity-0 translate-y-2">
+            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark text-sm/6 shadow-2xl shadow-meg-accent/5 lg:max-w-2xl">
               <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
                 <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-chart-line text-xl text-${ecodrive.colors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/ecodrive/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Ecodrive
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${ecodrive.colors.badgeBg} ${ecodrive.colors.badgeBorder} ${ecodrive.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ecodrive.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ecodrive.status !== 'stable' ? `${ecodrive.status}` : `v${ecodrive.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Ist dein Fahrverhalten Eco?</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-globe text-xl text-${socialverse.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/socialverse/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Socialverse
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${socialverse.colors.badgeBg} ${socialverse.colors.badgeBorder} ${socialverse.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${socialverse.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {socialverse.status !== 'stable' ? `${socialverse.status}` : `v${socialverse.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Mikro AI CRM/CMS</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-house text-xl text-${silvacore.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/silvacore/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Silvacore
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${silvacore.colors.badgeBg} ${silvacore.colors.badgeBorder} ${silvacore.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${silvacore.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {silvacore.status !== 'stable' ? `${silvacore.status}` : `v${silvacore.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Hausverwaltungssoftware</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-atom text-xl text-${aether.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/aether/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Aether
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Dateitransfer</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-emerald-400/20 transition-all`}>
                     <i class={`fa-solid fa-clipboard-list text-xl text-${ausgabeschein.colors.iconColor}`} aria-hidden="true"></i>
-
                   </div>
                   <div>
                     <a href="/ausgabeschein-generator/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
                       Ausgabeschein Generator
                       <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${ausgabeschein.colors.badgeBg} ${ausgabeschein.colors.badgeBorder} ${ausgabeschein.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ausgabeschein.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ausgabeschein.status !== 'stable' ? `${ausgabeschein.status}` : `v${ausgabeschein.version}`}
-                    </span>
+                      <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${ausgabeschein.colors.badgeBg} ${ausgabeschein.colors.badgeBorder} ${ausgabeschein.colors.badgeText}`}>
+                        <i class={`fa-solid fa-circle text-${ausgabeschein.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                        {ausgabeschein.status !== 'stable' ? `${ausgabeschein.status}` : `v${ausgabeschein.version}`}
+                      </span>
                     </a>
-                    <p class="mt-1 text-meg-text-secondary">Netbox Plugin</p>
+                    <p class="mt-1 text-meg-text-secondary">Web Tool für Vereine</p>
                   </div>
                 </div>
                 <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-sparkles text-xl text-${astroAi.colors.iconColor}`} aria-hidden="true"></i>
-
-
-                  </div>
-                <div>
-                    <a href="/astro-ai-llms-txt/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Astro AI llms.txt Generator
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${astroAi.colors.badgeBg} ${astroAi.colors.badgeBorder} ${astroAi.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${astroAi.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {astroAi.status !== 'stable' ? `${astroAi.status}` : `v${astroAi.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">AstroJS Plugin</p>
-                  </div>
-                </div>                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-blue-400/20 transition-all`}>
                     <i class={`fa-solid fa-cloud-sun text-xl text-${waetherapp.colors.iconColor}`} aria-hidden="true"></i>
-
                   </div>
                   <div>
                     <a href="/waetherapp/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
                       WetterApp
                       <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
-                    </span>
+                      <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
+                        <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                        {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
+                      </span>
                     </a>
-                    <p class="mt-1 text-meg-text-secondary">Wetter und Vorhersage</p>
+                    <p class="mt-1 text-meg-text-secondary">Wetter & Vorhersage</p>
                   </div>
                 </div>
                 <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-indigo-400/20 transition-all`}>
                     <i class={`fa-solid fa-brain-circuit text-xl text-${obsidianGeminiAgent.colors.iconColor}`} aria-hidden="true"></i>
                   </div>
                   <div>
                     <a href="/obsidian-gemini-agent/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
                       Obsidian Gemini Agent
                       <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
-                    </span>
+                      <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
+                        <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                        {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
+                      </span>
                     </a>
-                    <p class="mt-1 text-meg-text-secondary">Autonomes Obsidian-Plugin</p>
+                    <p class="mt-1 text-meg-text-secondary">Obsidian-Plugin mit Gemini AI</p>
+                  </div>
+                </div>
+                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
+                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
+                    <i class={`fa-solid fa-sparkles text-xl text-${astroAi.colors.iconColor}`} aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <a href="/astro-ai-llms-txt/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
+                      Astro AI llms.txt Generator
+                      <span class="absolute inset-0"></span>
+                      <span class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${astroAi.colors.badgeBg} ${astroAi.colors.badgeBorder} ${astroAi.colors.badgeText}`}>
+                        <i class={`fa-solid fa-circle text-${astroAi.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
+                        {astroAi.status !== 'stable' ? `${astroAi.status}` : `v${astroAi.version}`}
+                      </span>
+                    </a>
+                    <p class="mt-1 text-meg-text-secondary">AstroJS Plugin</p>
                   </div>
                 </div>
               </div>
