@@ -38,8 +38,8 @@ const modules = [
     color: 'violet',
     title: 'Socialverse CRM',
     subtitle: 'Pipeline, Deals & Kontakte',
-    description: 'Professionelles CRM mit Deal-Pipeline, Kontaktmanagement, Revenue-Workflows und KPI-Dashboard für Ihren Vertrieb.',
-    badge: 'Closed Alpha',
+    description: 'Professionelles CRM mit Deal-Pipeline, Kontaktmanagement, Kampagnen, Revenue-Workflows und KPI-Dashboard für Ihren Vertrieb.',
+    badge: 'Beta',
   },
   {
     href: '/suite/forge/',
@@ -47,8 +47,8 @@ const modules = [
     color: 'amber',
     title: 'Forge ERP',
     subtitle: 'Produkte, Projekte & Aufträge',
-    description: 'Enterprise-Ressourcenplanung mit Produktkatalog, Projektmanagement, Budgetverwaltung und Auftragsabwicklung.',
-    badge: 'Closed Alpha',
+    description: 'Enterprise-Ressourcenplanung mit Produktkatalog, Projektmanagement, Zeiterfassung, Angeboten und Auftragsabwicklung.',
+    badge: 'Beta',
   },
   {
     href: '/suite/aether/',
@@ -56,8 +56,8 @@ const modules = [
     color: 'rose',
     title: 'Aether',
     subtitle: 'Dokumente, Assets & Wissen',
-    description: 'Zentrales Dokumentenmanagement mit Ordnerstruktur, Explorer-Ansicht, Entwürfen und Storage-Übersicht.',
-    badge: 'Closed Alpha',
+    description: 'Zentrales Dokumentenmanagement mit Ordnerstruktur, Explorer-Ansicht, XRechnung-Export und verknüpften Wissensobjekten.',
+    badge: 'Beta',
   },
   {
     href: '/suite/ecodrive/',
@@ -65,8 +65,8 @@ const modules = [
     color: 'teal',
     title: 'Ecodrive',
     subtitle: 'Flotten, Routen & CO₂',
-    description: 'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, CO₂-Tracking und ESG-Reporting.',
-    badge: 'Closed Alpha',
+    description: 'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, GPS-Tracking, CO₂-Reporting und ESG-Kennzahlen.',
+    badge: 'Beta',
   },
   {
     href: '/suite/portal/',
@@ -74,9 +74,33 @@ const modules = [
     color: 'emerald',
     title: 'Customer Portal',
     subtitle: 'Tickets, Rechnungen & Support',
-    description: 'Self-Service-Portal für Kunden: Ticket-System, Rechnungsverwaltung, Abo-Verwaltung und Support-Queue.',
-    badge: 'Closed Alpha',
+    description: 'Self-Service-Portal für Kunden: Ticket-System, Rechnungsverwaltung, Abo-Verwaltung, Stripe-Integration und Support-Queue.',
+    badge: 'Live',
   },
+  {
+    href: '/suite/nexus/',
+    icon: 'fa-shield-halved',
+    color: 'indigo',
+    title: 'Nexus Admin',
+    subtitle: 'Tenants, Audit & Plattform',
+    description: 'Super-Admin-Konsole für Tenant-Management, Audit Trail, Plattform-KPIs, Revenue-Übersicht und Benutzer-Administration.',
+    badge: 'Live',
+  },
+];
+
+const pricingFeatures = [
+  'Socialverse CRM · Kampagnen · Segmente · Workflows',
+  'Forge ERP · Projekte · Zeiterfassung · XRechnung / EN 16931',
+  'Aether Dokumente & Asset-Management',
+  'Ecodrive Fuhrpark · GPS-Tracking · CO₂',
+  'Customer Portal · Support-Tickets · Stripe Billing',
+  'Nexus Admin · Audit Trail · MFA + SSO · DSGVO',
+];
+
+const pricingExamples = [
+  { seats: 5, label: 'Starter', total: 245 },
+  { seats: 10, label: 'Team', total: 490 },
+  { seats: 20, label: 'Scale', total: 980 },
 ];
 
 const usps = [
@@ -103,6 +127,15 @@ const techStack = [
   { icon: 'fa-server', label: 'Go API', desc: 'Hochperformantes Backend' },
   { icon: 'fa-shield-check', label: 'DSGVO', desc: 'Server in Deutschland' },
   { icon: 'fa-palette', label: 'waldheim-ui', desc: 'Eigenes Design System' },
+];
+
+const complianceItems = [
+  { icon: 'fa-file-invoice', label: 'XRechnung / EN 16931', desc: 'E-Rechnungspflicht ab 2025 erfüllt' },
+  { icon: 'fa-shield-halved', label: 'DSGVO-konform', desc: 'Server in Deutschland, Auftragsverarbeitung' },
+  { icon: 'fa-clipboard-list', label: 'Audit Trail', desc: 'Vollständige Nachvollziehbarkeit aller Aktionen' },
+  { icon: 'fa-lock', label: 'Tenant-Isolation', desc: 'Vollständige Datentrennung auf DB-Ebene' },
+  { icon: 'fa-key', label: 'MFA & SSO', desc: 'TOTP-MFA, sichere Session-Verwaltung' },
+  { icon: 'fa-chart-bar', label: 'Reporting & KPIs', desc: 'Cross-Suite Kennzahlen auf einem Blick' },
 ];
 ---
 
@@ -176,7 +209,7 @@ const techStack = [
           </div>
           <div class="flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl">
             <i class="fa-solid fa-cubes text-meg-accent" aria-hidden="true"></i>
-            <span class="font-semibold">5 Module</span>
+            <span class="font-semibold">6+ Module</span>
           </div>
         </div>
       </div>
@@ -280,6 +313,97 @@ const techStack = [
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="compliance-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-shield-halved mr-2" aria-hidden="true"></i>
+          Compliance & Sicherheit
+        </p>
+        <h2 id="compliance-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
+          Sicherheit ist kein Feature – sie ist Standard.
+        </h2>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto" style="animation-delay: 0.3s">
+          E-Rechnungspflicht, DSGVO, Audit Trail und Mandantentrennung: Die Waldheim Suite erfüllt alle regulatorischen Anforderungen für den DACH-Mittelstand.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {complianceItems.map((item, i) => (
+          <div class="gsap-fadein flex items-start gap-4 bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-meg-accent/30 transition-all" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-meg-accent/10 border border-meg-accent/20">
+              <i class={`fa-solid ${item.icon} text-meg-accent`} aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="text-meg-text-primary-dark font-bold text-sm mb-1">{item.label}</h3>
+              <p class="text-meg-text-secondary text-xs leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="pricing-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-tag mr-2" aria-hidden="true"></i>
+          Preise
+        </p>
+        <h2 id="pricing-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
+          Transparent. Modular. Skalierbar.
+        </h2>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto" style="animation-delay: 0.3s">
+          Starten Sie klein und wachsen Sie mit der Suite. Alle Preise pro Monat, jährliche Abrechnung möglich.
+        </p>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-violet-500/30 rounded-3xl p-10 shadow-2xl shadow-violet-500/10 text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-violet-400 mb-4">Waldheim Suite · Vollständiger Zugang, alle Module</p>
+          <div class="flex items-baseline justify-center gap-3 mb-2">
+            <span class="text-6xl font-black text-violet-400">€49</span>
+            <div class="text-left">
+              <p class="text-meg-text-secondary text-sm font-semibold">/Seat</p>
+              <p class="text-meg-text-secondary text-sm">/Monat</p>
+            </div>
+          </div>
+          <p class="text-meg-text-secondary mb-8">
+            Flat-Rate, linear skalierend · keine Mindestlaufzeit · volle Suite, alle Module
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left mb-10">
+            {pricingFeatures.map(f => (
+              <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
+                <i class="fa-solid fa-circle-check text-violet-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="grid grid-cols-3 gap-4 mb-10">
+            {pricingExamples.map(ex => (
+              <div class="rounded-2xl bg-meg-surface-dark/60 border border-meg-border-dark px-4 py-5">
+                <p class="text-xs font-bold uppercase tracking-wider text-meg-text-secondary mb-1">{ex.label}</p>
+                <p class="text-3xl font-black text-meg-text-primary-dark">€{ex.total}</p>
+                <p class="text-xs text-meg-text-secondary mt-1">{ex.seats} Seats · /Monat</p>
+              </div>
+            ))}
+          </div>
+          <a
+            href="/kontakt/"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-violet-500 text-white font-bold text-sm rounded-xl hover:shadow-xl hover:shadow-violet-500/30 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
+          >
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            Suite Demo anfragen
+          </a>
+        </div>
+        <p class="text-center text-meg-text-secondary text-sm mt-8">
+          Alle Preise zzgl. MwSt. · Jahresabrechnung auf Anfrage. · Enterprise-Konditionen individuell verhandelbar.
+        </p>
       </div>
     </div>
   </section>
