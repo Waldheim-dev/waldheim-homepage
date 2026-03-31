@@ -89,82 +89,39 @@ const modules = [
   },
 ];
 
-const pricingTiers = [
-  {
-    name: 'Core',
-    price: 39,
-    color: 'sky',
-    badge: 'Einstieg',
-    description: 'Für Teams, die CRM, ERP und Dokumente in einer Plattform brauchen.',
-    features: [
-      'Socialverse CRM · Pipeline · Kontakte · Kampagnen',
-      'Forge ERP · Produkte · Projekte · Zeiterfassung',
-      'XRechnung / EN 16931 · ZUGFeRD PDF',
-      'Aether Dokumente & Asset-Management',
-      'Nexus Admin · Audit Trail · MFA',
-      'Single Sign-On · Multi-Tenant',
-    ],
-    cta: 'Core starten',
-  },
-  {
-    name: 'Growth',
-    price: 49,
-    color: 'violet',
-    badge: 'Beliebt',
-    highlight: true,
-    description: 'Für wachsende Unternehmen mit Portal, Flotte, ESG und KI.',
-    features: [
-      'Alles aus Core',
-      'Customer Portal · Support-Tickets · Stripe Billing',
-      'Ecodrive Fuhrpark · GPS-Tracking · CO₂/ESG',
-      'KI Lead Scoring & Ticket-Zusammenfassung',
-      'PWA · Push-Benachrichtigungen',
-      'Mehrsprachigkeit (i18n) · Content-Lokalisierung',
-    ],
-    cta: 'Growth wählen',
-  },
-  {
-    name: 'Scale',
-    price: 65,
-    color: 'emerald',
-    badge: 'Enterprise',
-    description: 'Für Enterprises mit Compliance, Social und Kalender-Integration.',
-    features: [
-      'Alles aus Growth',
-      'DSGVO-Center · Löschanträge · Consent-Management',
-      'Social Integrationen · Facebook · LinkedIn · Instagram',
-      'Kalender-Sync · Google Calendar · Microsoft 365',
-      'iCal-Feed · Ressourcenbuchungen',
-      'Enterprise SLA · Dedizierter Support',
-    ],
-    cta: 'Scale anfragen',
-  },
+const includedFeatures = [
+  'Alle 5 Kern-Module inklusive',
+  'Unbegrenzte Mandanten-Isolation',
+  'Single Sign-On & App Switcher',
+  'DSGVO-konform (Server in DE)',
+  'E-Rechnung (XRechnung / ZUGFeRD)',
+  'Audit-Log & Rollenverwaltung',
 ];
 
 const faqItems = [
   {
-    question: 'Kann ich mit einem einzelnen Modul beginnen?',
-    answer: 'Ja. Jedes Paket enthält mehrere Module, aber Sie können mit dem Core-Paket starten und jederzeit auf Growth oder Scale upgraden. Ihre Daten bleiben erhalten.',
+    question: 'Was ist in einem Seat enthalten?',
+    answer: 'Ein Seat gibt einem Benutzer vollen Zugang zu allen Modulen der Suite (CRM, ERP, Docs, Fleet, Portal). Module sind nicht einzeln buchbar – die Suite kommt als vollständiges Paket.',
   },
   {
     question: 'Wie funktioniert die Mandantentrennung?',
-    answer: 'Jede Organisation hat ihren eigenen isolierten Tenant. Alle Datenbankabfragen werden tenant-scoped ausgeführt – keine gemeinsamen Tabellen zwischen Kunden.',
+    answer: 'Jede Organisation erhält einen eigenen, vollständig isolierten Tenant. Ihre Daten sind strikt von denen anderer Kunden getrennt – technisch auf Datenbankebene und organisatorisch.',
   },
   {
     question: 'Unterstützt die Suite die E-Rechnungspflicht?',
-    answer: 'Ja. Forge ERP erzeugt XRechnung (EN 16931-konform) und ZUGFeRD PDF/A-3b Hybrid-Rechnungen direkt aus der Auftragsverwaltung – ohne Zusatzmodul.',
-  },
-  {
-    question: 'Wie läuft die Migration bestehender Daten ab?',
-    answer: 'Wir bieten strukturierte Migrations-Rezepte für die gängigsten Vor-Systeme. Für Enterprise-Kunden führen wir ein Migration Assessment durch und begleiten den Rollout in Phasen.',
-  },
-  {
-    question: 'Ist Single Sign-On in allen Paketen enthalten?',
-    answer: 'Ja. SSO (TOTP-MFA, sichere Sessions) ist Bestandteil jedes Pakets. SAML/OIDC-Integration für externe Identity Provider ist im Scale-Paket verfügbar.',
+    answer: 'Ja. Forge ERP erzeugt XRechnung (EN 16931-konform) und ZUGFeRD PDF/A-3b Hybrid-Rechnungen direkt aus der Auftragsverwaltung – ohne Zusatzkosten.',
   },
   {
     question: 'Wo werden die Daten gespeichert?',
-    answer: 'Alle Server stehen in Deutschland (DSGVO-konforme Rechenzentren). Backups, Verschlüsselung in transit und at rest sind standardmäßig aktiviert.',
+    answer: 'Alle Server stehen in Deutschland in DSGVO-konformen Rechenzentren. Backups, Verschlüsselung in transit und at rest sind standardmäßig aktiviert.',
+  },
+  {
+    question: 'Kann ich monatlich kündigen?',
+    answer: 'Ja. Abonnements laufen monatlich über Stripe und können jederzeit zum Ende des Abrechnungszeitraums gekündigt werden. Es gibt keine Mindestlaufzeit.',
+  },
+  {
+    question: 'Wie läuft die Migration bestehender Daten ab?',
+    answer: 'Wir bieten strukturierte Migrations-Rezepte für gängige Systeme. Für größere Umgebungen führen wir ein Migration Assessment durch und begleiten den Rollout.',
   },
 ];
 
@@ -901,84 +858,67 @@ const complianceItems = [
           Preise
         </p>
         <h2 id="pricing-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
-          Transparent. Modular. Skalierbar.
+          Ein Preis. Alle Module.
         </h2>
         <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto" style="animation-delay: 0.3s">
-          Starten Sie klein und wachsen Sie mit der Suite. Alle Preise pro Monat, jährliche Abrechnung möglich.
+          Keine Tier-Verwirrung. Die Waldheim Suite kommt als vollständiges Paket – pro Seat, pro Monat.
         </p>
       </div>
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {pricingTiers.map((tier, i) => (
-            <div class={`gsap-fadein relative bg-meg-surface-dark/50 backdrop-blur-xl border ${tier.highlight ? `border-${tier.color}-500/50 shadow-2xl shadow-${tier.color}-500/10` : 'border-meg-border-dark'} rounded-3xl p-8 flex flex-col`} style={`animation-delay: ${i * 0.1}s`}>
-              {tier.highlight && (
-                <div class={`absolute -top-4 left-1/2 -translate-x-1/2 bg-${tier.color}-500 text-white text-xs font-black px-4 py-1.5 rounded-full`}>
-                  Empfohlen
-                </div>
-              )}
-              <div class="mb-6">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class={`text-xl font-black text-${tier.color}-400`}>{tier.name}</h3>
-                  <span class={`text-xs font-bold px-2 py-1 rounded-lg bg-${tier.color}-500/10 border border-${tier.color}-500/20 text-${tier.color}-400`}>{tier.badge}</span>
-                </div>
-                <p class="text-meg-text-secondary text-sm mb-4">{tier.description}</p>
-                <div class="flex items-baseline gap-2">
-                  <span class={`text-5xl font-black text-${tier.color}-400`}>€{tier.price}</span>
-                  <div class="text-meg-text-secondary text-sm">
-                    <p>/ Seat</p>
-                    <p>/ Monat</p>
-                  </div>
+      
+      <div class="max-w-2xl mx-auto">
+        <div class="gsap-fadein relative group">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700" aria-hidden="true"></div>
+          <div class="relative bg-meg-surface-dark border border-meg-accent/30 rounded-3xl p-10 shadow-2xl shadow-meg-accent/10">
+            <div class="flex items-center justify-between mb-8">
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-meg-accent/10 border border-meg-accent/20 text-meg-accent text-xs font-black uppercase tracking-widest">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>
+                Early Access
+              </span>
+              <span class="text-meg-text-secondary text-sm font-semibold">Monatlich kündbar</span>
+            </div>
+
+            <div class="mb-8">
+              <p class="text-meg-text-secondary text-sm font-semibold uppercase tracking-widest mb-2">Waldheim Suite</p>
+              <div class="flex items-end gap-2">
+                <span class="text-7xl font-black text-meg-text-primary-dark tracking-tighter">€49</span>
+                <div class="pb-3 text-meg-text-secondary">
+                  <span class="text-lg font-bold">/Seat</span>
+                  <br />
+                  <span class="text-sm">/Monat</span>
                 </div>
               </div>
-              <ul class="space-y-3 flex-1 mb-8">
-                {tier.features.map(f => (
-                  <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
-                    <i class={`fa-solid fa-circle-check text-${tier.color}-400 text-xs mt-0.5 shrink-0`} aria-hidden="true"></i>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+            </div>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+              {includedFeatures.map(item => (
+                <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
+                  <i class="fa-solid fa-check-circle text-meg-accent text-base shrink-0" aria-hidden="true"></i>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="/kontakt/"
-                class={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 ${tier.highlight ? `bg-${tier.color}-500 text-white` : `bg-meg-surface-dark border border-${tier.color}-500/30 text-${tier.color}-400`} font-bold rounded-xl hover:shadow-lg transition-all duration-300`}
+                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
               >
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                {tier.cta}
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                Early Access
+              </a>
+              <a
+                href="/suite/preise/"
+                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
+              >
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                Details ansehen
               </a>
             </div>
-          ))}
+          </div>
         </div>
-        <p class="text-center text-meg-text-secondary text-sm mt-4">
-          Alle Preise zzgl. MwSt. · Jahresabrechnung auf Anfrage möglich. · Enterprise-Konditionen individuell verhandelbar.
+        <p class="text-center text-meg-text-secondary text-sm mt-8">
+          Alle Preise zzgl. MwSt. · Jährliche Abrechnung auf Anfrage.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="faq-heading">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
-          <i class="fa-solid fa-circle-question mr-2" aria-hidden="true"></i>
-          Häufige Fragen
-        </p>
-        <h2 id="faq-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
-          FAQ
-        </h2>
-      </div>
-      <div class="space-y-4">
-        {faqItems.map((item, i) => (
-          <details class={`gsap-fadein group bg-meg-bg-dark border border-meg-border-dark rounded-2xl overflow-hidden hover:border-meg-accent/30 transition-colors`} style={`animation-delay: ${i * 0.05}s`}>
-            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
-              <h3 class="font-bold text-meg-text-primary-dark">{item.question}</h3>
-              <i class="fa-solid fa-chevron-down text-meg-accent transition-transform group-open:rotate-180 shrink-0" aria-hidden="true"></i>
-            </summary>
-            <div class="px-6 pb-5">
-              <p class="text-meg-text-secondary leading-relaxed">{item.answer}</p>
-            </div>
-          </details>
-        ))}
       </div>
     </div>
   </section>
