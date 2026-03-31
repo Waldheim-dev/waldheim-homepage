@@ -12,9 +12,10 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
 
 const titel = 'Waldheim Suite – Die integrierte Business-Suite | Waldheim.dev';
 const description =
-  'Die Waldheim Suite: Socialverse CRM, Forge ERP, Aether Dokumentenmanagement, Ecodrive Flottenmanagement und Customer Portal – vereint in einer integrierten SaaS-Plattform mit Single Sign-On und App Switcher.';
+
+  'Die Waldheim Suite: Socialverse CRM, Forge ERP, Aether Dokumentenmanagement, Ecodrive Flottenmanagement und Customer Portal – vereint in einer integrierten SaaS-Plattform mit Single Sign-On, Multi-Tenant und App Switcher.';
 const keywords =
-  'Waldheim Suite, Business Suite, ERP, CRM, Flottenmanagement, Dokumentenmanagement, Forge, Socialverse, Ecodrive, Aether, SaaS, Enterprise, Single Sign-On, Multi-Tenant';
+  'Waldheim Suite, Business Suite, Multi-Tenant ERP, ERP CRM Suite DACH, Modular ERP Mittelstand, CRM Billing Plattform, E-Rechnung ERP SaaS, Forge ERP, Socialverse CRM, Ecodrive, Aether, ZUGFeRD, XRechnung, GPS Tracking, Single Sign-On, DSGVO';
 
 const softwareSchema = {
   '@context': 'https://schema.org',
@@ -88,19 +89,98 @@ const modules = [
   },
 ];
 
-const pricingFeatures = [
-  'Socialverse CRM · Kampagnen · Segmente · Workflows',
-  'Forge ERP · Projekte · Zeiterfassung · XRechnung / EN 16931',
-  'Aether Dokumente & Asset-Management',
-  'Ecodrive Fuhrpark · GPS-Tracking · CO₂',
-  'Customer Portal · Support-Tickets · Stripe Billing',
-  'Nexus Admin · Audit Trail · MFA + SSO · DSGVO',
+const pricingTiers = [
+  {
+    name: 'Core',
+    price: 39,
+    color: 'sky',
+    badge: 'Einstieg',
+    description: 'Für Teams, die CRM, ERP und Dokumente in einer Plattform brauchen.',
+    features: [
+      'Socialverse CRM · Pipeline · Kontakte · Kampagnen',
+      'Forge ERP · Produkte · Projekte · Zeiterfassung',
+      'XRechnung / EN 16931 · ZUGFeRD PDF',
+      'Aether Dokumente & Asset-Management',
+      'Nexus Admin · Audit Trail · MFA',
+      'Single Sign-On · Multi-Tenant',
+    ],
+    cta: 'Core starten',
+  },
+  {
+    name: 'Growth',
+    price: 49,
+    color: 'violet',
+    badge: 'Beliebt',
+    highlight: true,
+    description: 'Für wachsende Unternehmen mit Portal, Flotte, ESG und KI.',
+    features: [
+      'Alles aus Core',
+      'Customer Portal · Support-Tickets · Stripe Billing',
+      'Ecodrive Fuhrpark · GPS-Tracking · CO₂/ESG',
+      'KI Lead Scoring & Ticket-Zusammenfassung',
+      'PWA · Push-Benachrichtigungen',
+      'Mehrsprachigkeit (i18n) · Content-Lokalisierung',
+    ],
+    cta: 'Growth wählen',
+  },
+  {
+    name: 'Scale',
+    price: 65,
+    color: 'emerald',
+    badge: 'Enterprise',
+    description: 'Für Enterprises mit Compliance, Social und Kalender-Integration.',
+    features: [
+      'Alles aus Growth',
+      'DSGVO-Center · Löschanträge · Consent-Management',
+      'Social Integrationen · Facebook · LinkedIn · Instagram',
+      'Kalender-Sync · Google Calendar · Microsoft 365',
+      'iCal-Feed · Ressourcenbuchungen',
+      'Enterprise SLA · Dedizierter Support',
+    ],
+    cta: 'Scale anfragen',
+  },
 ];
 
-const pricingExamples = [
-  { seats: 5, label: 'Starter', total: 245 },
-  { seats: 10, label: 'Team', total: 490 },
-  { seats: 20, label: 'Scale', total: 980 },
+const faqItems = [
+  {
+    question: 'Kann ich mit einem einzelnen Modul beginnen?',
+    answer: 'Ja. Jedes Paket enthält mehrere Module, aber Sie können mit dem Core-Paket starten und jederzeit auf Growth oder Scale upgraden. Ihre Daten bleiben erhalten.',
+  },
+  {
+    question: 'Wie funktioniert die Mandantentrennung?',
+    answer: 'Jede Organisation hat ihren eigenen isolierten Tenant. Alle Datenbankabfragen werden tenant-scoped ausgeführt – keine gemeinsamen Tabellen zwischen Kunden.',
+  },
+  {
+    question: 'Unterstützt die Suite die E-Rechnungspflicht?',
+    answer: 'Ja. Forge ERP erzeugt XRechnung (EN 16931-konform) und ZUGFeRD PDF/A-3b Hybrid-Rechnungen direkt aus der Auftragsverwaltung – ohne Zusatzmodul.',
+  },
+  {
+    question: 'Wie läuft die Migration bestehender Daten ab?',
+    answer: 'Wir bieten strukturierte Migrations-Rezepte für die gängigsten Vor-Systeme. Für Enterprise-Kunden führen wir ein Migration Assessment durch und begleiten den Rollout in Phasen.',
+  },
+  {
+    question: 'Ist Single Sign-On in allen Paketen enthalten?',
+    answer: 'Ja. SSO (TOTP-MFA, sichere Sessions) ist Bestandteil jedes Pakets. SAML/OIDC-Integration für externe Identity Provider ist im Scale-Paket verfügbar.',
+  },
+  {
+    question: 'Wo werden die Daten gespeichert?',
+    answer: 'Alle Server stehen in Deutschland (DSGVO-konforme Rechenzentren). Backups, Verschlüsselung in transit und at rest sind standardmäßig aktiviert.',
+  },
+];
+
+const integrationItems = [
+  { icon: 'fa-file-invoice', label: 'XRechnung / ZUGFeRD', desc: 'E-Rechnungspflicht ab 2025' },
+  { icon: 'fa-stripe-s', label: 'Stripe Billing', desc: 'Abonnements & Zahlungen' },
+  { icon: 'fa-calendar', label: 'Google Calendar', desc: 'Kalender-Sync via OAuth' },
+  { icon: 'fa-microsoft', label: 'Microsoft 365', desc: 'Calendar & Mail-Integration' },
+  { icon: 'fa-facebook', label: 'Facebook Pages', desc: 'Social Posting & Analytics' },
+  { icon: 'fa-linkedin', label: 'LinkedIn', desc: 'Kampagnen & Lead-Gen' },
+  { icon: 'fa-instagram', label: 'Instagram', desc: 'Content & Reichweite' },
+  { icon: 'fa-bell', label: 'Web Push', desc: 'Browser-Benachrichtigungen' },
+  { icon: 'fa-location-dot', label: 'GPS / Telematik', desc: 'Fahrzeug-Tracking' },
+  { icon: 'fa-code', label: 'REST API', desc: 'Offene Schnittstelle' },
+  { icon: 'fa-book', label: 'API-Docs', desc: 'OpenAPI Spec verfügbar' },
+  { icon: 'fa-webhook', label: 'Webhooks', desc: 'Event-basierte Integration' },
 ];
 
 const usps = [
@@ -216,6 +296,138 @@ const complianceItems = [
     </div>
   </section>
 
+  <!-- Problem-Solution Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="problem-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-triangle-exclamation mr-2" aria-hidden="true"></i>
+          Das Problem
+        </p>
+        <h2 id="problem-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
+          Tool-Flickenteppich kostet Zeit und Geld.
+        </h2>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-3xl mx-auto" style="animation-delay: 0.3s">
+          Viele Mittelständler nutzen 5–10 isolierte Tools: CRM hier, ERP dort, Faktura woanders. Die Folge: Datendopplung, manuelle Übertragungen, fehlende Transparenz.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {[
+          { icon: 'fa-puzzle-piece', label: 'Isolierte Insellösungen', desc: 'CRM, ERP, Billing, HR – jedes Tool lebt sein eigenes Leben. Keine gemeinsame Datenbasis, kein durchgängiger Prozess.' },
+          { icon: 'fa-arrows-spin', label: 'Manuelle Datenübertragung', desc: 'Kontakte in Excel exportieren, in das nächste System importieren, Fehler bereinigen – täglich. Das kostet Stunden, die fehlen.' },
+          { icon: 'fa-eye-slash', label: 'Kein Gesamtüberblick', desc: 'Wer möchte wissen, wie profitabel ein Kunde wirklich ist? Das erfordert heute 4 verschiedene Systeme und ein Tabellenkalulierblatt.' },
+        ].map((p, i) => (
+          <div class={`gsap-fadein bg-red-500/5 border border-red-500/20 rounded-2xl p-6`} style={`animation-delay: ${i * 0.1}s`}>
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 mb-4">
+              <i class={`fa-solid ${p.icon} text-red-400 text-xl`} aria-hidden="true"></i>
+            </div>
+            <h3 class="text-meg-text-primary-dark font-bold mb-2">{p.label}</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="flex justify-center mb-8">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-px bg-meg-border-dark"></div>
+          <div class="bg-meg-accent/10 border border-meg-accent/20 rounded-full p-3">
+            <i class="fa-solid fa-arrow-down text-meg-accent text-xl" aria-hidden="true"></i>
+          </div>
+          <div class="w-16 h-px bg-meg-border-dark"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-layer-group', label: 'Eine Plattform, alle Prozesse', desc: 'CRM, ERP, Dokumente, Billing, Flotte und Support in einer Suite. Gleiche Datenbasis, nahtlose Übergaben zwischen Modulen.' },
+          { icon: 'fa-bolt', label: 'Echtzeitdaten, kein Sync-Aufwand', desc: 'Ein Auftrag in ERP erzeugt automatisch einen Kontext in CRM. Kein Export, kein Import, kein Tabellenchaos – direkt verfügbar.' },
+          { icon: 'fa-chart-line', label: 'Cross-Suite KPIs auf einen Blick', desc: 'Revenue pro Kunde, Support-Aufwand, Projektprofitabilität – alles live im Nexus Dashboard, ohne BI-Tool dazwischen.' },
+        ].map((s, i) => (
+          <div class={`gsap-fadein bg-meg-accent/5 border border-meg-accent/20 rounded-2xl p-6`} style={`animation-delay: ${i * 0.1}s`}>
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-meg-accent/10 border border-meg-accent/20 mb-4">
+              <i class={`fa-solid ${s.icon} text-meg-accent text-xl`} aria-hidden="true"></i>
+            </div>
+            <h3 class="text-meg-text-primary-dark font-bold mb-2">{s.label}</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- App Shell & App Switch Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="appshell-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+            <i class="fa-solid fa-grid-2 mr-2" aria-hidden="true"></i>
+            App Shell & App Switch
+          </p>
+          <h2 id="appshell-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+            Eine Shell.<br />Alle Module.<br />Ein Login.
+          </h2>
+          <p class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.3s">
+            Die zentrale App Shell ist das Herzstück der Waldheim Suite. Sie verbindet alle Module über einen gemeinsamen Navigationsrahmen – mit blitzschnellem App Switcher, Tenant-Wechsel und globalem Command Palette.
+          </p>
+          <ul class="space-y-4">
+            {[
+              { icon: 'fa-grid-2', label: 'App Switcher', desc: 'Sofortiger Wechsel zwischen allen Modulen ohne Reload' },
+              { icon: 'fa-building', label: 'Tenant-Wechsel', desc: 'Mehrere Organisationen in einer Session verwalten' },
+              { icon: 'fa-magnifying-glass', label: 'Command Palette', desc: 'Globale Suche und Navigation per Tastatur (⌘K)' },
+              { icon: 'fa-bell', label: 'Unified Notifications', desc: 'Benachrichtigungen aus allen Modulen zentral gebündelt' },
+            ].map((f, i) => (
+              <li class={`gsap-fadein flex items-start gap-4`} style={`animation-delay: ${i * 0.1}s`}>
+                <div class="shrink-0 w-10 h-10 rounded-xl bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center">
+                  <i class={`fa-solid ${f.icon} text-meg-accent text-sm`} aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-meg-text-primary-dark font-bold text-sm">{f.label}</p>
+                  <p class="text-meg-text-secondary text-sm">{f.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="gsap-fadein" style="animation-delay: 0.2s">
+          <div class="bg-meg-surface-dark/60 border border-meg-border-dark rounded-3xl p-6 shadow-2xl">
+            <div class="flex items-center gap-3 mb-4 pb-4 border-b border-meg-border-dark">
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+              </div>
+              <div class="flex-1 bg-meg-bg-dark/60 rounded-lg px-4 py-1.5 text-xs text-meg-text-secondary">app.waldheim.dev</div>
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-meg-accent/20 flex items-center justify-center">
+                  <i class="fa-solid fa-grid-2 text-meg-accent text-xs" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-4">
+              {[
+                { icon: 'fa-users-gear', label: 'CRM', color: 'violet' },
+                { icon: 'fa-hammer', label: 'ERP', color: 'amber' },
+                { icon: 'fa-folder-open', label: 'Docs', color: 'rose' },
+                { icon: 'fa-car-side', label: 'Fleet', color: 'teal' },
+                { icon: 'fa-headset', label: 'Portal', color: 'emerald' },
+                { icon: 'fa-shield-halved', label: 'Nexus', color: 'indigo' },
+              ].map(m => (
+                <div class={`bg-meg-bg-dark/60 border border-${m.color}-500/20 rounded-xl p-3 flex flex-col items-center gap-2 cursor-pointer hover:border-${m.color}-500/50 transition-colors`}>
+                  <i class={`fa-solid ${m.icon} text-${m.color}-400`} aria-hidden="true"></i>
+                  <span class={`text-xs text-${m.color}-400 font-semibold`}>{m.label}</span>
+                </div>
+              ))}
+            </div>
+            <div class="bg-meg-bg-dark/60 rounded-xl px-4 py-3 flex items-center gap-3 border border-meg-border-dark">
+              <i class="fa-solid fa-magnifying-glass text-meg-text-secondary text-sm" aria-hidden="true"></i>
+              <span class="text-meg-text-secondary text-sm">Suchen oder navigieren…</span>
+              <span class="ml-auto text-xs text-meg-text-secondary border border-meg-border-dark rounded px-1.5 py-0.5">⌘K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Module Grid -->
   <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="modules-heading">
     <div class="max-w-7xl mx-auto">
@@ -258,6 +470,232 @@ const complianceItems = [
             </span>
           </a>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep-Dive Modules Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="deepdive-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-layer-group mr-2" aria-hidden="true"></i>
+          Kernmodule im Detail
+        </p>
+        <h2 id="deepdive-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
+          Was jedes Modul konkret löst
+        </h2>
+      </div>
+      <div class="space-y-12">
+        <!-- CRM Deep-dive -->
+        <div class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-violet-500/20 rounded-3xl p-8 items-center">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                <i class="fa-solid fa-users-gear text-violet-400 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">Socialverse CRM</h3>
+                <p class="text-sm text-violet-400 font-semibold">Revenue & Kundenbeziehungen</p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">Verwalten Sie die gesamte Customer Journey – von der ersten Kontaktaufnahme bis zum abgeschlossenen Deal und darüber hinaus. Mit KI-gestütztem Lead Scoring identifizieren Sie die vielversprechendsten Leads automatisch.</p>
+            <div class="grid grid-cols-2 gap-3">
+              {['Deal-Pipeline mit Drag & Drop', 'KI Lead Scoring', 'E-Mail-Kampagnen', 'Segmente & Audience', 'Workflows & Automatisierung', 'Social Integrationen'].map(f => (
+                <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                  <i class="fa-solid fa-circle-check text-violet-400 text-xs shrink-0" aria-hidden="true"></i>
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="bg-meg-surface-dark/60 rounded-2xl border border-violet-500/10 p-5">
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider">Pipeline Übersicht</p>
+              <span class="text-xs bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-1 rounded-lg font-bold">Live</span>
+            </div>
+            {[
+              { stage: 'Qualifiziert', count: 12, value: '€ 48.200', pct: 85 },
+              { stage: 'Angebot', count: 7, value: '€ 31.500', pct: 60 },
+              { stage: 'Verhandlung', count: 3, value: '€ 18.900', pct: 35 },
+            ].map(row => (
+              <div class="mb-3">
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="text-meg-text-secondary">{row.stage} ({row.count})</span>
+                  <span class="text-violet-400 font-bold">{row.value}</span>
+                </div>
+                <div class="bg-meg-border-dark rounded-full h-1.5">
+                  <div class="bg-violet-500 h-1.5 rounded-full" style={`width: ${row.pct}%`}></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ERP Deep-dive -->
+        <div class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-amber-500/20 rounded-3xl p-8 items-center">
+          <div class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-amber-500/10 p-5">
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider">Offene Aufträge</p>
+              <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-1 rounded-lg font-bold">E-Rechnung ready</span>
+            </div>
+            {[
+              { nr: 'A-2026-0042', customer: 'Müller GmbH', value: '€ 4.890', status: 'XRechnung' },
+              { nr: 'A-2026-0043', customer: 'Schmidt AG', value: '€ 12.400', status: 'ZUGFeRD' },
+              { nr: 'A-2026-0044', customer: 'Weber KG', value: '€ 2.100', status: 'Draft' },
+            ].map(o => (
+              <div class="flex items-center justify-between py-2.5 border-b border-meg-border-dark last:border-0">
+                <div>
+                  <p class="text-xs font-bold text-meg-text-primary-dark">{o.nr}</p>
+                  <p class="text-xs text-meg-text-secondary">{o.customer}</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs font-bold text-amber-400">{o.value}</p>
+                  <span class="text-[10px] text-meg-text-secondary">{o.status}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <i class="fa-solid fa-hammer text-amber-400 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">Forge ERP</h3>
+                <p class="text-sm text-amber-400 font-semibold">Operations & Ressourcenplanung</p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">Von der Angebotserstellung bis zur rechtssicheren E-Rechnung: Forge ERP deckt den kompletten Auftragslebenszyklus ab. XRechnung und ZUGFeRD PDF sind direkt integriert – keine Zusatzsoftware notwendig.</p>
+            <div class="grid grid-cols-2 gap-3">
+              {['Produktkatalog & Preislisten', 'Projektmanagement', 'Zeiterfassung', 'Angebote & Aufträge', 'XRechnung EN 16931', 'ZUGFeRD PDF/A-3b'].map(f => (
+                <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                  <i class="fa-solid fa-circle-check text-amber-400 text-xs shrink-0" aria-hidden="true"></i>
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Ecodrive Deep-dive -->
+        <div class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-teal-500/20 rounded-3xl p-8 items-center">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
+                <i class="fa-solid fa-car-side text-teal-400 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">Ecodrive</h3>
+                <p class="text-sm text-teal-400 font-semibold">Flotte, Mobilität & ESG</p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">Komplettes Flottenmanagement mit Echtzeit-GPS-Tracking, CO₂-Reporting und ESG-konformer Berichterstattung. Erfüllen Sie die Nachhaltigkeitspflichten und optimieren Sie gleichzeitig Ihre Flottenkosten.</p>
+            <div class="grid grid-cols-2 gap-3">
+              {['GPS-Echtzeit-Tracking', 'CO₂-Emissionsberechnung', 'ESG-Reporting', 'Routenplanung', 'Fahrzeugverwaltung', 'Wartungsalerts'].map(f => (
+                <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                  <i class="fa-solid fa-circle-check text-teal-400 text-xs shrink-0" aria-hidden="true"></i>
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="bg-meg-surface-dark/60 rounded-2xl border border-teal-500/10 p-5">
+            <div class="flex justify-between items-center mb-4">
+              <p class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider">Flotten-KPIs</p>
+              <span class="text-xs bg-teal-500/10 text-teal-400 border border-teal-500/20 px-2 py-1 rounded-lg font-bold">GPS Live</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              {[
+                { label: 'Aktive Fahrzeuge', value: '14', sub: 'von 18 gesamt' },
+                { label: 'CO₂ gespart', value: '1.2t', sub: 'diesen Monat' },
+                { label: '⌀ Verbrauch', value: '6.8L', sub: 'pro 100km' },
+                { label: 'ESG Score', value: 'B+', sub: 'Kategorie Mobil.' },
+              ].map(k => (
+                <div class="bg-meg-bg-dark/60 rounded-xl p-3">
+                  <p class="text-xs text-meg-text-secondary mb-1">{k.label}</p>
+                  <p class="text-xl font-black text-teal-400">{k.value}</p>
+                  <p class="text-xs text-meg-text-secondary">{k.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nexus Admin Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="nexus-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">
+            <i class="fa-solid fa-shield-halved mr-2" aria-hidden="true"></i>
+            Nexus Super-Admin
+          </p>
+          <h2 id="nexus-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+            Vollständige Plattformkontrolle.
+          </h2>
+          <p class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.3s">
+            Nexus ist die Super-Admin-Konsole für Plattformbetreiber. Operator-Modus und Tenant-Modus sind strikt getrennt. Jeder Zugriff wird lückenlos auditiert.
+          </p>
+          <div class="grid grid-cols-1 gap-4">
+            {[
+              { icon: 'fa-building', label: 'Tenant-Management', desc: 'Mandanten anlegen, sperren, konfigurieren in Sekunden' },
+              { icon: 'fa-list-check', label: 'Audit Trail', desc: 'Jede Aktion vollständig protokolliert und durchsuchbar' },
+              { icon: 'fa-chart-bar', label: 'Plattform-KPIs', desc: 'Revenue, Seats, MAU und Technical Health auf einem Screen' },
+              { icon: 'fa-user-shield', label: 'Operator vs. Tenant', desc: 'Explizite Modi-Trennung schützt vor unbeabsichtigtem Zugriff' },
+            ].map((f, i) => (
+              <div class={`gsap-fadein flex items-start gap-4 bg-meg-surface-dark/50 border border-indigo-500/10 rounded-xl p-4 hover:border-indigo-500/30 transition-colors`} style={`animation-delay: ${i * 0.1}s`}>
+                <div class="shrink-0 w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+                  <i class={`fa-solid ${f.icon} text-indigo-400 text-sm`} aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-meg-text-primary-dark font-bold text-sm">{f.label}</p>
+                  <p class="text-meg-text-secondary text-sm">{f.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="gsap-fadein" style="animation-delay: 0.2s">
+          <div class="bg-meg-surface-dark/60 border border-indigo-500/20 rounded-3xl p-6 shadow-2xl shadow-indigo-500/5">
+            <div class="flex items-center justify-between mb-6">
+              <p class="text-sm font-bold text-meg-text-primary-dark">Nexus · Operator Dashboard</p>
+              <span class="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>
+                Live
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mb-5">
+              {[
+                { label: 'Tenants', value: '47', color: 'indigo' },
+                { label: 'Seats Total', value: '892', color: 'violet' },
+                { label: 'MRR', value: '€ 43.7k', color: 'sky' },
+                { label: 'Audit Events', value: '12.4k', color: 'emerald' },
+              ].map(k => (
+                <div class={`bg-meg-bg-dark/60 border border-${k.color}-500/10 rounded-xl p-4`}>
+                  <p class="text-xs text-meg-text-secondary mb-1">{k.label}</p>
+                  <p class={`text-2xl font-black text-${k.color}-400`}>{k.value}</p>
+                </div>
+              ))}
+            </div>
+            <div class="space-y-2">
+              {[
+                { action: 'Tenant "Acme Corp" erstellt', time: 'vor 2 Min', color: 'green' },
+                { action: 'MFA-Login: admin@waldheim.dev', time: 'vor 8 Min', color: 'sky' },
+                { action: 'Seat-Upgrade: "TechCo" → 20 Seats', time: 'vor 15 Min', color: 'violet' },
+              ].map(e => (
+                <div class="flex items-center gap-3 text-xs">
+                  <i class={`fa-solid fa-circle-dot text-${e.color}-400`} aria-hidden="true"></i>
+                  <span class="text-meg-text-secondary flex-1">{e.action}</span>
+                  <span class="text-meg-text-secondary opacity-60">{e.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -348,6 +786,112 @@ const complianceItems = [
     </div>
   </section>
 
+  <!-- Integrations Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="integrations-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-plug mr-2" aria-hidden="true"></i>
+          Integrationen & API
+        </p>
+        <h2 id="integrations-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
+          Verbindet sich mit Ihrer Welt.
+        </h2>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto" style="animation-delay: 0.3s">
+          Offene REST API, Webhooks und native Integrationen für alle marktführenden Drittanbieter.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {integrationItems.map((item, i) => (
+          <div class={`gsap-fadein bg-meg-bg-dark border border-meg-border-dark rounded-2xl p-4 flex flex-col items-center text-center gap-2 hover:border-meg-accent/30 transition-all`} style={`animation-delay: ${i * 0.05}s`}>
+            <div class="w-10 h-10 rounded-xl bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center">
+              <i class={`fa-brands ${item.icon} text-meg-accent`} aria-hidden="true"></i>
+            </div>
+            <p class="text-meg-text-primary-dark font-bold text-sm">{item.label}</p>
+            <p class="text-meg-text-secondary text-xs">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-12 text-center">
+        <a href="/kontakt/" class="inline-flex items-center gap-2 text-meg-accent font-bold text-sm hover:underline">
+          <i class="fa-solid fa-book" aria-hidden="true"></i>
+          API-Dokumentation anfragen
+          <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Migration & Onboarding Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="migration-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-route mr-2" aria-hidden="true"></i>
+          Migration & Onboarding
+        </p>
+        <h2 id="migration-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.15s">
+          Risikoarme Einführung in 3 Phasen.
+        </h2>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto" style="animation-delay: 0.3s">
+          Kein Big-Bang-Replace. Wir begleiten Sie Schritt für Schritt – von der Analyse über den Pilot bis zum vollständigen Rollout.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {[
+          {
+            step: '01',
+            icon: 'fa-magnifying-glass-chart',
+            label: 'Assessment',
+            color: 'sky',
+            items: ['Bestandsaufnahme bestehender Systeme', 'Datenmapping und -qualität', 'Rollout-Priorisierung', 'Risikoanalyse'],
+          },
+          {
+            step: '02',
+            icon: 'fa-flask',
+            label: 'Pilot',
+            color: 'violet',
+            items: ['Parallelbetrieb Alt- und Neusystem', 'Datenübernahme ausgewählter Mandanten', 'User Acceptance Testing', 'Schulungen und Enablement'],
+          },
+          {
+            step: '03',
+            icon: 'fa-rocket',
+            label: 'Rollout',
+            color: 'emerald',
+            items: ['Sukzessive Migration aller Daten', 'Ablösung der Altsysteme', 'Hypercare-Phase (4 Wochen)', 'Kontinuierliche Optimierung'],
+          },
+        ].map((phase, i) => (
+          <div class={`gsap-fadein bg-meg-surface-dark/50 border border-${phase.color}-500/20 rounded-3xl p-8`} style={`animation-delay: ${i * 0.1}s`}>
+            <div class="flex items-center gap-4 mb-6">
+              <span class={`text-4xl font-black text-${phase.color}-500/30`}>{phase.step}</span>
+              <div class={`w-12 h-12 rounded-xl bg-${phase.color}-500/10 border border-${phase.color}-500/20 flex items-center justify-center`}>
+                <i class={`fa-solid ${phase.icon} text-${phase.color}-400 text-lg`} aria-hidden="true"></i>
+              </div>
+              <h3 class={`text-xl font-black text-${phase.color}-400`}>{phase.label}</h3>
+            </div>
+            <ul class="space-y-3">
+              {phase.items.map(item => (
+                <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
+                  <i class={`fa-solid fa-circle-check text-${phase.color}-400 text-xs mt-0.5 shrink-0`} aria-hidden="true"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <a
+          href="/kontakt/"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-meg-surface-dark/50 border border-meg-accent/30 text-meg-text-primary-dark font-bold rounded-xl hover:border-meg-accent/60 transition-all"
+        >
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Migration Assessment anfragen
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="pricing-heading">
     <div class="max-w-7xl mx-auto">
@@ -363,47 +907,78 @@ const complianceItems = [
           Starten Sie klein und wachsen Sie mit der Suite. Alle Preise pro Monat, jährliche Abrechnung möglich.
         </p>
       </div>
-      <div class="max-w-3xl mx-auto">
-        <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-violet-500/30 rounded-3xl p-10 shadow-2xl shadow-violet-500/10 text-center">
-          <p class="text-sm font-bold uppercase tracking-widest text-violet-400 mb-4">Waldheim Suite · Vollständiger Zugang, alle Module</p>
-          <div class="flex items-baseline justify-center gap-3 mb-2">
-            <span class="text-6xl font-black text-violet-400">€49</span>
-            <div class="text-left">
-              <p class="text-meg-text-secondary text-sm font-semibold">/Seat</p>
-              <p class="text-meg-text-secondary text-sm">/Monat</p>
-            </div>
-          </div>
-          <p class="text-meg-text-secondary mb-8">
-            Flat-Rate, linear skalierend · keine Mindestlaufzeit · volle Suite, alle Module
-          </p>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left mb-10">
-            {pricingFeatures.map(f => (
-              <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
-                <i class="fa-solid fa-circle-check text-violet-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-                <span>{f}</span>
-              </li>
-            ))}
-          </ul>
-          <div class="grid grid-cols-3 gap-4 mb-10">
-            {pricingExamples.map(ex => (
-              <div class="rounded-2xl bg-meg-surface-dark/60 border border-meg-border-dark px-4 py-5">
-                <p class="text-xs font-bold uppercase tracking-wider text-meg-text-secondary mb-1">{ex.label}</p>
-                <p class="text-3xl font-black text-meg-text-primary-dark">€{ex.total}</p>
-                <p class="text-xs text-meg-text-secondary mt-1">{ex.seats} Seats · /Monat</p>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {pricingTiers.map((tier, i) => (
+            <div class={`gsap-fadein relative bg-meg-surface-dark/50 backdrop-blur-xl border ${tier.highlight ? `border-${tier.color}-500/50 shadow-2xl shadow-${tier.color}-500/10` : 'border-meg-border-dark'} rounded-3xl p-8 flex flex-col`} style={`animation-delay: ${i * 0.1}s`}>
+              {tier.highlight && (
+                <div class={`absolute -top-4 left-1/2 -translate-x-1/2 bg-${tier.color}-500 text-white text-xs font-black px-4 py-1.5 rounded-full`}>
+                  Empfohlen
+                </div>
+              )}
+              <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class={`text-xl font-black text-${tier.color}-400`}>{tier.name}</h3>
+                  <span class={`text-xs font-bold px-2 py-1 rounded-lg bg-${tier.color}-500/10 border border-${tier.color}-500/20 text-${tier.color}-400`}>{tier.badge}</span>
+                </div>
+                <p class="text-meg-text-secondary text-sm mb-4">{tier.description}</p>
+                <div class="flex items-baseline gap-2">
+                  <span class={`text-5xl font-black text-${tier.color}-400`}>€{tier.price}</span>
+                  <div class="text-meg-text-secondary text-sm">
+                    <p>/ Seat</p>
+                    <p>/ Monat</p>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-          <a
-            href="/kontakt/"
-            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-violet-500 text-white font-bold text-sm rounded-xl hover:shadow-xl hover:shadow-violet-500/30 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
-          >
-            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
-            Suite Demo anfragen
-          </a>
+              <ul class="space-y-3 flex-1 mb-8">
+                {tier.features.map(f => (
+                  <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
+                    <i class={`fa-solid fa-circle-check text-${tier.color}-400 text-xs mt-0.5 shrink-0`} aria-hidden="true"></i>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="/kontakt/"
+                class={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 ${tier.highlight ? `bg-${tier.color}-500 text-white` : `bg-meg-surface-dark border border-${tier.color}-500/30 text-${tier.color}-400`} font-bold rounded-xl hover:shadow-lg transition-all duration-300`}
+              >
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                {tier.cta}
+              </a>
+            </div>
+          ))}
         </div>
-        <p class="text-center text-meg-text-secondary text-sm mt-8">
-          Alle Preise zzgl. MwSt. · Jahresabrechnung auf Anfrage. · Enterprise-Konditionen individuell verhandelbar.
+        <p class="text-center text-meg-text-secondary text-sm mt-4">
+          Alle Preise zzgl. MwSt. · Jahresabrechnung auf Anfrage möglich. · Enterprise-Konditionen individuell verhandelbar.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+          <i class="fa-solid fa-circle-question mr-2" aria-hidden="true"></i>
+          Häufige Fragen
+        </p>
+        <h2 id="faq-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
+          FAQ
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {faqItems.map((item, i) => (
+          <details class={`gsap-fadein group bg-meg-bg-dark border border-meg-border-dark rounded-2xl overflow-hidden hover:border-meg-accent/30 transition-colors`} style={`animation-delay: ${i * 0.05}s`}>
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none">
+              <h3 class="font-bold text-meg-text-primary-dark">{item.question}</h3>
+              <i class="fa-solid fa-chevron-down text-meg-accent transition-transform group-open:rotate-180 shrink-0" aria-hidden="true"></i>
+            </summary>
+            <div class="px-6 pb-5">
+              <p class="text-meg-text-secondary leading-relaxed">{item.answer}</p>
+            </div>
+          </details>
+        ))}
       </div>
     </div>
   </section>
