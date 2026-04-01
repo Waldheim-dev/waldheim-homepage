@@ -3,178 +3,163 @@ import Text from './Inputs/Text.astro';
 import Textarea from './Inputs/Textarea.astro';
 import Toggle from './Inputs/Toggle.astro';
 
-if (Astro.request.method === 'POST') {
-    try {
-        const data = await Astro.request.formData();
-
-        console.log('Form data:', data);
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error(error.message);
-        }
-    }
-}
-const { title, image, video } = Astro.props;
+const { title, image, video, isEmbedded = false } = Astro.props;
 ---
-<div
-    class="relative isolate"
->
-  <div aria-hidden="true" class="absolute w-full flex justify-center items-center py-12 px-3 md:px-12">
-    <figure class="rounded-3xl overflow-hidden relative w-full h-full">
-      { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="lazy"/> : null }
-      { video ?
-        <video
-          class="object-contain w-full brightness-75"
-          autoplay
-          loop
-          muted
-          src={video}
-        >
-          <source
-            src={video} type="video/mp4" />
-        </video> : null }
-
-    </figure>
+<div class={`relative isolate ${!isEmbedded ? 'py-24 sm:py-32 lg:pb-40' : ''}`}>
+  {!isEmbedded && (
+    <div aria-hidden="true" class="absolute w-full flex justify-center items-center py-12 px-3 md:px-12">
+      <figure class="rounded-3xl overflow-hidden relative w-full h-full">
+        { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="lazy"/> : null }
+        { video ?
+          <video
+            class="object-contain w-full brightness-75"
+            autoplay
+            loop
+            muted
+            src={video}
+          >
+            <source
+              src={video} type="video/mp4" />
+          </video> : null }
+      </figure>
+    </div>
+  )}
+  
+  <div class={`${!isEmbedded ? 'mx-auto max-w-7xl px-6 lg:px-8 z-10 relative' : ''}`}>
+    <div class={`${!isEmbedded ? 'mx-auto max-w-2xl bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl shadow-sm' : ''}`}>
+      <form
+          method="POST"
+          id="contact-form"
+          class="relative transform overflow-hidden transition-all p-6 sm:p-10"
+      >
+          <div>
+              {!isEmbedded && (
+                <>
+                  <div class="mx-auto flex size-12 items-center justify-center rounded-xl bg-meg-accent/10 border border-meg-accent/30">
+                      <i class="fa-solid fa-envelope text-meg-accent text-xl" aria-hidden="true"></i>
+                  </div>
+                  <div class="mt-6 text-center">
+                      <h3 class="text-2xl font-black tracking-tighter text-meg-text-primary-dark gsap-fadein">
+                          Kontaktformular
+                      </h3>
+                      <div class="mt-4">
+                          <p class="text-sm text-meg-text-secondary leading-relaxed gsap-fadein">
+                              Ich beantworte Ihre Fragen schnell und unkompliziert. Nutze dieses Formular für Projektanfragen oder Support. Ich melde mich zeitnah bei Ihnen zurück.
+                          </p>
+                      </div>
+                  </div>
+                </>
+              )}
+              
+              <div class={`${!isEmbedded ? 'mt-10' : ''}`}>
+                  <div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
+                      <Text
+                          label="Vorname"
+                          autocomplete="given-name"
+                          name="first_name"
+                          className="sm:col-span-1"
+                          isRequired="true"
+                      />
+                      <Text
+                          label="Nachname"
+                          autocomplete="family-name"
+                          name="last_name"
+                          className="sm:col-span-1"
+                          isRequired="true"
+                      />
+                      <Text
+                          label="Firma"
+                          autocomplete="organization"
+                          name="company"
+                          className="sm:col-span-2"
+                      />
+                      <Text
+                          label="E-Mail"
+                          autocomplete="email"
+                          name="email"
+                          className="sm:col-span-2"
+                          isRequired="true"
+                      />
+                      <Text
+                          label="Telefon"
+                          name="phone"
+                          placeholder="+49 123 4567890"
+                          className="sm:col-span-2"
+                      />
+                      <Textarea
+                          label="Ihre Nachricht"
+                          name="message"
+                          rows="4"
+                          className="sm:col-span-2"
+                          isRequired="true"
+                      />
+                      <Toggle
+                          label="Datenschutzbestimmung"
+                          name="privacy"
+                          isRequired="true"
+                          className="sm:col-span-2 text-xs"
+                          >Ich akzeptiere die <a
+                              href="/datenschutz/"
+                              class="font-bold text-meg-accent hover:underline transition-colors"
+                              >Datenschutz&shy;bestimmungen</a
+                          > und willige in die Verarbeitung meiner Daten ein.</Toggle
+                      >
+                  </div>
+              </div>
+          </div>
+          <div class="mt-10">
+              <button
+                  type="submit"
+                  id="submit-btn"
+                  class="w-full flex justify-center items-center gap-2 rounded-xl px-6 py-4 text-base font-black text-white bg-meg-accent shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
+              >
+                Anfrage senden
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+              <p id="form-status" class="mt-4 text-center text-sm font-bold hidden"></p>
+          </div>
+      </form>
+    </div>
   </div>
-    <div class="py-24 sm:py-32 lg:pb-40 z-10 relative"><div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl shadow-sm">
-            <form
-                method="POST"
-                onsubmit="callSubmit()"
-                id="contact-form"
-                class="relative transform overflow-hidden rounded-2xl px-4 pb-4 pt-5 text-left transition-all sm:my-8 sm:p-10"
-            >
-                <div>
-                    <div
-                        class="mx-auto flex size-12 items-center justify-center rounded-xl bg-meg-accent/10 border border-meg-accent/30"
-                    >
-                        <i class="fa-solid fa-envelope text-meg-accent text-xl" aria-hidden="true"></i>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <h3
-                            class="text-2xl font-black tracking-tighter text-meg-text-primary-dark gsap-fadein"
-                            id="modal-title"
-                        >
-                            Kontaktformular
-                        </h3>
-                        <div class="mt-4">
-                            <p
-                                class="text-sm text-meg-text-secondary leading-relaxed gsap-fadein"
-                            >
-                                Ich beantworte deine Fragen schnell und unkompliziert. Nutze dieses Formular für Projektanfragen oder Support. Ich melde mich zeitnah bei dir zurück.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mt-10">
-                        <div
-                            class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
-                        >
-                            <Text
-                                label="Vorname"
-                                autocomplete="give-name"
-                                name="first_name"
-                                className="sm:col-span-1"
-                                isRequired="true"
-                            />
-                            <Text
-                                label="Nachname"
-                                autocomplete="family-name"
-                                name="last_name"
-                                className="sm:col-span-1"
-                                isRequired="true"
-                            />
-                            <Text
-                                label="Firma"
-                                autocomplete="organization"
-                                name="company"
-                                className="sm:col-span-2"
-                            />
-                            <Text
-                                label="E-Mail"
-                                autocomplete="email"
-                                name="email"
-                                className="sm:col-span-2"
-                                isRequired="true"
-                            />
-                            <Text
-                                label="Telefon"
-                                name="phone"
-                                placeholder="+49 123 4567890"
-                                className="sm:col-span-2"
-                            />
-                            <Textarea
-                                label="Deine Anfrage"
-                                name="message"
-                                rows="4"
-                                className="sm:col-span-2"
-                                isRequired="true"
-                            />
-                            <Toggle
-                                label="Datenschutzbestimmung"
-                                name="privacy"
-                                isRequired="true"
-                                className="sm:col-span-2"
-                                >Ich akzeptiere die <a
-                                    href="/datenschutz/"
-                                    class="font-bold text-meg-accent hover:underline transition-colors"
-                                    >Datenschutz&shy;bestimmungen</a
-                                > und willige in die Verarbeitung meiner Daten ein.</Toggle
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="mt-10 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-4"
-                >
-                    <button
-                        type="submit"
-                        class="gsap-fadein w-full flex justify-center items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold text-white bg-meg-accent shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all sm:col-start-2"
-                        >Absenden</button
-                    >
-                    <button
-                        type="button" onclick="closeContact()"
-                        class="gsap-fadein mt-3 w-full flex justify-center items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-6 py-3 text-sm font-bold text-meg-text-primary-dark hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all sm:col-start-1 sm:mt-0"
-                        >Abbrechen</button
-                    >
-                </div>
-            </form>
-        </div>
-    </div>
-    <script is:inline>
-        function callSubmit() {
-            const form = document.getElementById('contact-form');
-            console.log('Form:', form);
-            if (!form) return;
-            const formData = new FormData(form);
-            for (const [key, value] of formData.entries()) {
-                console.log(`${key}: ${value}`);
-            }
-            const datenObjekt = Object.fromEntries(formData.entries());
-            console.log('\nDaten als Objekt:', datenObjekt);
 
-            fetch('https://api-sv.eco-drive.app/api/contact/anonym', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(datenObjekt),
-            })
-                .then((response) => {
-                    if (response.ok) {
-                        console.log('Formular erfolgreich gesendet!');
-                        window.location.href = window.location.origin + '/danke/';
-                    } else {
-                        console.error(
-                            'Fehler beim Senden des Formulars:',
-                            response.statusText,
-                        );
-                    }
-                })
-                .catch((error) => {
-                    window.location.href = window.location.origin + '/danke/';
-                    console.error('Fehler:', error);
-                });
+  <script is:inline>
+    (function() {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const btn = document.getElementById('submit-btn');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Wird gesendet...';
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch('https://api-sv.eco-drive.app/api/contact/anonym', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          if (response.ok) {
+            window.location.href = '/danke/';
+          } else {
+            throw new Error('Server-Fehler');
+          }
+        } catch (error) {
+          console.error('Fehler:', error);
+          status.textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+          status.classList.remove('hidden');
+          status.classList.add('text-rose-500');
+          btn.disabled = false;
+          btn.innerHTML = 'Anfrage senden <i class="fa-solid fa-paper-plane text-xs"></i>';
         }
-    </script>
-    </div>
+      });
+    })();
+  </script>
 </div>

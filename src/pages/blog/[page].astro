@@ -7,18 +7,24 @@ import { SITE_TITLE } from '../../consts';
 
 export async function getStaticPaths({ paginate }) {
   const blogs = (await getCollection('blog'))
-    .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+    .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
 
-  // Generate pages from our array of astronauts, with 2 to a page
   return paginate(blogs, { pageSize: 6 });
 }
+
 const { page } = Astro.props;
+
+// SEO & Meta
+const titel = 'IT-Insights & Tech-Blog | Waldheim.dev';
+const description = 'Fachartikel zu DevSecOps, Software-Architektur & Cloud-Native Strategien. Expertenwissen für CTOs & Entwickler im Raum Augsburg & München.';
+const keywords = 'IT Blog Augsburg, DevSecOps Tipps, Softwareentwicklung Insights München, Cloud Security Blog, Tech Tutorials Bayern, Markus Waldheim Blog';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 }, {
   name: 'Blog',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/blog'
 }]);
 
 const articleSchema = page.data.map((post) => SchemaUtils.getArticleSchema({
@@ -29,50 +35,64 @@ const articleSchema = page.data.map((post) => SchemaUtils.getArticleSchema({
   description: post.data.description,
   author: post.data.author,
   publisher: SITE_TITLE,
-  url: Astro.url.href + post.id
+  url: 'https://waldheim.dev/blog/' + post.id
 }))
-
-const titel = "IT-Blog - waldheim.dev: Aktuelles & Insights"
-const description = "Unser IT-Blog: Aktuelle News, Fachartikel, Insights und Tipps zu DevSecOps, Webentwicklung, Smart Home, IT-Service und mehr. Bleiben Sie auf dem Laufenden!"
-const keywords = "IT-Blog, Technologie-Blog, DevSecOps, Webentwicklung, Smart Home, IT-Service, Verbandssoftware, News, Insights"
-
 ---
 
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema, ...articleSchema]}>
-  <Blog blog={page.data}/>
-  
-  <div class="py-24 gsap-fadein">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <nav class="flex items-center justify-between border-t border-meg-border-dark px-4 py-6 sm:px-6 mt-4 bg-meg-surface-dark/30 backdrop-blur-md rounded-2xl shadow-sm"
-      aria-label="Pagination">
-<div class="hidden sm:block">
- <p class="text-sm text-meg-text-secondary">
-   Zeige
-   <span class="font-bold text-meg-text-primary-dark">{ page.start + 1}</span>
-   bis
-   <span class="font-bold text-meg-text-primary-dark">{ page.end + 1}</span>
-   von
-   <span class="font-bold text-meg-text-primary-dark">{page.total}</span>
-   Ergebnissen
- </p>
-</div>
-<div class="flex flex-1 justify-between sm:justify-end gap-3">
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[breadCrumbSchema, ...articleSchema]}
+>
+  <main id="main-content" class="bg-meg-bg-dark min-h-screen">
+    <section class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16 gsap-fadein">
+          <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Insights & <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Expertise</span>
+          </h1>
+          <p class="text-xl text-meg-text-secondary">
+            Tiefe Einblicke in moderne Technologien, agile Methoden und die IT-Strategie von morgen. Wissen aus der Praxis für die Praxis.
+          </p>
+        </header>
 
+        <!-- Blog Grid Component -->
+        <div class="relative">
+          <Blog blog={page.data}/>
+        </div>
+        
+        <!-- Pagination -->
+        <nav class="mt-20 flex items-center justify-between border-t border-meg-border-dark px-4 py-8 bg-meg-surface-dark/20 backdrop-blur-md rounded-3xl" aria-label="Blog Pagination">
+          <div class="hidden sm:block">
+            <p class="text-sm text-meg-text-secondary">
+              Zeige <span class="font-bold text-meg-text-primary-dark">{page.start + 1}</span> bis <span class="font-bold text-meg-text-primary-dark">{page.end + 1}</span> von <span class="font-bold text-meg-text-primary-dark">{page.total}</span> Artikeln
+            </p>
+          </div>
+          <div class="flex flex-1 justify-between sm:justify-end gap-4">
+            {page.url.prev ? (
+              <a href={page.url.prev} class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark border border-meg-border-dark rounded-xl font-bold text-sm hover:border-meg-accent/50 transition-all">
+                <i class="fa-solid fa-arrow-left"></i> Neuere Beiträge
+              </a>
+            ) : null}
+            {page.url.next ? (
+              <a href={page.url.next} class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark border border-meg-border-dark rounded-xl font-bold text-sm hover:border-meg-accent/50 transition-all">
+                Ältere Beiträge <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            ) : null}
+          </div>
+        </nav>
+      </div>
+    </section>
 
- {page.url.first ? <a href={page.url.first}
-                      class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Erste</a> : null}
- {page.url.prev ? <a href={page.url.prev}
-                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
-                     <i class="fa-solid fa-chevron-left mr-2 text-xs"></i>
-                     Vorherige
-                     </a> : null}
- {page.url.next ? <a href={page.url.next}
-                     class="relative inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">
-                     Nächste
-                     <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
-                     </a> : null}
- {page.url.last ? <a href={page.url.last}
-                     class="relative hidden sm:inline-flex cursor-pointer items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-4 py-2 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent shadow-sm">Letzte</a> : null}
-</div>
-</nav></div></div>
+    <!-- Blog Footer CTA -->
+    <section class="py-24 px-6 bg-meg-surface-dark/30 border-t border-meg-border-dark text-center">
+      <h2 class="text-3xl font-bold mb-6">Sie haben eine technische Herausforderung?</h2>
+      <p class="text-meg-text-secondary mb-10 max-w-xl mx-auto">Lassen Sie uns gemeinsam prüfen, wie meine Expertise Ihr Projekt beschleunigen kann.</p>
+      <a href="/kontakt/" class="inline-flex items-center gap-2 px-10 py-4 bg-meg-accent text-white font-black rounded-2xl hover:scale-[1.05] transition-all">
+        Kostenlose Erstberatung anfragen
+        <i class="fa-solid fa-calendar-check"></i>
+      </a>
+    </section>
+  </main>
 </Layout>
