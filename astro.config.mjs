@@ -57,8 +57,8 @@ export default defineConfig({
       description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
       sectionTitle: 'Seitenübersicht',
       aiProvider: 'gemini',
-      aiModel: 'gemini-2-5-flash',
-      aiApiKey: 'process.env.GEMINI_API_KEY',
+      aiModel: 'gemini-2.5-flash',
+      aiApiKey: process.env.GEMINI_API_KEY,
       llmsFull: true,
       debug: true
     }),
