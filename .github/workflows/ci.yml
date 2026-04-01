@@ -1,0 +1,137 @@
+name: CI · Release · Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: homepage-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  # ──────────────────────────────────────────
+  # Job 1: QA — Node, lint, Astro build
+  # Runs on every push and every PR
+  # ──────────────────────────────────────────
+  qa:
+    name: QA (Node · Lint · Build)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+        continue-on-error: true   # warnings don't block, script may not exist yet
+
+      - name: Astro build
+        run: pnpm build
+
+      # Only upload the artifact when we're on main (needed by the deploy job)
+      - name: Upload dist artifact
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-dist
+          path: dist/
+          retention-days: 1
+
+  # ──────────────────────────────────────────
+  # Job 2: Semantic Release
+  # Only on push to main; requires QA to pass
+  # ──────────────────────────────────────────
+  release:
+    name: Semantic Release
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: qa
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write         # create tags + GitHub Release
+      issues: write           # close issues mentioned in commits
+      pull-requests: write    # comment on merged PRs
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0            # full history needed for semantic-release
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use the bot identity for release commits
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: npx semantic-release
+
+  # ──────────────────────────────────────────
+  # Job 3: Deploy via FTP to IONOS
+  # Only on push to main; runs after release
+  # (deploys even if no new version was published)
+  #
+  # Required repository secrets:
+  #   FTP_HOST      → e.g. ftp.waldheim.dev or the IONOS FTP server address
+  #   FTP_USER      → IONOS FTP username
+  #   FTP_PASSWORD  → IONOS FTP password
+  #
+  # Optional repository variable:
+  #   FTP_SERVER_DIR → remote target directory (default: /)
+  # ──────────────────────────────────────────
+  deploy:
+    name: Deploy → IONOS (FTP)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [qa, release]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: homepage-dist
+          path: dist/
+
+      - name: FTP Deploy to IONOS
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps          # FTPS (explicit TLS) — IONOS standard
+          local-dir: ./dist/
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/' }}
+          security: loose         # set to "strict" if IONOS cert chain is trusted
+          timeout: 60000
+          log-level: minimal
+          exclude: |
+            **/.git*
+            **/.git*/**
