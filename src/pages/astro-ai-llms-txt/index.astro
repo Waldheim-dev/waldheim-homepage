@@ -205,6 +205,94 @@ export default &#123;
     </div>
   </section>
 
+  <!-- v1.3 What's New Section -->
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='text-center mb-16 gsap-fadein'>
+        <div class='mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-accent/10 border border-meg-accent/30'>
+          <i class='fa-solid fa-rocket text-meg-accent text-xs' aria-hidden='true'></i>
+          <span class='text-meg-accent font-bold text-xs uppercase tracking-widest'>Neu in v1.3.0</span>
+        </div>
+        <h2 class='text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
+          Mehr Power für <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>AI-Readiness</span>
+        </h2>
+        <p class='text-xl text-meg-text-secondary max-w-3xl mx-auto'>
+          Version 1.3 bringt Build-Qualität, DataStore-Integration, Chunking, MCP, strukturierte Metadaten und mehr.
+        </p>
+      </div>
+
+      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12'>
+        {[
+          {
+            icon: 'fa-triangle-exclamation',
+            badge: 'GEO Linter',
+            title: 'Build-time Content-Warnungen',
+            desc: 'Automatische Prüfung auf Seiten mit über 400 Wörtern und Code-Blöcke ohne Sprach-Tag — direkt im Build-Log sichtbar.',
+          },
+          {
+            icon: 'fa-database',
+            badge: 'DataStore Adapter',
+            title: 'Astro 5 DataStore-Unterstützung',
+            desc: 'Content direkt aus dem Astro 5 DataStore lesen statt aus HTML-Dateien. Konfigurierbar über contentSource: \'datastore\' | \'auto\'.',
+          },
+          {
+            icon: 'fa-scissors',
+            badge: 'Chunking Pipeline',
+            title: 'Intelligentes Content-Chunking',
+            desc: 'llms-full.txt aufgeteilt in fixed, recursive, struktur-aware oder semantische Chunks — exportiert als llms-chunks.jsonl.',
+          },
+          {
+            icon: 'fa-plug',
+            badge: 'MCP Integration',
+            title: 'Model Context Protocol',
+            desc: 'Automatische Generierung von .cursor/mcp.json, .vscode/mcp.json und .mcp.json. Live SSE-Endpoint während astro dev.',
+          },
+          {
+            icon: 'fa-tag',
+            badge: 'data-llm Metadata',
+            title: 'Strukturierte LLM-Metadaten',
+            desc: 'JSON-Metadaten aus data-llm Attributen beliebiger HTML-Elemente extrahieren und an llms-full.txt anhängen.',
+          },
+          {
+            icon: 'fa-code',
+            badge: 'XML Format',
+            title: 'XML Full-Content Format',
+            desc: 'llmsFullFormat: \'xml\' kapselt jede Seite in <document>-Tags — kompatibel mit dem Anthropic-Prompt-Format.',
+          },
+        ].map((feat, i) => (
+          <div
+            class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 transition-all duration-300 group shadow-sm'
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class='flex items-start gap-4 mb-4'>
+              <div class='size-12 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-inner'>
+                <i class={`fa-solid ${feat.icon} text-xl text-meg-accent`} aria-hidden='true'></i>
+              </div>
+              <span class='mt-1 inline-block text-[10px] font-black uppercase tracking-widest bg-meg-accent/15 text-meg-accent border border-meg-accent/25 px-2 py-1 rounded-full'>
+                {feat.badge}
+              </span>
+            </div>
+            <h3 class='text-lg font-bold text-meg-text-primary-dark mb-2'>{feat.title}</h3>
+            <p class='text-meg-text-secondary text-sm leading-relaxed'>{feat.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- llms-optional bonus callout -->
+      <div class='gsap-fadein bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6'>
+        <div class='size-14 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center shrink-0'>
+          <i class='fa-solid fa-list-check text-2xl text-meg-accent' aria-hidden='true'></i>
+        </div>
+        <div>
+          <h3 class='text-lg font-bold text-meg-text-primary-dark mb-1'>Optional Pages — neues llms-optional Tag</h3>
+          <p class='text-meg-text-secondary text-sm leading-relaxed'>
+            Seiten mit <code class='bg-meg-bg-dark border border-meg-border-dark px-1.5 py-0.5 rounded text-meg-accent text-xs'>&lt;meta name="llms-optional" content="true"&gt;</code> werden automatisch unter <code class='bg-meg-bg-dark border border-meg-border-dark px-1.5 py-0.5 rounded text-meg-accent text-xs'>## Optional</code> in der llms.txt gruppiert.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark'>
     <div class='mx-auto max-w-4xl text-center gsap-fadein'>
