@@ -112,9 +112,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   'astro-ai-llms-txt': {
     name: 'Astro AI llms.txt Generator',
-    version: '1.2.3',
+    version: '1.3.0',
     status: 'stable',
-    releaseDate: '2026-02-18',
+    releaseDate: '2026-04-01',
     colors: {
       name: 'Astro AI llms.txt Generator',
       primary: 'primary-500',
@@ -159,6 +159,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       badgeText: 'text-indigo-400',
       iconColor: 'indigo-400',
       hoverShadow: 'hover:shadow-lg hover:shadow-indigo-400/20',
+    },
+  },
+  suite: {
+    name: 'Waldheim Suite',
+    version: '0.1.0',
+    status: 'alpha',
+    releaseDate: '2026-Q3',
+    colors: {
+      name: 'Waldheim Suite',
+      primary: 'meg-accent',
+      secondary: 'sky-400',
+      glowColor: 'meg-accent/50',
+      badgeBg: 'bg-meg-accent/10',
+      badgeBorder: 'border-meg-accent/30',
+      badgeText: 'text-meg-accent',
+      iconColor: 'meg-accent',
+      hoverShadow: 'hover:shadow-lg hover:shadow-meg-accent/20',
     },
   },
 };
