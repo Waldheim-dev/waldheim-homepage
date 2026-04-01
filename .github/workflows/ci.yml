@@ -2,9 +2,9 @@ name: CI · Release · Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, next]
   pull_request:
-    branches: [main]
+    branches: [main, next]
 
 concurrency:
   group: homepage-${{ github.ref }}
@@ -41,9 +41,9 @@ jobs:
       - name: Astro build
         run: pnpm build
 
-      # Only upload the artifact when we're on main (needed by the deploy job)
+      # Only upload the artifact on release branches (needed by the deploy job)
       - name: Upload dist artifact
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
         uses: actions/upload-artifact@v4
         with:
           name: homepage-dist
@@ -52,11 +52,11 @@ jobs:
 
   # ──────────────────────────────────────────
   # Job 2: Semantic Release
-  # Only on push to main; requires QA to pass
+  # Only on push to main or next; requires QA to pass
   # ──────────────────────────────────────────
   release:
     name: Semantic Release
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
     needs: qa
     runs-on: ubuntu-latest
     permissions:
@@ -94,7 +94,7 @@ jobs:
 
   # ──────────────────────────────────────────
   # Job 3: Deploy via FTP to IONOS
-  # Only on push to main; runs after release
+  # Only on push to main or next; runs after release
   # (deploys even if no new version was published)
   #
   # Required repository secrets:
@@ -107,7 +107,7 @@ jobs:
   # ──────────────────────────────────────────
   deploy:
     name: Deploy → IONOS (FTP)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
     needs: [qa, release]
     runs-on: ubuntu-latest
 
