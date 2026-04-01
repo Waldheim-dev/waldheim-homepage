@@ -10,26 +10,30 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
 ]);
 
-const titel = 'Waldheim Suite – Die integrierte Business-Suite | Waldheim.dev';
-const description =
-
-  'Die Waldheim Suite: Socialverse CRM, Forge ERP, Aether Dokumentenmanagement, Ecodrive Flottenmanagement und Customer Portal – vereint in einer integrierten SaaS-Plattform mit Single Sign-On, Multi-Tenant und App Switcher.';
-const keywords =
-  'Waldheim Suite, Business Suite, Multi-Tenant ERP, ERP CRM Suite DACH, Modular ERP Mittelstand, CRM Billing Plattform, E-Rechnung ERP SaaS, Forge ERP, Socialverse CRM, Ecodrive, Aether, ZUGFeRD, XRechnung, GPS Tracking, Single Sign-On, DSGVO';
+// SEO & Meta
+const titel = 'Waldheim Suite | Die integrierte All-in-One Business Plattform';
+const description = 'CRM, ERP, DMS & Fuhrparkmanagement in einer DSGVO-konformen SaaS-Suite. Bereit für die E-Rechnungspflicht 2025 (XRechnung/ZUGFeRD). Made in Germany.';
+const keywords = 'Business Software Suite Deutschland, E-Rechnungspflicht 2025 Software, ERP CRM integriert, Cloud-Native Business Apps, ZUGFeRD Rechnungssoftware, Mittelstand SaaS';
 
 const softwareSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'Waldheim Suite',
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  description: description,
-  url: 'https://waldheim.dev/suite',
-  author: {
+  'name': 'Waldheim Suite',
+  'applicationCategory': 'BusinessApplication',
+  'operatingSystem': 'Web',
+  'description': description,
+  'url': 'https://waldheim.dev/suite',
+  'author': {
     '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev',
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
   },
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'EUR',
+    'availability': 'https://schema.org/OnlineOnly'
+  }
 };
 
 const modules = [
@@ -200,15 +204,13 @@ const complianceItems = [
           </span>
         </div>
 
-        <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Die integrierte<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400">Business-Suite</span>
+        <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-8" style="animation-delay: 0.15s">
+          Keine Datensilos mehr.<br />
+          Nur noch <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">eine Plattform</span>.
         </h1>
 
         <p class="gsap-fadein text-xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.3s">
-          CRM, ERP, Dokumentenmanagement, Flottenmanagement und Kundenportal – alle verbunden durch
-          <strong class="text-meg-text-primary-dark">Single Sign-On</strong>, Multi-Tenant-Architektur und
-          einen blitzschnellen <strong class="text-meg-text-primary-dark">App Switcher</strong>.
+          Die Waldheim Suite vereint CRM, ERP und Flottenmanagement in einer nahtlosen SaaS-Lösung. Vollständig <strong class="text-meg-text-primary-dark">DSGVO-konform</strong>, bereit für die <strong class="text-meg-text-primary-dark">XRechnung</strong> und optimiert für den deutschen Mittelstand.
         </p>
 
         <div class="gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4 mb-12" style="animation-delay: 0.45s">

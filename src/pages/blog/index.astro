@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Blog from '../../components/Blog.astro';
+import { getCollection } from 'astro:content';
+import { SchemaUtils } from '../../utils/schema';
+import { SITE_TITLE } from '../../consts';
+
+const blogs = (await getCollection('blog'))
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+
+const pageSize = 6;
+const paginatedProjects = blogs.slice(0, pageSize);
+
+// SEO & Meta
+const titel = 'IT-Insights & Tech-Blog | Waldheim.dev';
+const description = 'Fachartikel zu DevSecOps, Software-Architektur & Cloud-Native Strategien. Expertenwissen für CTOs & Entwickler im Raum Augsburg & München.';
+const keywords = 'IT Blog Augsburg, DevSecOps Tipps, Softwareentwicklung Insights München, Cloud Security Blog, Tech Tutorials Bayern, Markus Waldheim Blog';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: 'https://waldheim.dev'
+}, {
+  name: 'Blog',
+  link: 'https://waldheim.dev/blog'
+}]);
+
+const articleSchema = paginatedProjects.map((post) => SchemaUtils.getArticleSchema({
+  title: post.data.title,
+  image: post.data.heroImage,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: post.data.pubDate.toISOString(),
+  description: post.data.description,
+  author: post.data.author,
+  publisher: SITE_TITLE,
+  url: 'https://waldheim.dev/blog/' + post.id
+}))
+---
+
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[breadCrumbSchema, ...articleSchema]}
+>
+  <main id="main-content" class="bg-meg-bg-dark min-h-screen">
+    <section class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16 gsap-fadein">
+          <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Insights & <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Expertise</span>
+          </h1>
+          <p class="text-xl text-meg-text-secondary">
+            Tiefe Einblicke in moderne Technologien, agile Methoden und die IT-Strategie von morgen. Wissen aus der Praxis für die Praxis.
+          </p>
+        </header>
+
+        <!-- Blog Grid Component -->
+        <div class="relative">
+          <Blog blog={paginatedProjects}/>
+        </div>
+        
+        <!-- Action Area -->
+        {blogs.length > pageSize && (
+          <div class="mt-20 text-center">
+            <a 
+              href="/blog/1/" 
+              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold rounded-2xl hover:border-meg-accent/50 transition-all"
+            >
+              Alle Beiträge durchsuchen
+              <i class="fa-solid fa-grid-horizontal"></i>
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Blog Footer CTA -->
+    <section class="py-24 px-6 bg-meg-surface-dark/30 border-t border-meg-border-dark text-center">
+      <h2 class="text-3xl font-bold mb-6">Sie haben eine technische Herausforderung?</h2>
+      <p class="text-meg-text-secondary mb-10 max-w-xl mx-auto">Lassen Sie uns gemeinsam prüfen, wie meine Expertise Ihr Projekt beschleunigen kann.</p>
+      <a href="/kontakt/" class="inline-flex items-center gap-2 px-10 py-4 bg-meg-accent text-white font-black rounded-2xl hover:scale-[1.05] transition-all">
+        Kostenlose Erstberatung anfragen
+        <i class="fa-solid fa-calendar-check"></i>
+      </a>
+    </section>
+  </main>
+</Layout>

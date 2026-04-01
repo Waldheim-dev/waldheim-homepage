@@ -9,6 +9,39 @@ import WaetherappTech from '../../components/WaetherappTech.astro';
 import WaetherappFree from '../../components/WaetherappFree.astro';
 import CTAPlain from '../../components/CTAPlain.astro';
 
+// SEO & Meta
+const titel = 'WetterApp | Open-Source Wetter-Software mit Multi-Provider System';
+const description = 'Moderne Wetter-Anwendung für Profis & Entwickler. Multi-Provider Fallback, Docker-Support & 100% Open Source. Starten Sie jetzt Ihr Self-Hosting Projekt!';
+const keywords = 'WetterApp Open Source, Wetterdaten API Deutschland, Self-Hosting Wetterstation, Docker Wetter App, Multi-Provider Wettervorhersage, Freie Wettersoftware';
+const ogImage = 'https://waldheim.dev/waetherapp/og-image.jpg';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'Waetherapp',
+  'applicationCategory': 'UtilitiesApplication',
+  'operatingSystem': 'Web, Docker',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'EUR',
+    'availability': 'https://schema.org/InStock'
+  },
+  'softwareVersion': '1.0.0',
+  'description': description,
+  'url': 'https://waldheim.dev/waetherapp',
+  'author': {
+    '@type': 'Organization',
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
+  },
+  'sourceCode': {
+    '@type': 'CreativeWork',
+    'url': 'https://gitlab.com/waldheim.dev-services/waetherapp'
+  }
+};
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   {
     name: 'Home',
@@ -19,80 +52,74 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
     link: 'https://waldheim.dev/waetherapp'
   }
 ]);
-
-const titel = 'WetterApp: Kostenlose Wetter-Software | waldheim.dev';
-const description =
-  'WetterApp: Moderne, kostenlose Wetter-Anwendung mit Multi-Provider-System, intelligenter Fallback und 7-Tage-Vorhersage. Selbstgehostet oder Cloud – vollständig Open Source!';
-const keywords =
-  'WetterApp, Wetter, Vorhersage, Wetterdaten, Open Source, kostenlos, Self-Hosting, Docker, Multi-Provider, Fallback, Wetteralarm, Luftqualität';
-
-// Structured Data: Software Application
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'WetterApp',
-  applicationCategory: 'Utilities',
-  operatingSystem: 'Web',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'EUR',
-    availability: 'https://schema.org/InStock'
-  },
-  softwareVersion: '1.0.0',
-  description: description,
-  url: 'https://waldheim.dev/waetherapp',
-  author: {
-    '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  sourceCode: {
-    '@type': 'CreativeWork',
-    url: 'https://gitlab.com/waldheim.dev-services/waetherapp',
-    license: 'https://opensource.org/licenses/MIT'
-  },
-  screenshot: 'https://waldheim.dev/waetherapp/screenshot.png'
-};
-
-const ogImage = 'https://waldheim.dev/waetherapp/og-image.jpg';
 ---
 
-<Layout title={titel} description={description} keywords={keywords} ogImage={ogImage}>
-  <script type="application/ld+json" set:html={JSON.stringify(breadCrumbSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <WaetherappHero />
 
-  <!-- Hero Section -->
-  <WaetherappHero />
+    <!-- Core Features & Tech -->
+    <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark" aria-labelledby="waether-tech-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="waether-tech-heading" class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
+            Full-Stack Excellence
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Präzision durch <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Multi-Source</span> Daten
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Die Waetherapp kombiniert Daten verschiedener Anbieter für maximale Genauigkeit und Ausfallsicherheit.
+          </p>
+        </header>
 
-  <!-- Features Section -->
-  <WaetherappFeatures />
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 transition-all">
+            <i class="fa-solid fa-code-merge text-meg-accent text-3xl mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Smart Fallback</h3>
+            <p class="text-meg-text-secondary text-sm">Fällt ein Daten-Provider aus, wechselt das System automatisch zur nächsten Quelle – ohne Datenverlust.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 transition-all">
+            <i class="fa-solid fa-box-open text-meg-accent text-3xl mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">100% Docker-Ready</h3>
+            <p class="text-meg-text-secondary text-sm">Einfaches Deployment über Docker Compose. Ideal für Homelabs oder professionelle Enterprise-Umgebungen.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/30 transition-all">
+            <i class="fa-solid fa-microchip text-meg-accent text-3xl mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Optimiertes Caching</h3>
+            <p class="text-meg-text-secondary text-sm">Intelligente Cache-Strategien reduzieren API-Aufrufe und sorgen für blitzschnelle Ladezeiten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <!-- Screenshots Section -->
-  <WaetherappScreenshots />
+    <WaetherappFeatures />
+    <WaetherappScreenshots />
+    <WaetherappProviders />
+    <WaetherappTech />
+    <WaetherappFree />
 
-  <!-- Providers Section -->
-  <WaetherappProviders />
-
-  <!-- Technology Section -->
-  <WaetherappTech />
-
-  <!-- Pricing / Free Section -->
-  <WaetherappFree />
-
-  <!-- Final CTA -->
-  <CTAPlain
-    title="Bereit für moderne Wetterdaten?"
-    description="Starte jetzt kostenlos mit WetterApp. Keine Kreditkarte erforderlich."
-    primaryCTA={{
-      label: 'Zur App',
-      href: 'https://wetter.waldheim.dev',
-      target: '_blank'
-    }}
-    secondaryCTA={{
-      label: 'GitLab ansehen',
-      href: 'https://gitlab.com/waldheim.dev-services/waetherapp',
-      target: '_blank'
-    }}
-  />
+    <!-- Final CTA -->
+    <CTAPlain
+      title="Bereit für moderne Wetterdaten?"
+      description="Starten Sie jetzt kostenlos mit der WetterApp – als Cloud-Version oder im Self-Hosting."
+      primaryCTA={{
+        label: 'Live-Demo ansehen',
+        href: 'https://wetter.waldheim.dev',
+        target: '_blank'
+      }}
+      secondaryCTA={{
+        label: 'Zum Quellcode (GitLab)',
+        href: 'https://gitlab.com/waldheim.dev-services/waetherapp',
+        target: '_blank'
+      }}
+    />
+  </main>
 </Layout>

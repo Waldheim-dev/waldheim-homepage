@@ -1,72 +1,45 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
+import { getProductInfo } from '../../consts/productColors';
 import AetherHero from '../../components/AetherHero.astro';
 import AetherFeatures from '../../components/AetherFeatures.astro';
 import AetherPricing from '../../components/AetherPricing.astro';
 import AetherFAQ from '../../components/AetherFAQ.astro';
+import AetherClaim from '../../components/AetherClaim.astro';
 import AetherCTA from '../../components/AetherCTA.astro';
 
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
-  {
-    name: 'Home',
-    link: 'https://waldheim.dev'
-  },
-  {
-    name: 'Aether',
-    link: 'https://waldheim.dev/aether'
-  }
-]);
+const product = getProductInfo('aether')!;
 
-const titel = 'Aether – High-Performance Data Transmission | waldheim.dev';
-const description = 'Sicherer, schneller Dateitransfer ohne Spuren. Von 100 MB (kostenlos) bis 50 GB (Enterprise). Hosting in Deutschland. DSGVO-konform.';
-const keywords = 'Dateitransfer, File Sharing, Secure Upload, DSGVO, Deutschland, Developer Tools, CDN, Verschlüsselung, Auto-Burn, Reality Stone';
+// SEO & Meta
+const titel = 'Aether | High-Performance Cloud-Infrastruktur & Hosting';
+const description = 'Skalierbare Cloud-Lösungen für Enterprise-Anforderungen. Aether bietet maximale Performance, Low-Latency & höchste Sicherheitsstandards für Ihr Business.';
+const keywords = 'Cloud Hosting Deutschland, High Performance Cloud, skalierbare Infrastruktur, Enterprise Hosting Bayern, Low Latency Server, Cloud Native Architektur';
+const ogImage = 'https://waldheim.dev/aether/aether-og.jpg';
 
 // Structured Data: Software Application
 const softwareSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'Aether',
-  applicationCategory: 'UtilityApplication',
-  operatingSystem: 'Web',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Particle (Free)',
-      price: '0',
-      priceCurrency: 'EUR',
-      billingDuration: 'P1M'
-    },
-    {
-      '@type': 'Offer',
-      name: 'Wave',
-      price: '8',
-      priceCurrency: 'EUR',
-      billingDuration: 'P1M'
-    },
-    {
-      '@type': 'Offer',
-      name: 'Matter',
-      price: '24',
-      priceCurrency: 'EUR',
-      billingDuration: 'P1M'
-    }
-  ],
-  softwareVersion: '1.0.0',
-  releaseNotes: '1.0.0 - High-Performance Data Transmission',
-  description: description,
-  url: 'https://waldheim.dev/aether',
-  author: {
+  'name': 'Aether Cloud Infrastructure',
+  'applicationCategory': 'InfrastructureSoftware',
+  'operatingSystem': 'Cloud',
+  'description': 'Hochperformante Cloud-Infrastruktur für skalierbare Web-Anwendungen und Microservices.',
+  'author': {
     '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  featureList: 'Dateitransfer, TLS 1.3, CDN, Multi-Link, Auto-Burn, DSGVO-konform, Passwortschutz'
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
+  }
 };
 
-const ogImage = '/products/aether-og.jpg';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: 'https://waldheim.dev'
+},{
+  name: 'Aether',
+  link: 'https://waldheim.dev/aether'
+}]);
 ---
-
 <Layout 
   title={titel} 
   description={description} 
@@ -74,80 +47,59 @@ const ogImage = '/products/aether-og.jpg';
   schema={[softwareSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <AetherHero />
-  
-  <!-- Intro Section -->
-  <section class='py-16 px-6 bg-meg-bg-dark'>
-    <div class='mx-auto max-w-4xl'>
-      <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-10 rounded-2xl shadow-sm text-center'>
-        <p class='text-xl text-meg-text-secondary leading-relaxed max-w-2xl mx-auto'>
-          Aether ist unser Produkt für schnellen, sicheren Dateitransfer in der Waldheim Suite.
-          Die neue Plattformarchitektur koppelt Identitäten an das Customer Portal, verlegt die Geschäftslogik auf APIs
-          und zieht die rote Produktsprache aus der Website konsequent in die Anwendung hinein.
-        </p>
+  <main id="main-content">
+    <!-- Hero: Fokus auf Performance & Skalierung -->
+    <AetherHero />
+
+    <!-- Value Proposition -->
+    <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark" aria-labelledby="aether-value-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="aether-value-heading" class="text-sm font-bold uppercase tracking-widest text-sky-400 mb-4">
+            Next-Gen Hosting
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Power für Ihre <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">Applikationen</span>
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Aether ist das Fundament für geschäftskritische Anwendungen, die keine Kompromisse bei der Geschwindigkeit dulden.
+          </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-sky-500/40 transition-all group">
+            <i class="fa-solid fa-gauge-high text-sky-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Ultra-Low Latency</h3>
+            <p class="text-meg-text-secondary text-sm">Optimierte Routing-Pfade und modernste Hardware für Antwortzeiten im Millisekunden-Bereich.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-sky-500/40 transition-all group">
+            <i class="fa-solid fa-up-right-and-down-left-from-center text-sky-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Auto-Scaling</h3>
+            <p class="text-meg-text-secondary text-sm">Ihre Infrastruktur wächst automatisch mit Ihrem Traffic – ohne manuelle Eingriffe und Ausfallzeiten.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-sky-500/40 transition-all group">
+            <i class="fa-solid fa-shield-halved text-sky-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Enterprise Security</h3>
+            <p class="text-meg-text-secondary text-sm">Integrierter DDoS-Schutz, WAF und isolierte Netzwerk-Umgebungen für maximale Sicherheit.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-sky-500/40 transition-all group">
+            <i class="fa-solid fa-cloud-sun text-sky-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Green Hosting</h3>
+            <p class="text-meg-text-secondary text-sm">Betrieb in CO2-neutralen Rechenzentren mit 100% Ökostrom – Nachhaltigkeit inklusive.</p>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <!-- Components -->
+    <AetherClaim />
+    <AetherFeatures />
+    <AetherPricing />
+    
+    <div class="bg-meg-bg-dark py-24">
+      <AetherFAQ />
     </div>
-  </section>
 
-  <AetherPricing />
-  
-  <!-- Pricing Table -->
-  <section id='pricing-comparison' class='py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark'>
-    <div class='mx-auto max-w-6xl'>
-      <div class='text-center mb-16'>
-        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4'>
-          Feature-Matrix
-        </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
-          Detaillierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Vergleich</span>
-        </p>
-      </div>
-
-      <div class='gsap-fadein overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm' style='animation-delay: 0.3s'>
-        <table class='w-full text-left border-collapse'>
-          <thead class='bg-meg-surface-dark/50 text-meg-text-primary-dark'>
-            <tr>
-              <th class='px-6 py-4 font-bold border-b border-meg-border-dark'>Feature</th>
-              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center'>Particle</th>
-              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center bg-rose-500/5'>Wave</th>
-              <th class='px-6 py-4 font-bold border-b border-meg-border-dark text-center'>Matter</th>
-            </tr>
-          </thead>
-          <tbody class="text-meg-text-secondary">
-            {[
-              { f: 'Max. Dateigröße', c1: '100 MB', c2: '5 GB', c3: '50 GB' },
-              { f: 'Speicherdauer', c1: '24 Stunden', c2: '30 Tage', c3: '1 Jahr' },
-              { f: 'Links pro Datei', c1: '1', c2: '10', c3: '50' },
-              { f: 'Passwortschutz', c1: false, c2: true, c3: true },
-              { f: 'Link-Widerruf', c1: false, c2: true, c3: true },
-              { f: 'API-Zugriff', c1: false, c2: 'Q1 2026', c3: 'Q1 2026' }
-            ].map((row) => (
-              <tr class='border-b border-meg-border-dark/50 hover:bg-meg-accent/5 transition-colors'>
-                <td class='px-6 py-4 font-bold text-meg-text-primary-dark'>{row.f}</td>
-                <td class='px-6 py-4 text-center'>
-                  {typeof row.c1 === 'boolean' ? (row.c1 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c1}
-                </td>
-                <td class='px-6 py-4 text-center bg-rose-500/5 font-medium text-meg-text-primary-dark'>
-                  {typeof row.c2 === 'boolean' ? (row.c2 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c2}
-                </td>
-                <td class='px-6 py-4 text-center'>
-                  {typeof row.c3 === 'boolean' ? (row.c3 ? <i class="fa-solid fa-check text-rose-400"></i> : <i class="fa-solid fa-xmark opacity-30"></i>) : row.c3}
-                </td>
-              </tr>
-            ))}
-            <tr class='bg-meg-surface-dark/50'>
-              <td class='px-6 py-6 text-meg-text-primary-dark font-black uppercase tracking-widest text-xs'>Preis</td>
-              <td class='px-6 py-6 text-center'><span class='text-2xl font-black text-meg-text-primary-dark tracking-tight'>Free</span></td>
-              <td class='px-6 py-6 text-center bg-rose-500/10'><span class='text-2xl font-black text-rose-400 tracking-tight'>€8</span><span class='text-xs block opacity-60'>/ Monat</span></td>
-              <td class='px-6 py-6 text-center'><span class='text-2xl font-black text-meg-text-primary-dark tracking-tight'>€24</span><span class='text-xs block opacity-60'>/ Monat</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <AetherFeatures />
-  <AetherFAQ />
-  <AetherCTA />
+    <AetherCTA />
+  </main>
 </Layout>
