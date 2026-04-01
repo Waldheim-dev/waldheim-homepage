@@ -7,6 +7,39 @@ import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
+// SEO & Meta
+const titel = 'DevSecOps Consulting Augsburg & München | CI/CD & Cloud Security';
+const description = 'Beschleunigen Sie Ihre Software-Releases mit Sicherheit & Automation. Ihr DevSecOps-Experte in Bayern für Kubernetes, GitLab CI & GitOps. Jetzt Audit anfragen!';
+const keywords = 'DevSecOps Beratung Augsburg, CI/CD Automatisierung München, Kubernetes Consulting Bayern, Cloud Security KMU, GitOps Experte, Software Lieferkette absichern';
+const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
+
+// Structured Data: Professional Service (Specific to DevSecOps)
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'DevSecOps Beratung & Implementierung',
+  'provider': {
+    '@type': 'ProfessionalService',
+    'name': 'Waldheim.dev',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Augsburg',
+      'addressRegion': 'Bayern',
+      'addressCountry': 'DE'
+    }
+  },
+  'serviceType': 'IT Consulting',
+  'areaServed': [
+    { '@type': 'City', 'name': 'Augsburg' },
+    { '@type': 'City', 'name': 'München' }
+  ],
+  'description': 'Automatisierung der Software-Lieferkette, Integration von Sicherheits-Scans (SAST/DAST) und Aufbau hochverfügbarer Kubernetes-Cluster.',
+  'offers': {
+    '@type': 'Offer',
+    'description': 'Individuelles DevSecOps-Audit und Implementierungspakete'
+  }
+};
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
@@ -18,59 +51,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/devsecops'
 }]);
 
-const titel = 'DevSecOps Beratung Augsburg & München | Waldheim.dev';
-const description = 'Professionelle DevSecOps-Beratung in Augsburg & München. CI/CD-Automatisierung, Kubernetes & Security für Ihr Unternehmen. Jetzt beraten lassen!';
-const keywords = 'DevSecOps Augsburg, DevOps München, CI/CD Automatisierung, Kubernetes, Docker, Cloud Security, Softwareentwicklung Bayern, GitOps Beratung';
-
-// Structured Data: Service
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'DevSecOps Beratung & Implementierung',
-  provider: {
-    '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  serviceType: 'DevSecOps Consulting',
-  areaServed: 'DE',
-  description: description,
-  offers: {
-    '@type': 'Offer',
-    price: '70',
-    priceCurrency: 'EUR',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '70',
-      priceCurrency: 'EUR',
-      unitText: 'Stunde'
-    }
-  }
-};
-
-const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
-
-// Structured Data: FAQ
 const faqSchema = SchemaUtils.getFAQSchema([
   {
-    question: 'Brauche ich Kubernetes für DevSecOps?',
-    answer: 'Nein! Docker Compose oder K3s reichen oft völlig aus. Ich wähle immer die passende Lösung für Ihre Unternehmensgröße und Anforderungen – ohne unnötige Komplexität.'
+    question: 'Welche Vorteile bietet DevSecOps für mein Unternehmen?',
+    answer: 'Durch die Integration von Sicherheit in den CI/CD-Prozess (Shift-Left) werden Schwachstellen früher erkannt, was die Kosten für Fehlerbehebungen senkt und die Zeit bis zum Release (Time-to-Market) verkürzt.'
   },
   {
-    question: 'Wie lange dauert die Migration zu DevSecOps?',
-    answer: 'Je nach Komplexität 2-6 Wochen. Wir starten mit Quick Wins (z.B. automatisierte Tests) und bauen die Automatisierung schrittweise aus – remote und agil.'
+    question: 'Unterstützen Sie auch bestehende Infrastrukturen?',
+    answer: 'Ja, ich analysiere Ihre aktuelle Pipeline (GitHub, GitLab, Jenkins) und integriere schrittweise Sicherheits-Scans, Containerisierung und automatisierte Deployments – ohne den laufenden Betrieb zu stören.'
   },
   {
-    question: 'Was kostet ein CI/CD-Setup?',
-    answer: 'Ab 2.500€ für eine Basic-Pipeline (automatisierte Tests + Deploy). Enterprise-Lösungen mit Monitoring, Security-Scans und GitOps auf Anfrage.'
-  },
-  {
-    question: 'Unterstützen Sie auch GitLab/Azure DevOps/Bitbucket?',
-    answer: 'Ja! Ich bin plattformunabhängig und arbeite remote mit GitHub, GitLab, Bitbucket, Azure DevOps und weiteren Plattformen.'
-  },
-  {
-    question: 'Arbeiten Sie vor Ort oder remote?',
-    answer: '100% remote! Alle Analysen, Implementierungen und Schulungen führe ich über moderne Remote-Tools durch – deutschlandweit und international.'
+    question: 'Bieten Sie auch Kubernetes-Support in Augsburg an?',
+    answer: 'Absolut. Ich unterstütze lokale Unternehmen in Augsburg und München bei der Einrichtung, Absicherung und Skalierung von Kubernetes-Clustern (K3s, EKS, GKE).'
   }
 ]);
 ---
@@ -81,293 +73,143 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
-  <!-- Hero Section -->
-  <ServiceHero 
-    title="DevSecOps"
-    subtitle="Schneller & sicherer mit"
-    description="Automatisierung, Sicherheit und Effizienz für Ihre Softwareentwicklung. Ich optimiere Ihre CI/CD-Pipelines, implementiere Container-Strategien und bringe Security in jeden Schritt Ihres Entwicklungsprozesses."
-    gradient="purple"
-    icon="fa-shield-check"
-    badge="Kubernetes & GitOps Expertise"
-  />
+  <main id="main-content">
+    <!-- Hero Section: Fokus auf ROI & Sicherheit -->
+    <ServiceHero 
+      title="DevSecOps Consulting"
+      subtitle="Sicherheit & Speed für Ihre Software"
+      description="Verkürzen Sie Ihre Release-Zyklen und eliminieren Sie Sicherheitsrisiken durch automatisierte Pipelines. Ich implementiere maßgeschneiderte DevSecOps-Strategien für KMU und Startups in Augsburg und München."
+      gradient="purple"
+      icon="fa-shield-check"
+      badge="Zertifizierte GitOps & Security Expertise"
+    />
 
-  <!-- Main Features Section -->
-  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark" id="leistungen">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-shield-halved mr-2' aria-hidden='true'></i>
-          Service-Fokus
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Zeitersparnis</span> durch Automatisierung
-        </p>
-        <p class="gsap-fadein text-xl text-meg-text-secondary" style="animation-delay: 0.3s">
-          Ich helfe Ihnen, das volle Potenzial von DevSecOps auszuschöpfen.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {[
-          { title: 'Containerisierung', desc: 'Isolierte, skalierbare und portable Anwendungen mit Docker & Kubernetes.', icon: 'fa-boxes-stacked' },
-          { title: 'Künstliche Intelligenz', desc: 'Integration KI-gestützter Tools zur Code-Analyse und QS – DSGVO-konform.', icon: 'fa-brain' },
-          { title: 'Security-Automatisierung', desc: 'Automatisierte Sicherheitschecks in jeder Phase des Prozesses.', icon: 'fa-shield' },
-          { title: 'CI/CD & Testing', desc: 'Beschleunigte Zyklen durch automatisierte Builds und Deployments.', icon: 'fa-rocket' }
-        ].map((feat, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 group" style={`animation-delay: ${0.45 + i * 0.15}s`}>
-            <div class="w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i class={`fa-solid ${feat.icon} text-violet-400 text-2xl`}></i>
-            </div>
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">{feat.title}</h3>
-            <p class="text-meg-text-secondary leading-relaxed">{feat.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech Stack Showcase -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-toolbox mr-2' aria-hidden='true'></i>
-          Technologie-Stack
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Moderne <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Werkzeuge</span>
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {[
-          { label: 'CI/CD & GitOps', tools: ['GitLab CI', 'Flux'] },
-          { label: 'Container', tools: ['Docker', 'Kubernetes', 'Helm'] },
-          { label: 'Monitoring', tools: ['Prometheus', 'Grafana', 'Loki'] },
-          { label: 'Security', tools: ['Trivy', 'SonarQube', 'OWASP'] },
-          { label: 'Infrastructure', tools: ['Terraform'] },
-          { label: 'Arbeitsweise', tools: ['100% Remote'], icon: 'fa-house-laptop' }
-        ].map((stack, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 hover:border-violet-500/20 transition-all shadow-sm" style={`animation-delay: ${0.45 + i * 0.1}s`}>
-            <h3 class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-4">{stack.label}</h3>
-            <div class="flex flex-wrap gap-2">
-              {stack.tools.map(tool => (
-                <span class="px-3 py-1 bg-meg-bg-dark/50 border border-meg-border-dark rounded-lg text-sm text-meg-text-secondary font-medium">
-                  {stack.icon && <i class={`fa-solid ${stack.icon} mr-1 text-emerald-400`}></i>}
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- DevSecOps Workflow -->
-  <section class="py-24 px-6 bg-meg-bg-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          Workflow
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          In <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>4 Schritten</span> zum Erfolg
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {[
-          { step: '1', title: 'Analyse', desc: 'Remote-Check Ihres aktuellen Tech-Stacks.' },
-          { step: '2', title: 'Konzept', desc: 'Pipeline-Design passend zu Ihrer Größe.' },
-          { step: '3', title: 'Migration', desc: 'Schritt-für-Schritt Einführung mit Quick Wins.' },
-          { step: '4', title: 'Training', desc: 'Remote Schulungen für Ihr Team.' }
-        ].map((item, i) => (
-          <div class="gsap-fadein text-center group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
-            <div class="size-16 bg-meg-surface-dark border border-meg-border-dark rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:border-violet-500/50 group-hover:bg-violet-500/5 transition-all duration-500">
-              <span class="text-3xl font-black text-violet-400">{item.step}</span>
-            </div>
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">{item.title}</h3>
-            <p class="text-meg-text-secondary text-sm px-4">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          FAQ
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Antworten</span>
-        </p>
-      </div>
-      
-      <div class="max-w-4xl mx-auto space-y-4">
-        {[
-          { q: 'Brauche ich Kubernetes?', a: 'Nein! Docker Compose oder K3s reichen oft völlig aus. Ich wähle immer die passende Lösung für Ihre Anforderungen.' },
-          { q: 'Wie lange dauert die Migration?', a: 'Je nach Komplexität 2-6 Wochen. Wir starten mit Quick Wins und bauen die Automatisierung schrittweise aus.' },
-          { q: 'Unterstützen Sie alle Plattformen?', a: 'Ja! Ich arbeite remote mit GitHub, GitLab, Bitbucket, Azure DevOps und weiteren.' }
-        ].map((faq, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm" style={`animation-delay: ${0.3 + i * 0.15}s`}>
-            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
-              <span class="text-violet-400 font-black">Q</span>
-              {faq.q}
-            </h3>
-            <p class="text-meg-text-secondary pl-7 leading-relaxed">
-              <span class="text-meg-accent font-bold mr-2">A:</span>
-              {faq.a}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- DevSecOps Benefits Bento Grid -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-rocket mr-2' aria-hidden='true'></i>
-          Vorteile
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Optimierter <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Deployment-Prozess</span>
-        </p>
-        <p class="gsap-fadein text-xl text-meg-text-secondary" style="animation-delay: 0.3s">
-          Von der Entwicklung bis zum Betrieb – effizient, sicher und remote
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {[
-          { title: 'Performance-Optimierung', desc: 'Ich analysiere und optimiere Ihre Build-Prozesse für maximale Geschwindigkeit und Effizienz.', icon: 'fa-gauge-high' },
-          { title: 'Automatisierte Releases', desc: 'Vollautomatische Release-Pipelines für häufige, zuverlässige und qualitativ hochwertige Software-Updates.', icon: 'fa-code-branch' },
-          { title: 'Skalierbarkeit & Flexibilität', desc: 'Ihre Infrastruktur wird fit für die Zukunft – skalierbar, flexibel und ortsunabhängig.', icon: 'fa-up-right-and-down-left-from-center' },
-          { title: 'Tool-Integration', desc: 'Nahtlose Zusammenarbeit Ihrer Entwicklungstools für einen effizienten Workflow.', icon: 'fa-puzzle-piece' },
-          { title: 'Ortsunabhängig', desc: '100% remote Arbeit – sicher und stabil von überall entwickeln und deployen.', icon: 'fa-globe' },
-          { title: 'Monitoring & Observability', desc: 'Vollständige Transparenz über Ihre Systeme mit Prometheus, Grafana und Loki.', icon: 'fa-chart-line' }
-        ].map((benefit, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/30 transition-all shadow-sm group" style={`animation-delay: ${0.45 + i * 0.1}s`}>
-            <div class="w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i class={`fa-solid ${benefit.icon} text-violet-400 text-2xl`}></i>
-            </div>
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">{benefit.title}</h3>
-            <p class="text-meg-text-secondary leading-relaxed text-sm">{benefit.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Deployment Strategies Comparison -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-chart-simple mr-2' aria-hidden='true'></i>
-          Vergleich
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Deployment-<span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Strategien</span>
-        </p>
-        <p class="gsap-fadein text-xl text-meg-text-secondary" style="animation-delay: 0.3s">
-          Ich helfe Ihnen, die passende Deployment-Methode für Ihre Anforderungen zu finden
-        </p>
-      </div>
-      
-      <div tabindex="0" class="overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm" role="region" aria-label="Deployment-Vergleichstabelle">
-        <table class="w-full text-left border-collapse">
-          <thead class="bg-meg-surface-dark/50 text-meg-text-primary-dark">
-            <tr>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Feature</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Native (Skripte/SSH)</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Docker</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark bg-violet-500/5">
-                <div class="flex items-center gap-2">
-                  Kubernetes
-                  <i class="fa-solid fa-star text-violet-400 text-xs" aria-label="Empfohlen" role="img"></i>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="text-meg-text-secondary">
-            {[
-              { f: 'Deployment-Prinzip', c1: 'Manuelle Skripte, SSH', c2: 'Container-Images', c3: 'Deklarative Manifests (YAML)' },
-              { f: 'Skalierung', c1: 'Manuell', c2: 'Mit Tools (Swarm)', c3: 'Automatisch (HPA)', green: true },
-              { f: 'Rollback', c1: 'Komplex', c2: 'Via Tags', c3: 'Ein Befehl', green: true },
-              { f: 'Komplexität', c1: 'Niedrig', c2: 'Mittel', c3: 'Hoch (ab ~5 Services)', orange: true },
-              { f: 'Ideal für', c1: 'Prototypen, MVPs', c2: 'Kleinere Projekte', c3: 'Produktion, Multi-Service' },
-              { f: 'Kosten', c1: '€ (Server only)', c2: '€€ (Server + Reg)', c3: '€€€ (Cluster + Ress)', orange: true }
-            ].map((row) => (
-              <tr class="border-b border-meg-border-dark/50 hover:bg-meg-accent/5 transition-colors">
-                <td class="px-6 py-4 font-bold text-meg-text-primary-dark">{row.f}</td>
-                <td class="px-6 py-4">{row.c1}</td>
-                <td class="px-6 py-4">{row.c2}</td>
-                <td class={`px-6 py-4 bg-violet-500/5 font-medium ${row.green ? 'text-emerald-400' : row.orange ? 'text-orange-400' : 'text-meg-text-primary-dark'}`}>{row.c3}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="mt-16 text-center">
-        <div class="gsap-fadein inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full shadow-sm">
-          <i class="fa-solid fa-lightbulb text-violet-400 text-xs"></i>
-          <p class="text-meg-text-secondary text-[10px] font-black uppercase tracking-widest">
-            Ich berate Sie bei der Wahl der passenden Strategie
+    <!-- Value Proposition: Warum DevSecOps? -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="benefits-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="benefits-heading" class="text-sm font-bold uppercase tracking-widest text-violet-400 mb-4">
+            Der Business-Case
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">Shift-Left</span> für Ihren Erfolg
           </p>
+          <p class="text-xl text-meg-text-secondary">
+            Sicherheit ist kein Hindernis, sondern ein Beschleuniger. Entdecken Sie, wie Automatisierung Ihre Entwicklung transformiert.
+          </p>
+        </header>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+            <i class="fa-solid fa-bolt text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Speed-to-Market</h3>
+            <p class="text-meg-text-secondary text-sm">Automatisierte Deployments reduzieren manuelle Fehler und bringen Features schneller zum Kunden.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+            <i class="fa-solid fa-user-shield text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Risiko-Minimierung</h3>
+            <p class="text-meg-text-secondary text-sm">Integrierte SAST/DAST-Scans finden Sicherheitslücken, bevor sie die Produktion erreichen.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+            <i class="fa-solid fa-chart-line text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Kosteneffizienz</h3>
+            <p class="text-meg-text-secondary text-sm">Frühe Fehlererkennung spart bis zu 40% der Entwicklungskosten für nachträgliche Bugfixes.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+            <i class="fa-solid fa-scale-balanced text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Compliance</h3>
+            <p class="text-meg-text-secondary text-sm">Lückenlose Dokumentation und automatisierte Audits für höchste regulatorische Ansprüche.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-violet-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-circle-question mr-2' aria-hidden='true'></i>
-          Häufig gestellte Fragen
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Antworten</span> zu DevSecOps
-        </p>
-      </div>
-      
-      <div class="max-w-4xl mx-auto space-y-6">
-        {[
-          { q: 'Brauche ich Kubernetes für DevSecOps?', a: 'Nein! Docker Compose oder K3s reichen oft völlig aus. Ich wähle immer die passende Lösung für Ihre Unternehmensgröße und Anforderungen – ohne unnötige Komplexität.' },
-          { q: 'Wie lange dauert die Migration zu DevSecOps?', a: 'Je nach Komplexität 2-6 Wochen. Wir starten mit Quick Wins (z.B. automatisierte Tests) und bauen die Automatisierung schrittweise aus – remote und agil.' },
-          { q: 'Was kostet ein CI/CD-Setup?', a: 'Ab 2.500€ für eine Basic-Pipeline (automatisierte Tests + Deploy). Enterprise-Lösungen mit Monitoring, Security-Scans und GitOps auf Anfrage.' },
-          { q: 'Unterstützen Sie auch GitLab/Azure DevOps/Bitbucket?', a: 'Ja! Ich bin plattformunabhängig und arbeite remote mit GitHub, GitLab, Bitbucket, Azure DevOps und weiteren Plattformen.' },
-          { q: 'Arbeiten Sie vor Ort oder remote?', a: '100% remote! Alle Analysen, Implementierungen und Schulungen führe ich über moderne Remote-Tools durch – deutschlandweit und international.' }
-        ].map((faq, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
-              <span class="text-violet-400 font-black">Q</span>
-              {faq.q}
-            </h3>
-            <p class="text-meg-text-secondary pl-10 leading-relaxed">
-              <strong class="text-meg-text-primary-dark mr-2">A:</strong>
-              {faq.a}
+    <!-- Tech-Expertise -->
+    <section class="py-24 px-6 border-y border-meg-border-dark">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Expertise in <span class="text-violet-400">Cloud-Native</span> Technologien</h2>
+            <p class="text-meg-text-secondary mb-8">
+              Ich setze auf bewährte Open-Source-Tools und moderne Standards, um Ihre Infrastruktur zukunftssicher zu gestalten. Mein Fokus liegt auf Transparenz und Portabilität – kein Vendor-Lock-in.
             </p>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span class="text-meg-text-primary-dark font-semibold">Kubernetes & Docker:</span> Skalierbare Container-Orchestrierung.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span class="text-meg-text-primary-dark font-semibold">GitLab & GitHub Actions:</span> Hochperformante CI/CD Pipelines.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span class="text-meg-text-primary-dark font-semibold">Terraform:</span> Infrastructure as Code (IaC) für reproduzierbare Umgebungen.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-check text-emerald-400"></i>
+                <span class="text-meg-text-primary-dark font-semibold">Prometheus & Grafana:</span> Full-Stack Observability & Monitoring.
+              </li>
+            </ul>
           </div>
-        ))}
+          <div class="bg-meg-surface-dark/30 rounded-3xl p-4 ring-1 ring-meg-border-dark">
+            <video src="/videos/video_devsecops.mp4" poster="/videos/video_devsecops-poster.webp" loop muted playsinline autoplay class="rounded-2xl w-full"></video>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <PriceService />
+    <!-- Workflow: Der Weg zur DevSecOps Excellence -->
+    <section class="py-24 px-6" aria-labelledby="workflow-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="text-center mb-16">
+          <h2 id="workflow-heading" class="text-3xl font-black tracking-tight">Ihr Fahrplan zum <span class="text-violet-400">Secure Release</span></h2>
+        </header>
+        <div class="relative">
+          <div class="absolute top-1/2 left-0 w-full h-0.5 bg-meg-border-dark hidden lg:block"></div>
+          <ol class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            {[
+              { step: '01', title: 'Audit', desc: 'Analyse Ihrer aktuellen Lieferkette und Identifikation von Risiken.' },
+              { step: '02', title: 'Strategie', desc: 'Entwurf einer Roadmap für Automatisierung und Sicherheitsintegration.' },
+              { step: '03', title: 'Build', desc: 'Implementierung der Pipelines und Cloud-Infrastruktur.' },
+              { step: '04', title: 'Scale', desc: 'Kontinuierliche Optimierung und Team-Coaching für agilen Betrieb.' }
+            ].map((s) => (
+              <li class="bg-meg-bg-dark border border-meg-border-dark p-6 rounded-2xl text-center hover:border-violet-500/50 transition-all">
+                <span class="text-4xl font-black text-violet-500/20 block mb-4">{s.step}</span>
+                <h3 class="text-lg font-bold mb-2">{s.title}</h3>
+                <p class="text-sm text-meg-text-secondary">{s.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
 
-  <Blog limits={2} />
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-meg-surface-dark/20 border-t border-meg-border-dark">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-12">Häufige Fragen zu <span class="text-violet-400">DevSecOps</span></h2>
+        <div class="space-y-6">
+          {faqSchema.mainEntity.map((faq) => (
+            <details class="group border border-meg-border-dark rounded-2xl p-6 bg-meg-surface-dark/50 cursor-pointer">
+              <summary class="flex justify-between items-center font-bold text-meg-text-primary-dark list-none">
+                {faq.name}
+                <span class="text-violet-400 group-open:rotate-180 transition-transform">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <p class="mt-4 text-meg-text-secondary leading-relaxed border-t border-meg-border-dark pt-4">
+                {faq.acceptedAnswer.text}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
 
-  <RelatedServices />
-
-  <Partner />
+    <PriceService />
+    <Blog limits={2} />
+    <RelatedServices />
+    <Partner />
+  </main>
 </Layout>

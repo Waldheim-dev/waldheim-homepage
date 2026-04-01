@@ -6,94 +6,78 @@ import HeroBackground from '../components/HeroBackground.astro';
 import PortfolioTop from '../components/PortfolioTop.astro';
 import PriceService from '../components/PriceService.astro';
 import Blog from '../components/Blog.astro';
-import EcodriveClaim from '../components/EcodriveClaim.astro';
-import PriceEcodrive from '../components/PriceEcodrive.astro';
 import SkillWrapper from '../components/SkillWrapper.astro';
-import type { Fragment } from 'astro/runtime/server/index.js';
-import PriceSilvacore from '../components/PriceSilvacore.astro';
-import PriceSocialverse from '../components/PriceSocialverse.astro';
-import SilvacoreClaim from '../components/SilvacoreClaim.astro';
-import SocialverseClaim from '../components/SocialverseClaim.astro';
-import AetherClaim from '../components/AetherClaim.astro';
-import WaetherappClaim from '../components/WaetherappClaim.astro';
-import ObsidianGeminiClaim from '../components/ObsidianGeminiClaim.astro';
 import TrackedButton from '../components/TrackedButton.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FreeTools from '../components/FreeTools.astro';
+import SuiteClaim from '../components/SuiteClaim.astro';
+
+// SEO & Meta
+const titel = 'IT-Consulting & Softwareentwicklung Augsburg/München | Waldheim.dev';
+const description = 'Experte für DevSecOps, Webentwicklung & IT-Strategie. +150% Produktivität durch KI-Workflows. Zertifizierte Qualität für KMU & Startups in Bayern.';
+const keywords = 'IT-Consulting Augsburg, Softwareentwicklung München, DevSecOps Experte, B2B Webentwicklung, Scrum Master Augsburg, IT-Sicherheit KMU, Waldheim IT';
+const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
+
+// Structured Data: ProfessionalService & Breadcrumbs
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  'name': 'Waldheim.dev - Markus Waldheim',
+  'image': 'https://waldheim.dev/waldheim.dev.svg',
+  'url': 'https://waldheim.dev',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Augsburg',
+    'addressRegion': 'Bayern',
+    'addressCountry': 'DE'
+  },
+  'geo': {
+    '@type': 'GeoShape',
+    'region': 'DE-BY'
+  },
+  'areaServed': [
+    { '@type': 'City', 'name': 'Augsburg' },
+    { '@type': 'City', 'name': 'München' },
+    { '@type': 'City', 'name': 'Landsberg am Lech' }
+  ],
+  'description': 'Senior IT-Consulting, DevSecOps und Individualsoftware. Spezialisiert auf KI-gestützte Effizienzsteigerung (+150%) und agile Transformation.',
+  'memberOf': [
+    { '@type': 'Organization', 'name': 'Scrum.org', 'description': 'PSM I, PSM II, PSPO I' },
+    { '@type': 'Organization', 'name': 'IHK', 'description': 'Zertifizierter Ausbilder' }
+  ],
+  'priceRange': '€€€'
+};
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
 }]);
-
-// Organization Schema
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Waldheim.dev',
-  url: 'https://waldheim.dev',
-  logo: 'https://waldheim.dev/waldheim.dev.svg',
-  description: 'IT-Dienstleistungen für KMU, Vereine & Startups: DevSecOps, Webentwicklung, Design, IT-Service, Smart Home',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'Kundenservice',
-    email: 'kontakt@waldheim.dev'
-  },
-  areaServed: ['Augsburg', 'München', 'Bayern', 'DE', 'AT', 'CH']
-};
-
-// WebSite Schema
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'waldheim.dev',
-  url: 'https://waldheim.dev',
-  description: 'Professionelle IT-Dienstleistungen: DevSecOps, Webentwicklung, Design, IT-Service',
-  publisher: {
-    '@type': 'Organization',
-    name: 'waldheim.dev'
-  }
-};
-
-const titel = 'Waldheim.dev: IT-Lösungen & Beratung | Augsburg';
-const description = 'Waldheim.dev: Ihr Partner für DevSecOps, Webentwicklung und IT-Service in Augsburg & München. Professionelle Qualität zum fairen Preis. Jetzt beraten lassen!';
-const keywords = 'IT-Dienstleistungen, Augsburg, München, DevSecOps, Webentwicklung, IT-Service, Verbandssoftware, Softwareentwicklung, IT Beratung, KMU, Vereine, Startups, Cloud, Smart Home';
-
-const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
 ---
 
 <Layout 
   title={titel} 
   description={description} 
   keywords={keywords} 
-  schema={[organizationSchema, websiteSchema, breadCrumbSchema]}
+  schema={[professionalServiceSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <HeroBackground title="Nachhaltige IT-Lösungen aus einer Hand"
-                  subtitle="Von DevSecOps über Webentwicklung bis zum Smart Home – ich begleite Sie digital. Für Unternehmen & Verbände im Raum Augsburg/München."
-
-                  video="/videos/video_chip.mp4">
+  <HeroBackground 
+    title="High-End IT-Consulting & Software&shy;entwicklung"
+    subtitle="Ich transformiere Ihre IT-Prozesse mit DevSecOps und KI-gestützten Workflows für bis zu 150% mehr Produktivität. Ihr lokaler Partner für messbare Ergebnisse im Raum Augsburg und München."
+    video="/videos/video_chip.mp4"
+  >
     <div class="mt-10 flex items-center justify-center flex-wrap gap-4">
       <TrackedButton
         href="https://calendly.com/markus-waldheim/30min"
         target="_blank"
         trackEvent="cta_homepage_calendly"
         trackCategory="hero"
-        trackLabel="Beratungsgespräch buchen"
+        trackLabel="Strategiegespräch buchen"
         variant="primary"
         icon="fa-solid fa-calendar-check animate-pulse"
         iconPosition="left"
       >
-        Beratungsgespräch buchen
-      </TrackedButton>
-      <TrackedButton
-        href="/kontakt/"
-        trackEvent="cta_homepage_contact"
-        trackCategory="hero"
-        trackLabel="Individuelle Anfrage"
-        variant="secondary"
-      >
-        Individuelle Anfrage
+        Kostenloses Strategiegespräch
       </TrackedButton>
       <TrackedButton
         href="/referenzen/1/"
@@ -103,301 +87,243 @@ const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
         variant="secondary"
         icon="fa-solid fa-arrow-right"
       >
-        Referenzen
+        Case Studies ansehen
       </TrackedButton>
+    </div>
+    
+    <!-- Trust-Bar: Direkte Sichtbarkeit der USPs -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-meg-text-secondary text-sm border-t border-meg-border-dark/30 pt-8">
+      <div class="flex flex-col items-center">
+        <span class="text-meg-accent font-bold text-lg">10+ Jahre</span>
+        <span>IT-Expertise</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-meg-accent font-bold text-lg">+150%</span>
+        <span>Produktivität durch KI</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-meg-accent font-bold text-lg">PSM I/II & PSPO</span>
+        <span>Zertifiziert</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-meg-accent font-bold text-lg">90+ Score</span>
+        <span>Lighthouse-Performance</span>
+      </div>
     </div>
   </HeroBackground>
 
-  <div>
-    <main>
-
-      <section class="bento-service relative isolate">
-        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 bento-grid grid lg:grid-cols-6 sm:grid-cols-6 grid-cols-1 gap-4 grid-flow-row">
-          <!-- Main Principles Card -->
-          <div class="relative lg:row-span-2 sm:row-span-2 lg:col-span-3 sm:col-span-3 col-span-1 group">
-            <div class="bento-card gsap-fadein relative h-full">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent to-sky-600 rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-500" />
-              <div class="flex flex-col gap-4 justify-between h-full z-10 relative bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark p-10 shadow-sm rounded-2xl border border-meg-border-dark hover:border-meg-accent/30 transition-all duration-300">
-                <div class="flex flex-col gap-4">
-                  <h2 class="text-3xl font-bold tracking-tight sm:text-5xl">
-                    So arbeite ich: Meine <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Prinzipien</span> für Ihren Erfolg
-                  </h2>
-                  <p class="relative mt-4 text-lg leading-8 sm:max-w-md lg:max-w-none text-meg-text-secondary">
-                    Von der ersten Beratung bis zur finalen Umsetzung – ich stehe für Qualität, Transparenz und Kundenorientierung.
-                  </p>
-                  <ul role="list" class="mt-6 space-y-4">
-                    <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-meg-text-primary-dark">Qualität:</strong> Ich liefere ausschließlich Ergebnisse, die meinen hohen Ansprüchen genügen.</span>
-                    </li>
-                    <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-meg-text-primary-dark">Zuverlässigkeit:</strong> Auf meine IT-Lösungen und meinen Support können Sie zählen.</span>
-                    </li>
-                    <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-meg-text-primary-dark">Nachvollziehbarkeit:</strong> Alle Schritte werden detailliert dokumentiert.</span>
-                    </li>
-                    <li class="flex gap-x-3 items-start">
-                      <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                      <span><strong class="font-semibold text-meg-text-primary-dark">Passgenauigkeit:</strong> Ich entwickle Lösungen, die perfekt zu Ihren Anforderungen passen.</span>
-                    </li>
-                  </ul>
-                </div>
-                <Image 
-                  src="/bento/cert.webp" 
-                  alt="Qualität bei Waldheim.dev" 
-                  class="rounded-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
-                  width={600} 
-                  height={546}
-                  loading="eager"
-                  fetchpriority="high"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- DevSecOps Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 group">
-            <div class="flex flex-col gap-4 justify-between h-full">
-              <div class="flex flex-col items-start gap-2">
-                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>DevSecOps</span> für schnellere & sichere Entwicklung
-                </h3>
-                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
-                  Ich automatisiere Ihre Entwicklungspipeline, integriere Sicherheit von Anfang an und verkürze Ihre Release-Zyklen.
-                </p>
-                <TrackedButton
-                  href="/services/devsecops/"
-                  trackEvent="cta_service_devsecops"
-                  trackCategory="service_card"
-                  trackLabel="DevSecOps Services"
-                  variant="ghost"
-                  icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full group-hover:bg-violet-500/10 group-hover:border-violet-500/30 group-hover:text-violet-400 transition-all"
-                >
-                  Zu meinen DevSecOps-Services
-                </TrackedButton>
-              </div>
-              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-violet-500/30 transition-all">
-                <video 
-                  class="object-contain max-sm:max-w-none w-full" 
-                  width="1920"
-                  height="1080"
-                  style="aspect-ratio: 16/9;"
-                  preload="none" 
-                  poster="/videos/video_devsecops-poster.webp" 
-                  loop 
-                  muted 
-                  playsinline
-                  autoplay
-                  src="/videos/video_devsecops.mp4"
-                >
-                  <source src="/videos/video_devsecops.mp4" type="video/mp4" />
-                </video>
-              </figure>
-            </div>
-          </div>
-
-          <!-- Entwicklung Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-meg-accent/40 hover:shadow-lg hover:shadow-meg-accent/5 transition-all duration-300 group">
-            <div class="flex flex-col gap-4 justify-between h-full">
-              <div class="flex flex-col items-start gap-2">
-                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  Individuelle <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Softwarelösungen</span> für Ihren Bedarf
-                </h3>
-                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
-                  Ich entwickle Webanwendungen, Tools und maßgeschneiderte Software, die perfekt zu Ihren Prozessen passt.
-                </p>
-                <TrackedButton
-                  href="/services/entwicklung/"
-                  trackEvent="cta_service_development"
-                  trackCategory="service_card"
-                  trackLabel="Projekt anfragen"
-                  variant="ghost"
-                  icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full group-hover:bg-meg-accent/10 group-hover:border-meg-accent/30 group-hover:text-meg-accent transition-all"
-                >
-                  Jetzt Projekt anfragen
-                </TrackedButton>
-              </div>
-              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-meg-accent/30 transition-all">
-                <video 
-                  class="object-contain max-sm:max-w-none w-full" 
-                  width="1920"
-                  height="1080"
-                  style="aspect-ratio: 16/9;"
-                  preload="none" 
-                  poster="/videos/video_software-poster.webp" 
-                  loop 
-                  muted 
-                  playsinline
-                  autoplay
-                  src="/videos/video_software.mp4"
-                >
-                  <source src="/videos/video_software.mp4" type="video/mp4" />
-                </video>
-              </figure>
-            </div>
-          </div>
-
-          <!-- Design Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-rose-500/40 hover:shadow-lg hover:shadow-rose-500/5 transition-all duration-300 group">
-            <div class="flex flex-col gap-4 justify-between h-full">
-              <div class="flex flex-col items-start gap-2">
-                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  <span class='text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500'>Branding, Webdesign & UX</span> – aus einem Guss
-                </h3>
-                <p class="relative mb-6 text-lg text-meg-text-secondary sm:max-w-md lg:max-w-none">
-                  Ich entwickle ganzheitliche Designlösungen, die Ihre Marke stärken und Ihre Zielgruppe überzeugen.
-                </p>
-                <TrackedButton
-                  href="/services/design/"
-                  trackEvent="cta_service_design"
-                  trackCategory="service_card"
-                  trackLabel="Design-Philosophie"
-                  variant="ghost"
-                  icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full group-hover:bg-rose-500/10 group-hover:border-rose-500/30 group-hover:text-rose-400 transition-all"
-                >
-                  Design-Philosophie entdecken
-                </TrackedButton>
-              </div>
-              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-rose-500/30 transition-all">
-                <video 
-                  class="object-contain max-sm:max-w-none w-full" 
-                  width="1280"
-                  height="720"
-                  style="aspect-ratio: 16/9;"
-                  preload="none" 
-                  poster="/videos/video_design-poster.webp" 
-                  loop 
-                  muted 
-                  playsinline
-                  autoplay
-                  aria-label="Moderne Webdesign-Prozesse und UI-Komponenten"
-                  src="/videos/video_design.mp4"
-                >
-                  <source src="/videos/video_design.mp4" type="video/mp4" />
-                </video>
-              </figure>
-            </div>
-          </div>
-          <!-- IT-Service / Cloud Card -->
-          <div class="bento-card gsap-fadein lg:col-span-3 md:col-span-3 sm:col-span-3 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 group">
-            <div class="flex flex-col gap-4 justify-between h-full">
-              <div class="flex flex-col items-start gap-2">
-                <h3 class="text-lg font-bold tracking-tight sm:text-xl">
-                  Sichere <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500'>Cloud-Lösungen</span> & IT-Service
-                </h3>
-                <p class="relative mb-6 text-lg text-meg-text-secondary">
-                  Ich migriere Ihre IT in die Cloud, sorge für maximale Sicherheit und ermögliche ortsunabhängiges Arbeiten.
-                </p>
-                <TrackedButton
-                  href="/services/it-service/"
-                  trackEvent="cta_service_it"
-                  trackCategory="service_card"
-                  trackLabel="Cloud-Services"
-                  variant="ghost"
-                  icon="fa-solid fa-arrow-right"
-                  class="!px-4 !py-2 !rounded-full group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 group-hover:text-emerald-400 transition-all"
-                >
-                  Mehr über Cloud-Services
-                </TrackedButton>
-              </div>
-              <figure class="w-full rounded-xl overflow-hidden mt-6 ring-1 ring-meg-border-dark group-hover:ring-emerald-500/30 transition-all">
-                <video 
-                  class="object-contain max-sm:max-w-none w-full" 
-                  width="1280"
-                  height="720"
-                  style="aspect-ratio: 16/9;"
-                  preload="none" 
-                  poster="/videos/video_cloud-security-poster.webp" 
-                  loop 
-                  muted 
-                  playsinline
-                  autoplay
-                  aria-label="Sichere Cloud-Infrastruktur mit Sicherheits-Shields und Datenströmen"
-                  src="/videos/video_cloud-security.mp4"
-                >
-                  <source src="/videos/video_cloud-security.mp4" type="video/mp4" />
-                </video>
-              </figure>
-            </div>
-          </div>
+  <main id="main-content">
+    <section class="bento-service relative isolate py-24" aria-labelledby="services-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 id="services-heading" class="sr-only">Meine IT-Services und Prinzipien</h2>
+        <div class="grid lg:grid-cols-6 grid-cols-1 gap-6">
           
-          <!-- Certifications Card -->
-          <div class="bento-card gsap-fadein lg:col-span-6 sm:col-span-6 col-span-1 bg-meg-surface-dark/50 backdrop-blur-xl text-meg-text-primary-dark border border-meg-border-dark rounded-2xl overflow-hidden p-10 shadow-sm hover:border-meg-accent/30 transition-all duration-300 group">
-            <div class="flex md:flex-row flex-col gap-8 justify-between items-start">
-              <div class="flex flex-col flex-1 gap-4">
-                <p class="text-base font-semibold text-meg-accent">
-                  <i class='fa-solid fa-award text-meg-accent mr-2' aria-hidden='true'></i>
-                  Ihr Vorteil: Zertifiziertes Know-how
-                </p>
-                <h3 class="text-2xl font-bold tracking-tight sm:text-3xl">
-                  Profitieren Sie von meiner <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Expertise</span> in agilen Methoden
+          <!-- Core Principles Card (Engineering Excellence) -->
+          <article class="lg:col-span-3 lg:row-span-2 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 flex flex-col justify-between group hover:border-meg-accent/50 transition-all duration-500">
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+                Maximale Qualität durch <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Engineering Excellence</span>
+              </h2>
+              <p class="text-lg text-meg-text-secondary mb-8">
+                IT ist kein Selbstzweck, sondern Ihr stärkster Hebel. Ich garantiere Lösungen, die nicht nur funktionieren, sondern Ihr Business skalierbar machen.
+              </p>
+              <dl class="space-y-6">
+                <div>
+                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
+                    <i class="fa-solid fa-shield-halved text-meg-accent" aria-hidden="true"></i> Sicherheit (By Design)
+                  </dt>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">Präventive Absicherung Ihrer Infrastruktur ab der ersten Codezeile.</dd>
+                </div>
+                <div>
+                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
+                    <i class="fa-solid fa-gauge-high text-meg-accent" aria-hidden="true"></i> High Performance
+                  </dt>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">Ladezeiten unter 1s und optimierte Core Web Vitals für beste UX und SEO.</dd>
+                </div>
+                <div>
+                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
+                    <i class="fa-solid fa-code-branch text-meg-accent" aria-hidden="true"></i> Saubere Dokumentation
+                  </dt>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">100% nachvollziehbarer Code und Architekturentscheidungen (ADR).</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="mt-12">
+               <Image 
+                 src="/bento/cert.webp" 
+                 alt="Zertifizierte IT-Qualität durch Markus Waldheim" 
+                 class="rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-transform duration-500" 
+                 width={600} 
+                 height={546} 
+                 loading="eager" 
+               />
+            </div>
+          </article>
+
+          <!-- Service Card: DevSecOps -->
+          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-violet-500/50 transition-all group">
+            <header>
+              <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">DevSecOps & Automation</h3>
+            </header>
+            <p class="text-meg-text-secondary mb-6">Automatisierte Pipelines und Cloud-Native Strategien, die Ihre Time-to-Market drastisch verkürzen.</p>
+            <TrackedButton 
+              href="/services/devsecops/" 
+              variant="ghost" 
+              icon="fa-solid fa-arrow-right" 
+              class="group-hover:text-violet-400"
+              trackEvent="cta_service_devsecops"
+              trackCategory="service_card"
+              trackLabel="DevSecOps Details"
+            >
+              Operations skalieren
+            </TrackedButton>
+            <figure class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
+               <video 
+                 src="/videos/video_devsecops.mp4" 
+                 poster="/videos/video_devsecops-poster.webp" 
+                 loop muted playsinline autoplay 
+                 class="w-full aspect-video object-cover"
+                 aria-label="Visualisierung einer automatisierten DevSecOps Pipeline"
+               ></video>
+            </figure>
+          </article>
+
+          <!-- Service Card: Softwareentwicklung -->
+          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all group">
+            <header>
+              <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Softwareentwicklung</h3>
+            </header>
+            <p class="text-meg-text-secondary mb-6">Maßgeschneiderte Webanwendungen (Astro, Angular, Go), die Ihre Geschäftsprozesse digital abbilden.</p>
+            <TrackedButton 
+              href="/services/entwicklung/" 
+              variant="ghost" 
+              icon="fa-solid fa-arrow-right" 
+              class="group-hover:text-meg-accent"
+              trackEvent="cta_service_development"
+              trackCategory="service_card"
+              trackLabel="Entwicklung anfragen"
+            >
+              Projekt anfragen
+            </TrackedButton>
+            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
+               <video 
+                 src="/videos/video_software.mp4" 
+                 poster="/videos/video_software-poster.webp" 
+                 loop muted playsinline autoplay 
+                 class="w-full aspect-video object-cover"
+                 aria-label="Code-Visualisierung moderner Softwareentwicklung"
+               ></video>
+            </div>
+          </article>
+
+          <!-- Service Card: Design / UX (Wiederhergestellt) -->
+          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-rose-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <header>
+                <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">Design & UI/UX</h3>
+              </header>
+              <p class="text-meg-text-secondary mb-6">User-centered Interfaces und Brandings, die Ihre Markenwerte transportieren und konvertieren.</p>
+              <TrackedButton 
+                href="/services/design/" 
+                variant="ghost" 
+                icon="fa-solid fa-arrow-right" 
+                class="group-hover:text-rose-400"
+                trackEvent="cta_service_design"
+                trackCategory="service_card"
+                trackLabel="Design Details"
+              >
+                UX-Potenziale heben
+              </TrackedButton>
+            </div>
+            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
+               <video 
+                 src="/videos/video_design.mp4" 
+                 poster="/videos/video_design-poster.webp" 
+                 loop muted playsinline autoplay 
+                 class="w-full aspect-video object-cover"
+                 aria-label="Design-Prozess Visualisierung"
+               ></video>
+            </div>
+          </article>
+
+          <!-- Service Card: IT-Service & Cloud -->
+          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <header>
+                <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">Cloud & IT-Support</h3>
+              </header>
+              <p class="text-meg-text-secondary mb-6">Sichere Cloud-Infrastruktur und proaktive Wartung Ihrer IT-Systeme – lokal in Augsburg & München.</p>
+              <TrackedButton 
+                href="/services/it-service/" 
+                variant="ghost" 
+                icon="fa-solid fa-arrow-right" 
+                class="group-hover:text-emerald-400"
+                trackEvent="cta_service_it"
+                trackCategory="service_card"
+                trackLabel="IT-Service Details"
+              >
+                Infrastruktur härten
+              </TrackedButton>
+            </div>
+            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
+              <video 
+                src="/videos/video_cloud-security.mp4" 
+                poster="/videos/video_cloud-security-poster.webp" 
+                loop muted playsinline autoplay 
+                class="w-full aspect-video object-cover"
+                aria-label="Sichere Cloud-Infrastruktur"
+              ></video>
+            </div>
+          </article>
+
+          <!-- Zertifizierungen Card (Wiederhergestellt in vollem Umfang) -->
+          <article class="lg:col-span-6 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 hover:border-meg-accent/30 transition-all duration-500 group shadow-lg">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+              <div class="flex-1">
+                <span class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Garantierte Qualität</span>
+                <h3 class="text-3xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+                  Profitieren Sie von <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">zertifizierter</span> Expertise
                 </h3>
-                <ul role="list" class="mt-4 space-y-4 text-meg-text-secondary">
-                  <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Master I.</strong> (PSM I) - Scrum.org</span>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-meg-text-secondary">
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
+                    <span><strong>Professional Scrum Master II:</strong> Fortgeschrittene agile Führung für komplexe Projekte.</span>
                   </li>
-                  <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Master II.</strong> (PSM II) - Scrum.org</span>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
+                    <span><strong>Professional Scrum Product Owner I:</strong> Strategisches Backlog-Management & Business-Value.</span>
                   </li>
-                  <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Professional <strong class="font-semibold text-meg-text-primary-dark">Scrum Product Owner I.</strong> (PSPO I.) - Scrum.org</span>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
+                    <span><strong>IHK Ausbilder:</strong> Zertifizierte Qualität in der Wissensvermittlung für Fachinformatiker.</span>
                   </li>
-                  <li class="flex gap-x-3 items-start">
-                    <i class="fa-solid fa-check-circle text-meg-accent text-xl mt-0.5" aria-hidden="true"></i>
-                    <span>Ausbilder (IHK) <strong class="font-semibold text-meg-text-primary-dark">Ausbilder für Fachinformatik.</strong></span>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
+                    <span><strong>10+ Jahre Full-Stack:</strong> Tiefgreifendes Verständnis der gesamten IT-Lieferkette.</span>
                   </li>
                 </ul>
               </div>
-              <figure class="w-full md:w-auto rounded-xl overflow-hidden m-[auto] ring-1 ring-meg-border-dark group-hover:ring-meg-accent/30 transition-all">
+              <div class="w-full md:w-1/3 rounded-2xl overflow-hidden shadow-2xl border border-meg-border-dark/50">
                 <video 
-                  class="object-contain w-full md:w-[400px]" 
-                  width="1920"
-                  height="1080"
-                  style="aspect-ratio: 16/9;"
-                  preload="none" 
+                  src="/videos/video_certification.mp4" 
                   poster="/videos/video_certification-poster.webp" 
-                  loop 
-                  muted 
-                  playsinline
-                  autoplay
-                  src="/videos/video_certification.mp4"
-                >
-                  <source src="/videos/video_certification.mp4" type="video/mp4" />
-                </video>
-              </figure>
+                  loop muted playsinline autoplay 
+                  class="w-full h-auto"
+                ></video>
+              </div>
             </div>
-          </div>
+          </article>
+
         </div>
-      </section>
-      <PortfolioTop />
-      <Testimonials />
-      <PriceService />
+      </div>
+    </section>
 
-      <Blog limits={6} />
-      <FreeTools />
-      <SkillWrapper />
-
-      <EcodriveClaim />
-      <PriceEcodrive />
-
-      <SocialverseClaim />
-      <PriceSocialverse />
-
-      <SilvacoreClaim />
-      <PriceSilvacore />
-
-      <AetherClaim />
-
-      <ObsidianGeminiClaim />
-
-      <WaetherappClaim />
-    </main>
-  </div>
+    <PortfolioTop />
+    <Testimonials />
+    <PriceService />
+    <Blog limits={6} />
+    <FreeTools />
+    <SkillWrapper />
+    <SuiteClaim />
+  </main>
 </Layout>

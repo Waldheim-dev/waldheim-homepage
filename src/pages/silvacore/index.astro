@@ -15,6 +15,34 @@ import SilvacoreRoadmap from '../../components/SilvacoreRoadmap.astro';
 
 const product = getProductInfo('silvacore')!;
 
+// SEO & Meta
+const titel = 'Silvacore | Cloud-Lösung für moderne WEG-Verwaltung';
+const description = 'Verwalten Sie Ihre Immobilien effizient & rechtssicher mit Silvacore. Digitale Abrechnungen, DSGVO-konform & Made in Germany. Jetzt für WEGs & Verwalter testen!';
+const keywords = 'WEG-Verwaltung Software, Immobilienverwaltung Cloud, digitale Nebenkostenabrechnung, Hausverwalter Tool Deutschland, WEG Software Open Source, Property Management System';
+const ogImage = 'https://waldheim.dev/silvacore/silvacore-og.jpg';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'Silvacore WEG-Verwaltung',
+  'applicationCategory': 'BusinessApplication',
+  'operatingSystem': 'Web',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'EUR',
+    'description': 'Kostenlose Starter-Version für kleine WEGs verfügbar'
+  },
+  'softwareVersion': product.version,
+  'description': 'Moderne, rechtssichere Software zur Verwaltung von Wohnungseigentümergemeinschaften mit integrierter Abrechnungslogik.',
+  'author': {
+    '@type': 'Organization',
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
+  }
+};
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
@@ -22,47 +50,6 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Silvacore',
   link: 'https://waldheim.dev/silvacore'
 }]);
-
-const titel = "Silvacore: Professionelle WEG-Verwaltung | Waldheim.dev";
-const description = "Silvacore: Die moderne Cloud-Lösung für WEG-Verwaltung in Deutschland. Rechtssicher, DSGVO-konform und Made in Germany. Jetzt kostenlos starten!";
-const keywords = "WEG-Verwaltung, Wohnungseigentümergemeinschaft, Hausverwaltung, DSGVO, Nebenkostenabrechnung, HKVO, Property Management, Immobilienverwaltung, Cloud-Verwaltung";
-
-// Structured Data: Software Application
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: product.name,
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter (1 WEG)',
-      price: '0',
-      priceCurrency: 'EUR',
-      billingDuration: 'P1M'
-    },
-    {
-      '@type': 'Offer',
-      name: 'Pro (unbegrenzt WEGs)',
-      price: '5',
-      priceCurrency: 'EUR',
-      billingDuration: 'P1M'
-    }
-  ],
-  softwareVersion: product.version,
-  releaseNotes: 'Closed Alpha - Vollständige WEG-Verwaltung',
-  description: description,
-  url: 'https://waldheim.dev/silvacore',
-  author: {
-    '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  featureList: 'WEG-Verwaltung, DSGVO-konform, Nebenkostenabrechnung, Protokollverwaltung, Cloud-basiert'
-};
-
-const ogImage = 'https://waldheim.dev/silvacore/silvacore-og.jpg';
 ---
 <Layout 
   title={titel} 
@@ -71,171 +58,134 @@ const ogImage = 'https://waldheim.dev/silvacore/silvacore-og.jpg';
   schema={[softwareSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <!-- Hero Section -->
-  <section class='relative isolate pt-14 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark'>
-    <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-emerald-500/20 to-sky-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
-    
-    <div class='max-w-7xl mx-auto py-24 sm:py-32'>
-      <div class='text-center mb-16'>
-        <div class='gsap-fadein mb-8' style='animation-delay: 0s'>
-          <span class='inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold shadow-sm'>
-            <i class='fa-solid fa-flask' aria-hidden='true'></i>
-            Aktuell in <span class="text-white opacity-90 font-black ml-1">Closed Alpha</span>
-          </span>
-        </div>
-
-        <h1 class='gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-8' style='animation-delay: 0.15s'>
-          Ihre <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>WEG-Verwaltung</span><br/>
-          Professionell. Fair. Transparent.
-        </h1>
-        
-        <p class='gsap-fadein text-xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed' style='animation-delay: 0.3s'>
-          Die moderne Cloud-Lösung für Wohnungseigentümergemeinschaften.<br/>
-          Rechtssicher, DSGVO-konform und <strong class='text-meg-text-primary-dark'>made in Germany 🇩🇪</strong>
-        </p>
-        
-        <!-- Trust Badges -->
-        <div class='gsap-fadein flex flex-wrap items-center justify-center gap-6 text-sm text-meg-text-secondary mb-12' style='animation-delay: 0.45s'>
-          <div class='flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl shadow-sm'>
-            <i class='fa-solid fa-shield-check text-emerald-400' aria-hidden='true'></i>
-            <span class="font-semibold">DSGVO-konform</span>
-          </div>
-          <div class='flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl shadow-sm'>
-            <i class='fa-solid fa-flag text-emerald-400' aria-hidden='true'></i>
-            <span class="font-semibold">Made in Germany</span>
-          </div>
-          <div class='flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl shadow-sm'>
-            <i class='fa-solid fa-server text-emerald-400' aria-hidden='true'></i>
-            <span class="font-semibold">99,9% Uptime</span>
-          </div>
-        </div>
-
-        <div class='gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4 mb-10' style='animation-delay: 0.6s'>
-          <a
-            href='/silvacore/#pricing'
-            class='w-full sm:w-auto group px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]'
-          >
-            <i class='fa-solid fa-rocket' aria-hidden='true'></i>
-            Jetzt kostenlos starten
-            <i class='fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform' aria-hidden='true'></i>
-          </a>
-          <a
-            href='/silvacore/#features'
-            class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-emerald-500/50 transition-all duration-300 inline-flex items-center justify-center gap-2'
-          >
-            Features entdecken
-            <i class='fa-solid fa-arrow-down animate-bounce' aria-hidden='true'></i>
-          </a>
-        </div>
-        
-        <!-- SaaS vs Self-Hosted Hint -->
-        <p class='gsap-fadein text-sm text-meg-text-secondary opacity-70 italic' style='animation-delay: 0.75s'>
-          <i class='fa-solid fa-info-circle text-emerald-400 mr-1' aria-hidden='true'></i>
-          Wählen Sie zwischen <strong class='text-meg-text-primary-dark'>managed SaaS</strong> (sofort loslegen) oder <strong class='text-meg-text-primary-dark'>self-hosted</strong> (volle Kontrolle)
-        </p>
+  <main id="main-content">
+    <!-- Hero: Fokus auf Vertrauen & Professionalität -->
+    <section class='relative isolate pt-14 bg-meg-bg-dark overflow-hidden'>
+      <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
+        <div
+          class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-emerald-500/20 to-sky-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+          style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
       </div>
 
-      <div class='gsap-fadein relative max-w-5xl mx-auto mt-16 group' style='animation-delay: 0.9s'>
-        <div class='absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-sky-500/20 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000'></div>
-        <Image
-          src='/silvacore/silvacore_dashboard.webp'
-          alt="Silvacore Dashboard Preview"
-          width={2291}
-          height={1304}
-          class='relative z-10 rounded-2xl shadow-2xl border border-meg-border-dark w-full transition-transform duration-700 group-hover:scale-[1.01] bg-meg-surface-dark'
-        />
-      </div>
-    </div>
-  </section>
-    
-    <div class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-green-400/30 to-emerald-500/30 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'>
-      </div>
-    </div>
-  </section>
+      <div class='py-24 sm:py-32'>
+        <div class='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div class='text-center'>
+            <!-- Status Badges -->
+            <div class='mb-8 flex justify-center gap-3'>
+              <span class='inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold shadow-sm'>
+                <i class='fa-solid fa-flask'></i>
+                Closed Alpha
+              </span>
+              <span class='inline-flex items-center gap-2 bg-meg-surface-dark border border-meg-border-dark px-4 py-2 rounded-full text-sm font-bold text-meg-text-secondary'>
+                <i class='fa-solid fa-shield-halved text-emerald-400'></i>
+                Rechtssicher & DSGVO-konform
+              </span>
+            </div>
 
-  <!-- Problem & Lösung Section -->
-  <SilvaCoreProblem />
+            <h1 class='text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-8'>
+              WEG-Verwaltung<br />
+              <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>neu definiert</span>
+            </h1>
 
-  <!-- Main Features Section -->
-  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-y border-meg-border-dark" id="features">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class='gsap-fadein' style='animation-delay: 0s'>
-          <h2 class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
-            <i class='fa-solid fa-building mr-2' aria-hidden='true'></i>
-            Kernfunktionen
-          </h2>
-          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
-            <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Einfacher</span> geht's nicht!
-          </p>
-          <p class="text-xl text-meg-text-secondary mb-10 leading-relaxed">
-            Silvacore ist ein praktisches Tool um Ihre Immobilien effizient und DSGVO-konform zu verwalten. Behalten Sie den Überblick.
-          </p>
-          
-          <div class="space-y-6">
-            {[
-              { title: 'Stammdaten-Verwaltung', desc: 'Verwalten Sie Eigentümer, Mieter und Verträge zentral und übersichtlich.', icon: 'fa-users' },
-              { title: 'Finanzen & Abrechnung', desc: 'Umfassende Übersicht über Einnahmen und Ausgaben sowie einfache Abrechnung.', icon: 'fa-chart-line' },
-              { title: 'Privacy & Security', desc: 'Volle Erfüllung aller DSGVO-Anforderungen und sichere Datenverarbeitung.', icon: 'fa-lock' }
-            ].map((item, i) => (
-              <div class="gsap-fadein flex gap-4 bg-meg-surface-dark/50 backdrop-blur-md p-6 rounded-2xl border border-meg-border-dark shadow-sm group hover:border-emerald-500/30 transition-all" style={`animation-delay: ${0.15 + i * 0.15}s`}>
-                <div class='flex-shrink-0 size-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform'>
-                  <i class={`fa-solid ${item.icon} text-emerald-400 text-xl`}></i>
-                </div>
-                <div>
-                  <h3 class="font-bold text-meg-text-primary-dark text-lg mb-1">{item.title}</h3>
-                  <p class="text-meg-text-secondary text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+            <p class='text-xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed'>
+              Die moderne Cloud-Lösung für Wohnungseigentümergemeinschaften. Rechtssicher, transparent und <strong class='text-meg-text-primary-dark'>100% Made in Germany</strong>. 
+              Automatisieren Sie Ihre Abrechnungen und Protokolle.
+            </p>
+
+            <!-- CTAs -->
+            <div class='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <a
+                href='#pricing'
+                class='w-full sm:w-auto px-8 py-4 bg-emerald-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-emerald-500/30 transition-all hover:scale-[1.02]'
+              >
+                <i class='fa-solid fa-rocket'></i>
+                Jetzt kostenlos starten
+              </a>
+              <a
+                href='#features'
+                class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-emerald-500/50 transition-all'
+              >
+                Funktionen entdecken
+              </a>
+            </div>
+            
+            <p class='mt-6 text-sm text-meg-text-secondary opacity-70 italic'>
+              Wählen Sie zwischen <strong class='text-meg-text-primary-dark'>Managed SaaS</strong> oder <strong class='text-meg-text-primary-dark'>Self-Hosted</strong> für volle Datenkontrolle.
+            </p>
           </div>
-        </div>
-        
-        <div class='gsap-fadein group' style='animation-delay: 0.6s'>
-          <div class='relative'>
-            <div class='absolute -inset-4 bg-gradient-to-r from-emerald-500/10 to-meg-accent/10 blur-3xl -z-10 group-hover:opacity-100 transition-opacity opacity-0'></div>
-            <img
-              src="/silvacore/silvacore_users.webp"
-              alt="Silvacore Benutzerverwaltung"
-              loading="lazy"
-              class="rounded-2xl shadow-2xl border border-meg-border-dark w-full transition-transform duration-700 group-hover:scale-[1.01] bg-meg-surface-dark"
-              width="2432"
-              height="1442"
+
+          <!-- Dashboard Preview -->
+          <div class='relative max-w-5xl mx-auto mt-16 group'>
+            <div class='absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-sky-500/20 rounded-2xl blur-3xl opacity-20'></div>
+            <Image
+              src='/silvacore/silvacore_dashboard.webp'
+              alt="Silvacore WEG-Verwaltung Dashboard Ansicht"
+              width={2291}
+              height={1304}
+              class='relative z-10 rounded-2xl shadow-2xl border border-meg-border-dark w-full bg-meg-surface-dark'
+              loading="eager"
             />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Alle Features -->
-  <SilvacoreFeatures />
+    <!-- Content Components -->
+    <SilvaCoreProblem />
+    
+    <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark" id="features">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6 text-meg-text-primary-dark">Alles, was eine <span class="text-emerald-400">moderne Verwaltung</span> braucht</h2>
+            <p class="text-lg text-meg-text-secondary mb-10 leading-relaxed">
+              Silvacore wurde entwickelt, um den administrativen Aufwand für Verwalter und Beiräte drastisch zu reduzieren – bei gleichzeitiger Erhöhung der Transparenz für die Eigentümer.
+            </p>
+            
+            <dl class="space-y-8">
+              <div class="flex gap-4">
+                <dt class="size-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-users"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block text-lg">Zentrale Stammdaten</strong>
+                  <span class="text-meg-text-secondary text-sm">Verwalten Sie Einheiten, Eigentümer und Mieter an einem Ort. Inklusive Dokumenten-Depot für Teilungserklärungen.</span>
+                </dd>
+              </div>
+              <div class="flex gap-4">
+                <dt class="size-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-chart-line"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block text-lg">Finanz-Automatisierung</strong>
+                  <span class="text-meg-text-secondary text-sm">Hausgeldabrechnungen und Wirtschaftspläne per Mausklick erstellen. Integrierte HKVO-Logik.</span>
+                </dd>
+              </div>
+              <div class="flex gap-4">
+                <dt class="size-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-lock"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block text-lg">Maximale Security</strong>
+                  <span class="text-meg-text-secondary text-sm">Ende-zu-Ende verschlüsselte Backups und Hosting ausschließlich in zertifizierten deutschen Rechenzentren.</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="relative">
+            <Image src="/silvacore/silvacore_users.webp" alt="Silvacore Benutzerverwaltung" width={2432} height={1442} class="rounded-2xl border border-meg-border-dark shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Screenshots & Einblicke -->
-  <SilvacoreScreenshots />
-
-  <!-- Product Roadmap - Zukünftige Killer-Features -->
-  <SilvacoreRoadmap />
-
-  <!-- Für wen ist Silvacore -->
-  <SilvacoreAudience />
-
-  <!-- Warum Silvacore - Vergleich -->
-  <SilvacoreComparison />
-
-  <!-- Technologie & Sicherheit -->
-  <SilvacoreTech />
-
-  <!-- Preise -->
-  <PriceSilvacore />
-
-  <!-- CTA / So starten Sie -->
-  <SilvacoreCTA />
+    <SilvacoreFeatures />
+    <SilvacoreScreenshots />
+    <SilvacoreRoadmap />
+    <SilvacoreAudience />
+    <SilvacoreComparison />
+    <SilvacoreTech />
+    <PriceSilvacore />
+    <SilvacoreCTA />
+  </main>
 </Layout>

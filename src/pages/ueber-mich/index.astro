@@ -7,97 +7,141 @@ import SkillWrapper from '../../components/SkillWrapper.astro';
 import { getCollection } from 'astro:content';
 import Karriere from '../../components/Karriere.astro';
 
+// SEO & Meta
+const titel = 'Über Markus Waldheim | Senior IT-Consultant & DevSecOps Experte';
+const description = '10+ Jahre IT-Erfahrung, zertifizierter Professional Scrum Master II (PSM II) & Ausbilder. Erfahren Sie mehr über meine Vision für effiziente Softwareentwicklung.';
+const keywords = 'Markus Waldheim, IT-Consultant Augsburg, Scrum Master München, DevSecOps Experte Bayern, IT-Ausbilder, Software-Architekt, Agile Transformation';
+const ogImage = 'https://waldheim.dev/markus/markus-og.jpg';
+
+// Structured Data: Person
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': 'Markus Waldheim',
+  'url': 'https://waldheim.dev/ueber-mich',
+  'image': 'https://waldheim.dev/markus/markus_2024_laptop.webp',
+  'jobTitle': 'Senior IT Consultant & Software Architect',
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'Augsburg',
+    'addressRegion': 'Bayern',
+    'addressCountry': 'DE'
+  },
+  'knowsAbout': [
+    'DevSecOps', 'Software Architecture', 'Scrum', 'Agile Project Management', 'Astro.js', 'Go (Golang)', 'Cloud Computing'
+  ],
+  'affiliation': [
+    { '@type': 'Organization', 'name': 'Scrum.org' },
+    { '@type': 'Organization', 'name': 'IHK Augsburg' }
+  ]
+};
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://waldheim.dev'
 }, {
   name: 'Über mich',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/ueber-mich'
 }]);
-
-
-const titel = "Über mich - waldheim.dev: IT-Experte Markus Waldheim"
-const description = "Lernen Sie mich kennen: Markus Waldheim, IT-Experte mit Leidenschaft für Qualität. Mein Werdegang, meine Skills und meine Projekte. Ihr Partner für IT-Lösungen in Augsburg, München und darüber hinaus."
-const keywords = "Über mich, Markus Waldheim, IT-Experte, Lebenslauf, Skills, Erfahrung, Projekte, Werdegang, Persönlich, Augsburg, München"
-
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
-  <HeroMetric title="Erfahrener IT-Experte mit Leidenschaft für Qualität und Innovation" subtitle="Als Entwickler und DevSecOps-Spezialist mit über 10 Jahren Erfahrung begleite ich Unternehmen bei der Optimierung ihrer IT-Prozesse.">
-      <img src="/markus/markus_2024_laptop.webp" alt="Markus Waldheim" class="h-[50vh] m-auto object-contain drop-shadow-2xl" loading="lazy"/>
-    <div slot="cta" class='mt-10 flex items-center flex-wrap gap-6'>
-      <a
-        href="https://portal.waldheim.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class='group flex items-center gap-2 gsap-fadein rounded-xl bg-meg-accent px-6 py-3 text-sm gsap-wiggle font-semibold text-white shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300'
-      >
-        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-        Anfrage im Kundenportal
-        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
-      </a>
-      <a
-        href="/referenzen/1/"
-        class="inline-flex items-center px-8 py-3 bg-meg-surface-dark border border-meg-border-dark hover:border-meg-accent/50 text-meg-text-primary-dark rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-meg-accent/5"
-      >
-        <i class="fa-solid fa-briefcase mr-2 text-meg-accent" aria-hidden="true"></i>
-        Gesamtes Portfolio entdecken
-      </a>
-    </div>
-  </HeroMetric>
-  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark'>
-    <div class='mx-auto max-w-7xl'>
-      <div class='mx-auto max-w-2xl lg:mx-0 lg:max-w-none'>
-        <h2 class='gsap-fadein text-4xl sm:text-5xl font-bold tracking-tight text-meg-text-primary-dark mb-4' style='animation-delay: 0s'>
-          Mein Antrieb: <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Effizienz</span> und <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Innovation</span>
-        </h2>
-        <div class='mt-10 flex flex-col gap-x-8 gap-y-12 lg:flex-row'>
-          <div class='lg:w-full lg:max-w-2xl lg:flex-auto'>
-            <p class='gsap-fadein text-xl leading-8 text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-              Ich bin überzeugt, dass Prozesse kontinuierlich optimiert und beschleunigt werden können. Mein Ziel ist es, Verschwendung zu vermeiden und die bestmöglichen Ergebnisse zu erzielen.
+<Layout title={titel} description={description} keywords={keywords} schema={[personSchema, breadCrumbSchema]} image={ogImage}>
+  <main id="main-content">
+    <!-- Hero: Autorität & Persönlichkeit -->
+    <HeroMetric 
+      title="Strategische IT-Beratung mit über 10 Jahren Praxiserfahrung" 
+      subtitle="Als zertifizierter Professional Scrum Master II und Senior Developer schließe ich die Lücke zwischen Business-Vision und technischer Exzellenz. Ansässig im Raum Augsburg, tätig für Visionäre weltweit."
+    >
+      <img src="/markus/markus_2024_laptop.webp" alt="Markus Waldheim - IT Consultant & Software Architect" class="h-[50vh] m-auto object-contain drop-shadow-2xl" loading="eager" fetchpriority="high"/>
+      
+      <div slot="cta" class='mt-10 flex items-center flex-wrap gap-6'>
+        <a
+          href="https://calendly.com/markus-waldheim/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class='group flex items-center gap-2 rounded-xl bg-meg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300'
+        >
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Strategiegespräch buchen
+          <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+        </a>
+        <a
+          href="/referenzen/1/"
+          class="inline-flex items-center px-8 py-3 bg-meg-surface-dark border border-meg-border-dark hover:border-meg-accent/50 text-meg-text-primary-dark rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-meg-accent/5"
+        >
+          Portfolio & Case Studies
+        </a>
+      </div>
+    </HeroMetric>
+
+    <!-- Mission & Werte -->
+    <section class='py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark' aria-labelledby="mission-heading">
+      <div class='mx-auto max-w-7xl'>
+        <div class='grid lg:grid-cols-2 gap-16'>
+          <div>
+            <h2 id="mission-heading" class='text-4xl font-black tracking-tight text-meg-text-primary-dark mb-8'>
+              Meine Mission: <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Verschwendung eliminieren</span>, Wert generieren.
+            </h2>
+            <p class='text-xl leading-8 text-meg-text-secondary mb-6'>
+              In über einem Jahrzehnt IT-Entwicklung habe ich eines gelernt: Die teuerste Software ist die, die am Bedarf vorbei entwickelt wird oder durch ineffiziente Prozesse ausgebremst wird.
             </p>
-            <p class='gsap-fadein text-lg leading-7 text-meg-text-secondary' style='animation-delay: 0.3s'>
-              Ob durch die Entwicklung maßgeschneiderter Tools zur Analyse und Optimierung oder durch die Umgestaltung und Automatisierung Ihrer Entwicklungsprozesse – ich finde die effizienteste Lösung für Ihre Anforderungen.
+            <p class='text-lg leading-relaxed text-meg-text-secondary mb-8'>
+              Ich helfe Unternehmen, ihre digitale DNA zu optimieren. Ob durch **KI-gestützte Automatisierung**, die Ihre Produktivität um bis zu **150%** steigert, oder durch **agile Führung**, die Teams wieder handlungsfähig macht.
             </p>
+            
+            <!-- Badges / Zertifikate -->
+            <div class="flex flex-wrap gap-4 mt-8">
+              <div class="px-4 py-2 bg-meg-surface-dark border border-meg-border-dark rounded-lg flex items-center gap-3">
+                <i class="fa-solid fa-award text-meg-accent"></i>
+                <span class="text-xs font-bold uppercase tracking-widest">PSM II Certified</span>
+              </div>
+              <div class="px-4 py-2 bg-meg-surface-dark border border-meg-border-dark rounded-lg flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-meg-accent"></i>
+                <span class="text-xs font-bold uppercase tracking-widest">IHK Ausbilder</span>
+              </div>
+              <div class="px-4 py-2 bg-meg-surface-dark border border-meg-border-dark rounded-lg flex items-center gap-3">
+                <i class="fa-solid fa-code text-meg-accent"></i>
+                <span class="text-xs font-bold uppercase tracking-widest">10+ Jahre Dev</span>
+              </div>
+            </div>
           </div>
-          <div class='lg:flex lg:flex-auto lg:justify-center'>
-            <dl class='w-64 space-y-8 xl:w-80'>
-              <div class='gsap-fadein flex flex-col-reverse gap-y-4 bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 shadow-sm group hover:border-meg-accent/30 transition-all duration-300' style='animation-delay: 0.45s'>
-                <dt class='text-base leading-7 text-meg-text-secondary group-hover:text-meg-text-primary-dark transition-colors'>
-                  <i class='fa-solid fa-rocket text-meg-accent mr-2' aria-hidden='true'></i>
-                  Produktivitätssteigerung durch KI-Tools
-                </dt>
-                <dd class='text-5xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>+150%</dd>
-              </div>
-              <div class='gsap-fadein flex flex-col-reverse gap-y-4 bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 shadow-sm group hover:border-violet-500/30 transition-all duration-300' style='animation-delay: 0.6s'>
-                <dt class='text-base leading-7 text-meg-text-secondary group-hover:text-meg-text-primary-dark transition-colors'>
-                  <i class='fa-solid fa-users text-violet-400 mr-2' aria-hidden='true'></i>
-                  Bevorzugte Projektmethode
-                </dt>
-                <dd class='text-5xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Scrum</dd>
-              </div>
-            </dl>
+          
+          <div class='flex flex-col gap-6'>
+            <article class='bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 shadow-sm group hover:border-meg-accent/30 transition-all'>
+              <h3 class="text-2xl font-bold mb-4 text-meg-text-primary-dark">Der menschliche Faktor</h3>
+              <p class="text-meg-text-secondary text-sm leading-relaxed">
+                Technologie ist nur so gut wie das Team, das sie bedient. Als zertifizierter Ausbilder (IHK) und Scrum Master liegt mein Fokus auch auf dem Wissenstransfer und der Befähigung Ihrer Mitarbeiter.
+              </p>
+            </article>
+            <article class='bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 shadow-sm group hover:border-violet-500/30 transition-all'>
+              <h3 class="text-2xl font-bold mb-4 text-meg-text-primary-dark">KI als Katalysator</h3>
+              <p class="text-meg-text-secondary text-sm leading-relaxed">
+                Ich integriere KI-Tools nicht als Spielerei, sondern als messbaren Effizienz-Hebel. Das Ergebnis sind schlankere Pipelines, weniger technische Schulden und ein massiver Speed-Vorteil gegenüber dem Wettbewerb.
+              </p>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <Karriere />
+    <Karriere />
 
-  <CTASoft title="Kontaktieren Sie mich um Ihre Vision umzusetzen">
-          <a
-      href="https://portal.waldheim.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-      class='group flex items-center gap-2 gsap-fadein gsap-wiggle rounded-xl bg-meg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300'
-      style='animation-delay: 0.3s'
-    >
-      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-      Anfrage im Kundenportal
-      <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
-    </a>
-  </CTASoft>
+    <SkillWrapper />
 
-  <SkillWrapper />
+    <!-- Soft CTA für Erstkontakt -->
+    <CTASoft title="Bereit für das nächste Level Ihrer IT-Strategie?">
+      <div class="flex flex-col sm:flex-row gap-4 items-center">
+        <a
+          href="https://calendly.com/markus-waldheim/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class='group flex items-center gap-2 rounded-xl bg-meg-accent px-8 py-4 text-base font-bold text-white shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300'
+        >
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Jetzt Strategietermin sichern
+        </a>
+        <span class="text-meg-text-secondary text-sm">oder direkt per</span>
+        <a href="/kontakt/" class="text-meg-text-primary-dark font-bold hover:text-meg-accent transition-colors underline decoration-meg-accent underline-offset-4">Kontaktformular</a>
+      </div>
+    </CTASoft>
+  </main>
 </Layout>
