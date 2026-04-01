@@ -1,204 +1,145 @@
 ---
 const date = new Date();
-
 import fs from 'node:fs';
+
 let version = '0.0.0';
 try {
-  const pkg = JSON.parse(fs.readFileSync('./package.json').toString());
-  version = pkg.version;
-} catch (e) {
-  console.error('Could not read package.json version');
-}
+  version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
+} catch (e) {}
 ---
 
 <footer class="bg-meg-surface-dark/80 backdrop-blur-xl border-t border-meg-border-dark text-meg-text-primary-dark" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
-  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+  
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8">
+    
+    <!-- Trust Area: Autoritäts-Signale -->
+    <div class="mb-16 flex flex-wrap justify-center md:justify-between items-center gap-8 border-b border-meg-border-dark/50 pb-12">
+      <div class="flex items-center gap-4 group">
+        <div class="size-12 bg-meg-accent/10 border border-meg-accent/20 rounded-xl flex items-center justify-center text-meg-accent group-hover:bg-meg-accent/20 transition-all">
+          <i class="fa-solid fa-award text-xl"></i>
+        </div>
+        <div>
+          <span class="block text-[10px] font-black uppercase tracking-widest text-meg-accent">Professional</span>
+          <span class="block text-sm font-bold">Scrum Master II</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 group">
+        <div class="size-12 bg-meg-accent/10 border border-meg-accent/20 rounded-xl flex items-center justify-center text-meg-accent group-hover:bg-meg-accent/20 transition-all">
+          <i class="fa-solid fa-graduation-cap text-xl"></i>
+        </div>
+        <div>
+          <span class="block text-[10px] font-black uppercase tracking-widest text-meg-accent">Zertifizierter</span>
+          <span class="block text-sm font-bold">IHK Ausbilder</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 group">
+        <div class="size-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 transition-all">
+          <i class="fa-solid fa-shield-check text-xl"></i>
+        </div>
+        <div>
+          <span class="block text-[10px] font-black uppercase tracking-widest text-emerald-400">100% DSGVO</span>
+          <span class="block text-sm font-bold">Safe & Secure</span>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center gap-4 group">
+        <div class="size-12 bg-meg-accent/10 border border-meg-accent/20 rounded-xl flex items-center justify-center text-meg-accent">
+          <i class="fa-solid fa-code text-xl"></i>
+        </div>
+        <div>
+          <span class="block text-[10px] font-black uppercase tracking-widest text-meg-accent">10+ Jahre</span>
+          <span class="block text-sm font-bold">IT-Expertise</span>
+        </div>
+      </div>
+    </div>
+
     <div class="space-y-12">
       <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-4">
           <a href="/" class="-m-1.5 inline-flex items-center gap-2 rounded-lg p-1.5 hover:bg-meg-surface-dark/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <img class="h-8 w-auto" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
-            <span class="font-semibold">Waldheim.dev</span>
+            <img class="h-8 w-auto transition-transform hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
+            <span class="font-bold tracking-tight">Waldheim.dev</span>
           </a>
           <p class="text-sm leading-5 text-meg-text-secondary">Let&apos;s build a better tomorrow, together</p>
         </div>
 
+        <!-- Social Media Links (Komplette Liste wiederhergestellt) -->
         <div class="flex flex-wrap gap-x-4 gap-y-4 sm:justify-end">
-          <a href="https://www.linkedin.com/in/markus-waldheim-03827a312/" target="_blank" rel="noopener noreferrer" title="LinkedIn"
-             aria-label="Besuche uns auf LinkedIn"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-meg-accent hover:scale-110 hover:border-meg-accent/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.xing.com/profile/Markus_Waldheim/cv" target="_blank" rel="noopener noreferrer" title="Xing" aria-label="Besuche uns auf Xing"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-emerald-400 hover:scale-110 hover:border-emerald-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-xing text-2xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://gitlab.com/mwaldheim" target="_blank" rel="noopener noreferrer" title="Gitlab" aria-label="Besuche unsere GitLab-Projekte"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-orange-400 hover:scale-110 hover:border-orange-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-gitlab text-2xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/Waldheim-dev" target="_blank" rel="noopener noreferrer" title="GitHub Waldheim.dev" aria-label="Besuche unsere GitHub-Repositories"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-indigo-400 hover:scale-110 hover:border-indigo-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-github text-2xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/mwaldheim" target="_blank" rel="noopener noreferrer" title="GitHub Markus" aria-label="Besuche Markus auf GitHub"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-indigo-400 hover:scale-110 hover:border-indigo-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <span class="fa-layers relative fa-fw text-2xl" aria-hidden="true">
-              <i class="fa-brands fa-github" data-fa-transform="shrink-4 up-1"></i>
-              <i class="fa-solid fa-user text-[11px] text-meg-accent absolute -bottom-1 -right-1" data-fa-transform="down-8 right-7"></i>
-            </span>
-          </a>
-          <a href="https://www.twitch.tv/blackbird995" target="_blank" rel="noopener noreferrer" title="Twitch" aria-label="Folge uns auf Twitch"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-purple-400 hover:scale-110 hover:border-purple-400/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-brands fa-twitch text-2xl" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.designenlassen.de/profil/622353" target="_blank" rel="noopener noreferrer" title="Designenlassen.de"
-             aria-label="Finde uns auf Designenlassen.de"
-             class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary hover:text-meg-accent hover:scale-110 hover:border-meg-accent/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <i class="fa-solid fa-pen-ruler text-2xl" aria-hidden="true"></i>
-          </a>
+          {[
+            { href: 'https://www.linkedin.com/in/markus-waldheim-03827a312/', icon: 'fa-brands fa-linkedin', color: 'hover:text-[#0a66c2]' },
+            { href: 'https://www.xing.com/profile/Markus_Waldheim/cv', icon: 'fa-brands fa-xing', color: 'hover:text-[#006567]' },
+            { href: 'https://github.com/Waldheim-dev', icon: 'fa-brands fa-github', color: 'hover:text-white' },
+            { href: 'https://gitlab.com/mwaldheim', icon: 'fa-brands fa-gitlab', color: 'hover:text-[#fc6d26]' },
+            { href: 'https://www.twitch.tv/blackbird995', icon: 'fa-brands fa-twitch', color: 'hover:text-[#9146ff]' },
+            { href: 'https://www.designenlassen.de/profil/622353', icon: 'fa-solid fa-pen-ruler', color: 'hover:text-meg-accent' },
+            { href: 'mailto:kontakt@waldheim.dev', icon: 'fa-solid fa-envelope', color: 'hover:text-meg-accent' }
+          ].map(s => (
+            <a href={s.href} target="_blank" rel="noopener noreferrer" 
+               class={`inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary transition-all hover:scale-110 hover:border-meg-accent/50 ${s.color}`}>
+              <i class={`${s.icon} text-2xl`} aria-hidden="true"></i>
+            </a>
+          ))}
         </div>
       </div>
 
-      <div class="rounded-2xl border border-meg-border-dark bg-meg-surface-dark/40 p-6 sm:p-8">
-        <nav aria-label="Footer Navigation" class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          <div>
-            <h3 class="text-sm font-bold leading-4 uppercase tracking-widest text-meg-text-primary-dark">Services</h3>
-            <ul role="list" class="mt-5 space-y-3">
-              <li>
-                <a href="/services/entwicklung/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Entwicklung</a>
-              </li>
-              <li>
-                <a href="/services/design/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Design / UX</a>
-              </li>
-              <li>
-                <a href="/services/it-service/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">IT-Service</a>
-              </li>
-              <li>
-                <a href="/services/devsecops/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">DevSecOps</a>
-              </li>
-              <li>
-                <a href="/services/smarthome/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Smarthome</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Suite</h3>
-            <ul role="list" class="mt-5 space-y-3">
-              <li><a href="/suite/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Übersicht</a></li>
-              <li><a href="/suite/socialverse/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Socialverse CRM</a></li>
-              <li><a href="/suite/forge/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Forge ERP</a></li>
-              <li><a href="/suite/aether/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Aether</a></li>
-              <li><a href="/suite/ecodrive/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Ecodrive</a></li>
-              <li><a href="/suite/portal/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Customer Portal</a></li>
-              <li><a href="/suite/preise/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Preise</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Open Source</h3>
-            <ul role="list" class="mt-5 space-y-3">
-              <li>
-                <a href="/waetherapp/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">WetterApp</a>
-              </li>
-              <li>
-                <a href="/obsidian-gemini-agent/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Obsidian Gemini Agent</a>
-              </li>
-              <li>
-                <a href="/ausgabeschein-generator/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Ausgabeschein Generator</a>
-              </li>
-              <li>
-                <a href="/astro-ai-llms-txt/" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Astro AI llms.txt</a>
-              </li>
-              <li>
-                <a href="https://portal.waldheim.dev" target="_blank" rel="noopener noreferrer" class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                  Kundenportal
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Firma</h3>
-            <ul role="list" class="mt-5 space-y-3">
-              <li>
-                <a href="https://climate.stripe.com/1QAkEH" target="_blank"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Climate-Programm
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="/blog/1/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Blog</a>
-              </li>
-              <li>
-                <a href="mailto:kontakt@waldheim.dev"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Bug melden
-                  <i class="fa-solid fa-envelope text-[10px]" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.waldheim-it.de/" target="_blank"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim IT-Beratung
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-bold leading-4 text-meg-text-primary-dark uppercase tracking-widest">Rechtliches</h3>
-            <ul role="list" class="mt-5 space-y-3">
-              <li>
-                <a href="/agb/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">AGB</a>
-              </li>
-              <li>
-                <a href="/datenschutz/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Datenschutz</a>
-              </li>
-              <li>
-                <a href="/widerrufsbelehrung/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Widerruf</a>
-              </li>
-              <li>
-                <a href="/impressum/"
-                   class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Impressum</a>
-              </li>
-              <li>
-                <button type="button" data-cc="show-preferencesModal"
-                        aria-label="Cookie-Einstellungen verwalten"
-                        class="text-sm leading-4 text-meg-text-secondary hover:text-meg-accent transition-colors inline-flex gap-2 items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent cursor-pointer">
-                  Cookies
-                  <i class="fa-solid fa-sliders text-[10px]" aria-hidden="true"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <!-- Footer Nav Grid -->
+      <div class="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-5 border-t border-meg-border-dark/50 pt-12">
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">IT-Consulting</h3>
+          <ul class="space-y-4">
+            <li><a href="/services/devsecops/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">DevSecOps</a></li>
+            <li><a href="/services/entwicklung/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Entwicklung</a></li>
+            <li><a href="/services/design/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">UI/UX Design</a></li>
+            <li><a href="/services/it-service/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">SaaS Suite</h3>
+          <ul class="space-y-4">
+            <li><a href="/suite/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Übersicht</a></li>
+            <li><a href="/suite/socialverse/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Socialverse CRM</a></li>
+            <li><a href="/suite/forge/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Forge ERP</a></li>
+            <li><a href="/suite/preise/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Preise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Open Source</h3>
+          <ul class="space-y-4">
+            <li><a href="/waetherapp/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">WetterApp</a></li>
+            <li><a href="/obsidian-gemini-agent/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Obsidian Plugin</a></li>
+            <li><a href="/ausgabeschein-generator/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Ausgabeschein</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Firma</h3>
+          <ul class="space-y-4">
+            <li><a href="/ueber-mich/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Über mich</a></li>
+            <li><a href="/blog/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Blog</a></li>
+            <li><a href="/referenzen/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Referenzen</a></li>
+            <li><a href="/kontakt/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors font-bold">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Rechtliches</h3>
+          <ul class="space-y-4">
+            <li><a href="/impressum/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Impressum</a></li>
+            <li><a href="/datenschutz/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Datenschutz</a></li>
+            <li><a href="/agb/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">AGB</a></li>
+            <li><button type="button" data-cc="show-preferencesModal" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Cookies</button></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div
-      class="mt-16 border-t border-meg-border-dark pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row md:justify-between md:items-center">
-      <p class="text-xs leading-5 text-meg-text-secondary">&copy; {date.getFullYear()} Waldheim.dev. Alle
-        Rechte vorbehalten.</p>
 
-      <span class="text-xs flex flex-row items-center gap-2 mt-4 md:mt-0">
-      <span
-        class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-xs font-medium text-meg-accent">
-        <i class="fa-solid fa-circle text-meg-accent text-[6px]" aria-hidden="true"></i>
-        v{version}
-      </span>
-        <span class="text-meg-text-secondary">Design und Entwicklung by <a href="https://www.waldheim.dev" class="underline hover:text-meg-accent transition-colors rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Waldheim.dev</a></span>
-        </span>
+    <!-- Bottom Bar -->
+    <div class="mt-16 pt-8 border-t border-meg-border-dark/50 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-4">
+        <img class="h-6 w-auto opacity-50 grayscale" src="/waldheim.dev.png" alt="Logo" loading="lazy">
+        <p class="text-[10px] font-bold text-meg-text-secondary uppercase tracking-widest">
+          &copy; {date.getFullYear()} Waldheim.dev &middot; Augsburg &middot; v{version}
+        </p>
+      </div>
+      <p class="text-[10px] text-meg-text-secondary font-medium">Design & Entwicklung by <a href="https://waldheim.dev" class="underline hover:text-meg-accent">Waldheim.dev</a></p>
     </div>
   </div>
 </footer>

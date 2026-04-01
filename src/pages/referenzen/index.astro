@@ -11,80 +11,111 @@ const pageSize = 4;
 const paginatedProjects = projects.slice(0, pageSize);
 
 const categories = (await getCollection('projects_kategorie'));
+
+// SEO & Meta
+const titel = 'Case Studies & IT-Referenzen Augsburg | Waldheim.dev';
+const description = 'Erfolgreiche IT-Projekte aus den Bereichen DevSecOps, Softwareentwicklung & UX Design. Entdecken Sie, wie ich Unternehmen in Augsburg & München voranbringe.';
+const keywords = 'IT Referenzen Augsburg, Software Portfolio München, Case Studies Webentwicklung, Markus Waldheim Projekte, IT Projekterfolge Bayern';
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
 }, {
   name: 'Referenzen',
-  link: Astro.url.href
+  link: 'https://waldheim.dev/referenzen'
 }]);
-
-const titel = 'Projekte & Referenzen - Waldheim.dev';
-const description = 'Entdecken Sie unsere Referenzprojekte: Webentwicklung, Softwarelösungen und Design. Überzeugen Sie sich von unserer Expertise und Qualität.';
-const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Referenzen, Portfolio, Webdesign';
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
-  <div class="py-24 sm:py-32 bg-meg-bg-dark">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center gsap-fadein">
-        <h1 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark sm:text-5xl">Referenzen: Meine Projekte</h1>
-        <p class="mt-4 text-lg leading-8 text-meg-text-secondary">Chronologisch geordnet – Qualität in jedem Pixel und jeder Codezeile.</p>
-      </div>
+  <main id="main-content" class="bg-meg-bg-dark min-h-screen">
+    <section class="py-24 sm:py-32" aria-labelledby="portfolio-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h1 id="portfolio-heading" class="text-4xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Projekte & <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Erfolge</span>
+          </h1>
+          <p class="text-xl text-meg-text-secondary">
+            Ein Auszug meiner Arbeit: Von der strategischen Beratung bis zur fertigen Applikation. Messbare Ergebnisse für anspruchsvolle Kunden.
+          </p>
+        </header>
 
-      <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-x-8 gap-y-16 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        {
-          paginatedProjects.map((project) => {
-            return (
-              <div class="relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark pb-28 sm:pb-36 xl:pb-16 rounded-2xl max-w-full gsap-fadein hover:border-meg-accent/30 transition-all duration-300 group shadow-sm">
-                <div class="mx-auto flex flex-col items-center gap-x-8 gap-y-10 px-6">
-                  <div class="-mt-8 w-full max-w-1xl xl:-mb-8">
-                    <div class="relative aspect-16/9 w-full md:-mx-8 xl:mx-0">
-                      <div class="absolute -inset-2 bg-gradient-to-r from-meg-accent/10 via-sky-400/10 to-violet-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                      <img class="relative z-10 h-full w-full rounded-2xl bg-meg-bg-dark object-cover shadow-2xl border border-meg-border-dark"
-                           src={project.data.heroImage} alt={project.data.title} loading="lazy">
+        <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {
+            paginatedProjects.map((project) => {
+              const categoryName = categories.find(category => category.id === project.data?.category.id)?.data.name;
+              return (
+                <article class="relative bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl overflow-hidden hover:border-meg-accent/50 transition-all duration-500 group shadow-lg flex flex-col">
+                  <div class="relative aspect-video overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-meg-bg-dark to-transparent opacity-60 z-10"></div>
+                    <img 
+                      class="relative h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      src={project.data.heroImage} 
+                      alt={`Referenzprojekt: ${project.data.title}`} 
+                      loading="lazy"
+                    >
+                    <div class="absolute top-4 left-4 z-20">
+                      <span class="px-3 py-1 bg-meg-accent/90 text-white text-[10px] font-black uppercase tracking-widest rounded-lg backdrop-blur-md">
+                        {categoryName}
+                      </span>
                     </div>
                   </div>
-                  <div class="md:min-w-96 xl:flex-auto">
-                    <figure class="relative isolate pt-6 sm:pt-12 text-meg-text-primary-dark">
-                      <div class="flex items-center gap-2 text-meg-accent font-bold text-xs uppercase tracking-widest mb-2">
-                        <i class="fa-solid fa-calendar-day"></i>
-                        <FormattedDate date={project.data.pubDate} />
-                      </div>
-                      <blockquote class="text-xl font-bold leading-8 text-meg-text-primary-dark sm:text-2xl sm:leading-9">
-                        <p>{project.data.title}</p>
-                      </blockquote>
-                      <div class="font-medium text-meg-text-secondary mt-1">
-                        {categories.find(category => category.id === project.data?.category.id)?.data.name}
-                      </div>
-                      <p class="mt-4 flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-meg-text-secondary line-clamp-3">{project.data.shortDescription}</p>
-                      <figcaption class="mt-8 text-base">
-                        <a href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`} aria-label={`Projekt ${project.data.title} ansehen`}
-                           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-meg-accent text-white font-bold hover:shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all outline-none">
-                           Projekt ansehen
-                           <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                      </figcaption>
-                    </figure>
+                  
+                  <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-meg-text-secondary text-xs font-bold mb-4">
+                      <i class="fa-solid fa-calendar-check text-meg-accent"></i>
+                      <FormattedDate date={project.data.pubDate} />
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold text-meg-text-primary-dark mb-4 group-hover:text-meg-accent transition-colors">
+                      {project.data.title}
+                    </h2>
+                    
+                    <p class="text-meg-text-secondary text-sm leading-relaxed mb-8 line-clamp-3">
+                      {project.data.shortDescription}
+                    </p>
+                    
+                    <div class="mt-auto">
+                      <a 
+                        href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/, '/')}/`} 
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark border border-meg-border-dark rounded-xl font-bold text-sm hover:border-meg-accent/50 hover:bg-meg-accent/5 transition-all"
+                      >
+                        Case Study ansehen
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            );
-          })
-        }
-      </div>
-
-      {projects.length > pageSize && (
-        <div class="py-24 gsap-fadein">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <nav class="flex items-center justify-center border-t border-meg-border-dark px-4 py-6 sm:px-6 mt-4 bg-meg-surface-dark/30 backdrop-blur-md rounded-2xl shadow-sm" aria-label="Pagination">
-              <a href="/referenzen/1/" class="relative inline-flex items-center rounded-xl bg-meg-surface-dark border border-meg-border-dark px-6 py-3 text-sm font-bold text-meg-text-primary-dark hover:border-meg-accent/50 hover:bg-meg-accent/5 hover:text-meg-accent transition-all shadow-sm">
-                Alle Projekte ansehen
-                <i class="fa-solid fa-arrow-right ml-2"></i>
-              </a>
-            </nav>
-          </div>
+                </article>
+              );
+            })
+          }
         </div>
-      )}
-    </div>
-  </div>
+
+        {projects.length > pageSize && (
+          <div class="mt-20 text-center">
+            <a 
+              href="/referenzen/1/" 
+              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-accent text-white font-bold rounded-2xl shadow-xl shadow-meg-accent/20 hover:scale-[1.05] transition-all"
+            >
+              Alle Fallstudien entdecken
+              <i class="fa-solid fa-grid-horizontal"></i>
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Social Proof Trust-Section -->
+    <section class="py-24 bg-meg-surface-dark/20 border-t border-meg-border-dark">
+      <div class="mx-auto max-w-7xl px-6 text-center">
+        <h2 class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-12">Technologien im Einsatz</h2>
+        <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
+          <i class="fa-brands fa-angular text-4xl"></i>
+          <i class="fa-brands fa-node-js text-4xl"></i>
+          <i class="fa-brands fa-golang text-4xl"></i>
+          <i class="fa-brands fa-docker text-4xl"></i>
+          <i class="fa-brands fa-aws text-4xl"></i>
+          <i class="fa-brands fa-react text-4xl"></i>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

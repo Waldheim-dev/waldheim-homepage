@@ -10,6 +10,35 @@ import PriceSocialverse from '../../components/PriceSocialverse.astro';
 
 const product = getProductInfo('socialverse')!;
 
+// SEO & Meta
+const titel = 'Socialverse | DSGVO-konformes AI-CRM & Marketing Automation';
+const description = 'Revolutionieren Sie Ihre Lead-Generierung mit Socialverse. KI-gestütztes Scoring, GPT-4 Automation & 100% DSGVO-konform. Sichern Sie sich 50% Early-Bird Rabatt!';
+const keywords = 'AI CRM Deutschland, Marketing Automation DSGVO, KI Lead Generierung, Social Media Automation Tool, GPT-4 Business Application, Vertriebs-Automation Bayern';
+const ogImage = 'https://waldheim.dev/socialverse/socialverse.svg';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'Socialverse AI-CRM',
+  'applicationCategory': 'BusinessApplication',
+  'operatingSystem': 'Web',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'EUR',
+    'availability': 'https://schema.org/PreOrder',
+    'priceValidUntil': '2026-03-31'
+  },
+  'softwareVersion': product.version,
+  'description': 'DSGVO-konforme Marketing-Automation und KI-gestütztes Lead-Management für moderne Vertriebsteams.',
+  'author': {
+    '@type': 'Organization',
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
+  }
+};
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
@@ -17,38 +46,6 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Socialverse',
   link: 'https://waldheim.dev/socialverse'
 }]);
-
-const titel = "Socialverse: AI-CRM & Marketing-Automation | Waldheim.dev";
-const description = "Socialverse: DSGVO-konforme Lead-Generierung & Marketing-Automation mit KI. Automatisierte Kampagnen & Multi-Channel-Integration. Jetzt Beta-Zugang anfragen!";
-const keywords = "Socialverse, CRM, Marketing-Automation, AI, Lead-Generierung, DSGVO, GPT-4, Social Media, Campaign Management, Lead-Scoring, KI-Marketing";
-
-// Structured Data: Software Application
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: product.name,
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Web',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'EUR',
-    availability: 'https://schema.org/PreOrder',
-    priceValidUntil: '2026-03-31'
-  },
-  softwareVersion: product.version,
-  releaseNotes: 'Closed Beta - Early Bird 50% Rabatt',
-  description: description,
-  url: 'https://waldheim.dev/socialverse',
-  author: {
-    '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  featureList: 'AI-gestützte Lead-Generierung, Marketing-Automation, DSGVO-konform, Multi-Channel-Integration'
-};
-
-const ogImage = 'https://waldheim.dev/socialverse/socialverse.svg';
 ---
 <Layout 
   title={titel} 
@@ -57,94 +54,100 @@ const ogImage = 'https://waldheim.dev/socialverse/socialverse.svg';
   schema={[softwareSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <!-- Hero Section -->
-  <div class='relative isolate pt-14 bg-meg-bg-dark'>
-    <!-- Background Gradient (Purple/Pink) -->
-    <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-violet-500/20 to-fuchsia-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
-    </div>
+  <main id="main-content">
+    <!-- Hero Section: Fokus auf Vertrauen & Innovation -->
+    <section class='relative isolate pt-14 bg-meg-bg-dark overflow-hidden'>
+      <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
+        <div
+          class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-violet-500/20 to-fuchsia-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+          style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
+      </div>
 
-    <div class='py-24 sm:py-32 lg:pb-40'>
-      <div class='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div class='mx-auto max-w-3xl text-center'>
-          <!-- Closed Beta Badge -->
-          <div class='mt-24 sm:mt-32 lg:mt-16 gsap-fadein'>
-            <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-sm font-bold text-violet-400 shadow-sm'>
-              <i class='fa-solid fa-flask' aria-hidden='true'></i>
-              Closed Beta – Q1 2026
-              <span class='bg-violet-500 text-white px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-tighter ml-2'>50% Early Bird</span>
-            </span>
+      <div class='py-24 sm:py-32 lg:pb-40'>
+        <div class='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div class='mx-auto max-w-3xl text-center'>
+            <!-- Status & Trust Badges -->
+            <div class='mt-24 sm:mt-32 lg:mt-16 flex flex-wrap justify-center gap-3'>
+              <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-sm font-bold text-violet-400'>
+                <i class='fa-solid fa-flask' aria-hidden='true'></i>
+                Closed Beta Q1 2026
+              </span>
+              <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-sm font-bold text-emerald-400'>
+                <i class='fa-solid fa-shield-check' aria-hidden='true'></i>
+                100% DSGVO-konform
+              </span>
+              <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary'>
+                <i class='fa-solid fa-location-dot' aria-hidden='true'></i>
+                Hosting in Deutschland
+              </span>
+            </div>
+
+            <h1 class='text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mt-8'>
+              AI-CRM & Marketing<br />
+              <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Evolution</span>
+            </h1>
+
+            <p class='mt-6 text-xl leading-8 text-meg-text-secondary max-w-2xl mx-auto'>
+              Automatisieren Sie Ihren Vertrieb mit <strong class='text-meg-text-primary-dark'>KI-gestütztem Lead-Scoring</strong> und smarter <strong class='text-meg-text-primary-dark'>GPT-4 Content-Generierung</strong>. Maximale Effizienz ohne Kompromisse beim Datenschutz.
+            </p>
+
+            <!-- CTAs -->
+            <div class='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <a
+                href='https://portal.waldheim.dev'
+                target='_blank'
+                rel='noopener noreferrer'
+                class='w-full sm:w-auto px-8 py-4 bg-violet-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-violet-500/30 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]'
+              >
+                <i class='fa-solid fa-rocket' aria-hidden='true'></i>
+                Jetzt Early-Bird Zugang sichern
+              </a>
+              <a
+                href='#features'
+                class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-violet-500/50 transition-all'
+              >
+                Features ansehen
+              </a>
+            </div>
+            <p class="mt-4 text-meg-text-secondary text-xs font-medium italic">Nur noch 12 Beta-Plätze für Q1/2026 verfügbar.</p>
           </div>
 
-          <!-- Hero Title with Gradient -->
-          <h1 class='text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mt-8 gsap-fadein'>
-            AI-CRM & Marketing-<br />
-            <span class='text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500'>Automation</span>
-          </h1>
-
-          <p class='mt-6 text-xl leading-8 text-meg-text-secondary gsap-fadein max-w-2xl mx-auto'>
-            Lead-Generierung mit <strong class='text-meg-text-primary-dark'>KI-Scoring</strong> und <strong class='text-meg-text-primary-dark'>GPT-4 Content-Generierung</strong>. 
-            DSGVO-konform <span class='text-violet-400'>made in Germany 🇩🇪</span>
-          </p>
-
-          <!-- Hero CTAs -->
-          <div class='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 gsap-fadein' style='animation-delay: 0.3s'>
-            <a
-              href='https://portal.waldheim.dev'
-              target='_blank'
-              rel='noopener noreferrer'
-              class='w-full sm:w-auto group px-8 py-4 bg-violet-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-violet-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]'
-            >
-              <i class='fa-solid fa-user-plus' aria-hidden='true'></i>
-              Beta-Zugang anfragen
-              <i class='fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform' aria-hidden='true'></i>
-            </a>
-            <a
-              href='/socialverse/#features'
-              class='w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-violet-500/50 transition-all duration-300 inline-flex items-center justify-center gap-2'
-            >
-              Features entdecken
-              <i class='fa-solid fa-arrow-down animate-bounce' aria-hidden='true'></i>
-            </a>
+          <!-- Dashboard Preview -->
+          <div class='relative mt-16 sm:mt-24 group'>
+            <div class='absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl blur-3xl opacity-20'></div>
+            <Image
+              src='/socialverse/socialverse_dashboard.webp'
+              alt="Socialverse AI-CRM Dashboard - Made in Germany"
+              width={1200}
+              height={800}
+              class='relative z-10 rounded-2xl bg-meg-surface-dark shadow-2xl ring-1 ring-meg-border-dark w-full'
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
         </div>
-
-        <!-- Hero Dashboard Screenshot with Gradient Glow -->
-        <div class='relative isolate mt-16 sm:mt-24 gsap-fadein group' style='animation-delay: 0.4s'>
-          <div class='absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000'></div>
-          <Image
-            src='/socialverse/socialverse_dashboard.webp'
-            alt="Socialverse AI-Dashboard Preview"
-            width={1200}
-            height={800}
-            class='relative z-10 rounded-2xl bg-meg-surface-dark shadow-2xl ring-1 ring-meg-border-dark w-full transition-transform duration-700 group-hover:scale-[1.01]'
-          />
-        </div>
       </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div id='features' aria-label="Socialverse Features">
+      <SocialverseScreenshots />
+      <SocialverseFeatures />
+      <SocialverseComparison />
     </div>
 
-    <!-- Bottom Gradient -->
-    <div class='absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]' aria-hidden='true'>
-      <div
-        class='relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-purple-500 to-pink-500 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]'
-        style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'>
-      </div>
-    </div>
-  </div>
-
-  <!-- Screenshot Showcase -->
-  <div id='features'>
-    <SocialverseScreenshots />
-  </div>
-
-  <!-- Features & Roadmap -->
-  <SocialverseFeatures />
-
-  <!-- Comparison -->
-  <SocialverseComparison />
-
-  <!-- Pricing -->
-  <PriceSocialverse />
+    <PriceSocialverse />
+    
+    <!-- Final CTA -->
+    <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark text-center">
+      <h2 class="text-3xl font-bold mb-8">Bereit für die <span class="text-violet-400">Vertriebs-Automation</span> der nächsten Generation?</h2>
+      <a
+        href='https://portal.waldheim.dev'
+        class='inline-flex items-center gap-2 px-10 py-5 bg-meg-surface-dark border border-meg-border-dark rounded-2xl font-black text-xl hover:border-violet-500/50 transition-all'
+      >
+        Kostenlose Demo anfragen
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </section>
+  </main>
 </Layout>

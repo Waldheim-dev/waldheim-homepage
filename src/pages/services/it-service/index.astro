@@ -7,6 +7,39 @@ import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 
+// SEO & Meta
+const titel = 'Managed IT-Service Augsburg & München | Cloud & Support';
+const description = 'Professioneller IT-Service für KMU: Managed Cloud, Netzwerk-Sicherheit & Remote-Support in Augsburg und München. Maximale Verfügbarkeit für Ihre IT.';
+const keywords = 'IT-Service Augsburg, IT-Support München, Managed Services Bayern, Cloud Migration KMU, IT-Infrastruktur Wartung, Remote IT-Administration';
+const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
+
+// Structured Data: Professional Service (Specific to IT Support)
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'Managed IT-Service & Cloud Support',
+  'provider': {
+    '@type': 'ProfessionalService',
+    'name': 'Waldheim.dev',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Augsburg',
+      'addressRegion': 'Bayern',
+      'addressCountry': 'DE'
+    }
+  },
+  'serviceType': 'IT Support & Cloud Consulting',
+  'areaServed': [
+    { '@type': 'City', 'name': 'Augsburg' },
+    { '@type': 'City', 'name': 'München' }
+  ],
+  'description': 'Ganzheitliche IT-Betreuung für Unternehmen: Von der Cloud-Migration bis zum täglichen Support. Fokus auf Sicherheit und Hochverfügbarkeit.',
+  'offers': {
+    '@type': 'Offer',
+    'description': 'Monatliche Managed Service Pakete & On-Demand Support'
+  }
+};
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: 'https://waldheim.dev'
@@ -18,55 +51,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: 'https://waldheim.dev/services/it-service'
 }]);
 
-const titel = "IT-Service & Support Augsburg & München | Waldheim.dev";
-const description = "Zuverlässiger IT-Service in Augsburg & München: Netzwerke, Server-Wartung (Windows, macOS, Linux) & Cloud-Migrationen. Ihr IT-Partner aus Bayern.";
-const keywords = "IT-Service Augsburg, IT-Support München, Netzwerktechnik Bayern, Windows Support, macOS Administration, Server-Wartung, Cloud-Migration";
-
-// Structured Data: Service
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'IT-Service & Support',
-  provider: {
-    '@type': 'Organization',
-    name: 'waldheim.dev',
-    url: 'https://waldheim.dev'
-  },
-  serviceType: 'IT Support',
-  areaServed: ['Augsburg', 'München', 'Bayern', 'DE'],
-  description: description,
-  offers: {
-    '@type': 'Offer',
-    price: '70',
-    priceCurrency: 'EUR',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '70',
-      priceCurrency: 'EUR',
-      unitText: 'Stunde'
-    }
-  }
-};
-
-const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
-
-// Structured Data: FAQ
 const faqSchema = SchemaUtils.getFAQSchema([
   {
-    question: 'Vor-Ort-Support möglich?',
-    answer: 'Ich arbeite 100% remote. Für physische Einsätze vermittle ich gerne Partner aus meinem Netzwerk.'
+    question: 'Bieten Sie IT-Support vor Ort in Augsburg an?',
+    answer: 'Mein Modell ist "Remote-First", was Ihnen schnellste Reaktionszeiten und geringere Kosten ermöglicht. Für physische Hardware-Einsätze vor Ort in Augsburg oder München arbeite ich mit erfahrenen Partnern zusammen.'
   },
   {
-    question: 'Reaktionszeit bei Ausfällen?',
-    answer: 'Remote Innerhalb von 4h (regulär) oder <2h mit Priority-Support.'
+    question: 'Wie schnell helfen Sie bei IT-Problemen?',
+    answer: 'In kritischen Fällen garantiere ich eine Remote-Reaktionszeit von unter 2 Stunden. Mein Ziel ist es, Ausfallzeiten für Ihr Unternehmen auf ein absolutes Minimum zu reduzieren.'
   },
   {
-    question: 'Langfristige Bindung?',
-    answer: 'Nein, Wartungsverträge sind monatlich kündbar. Volle Flexibilität.'
-  },
-  {
-    question: 'Betriebssysteme?',
-    answer: 'Windows, macOS und Linux. Auch in Hybrid-Umgebungen.'
+    question: 'Unterstützen Sie auch Microsoft 365 und Google Workspace?',
+    answer: 'Ja, ich bin spezialisiert auf die Migration und Verwaltung moderner Cloud-Arbeitsplätze inkl. Security-Härtung und Compliance-Checks.'
   }
 ]);
 ---
@@ -77,120 +73,131 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
-  <!-- Hero Section -->
-  <ServiceHero 
-    title="IT-Service"
-    subtitle="Zuverlässiger & professioneller"
-    description="Von Netzwerk-Installation über Server-Wartung bis zur Cloud-Migration – ich kümmere mich um Ihre komplette IT-Infrastruktur. Windows, macOS, Linux – alles aus einer Hand."
-    gradient="green"
-    icon="fa-server"
-    badge="Support für Ihre IT"
-  />
+  <main id="main-content">
+    <!-- Hero Section: Fokus auf Zuverlässigkeit -->
+    <ServiceHero 
+      title="Managed IT-Service"
+      subtitle="Sorgenfreie IT-Infrastruktur für"
+      description="Ich übernehme die Verantwortung für Ihre IT, damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Modern, sicher und dank Remote-First-Ansatz extrem schnell einsatzbereit."
+      gradient="green"
+      icon="fa-server"
+      badge="IT-Support für KMU & Verbände"
+    />
 
-  <!-- Main Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark' id='leistungen'>
-    <div class='mx-auto max-w-7xl'>
-      <div class='mx-auto max-w-2xl text-center mb-16'>
-        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4' style='animation-delay: 0s'>
-          <i class='fa-solid fa-headset mr-2' aria-hidden='true'></i>
-          Support-Fokus
-        </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-          Konzentrieren Sie sich auf Ihr <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Kerngeschäft</span>
-        </p>
-        <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
-          Professionelle IT-Administration spart Zeit und Nerven. Ich biete Ihnen flexible Lösungen – remote und effizient.
-        </p>
+    <!-- Leistungen: Managed Services Fokus -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="it-services-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="it-services-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
+            Ihre externe IT-Abteilung
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Maximale <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">Verfügbarkeit</span>
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Proaktive Wartung statt reaktiver Fehlerbehebung. Ich halte Ihre Systeme am Laufen.
+          </p>
+        </header>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-cloud-arrow-up text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Cloud Migration & Management</h3>
+            <p class="text-meg-text-secondary text-sm">Sicherer Umzug Ihrer Daten und Anwendungen in die Cloud (M365, Google, AWS). Ortsunabhängiges Arbeiten für Ihr gesamtes Team.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-vault text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">IT-Sicherheit & Backup</h3>
+            <p class="text-meg-text-secondary text-sm">Implementierung von Multi-Faktor-Authentifizierung (MFA), Firewall-Management und automatisierten Offsite-Backups.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-microchip text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">System-Administration</h3>
+            <p class="text-meg-text-secondary text-sm">Zentrale Verwaltung Ihrer Windows-, macOS- und Linux-Flotte. Patch-Management und Software-Verteilung aus der Ferne.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-headset text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-4">Priority Remote Support</h3>
+            <p class="text-meg-text-secondary text-sm">Schnelle Hilfe per Fernwartung. Kurze Wege, keine Anfahrtskosten und garantierte Reaktionszeiten für Ihre Mitarbeiter.</p>
+          </article>
+        </div>
       </div>
-      
-      <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        {[
-          { title: 'Installation & Setup', desc: 'Beschaffung und Konfiguration Ihrer IT-Geräte – schnell und zuverlässig.', icon: 'fa-laptop' },
-          { title: 'Cloud-Services', desc: 'Auswahl, Einrichtung und Verwaltung moderner Cloud-Dienste für Ihr Team.', icon: 'fa-cloud' },
-          { title: 'IT-Sicherheit', desc: 'Maximaler Schutz durch regelmäßige Audits und bewährte Sicherheitsmaßnahmen.', icon: 'fa-shield' },
-          { title: 'Wartung & Support', desc: 'Systeme auf dem neuesten Stand halten mit schnellem Priority-Support.', icon: 'fa-wrench' }
-        ].map((feat, i) => (
-          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 group' style={`animation-delay: ${0.45 + i * 0.15}s`}>
-            <div class='w-14 h-14 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
-              <i class={`fa-solid ${feat.icon} text-emerald-400 text-2xl`}></i>
-            </div>
-            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-4'>{feat.title}</h3>
-            <p class='text-meg-text-secondary leading-relaxed'>{feat.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Remote & Partner Info -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-4xl">
-        <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-10 shadow-sm group hover:border-emerald-500/30 transition-all" style="animation-delay: 0s">
-          <div class="flex flex-col md:flex-row items-start gap-8">
-            <div class="size-16 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-handshake text-emerald-400 text-3xl"></i>
-            </div>
-            <div>
-              <h2 class="text-2xl font-black tracking-tight text-meg-text-primary-dark mb-4">Remote-First mit Partner-Netzwerk</h2>
-              <p class="text-meg-text-secondary mb-6 leading-relaxed">
-                Ich arbeite ausschließlich <strong class="text-meg-text-primary-dark">remote</strong> und biete IT-Support für Unternehmen deutschlandweit. Für größere Projekte aktiviere ich ein <strong class="text-meg-text-primary-dark">zuverlässiges Partner-Netzwerk</strong> – volle Mannpower bei höchster Qualität.
-              </p>
-              <div class="flex flex-wrap gap-3">
-                <span class="inline-flex items-center gap-2 px-4 py-2 bg-meg-bg-dark/50 border border-meg-border-dark rounded-full text-xs font-bold text-meg-text-secondary uppercase tracking-widest">
-                  <i class='fa-solid fa-house-laptop text-emerald-400' aria-hidden='true'></i>
-                  100% Remote
-                </span>
-                <span class="inline-flex items-center gap-2 px-4 py-2 bg-meg-bg-dark/50 border border-meg-border-dark rounded-full text-xs font-bold text-meg-text-secondary uppercase tracking-widest">
-                  <i class='fa-solid fa-users text-emerald-400' aria-hidden='true'></i>
-                  Partner-Scale
-                </span>
+    <!-- Remote-First Vorteil -->
+    <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Digitale Effizienz durch <span class="text-emerald-400">Remote-Service</span></h2>
+            <p class="text-meg-text-secondary mb-8">
+              Warum auf den Techniker warten, wenn das Problem in Minuten gelöst sein kann? Mein Remote-First-Ansatz ist der Standard für moderne Unternehmen.
+            </p>
+            <dl class="space-y-6">
+              <div class="flex gap-4">
+                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-gauge-high"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Höchste Geschwindigkeit</strong>
+                  <span class="text-meg-text-secondary text-sm">Sofortiger Start der Fehlerbehebung per gesicherter Fernwartung.</span>
+                </dd>
               </div>
-            </div>
+              <div class="flex gap-4">
+                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-euro-sign"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Keine Anfahrtskosten</strong>
+                  <span class="text-meg-text-secondary text-sm">Transparente Abrechnung ohne versteckte Nebenkosten für Augsburg/München.</span>
+                </dd>
+              </div>
+              <div class="flex gap-4">
+                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <i class="fa-solid fa-network-wired"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Partner-Netzwerk</strong>
+                  <span class="text-meg-text-secondary text-sm">Für Hardware-Rollouts und Vor-Ort-Verkabelung greife ich auf ein lokales Experten-Netzwerk zu.</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+            <video src="/videos/video_cloud-security.mp4" poster="/videos/video_cloud-security-poster.webp" loop muted playsinline autoplay class="relative rounded-2xl w-full border border-meg-border-dark shadow-2xl"></video>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4" style="animation-delay: 0s">
-          Support-Check
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent'>Antworten</span>
-        </p>
+    <!-- FAQ -->
+    <section class="py-24 px-6" aria-labelledby="it-faq-heading">
+      <div class="mx-auto max-w-4xl">
+        <header class="text-center mb-12">
+          <h2 id="it-faq-heading" class="text-3xl font-bold">Häufige Fragen zum <span class="text-emerald-400">IT-Support</span></h2>
+        </header>
+        <div class="space-y-6">
+          {faqSchema.mainEntity.map((faq) => (
+            <details class="group border border-meg-border-dark rounded-2xl p-6 bg-meg-surface-dark/50 cursor-pointer hover:border-emerald-500/30 transition-all">
+              <summary class="flex justify-between items-center font-bold text-meg-text-primary-dark list-none">
+                {faq.name}
+                <span class="text-emerald-400 group-open:rotate-180 transition-transform">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <p class="mt-4 text-meg-text-secondary leading-relaxed border-t border-meg-border-dark pt-4 italic">
+                {faq.acceptedAnswer.text}
+              </p>
+            </details>
+          ))}
+        </div>
       </div>
-      
-      <div class="max-w-4xl mx-auto space-y-4">
-        {[
-          { q: 'Vor-Ort-Support möglich?', a: 'Ich arbeite 100% remote. Für physische Einsätze vermittle ich gerne Partner aus meinem Netzwerk.' },
-          { q: 'Reaktionszeit bei Ausfällen?', a: 'Remote Innerhalb von 4h (regulär) oder <2h mit Priority-Support.' },
-          { q: 'Langfristige Bindung?', a: 'Nein, Wartungsverträge sind monatlich kündbar. Volle Flexibilität.' },
-          { q: 'Betriebssysteme?', a: 'Windows, macOS und Linux. Auch in Hybrid-Umgebungen.' }
-        ].map((faq, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
-            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
-              <span class="text-emerald-400 font-black">Q</span> {faq.q}
-            </h3>
-            <p class="text-meg-text-secondary pl-7 leading-relaxed">
-              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <PriceService />
-
-  <Blog limits={2} />
-
-  <RelatedServices />
-
-  <Partner />
-
+    <PriceService />
+    <Blog limits={2} />
+    <RelatedServices />
+    <Partner />
+  </main>
 </Layout>
