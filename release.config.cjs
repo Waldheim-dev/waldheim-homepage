@@ -23,7 +23,7 @@ module.exports = {
       },
     ],
     ['@semantic-release/changelog', { changelogFile: 'CHANGELOG.md' }],
-    ['@semantic-release/gitlab'],
+    ['@semantic-release/github'],
     [
       "@semantic-release/exec",
       {

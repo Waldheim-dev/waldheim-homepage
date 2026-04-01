@@ -10,31 +10,6 @@ switch (entry.data.knowledgebase) {
     break;
   case 'advanced':
     progress = 66;
-    color = 'bg-blue-600';
-    break;
-  case 'expert':
-    progress = 100;
-    color = 'bg-blue-700';
-    break;
-  default:
-    progress = 0;
-}
-
-const layer = JSON.stringify(entry.data.layer);
----
-
----
-const { entry } = Astro.props;
-import TimeDiff from './TimeDiff.astro';
-let progress = 0;
-let color = '';
-switch (entry.data.knowledgebase) {
-  case 'basic':
-    progress = 33;
-    color = 'bg-rose-500';
-    break;
-  case 'advanced':
-    progress = 66;
     color = 'bg-meg-accent/60';
     break;
   case 'expert':

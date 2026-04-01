@@ -1,556 +1,271 @@
 ---
 import fs from 'node:fs';
-import Contact from './Contact.astro';
-import { PRODUCTS, SERVICE_COLORS, getProductInfo, getServiceColors } from '../consts/productColors';
+import { getProductInfo, getServiceColors } from '../consts/productColors';
 
 const version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
 
-// Get product info (with versions)
-const ecodrive = getProductInfo('ecodrive')!;
-const socialverse = getProductInfo('socialverse')!;
-const silvacore = getProductInfo('silvacore')!;
-const aether = getProductInfo('aether')!;
+// Get info for all items
+const suite = getProductInfo('suite')!;
 const waetherapp = getProductInfo('waetherapp')!;
 const obsidianGeminiAgent = getProductInfo('obsidian-gemini-agent')!;
 const ausgabeschein = getProductInfo('ausgabeschein-generator')!;
 const astroAi = getProductInfo('astro-ai-llms-txt')!;
 
-// Get service colors (individual for each service)
 const devsecopsColors = getServiceColors('devsecops');
 const entwicklungColors = getServiceColors('entwicklung');
 const designColors = getServiceColors('design');
 const itServiceColors = getServiceColors('it-service');
-const smarthomeColors = getServiceColors('smarthome');
 ---
 
-<nav class="sticky top-0 z-50 flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-2xl text-meg-text-primary-dark bg-meg-surface-dark/70 backdrop-blur-xl border border-meg-border-dark shadow-sm hover:border-meg-accent/30" aria-label="Hauptnavigation">
+<nav class="sticky top-0 z-50 flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-2xl text-meg-text-primary-dark bg-meg-surface-dark/90 backdrop-blur-xl border border-meg-border-dark shadow-xl hover:border-meg-accent/30" aria-label="Hauptnavigation">
     <div class="flex items-center gap-4">
-        <a href="/" class="-m-1.5 flex items-center gap-2 text-meg-text-primary-dark rounded-xl px-2 py-1 hover:bg-meg-surface-dark/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent transition-all group" aria-label="Zur Startseite">
+        <a href="/" class="-m-1.5 flex items-center gap-2 text-meg-text-primary-dark rounded-xl px-2 py-1 hover:bg-meg-surface-dark/50 transition-all group" aria-label="Zur Startseite">
           <img class="h-8 w-auto block logo transition-transform group-hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Logo" loading="lazy" width="32" height="32">
-          <span class="font-semibold tracking-tight">Waldheim.dev</span>
+          <span class="font-bold tracking-tight">Waldheim.dev</span>
         </a>
-        <span
-          class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-xs font-medium text-meg-accent"
-          aria-label={`Version ${version}`}>
-        <i class="fa-solid fa-circle text-meg-accent text-[6px] animate-pulse" aria-hidden="true"></i>
-        v{version}
-      </span>
+        <span class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-[10px] font-black text-meg-accent">
+          <i class="fa-solid fa-circle text-[4px] animate-pulse"></i>
+          v{version}
+        </span>
     </div>
     
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="false" style="display: none;" aria-label="Mobile Navigation">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div
-        class="nav-sidebar absolute bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark mt-24 left-1/2 top-0 translate-x-[-50%] rounded-2xl z-10 w-[95%] max-w-96 mx-auto overflow-y-auto max-h-[calc(75vh)] px-6 py-6 shadow-2xl shadow-meg-accent/5">
+    <!-- Desktop Navigation (Full) -->
+    <div class="hidden lg:flex lg:gap-x-1 items-center">
       
-        <div class="flow-root">
-          <div class="-my-6 divide-y divide-meg-border-dark/50">
-            <div class="space-y-2 py-6">
-
-                <div class="block">
-                <button type="button"
-                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark"
-                        aria-controls="mobile-products" aria-expanded="false" aria-label="Produkte Menü öffnen">
-                  Produkte
-                  <i class="fa-solid fa-chevron-down text-lg transition-transform" aria-hidden="true"></i>
-                </button>
-                <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                <div class="mt-2 space-y-2 border-l-2 border-meg-accent/30 ml-1 px-2" id="mobile-products" hidden>
-                  <a href="/ecodrive/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${ecodrive.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Ecodrive</span>
-                    <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${ecodrive.colors.badgeBg} ${ecodrive.colors.badgeBorder} ${ecodrive.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ecodrive.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ecodrive.status !== 'stable' ? `${ecodrive.status}` : `v${ecodrive.version}`}
-                    </span>
-                  </a>
-                  <a href="/socialverse/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${socialverse.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Socialverse</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${socialverse.colors.badgeBg} ${socialverse.colors.badgeBorder} ${socialverse.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${socialverse.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {socialverse.status !== 'stable' ? `${socialverse.status}` : `v${socialverse.version}`}
-                </span>
-                  </a>
-                  <a href="/silvacore/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${silvacore.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Silvacore</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${silvacore.colors.badgeBg} ${silvacore.colors.badgeBorder} ${silvacore.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${silvacore.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {silvacore.status !== 'stable' ? `${silvacore.status}` : `v${silvacore.version}`}
-                </span>
-                  </a>
-                  <a href="/aether/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${aether.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Aether</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
-                </span>
-                  </a>
-                  <a href="/ausgabeschein-generator/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${ausgabeschein.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Ausgabeschein Generator</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${ausgabeschein.colors.badgeBg} ${ausgabeschein.colors.badgeBorder} ${ausgabeschein.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${ausgabeschein.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {ausgabeschein.status !== 'stable' ? `${ausgabeschein.status}` : `v${ausgabeschein.version}`}
-                </span>
-                  </a>
-                  <a href="/waetherapp/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${waetherapp.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>WetterApp</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
-                </span>
-                  </a>
-                  <a href="/obsidian-gemini-agent/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${obsidianGeminiAgent.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Obsidian Gemini Agent</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
-                </span>
-                  </a>
-                  <a href="/astro-ai-llms-txt/"
-                      class={`mobile-subnav-item flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 hover:shadow-md hover:shadow-${astroAi.colors.glowColor}/20 text-meg-text-primary-dark transition-all`}>
-                    <span>Astro AI llms.txt Generator</span>
-                    <span
-                    class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ${astroAi.colors.badgeBg} ${astroAi.colors.badgeBorder} ${astroAi.colors.badgeText}`}>
-                  <i class={`fa-solid fa-circle text-${astroAi.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                  {astroAi.status !== 'stable' ? `${astroAi.status}` : `v${astroAi.version}`}
-                </span>
-                  </a>
-                </div>
-              </div>
-              <div class="block">
-                <button type="button"
-                        class="mobile-subnav flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark"
-                        aria-controls="mobile-services" aria-expanded="false" aria-label="Services Menü öffnen">
-                  Services
-                  <i class="fa-solid fa-chevron-down text-lg transition-transform" aria-hidden="true"></i>
-                </button>
-                <!-- 'Services' sub-menu, show/hide based on menu state. -->
-                <div class="mt-2 space-y-2 border-l-2 border-meg-accent/30 ml-1 px-2" id="mobile-services" hidden>
-                  <a href="/services/devsecops/"
-                     class={`mobile-subnav-item flex items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 ${devsecopsColors.hoverShadow} text-meg-text-primary-dark transition-all`}>
-                    <span>Effiziente Entwicklung / DevSecOps</span>
-                  </a>
-                  <a href="/services/entwicklung/"
-                     class={`mobile-subnav-item flex items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 ${entwicklungColors.hoverShadow} text-meg-text-primary-dark transition-all`}>
-                    <span>Softwareentwicklung</span>
-                  </a>
-                  <a href="/services/design/"
-                     class={`mobile-subnav-item flex items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 ${designColors.hoverShadow} text-meg-text-primary-dark transition-all`}>
-                    <span>Design / UX</span>
-                  </a>
-                  <a href="/services/it-service/"
-                     class={`mobile-subnav-item flex items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 ${itServiceColors.hoverShadow} text-meg-text-primary-dark transition-all`}>
-                    <span>IT-Service</span>
-                  </a>
-                  <a href="/services/smarthome/"
-                     class={`mobile-subnav-item flex items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-meg-surface-dark/70 ${smarthomeColors.hoverShadow} text-meg-text-primary-dark transition-all`}>
-                    <span>Smarthome</span>
-                  </a>
-                </div>
-              </div>
-              <a href="/referenzen/1/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark">Referenzen</a>
-              <a href="/ueber-mich/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark">Über mich</a>
-              <a href="/blog/1/"
-                 class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 bg-meg-surface-dark/50 hover:bg-meg-surface-dark hover:shadow-lg hover:shadow-meg-accent/10 text-meg-text-primary-dark transition-all border border-transparent hover:border-meg-border-dark">Blog</a>
-            </div>
-            <div class="py-6">
-              <a href="https://portal.waldheim.dev"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="flex justify-between gap-2 items-center rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-meg-accent/30 hover:shadow-xl transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                Kundenportal
-                <i class="fa-solid fa-arrow-up-right-from-square text-lg" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex justify-center space-x-4 items-center">
-      <div class="block lg:hidden">
-        <button type="button"
-                class="inline-flex cursor-pointer items-center justify-center rounded-lg p-2.5 button-toggle bg-meg-surface-dark/50 text-meg-text-secondary hover:bg-meg-surface-dark hover:text-meg-text-primary-dark hover:shadow-lg hover:shadow-meg-accent/10 transition-all border border-transparent hover:border-meg-border-dark"
-                aria-label="Menü öffnen"
-                aria-expanded="false">
-          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+      <!-- Suite Dropdown -->
+      <div class="relative dropdown">
+        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+          <span>Suite</span>
+          <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-2">
-        <div class="relative dropdown">
-          <button type="button"
-                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
-                  aria-expanded="false"
-                  aria-label="Produkte Menü">
-            <span>Produkte</span>
-            <i class="fa-solid fa-chevron-down text-sm transition-transform" aria-hidden="true"></i>
-          </button>
-
-          <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-300 opacity-0 translate-y-2">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark text-sm/6 shadow-2xl shadow-meg-accent/5 lg:max-w-3xl">
-              <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-chart-line text-xl text-${ecodrive.colors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/ecodrive/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Ecodrive
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${ecodrive.colors.badgeBg} ${ecodrive.colors.badgeBorder} ${ecodrive.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ecodrive.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ecodrive.status !== 'stable' ? `${ecodrive.status}` : `v${ecodrive.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Ist dein Fahrverhalten Eco?</p>
-                  </div>
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-md -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+          <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
+              <a href="/suite/" class="group relative flex gap-x-6 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-accent/20">
+                <div class="size-11 flex-none flex items-center justify-center rounded-lg bg-meg-accent/10 border border-meg-accent/30 group-hover:bg-meg-accent/20 transition-all">
+                  <i class="fa-solid fa-grid-2 text-xl text-meg-accent"></i>
                 </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-globe text-xl text-${socialverse.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/socialverse/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Socialverse
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${socialverse.colors.badgeBg} ${socialverse.colors.badgeBorder} ${socialverse.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${socialverse.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {socialverse.status !== 'stable' ? `${socialverse.status}` : `v${socialverse.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Mikro AI CRM/CMS</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-house text-xl text-${silvacore.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/silvacore/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Silvacore
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${silvacore.colors.badgeBg} ${silvacore.colors.badgeBorder} ${silvacore.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${silvacore.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {silvacore.status !== 'stable' ? `${silvacore.status}` : `v${silvacore.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Hausverwaltungssoftware</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-atom text-xl text-${aether.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/aether/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Aether
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${aether.colors.badgeBg} ${aether.colors.badgeBorder} ${aether.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${aether.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {aether.status !== 'stable' ? `${aether.status}` : `v${aether.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Dateitransfer</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-clipboard-list text-xl text-${ausgabeschein.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/ausgabeschein-generator/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Ausgabeschein Generator
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${ausgabeschein.colors.badgeBg} ${ausgabeschein.colors.badgeBorder} ${ausgabeschein.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${ausgabeschein.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {ausgabeschein.status !== 'stable' ? `${ausgabeschein.status}` : `v${ausgabeschein.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Netbox Plugin</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-sparkles text-xl text-${astroAi.colors.iconColor}`} aria-hidden="true"></i>
-
-
-                  </div>
                 <div>
-                    <a href="/astro-ai-llms-txt/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Astro AI llms.txt Generator
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${astroAi.colors.badgeBg} ${astroAi.colors.badgeBorder} ${astroAi.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${astroAi.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {astroAi.status !== 'stable' ? `${astroAi.status}` : `v${astroAi.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">AstroJS Plugin</p>
-                  </div>
-                </div>                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-cloud-sun text-xl text-${waetherapp.colors.iconColor}`} aria-hidden="true"></i>
-
-                  </div>
-                  <div>
-                    <a href="/waetherapp/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      WetterApp
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${waetherapp.colors.badgeBg} ${waetherapp.colors.badgeBorder} ${waetherapp.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${waetherapp.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {waetherapp.status !== 'stable' ? `${waetherapp.status}` : `v${waetherapp.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Wetter und Vorhersage</p>
-                  </div>
+                  <span class="font-bold text-meg-text-primary-dark">Waldheim Suite</span>
+                  <p class="mt-1 text-xs text-meg-text-secondary">Zentrale Plattform für Business-Prozesse.</p>
                 </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark group-hover:shadow-lg group-hover:shadow-meg-accent/20 transition-all`}>
-                    <i class={`fa-solid fa-brain-circuit text-xl text-${obsidianGeminiAgent.colors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/obsidian-gemini-agent/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Obsidian Gemini Agent
-                      <span class="absolute inset-0"></span>
-
-                      <span
-                        class={`capitalize inline-flex items-center gap-x-1.5 rounded-lg px-2 py-1 text-xs font-medium ml-2 ${obsidianGeminiAgent.colors.badgeBg} ${obsidianGeminiAgent.colors.badgeBorder} ${obsidianGeminiAgent.colors.badgeText}`}>
-                      <i class={`fa-solid fa-circle text-${obsidianGeminiAgent.colors.iconColor} text-[6px]`} aria-hidden="true"></i>
-                      {obsidianGeminiAgent.status !== 'stable' ? `${obsidianGeminiAgent.status}` : `v${obsidianGeminiAgent.version}`}
-                    </span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Autonomes Obsidian-Plugin</p>
-                  </div>
-                </div>
+              </a>
+              <div class="mt-4 grid grid-cols-2 gap-1 px-2 border-t border-meg-border-dark/50 pt-4">
+                {[
+                  { icon: 'fa-users-gear', label: 'Socialverse CRM', color: 'text-violet-400', href: '/suite/socialverse/' },
+                  { icon: 'fa-hammer', label: 'Forge ERP', color: 'text-amber-400', href: '/suite/forge/' },
+                  { icon: 'fa-folder-open', label: 'Aether DMS', color: 'text-rose-400', href: '/suite/aether/' },
+                  { icon: 'fa-car-side', label: 'Ecodrive', color: 'text-teal-400', href: '/suite/ecodrive/' },
+                  { icon: 'fa-headset', label: 'Customer Portal', color: 'text-emerald-400', href: '/suite/portal/' },
+                  { icon: 'fa-tag', label: 'Suite Preise', color: 'text-meg-accent', href: '/suite/preise/' },
+                ].map(mod => (
+                  <a href={mod.href} class="flex items-center gap-2 text-[11px] text-meg-text-secondary hover:text-meg-text-primary-dark p-2 rounded-xl hover:bg-meg-bg-dark transition-all">
+                    <i class={`fa-solid ${mod.icon} ${mod.color} w-4 text-center`}></i> {mod.label}
+                  </a>
+                ))}
               </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consulting Dropdown -->
+      <div class="relative dropdown">
+        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+          <span>Consulting</span>
+          <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+        </button>
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+          <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
+            <div class="grid grid-cols-2 gap-2">
+              {[
+                { href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400', bg: 'bg-violet-500/10', hover: 'hover:border-violet-500/20', title: 'DevSecOps', desc: 'Speed & Security' },
+                { href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent', bg: 'bg-meg-accent/10', hover: 'hover:border-meg-accent/20', title: 'Entwicklung', desc: 'Individualsoftware' },
+                { href: '/services/design/', icon: 'fa-palette', color: 'text-rose-400', bg: 'bg-rose-500/10', hover: 'hover:border-rose-500/20', title: 'UI/UX Design', desc: 'Conversion-Fokus' },
+                { href: '/services/it-service/', icon: 'fa-desktop', color: 'text-emerald-400', bg: 'bg-emerald-500/10', hover: 'hover:border-emerald-500/20', title: 'IT-Service', desc: 'Managed Support' }
+              ].map(s => (
+                <a href={s.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark shadow-sm hover:shadow-md">
+                  <div class={`size-10 flex-none flex items-center justify-center rounded-lg ${s.bg} ${s.color} group-hover:scale-110 transition-transform`}>
+                    <i class={`fa-solid ${s.icon}`}></i>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-sm">{s.title}</span>
+                    <p class="text-[10px] text-meg-text-secondary leading-tight mt-1">{s.desc}</p>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="relative dropdown">
-          <button type="button"
-                  class="cursor-pointer dropdown-trigger inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
-                  aria-expanded="false"
-                  aria-label="Services Menü">
-            <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-sm transition-transform" aria-hidden="true"></i>
-          </button>
-
-          <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-max -translate-x-1/2 px-4 transition ease-out duration-300 opacity-0 translate-y-2">
-            <div class="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark text-sm/6 shadow-2xl shadow-meg-accent/5 lg:max-w-3xl">
-              <div class="grid grid-cols-1 gap-x-6 gap-y-1 p-4 lg:grid-cols-2">
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark transition-all`}>
-                    <i class={`fa-solid fa-rotate text-xl text-${devsecopsColors.iconColor}`} aria-hidden="true"></i>
+      <!-- Open Source Dropdown -->
+      <div class="relative dropdown">
+        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-meg-text-secondary hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+          <span>Open Source</span>
+          <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+        </button>
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+          <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
+            <div class="grid grid-cols-2 gap-2">
+              {[
+                { href: '/ausgabeschein-generator/', icon: 'fa-clipboard-list', color: 'text-emerald-400', title: 'Ausgabeschein', desc: 'Vereins-Tooling' },
+                { href: '/waetherapp/', icon: 'fa-cloud-sun', color: 'text-blue-400', title: 'WetterApp', desc: 'Multi-Source Daten' },
+                { href: '/obsidian-gemini-agent/', icon: 'fa-brain-circuit', color: 'text-indigo-400', title: 'Obsidian Agent', desc: 'AI Knowledge' },
+                { href: '/astro-ai-llms-txt/', icon: 'fa-sparkles', color: 'text-meg-accent', title: 'llms.txt', desc: 'Astro AI Plugin' }
+              ].map(p => (
+                <a href={p.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark">
+                  <div class={`size-10 flex-none flex items-center justify-center rounded-lg bg-meg-surface-dark border border-meg-border-dark ${p.color} group-hover:scale-110 transition-transform`}>
+                    <i class={`fa-solid ${p.icon}`}></i>
                   </div>
                   <div>
-                    <a href="/services/devsecops/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Effiziente Entwicklung / DevSecOps
-                      <span class="absolute inset-0"></span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Optimierung der Entwicklung</p>
+                    <span class="block font-bold text-sm">{p.title}</span>
+                    <p class="text-[10px] text-meg-text-secondary mt-1">{p.desc}</p>
                   </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark transition-all`}>
-                    <i class={`fa-solid fa-code text-xl text-${entwicklungColors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/services/entwicklung/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Softwareentwicklung
-                      <span class="absolute inset-0"></span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Webseiten, Plugins & Software</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark transition-all`}>
-                    <i class={`fa-solid fa-palette text-xl text-${designColors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/services/design/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Design / UX
-                      <span class="absolute inset-0"></span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Print & digitales Design</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark transition-all`}>
-                    <i class={`fa-solid fa-desktop text-xl text-${itServiceColors.iconColor}`} aria-hidden="true"></i>
-                  </div>
-                  <div>
-                    <a href="/services/it-service/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      IT-Service
-                      <span class="absolute inset-0"></span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">PC, Network & Administrierung</p>
-                  </div>
-                </div>
-                <div class={`group relative flex gap-x-6 rounded-xl p-4 hover:bg-meg-surface-dark/70 transition-all border border-transparent hover:border-meg-border-dark`}>
-                  <div class={`mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-meg-surface-dark/70 border border-meg-border-dark group-hover:bg-meg-surface-dark transition-all`}>
-                    <i class={`fa-solid fa-house text-xl text-${smarthomeColors.iconColor}`} aria-hidden="true"></i>
-                    
-                  </div>
-                  <div>
-                    <a href="/services/smarthome/" class="font-semibold text-meg-text-primary-dark outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-                      Smarthome
-                      <span class="absolute inset-0"></span>
-                    </a>
-                    <p class="mt-1 text-meg-text-secondary">Dein eigenes Smarthome</p>
-                  </div>
-                </div>
-              </div>
+                </a>
+              ))}
             </div>
           </div>
-                </div>
-        <a href="/referenzen/1/"
-           class="text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Referenzen</a>
-        <a href="/ueber-mich/"
-           class="text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Über Mich</a>
-        <a href="/blog/1/"
-           class="text-sm font-semibold leading-6 text-meg-text-secondary hover:bg-meg-surface-dark/70 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">Blog</a>
+        </div>
       </div>
-      <div class="hidden lg:flex">
-          <a href="https://portal.waldheim.dev"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="flex items-center gap-2 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <span>Kundenportal</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-lg" aria-hidden="true"></i>
-          </a>
-      </div>
+
+      <a href="/referenzen/" class="text-sm font-semibold text-meg-text-secondary hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Referenzen</a>
+      <a href="/blog/" class="text-sm font-semibold text-meg-text-secondary hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Blog</a>
+      
+      <a href="https://portal.waldheim.dev" target="_blank" class="ml-4 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-white shadow-lg shadow-meg-accent/20 hover:scale-[1.05] transition-all">
+        <span>Kundenportal</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      </a>
     </div>
 
+    <!-- Mobile Menu Trigger -->
+    <div class="lg:hidden flex items-center">
+      <button type="button" class="button-toggle cursor-pointer rounded-lg p-2.5 bg-meg-surface-dark/50 text-meg-text-secondary hover:text-meg-text-primary-dark border border-meg-border-dark transition-all">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation (Complete Hierarchy) -->
+    <div class="lg:hidden" role="dialog" id="mobile-menu" style="display: none;">
+      <div class="nav-sidebar fixed inset-x-4 top-24 z-50 overflow-y-auto rounded-3xl bg-meg-surface-dark/98 backdrop-blur-2xl border border-meg-border-dark p-6 shadow-2xl max-h-[80vh]">
+        <div class="space-y-4">
+          
+          <!-- Category: Suite -->
+          <div class="accordion-item">
+            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+              <span>Waldheim Suite</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-meg-accent/20">
+              <a href="/suite/" class="block p-2 text-sm font-bold text-meg-accent">Übersicht</a>
+              <a href="/suite/socialverse/" class="block p-2 text-sm text-meg-text-secondary">Socialverse CRM</a>
+              <a href="/suite/forge/" class="block p-2 text-sm text-meg-text-secondary">Forge ERP</a>
+              <a href="/suite/aether/" class="block p-2 text-sm text-meg-text-secondary">Aether DMS</a>
+              <a href="/suite/ecodrive/" class="block p-2 text-sm text-meg-text-secondary">Ecodrive</a>
+              <a href="/suite/portal/" class="block p-2 text-sm text-meg-text-secondary">Customer Portal</a>
+              <a href="/suite/preise/" class="block p-2 text-sm font-bold text-meg-text-primary-dark">Preise</a>
+            </div>
+          </div>
+
+          <!-- Category: Consulting -->
+          <div class="accordion-item">
+            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+              <span>IT-Consulting</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-violet-500/20">
+              <a href="/services/devsecops/" class="block p-2 text-sm text-meg-text-secondary">DevSecOps & Automation</a>
+              <a href="/services/entwicklung/" class="block p-2 text-sm text-meg-text-secondary">Softwareentwicklung</a>
+              <a href="/services/design/" class="block p-2 text-sm text-meg-text-secondary">UI/UX Design</a>
+              <a href="/services/it-service/" class="block p-2 text-sm text-meg-text-secondary">Managed IT-Service</a>
+            </div>
+          </div>
+
+          <!-- Category: Open Source -->
+          <div class="accordion-item">
+            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+              <span>Open Source</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-emerald-500/20">
+              <a href="/ausgabeschein-generator/" class="block p-2 text-sm text-meg-text-secondary">Ausgabeschein</a>
+              <a href="/waetherapp/" class="block p-2 text-sm text-meg-text-secondary">WetterApp</a>
+              <a href="/obsidian-gemini-agent/" class="block p-2 text-sm text-meg-text-secondary">Obsidian Agent</a>
+              <a href="/astro-ai-llms-txt/" class="block p-2 text-sm text-meg-text-secondary">llms.txt Plugin</a>
+            </div>
+          </div>
+
+          <hr class="border-meg-border-dark/50" />
+          
+          <!-- Static Links -->
+          <a href="/referenzen/" class="block p-3 font-bold text-meg-text-primary-dark">Referenzen</a>
+          <a href="/blog/" class="block p-3 font-bold text-meg-text-primary-dark">IT-Blog</a>
+          <a href="/ueber-mich/" class="block p-3 font-bold text-meg-text-primary-dark">Über mich</a>
+          
+          <a href="https://portal.waldheim.dev" target="_blank" class="flex items-center justify-center gap-2 rounded-2xl bg-meg-accent py-4 font-black text-white shadow-xl shadow-meg-accent/20">
+            Kundenportal <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 </nav>
 
 <script is:inline>
-    window.addEventListener("scroll", function () {
-        const nav = document.querySelector("nav");
-        
-        if (window.scrollY > 0) {
-            nav?.classList.add("shadow-xl", "shadow-meg-accent/5", "border-meg-accent/20");
-            nav?.classList.remove("shadow-sm");
-        } else {
-            nav?.classList.remove("shadow-xl", "shadow-meg-accent/5", "border-meg-accent/20");
-            nav?.classList.add("shadow-sm");
-        }
-    });
-</script>
-
-<script is:inline>
-    document.addEventListener('astro:page-load', async () => {
-      const toggles = document.querySelectorAll('.button-toggle');
+    document.addEventListener('astro:page-load', () => {
       const dropdowns = document.querySelectorAll('.dropdown');
-      const menuTriggerSubnav = document.querySelectorAll('.mobile-subnav');
+      const toggle = document.querySelector('.button-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger');
 
-      const toggleEvent = (e) => {
-        const nav = document.querySelector('.nav-sidebar');
-        const dialog = document.querySelector('[role="dialog"]');
-        const toggle = e.currentTarget;
-        const isOpen = dialog?.style.display === 'block';
-        
-        if (isOpen) {
-          dialog.style.display = 'none';
-          nav?.classList.add('top--100');
-          toggle?.setAttribute('aria-expanded', 'false');
-        } else {
-          dialog.style.display = 'block';
-          nav?.classList.remove('top--100');
-          toggle?.setAttribute('aria-expanded', 'true');
-        }
-      };
+      // Desktop Dropdowns
+      dropdowns.forEach(dd => {
+        const trigger = dd.querySelector('.dropdown-trigger');
+        const menu = dd.querySelector('.dropdown-menu');
+        const icon = dd.querySelector('.fa-chevron-down');
 
-      const toggleDropdowns = (e) => {
-        e.stopPropagation();
-        const dropdown = e.currentTarget;
-        const menu = dropdown.querySelector('.dropdown-menu');
-        const trigger = dropdown.querySelector('.dropdown-trigger');
-        const icon = dropdown.querySelector('.fa-chevron-down');
-        const isOpen = menu?.classList.contains('opacity-100');
-        
-        // Close all other dropdowns
-        dropdowns.forEach(d => {
-          if (d !== dropdown) {
-            const m = d.querySelector('.dropdown-menu');
-            const t = d.querySelector('.dropdown-trigger');
-            const i = d.querySelector('.fa-chevron-down');
-            m?.classList.remove('opacity-100', 'translate-y-0', 'flex');
-            m?.classList.add('opacity-0', 'translate-y-1', 'hidden');
-            t?.setAttribute('aria-expanded', 'false');
-            i?.classList.remove('rotate-180');
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = !menu.classList.contains('hidden');
+          
+          // Close others
+          document.querySelectorAll('.dropdown-menu').forEach(m => {
+            m.classList.add('hidden', 'opacity-0', 'translate-y-2');
+          });
+          document.querySelectorAll('.dropdown .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+
+          if (!isOpen) {
+            menu.classList.remove('hidden');
+            requestAnimationFrame(() => {
+              menu.classList.remove('opacity-0', 'translate-y-2');
+              menu.classList.add('opacity-100', 'translate-y-0');
+              icon.classList.add('rotate-180');
+            });
           }
-        });
-
-        if (isOpen) {
-          menu?.classList.remove('opacity-100', 'translate-y-0', 'flex');
-          menu?.classList.add('opacity-0', 'translate-y-1', 'hidden');
-          trigger?.setAttribute('aria-expanded', 'false');
-          icon?.classList.remove('rotate-180');
-        } else {
-          menu?.classList.remove('opacity-0', 'translate-y-1', 'hidden');
-          menu?.classList.add('opacity-100', 'translate-y-0', 'flex');
-          trigger?.setAttribute('aria-expanded', 'true');
-          icon?.classList.add('rotate-180');
-        }
-      };
-
-      // Close dropdowns when clicking outside
-      document.addEventListener('click', () => {
-        dropdowns.forEach(d => {
-          const m = d.querySelector('.dropdown-menu');
-          const t = d.querySelector('.dropdown-trigger');
-          const i = d.querySelector('.fa-chevron-down');
-          m?.classList.remove('opacity-100', 'translate-y-0', 'flex');
-          m?.classList.add('opacity-0', 'translate-y-1', 'hidden');
-          t?.setAttribute('aria-expanded', 'false');
-          i?.classList.remove('rotate-180');
         });
       });
 
-      const mobileToggleDropdowns = (e) => {
-        const dropdown = e.currentTarget;
-        const icon = dropdown.querySelector('.fa-chevron-down');
-        dropdown.classList.toggle('active');
-        const isActive = dropdown.classList.contains('active');
-        dropdown.setAttribute('aria-expanded', isActive.toString());
-        dropdown.nextElementSibling?.toggleAttribute('hidden');
-        icon?.classList.toggle('rotate-180');
-      };
+      // Mobile Menu Toggle
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const isHidden = mobileMenu.style.display === 'none';
+          mobileMenu.style.display = isHidden ? 'block' : 'none';
+        });
+      }
 
-      toggles.forEach(toggle => toggle.addEventListener('click', toggleEvent));
-      dropdowns.forEach(toggle => toggle.addEventListener('click', toggleDropdowns));
-      menuTriggerSubnav.forEach(toggle => toggle.addEventListener('click', mobileToggleDropdowns));
+      // Mobile Accordion Logic
+      accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const content = trigger.nextElementSibling;
+          const icon = trigger.querySelector('.fa-chevron-down');
+          const isHidden = content.classList.contains('hidden');
+          
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+
+      // Global Close
+      document.addEventListener('click', () => {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden', 'opacity-0', 'translate-y-2'));
+        document.querySelectorAll('.dropdown .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+      });
     });
 </script>

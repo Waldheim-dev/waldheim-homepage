@@ -58,7 +58,7 @@ export default defineConfig({
       sectionTitle: 'Seitenübersicht',
       aiProvider: 'gemini',
       aiModel: 'gemini-2-5-flash',
-      aiApiKey: process.env.GEMINI_API_KEY,
+      aiApiKey: 'process.env.GEMINI_API_KEY',
       llmsFull: true,
       debug: true
     }),
