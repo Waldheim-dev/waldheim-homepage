@@ -112,9 +112,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   'astro-ai-llms-txt': {
     name: 'Astro AI llms.txt Generator',
-    version: '1.2.3',
+    version: '1.3.0',
     status: 'stable',
-    releaseDate: '2026-02-18',
+    releaseDate: '2026-04-01',
     colors: {
       name: 'Astro AI llms.txt Generator',
       primary: 'primary-500',
