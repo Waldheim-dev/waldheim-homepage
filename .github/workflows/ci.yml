@@ -119,7 +119,7 @@ jobs:
           path: dist/
 
       - name: FTP Deploy to IONOS
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
