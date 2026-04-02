@@ -137,19 +137,29 @@ const finalSchema = [organisationSchema, personSchema, localBusinessSchema, ...s
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
   <script is:inline>
-    document.addEventListener('astro:page-load', () => {
-      if (!window.gsap) return;
-      window.gsap.utils.toArray('.gsap-fadein').forEach((el, i) => {
+    function initGsapAnimations() {
+      if (!window.gsap || !window.ScrollTrigger) return;
+
+      // Register plugin (safe to call multiple times)
+      window.gsap.registerPlugin(window.ScrollTrigger);
+
+      // Kill stale instances from previous page (ViewTransitions)
+      window.ScrollTrigger.getAll().forEach(function(t) { t.kill(); });
+
+      window.gsap.utils.toArray('.gsap-fadein').forEach(function(el) {
+        var delay = parseFloat(el.style.animationDelay) || 0;
         window.gsap.from(el, {
           opacity: 0,
           y: 30,
           duration: 0.8,
-          delay: 0.05 * i,
+          delay: delay,
           ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 92%' }
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
         });
       });
-    });
+    }
+
+    document.addEventListener('astro:page-load', initGsapAnimations);
   </script>
 
   <ClientRouter />
