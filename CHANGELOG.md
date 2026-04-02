@@ -1,3 +1,13 @@
+# [26.7.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.6.0...26.7.0) (2026-04-02)
+
+
+### Features
+
+* add obsidian gemini agent product page and integration ([3e0ce07](https://github.com/Waldheim-dev/waldheim-homepage/commit/3e0ce07a7add52a22ef00a6cf27bce95a5eba198))
+* bump release baseline to 26.7.0 ([250f806](https://github.com/Waldheim-dev/waldheim-homepage/commit/250f806a9324a21e5e50165f0d35d2e560b3cc26))
+* **suite:** Wave 18a — suite-first homepage with 13-section blueprint ([91408c7](https://github.com/Waldheim-dev/waldheim-homepage/commit/91408c7589012e02156856c2e7473a6013e048f8))
+* update dependencies and enhance Aether component descriptions ([a068669](https://github.com/Waldheim-dev/waldheim-homepage/commit/a068669013923069f72c4bfee97fd97ddb19053f))
+
 # 1.0.0 (2026-04-01)
 
 
