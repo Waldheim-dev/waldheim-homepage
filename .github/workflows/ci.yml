@@ -125,7 +125,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps          # FTPS (explicit TLS) — IONOS standard
+          protocol: ftp           # Switched to plain FTP due to 'AUTH: command unrecognized'
           local-dir: ./dist/
           server-dir: ${{ vars.FTP_SERVER_DIR || '/' }}
           security: loose         # set to "strict" if IONOS cert chain is trusted
