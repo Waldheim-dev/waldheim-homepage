@@ -110,6 +110,7 @@ jobs:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
     needs: [qa, release]
     runs-on: ubuntu-latest
+    environment: FTP_PASSWORD
 
     steps:
       - name: Download dist artifact
