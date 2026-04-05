@@ -119,18 +119,13 @@ jobs:
           name: homepage-dist
           path: dist/
 
-      - name: FTP Deploy to IONOS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: SFTP Deploy to IONOS
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp           # Switched to plain FTP due to 'AUTH: command unrecognized'
-          local-dir: ./dist/
-          server-dir: ${{ vars.FTP_SERVER_DIR || '/' }}
-          security: loose         # set to "strict" if IONOS cert chain is trusted
-          timeout: 60000
-          log-level: minimal
-          exclude: |
-            **/.git*
-            **/.git*/**
+          port: 22
+          local_path: './dist/*'
+          remote_path: ${{ vars.FTP_SERVER_DIR || '/' }}
+          sftp_only: true
