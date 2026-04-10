@@ -1,10 +1,11 @@
 ---
 title: "🚨 ES IST OFFIZIELL: CloudLand 2026 hat JA gesagt! 🚨"
 description: "Die CloudLand Jury hat den roten Knopf freigegeben. Wir spielen K8s Battleship – live im Mai 2026. Mein Cluster gegen eure Zerstörungswut. Challenge Accepted!"
-pubDate: "2025-12-23"
+pubDate: "2025-10-12"
 heroImage: "/blogs/cloudland_2026_challange-accepted.png"
-author: 'markus-waldheim'
-keywords: CloudLand, 2026, Accepted, Speaker Announcement, Challenge Accepted, Kubernetes, K8s, Battleship, Live Demo, Conference, DevOps, GitOps, FluxCD, Chaos Engineering, Interactive
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled '🚨 ES IST OFFIZIELL: CloudLand 2026 hat JA gesagt! 🚨'. Theme: Die CloudLand Jury hat den roten Knopf freigegeben. Wir spielen K8s Battleship – live im Mai 2026. Mein Cluster gegen eure Zerstörungswut. Challenge Accepted!. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "CloudLand, 2026, Accepted, Speaker Announcement, Challenge Accepted, Kubernetes, K8s, Battleship, Live Demo, Conference, DevOps, GitOps, FluxCD, Chaos Engineering, Interactive"
 ---
 
 ## 🚨 ES IST OFFIZIELL! 🚨
