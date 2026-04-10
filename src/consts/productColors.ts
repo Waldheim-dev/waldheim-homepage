@@ -178,6 +178,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-meg-accent/20',
     },
   },
+  amigo: {
+    name: 'Amigo',
+    version: '0.1.0',
+    status: 'beta',
+    releaseDate: '2026-04-10',
+    colors: {
+      name: 'Amigo',
+      primary: 'amber-400',
+      secondary: 'orange-500',
+      glowColor: 'amber-400/50',
+      badgeBg: 'bg-amber-500/10',
+      badgeBorder: 'border-amber-500/30',
+      badgeText: 'text-amber-400',
+      iconColor: 'amber-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-amber-400/20',
+    },
+  },
 };
 
 // Rückwärtskompatibilität: Nur Farben
