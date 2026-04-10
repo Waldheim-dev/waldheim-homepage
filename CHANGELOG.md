@@ -1,3 +1,12 @@
+# [26.8.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.7.0...26.8.0) (2026-04-10)
+
+
+### Features
+
+* add amigo framework product page, navigation and footer integration ([d5d6137](https://github.com/Waldheim-dev/waldheim-homepage/commit/d5d6137e9311881cbcbcb419eab656d8db90dcaa))
+* add blogs for 2026 ([cef5ad9](https://github.com/Waldheim-dev/waldheim-homepage/commit/cef5ad901909e51f458d96eee650011f6cdfe705))
+* add blogs for 2026 ([b79d1d4](https://github.com/Waldheim-dev/waldheim-homepage/commit/b79d1d456b2cb35a0648c5e34a572f32aac65e12))
+
 # [26.7.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.6.0...26.7.0) (2026-04-02)
 
 
