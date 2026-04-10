@@ -22,6 +22,7 @@
   - [Socialverse](https://www.waldheim.dev/socialverse/): AI-gestütztes CRM & Marketing-Automation
   - [Aether](https://www.waldheim.dev/aether/): Sicherer Dateitransfer
   - [WetterApp](https://www.waldheim.dev/waetherapp/): Open Source Wetter-Anwendung
+  - [Amigo](https://www.waldheim.dev/amigo/): Autonomes Multi-Agent Framework in Go
 
 - [Informationen](https://www.waldheim.dev/ueber-mich/)
   - [Über mich](https://www.waldheim.dev/ueber-mich/): Profil von Markus Waldheim

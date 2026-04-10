@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+import { getProductInfo } from '../../consts/productColors';
+import AmigoHero from '../../components/AmigoHero.astro';
+import AmigoFeatures from '../../components/AmigoFeatures.astro';
+import AmigoProcess from '../../components/AmigoProcess.astro';
+
+const product = getProductInfo('amigo')!;
+
+// SEO & Meta
+const titel = 'Amigo | Autonomes Multi-Agenten-Framework in Go';
+const description = 'Entwickeln Sie hochperformante, autonome KI-Agenten-Teams mit Amigo. Go-basiert, MCP-ready und gebaut für Enterprise-Reliability.';
+const keywords = 'KI Agenten, Multi-Agent Framework, Go Lang AI, Autonomous Agents, MCP Protocol, Agentic Loops, Software Engineering AI';
+const ogImage = 'https://waldheim.dev/amigo/amigo-og.jpg';
+
+// Structured Data: Software Application
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'Amigo Multi-Agent Framework',
+  'applicationCategory': 'DeveloperApplication',
+  'operatingSystem': 'Linux, macOS, Windows',
+  'description': 'Ein professionelles Framework zum Aufbau autonomer Multi-Agenten-Systeme in Go.',
+  'author': {
+    '@type': 'Organization',
+    'name': 'Waldheim.dev',
+    'url': 'https://waldheim.dev'
+  }
+};
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: 'https://waldheim.dev'
+},{
+  name: 'Amigo',
+  link: 'https://waldheim.dev/amigo'
+}]);
+---
+<Layout 
+  title={titel} 
+  description={description} 
+  keywords={keywords} 
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
+  <main id="main-content">
+    <AmigoHero />
+    <AmigoFeatures />
+    <AmigoProcess />
+    
+    <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-8">Bereit für Ihren neuen Amigo?</h2>
+        <p class="text-xl text-meg-text-secondary mb-12">
+          Amigo ist Open Source und auf GitHub verfügbar. Starten Sie noch heute mit dem Aufbau Ihres eigenen autonomen Agenten-Teams.
+        </p>
+        <div class="bg-meg-surface-dark border border-meg-border-dark rounded-2xl p-6 text-left font-mono text-sm overflow-x-auto shadow-2xl">
+          <p class="text-amber-400 mb-2"># Install Amigo</p>
+          <p class="text-meg-text-primary-dark">git clone git@github.com:Waldheim-dev/amigo.git</p>
+          <p class="text-meg-text-primary-dark">cd amigo</p>
+          <p class="text-meg-text-primary-dark">make build</p>
+          <p class="text-meg-text-primary-dark">./amigo --help</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
