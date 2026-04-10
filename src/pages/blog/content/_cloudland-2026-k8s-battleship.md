@@ -1,10 +1,11 @@
 ---
 title: "K8s Battleship: Wenn Kinderspiel auf Enterprise-Infrastruktur trifft 🚢"
 description: "Von 'Schiffe versenken' zu 'Pods versenken': Wie ich ein Kinderspiel in ein Resilience-Training verwandle. Mit API-Calls, Gamification und autonomer Verteidigung."
-pubDate: "2026-02-03"
+pubDate: "2025-10-13"
 heroImage: "/blogs/cloudland_2026_battleship.png"
-author: 'markus-waldheim'
-keywords: Kubernetes, K8s, Battleship, Gamification, CloudLand, 2026, Platform Engineering, DevOps, Resilience, GitOps, FluxCD, Go, Golang, Live Demo, Interactive, Conference
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'K8s Battleship: Wenn Kinderspiel auf Enterprise-Infrastruktur trifft 🚢'. Theme: Von 'Schiffe versenken' zu 'Pods versenken': Wie ich ein Kinderspiel in ein Resilience-Training verwandle. Mit API-Calls, Gamification und autonomer Verteidigung.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "Kubernetes, K8s, Battleship, Gamification, CloudLand, 2026, Platform Engineering, DevOps, Resilience, GitOps, FluxCD, Go, Golang, Live Demo, Interactive, Conference"
 ---
 
 ## "C5." – "Treffer, versenkt!" 🚢💥

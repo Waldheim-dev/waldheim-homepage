@@ -1,10 +1,11 @@
 ---
 title: "DSGVO-konformes Logging: Was ich bei der Protokollierung in Go-Anwendungen beachte"
 description: "Ich erkläre die technischen und konzeptionellen Maßnahmen, die ich ergreife, um das Logging in Go-Services DSGVO-konform zu gestalten."
-pubDate: "2025-10-03"
+pubDate: "2025-10-07"
 heroImage: "/blogs/dsgvo-konformes-logging-das-unsichtbare-datenschutzrisiko-in-ihren-log-dateien.png"
-author: 'markus-waldheim'
-keywords: DSGVO, Logging, Go, Datenschutz, Sicherheit, Compliance, DevSecOps
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'DSGVO-konformes Logging: Was ich bei der Protokollierung in Go-Anwendungen beachte'. Theme: Ich erkläre die technischen und konzeptionellen Maßnahmen, die ich ergreife, um das Logging in Go-Services DSGVO-konform zu gestalten.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "DSGVO, Logging, Go, Datenschutz, Sicherheit, Compliance, DevSecOps"
 ---
 
 ## DSGVO-konformes Logging: Das unsichtbare Datenschutzrisiko in Ihren Log-Dateien

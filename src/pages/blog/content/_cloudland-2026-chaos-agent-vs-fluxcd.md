@@ -1,10 +1,11 @@
 ---
 title: "Kann FluxCD schneller heilen, als mein Go-Agent zerstört? ⚔️"
 description: "Der Bau eines Chaos-Agents in Go: Wie ich absichtlich Pods lösche, Configs driften lasse und FluxCD an seine Grenzen bringe. Ein technisches Deep-Dive."
-pubDate: "2025-12-08"
+pubDate: "2025-10-11"
 heroImage: "/blogs/cloudland_2026_go_want_destroy.png"
-author: 'markus-waldheim'
-keywords: Go, Golang, Chaos Engineering, FluxCD, GitOps, Kubernetes, K8s, DevOps, Resilience, Ops Tooling, client-go, controller-runtime, Pod Delete, Config Drift, Cloud Native, CloudLand, 2026
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Kann FluxCD schneller heilen, als mein Go-Agent zerstört? ⚔️'. Theme: Der Bau eines Chaos-Agents in Go: Wie ich absichtlich Pods lösche, Configs driften lasse und FluxCD an seine Grenzen bringe. Ein technisches Deep-Dive.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "Go, Golang, Chaos Engineering, FluxCD, GitOps, Kubernetes, K8s, DevOps, Resilience, Ops Tooling, client-go, controller-runtime, Pod Delete, Config Drift, Cloud Native, CloudLand, 2026"
 ---
 
 ## Warum schreibe ich Code, der meine eigenen Pods löscht? 🧐

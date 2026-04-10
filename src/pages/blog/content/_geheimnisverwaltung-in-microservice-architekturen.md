@@ -1,10 +1,11 @@
 ---
 title: "Geheimnisverwaltung in Microservice-Architekturen: Mein favorisierter Ansatz"
 description: "Ich vergleiche verschiedene Tools zur Verwaltung von Secrets (API-Keys, Passwörter) und stelle meine bevorzugte Lösung für Go-Microservices vor."
-pubDate: "2025-10-01"
+pubDate: "2025-10-05"
 heroImage: "/blogs/geheimnisverwaltung-in-microservice-architekturen.png"
-author: 'markus-waldheim'
-keywords: Secrets Management, Microservices, Sicherheit, DevSecOps, Go, HashiCorp Vault, API-Keys
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Geheimnisverwaltung in Microservice-Architekturen: Mein favorisierter Ansatz'. Theme: Ich vergleiche verschiedene Tools zur Verwaltung von Secrets (API-Keys, Passwörter) und stelle meine bevorzugte Lösung für Go-Microservices vor.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "Secrets Management, Microservices, Sicherheit, DevSecOps, Go, HashiCorp Vault, API-Keys"
 ---
 
 ## Geheimnisverwaltung in Microservice-Architekturen: Schluss mit hartcodierten Passwörtern!

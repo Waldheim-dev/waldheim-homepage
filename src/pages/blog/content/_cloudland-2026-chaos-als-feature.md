@@ -1,10 +1,11 @@
 ---
 title: "Chaos als Feature: Mein CloudLand-Experiment 2026 🚀"
 description: "Wie aus Frust über 'Death by PowerPoint' die Idee eines live angreifbaren Kubernetes-Clusters wurde. Go, K8s und kontrolliertes Chaos auf der CloudLand 2026."
-pubDate: "2025-11-22"
+pubDate: "2025-10-10"
 heroImage: "/blogs/cloudland_2026_game_sended.png"
-author: 'markus-waldheim'
-keywords: CloudLand, 2026, Kubernetes, Chaos Engineering, Go, Golang, K8s, FluxCD, GitOps, Speaker, Conference, DevOps, Cloud Native, Resilience, Live Demo
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Chaos als Feature: Mein CloudLand-Experiment 2026 🚀'. Theme: Wie aus Frust über 'Death by PowerPoint' die Idee eines live angreifbaren Kubernetes-Clusters wurde. Go, K8s und kontrolliertes Chaos auf der CloudLand 2026.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "CloudLand, 2026, Kubernetes, Chaos Engineering, Go, Golang, K8s, FluxCD, GitOps, Speaker, Conference, DevOps, Cloud Native, Resilience, Live Demo"
 ---
 
 ## Ich habe gerade "Senden" gedrückt 📩
