@@ -1,10 +1,11 @@
 ---
 title: "Die sichere Migration von PostgreSQL-Datenbanken: Mein Plan zur Vermeidung von Datenverlust"
 description: "Ich präsentiere meinen detaillierten Migrationsplan für PostgreSQL, der Ausfallsicherheit und die Integrität der Daten in den Mittelpunkt stellt."
-pubDate: "2025-10-04"
+pubDate: "2025-10-08"
 heroImage: "/blogs/die-sichere-migration-von-postgresql-datenbanken-ein-plan-fuer-null-datenverlust.png"
-author: 'markus-waldheim'
-keywords: PostgreSQL, Migration, Datenbank, Sicherheit, IT-Administration, Disaster Recovery, Ausfallsicherheit
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Die sichere Migration von PostgreSQL-Datenbanken: Mein Plan zur Vermeidung von Datenverlust'. Theme: Ich präsentiere meinen detaillierten Migrationsplan für PostgreSQL, der Ausfallsicherheit und die Integrität der Daten in den Mittelpunkt stellt.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "PostgreSQL, Migration, Datenbank, Sicherheit, IT-Administration, Disaster Recovery, Ausfallsicherheit"
 ---
 
 ## Die sichere Migration von PostgreSQL-Datenbanken: Ein Plan für Null Datenverlust

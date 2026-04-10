@@ -1,10 +1,11 @@
 ---
 title: "Angular und Content Security Policy (CSP): Eine praxisnahe Implementierung"
 description: "Dieser Beitrag ist eine Schritt-für-Schritt-Anleitung, wie ich eine strikte Content Security Policy für eine komplexe Angular-Anwendung implementiere."
-pubDate: "2025-10-02"
+pubDate: "2025-10-06"
 heroImage: "/blogs/angular-und-content-security-policy-csp-eine-praxisnahe-implementierung.png"
-author: 'markus-waldheim'
-keywords: Content Security Policy, CSP, Angular, Frontend-Sicherheit, DevSecOps, XSS, Sicherheit
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Angular und Content Security Policy (CSP): Eine praxisnahe Implementierung'. Theme: Dieser Beitrag ist eine Schritt-für-Schritt-Anleitung, wie ich eine strikte Content Security Policy für eine komplexe Angular-Anwendung implementiere.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+author: "markus-waldheim"
+keywords: "Content Security Policy, CSP, Angular, Frontend-Sicherheit, DevSecOps, XSS, Sicherheit"
 ---
 
 ## Angular und Content Security Policy (CSP): Ihr bester Freund im Kampf gegen XSS
@@ -116,4 +117,3 @@ Die Implementierung einer Content Security Policy ist eine der effektivsten Maß
 
 **Möchten Sie die Sicherheit Ihrer Angular-Anwendung mit einer robusten Content Security Policy auf die nächste Stufe heben?**
 Ich helfe Ihnen bei der Analyse, Erstellung und Implementierung einer maßgeschneiderten CSP, die auf Ihre Anwendung zugeschnitten ist, und unterstütze Sie bei der Einrichtung des Reportings. [Kontaktieren Sie mich für ein Frontend-Security-Audit.](/kontakt/)
-

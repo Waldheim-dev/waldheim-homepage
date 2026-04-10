@@ -1,0 +1,20 @@
+A/B-Testing in Angular-Anwendungen: Meine schlanke Implementierung mit Go-Backend.
+Analyse von Nutzerverhalten mit KI: Wie ich Muster in Anwendungsdaten erkenne, ohne die Privatsphäre zu verletzen.
+Angular-Performance-Audit: Meine Tools zur Aufdeckung von Flaschenhälsen.
+Angular Universal für SEO: Wie ich serverseitiges Rendering (SSR) für bessere Sichtbarkeit implementiere.
+Animationen in Angular, die einen Zweck erfüllen: Meine Design-Prinzipien.
+Anonymisierung von Daten in PostgreSQL für Testumgebungen: Mein Skript.
+Aufbau eines internen KI-Tools zur Automatisierung von Support-Anfragen.
+Automatisierte Erstellung von DSGVO-Berichten mit Go und PostgreSQL.
+Automatisierung von IT-Admin-Aufgaben mit Go: Praktische Skripting-Beispiele.
+Barrierefreies Design: Wie ich sicherstelle, dass meine digitalen Produkte die DSGVO-Anforderungen an Zugänglichkeit erfüllen.
+Barrierefreiheit (a11y) in Angular: Meine Checkliste für WCAG-konforme Anwendungen.
+Build-Artefakte verwalten: Meine Strategie für Go-Binärdateien und Angular-Bundles.
+Continuous Integration (CI) für IT-Infrastruktur: Wie ich Änderungen an Server-Konfigurationen teste.
+Continuous Integration für Datenbanken: Mein Ansatz mit Git und Flyway/Liquibase.
+Corporate Identity für die Kommandozeile: Wie ich CLI-Tools in Go mit Branding versehe.
+Cross-Plattform-UI-Tests: Wie ich sicherstelle, dass meine Angular-App auf Windows, macOS und Linux gleich aussieht.
+Dark Mode in Angular: Mehr als nur Farben – meine Design- und Implementierungsstrategie.
+Das "Need-to-know"-Prinzip: Wie ich Datenzugriffsrechte in PostgreSQL auf Basis der DSGVO implementiere.
+Das perfekte Zusammenspiel: Wie ich VS Code für die Zusammenarbeit von Designern und Entwicklern konfiguriere.
+Data Governance für Microservices: Wer besitzt welche Daten in einer verteilten Architektur?
