@@ -1,3 +1,10 @@
+## [26.8.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.8.0...26.8.1) (2026-04-12)
+
+
+### Bug Fixes
+
+* remove old txt files ([57781fd](https://github.com/Waldheim-dev/waldheim-homepage/commit/57781fdb800537fbc72fc2e07f9dd47dbfd7666b))
+
 # [26.8.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.7.0...26.8.0) (2026-04-10)
 
 
