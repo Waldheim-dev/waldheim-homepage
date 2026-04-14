@@ -11,7 +11,58 @@ linkedinPost: "🚀 Neuer Blogbeitrag online: Refactoring eines Go-Monolithen: M
 
 ## Refactoring eines Go-Monolithen: Meine Taktiken zur schrittweisen Modernisierung.
 
-Der vollständige Inhalt für diesen Beitrag wird in Kürze ergänzt.
+## Go-Monolith Refactoring: Schrittweise Modernisierung ohne Burnout
+
+Einen großen Go-Monolithen komplett umzuschreiben? Unrealistisch. Aber schrittweise Modernisierung? Ja.
+
+Ich zeige meine Taktiken für Refactoring, ohne den Betrieb zu stoppen.
+
+### Taktik 1: Extraktion von Funktionen in Packages
+
+**Vorher:** Alles in `main.go`
+
+```go
+// main.go
+func HandleUserRequest(w http.ResponseWriter, r *http.Request) {
+  // 500 Zeilen
+}
+```
+
+**Nachher:** Logik in separates Package
+
+```go
+// user/handler.go
+func HandleUserRequest(w http.ResponseWriter, r *http.Request) {
+  // 20 Zeilen (Rest in user-Package)
+}
+```
+
+### Taktik 2: Dependency Inversion für Testbarkeit
+
+```go
+// Nachher: Interfaces statt Concrete Types
+type UserRepository interface {
+  GetUser(id string) (*User, error)
+}
+
+type UserService struct {
+  repo UserRepository
+}
+```
+
+Jetzt kann ich `UserRepository` mocken im Test.
+
+### Taktik 3: Migrate Legacy Code zu moderne Patterns
+
+```go
+// Vorher: Global mutable state
+var db *sql.DB
+
+// Nachher: Dependency Injection
+func NewUserService(db *sql.DB) *UserService {
+  return &UserService{db: db}
+}
+```
 
 -----
 

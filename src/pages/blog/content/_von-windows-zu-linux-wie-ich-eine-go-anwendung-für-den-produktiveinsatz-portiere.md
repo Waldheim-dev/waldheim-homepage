@@ -11,7 +11,47 @@ linkedinPost: "🚀 Neuer Blogbeitrag online: Von Windows zu Linux: Wie ich eine
 
 ## Von Windows zu Linux: Wie ich eine Go-Anwendung für den Produktiveinsatz portiere.
 
-Der vollständige Inhalt für diesen Beitrag wird in Kürze ergänzt.
+## Go-Anwendungen von Windows zu Linux: Portierungs-Checklist
+
+Go ist plattformübergreifend, aber "write once, run anywhere" ist ein Mythos. Gibt es Fallstricke beim Übergang von Windows Development zu Linux Production.
+
+Ich zeige meine bewährte Anforderungeliste für erfolgreiche Portierungen.
+
+### Pfad-Handling: Der größte Fallstrick
+
+**Problem: Hardcoded Pfade**
+
+```go
+// ❌ Funktioniert nur auf Windows
+filePath := "C:\\data\\myfile.txt"
+content, err := os.ReadFile(filepath)
+
+// ✓ Cross-Platform
+filePath := filepath.Join("data", "myfile.txt")
+content, err := os.ReadFile(filePath)
+```
+
+### File Permissions: chmod Fallstricke
+
+**Problem: Executable Permissions**
+
+```go
+// Auf Windows: kein Unterschied zwischen file und executable
+// Auf Linux: executable muss 0755 haben
+
+// ✓ Korekt
+os.Chmod(binaryPath, 0755)
+```
+
+### Environment Variablen: Case-Sensitivity
+
+```go
+// ❌ Funktioniert auf Windows (case-insensitive), aber nicht auf Linux
+os.Getenv("MyVariable")  // Linux: nicht gefunden wenn "MYVARIABLE" gesetzt
+
+// ✓ Verwende konsistent Uppercase
+os.Getenv("MY_VARIABLE")
+```
 
 -----
 
