@@ -47,4 +47,4 @@ Das Strangler-Pattern ist der sicherste Weg, technische Schulden abzubauen, wäh
 -----
 
 **Besitzen Sie ein gewachsenes System, das modernisiert werden muss, oder planen Sie den Umstieg auf eine Microservice-Architektur?**  
-Ich unterstütze Sie bei der Erstellung einer Migrations-Roadmap und der technischen Umsetzung mit dem Strangler-Pattern. [Kontaktieren Sie mich für eine Architektur-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Erstellung einer Migrations-Roadmap und der technischen Umsetzung mit dem Strangler-Pattern. [Kontaktieren Sie mich für eine Architektur-Beratung.](mailto:kontakt@waldheim.dev)

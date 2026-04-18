@@ -54,4 +54,4 @@ Echte Datensicherheit beginnt in der Datenbank. Indem wir das "Need-to-know"-Pri
 -----
 
 **Ist Ihre Datenbank-Berechtigungsstruktur DSGVO-konform?**  
-Ich unterstütze Sie bei der Härtung Ihrer PostgreSQL-Instanzen und der Implementierung von Row-Level Security. [Kontaktieren Sie mich für ein Sicherheits-Audit Ihrer Datenbank.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Härtung Ihrer PostgreSQL-Instanzen und der Implementierung von Row-Level Security. [Kontaktieren Sie mich für ein Sicherheits-Audit Ihrer Datenbank.](mailto:kontakt@waldheim.dev)

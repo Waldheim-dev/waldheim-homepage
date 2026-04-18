@@ -48,4 +48,4 @@ Ein gut konfiguriertes Terminal ist mehr als nur Spielerei. Es reduziert kogniti
 -----
 
 **Möchten Sie Ihren IT-Workflow optimieren oder suchen Sie Unterstützung bei der Einrichtung einer modernen Entwicklungsumgebung für Ihr Team?**  
-Ich helfe Ihnen, die richtigen Tools auszuwählen und effiziente Workflows zu etablieren. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, die richtigen Tools auszuwählen und effiziente Workflows zu etablieren. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:kontakt@waldheim.dev)

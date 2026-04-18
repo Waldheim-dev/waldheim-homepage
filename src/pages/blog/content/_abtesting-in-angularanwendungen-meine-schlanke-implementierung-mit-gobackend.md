@@ -64,4 +64,4 @@ Durch die Eigenimplementierung mit Go und Angular behalten wir die volle Kontrol
 -----
 
 **Möchten Sie A/B-Testing in Ihre Angular-Anwendung integrieren, ohne auf teure Drittanbieter angewiesen zu sein?**  
-Ich helfe Ihnen bei der Konzeption und technischen Umsetzung einer maßgeschneiderten Test-Infrastruktur. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Konzeption und technischen Umsetzung einer maßgeschneiderten Test-Infrastruktur. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:kontakt@waldheim.dev)

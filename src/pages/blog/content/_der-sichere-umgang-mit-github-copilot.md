@@ -71,4 +71,4 @@ GitHub Copilot ist ein leistungsstarkes Werkzeug, das die Zukunft der Softwareen
 -----
 
 **Möchten Sie das volle Potenzial von KI-Tools wie GitHub Copilot sicher und DSGVO-konform in Ihrem Unternehmen entfalten?**  
-Ich helfe Ihnen, maßgeschneiderte DevSecOps-Richtlinien für KI-gestützte Entwicklung zu entwickeln und zu implementieren. Von der Schulung Ihrer Teams bis zur Integration von Sicherheits-Scans in Ihre CI/CD-Pipeline – lassen Sie uns Ihre Softwareentwicklung für die KI-Ära rüsten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, maßgeschneiderte DevSecOps-Richtlinien für KI-gestützte Entwicklung zu entwickeln und zu implementieren. Von der Schulung Ihrer Teams bis zur Integration von Sicherheits-Scans in Ihre CI/CD-Pipeline – lassen Sie uns Ihre Softwareentwicklung für die KI-Ära rüsten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:kontakt@waldheim.dev)

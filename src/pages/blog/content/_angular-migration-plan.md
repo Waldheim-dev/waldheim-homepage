@@ -23,4 +23,4 @@ Ein Upgrade der Angular-Version in einem großen Enterprise-Projekt kann einsch�
 -----
 
 **Planen Sie ein Upgrade Ihrer Angular-Anwendung und benötigen Unterstützung?**  
-Ich begleite Sie bei der Migration Ihrer Enterprise-Anwendungen auf die neuesten Standards. [Kontaktieren Sie mich für eine Migrations-Strategie.](mailto:admin@waldheim.dev)
+Ich begleite Sie bei der Migration Ihrer Enterprise-Anwendungen auf die neuesten Standards. [Kontaktieren Sie mich für eine Migrations-Strategie.](mailto:kontakt@waldheim.dev)

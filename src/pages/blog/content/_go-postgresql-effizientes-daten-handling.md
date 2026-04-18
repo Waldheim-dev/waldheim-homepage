@@ -23,4 +23,4 @@ In vielen Sprachen sind ORMs der Standard. In Go bevorzuge ich oft einen anderen
 -----
 
 **Optimieren Sie gerade Ihr Datenbank-Design in Go?**  
-Ich helfe Ihnen, performante und skalierbare Daten-Schichten für Ihre Go-Services zu entwickeln. [Kontaktieren Sie mich für ein Architektur-Review.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, performante und skalierbare Daten-Schichten für Ihre Go-Services zu entwickeln. [Kontaktieren Sie mich für ein Architektur-Review.](mailto:kontakt@waldheim.dev)

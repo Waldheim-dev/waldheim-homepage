@@ -48,4 +48,4 @@ API-Versioning ist kein rein technisches Problem, sondern eine Frage der Kommuni
 -----
 
 **Planen Sie eine neue API oder müssen Sie eine bestehende Schnittstelle ohne Ausfallzeiten migrieren?**  
-Ich unterstütze Sie beim Design von langlebigen APIs und der Implementierung von Migrations-Szenarien. [Kontaktieren Sie mich für ein API-Architektur-Review.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie beim Design von langlebigen APIs und der Implementierung von Migrations-Szenarien. [Kontaktieren Sie mich für ein API-Architektur-Review.](mailto:kontakt@waldheim.dev)

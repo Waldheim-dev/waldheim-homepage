@@ -248,4 +248,4 @@ Bleibt dran. Es wird wild. 🔥
 -----
 
 **Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:kontakt@waldheim.dev)

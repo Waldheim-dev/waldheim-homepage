@@ -48,4 +48,4 @@ Mit Terraform verschwindet das "Wissen in den Köpfen" der Administratoren in ve
 -----
 
 **Möchten Sie Ihre Infrastruktur-Prozesse automatisieren und auf Infrastructure as Code umstellen?**  
-Ich unterstütze Sie bei der Einführung von Terraform und der Konzeption von skalierbaren Cloud-Architekturen. [Lassen Sie uns Ihre Infrastruktur gemeinsam automatisieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Einführung von Terraform und der Konzeption von skalierbaren Cloud-Architekturen. [Lassen Sie uns Ihre Infrastruktur gemeinsam automatisieren.](mailto:kontakt@waldheim.dev)

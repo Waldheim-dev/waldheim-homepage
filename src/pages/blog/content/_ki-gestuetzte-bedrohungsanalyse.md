@@ -23,4 +23,4 @@ Was wäre, wenn Sie Angriffe nicht nur reaktiv blockieren, sondern proaktiv vorh
 -----
 
 **Möchten Sie die Sicherheit Ihrer Microservice-Architektur auf die nächste Stufe heben und Bedrohungen proaktiv erkennen?**  
-Ich helfe Ihnen bei der Konzeption und Implementierung von KI-gestützten Systemen zur Bedrohungsanalyse. Von der Datenaggregation aus Ihren Go-Services bis zum Training und Betrieb der Machine-Learning-Modelle – lassen Sie uns gemeinsam ein intelligentes Immunsystem für Ihre Infrastruktur aufbauen. [Kontaktieren Sie mich für eine strategische Erstberatung.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Konzeption und Implementierung von KI-gestützten Systemen zur Bedrohungsanalyse. Von der Datenaggregation aus Ihren Go-Services bis zum Training und Betrieb der Machine-Learning-Modelle – lassen Sie uns gemeinsam ein intelligentes Immunsystem für Ihre Infrastruktur aufbauen. [Kontaktieren Sie mich für eine strategische Erstberatung.](mailto:kontakt@waldheim.dev)

@@ -25,4 +25,4 @@ keywords: "VS Code, Sicherheit, DevSecOps, Entwicklungsumgebung, Code-Sicherheit
 -----
 
 **Möchten Sie sicherstellen, dass Ihre Entwicklerteams VS Code optimal und gleichzeitig sicher nutzen?**  
-Ich unterstütze Sie bei der Entwicklung und Implementierung maßgeschneiderter Härtungsstrategien für Ihre VS Code-Entwicklungsumgebungen. Von der Konfiguration über das Erweiterungs-Management bis zur Schulung Ihrer Teams – lassen Sie uns gemeinsam eine robuste und geschützte Entwicklungslandschaft aufbauen. [Kontaktieren Sie mich für eine unverbindliche Analyse Ihrer VS Code-Sicherheitslage.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Entwicklung und Implementierung maßgeschneiderter Härtungsstrategien für Ihre VS Code-Entwicklungsumgebungen. Von der Konfiguration über das Erweiterungs-Management bis zur Schulung Ihrer Teams – lassen Sie uns gemeinsam eine robuste und geschützte Entwicklungslandschaft aufbauen. [Kontaktieren Sie mich für eine unverbindliche Analyse Ihrer VS Code-Sicherheitslage.](mailto:kontakt@waldheim.dev)

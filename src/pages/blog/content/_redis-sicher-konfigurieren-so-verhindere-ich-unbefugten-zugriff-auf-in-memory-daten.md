@@ -47,4 +47,4 @@ Redis sicher zu konfigurieren ist kein Hexenwerk, erfordert aber Sorgfalt. Wer d
 -----
 
 **Haben Sie Bedenken bezüglich der Sicherheit Ihrer In-Memory-Infrastruktur oder planen Sie den Aufbau eines hochverfügbaren Redis-Clusters?**  
-Ich unterstütze Sie bei der Absicherung und Optimierung Ihrer Redis-Instanzen. [Kontaktieren Sie mich für ein Security-Review Ihrer Datenbanken.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Absicherung und Optimierung Ihrer Redis-Instanzen. [Kontaktieren Sie mich für ein Security-Review Ihrer Datenbanken.](mailto:kontakt@waldheim.dev)

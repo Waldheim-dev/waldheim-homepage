@@ -50,4 +50,4 @@ DSGVO-konforme Formulare in Angular zu bauen, ist keine lästige Pflicht, sonder
 -----
 
 **Sind Sie unsicher, ob Ihre Formulare den strengen Anforderungen der DSGVO genügen?**  
-Ich helfe Ihnen, Ihre Angular-Formulare zu analysieren und technisch so umzusetzen, dass sie nicht nur compliant, sondern auch benutzerfreundlich sind. Lassen Sie uns gemeinsam Vertrauen durch technische Exzellenz schaffen. [Kontaktieren Sie mich für ein Formular-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, Ihre Angular-Formulare zu analysieren und technisch so umzusetzen, dass sie nicht nur compliant, sondern auch benutzerfreundlich sind. Lassen Sie uns gemeinsam Vertrauen durch technische Exzellenz schaffen. [Kontaktieren Sie mich für ein Formular-Audit.](mailto:kontakt@waldheim.dev)

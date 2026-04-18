@@ -49,4 +49,4 @@ Nginx ist weit mehr als nur ein Webserver. Als Reverse Proxy ist er das Bindegli
 -----
 
 **Benötigen Sie Unterstützung bei der Konfiguration Ihrer Server oder möchten Sie Ihre Angular-Go-Architektur optimieren?**  
-Ich helfe Ihnen beim Aufbau einer sicheren und performanten Infrastruktur mit Nginx. [Kontaktieren Sie mich für ein Deployment-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen beim Aufbau einer sicheren und performanten Infrastruktur mit Nginx. [Kontaktieren Sie mich für ein Deployment-Audit.](mailto:kontakt@waldheim.dev)

@@ -66,4 +66,4 @@ Mit dem richtigen Setup aus WSL 2, Delve und der VS Code Remote-Integration vers
 -----
 
 **Haben Sie Probleme beim Setup Ihrer Entwicklungsumgebung unter WSL?**  
-Ich helfe Ihnen und Ihrem Team bei der Konfiguration von produktiven Workflows für die Go- und Angular-Entwicklung. [Kontaktieren Sie mich für ein Tooling-Coaching.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen und Ihrem Team bei der Konfiguration von produktiven Workflows für die Go- und Angular-Entwicklung. [Kontaktieren Sie mich für ein Tooling-Coaching.](mailto:kontakt@waldheim.dev)

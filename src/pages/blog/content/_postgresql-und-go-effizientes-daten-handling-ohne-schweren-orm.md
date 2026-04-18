@@ -44,4 +44,4 @@ Für kleine Prototypen mag ein ORM Zeit sparen. Doch sobald eine Anwendung skali
 -----
 
 **Optimieren Sie gerade Ihre Daten-Schicht in Go oder planen eine Migration auf PostgreSQL?**  
-Ich unterstütze Sie dabei, eine performante Architektur ohne unnötigen Overhead aufzubauen. [Kontaktieren Sie mich für ein Architektur-Review.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie dabei, eine performante Architektur ohne unnötigen Overhead aufzubauen. [Kontaktieren Sie mich für ein Architektur-Review.](mailto:kontakt@waldheim.dev)

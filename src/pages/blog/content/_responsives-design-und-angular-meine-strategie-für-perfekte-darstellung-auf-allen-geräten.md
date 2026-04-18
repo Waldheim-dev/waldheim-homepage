@@ -48,4 +48,4 @@ Perfektes responsives Design mit Angular ist die Kombination aus solidem CSS-Han
 -----
 
 **Planen Sie eine neue Webanwendung oder möchten Sie Ihr bestehendes Angular-Frontend für mobile Endgeräte optimieren?**  
-Ich unterstütze Sie bei der Umsetzung von modernen, hochperformaten und responsiven User Interfaces. [Lassen Sie uns über Ihr Frontend-Projekt sprechen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Umsetzung von modernen, hochperformaten und responsiven User Interfaces. [Lassen Sie uns über Ihr Frontend-Projekt sprechen.](mailto:kontakt@waldheim.dev)

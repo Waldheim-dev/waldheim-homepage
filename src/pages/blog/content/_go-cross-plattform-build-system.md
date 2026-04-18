@@ -42,4 +42,4 @@ Mit Go ist die Verteilung von Software auf verschiedene Plattformen kein Hindern
 -----
 
 **Benötigen Sie ein robustes Build-System für Ihre Go-Projekte oder planen Sie, Ihre Software auf mehrere Plattformen zu bringen?**  
-Ich unterstütze Sie bei der Einrichtung von CI/CD-Pipelines, die Ihre Software zuverlässig auf alle Plattformen bringen. [Kontaktieren Sie mich für eine DevOps-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Einrichtung von CI/CD-Pipelines, die Ihre Software zuverlässig auf alle Plattformen bringen. [Kontaktieren Sie mich für eine DevOps-Beratung.](mailto:kontakt@waldheim.dev)

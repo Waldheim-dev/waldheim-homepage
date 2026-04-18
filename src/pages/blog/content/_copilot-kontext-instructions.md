@@ -64,4 +64,4 @@ Im nächsten Teil starten wir auf der grünen Wiese und lassen uns von Copilot h
 -----
 
 **Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:kontakt@waldheim.dev)

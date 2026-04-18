@@ -43,4 +43,4 @@ Statische Code-Analyse ist kein Zeichen von Misstrauen gegenüber dem Entwickler
 -----
 
 **Möchten Sie die Code-Qualität und Sicherheit in Ihren Go-Projekten systematisch verbessern?**  
-Ich helfe Ihnen bei der Auswahl, Konfiguration und Integration der richtigen statischen Analyse-Tools in Ihre Entwicklungsworkflows und CI/CD-Pipelines. Lassen Sie uns gemeinsam eine Kultur der proaktiven Fehlervermeidung etablieren. [Kontaktieren Sie mich für ein Code-Quality-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Auswahl, Konfiguration und Integration der richtigen statischen Analyse-Tools in Ihre Entwicklungsworkflows und CI/CD-Pipelines. Lassen Sie uns gemeinsam eine Kultur der proaktiven Fehlervermeidung etablieren. [Kontaktieren Sie mich für ein Code-Quality-Audit.](mailto:kontakt@waldheim.dev)

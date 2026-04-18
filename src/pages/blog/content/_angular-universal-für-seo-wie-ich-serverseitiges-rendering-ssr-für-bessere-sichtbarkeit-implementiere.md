@@ -48,4 +48,4 @@ Angular Universal (SSR) ist das Werkzeug, um die Lücke zwischen moderner Web-En
 -----
 
 **Möchten Sie Ihre Angular-Anwendung für Suchmaschinen optimieren?**  
-Ich helfe Ihnen bei der Implementierung von Angular SSR und der Optimierung Ihrer SEO-Strategie. [Lassen Sie uns Ihre Sichtbarkeit gemeinsam erhöhen.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Implementierung von Angular SSR und der Optimierung Ihrer SEO-Strategie. [Lassen Sie uns Ihre Sichtbarkeit gemeinsam erhöhen.](mailto:kontakt@waldheim.dev)

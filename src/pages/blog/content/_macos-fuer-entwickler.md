@@ -49,4 +49,4 @@ Ein sicheres macOS ist kein Zufall, sondern das Ergebnis einer bewussten Konfigu
 -----
 
 **Fragen Sie sich, ob die macOS-Geräte in Ihrem Entwicklerteam den aktuellen Sicherheitsstandards entsprechen oder benötigen Sie Unterstützung bei der Rollout-Planung?**  
-Ich biete Audits und die Implementierung von Härtungsstrategien für macOS-Entwicklungsumgebungen an, die Sicherheit und Produktivität vereinen. [Kontaktieren Sie mich für eine umfassende Sicherheitsbewertung.](mailto:admin@waldheim.dev)
+Ich biete Audits und die Implementierung von Härtungsstrategien für macOS-Entwicklungsumgebungen an, die Sicherheit und Produktivität vereinen. [Kontaktieren Sie mich für eine umfassende Sicherheitsbewertung.](mailto:kontakt@waldheim.dev)

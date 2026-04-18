@@ -45,4 +45,4 @@ TDD mit Go ist mehr als eine Testing-Technik; es ist eine Design-Philosophie. Es
 -----
 
 **Wollen Sie die Qualität Ihres Go-Codes durch automatisierte Tests absichern oder TDD in Ihrem Team etablieren?**  
-Ich helfe Ihnen bei der Einführung von professionellen Test-Strategien und Workshops, die direkt an Ihrem Projekt ansetzen. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Einführung von professionellen Test-Strategien und Workshops, die direkt an Ihrem Projekt ansetzen. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:kontakt@waldheim.dev)

@@ -60,4 +60,4 @@ Event-driven Architekturen mit Go und Redis erlauben es uns, Systeme zu bauen, d
 -----
 
 **Möchten Sie Ihre Microservice-Architektur auf asynchrone Kommunikation umstellen?**  
-Ich unterstütze Sie beim Design und der Implementierung von Event-driven Systems und der Wahl des richtigen Message-Brokers. [Lassen Sie uns Ihre System-Architektur modernisieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie beim Design und der Implementierung von Event-driven Systems und der Wahl des richtigen Message-Brokers. [Lassen Sie uns Ihre System-Architektur modernisieren.](mailto:kontakt@waldheim.dev)

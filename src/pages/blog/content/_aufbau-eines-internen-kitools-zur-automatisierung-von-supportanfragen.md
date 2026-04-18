@@ -50,4 +50,4 @@ Der Aufbau eines internen KI-Support-Tools ist kein Hexenwerk mehr. Mit der Komb
 -----
 
 **Möchten auch Sie die Effizienz Ihres Support-Teams durch den Einsatz von KI steigern?**  
-Ich berate Sie bei der Auswahl der richtigen Modelle und entwickle für Sie maßgeschneiderte, sichere KI-Lösungen. [Lassen Sie uns gemeinsam Ihr Support-Tool planen.](mailto:admin@waldheim.dev)
+Ich berate Sie bei der Auswahl der richtigen Modelle und entwickle für Sie maßgeschneiderte, sichere KI-Lösungen. [Lassen Sie uns gemeinsam Ihr Support-Tool planen.](mailto:kontakt@waldheim.dev)

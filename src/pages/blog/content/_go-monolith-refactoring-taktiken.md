@@ -47,4 +47,4 @@ Die Modernisierung eines Go-Monolithen erfordert Geduld und eine klare Vision. D
 -----
 
 **Steckt Ihr Go-Projekt in einer Sackgasse aus technischer Schuld oder planen Sie die Modernisierung eines gewachsenen Systems?**  
-Ich helfe Ihnen, Ihre Codebasis zu analysieren und einen realistischen, risikoarmen Plan für das Refactoring zu erstellen. [Kontaktieren Sie mich für ein Architektur-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, Ihre Codebasis zu analysieren und einen realistischen, risikoarmen Plan für das Refactoring zu erstellen. [Kontaktieren Sie mich für ein Architektur-Audit.](mailto:kontakt@waldheim.dev)
