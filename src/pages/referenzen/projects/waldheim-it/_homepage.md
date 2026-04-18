@@ -5,11 +5,11 @@ description: "Entwicklung eines neuen Brandings (Logo, Farbwelt) und Erstellung 
 shortDescription: "Branding und statische Website-Entwicklung für Waldheim IT-Beratung."
 pubDate: "2022-03-01"
 category: "website"  #  Oder "design", wenn der Fokus *stärker* auf dem Branding liegen soll?
-heroImage: "referenzen/waldheim-it/homepage/homepage.png"
+heroImage: "/referenzen/waldheim-it/homepage/homepage.png"
 assets: [
-  "referenzen/waldheim-it/homepage/homepage.png",
-  "referenzen/waldheim-it/homepage/waldheim_vi_back.png",
-  "referenzen/waldheim-it/homepage/waldheim_vi_front.png"
+  "/referenzen/waldheim-it/homepage/homepage.png",
+  "/referenzen/waldheim-it/homepage/waldheim_vi_back.png",
+  "/referenzen/waldheim-it/homepage/waldheim_vi_front.png"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

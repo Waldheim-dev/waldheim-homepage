@@ -2,7 +2,7 @@
 title: "Neue Partnerschaft: SEWOBE AG – Vereinsverwaltung leicht gemacht! 🤝"
 description: "Als zertifizierter SEWOBE-Partner unterstütze ich Vereine, Verbände und Organisationen bei der Einführung und Nutzung der führenden Verwaltungssoftware. Optimieren Sie Ihre Mitgliederverwaltung, Finanzen und mehr!"
 pubDate: "2023-10-17"
-heroImage: "https://images.unsplash.com/photo-1518135714426-c18f5ffb6f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2696&q=80"
+heroImage: "/images/blog/partnernetz_vergroessert.webp"
 author: 'markus-waldheim'
 keywords: SEWOBE, SEWOBE AG, Vereinsverwaltung, Verbandsverwaltung, Mitgliederverwaltung, Software, Vereinssoftware, Verbandssoftware, Digitalisierung, Verein, Verband, Organisation, Partner, Dienstleistungen, Beratung, Support, Schulung, [weitere relevante Keywords]
 ---

@@ -9,28 +9,28 @@ year: 2024
 eventSeries: "vatertag"
 previousYear: "mv-obermeitingen/2023/vatertag"
 nextYear: "mv-obermeitingen/2025/vatertag"
-heroImage: "referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg",
-  "referenzen/mvo-obermeitingen/vatertag_2024_savedate.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2024_preisliste.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_bier.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_getraenk.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_gutschein.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kaesspatzen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kaffee.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kuchen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_pizza.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_pommes.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_salat.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_schweinebraten.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_wurst.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_braten.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_geschirr.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_getraenke.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_kaesspatzen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_pizza.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
-  "referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_wurst.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2024_plakat.jpg",
+  "/referenzen/mvo-obermeitingen/vatertag_2024_savedate.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2024_preisliste.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_bier.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_getraenk.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_gutschein.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kaesspatzen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kaffee.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_kuchen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_pizza.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_pommes.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_salat.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_schweinebraten.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_bon_wurst.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_braten.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_geschirr.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_getraenke.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_kaesspatzen.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_pizza.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2023_schild_wurst.jpg", # Achtung:  Hier sind noch 2023er-Dateinamen!
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

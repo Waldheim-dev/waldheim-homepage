@@ -2,7 +2,7 @@
 title: "🚀 Waldheim.dev Revolution: Aufbruch in eine neue Ära! 🚀"
 description: "Wir läuten eine neue Ära für Waldheim.dev ein! Mit der Vision für Version 26, die bis 2026 Gestalt annehmen wird, präsentieren wir euch einen komplett überarbeiteten Webauftritt. Lasst euch überraschen von einem einzigartigen Stil, der Aora-Farbverläufe, Waldfarben und liebevolle Animationen vereint – ein visuelles Erlebnis, das Freude bereitet!"
 pubDate: "2025-03-25"
-heroImage: "https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/neue_webseite_2026.webp"
 author: 'markus-waldheim'
 keywords: WaldheimDev, Webdesign, UI, UX, SEO, Barrierefreiheit, Innovation, NeuesDesign, Webentwicklung
 

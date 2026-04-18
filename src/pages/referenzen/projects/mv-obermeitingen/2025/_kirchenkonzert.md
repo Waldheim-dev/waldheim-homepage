@@ -8,9 +8,9 @@ category: "design"
 year: 2025
 eventSeries: "kirchenkonzert"
 previousYear: "mv-obermeitingen/2023/kirchenkonzert"
-heroImage: "referenzen/mvo-obermeitingen/kirchenkonzert_2025.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/kirchenkonzert_2025.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/kirchenkonzert_2025.jpg"
+  "/referenzen/mvo-obermeitingen/kirchenkonzert_2025.jpg"
 ]
 overview: [
   {

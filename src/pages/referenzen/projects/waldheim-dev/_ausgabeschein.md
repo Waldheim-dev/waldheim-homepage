@@ -5,11 +5,11 @@ description: "Entwicklung eines Open-Source-Tools zur automatisierten Erstellung
 shortDescription: "Open-Source-Tool zur Generierung von Ausgabescheinen aus Netbox-Daten."
 pubDate: "2020-07-25"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/netbox/home.png"
+heroImage: "/referenzen/waldheim-dev/netbox/home.png"
 assets: [
-  "referenzen/waldheim-dev/netbox/home.png",
-  "referenzen/waldheim-dev/netbox/settings.png",
-  "referenzen/waldheim-dev/netbox/languages.png"
+  "/referenzen/waldheim-dev/netbox/home.png",
+  "/referenzen/waldheim-dev/netbox/settings.png",
+  "/referenzen/waldheim-dev/netbox/languages.png"
 ]
 overview: [
   {

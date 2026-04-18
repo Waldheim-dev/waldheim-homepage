@@ -2,7 +2,7 @@
 title: "GitOps Adventures auf der Cloudland 2025! 🎢"
 description: "Spreche auf der Cloudland 2025 über GitOps mit FluxCD und GitLab in Kubernetes. Automatisierung & Optimierung für Deployments."
 pubDate: "2025-03-19"
-heroImage: "https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/cloudland_2025_announcement.webp"
 author: 'markus-waldheim'
 keywords: GitOps, Kubernetes, FluxCD, GitLab, Cloudland 2025, Automation, Deployment
 ---

@@ -5,12 +5,12 @@ description: "Entwicklung der waldheim.dev Website mit Angular, Server-Side Rend
 shortDescription: "Erstellung der waldheim.dev Website mit Angular und SSR."
 pubDate: "2022-06-01"
 category: "website"
-heroImage: "referenzen/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg"
+heroImage: "/referenzen/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg"
 assets: [
-  "referenzen/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg",
-  "referenzen/waldheim-dev/homepage/waldheim.dev-2023-light-shot.png",
-  "referenzen/waldheim-dev/homepage/waldheim.dev-2023-dark-shot.png",
-  "referenzen/waldheim-dev/homepage/homepage.png"
+  "/referenzen/waldheim-dev/homepage/waldheim.dev-2023-shot.jpg",
+  "/referenzen/waldheim-dev/homepage/waldheim.dev-2023-light-shot.png",
+  "/referenzen/waldheim-dev/homepage/waldheim.dev-2023-dark-shot.png",
+  "/referenzen/waldheim-dev/homepage/homepage.png"
 ]
 overview: [  # Bleibt, wie vom Schema vorgegeben
   {

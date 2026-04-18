@@ -9,15 +9,15 @@ year: 2025
 eventSeries: "in-konzert"
 previousYear: "mv-obermeitingen/2024/in_konzert"
 nextYear: "mv-obermeitingen/2026/in_konzert"
-heroImage: "referenzen/mvo-obermeitingen/in_konzert_2025.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/in_konzert_2025.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/in_konzert_2025.jpg",
-  "referenzen/mvo-obermeitingen/in_konzert_2025_jugend.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2025.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2025-26.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-programm-2025.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-programm-2025-2-3-4-5.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-programm-2025-6-7-8-1.jpg"
+  "/referenzen/mvo-obermeitingen/in_konzert_2025.jpg",
+  "/referenzen/mvo-obermeitingen/in_konzert_2025_jugend.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2025.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2025-26.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-programm-2025.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-programm-2025-2-3-4-5.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-programm-2025-6-7-8-1.jpg"
 ]
 overview: [
   {

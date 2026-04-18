@@ -9,10 +9,10 @@ year: 2024
 eventSeries: "serenade"
 previousYear: "mv-obermeitingen/2023/serenade"
 nextYear: "mv-obermeitingen/2025/serenade"
-heroImage: "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg",
-  "referenzen/mvo-obermeitingen/serenade_2024_savedate.jpg"
+  "/referenzen/mvo-obermeitingen/serenade_2024_plakat.jpg",
+  "/referenzen/mvo-obermeitingen/serenade_2024_savedate.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

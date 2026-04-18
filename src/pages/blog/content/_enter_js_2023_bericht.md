@@ -2,7 +2,7 @@
 title: "EnterJS 2023: Mein Rückblick auf die JavaScript-Konferenz in Darmstadt"
 description: "Mein Erfahrungsbericht von der EnterJS 2023: Frontend-Entwicklung, Svelte-Workshop und die neuesten JavaScript-Trends. 🚀"
 pubDate: "2023-06-24"
-heroImage: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+heroImage: "/images/blog/enter_js_2023_bericht.webp"
 author: 'markus-waldheim'
 keywords: EnterJS, 2023, Konferenz, Darmstadt, JavaScript, Frontend, Entwicklung, Workshop, Svelte, Vorträge, Trends, Rückblick, Erfahrungsbericht, React, Vue, Angular, WebAssembly, TypeScript, Node.js
 ---

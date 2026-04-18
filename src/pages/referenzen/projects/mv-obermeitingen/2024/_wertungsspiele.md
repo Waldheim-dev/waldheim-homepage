@@ -7,9 +7,9 @@ pubDate: "2023-07-27"  #  Achtung: Datum in der Vergangenheit!  Anpassen, falls 
 category: "design"
 year: 2024
 eventSeries: "wertungsspiele"
-heroImage: "referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
+  "/referenzen/mvo-obermeitingen/wertungsspiele_2024_savedate.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

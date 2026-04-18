@@ -8,9 +8,9 @@ category: "design"
 year: 2026
 eventSeries: "teenyparty"
 previousYear: "mv-obermeitingen/2025/teenyparty"
-heroImage: "referenzen/mvo-obermeitingen/teenieparty_2026.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/teenieparty_2026.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/teenieparty_2026.jpg"
+  "/referenzen/mvo-obermeitingen/teenieparty_2026.jpg"
 ]
 overview: [
   {

@@ -8,10 +8,10 @@ category: "design"
 year: 2026
 eventSeries: "fasching"
 previousYear: "mv-obermeitingen/2025/fasching"
-heroImage: "referenzen/mvo-obermeitingen/kinderfasching_2026.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/kinderfasching_2026.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/kinderfasching_2026.jpg",
-  "referenzen/mvo-obermeitingen/kinderfasching_2026_date.jpg"
+  "/referenzen/mvo-obermeitingen/kinderfasching_2026.jpg",
+  "/referenzen/mvo-obermeitingen/kinderfasching_2026_date.jpg"
 ]
 overview: [
   {

@@ -8,16 +8,16 @@ category: "design"
 year: 2025
 eventSeries: "vatertag"
 previousYear: "mv-obermeitingen/2024/vatertag"
-heroImage: "referenzen/mvo-obermeitingen/vatertagsfest_2025_plakat.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/vatertagsfest_2025_plakat.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_plakat.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_std.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_preisliste.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_aperolspritz.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_kasse.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_kuchen.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_nuggets.jpg",
-  "referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_pommes.jpg"
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_plakat.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_std.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_preisliste.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_aperolspritz.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_kasse.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_kuchen.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_nuggets.jpg",
+  "/referenzen/mvo-obermeitingen/vatertagsfest_2025_schilder_pommes.jpg"
 ]
 overview: [
   {
