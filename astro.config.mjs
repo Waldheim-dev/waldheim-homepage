@@ -13,6 +13,10 @@ import compress from 'astro-compress';
 
 import llmsTxt from '@waldheimdev/astro-ai-llms-txt';
 
+import partytown from '@astrojs/partytown';
+
+import robotsTxt from 'astro-robots-txt';
+
 import 'dotenv/config';
 
 // https://astro.build/config
@@ -64,6 +68,22 @@ export default defineConfig({
     }),
     compress(),
     compressor({ gzip: true }),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+    robotsTxt({
+      host: 'www.waldheim.dev',
+      sitemap: 'https://www.waldheim.dev/sitemap-index.xml',
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: ['/danke/', '/test-*', '/*?*utm_source=', '/*?*ref='],
+        },
+      ],
+    }),
   ],
   build: {
     inlineStylesheets: 'auto',
