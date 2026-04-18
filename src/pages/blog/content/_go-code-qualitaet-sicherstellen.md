@@ -42,4 +42,4 @@ Hohe Code-Qualität in Go-Projekten ist kein Zufallsprodukt, sondern das Ergebni
 -----
 
 **Möchten Sie die Code-Qualität in Ihren Go-Projekten auf das nächste Level heben oder benötigen Sie Unterstützung beim Aufbau einer modernen Tool-Chain?**  
-Ich helfe Ihnen bei der Einrichtung professioneller Workflows für Ihre Entwicklungsteams. [Kontaktieren Sie mich für ein Tooling-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Einrichtung professioneller Workflows für Ihre Entwicklungsteams. [Kontaktieren Sie mich für ein Tooling-Audit.](mailto:kontakt@waldheim.dev)

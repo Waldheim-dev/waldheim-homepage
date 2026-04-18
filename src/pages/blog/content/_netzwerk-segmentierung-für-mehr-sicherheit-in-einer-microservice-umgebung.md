@@ -48,4 +48,4 @@ Netzwerk-Segmentierung ist ein entscheidender Baustein für die Sicherheit moder
 -----
 
 **Ist Ihr internes Netzwerk ausreichend gegen laterale Angriffe geschützt?**  
-Ich helfe Ihnen bei der Planung und Implementierung von Zero-Trust-Netzwerkstrukturen und der Absicherung Ihrer Microservice-Kommunikation. [Kontaktieren Sie mich für ein Security-Review Ihres Netzwerks.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Planung und Implementierung von Zero-Trust-Netzwerkstrukturen und der Absicherung Ihrer Microservice-Kommunikation. [Kontaktieren Sie mich für ein Security-Review Ihres Netzwerks.](mailto:kontakt@waldheim.dev)

@@ -48,4 +48,4 @@ Eine gute macOS-Administration für Entwicklerteams balanciert zwischen den Sich
 -----
 
 **Wächst Ihr Entwicklerteam und Sie suchen nach einer professionellen macOS-Verwaltung?**  
-Ich unterstütze Sie bei der Auswahl und Einrichtung von MDM-Systemen und der Erstellung von standardisierten Onboarding-Prozessen. [Kontaktieren Sie mich für eine IT-Infrastruktur-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Auswahl und Einrichtung von MDM-Systemen und der Erstellung von standardisierten Onboarding-Prozessen. [Kontaktieren Sie mich für eine IT-Infrastruktur-Beratung.](mailto:kontakt@waldheim.dev)

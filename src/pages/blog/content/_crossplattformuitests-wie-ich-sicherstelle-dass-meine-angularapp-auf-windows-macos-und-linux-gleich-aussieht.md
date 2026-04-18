@@ -48,4 +48,4 @@ Automatisierte UI-Tests sind die einzige Möglichkeit, eine konsistente Benutzer
 -----
 
 **Möchten Sie die visuelle Qualität Ihrer Angular-Anwendung automatisiert absichern?**  
-Ich unterstütze Sie bei der Einrichtung von Visual Regression Testing und Cross-Browser-Infrastrukturen. [Lassen Sie uns Ihre UI-Stabilität erhöhen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Einrichtung von Visual Regression Testing und Cross-Browser-Infrastrukturen. [Lassen Sie uns Ihre UI-Stabilität erhöhen.](mailto:kontakt@waldheim.dev)

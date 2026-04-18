@@ -48,4 +48,4 @@ CGO ist ein wichtiges Werkzeug im Arsenal eines Go-Entwicklers, sollte aber mit 
 -----
 
 **Planen Sie die Einbindung von C-Bibliotheken in Ihr Go-Projekt?**  
-Ich berate Sie bei der Architektur und helfe Ihnen bei der sicheren Implementierung von CGO-Wrappern. [Lassen Sie uns über Ihre technischen Anforderungen sprechen.](mailto:admin@waldheim.dev)
+Ich berate Sie bei der Architektur und helfe Ihnen bei der sicheren Implementierung von CGO-Wrappern. [Lassen Sie uns über Ihre technischen Anforderungen sprechen.](mailto:kontakt@waldheim.dev)

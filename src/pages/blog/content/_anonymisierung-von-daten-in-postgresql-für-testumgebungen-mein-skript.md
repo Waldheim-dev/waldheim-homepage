@@ -61,4 +61,4 @@ Automatisierte Anonymisierung ist ein Eckpfeiler moderner DevSecOps-Praktiken. M
 -----
 
 **Haben Sie Fragen zur sicheren Handhabung von Testdaten in Ihrem Unternehmen?**  
-Ich helfe Ihnen bei der Implementierung von Anonymisierungs-Pipelines und der Absicherung Ihrer Testumgebungen. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Implementierung von Anonymisierungs-Pipelines und der Absicherung Ihrer Testumgebungen. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:kontakt@waldheim.dev)

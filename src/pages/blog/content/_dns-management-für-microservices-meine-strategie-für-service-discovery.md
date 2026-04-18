@@ -44,4 +44,4 @@ DNS-Management für Microservices ist weit mehr als das Eintragen von A-Records.
 -----
 
 **Haben Sie Kommunikationsprobleme in Ihrer verteilten Architektur?**  
-Ich helfe Ihnen bei der Planung und Implementierung von effizienten Service-Discovery-Lösungen für Ihre Go- und Cloud-Infrastruktur. [Lassen Sie uns Ihre Service-Kommunikation optimieren.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Planung und Implementierung von effizienten Service-Discovery-Lösungen für Ihre Go- und Cloud-Infrastruktur. [Lassen Sie uns Ihre Service-Kommunikation optimieren.](mailto:kontakt@waldheim.dev)

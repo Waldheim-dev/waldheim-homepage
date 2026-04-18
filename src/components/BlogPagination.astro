@@ -1,0 +1,31 @@
+---
+const { page } = Astro.props;
+---
+
+<nav class="flex items-center justify-between border-t border-meg-border-dark px-4 py-8 bg-meg-surface-dark/20 backdrop-blur-md rounded-3xl" aria-label="Blog Pagination">
+  <div class="hidden sm:block">
+    <p class="text-sm text-meg-text-secondary">
+      Zeige <span class="font-bold text-meg-text-primary-dark">{page.start + 1}</span> bis <span class="font-bold text-meg-text-primary-dark">{page.end + 1}</span> von <span class="font-bold text-meg-text-primary-dark">{page.total}</span> Artikeln
+    </p>
+  </div>
+  <div class="flex flex-1 justify-between sm:justify-end gap-4">
+    {page.url.prev ? (
+      <a href={page.url.prev} class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark border border-meg-border-dark rounded-xl font-bold text-sm hover:border-meg-accent/50 transition-all group">
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Neuere Beiträge
+      </a>
+    ) : (
+      <span class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark/10 border border-meg-border-dark/30 text-meg-text-secondary/50 rounded-xl font-bold text-sm cursor-not-allowed">
+        <i class="fa-solid fa-arrow-left"></i> Neuere Beiträge
+      </span>
+    )}
+    {page.url.next ? (
+      <a href={page.url.next} class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark border border-meg-border-dark rounded-xl font-bold text-sm hover:border-meg-accent/50 transition-all group">
+        Ältere Beiträge <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    ) : (
+      <span class="inline-flex items-center gap-2 px-6 py-3 bg-meg-surface-dark/10 border border-meg-border-dark/30 text-meg-text-secondary/50 rounded-xl font-bold text-sm cursor-not-allowed">
+        Ältere Beiträge <i class="fa-solid fa-arrow-right"></i>
+      </span>
+    )}
+  </div>
+</nav>

@@ -47,4 +47,4 @@ DevSecOps im Monolithen bedeutet nicht, alles wegzuwerfen und neu zu bauen. Es g
 -----
 
 **Stehen Sie vor der Herausforderung, Ihre geschäftskritische monolithische Anwendung abzusichern?**  
-Ich helfe Ihnen, eine pragmatische und effektive DevSecOps-Strategie für Ihre Legacy-Systeme zu entwickeln. Lassen Sie uns gemeinsam einen Fahrplan erstellen, um Sicherheit schrittweise zu integrieren und Ihre Anwendung für die Zukunft zu härten. [Kontaktieren Sie mich für eine unverbindliche Analyse.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, eine pragmatische und effektive DevSecOps-Strategie für Ihre Legacy-Systeme zu entwickeln. Lassen Sie uns gemeinsam einen Fahrplan erstellen, um Sicherheit schrittweise zu integrieren und Ihre Anwendung für die Zukunft zu härten. [Kontaktieren Sie mich für eine unverbindliche Analyse.](mailto:kontakt@waldheim.dev)

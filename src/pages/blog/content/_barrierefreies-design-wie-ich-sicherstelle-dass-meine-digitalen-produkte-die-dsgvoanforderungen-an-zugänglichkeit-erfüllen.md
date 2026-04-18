@@ -51,4 +51,4 @@ Ein barrierefreies Produkt ist ein besseres Produkt für alle. Größere Klickfl
 -----
 
 **Möchten Sie Ihre Website oder Anwendung barrierefrei gestalten und rechtlich absichern?**  
-Ich biete Accessibility-Audits an und unterstütze Sie bei der Umsetzung WCAG-konformer Frontends. [Kontaktieren Sie mich für eine unverbindliche Analyse.](mailto:admin@waldheim.dev)
+Ich biete Accessibility-Audits an und unterstütze Sie bei der Umsetzung WCAG-konformer Frontends. [Kontaktieren Sie mich für eine unverbindliche Analyse.](mailto:kontakt@waldheim.dev)

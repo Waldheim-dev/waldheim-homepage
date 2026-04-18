@@ -48,4 +48,4 @@ Durch den Einsatz von Go verwandeln wir simple Admin-Skripte in robuste Software
 -----
 
 **Möchten Sie Ihre IT-Prozesse durch maßgeschneiderte Go-Werkzeuge automatisieren?**  
-Ich unterstütze Sie bei der Entwicklung von performanten und wartbaren CLI-Tools für Ihre spezifischen Administrations-Aufgaben. [Lassen Sie uns Ihre Workflows beschleunigen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Entwicklung von performanten und wartbaren CLI-Tools für Ihre spezifischen Administrations-Aufgaben. [Lassen Sie uns Ihre Workflows beschleunigen.](mailto:kontakt@waldheim.dev)

@@ -49,4 +49,4 @@ Cyber-Resilienz macht ein Unternehmen nicht unverwundbar, aber sie macht es übe
 -----
 
 **Ist Ihr Unternehmen bereit für den Ernstfall?**  
-Ich unterstütze KMU bei der Entwicklung und Prüfung von Cyber-Resilienz-Strategien und Notfallplänen. [Lassen Sie uns gemeinsam Ihre Widerstandsfähigkeit stärken.](mailto:admin@waldheim.dev)
+Ich unterstütze KMU bei der Entwicklung und Prüfung von Cyber-Resilienz-Strategien und Notfallplänen. [Lassen Sie uns gemeinsam Ihre Widerstandsfähigkeit stärken.](mailto:kontakt@waldheim.dev)

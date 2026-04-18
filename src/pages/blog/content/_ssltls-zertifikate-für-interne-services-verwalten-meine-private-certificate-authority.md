@@ -46,4 +46,4 @@ Eine eigene CA aufzusetzen erfordert initialen Aufwand und ein tiefes Verständn
 -----
 
 **Möchten Sie die Kommunikation in Ihrer Microservice-Architektur absichern oder planen Sie den Aufbau einer internen Zertifikats-Infrastruktur?**  
-Ich unterstütze Sie bei der Konzeption und technischen Umsetzung Ihrer privaten Certificate Authority. [Lassen Sie uns Ihre interne Sicherheit auf das nächste Level heben.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und technischen Umsetzung Ihrer privaten Certificate Authority. [Lassen Sie uns Ihre interne Sicherheit auf das nächste Level heben.](mailto:kontakt@waldheim.dev)

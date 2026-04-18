@@ -48,4 +48,4 @@ State Management sollte ein Problem lösen, nicht neue erschaffen. Bevor Sie zu 
 -----
 
 **Stehen Sie vor der Entscheidung für ein State-Management-Muster in Ihrem Angular-Projekt oder kämpfen Sie mit einer überkomplexen Codebasis?**  
-Ich unterstütze Sie bei der Auswahl der richtigen Architektur für Ihre Anforderungen – pragmatisch, effizient und zukunftssicher. [Lassen Sie uns über Ihre Angular-Architektur sprechen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Auswahl der richtigen Architektur für Ihre Anforderungen – pragmatisch, effizient und zukunftssicher. [Lassen Sie uns über Ihre Angular-Architektur sprechen.](mailto:kontakt@waldheim.dev)

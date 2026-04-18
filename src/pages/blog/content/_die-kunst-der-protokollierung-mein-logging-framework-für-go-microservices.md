@@ -50,4 +50,4 @@ Ein durchdachtes Logging-Framework ist kein "Nice-to-have", sondern eine überle
 -----
 
 **Haben Sie Schwierigkeiten bei der Fehlersuche in Ihrer Microservice-Landschaft?**  
-Ich helfe Ihnen bei der Konzeption und Implementierung einer modernen Observability-Strategie mit Go und OpenTelemetry. [Kontaktieren Sie mich für ein Monitoring-Audit.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Konzeption und Implementierung einer modernen Observability-Strategie mit Go und OpenTelemetry. [Kontaktieren Sie mich für ein Monitoring-Audit.](mailto:kontakt@waldheim.dev)

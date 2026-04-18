@@ -48,4 +48,4 @@ Es gibt kein "bestes" KI-Tool für jeden. Während Supermaven durch Speed glänz
 -----
 
 **Suchen Sie nach dem richtigen KI-Setup für Ihr Entwicklerteam?**  
-Ich berate Unternehmen bei der Auswahl und Einführung von KI-Werkzeugen unter Berücksichtigung von Effizienz, Kosten und Datenschutz. [Lassen Sie uns Ihre Softwareentwicklung für die KI-Ära rüsten.](mailto:admin@waldheim.dev)
+Ich berate Unternehmen bei der Auswahl und Einführung von KI-Werkzeugen unter Berücksichtigung von Effizienz, Kosten und Datenschutz. [Lassen Sie uns Ihre Softwareentwicklung für die KI-Ära rüsten.](mailto:kontakt@waldheim.dev)

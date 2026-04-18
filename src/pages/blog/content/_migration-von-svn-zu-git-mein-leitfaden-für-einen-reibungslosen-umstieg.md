@@ -19,7 +19,7 @@ SVN nutzt einfache Benutzernamen, während Git auf E-Mail-Adressen setzt. Ohne e
 
 *   **Mapping-File:** Ich erstelle eine `authors.txt`, die jeden SVN-Namen einer Git-Identität zuordnet:
     ```text
-    m.waldheim = Markus Waldheim <admin@waldheim.dev>
+    m.waldheim = Markus Waldheim <kontakt@waldheim.dev>
     ```
 *   **Vorteil:** Die komplette Commit-Historie bleibt erhalten und lässt sich in Git korrekt zuordnen.
 
@@ -51,4 +51,4 @@ Die Migration von SVN zu Git ist oft der erste Schritt einer umfassenden digital
 -----
 
 **Hängt Ihr Projekt noch in SVN fest?**  
-Ich unterstütze Sie bei der technischen Migration Ihrer Repositories und schule Ihr Team im sicheren Umgang mit Git. [Lassen Sie uns gemeinsam modernisieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der technischen Migration Ihrer Repositories und schule Ihr Team im sicheren Umgang mit Git. [Lassen Sie uns gemeinsam modernisieren.](mailto:kontakt@waldheim.dev)

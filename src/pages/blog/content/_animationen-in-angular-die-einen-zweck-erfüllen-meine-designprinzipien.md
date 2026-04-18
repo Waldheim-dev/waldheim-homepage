@@ -49,4 +49,4 @@ Gute Animationen sind unsichtbar – sie fühlen sich natürlich an und unterst�
 -----
 
 **Wollen Sie die User Experience Ihrer Anwendung durch gezielte Animationen verbessern?**  
-Ich unterstütze Sie bei der Konzeption und technischen Umsetzung eines funktionalen Animations-Konzepts. [Kontaktieren Sie mich für ein UX-Design-Review.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und technischen Umsetzung eines funktionalen Animations-Konzepts. [Kontaktieren Sie mich für ein UX-Design-Review.](mailto:kontakt@waldheim.dev)

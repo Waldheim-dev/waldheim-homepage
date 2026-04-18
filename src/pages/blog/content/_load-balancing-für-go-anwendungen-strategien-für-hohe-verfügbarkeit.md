@@ -49,4 +49,4 @@ Load Balancing ist kein nachträgliches Add-on, sondern muss bei der Architektur
 -----
 
 **Ist Ihre Go-Infrastruktur bereit für hohes Besucheraufkommen?**  
-Ich unterstütze Sie bei der Planung von Hochverfügbarkeits-Szenarien und der Implementierung von Load-Balancing-Lösungen. [Lassen Sie uns Ihre System-Resilienz erhöhen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Planung von Hochverfügbarkeits-Szenarien und der Implementierung von Load-Balancing-Lösungen. [Lassen Sie uns Ihre System-Resilienz erhöhen.](mailto:kontakt@waldheim.dev)

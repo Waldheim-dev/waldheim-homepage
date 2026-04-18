@@ -48,4 +48,4 @@ Eine DevSecOps-Pipeline ersetzt keine menschliche Aufmerksamkeit und keine Siche
 -----
 
 **Möchten Sie Ihre Software-Infrastruktur gegen moderne Bedrohungen absichern oder eine DevSecOps-Strategie in Ihrem Team etablieren?**  
-Ich unterstütze Sie bei der Konzeption und Implementierung von sicheren Entwicklungs-Workflows. [Lassen Sie uns gemeinsam Ihre Security-Pipeline aufbauen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und Implementierung von sicheren Entwicklungs-Workflows. [Lassen Sie uns gemeinsam Ihre Security-Pipeline aufbauen.](mailto:kontakt@waldheim.dev)

@@ -49,4 +49,4 @@ Eine lebendige IT-Dokumentation ist die Lebensversicherung Ihres Projekts. Durch
 -----
 
 **Ist Ihre IT-Dokumentation lückenhaft oder veraltet?**  
-Ich helfe Ihnen bei der Einführung von "Documentation as Code" Workflows und der Strukturierung Ihres Confluence-Bereichs. [Lassen Sie uns Ihr Wissen nachhaltig sichern.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Einführung von "Documentation as Code" Workflows und der Strukturierung Ihres Confluence-Bereichs. [Lassen Sie uns Ihr Wissen nachhaltig sichern.](mailto:kontakt@waldheim.dev)

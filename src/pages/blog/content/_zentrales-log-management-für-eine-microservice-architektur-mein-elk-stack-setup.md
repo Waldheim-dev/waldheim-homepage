@@ -47,4 +47,4 @@ Ein zentrales Log-Management mit dem ELK-Stack ist die Lebensversicherung für j
 -----
 
 **Haben Sie den Überblick über Ihre Microservices verloren oder kämpfen Sie mit unstrukturierten Logs?**  
-Ich unterstütze Sie bei der Konzeption und Implementierung eines maßgeschneiderten Log-Management-Systems, das Transparenz in Ihre Infrastruktur bringt. [Kontaktieren Sie mich für ein Observability-Audit.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und Implementierung eines maßgeschneiderten Log-Management-Systems, das Transparenz in Ihre Infrastruktur bringt. [Kontaktieren Sie mich für ein Observability-Audit.](mailto:kontakt@waldheim.dev)

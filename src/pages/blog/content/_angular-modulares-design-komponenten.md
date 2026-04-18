@@ -23,4 +23,4 @@ In großen Organisationen ist Konsistenz und Wiederverwendbarkeit der Schlüssel
 -----
 
 **Möchten Sie Ihre Frontend-Entwicklung durch eine eigene Komponenten-Bibliothek beschleunigen?**  
-Ich unterstütze Sie bei der Konzeption und Umsetzung Ihrer modularen Frontend-Architektur. [Kontaktieren Sie mich für ein Design-System-Audit.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und Umsetzung Ihrer modularen Frontend-Architektur. [Kontaktieren Sie mich für ein Design-System-Audit.](mailto:kontakt@waldheim.dev)

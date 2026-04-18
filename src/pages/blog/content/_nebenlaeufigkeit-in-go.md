@@ -50,4 +50,4 @@ Go's Concurrency-Modell ist eines der stärksten Argumente für die Sprache im E
 -----
 
 **Ist Ihre Go-Anwendung langsamer als sie sein sollte, weil sie auf blockierende Operationen wartet?**  
-Ich helfe Ihnen, Performance-Engpässe in Ihrem Code zu identifizieren und durch den gezielten Einsatz von Go's Nebenläufigkeits-Features zu beheben. [Kontaktieren Sie mich für ein Performance-Refactoring.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen, Performance-Engpässe in Ihrem Code zu identifizieren und durch den gezielten Einsatz von Go's Nebenläufigkeits-Features zu beheben. [Kontaktieren Sie mich für ein Performance-Refactoring.](mailto:kontakt@waldheim.dev)

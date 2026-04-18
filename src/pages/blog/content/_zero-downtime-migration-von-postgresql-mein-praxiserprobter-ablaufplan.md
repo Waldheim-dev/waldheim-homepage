@@ -49,4 +49,4 @@ Eine Zero-Downtime-Migration erfordert mehr Vorbereitung und Tests als ein einfa
 -----
 
 **Planen Sie eine kritische Datenbank-Migration oder möchten Sie Ihre PostgreSQL-Infrastruktur auf Hochverfügbarkeit trimmen?**  
-Ich unterstütze Sie bei der Planung, Durchführung und Absicherung Ihrer Datenbank-Projekte. [Lassen Sie uns Ihre Daten sicher umziehen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Planung, Durchführung und Absicherung Ihrer Datenbank-Projekte. [Lassen Sie uns Ihre Daten sicher umziehen.](mailto:kontakt@waldheim.dev)
