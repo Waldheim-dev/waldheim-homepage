@@ -49,8 +49,3 @@ DSGVO-konforme Authentifizierung ist kein Hindernis, sondern eine Vertrauensbasi
 
 **Ist Ihr Login-System auf dem neuesten Stand der Technik?**  
 Ich unterstütze Sie bei der Härtung Ihrer Authentifizierungs-Prozesse und der Implementierung sicherer Token-Workflows in Angular und Go. [Kontaktieren Sie mich für ein Security-Review.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

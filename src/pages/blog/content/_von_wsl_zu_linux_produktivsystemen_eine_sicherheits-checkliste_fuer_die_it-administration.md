@@ -124,3 +124,8 @@ Der Wechsel von WSL zu einem produktiven Linux-System ist ein großer Schritt, d
 
 **Stehen Sie vor der Herausforderung, Ihre Entwicklungs-Setups in sichere Produktivumgebungen zu überführen?**
 Ich unterstütze Sie als erfahrener IT-Administrator und DevSecOps-Experte bei der Konzeption, Installation und Absicherung Ihrer Linux-Produktivsysteme. Von der Erstellung maßgeschneiderter Sicherheitsrichtlinien bis zur Implementierung automatisierter Härtungsprozesse – lassen Sie uns gemeinsam Ihre Infrastruktur robust machen. [Kontaktieren Sie mich für eine unverbindliche Analyse und ein maßgeschneidertes Angebot.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

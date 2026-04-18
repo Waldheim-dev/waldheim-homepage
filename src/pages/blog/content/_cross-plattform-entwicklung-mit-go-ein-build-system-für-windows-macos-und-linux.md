@@ -59,8 +59,3 @@ Dank Go ist die Bereitstellung von Software für unterschiedliche Betriebssystem
 
 **Benötigen Sie ein robustes Build-System für Ihre Go-Projekte?**  
 Ich unterstütze Sie bei der Einrichtung von CI/CD-Pipelines, die Ihre Software zuverlässig auf alle Plattformen bringen. [Kontaktieren Sie mich für eine DevOps-Beratung.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

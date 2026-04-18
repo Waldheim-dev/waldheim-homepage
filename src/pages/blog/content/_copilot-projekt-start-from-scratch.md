@@ -74,3 +74,8 @@ Abschluss & Ausblick:
 Copilot nimmt dir die repetitiven und oft lästigen Setup-Aufgaben ab. Du kannst dich schneller auf das konzentrieren, was dein Projekt einzigartig macht: die Fachlogik.
 
 Aber was, wenn das Projekt nicht neu ist, sondern riesig und alt? Das klären wir im nächsten Beitrag: "Den Monolithen zähmen 🏛️: Wie bringst du Copilot die Regeln deines riesigen Projekts bei?"
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

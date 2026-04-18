@@ -9,7 +9,11 @@ keywords: Scrum, Scrum Master, Product Owner, PSM, PSM II, PSPO, agil, agile Met
 
 # Neu: Scrum Master & Product Owner Services – für agilere Projekte! 🚀
 
-Ich freue mich, Ihnen mitteilen zu können, dass ich mein Dienstleistungsportfolio erweitert habe! Durch intensive Weiterbildungen und Zertifizierungen bin ich jetzt zertifizierter **Professional Scrum Master II (PSM II)** und **Professional Scrum Product Owner I (PSPO I)**.
+Ich freue mich, Ihnen mitteilen zu können, dass ich mein Dienstleistungsportfolio erweitert habe! Durch intensive Weiterbildungen und Zertifizierungen bin ich jetzt zertifizierter
+
+-----
+
+**Professional Scrum Master II (PSM II)** und **Professional Scrum Product Owner I (PSPO I)**.
 
 ## Was bedeutet das für Sie? Mehr Agilität, Effizienz und Erfolg!
 
@@ -40,3 +44,8 @@ Als zertifizierter Scrum Master und Product Owner verfüge ich über das **fundi
 Möchten Sie Ihre Entwicklungsprozesse agiler gestalten, die Zusammenarbeit Ihrer Teams verbessern und Ihre Produkte schneller auf den Markt bringen? Dann freue ich mich darauf, von Ihnen zu hören!
 
 [Kontaktieren Sie mich für ein unverbindliches Gespräch!](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

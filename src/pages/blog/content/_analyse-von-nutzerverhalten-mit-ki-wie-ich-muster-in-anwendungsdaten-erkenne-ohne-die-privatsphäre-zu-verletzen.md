@@ -42,8 +42,3 @@ Nutzeranalyse und Datenschutz sind kein Widerspruch. Durch intelligente Vorverar
 
 **Planen Sie eine KI-gestützte Analyse Ihrer Nutzerdaten und haben Bedenken hinsichtlich des Datenschutzes?**  
 Ich unterstütze Sie dabei, wertvolle Insights zu gewinnen und gleichzeitig die strikten Anforderungen der DSGVO zu erfüllen. [Lassen Sie uns über Ihre Datenstrategie sprechen.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

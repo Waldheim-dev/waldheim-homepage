@@ -27,3 +27,8 @@ Whats-Next:  Exklusive Preview auf kommende Features! 🤩
 Ecodrive 1.1 ist derzeit in Entwicklung! 🔧  Das Releasedatum geben wir bald bekannt.
 
 #ecodrive #sparsamfahren #spritkosten #effizienz #kostenloseapp #neuesupdate #basicabo #vorschau
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

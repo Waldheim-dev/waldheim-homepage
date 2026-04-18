@@ -148,3 +148,7 @@ Wir sehen uns im Mai. Im Heidepark Soltau. Mit Kubernetes, Go, FluxCD – und eu
 **PPS:** Wenn ihr schon mal üben wollt: Spielt eine Runde "Schiffe versenken". Aber diesmal mit der Frage: "Was, wenn die Schiffe sich selbst reparieren könnten?" 😉
 
 *Hashtags:* #CloudLand2026 #Accepted #SpeakerAnnouncement #ChallengeAccepted #Kubernetes #K8s #DevOps #GitOps #FluxCD #ChaosEngineering #LiveDemo #Interactive #InterFaceAG
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

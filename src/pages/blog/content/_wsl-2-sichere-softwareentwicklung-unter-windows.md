@@ -71,3 +71,8 @@ WSL 2 ist eine revolutionäre Technologie für die plattformübergreifende Entwi
 
 **Möchten Sie WSL 2 sicher und effizient in Ihrem Unternehmen ausrollen und verwalten?**
 Ich unterstütze Sie bei der Erstellung von Konfigurationsrichtlinien und Best Practices für den sicheren Einsatz von WSL 2 in Entwicklungsteams. Lassen Sie uns gemeinsam eine produktive und gehärtete Entwicklungsumgebung schaffen. [Kontaktieren Sie mich für eine Beratung zu sicheren Entwickler-Workflows.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

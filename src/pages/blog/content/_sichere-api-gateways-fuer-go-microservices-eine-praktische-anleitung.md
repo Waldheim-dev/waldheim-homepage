@@ -78,3 +78,7 @@ Ein API-Gateway ist ein unverzichtbarer Baustein für den Aufbau einer sicheren 
 
 **Stehen Sie vor der Herausforderung, Ihre wachsende Microservice-Landschaft sicher und effizient nach außen verfügbar zu machen?**
 Ich unterstütze Sie bei der Konzeption, Auswahl und Konfiguration des richtigen API-Gateways für Ihre Go-basierten Microservices. Lassen Sie uns gemeinsam eine sichere und skalierbare Architektur für Ihre APIs entwerfen. [Kontaktieren Sie mich für ein Architektur-Review.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

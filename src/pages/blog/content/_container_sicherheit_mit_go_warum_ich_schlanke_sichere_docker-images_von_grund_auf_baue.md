@@ -128,3 +128,8 @@ Container-Sicherheit ist ein Eckpfeiler moderner Cloud-Native-Architekturen und 
 
 **Suchen Sie nach Expertise, um Ihre Container-Infrastruktur sicherer zu gestalten und Ihre DevSecOps-Praktiken zu optimieren?**
 Ich unterstütze Sie bei der Entwicklung und Absicherung Ihrer Go-basierten Microservices in Container-Umgebungen. Von der Image-Härtung über die CI/CD-Integration von Security-Scans bis zur Runtime-Protection – lassen Sie uns gemeinsam Ihre Cloud-Native-Anwendungen widerstandsfähig machen. [Kontaktieren Sie mich für eine unverbindliche Beratung und einen maßgeschneiderten Plan.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -52,8 +52,3 @@ Ein sauber konfiguriertes Linux-System ist die ideale Basis für moderne Web-Ent
 
 **Haben Sie Probleme beim Setup Ihrer Entwicklungsumgebung oder suchen nach Optimierungsmöglichkeiten?**  
 Ich unterstütze Sie und Ihr Team bei der Einrichtung von standardisierten und effizienten Entwicklungs-Umgebungen unter Linux, Windows (WSL) und macOS. [Lassen Sie uns Ihre Produktivität steigern.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

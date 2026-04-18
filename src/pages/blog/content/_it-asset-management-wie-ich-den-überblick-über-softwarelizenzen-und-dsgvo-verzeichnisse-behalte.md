@@ -49,8 +49,3 @@ IT-Asset-Management ist keine bloße Inventur, sondern ein strategisches Werkzeu
 
 **Haben Sie den Überblick über Ihre Software-Lizenzen und IT-Hardware verloren?**  
 Ich unterstütze Sie bei der Einführung von professionellen ITAM-Lösungen und der Verknüpfung mit Ihren DSGVO-Pflichten. [Kontaktieren Sie mich für eine Bestandsaufnahme Ihrer IT-Infrastruktur.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

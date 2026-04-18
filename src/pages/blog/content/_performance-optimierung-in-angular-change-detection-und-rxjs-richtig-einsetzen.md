@@ -1,11 +1,11 @@
 ---
-title: "Performance-Optimierung in Angular: Change Detection und RxJS richtig einsetzen."
+title: "Performance-Optimierung in Angular: Change Detection und RxJS richtig einsetzen"
 description: "Ich tauche tief in die Interna von Angular ein und zeige, wie ich Change Detection und RxJS-Operatoren gezielt einsetze, um auch komplexe UIs flüssig zu halten."
 pubDate: "2025-12-06"
 heroImage: "/images/blog/performance-optimierung-in-angular-change-detection-und-rxjs-richtig-einsetzen.webp"
-imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Performance-Optimierung in Angular: Change Detection und RxJS richtig einsetzen.'. Theme: Ich tauche tief in die Interna von Angular ein und zeige, wie ich Change Detection und RxJS-Operatoren gezielt einsetze, um auch komplexe UIs flüssig zu halten.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Performance-Optimierung in Angular: Change Detection und RxJS richtig einsetzen'. Theme: Ich tauche tief in die Interna von Angular ein und zeige, wie ich Change Detection und RxJS-Operatoren gezielt einsetze, um auch komplexe UIs flüssig zu halten.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
 author: "markus-waldheim"
-keywords: "Performance-Optimierung, in, Angular:, Change, Detection, und, RxJS, richtig, einsetzen."
+keywords: "Angular, Performance, Change Detection, RxJS, Signals, Frontend, Optimierung"
 linkedinPost: "🚀 Neuer Blogbeitrag online: Performance-Optimierung in Angular: Change Detection und RxJS richtig einsetzen."
 ---
 
@@ -50,8 +50,3 @@ Eine schnelle Angular-Anwendung ist kein Zufall, sondern das Ergebnis bewusster 
 
 **Ist Ihre Angular-Anwendung zu langsam oder fühlt sie sich "zäh" an?**  
 Ich führe Performance-Audits durch und helfe Ihnen, Engpässe in Ihrem Frontend zu beseitigen. [Kontaktieren Sie mich für eine Analyse.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

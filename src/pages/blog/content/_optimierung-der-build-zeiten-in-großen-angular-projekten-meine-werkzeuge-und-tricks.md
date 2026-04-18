@@ -49,9 +49,3 @@ Die Optimierung von Build-Zeiten ist kein reiner Selbstzweck. Sie erhöht die Pr
 
 **Dauert Ihr Angular-Build zu lange?**  
 Ich führe Performance-Audits Ihrer Build-Infrastruktur durch und implementiere Caching-Lösungen, die Ihre Pipeline beschleunigen. [Kontaktieren Sie mich für ein DevOps-Consulting.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

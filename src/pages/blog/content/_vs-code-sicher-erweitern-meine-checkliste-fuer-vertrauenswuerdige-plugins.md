@@ -69,3 +69,8 @@ Die Erweiterbarkeit von VS Code ist ein Segen für die Produktivität, aber sie 
 
 **Sind Sie unsicher, ob die in Ihrem Unternehmen verwendeten VS Code-Erweiterungen sicher sind?**
 Ich helfe Ihnen, eine Strategie und einen Prozess für das sichere Management von IDE-Erweiterungen zu etablieren. Von der Erstellung einer Whitelist bis zur Schulung Ihrer Entwickler – lassen Sie uns gemeinsam Ihre Entwicklungsumgebung härten. [Kontaktieren Sie mich für eine Überprüfung Ihrer IDE-Sicherheitsstrategie.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

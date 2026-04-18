@@ -56,8 +56,3 @@ Durch den Einsatz von CI-Praktiken in der IT-Administration minimieren wir das R
 
 **Möchten Sie Ihre IT-Infrastruktur sicherer und automatisierter verwalten?**  
 Ich helfe Ihnen beim Aufbau von IaC-Pipelines und der Implementierung von automatisierten Infrastruktur-Tests. [Kontaktieren Sie mich für ein Strategie-Gespräch.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

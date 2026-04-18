@@ -3,6 +3,11 @@
 @import "tailwindcss";
 @config '../../tailwind.config.cjs';
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

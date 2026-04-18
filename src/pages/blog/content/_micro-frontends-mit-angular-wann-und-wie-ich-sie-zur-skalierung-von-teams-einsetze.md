@@ -52,8 +52,3 @@ Micro-Frontends sind ein mächtiges Werkzeug zur Skalierung von Enterprise-Anwen
 
 **Steht Ihr Frontend-Team vor Skalierungsproblemen?**  
 Ich unterstütze Sie bei der Entscheidung zwischen Monorepo und Micro-Frontends und begleite die technische Umsetzung Ihrer Architektur. [Kontaktieren Sie mich für ein Architektur-Audit.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

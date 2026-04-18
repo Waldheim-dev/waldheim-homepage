@@ -29,3 +29,8 @@ ecodrive ist aktuell kostenlos und befindet sich in der Entwicklung.  Dein Feedb
 Jetzt testen und durchstarten!  ➡️ [Link zu deiner App]
 
 #ecodrive #sparsamfahren #spritkosten #effizienz #kostenloseapp #feedback #gemeinsamverbessern
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -122,3 +122,8 @@ Die Sicherheit Ihrer PostgreSQL-Datenbank ist keine Option, sondern eine Notwend
 
 **Ist Ihre PostgreSQL-Datenbank ausreichend gegen die aktuellen Bedrohungen gewappnet und DSGVO-konform?**
 Ich biete umfassende Dienstleistungen zur Datenbank-Härtung, Sicherheitsaudits und zur Implementierung sicherer DevSecOps-Praktiken für Ihre PostgreSQL-Infrastruktur. Lassen Sie uns gemeinsam sicherstellen, dass Ihre Daten geschützt sind. [Kontaktieren Sie mich für eine erste Einschätzung Ihrer Datenbank-Sicherheit.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

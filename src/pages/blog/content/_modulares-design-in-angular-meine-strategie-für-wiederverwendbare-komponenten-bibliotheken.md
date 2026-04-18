@@ -1,11 +1,11 @@
 ---
-title: "Modulares Design in Angular: Meine Strategie für wiederverwendbare Komponenten-Bibliotheken."
-description: "Ich zeige, wie ich Angular-Projekte strukturiere, um eine interne Komponentenbibliothek zu schaffen, die Design-Konsistenz und Entwicklungseffizienz fördert."
+title: "Modulares Design in Angular: Meine Strategie für wiederverwendbare Komponenten-Bibliotheken"
+description: "Ich zeige, wie ich Angular-Projekte strukturiere, um eine interne Komponentenbibliothek zu schaffen, die Design-Konsistenz und Entwicklungseffizienz für Unternehmen fördert."
 pubDate: "2025-12-02"
 heroImage: "/images/blog/modulares-design-in-angular-meine-strategie-für-wiederverwendbare-komponenten-bibliotheken.webp"
-imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Modulares Design in Angular: Meine Strategie für wiederverwendbare Komponenten-Bibliotheken.'. Theme: Ich zeige, wie ich Angular-Projekte strukturiere, um eine interne Komponentenbibliothek zu schaffen, die Design-Konsistenz und Entwicklungseffizienz fördert.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Modulares Design in Angular: Meine Strategie für wiederverwendbare Komponenten-Bibliotheken'. Theme: Ich zeige, wie ich Angular-Projekte strukturiere, um eine interne Komponentenbibliothek zu schaffen, die Design-Konsistenz und Entwicklungseffizienz fördert.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
 author: "markus-waldheim"
-keywords: "Modulares, Design, in, Angular:, Meine, Strategie, für, wiederverwendbare, Komponenten-Bibliotheken."
+keywords: "Angular, Design System, Komponentenbibliothek, Modularität, Frontend, Architektur, NX"
 linkedinPost: "🚀 Neuer Blogbeitrag online: Modulares Design in Angular: Meine Strategie für wiederverwendbare Komponenten-Bibliotheken."
 ---
 
@@ -49,8 +49,3 @@ Ein modulares Design in Angular ist die Grundlage für langfristig wartbare Ente
 
 **Möchten Sie Ihre Frontend-Entwicklung durch eine eigene Komponenten-Bibliothek beschleunigen?**  
 Ich unterstütze Sie bei der Konzeption und Umsetzung Ihrer modularen Frontend-Architektur. [Kontaktieren Sie mich für ein Design-System-Audit.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

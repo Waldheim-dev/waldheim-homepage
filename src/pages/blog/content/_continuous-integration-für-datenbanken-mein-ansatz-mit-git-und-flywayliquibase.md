@@ -52,8 +52,3 @@ Datenbank-Automatisierung ist der nächste logische Schritt in der DevOps-Evolut
 
 **Haben Sie Respekt vor Datenbank-Updates in Produktion oder suchen nach einer besseren Migrations-Strategie?**  
 Ich helfe Ihnen bei der Einführung von automatisierten Datenbank-Workflows und der Absicherung Ihrer Schema-Migrationen. [Lassen Sie uns Ihre Datenbank-Pipeline planen.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

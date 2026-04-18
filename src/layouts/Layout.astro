@@ -28,13 +28,14 @@ const organisationSchema = SchemaUtils.getOrganizationSchema({
   name: 'Waldheim.dev',
   url: 'https://waldheim.dev',
   logo: 'https://waldheim.dev/waldheim.dev.svg',
-  description: 'Premium IT-Consulting, DevSecOps und Softwareentwicklung in Augsburg & München.',
+  description:
+    'Premium IT-Consulting, DevSecOps und Softwareentwicklung in Augsburg & München.',
   email: 'kontakt@waldheim.dev',
   address: {
     addressLocality: 'Augsburg',
     addressRegion: 'Bayern',
-    addressCountry: 'DE'
-  }
+    addressCountry: 'DE',
+  },
 });
 
 // Globales Basis-Schema: Person (Autorität)
@@ -42,33 +43,34 @@ const personSchema = SchemaUtils.getPersonSchema({
   name: 'Markus Waldheim',
   url: 'https://waldheim.dev/ueber-mich',
   jobTitle: 'Senior IT Consultant & Software Architect',
-  description: 'Zertifizierter Scrum Master (PSM II) und Experte für KI-gestützte Softwareentwicklung.',
+  description:
+    'Zertifizierter Scrum Master (PSM II) und Experte für KI-gestützte Softwareentwicklung.',
   image: 'https://waldheim.dev/markus/markus_2024_laptop.webp',
   sameAs: [
     'https://www.linkedin.com/in/markus-waldheim-03827a312/',
-    'https://github.com/Waldheim-dev'
-  ]
+    'https://github.com/Waldheim-dev',
+  ],
 });
 
 // Globales Basis-Schema: LocalBusiness (Regionale Relevanz)
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  'name': 'Waldheim.dev - Markus Waldheim',
-  'image': 'https://waldheim.dev/waldheim.dev.png',
-  'url': 'https://waldheim.dev',
-  'priceRange': '€€€',
-  'address': {
+  name: 'Waldheim.dev - Markus Waldheim',
+  image: 'https://waldheim.dev/waldheim.dev.png',
+  url: 'https://waldheim.dev',
+  priceRange: '€€€',
+  address: {
     '@type': 'PostalAddress',
-    'addressLocality': 'Augsburg',
-    'addressRegion': 'Bayern',
-    'addressCountry': 'DE'
+    addressLocality: 'Augsburg',
+    addressRegion: 'Bayern',
+    addressCountry: 'DE',
   },
-  'geo': {
+  geo: {
     '@type': 'GeoCoordinates',
-    'latitude': 48.3705,
-    'longitude': 10.8978
-  }
+    latitude: 48.3705,
+    longitude: 10.8978,
+  },
 };
 
 const {
@@ -77,127 +79,175 @@ const {
   image = '/waldheim-dev-og.jpg',
   schema = [],
   keywords = 'IT-Consulting Augsburg, Softwareentwicklung München, DevSecOps Experte, Scrum Master Bayern, KI-Workflows, B2B Software',
-  robots = 'index, follow'
+  robots = 'index, follow',
 } = Astro.props;
 
 // Schemas zusammenführen (Basis + Seitenspezifisch)
-const finalSchema = [organisationSchema, personSchema, localBusinessSchema, ...schema];
+const finalSchema = [
+  organisationSchema,
+  personSchema,
+  localBusinessSchema,
+  ...schema,
+];
 ---
 
 <!doctype html>
 <html lang="de" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <base href="/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-  <link rel="manifest" href="/favicons/site.webmanifest" />
-  <meta name="theme-color" content="#020617" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <meta name="theme-color" content="#020617" />
 
-  <link rel="sitemap" href="/sitemap-index.xml" />
-  <meta name="robots" content={robots} />
-  <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="robots" content={robots} />
+    <meta name="generator" content={Astro.generator} />
 
-  <!-- SEO & Canonical -->
-  <link rel="canonical" href={canonicalURL} />
-  <link rel="alternate" hreflang="de-DE" href={canonicalURL} />
-  <link rel="alternate" hreflang="x-default" href={canonicalURL} />
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="de-DE" href={canonicalURL} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
-  <title>{title}</title>
-  <meta name="title" content={title} />
-  <meta name="description" content={description} />
-  <meta name="keywords" content={keywords} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(image, Astro.url)} />
-  <meta property="twitter:card" content="summary_large_image" />
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="twitter:card" content="summary_large_image" />
 
-  <!-- Structured Data Integration -->
-  {finalSchema.map((s) => <Schema item={s} />)}
+    <!-- Structured Data Integration -->
+    {finalSchema.map((s) => <Schema item={s} />)}
 
-  <!-- Tracking & Consent -->
-  <script type="module" src="/cookieconsent-config.js" is:inline />
-  <script is:inline data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-F6PFMBR146" />
-  <script is:inline data-category="analytics">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F6PFMBR146');
-  </script>
+    <!-- Tracking & Consent -->
+    <script type="module" src="/cookieconsent-config.js" is:inline></script>
+    <script
+      is:inline
+      data-category="analytics"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F6PFMBR146"></script>
+    <script is:inline data-category="analytics">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-F6PFMBR146');
+    </script>
 
-  <!-- GSAP & Animations Core -->
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- GSAP & Animations Core -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+    ></script>
 
-  <script is:inline>
-    function initGsapAnimations() {
-      if (!window.gsap || !window.ScrollTrigger) return;
+    <script is:inline>
+      function initGsapAnimations() {
+        if (!window.gsap || !window.ScrollTrigger) return;
 
-      // Register plugin (safe to call multiple times)
-      window.gsap.registerPlugin(window.ScrollTrigger);
+        // Register plugin (safe to call multiple times)
+        window.gsap.registerPlugin(window.ScrollTrigger);
 
-      // Kill stale instances from previous page (ViewTransitions)
-      window.ScrollTrigger.getAll().forEach(function(t) { t.kill(); });
-
-      window.gsap.utils.toArray('.gsap-fadein').forEach(function(el) {
-        var delay = parseFloat(el.style.animationDelay) || 0;
-        window.gsap.from(el, {
-          opacity: 0,
-          y: 30,
-          duration: 0.8,
-          delay: delay,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        // Kill stale instances from previous page (ViewTransitions)
+        window.ScrollTrigger.getAll().forEach(function (t) {
+          t.kill();
         });
-      });
-    }
 
-    document.addEventListener('astro:page-load', initGsapAnimations);
-  </script>
+        window.gsap.utils.toArray('.gsap-fadein').forEach(function (el) {
+          var delay = parseFloat(el.style.animationDelay) || 0;
+          window.gsap.from(el, {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: delay,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 80%', once: true },
+          });
+        });
+      }
 
-  <ClientRouter />
-  <style is:global>
-    :root { --accent-gradient: linear-gradient(45deg, #0ea5e9, #6366f1); }
-    #cursor-blur {
-      position: fixed; top: 0; left: 0; width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(14, 165, 233, 0) 70%);
-      border-radius: 50%; pointer-events: none; z-index: 9999; filter: blur(100px);
-      will-change: transform; mix-blend-mode: screen;
-    }
-  </style>
-</head>
-<body class="bg-meg-bg-dark text-meg-text-primary-dark selection:bg-meg-accent selection:text-white antialiased overflow-x-hidden">
-  <div id="cursor-blur" class="hidden lg:block"></div>
-  
-  <header class="sticky top-0 z-50 max-w-7xl mx-auto py-2 px-4">
-    <Nav />
-  </header>
+      document.addEventListener('astro:page-load', initGsapAnimations);
+    </script>
 
-  <aside class="max-w-7xl mx-auto px-4">
-    <Banner />
-  </aside>
+    <ClientRouter />
+    <style is:global>
+      :root {
+        --accent-gradient: linear-gradient(45deg, #0ea5e9, #6366f1);
+      }
+      #cursor-blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(14, 165, 233, 0.15) 0%,
+          rgba(14, 165, 233, 0) 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        filter: blur(100px);
+        will-change: transform;
+        mix-blend-mode: screen;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-meg-bg-dark text-meg-text-primary-dark selection:bg-meg-accent selection:text-white antialiased overflow-x-hidden"
+  >
+    <div id="cursor-blur" class="hidden lg:block"></div>
 
-  <main>
-    <slot />
-  </main>
+    <header class="sticky top-0 z-50 max-w-7xl mx-auto py-2 px-4">
+      <Nav />
+    </header>
 
-  <Footer />
+    <aside class="max-w-7xl mx-auto px-4">
+      <Banner />
+    </aside>
 
-  <script is:inline>
-    // Cursor Blur Follower
-    const cursor = document.getElementById('cursor-blur');
-    if (cursor) {
-      window.addEventListener('mousemove', (e) => {
-        window.gsap.to(cursor, { x: e.clientX - 300, y: e.clientY - 300, duration: 0.8, ease: 'power3.out' });
-      });
-    }
-  </script>
-</body>
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+      // Cursor Blur Follower
+      const cursor = document.getElementById('cursor-blur');
+      if (cursor) {
+        window.addEventListener('mousemove', (e) => {
+          window.gsap.to(cursor, {
+            x: e.clientX - 300,
+            y: e.clientY - 300,
+            duration: 0.8,
+            ease: 'power3.out',
+          });
+        });
+      }
+    </script>
+  </body>
 </html>

@@ -1,11 +1,11 @@
 ---
-title: "Angular-Migration: Mein schrittweiser Plan für ein Upgrade ohne Kopfschmerzen."
+title: "Angular-Migration: Mein schrittweiser Plan für ein Upgrade ohne Kopfschmerzen"
 description: "Ich beschreibe meine bewährte Vorgehensweise für die Migration einer großen Angular-Anwendung auf eine neue Major-Version, um Risiken und Ausfallzeiten zu minimieren."
 pubDate: "2025-11-28"
 heroImage: "/images/blog/angular-migration-mein-schrittweiser-plan-für-ein-upgrade-ohne-kopfschmerzen.webp"
-imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Angular-Migration: Mein schrittweiser Plan für ein Upgrade ohne Kopfschmerzen.'. Theme: Ich beschreibe meine bewährte Vorgehensweise für die Migration einer großen Angular-Anwendung auf eine neue Major-Version, um Risiken und Ausfallzeiten zu minimieren.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled 'Angular-Migration: Mein schrittweiser Plan für ein Upgrade ohne Kopfschmerzen'. Theme: Ich beschreibe meine bewährte Vorgehensweise für die Migration einer großen Angular-Anwendung auf eine neue Major-Version, um Risiken und Ausfallzeiten zu minimieren.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
 author: "markus-waldheim"
-keywords: "Angular-Migration: Mein, schrittweiser, Plan, für, ein, Upgrade, ohne, Kopfschmerzen."
+keywords: "Angular, Migration, Upgrade, Enterprise, Frontend, Softwarearchitektur, Testing"
 linkedinPost: "🚀 Neuer Blogbeitrag online: Angular-Migration: Mein schrittweiser Plan für ein Upgrade ohne Kopfschmerzen."
 ---
 
@@ -49,8 +49,3 @@ Der Schlüssel zu schmerzfreien Angular-Upgrades ist Regelmäßigkeit. Wer alle 
 
 **Steht bei Ihnen ein großes Angular-Upgrade an und Sie suchen nach einem erfahrenen Partner?**  
 Ich begleite Sie bei der Migration Ihrer Enterprise-Anwendungen und sorge für einen reibungslosen Übergang. [Kontaktieren Sie mich für eine Migrations-Analyse.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -49,8 +49,3 @@ Das "perfekte Zusammenspiel" ist kein Ergebnis von Tools allein, sondern von Wor
 
 **Haben Sie Reibungsverluste in der Zusammenarbeit zwischen Design und Entwicklung?**  
 Ich helfe Ihnen bei der Optimierung Ihrer Tool-Chain und der Einführung von Design-Token-Workflows. [Lassen Sie uns Ihre Frontend-Produktivität steigern.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -13,7 +13,11 @@ export async function getStaticPaths() {
 }
 
 const blog = Astro.props;
-const { Content } = await render(blog)
+const { Content, headings } = await render(blog)
+
+const wordCount = blog.body ? blog.body.split(/\s+/).length : 0;
+const readingTime = Math.ceil(wordCount / 200);
+
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
   link: Astro.url.hostname
@@ -26,7 +30,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 ---
 <Layout {...blog.data} schema={[breadCrumbSchema]}>
-  <BlogLayout {...blog.data}>
+  <BlogLayout {...blog.data} headings={headings} readingTime={readingTime}>
     <Content />
   </BlogLayout>
 </Layout>

@@ -50,8 +50,3 @@ Ein gut umsetzter Dark Mode zeigt Liebe zum Detail und Respekt vor den Präferen
 
 **Planen Sie die Einführung eines Dark Modes für Ihr bestehendes Angular-Frontend?**  
 Ich unterstütze Sie bei der Erstellung eines konsistenten Design-Konzepts und der technischen Umsetzung. [Kontaktieren Sie mich für eine UI/UX-Beratung.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

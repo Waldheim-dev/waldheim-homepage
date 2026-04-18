@@ -41,6 +41,8 @@ Mit der SEWOBE-Software und meiner Unterstützung können Sie Ihre Verwaltungsau
 automatisieren. So gewinnen Sie mehr Zeit für Ihre eigentlichen Aufgaben – die Arbeit mit Ihren Mitgliedern und die
 Verwirklichung Ihrer Ziele!
 
+-----
+
 **[Erfahren Sie mehr über SEWOBE](https://www.sewobe.de/)**  *(Link zur SEWOBE-Website)*
 
 ## Kontaktieren Sie mich für eine persönliche Beratung!
@@ -48,3 +50,8 @@ Verwirklichung Ihrer Ziele!
 Möchten Sie mehr über SEWOBE und meine Dienstleistungen erfahren? Ich freue mich auf Ihre Anfrage!
 
 [Kontaktieren Sie mich](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
