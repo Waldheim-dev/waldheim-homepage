@@ -8,11 +8,11 @@ category: "design"
 year: 2026
 eventSeries: "in-konzert"
 previousYear: "mv-obermeitingen/2025/in_konzert"
-heroImage: "referenzen/mvo-obermeitingen/in_konzert_2026.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/in_konzert_2026.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/in_konzert_2026.jpg",
-  "referenzen/mvo-obermeitingen/in_konzert_2026_pkt.jpg",
-  "referenzen/mvo-obermeitingen/in_konzert_eintrittskarte_2026.jpg"
+  "/referenzen/mvo-obermeitingen/in_konzert_2026.jpg",
+  "/referenzen/mvo-obermeitingen/in_konzert_2026_pkt.jpg",
+  "/referenzen/mvo-obermeitingen/in_konzert_eintrittskarte_2026.jpg"
 ]
 overview: [
   {

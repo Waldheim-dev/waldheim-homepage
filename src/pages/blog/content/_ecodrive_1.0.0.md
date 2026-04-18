@@ -2,7 +2,7 @@
 title: "🚀 Effizienter mit Ecodrive - jetzt kostenlos starten! 🚀"
 description: "Senken Sie Ihre Spritkosten und optimieren Sie Ihren Verbrauch! Ecodrive 1.0 ist da – die kostenlose App für Fahrzeugverwaltung, Tankprotokollierung und mehr. 🚗💨"
 pubDate: "2025-01-11"
-heroImage: "https://images.unsplash.com/photo-1683879287187-aefe19e2777c?q=80&w=2275&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/ecodrive_1.0.0.webp"
 author: 'markus-waldheim'
 keywords: Ecodrive, Spritkosten, Spritsparen, Verbrauch, Effizienz, Fahrzeugverwaltung, Tankprotokoll, App, kostenlos, Fuhrparkverwaltung, Fahrtenbuch, Nachhaltigkeit, CO2-Reduktion, Fahrzeugrechner
 ---

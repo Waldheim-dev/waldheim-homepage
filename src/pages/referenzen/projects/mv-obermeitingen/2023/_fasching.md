@@ -8,16 +8,16 @@ category: "design"
 year: 2023
 eventSeries: "fasching"
 nextYear: "mv-obermeitingen/2024/fasching"
-heroImage: "referenzen/mvo-obermeitingen/fasching_2023.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/fasching_2023.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/fasching_2023.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_preisliste.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_bon_bier.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2023_bon_pommes.jpg"
+  "/referenzen/mvo-obermeitingen/fasching_2023.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_karte_extrabreit.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_preisliste.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_bon_bier.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_bon_getraenk.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_bon_haferlkaffee.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_bon_kuchen.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2023_bon_pommes.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

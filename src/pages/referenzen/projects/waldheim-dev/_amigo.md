@@ -5,12 +5,12 @@ description: "Entwicklung von Amigo: Ein professionelles Go-Framework zur Orches
 shortDescription: "Ein autonomes Multi-Agenten-Framework für komplexe Software-Engineering-Tasks."
 pubDate: "2026-04-10"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/amigo/amigo_main.png"
+heroImage: "/referenzen/waldheim-dev/amigo/amigo_main.png"
 assets:
   [
-    "referenzen/waldheim-dev/amigo/amigo_main.png",
-    "referenzen/waldheim-dev/amigo/amigo_dashboard.png",
-    "referenzen/waldheim-dev/amigo/amigo_tui.png",
+    "/referenzen/waldheim-dev/amigo/amigo_main.png",
+    "/referenzen/waldheim-dev/amigo/amigo_dashboard.png",
+    "/referenzen/waldheim-dev/amigo/amigo_tui.png",
   ]
 problem: "KI-Modelle allein stoßen bei komplexen, mehrstufigen Aufgaben oft an Grenzen. Es fehlte ein robustes, performantes Framework, das spezialisierte Agenten koordiniert, Werkzeuge über standardisierte Protokolle (MCP) einbindet und Ausfallsicherheit für den Produktiveinsatz bietet."
 solution: "Entwicklung von Amigo als Go-basiertes Framework für autonome Agenten-Teams. Implementierung von spezialisierten Rollen (Architect, Developer, QA), nativer MCP-Unterstützung und Enterprise-Features wie Circuit Breaker und Multi-Provider Fallback. Integration eines Echtzeit-HTMX-Dashboards und einer Bubble Tea TUI."

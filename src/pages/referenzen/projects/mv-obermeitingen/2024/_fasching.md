@@ -9,10 +9,10 @@ year: 2024
 eventSeries: "fasching"
 previousYear: "mv-obermeitingen/2023/fasching"
 nextYear: "mv-obermeitingen/2025/fasching"
-heroImage: "referenzen/mvo-obermeitingen/fasching_2024.2.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/fasching_2024.2.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/fasching_2024.2.jpg",
-  "referenzen/mvo-obermeitingen/fasching_2024_savedate.jpg"
+  "/referenzen/mvo-obermeitingen/fasching_2024.2.jpg",
+  "/referenzen/mvo-obermeitingen/fasching_2024_savedate.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

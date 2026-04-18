@@ -8,10 +8,10 @@ category: "design"
 year: 2025
 eventSeries: "serenade"
 previousYear: "mv-obermeitingen/2024/serenade"
-heroImage: "referenzen/mvo-obermeitingen/serenade_2025.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/serenade_2025.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/serenade_2025.jpg",
-  "referenzen/mvo-obermeitingen/serenade_2025_std.jpg"
+  "/referenzen/mvo-obermeitingen/serenade_2025.jpg",
+  "/referenzen/mvo-obermeitingen/serenade_2025_std.jpg"
 ]
 overview: [
   {

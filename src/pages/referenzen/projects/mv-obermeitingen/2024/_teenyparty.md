@@ -9,9 +9,9 @@ year: 2024
 eventSeries: "teenyparty"
 previousYear: "mv-obermeitingen/2024/teenyparty"
 nextYear: "mv-obermeitingen/2025/teenyparty"
-heroImage: "referenzen/mvo-obermeitingen/teenieparty.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/teenieparty.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/teenieparty.jpg"
+  "/referenzen/mvo-obermeitingen/teenieparty.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

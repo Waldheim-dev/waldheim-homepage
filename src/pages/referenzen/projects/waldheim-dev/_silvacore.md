@@ -5,25 +5,25 @@ description: "Entwicklung der Silvacore-Software: Eine Platform von der Baufinan
 shortDescription: "Entwicklung der Silvacore-Software zur Haushalts- und Mietkostenverwaltung."
 pubDate: "2025-10-01"
 category: "entwicklung"
-heroImage: "silvacore/silvacore_dashboard.png"
+heroImage: "/silvacore/silvacore_dashboard.png"
 assets:
   [
-    "silvacore/silvacore_login.png",
-    "silvacore/silvacore_dashboard.png",
-    "silvacore/silvacore_finanzen.png",
-    "silvacore/silvacore_notifications.png",
-    "silvacore/silvacore_profil.png",
-    "silvacore/silvacore_registrieren.png",
-    "silvacore/silvacore_reset.png",
-    "silvacore/silvacore_settings.png",
-    "silvacore/silvacore_users.png",
-    "silvacore/silvacore_userverwaltung.png",
-    "silvacore/silvacore_verbrauch.png",
-    "silvacore/silvacore_weg.png",
-    "silvacore/silvacore_wegdetails.png",
-    "silvacore/silvacore_wegedit.png",
-    "silvacore/silvacore_wegeigentümer.png",
-    "silvacore/silvacore_wegmembers.png",
+    "/silvacore/silvacore_login.png",
+    "/silvacore/silvacore_dashboard.png",
+    "/silvacore/silvacore_finanzen.png",
+    "/silvacore/silvacore_notifications.png",
+    "/silvacore/silvacore_profil.png",
+    "/silvacore/silvacore_registrieren.png",
+    "/silvacore/silvacore_reset.png",
+    "/silvacore/silvacore_settings.png",
+    "/silvacore/silvacore_users.png",
+    "/silvacore/silvacore_userverwaltung.png",
+    "/silvacore/silvacore_verbrauch.png",
+    "/silvacore/silvacore_weg.png",
+    "/silvacore/silvacore_wegdetails.png",
+    "/silvacore/silvacore_wegedit.png",
+    "/silvacore/silvacore_wegeigentümer.png",
+    "/silvacore/silvacore_wegmembers.png",
   ]
 problem: "Als Eigentümer in einer Wohnungseigentümergemeinschaft (WEG) oder als Vermieter von Mietobjekten ist die Verwaltung von Eigentümern, Mietern, Verträgen und die Abrechnung der Kosten oft komplex und zeitaufwändig. Es fehlte eine benutzerfreundliche Lösung, um diese Aufgaben effizient zu bewältigen."
 client: {

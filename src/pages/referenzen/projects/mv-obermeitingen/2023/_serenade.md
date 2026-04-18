@@ -8,9 +8,9 @@ category: "design"
 year: 2023
 eventSeries: "serenade"
 nextYear: "mv-obermeitingen/2024/serenade"
-heroImage: "referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
+  "/referenzen/mvo-obermeitingen/serenade_2023_plakat_web.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

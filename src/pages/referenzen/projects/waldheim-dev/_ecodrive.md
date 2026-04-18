@@ -19,20 +19,20 @@ overview:
     meta: "Fuhrparks & Privat"
 pubDate: "2022-07-01"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/ecodrive/ecodrive_login.png"
+heroImage: "/referenzen/waldheim-dev/ecodrive/ecodrive_login.png"
 assets:
   [
-    "referenzen/waldheim-dev/ecodrive/ecodrive_login.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_settings.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_account.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_add_fuel.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_audit.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_report_fuel.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_vehicle.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_vehicles.png",
-    "referenzen/waldheim-dev/ecodrive/ecodrive_releasenotes.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_login.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_light.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_dashboard_dark.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_settings.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_account.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_add_fuel.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_audit.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_report_fuel.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_vehicle.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_vehicles.png",
+    "/referenzen/waldheim-dev/ecodrive/ecodrive_releasenotes.png",
   ]
 problem: "Das manuelle Erfassen und Berechnen von Fahrzeugkosten und -verbrauch ist zeitaufwändig und fehleranfällig. Es fehlte eine benutzerfreundliche Lösung, um diese Daten zentral zu verwalten, zu analysieren und Vergleiche (auch mit anderen Nutzern) anzustellen."
 solution: "Entwicklung der Ecodrive-Software als Plattform zur Erfassung und Analyse von Fahrzeugdaten, Kosten und Verbrauch.  Die Software bietet sowohl Funktionen für Privatanwender als auch für Unternehmen (Fuhrparkmanagement mit Fahrtenbuchfunktion).  Durch die Automatisierung und die übersichtlichen Statistiken wird die Kostenkontrolle und Verbrauchsoptimierung deutlich vereinfacht."

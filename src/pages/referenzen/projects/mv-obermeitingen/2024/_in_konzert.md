@@ -9,14 +9,14 @@ year: 2024
 eventSeries: "in-konzert"
 previousYear: "mv-obermeitingen/2022/in-konzert"
 nextYear: "mv-obermeitingen/2025/in_konzert"
-heroImage: "referenzen/mvo-obermeitingen/in_konzert_2024.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/in_konzert_2024.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/in_konzert_2024.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024-sam.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024_son.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-programm-2024-1-6-7-8.jpg",
-  "referenzen/mvo-obermeitingen/in-konzert-programm-2024-2-3-4-5.jpg",
-  "referenzen/mvo-obermeitingen/inkonzert_2024_savedate.jpg"
+  "/referenzen/mvo-obermeitingen/in_konzert_2024.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024-sam.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-eintrittskarte-2024_son.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-programm-2024-1-6-7-8.jpg",
+  "/referenzen/mvo-obermeitingen/in-konzert-programm-2024-2-3-4-5.jpg",
+  "/referenzen/mvo-obermeitingen/inkonzert_2024_savedate.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

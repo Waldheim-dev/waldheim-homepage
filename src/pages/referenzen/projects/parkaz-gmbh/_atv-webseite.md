@@ -5,19 +5,19 @@ description: "Neuentwicklung der Website für ATV Technologie GmbH auf Basis von
 shortDescription: "Sichere WordPress-Website mit individuellem Theme für ATV Technologie GmbH."
 pubDate: "2024-03-01"
 category: "website"
-heroImage: "referenzen/parkaz-gmbh/atv-website/atv-home.png"
+heroImage: "/referenzen/parkaz-gmbh/atv-website/atv-home.png"
 assets: [
-  "referenzen/parkaz-gmbh/atv-website/atv-home.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-blog-overview.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-event-overview.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-form.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-job.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-jobs.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-nav.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-product.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-product.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-product-range.png",
-  "referenzen/parkaz-gmbh/atv-website/atv-product-system.png"
+  "/referenzen/parkaz-gmbh/atv-website/atv-home.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-blog-overview.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-event-overview.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-form.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-job.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-jobs.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-nav.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-product.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-product.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-product-range.png",
+  "/referenzen/parkaz-gmbh/atv-website/atv-product-system.png"
 ]
 problem: "Die alte Website von ATV Technologie GmbH litt unter erheblichen Sicherheitsproblemen (Spam über Formulare) und war aufgrund eines verschleierten, in Ruby entwickelten CMS schwer zu warten.  Ein Drittanbieter hatte die Seite erstellt, aber die Übergabe war problematisch."
 solution: "Neuentwicklung der Website mit WordPress, um Wartbarkeit und Sicherheit zu gewährleisten. Entwicklung eines individuellen Themes auf Basis von Tailwind CSS für ein modernes Design. Minimierung der Plugin-Nutzung zur Erhöhung der Sicherheit und Performance. Implementierung von Sicherheitsmaßnahmen wie Honeypot, reCAPTCHA und SSL. Automatisches Deployment über GitLab CI."

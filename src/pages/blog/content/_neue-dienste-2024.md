@@ -2,7 +2,7 @@
 title: "Neu: Scrum Master & Product Owner Services – für agilere Projekte! 🚀"
 description: "Ich habe meine Expertise erweitert! Als zertifizierter Scrum Master (PSM II) und Product Owner (PSPO I) unterstütze ich Sie bei agilen Projekten und optimiere Ihre Entwicklungsprozesse."
 pubDate: "2024-02-01"
-heroImage: "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?q=80&w=2539&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/neue-dienste-2024.webp"
 author: 'markus-waldheim'
 keywords: Scrum, Scrum Master, Product Owner, PSM, PSM II, PSPO, agil, agile Methoden, Projektmanagement, Softwareentwicklung, Produktentwicklung, Zertifizierung, Weiterbildung, Dienstleistungen, Optimierung, Effizienz, Zusammenarbeit, [weitere relevante Keywords]
 ---

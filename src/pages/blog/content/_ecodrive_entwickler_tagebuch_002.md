@@ -2,7 +2,7 @@
 title: "Ecodrive DevTagebuch #2: Daten, FAQs & Stabilität 👨‍💻"
 description: "Ecodrive-Update: Datenvisualisierung & FAQs live! Diagramme für Verbrauch & Kosten, neue Metriken. Fokus auf Stabilität & Nutzerfeedback. 📊❓"
 pubDate: "2025-03-01"
-heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/ecodrive_entwickler_tagebuch_002.webp"
 author: 'markus-waldheim'
 keywords: Ecodrive, Spritkosten, Spritsparen, Verbrauch, Effizienz, Fahrzeugverwaltung, Tankprotokoll, App, kostenlos, Fuhrparkverwaltung, Fahrtenbuch, Nachhaltigkeit, CO2-Reduktion, Fahrzeugrechner, [weitere relevante Keywords]
 ---

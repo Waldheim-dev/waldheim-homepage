@@ -8,9 +8,9 @@ category: "design"
 year: 2023
 eventSeries: "kirchenkonzert"
 nextYear: "mv-obermeitingen/2025/kirchenkonzert"
-heroImage: "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
+  "/referenzen/mvo-obermeitingen/kirchenkonzert_2023.jpg"
 ]
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

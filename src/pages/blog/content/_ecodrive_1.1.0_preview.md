@@ -2,7 +2,7 @@
 title: "🚀 Ecodrive 1.1 Update: Verbesserungen für Basic- und Free-Nutzer im Detail (Preview)"
 description: "Ecodrive 1.1: Neue Funktionen! Trip- & Serviceprotokolle, FAQs, Report-Verbesserungen. Optimiert Fahrzeugdaten für Privat & Geschäft. 🚗💨"
 pubDate: "2025-02-11"
-heroImage: "https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/ecodrive_1.1.0_preview.webp"
 author: 'markus-waldheim'
 keywords: Ecodrive, Spritkosten, Spritsparen, Verbrauch, Effizienz, Fahrzeugverwaltung, Tankprotokoll, App, kostenlos, Fuhrparkverwaltung, Fahrtenbuch, Nachhaltigkeit, CO2-Reduktion, Fahrzeugrechner, Vorschau
 ---
