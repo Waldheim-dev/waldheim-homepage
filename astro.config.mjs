@@ -76,5 +76,19 @@ export default defineConfig({
   trailingSlash: 'always', // Konsistente URLs: immer mit /
   image: {
     remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        defaults: {
+          jpeg: { quality: 80 },
+          webp: { quality: 85 },
+          avif: { quality: 80 },
+          png: { compressionLevel: 9 },
+        },
+      },
+    },
+  },
+  markdown: {
+    smartypants: true,
   },
 });
