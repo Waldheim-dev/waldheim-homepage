@@ -49,8 +49,3 @@ Ein Performance-Audit ist keine einmalige Sache. Es sollte Teil des Entwicklungs
 
 **Ist Ihre Angular-Anwendung zu langsam oder fühlt sich "träge" an?**  
 Ich unterstütze Sie mit einem umfassenden Performance-Audit und konkreten Optimierungsvorschlägen. [Kontaktieren Sie mich für eine Analyse Ihres Frontends.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

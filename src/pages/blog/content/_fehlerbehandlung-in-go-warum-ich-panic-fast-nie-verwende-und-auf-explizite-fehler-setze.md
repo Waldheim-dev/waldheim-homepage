@@ -51,8 +51,3 @@ Die explizite Fehlerbehandlung in Go mag anfangs mühsam erscheinen, ist aber ei
 
 **Haben Sie Fragen zu Best Practices in der Go-Entwicklung oder möchten Sie Ihren Code-Stil verbessern?**  
 Ich unterstütze Sie und Ihr Team durch Code-Reviews und Workshops bei der Entwicklung von robusten Go-Backends. [Lassen Sie uns über Ihren Code sprechen.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

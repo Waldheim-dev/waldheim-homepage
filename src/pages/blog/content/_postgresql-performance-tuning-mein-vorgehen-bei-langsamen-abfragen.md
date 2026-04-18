@@ -51,9 +51,3 @@ PostgreSQL Performance Tuning erfordert Geduld und die richtigen Werkzeuge. Durc
 
 **Ist Ihre PostgreSQL-Datenbank zu langsam oder steigen die Antwortzeiten Ihrer Anwendung?**  
 Ich führe detaillierte Performance-Audits durch und optimiere Ihre Abfragen und Server-Konfigurationen. [Lassen Sie uns Ihre Datenbank gemeinsam beschleunigen.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

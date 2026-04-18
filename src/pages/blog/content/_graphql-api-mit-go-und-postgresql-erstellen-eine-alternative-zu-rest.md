@@ -48,9 +48,3 @@ Die Kombination aus Go's Performance und GraphQL's Flexibilität ist ein unschla
 
 **Überlegen Sie, GraphQL in Ihrem nächsten Projekt einzusetzen oder möchten Sie eine REST-API migrieren?**  
 Ich unterstütze Sie bei der Architektur und Implementierung von skalierbaren GraphQL-Backends mit Go. [Kontaktieren Sie mich für ein Architektur-Consulting.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

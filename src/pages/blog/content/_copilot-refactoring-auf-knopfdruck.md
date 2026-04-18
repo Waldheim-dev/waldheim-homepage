@@ -66,3 +66,8 @@ Abschluss & Ausblick:
 Code-Refactoring ist keine lästige Pflicht mehr, sondern eine Sache von Sekunden. Nutze Copilot, um die Qualität deiner Codebase kontinuierlich zu verbessern – für dich und für alle anderen im Team!
 
 Nächstes Mal wird es um ein Thema gehen, das viele gerne aufschieben: "Nie wieder Test-Muffel ✅: Wie Copilot dir hilft, mühelos Unit-Tests zu schreiben."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

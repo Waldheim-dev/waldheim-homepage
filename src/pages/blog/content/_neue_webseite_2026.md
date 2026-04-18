@@ -27,3 +27,7 @@ Ein neuer Wind weht auf Waldheim.dev! 🍃 Wir befinden uns mitten in der Vorber
 Wir laden euch ein, Teil dieser spannenden Reise zu sein! Besucht Waldheim.dev und lasst euch überraschen. Euer Feedback ist uns wichtig – teilt eure Gedanken und Anregungen mit uns!
 
 \#WaldheimDev #Webdesign #UI #UX #SEO #Barrierefreiheit #Innovation #NeuesDesign #Webentwicklung
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

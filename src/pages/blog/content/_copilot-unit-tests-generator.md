@@ -63,3 +63,8 @@ Abschluss & Ausblick:
 Mit Copilot gibt es keine Ausrede mehr für ungetesteten Code. Die Einstiegshürde ist so niedrig, dass du deine Code-Qualität und Stabilität mit minimalem Aufwand massiv erhöhen kannst.
 
 Im nächsten Beitrag tauchen wir tiefer in die Chat-Funktionen ein und schauen uns an, wie du Code direkt im Editor bearbeiten lässt. Sei dabei, wenn es heißt: "Der Inline-Magier 🪄: Direkte Code-Änderungen per Anweisung."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -79,3 +79,8 @@ Die Einhaltung der DSGVO beginnt bereits im Browser des Nutzers. Als Angular-Ent
 
 **Ist Ihr Angular-Frontend eine DSGVO-sichere Festung oder eine offene Flanke?**
 Ich unterstütze Sie dabei, Sicherheitslücken in Ihren Webanwendungen zu identifizieren und zu schließen. Von einem gründlichen Code-Audit über die Implementierung sicherer Architekturen bis hin zur Schulung Ihrer Entwicklerteams – lassen Sie uns gemeinsam für echten Datenschutz sorgen. [Kontaktieren Sie mich für eine unverbindliche Analyse.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

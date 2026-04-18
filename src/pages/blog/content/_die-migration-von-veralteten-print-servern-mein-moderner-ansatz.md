@@ -49,8 +49,3 @@ Eine erfolgreiche Print-Server-Migration ist mehr als nur ein Hardware-Tausch. E
 
 **Ist Ihre Druck-Infrastruktur veraltet oder schwer zu verwalten?**  
 Ich unterstütze Sie bei der Analyse, Planung und Durchführung Ihrer Print-Server-Migration. [Kontaktieren Sie mich für ein unverbindliches Erstgespräch.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

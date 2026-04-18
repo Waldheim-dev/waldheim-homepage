@@ -49,8 +49,3 @@ Die Portierung einer Go-Anwendung von Windows zu Linux ist dank der Sprache Go v
 
 **Planen Sie die Migration Ihrer Windows-Workloads auf Linux?**  
 Ich unterstütze Sie bei der technischen Analyse und begleite den Portierungsprozess Ihrer Go-Anwendungen. [Lassen Sie uns Ihre Infrastruktur effizienter gestalten.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

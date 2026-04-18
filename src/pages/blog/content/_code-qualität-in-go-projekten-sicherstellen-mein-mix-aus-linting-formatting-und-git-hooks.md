@@ -50,8 +50,3 @@ Hohe Code-Qualität in Go-Projekten ist das Ergebnis von klar definierten Standa
 
 **Wollen Sie die Code-Qualität in Ihren Go-Services verbessern oder automatisierte Tool-Chains einführen?**  
 Ich unterstütze Sie bei der Einrichtung moderner Entwicklungs-Workflows und führe Code-Quality-Audits für Ihre Projekte durch. [Kontaktieren Sie mich für ein unverbindliches Gespräch.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

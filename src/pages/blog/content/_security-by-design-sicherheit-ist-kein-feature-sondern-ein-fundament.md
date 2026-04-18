@@ -73,3 +73,8 @@ Security by Design verschiebt die Verantwortung für Sicherheit von einer reinen
 
 **Möchten Sie Sicherheit von Anfang an in Ihren Produktentwicklungsprozess integrieren und teure Nachbesserungen vermeiden?**
 Ich helfe Ihnen, Methoden wie Threat Modeling und die Definition von Abuse Cases in Ihren Design-Prozess zu etablieren und eine Kultur der "Security by Design" in Ihrem Team zu verankern. [Kontaktieren Sie mich für einen Workshop zu sicheren Design-Praktiken.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

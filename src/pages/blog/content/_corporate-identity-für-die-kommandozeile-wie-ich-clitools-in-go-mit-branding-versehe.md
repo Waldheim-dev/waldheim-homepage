@@ -49,8 +49,3 @@ CLI-Tools sind oft die wichtigsten Schnittstellen für Entwickler und Admins. Du
 
 **Planen Sie die Entwicklung interner CLI-Werkzeuge und möchten diese auf ein professionelles Level heben?**  
 Ich unterstütze Sie beim Design und der Implementierung von Go-basierten CLIs, die nicht nur funktionieren, sondern auch begeistern. [Kontaktieren Sie mich für ein Design-Review Ihrer Tools.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

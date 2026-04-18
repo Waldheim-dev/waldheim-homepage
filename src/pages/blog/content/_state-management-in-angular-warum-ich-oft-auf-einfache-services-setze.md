@@ -122,3 +122,7 @@ Die Wahl der richtigen State-Management-Strategie ist eine der wichtigsten Archi
 
 **Stehen Sie vor der Entscheidung für eine State-Management-Architektur in Ihrem neuen Angular-Projekt oder kämpfen mit der Komplexität einer bestehenden?**
 Ich helfe Ihnen, die richtige, pragmatische Strategie für Ihren spezifischen Anwendungsfall zu finden und zu implementieren. Lassen Sie uns gemeinsam eine Architektur schaffen, die Ihr Problem löst, anstatt neue zu schaffen. [Kontaktieren Sie mich für eine Architekturberatung.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

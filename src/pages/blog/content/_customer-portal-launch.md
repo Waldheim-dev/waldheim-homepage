@@ -143,3 +143,7 @@ Das Portal befindet sich in **aktiver Entwicklung** und wird kontinuierlich verb
 - **Integration**: Stripe Payments, E-Mail-Benachrichtigungen
 
 Ich freue mich auf Ihr Feedback und darauf, gemeinsam die Zukunft der Kundenverwaltung zu gestalten! 🚀
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

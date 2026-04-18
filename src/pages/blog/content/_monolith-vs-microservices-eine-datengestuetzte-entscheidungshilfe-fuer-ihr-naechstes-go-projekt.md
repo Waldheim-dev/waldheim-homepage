@@ -61,3 +61,7 @@ Für die meisten neuen Projekte, bei denen die Anforderungen noch unklar sind, i
 
 **Stehen Sie vor der kritischen Architektur-Entscheidung für Ihr nächstes Go-Projekt?**
 Ich helfe Ihnen, die Anforderungen Ihres Projekts zu analysieren und eine fundierte, datengestützte Entscheidung zwischen Monolith und Microservices zu treffen. Lassen Sie uns gemeinsam eine Architektur entwerfen, die heute funktioniert und für morgen bereit ist. [Kontaktieren Sie mich für eine Architektur-Bewertung.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

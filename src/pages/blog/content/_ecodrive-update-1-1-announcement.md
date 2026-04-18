@@ -26,3 +26,8 @@ Ecodrive 1.1 befindet sich in der finalen Entwicklungsphase und wird bald veröf
 Folgt uns auf LinkedIn, um keine Neuigkeiten zu verpassen!
 
 #ecodrive #sparsamfahren #spritkosten #effizienz #kostenloseapp #neuesupdate #ecodrive1.1
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

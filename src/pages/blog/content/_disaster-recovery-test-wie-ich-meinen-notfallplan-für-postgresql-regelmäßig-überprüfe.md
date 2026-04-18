@@ -51,9 +51,3 @@ Ein Disaster Recovery Test ist kein Zeichen von Misstrauen in die eigene Technik
 
 **Ist Ihre Datenbank-Wiederherstellung krisenfest?**  
 Ich unterstütze Sie bei der Konzeption von Backup-Strategien und der Durchführung von Disaster-Recovery-Audits für Ihre PostgreSQL-Infrastruktur. [Lassen Sie uns Ihren Notfallplan gemeinsam testen.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

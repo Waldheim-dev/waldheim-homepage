@@ -14,7 +14,11 @@ gewachsen! Ich biete Ihnen ab sofort umfassende Unterstützung rund um das Thema
 
 ## Meine Smart Home Services – individuell und unabhängig
 
-Ich setze auf einfache, aber effektive Konzepte und lege Wert auf **lokale Steuerung** (Local Clusters). Das bedeutet
+Ich setze auf einfache, aber effektive Konzepte und lege Wert auf
+
+-----
+
+**lokale Steuerung** (Local Clusters). Das bedeutet
 für Sie:
 
 * **Mehr Unabhängigkeit:** Sie sind nicht an einen bestimmten Hersteller oder eine Cloud-Plattform gebunden.
@@ -41,3 +45,8 @@ Sind Sie bereit, Ihr Zuhause in ein intelligentes Zuhause zu verwandeln? Ich fre
 gemeinsam mit Ihnen Ihr individuelles Smart Home Projekt zu realisieren!
 
 [Kontaktieren Sie mich für eine kostenlose Erstberatung!](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

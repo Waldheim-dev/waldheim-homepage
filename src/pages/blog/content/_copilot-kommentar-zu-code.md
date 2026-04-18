@@ -53,3 +53,8 @@ Abschluss & Ausblick:
 Das war nur der Anfang! Indem du deine Absicht zuerst in Worten formulierst, schaffst du nicht nur schneller Code, sondern auch besser dokumentierten Code.
 
 Nächste Woche schauen wir uns an, wie wir Copilot nutzen, um bestehenden Code zu verbessern. Seid gespannt auf: "Lass Copilot aufräumen 🧹: Code-Refactoring auf Knopfdruck."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -49,8 +49,3 @@ Microservices ohne Data Governance führen unweigerlich in technische Schulden u
 
 **Haben Sie den Überblick über Ihre Datenflüsse in der Microservice-Landschaft verloren?**  
 Ich helfe Ihnen bei der Definition von Daten-Strategien und der technischen Umsetzung von Governance-Mechanismen. [Kontaktieren Sie mich für ein Architektur-Review.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

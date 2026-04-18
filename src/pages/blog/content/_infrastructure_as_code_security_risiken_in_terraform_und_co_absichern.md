@@ -146,3 +146,8 @@ Indem Sie diese Prinzipien befolgen, verwandeln Sie IaC von einem potenziellen R
 
 **Benötigen Sie Unterstützung bei der Absicherung Ihrer IaC-Pipelines?**
 Als Ihr Partner für DevSecOps analysiere und härte ich Ihre bestehenden Terraform-Konfigurationen, baue sichere CI/CD-Prozesse auf und schule Ihre Teams in den Best Practices der IaC-Sicherheit. [Kontaktieren Sie mich für eine unverbindliche Erstberatung und lassen Sie uns gemeinsam Ihre Cloud-Infrastruktur absichern.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

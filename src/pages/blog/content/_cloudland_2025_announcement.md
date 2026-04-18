@@ -14,3 +14,7 @@ Ich bin stolz, euch mitteilen zu können, dass ich auf der Cloudland 2025 als Sp
 Mein Vortrag "GitOps Adventures in der Praxis: Mit FluxCD und GitLab automatische Helm-Deployments in Kubernetes" 🚀 zeigt euch, wie ihr die Leistungsfähigkeit von GitOps nutzen könnt, um eure Deployments in Kubernetes zu automatisieren und zu optimieren. ⚙️
 
 Seid dabei am 02.07.2025 um 17:00 Uhr im Cloudspace 5 (Adorsys). 📍 Ich freue mich auf den Austausch mit euch! 🤝
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

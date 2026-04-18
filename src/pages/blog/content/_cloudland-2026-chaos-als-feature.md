@@ -96,3 +96,7 @@ Bleibt gespannt. Ich poste Updates. Und vielleicht schon bald den ersten Einblic
 **PS:** Wenn ihr mich dabei unterstützen wollt, teilt diesen Post. Je mehr Leute von der Idee hören, desto wahrscheinlicher wird die Jury sagen: "Das will ich sehen." 🤞
 
 *Hashtags:* #CloudLand2026 #Kubernetes #ChaosEngineering #GoLang #GitOps #CloudNative #Speaker #DevOps #K8s #FluxCD
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -60,3 +60,8 @@ Abschluss & Ausblick:
 Indem du Copilot den Kontext deines Projekts gibst, wandelst du ihn von einem reinen Code-Vervollständiger zu einem echten Entwicklungspartner, der deine Architektur respektiert.
 
 Im nächsten Teil starten wir auf der grünen Wiese und lassen uns von Copilot helfen, ein ganzes Projekt von Grund auf zu konzipieren. Sei dabei bei: "Start from Scratch 📝: Wie du mit Copilot ein Projekt von Null beginnst."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

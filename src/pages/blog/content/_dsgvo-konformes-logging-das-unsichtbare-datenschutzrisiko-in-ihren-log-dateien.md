@@ -114,3 +114,7 @@ DSGVO-konformes Logging erfordert einen Paradigmenwechsel: weg vom gedankenlosen
 
 **Sind Sie unsicher, ob Ihre Log-Dateien versteckte DSGVO-Risiken enthalten?**
 Ich helfe Ihnen, eine Strategie für DSGVO-konformes Logging zu entwickeln und in Ihren Go-Anwendungen zu implementieren. Von der Auswahl der richtigen Tools bis zur Implementierung von Maskierungs-Routinen – lassen Sie uns Ihre Logs sicher machen. [Kontaktieren Sie mich für ein Logging-Konzept.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
