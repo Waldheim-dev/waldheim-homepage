@@ -17,6 +17,8 @@ import partytown from '@astrojs/partytown';
 
 import robotsTxt from 'astro-robots-txt';
 
+import pageInsight from 'astro-page-insight';
+
 import 'dotenv/config';
 
 // https://astro.build/config
@@ -84,6 +86,7 @@ export default defineConfig({
         },
       ],
     }),
+    pageInsight(),
   ],
   build: {
     inlineStylesheets: 'auto',
