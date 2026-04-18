@@ -1,0 +1,110 @@
+---
+interface Props {
+  allBlogs: {
+    title: string;
+    description: string;
+    id: string;
+  }[];
+}
+
+const { allBlogs } = Astro.props;
+---
+
+<div class="relative group w-full" id="blog-search-container">
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+      <i class="fa-solid fa-magnifying-glass text-meg-text-secondary group-focus-within:text-meg-accent transition-colors"></i>
+    </div>
+    <input
+      type="text"
+      id="blog-search-input"
+      placeholder="Suchen Sie nach Themen (z.B. Go, Angular, Security)..."
+      class="block w-full pl-12 pr-4 py-4 bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl text-meg-text-primary-dark placeholder-meg-text-secondary focus:outline-none focus:ring-2 focus:ring-meg-accent/50 focus:border-meg-accent transition-all backdrop-blur-md shadow-lg"
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Results Dropdown -->
+  <div 
+    id="search-results" 
+    class="absolute z-[60] mt-4 w-full bg-meg-bg-dark/95 backdrop-blur-xl border border-meg-border-dark rounded-2xl shadow-2xl opacity-0 pointer-events-none translate-y-2 transition-all duration-300 max-h-[400px] overflow-y-auto"
+  >
+    <div id="results-list" class="p-2 space-y-1">
+      <!-- Results injected here -->
+    </div>
+    <div id="no-results" class="hidden p-8 text-center text-meg-text-secondary">
+      <i class="fa-solid fa-ghost text-4xl mb-4 block opacity-20"></i>
+      <p>Keine passenden Beiträge gefunden.</p>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ allBlogs }}>
+  const initSearch = () => {
+    const input = document.getElementById('blog-search-input');
+    const resultsContainer = document.getElementById('search-results');
+    const resultsList = document.getElementById('results-list');
+    const noResults = document.getElementById('no-results');
+    const container = document.getElementById('blog-search-container');
+
+    if (!input || !resultsContainer || !resultsList || !noResults) return;
+
+    input.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      
+      if (query.length < 2) {
+        resultsContainer.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        return;
+      }
+
+      const matches = allBlogs.filter(blog => 
+        blog.title.toLowerCase().includes(query) || 
+        blog.description.toLowerCase().includes(query)
+      ).slice(0, 8); // Max 8 results
+
+      resultsList.innerHTML = '';
+      
+      if (matches.length > 0) {
+        noResults.classList.add('hidden');
+        resultsList.classList.remove('hidden');
+        
+        matches.forEach(match => {
+          const item = document.createElement('a');
+          const slug = match.id.replace(/^_/, '');
+          item.href = `/blog/${slug}/`;
+          item.className = 'block p-4 rounded-xl hover:bg-meg-accent/10 border border-transparent hover:border-meg-accent/20 transition-all group';
+          item.innerHTML = `
+            <h4 class="font-bold text-meg-text-primary-dark group-hover:text-meg-accent transition-colors">${match.title}</h4>
+            <p class="text-xs text-meg-text-secondary line-clamp-1 mt-1">${match.description}</p>
+          `;
+          resultsList.appendChild(item);
+        });
+        
+        resultsContainer.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      } else {
+        resultsList.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        resultsContainer.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      }
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!container || !container.contains(e.target)) {
+        resultsContainer.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+      }
+    });
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        resultsContainer.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        input.blur();
+      }
+    });
+  };
+
+  // Run on load and after swaps
+  initSearch();
+  document.addEventListener('astro:page-load', initSearch);
+</script>
