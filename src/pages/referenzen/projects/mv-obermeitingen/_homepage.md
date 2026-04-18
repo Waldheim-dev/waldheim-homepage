@@ -5,14 +5,14 @@ description: "Relaunch der Website des MV Obermeitingen: Modernes, benutzerfreun
 shortDescription: "Entwicklung einer vollständigen, responsiven und SEO-optimierten Website für den Musikverein Obermeitingen mit Astro.js."
 pubDate: "2023-07-27"
 category: "website"
-heroImage: "referenzen/mvo-obermeitingen/homepage/mvo_startseite.png"
+heroImage: "/referenzen/mvo-obermeitingen/homepage/mvo_startseite.png"
 assets: [
-  "referenzen/mvo-obermeitingen/homepage/mvo_startseite.png",
-  "referenzen/mvo-obermeitingen/homepage/mvo_blog.png",
-  "referenzen/mvo-obermeitingen/homepage/mvo_event.png",
-  "referenzen/mvo-obermeitingen/homepage/mvo_musiker.png",
-  "referenzen/mvo-obermeitingen/homepage/mvo_webseite.png",
-  "referenzen/mvo-obermeitingen/homepage/mvo_konzerte.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_startseite.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_blog.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_event.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_musiker.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_webseite.png",
+  "/referenzen/mvo-obermeitingen/homepage/mvo_konzerte.png",
 ]
 overview: [
   {

@@ -8,11 +8,11 @@ category: "design"
 year: 2022
 eventSeries: "in-konzert"
 nextYear: "mv-obermeitingen/2024/in_konzert"
-heroImage: "referenzen/mvo-obermeitingen/in_konzert_2022.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/in_konzert_2022.jpg"
 assets: [
-    "referenzen/mvo-obermeitingen/in_konzert_2022.jpg",
-    "referenzen/mvo-obermeitingen/in_konzert_2022_flyer.jpg",
-    "referenzen/mvo-obermeitingen/in_konzert_2022_ticket.jpg"
+    "/referenzen/mvo-obermeitingen/in_konzert_2022.jpg",
+    "/referenzen/mvo-obermeitingen/in_konzert_2022_flyer.jpg",
+    "/referenzen/mvo-obermeitingen/in_konzert_2022_ticket.jpg"
 ]
 overview: [
   {

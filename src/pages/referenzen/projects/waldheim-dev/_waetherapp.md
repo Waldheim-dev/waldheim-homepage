@@ -5,13 +5,13 @@ description: "Entwicklung der WetterApp: Eine elegante, kostenlose Wetter-Anwend
 shortDescription: "Entwicklung der WetterApp zur präzisen Wettervorhersage mit Multi-Provider-Support."
 pubDate: "2026-01-20"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/waetherapp/waetherapp_main.png"
+heroImage: "/referenzen/waldheim-dev/waetherapp/waetherapp_main.png"
 assets:
   [
-    "referenzen/waldheim-dev/waetherapp/waetherapp_main.png",
-    "referenzen/waldheim-dev/waetherapp/waetherapp_comparison.png",
-    "referenzen/waldheim-dev/waetherapp/waetherapp_alerts.png",
-    "referenzen/waldheim-dev/waetherapp/waetherapp_darkmode.png",
+    "/referenzen/waldheim-dev/waetherapp/waetherapp_main.png",
+    "/referenzen/waldheim-dev/waetherapp/waetherapp_comparison.png",
+    "/referenzen/waldheim-dev/waetherapp/waetherapp_alerts.png",
+    "/referenzen/waldheim-dev/waetherapp/waetherapp_darkmode.png",
   ]
 problem: "Kommerzielle Wetter-Apps sind oft mit Werbung überladen, intransparent bei Datenquellen und bieten keine Vergleichsmöglichkeiten zwischen verschiedenen Anbietern. Es fehlte eine Open-Source-Alternative mit voller Kontrolle über die genutzten APIs."
 solution: "Entwicklung der WetterApp als kostenlose, werbefreie Open-Source-Lösung. Multi-Provider-Architektur ermöglicht Vergleich von 4 Wetter-APIs (Tomorrow.io, OpenWeatherMap, WeatherAPI.com, Open-Meteo). Echtzeit-Unwetterwarnungen, historische Daten und Standortvergleich für optimale Wetterinformationen."

@@ -5,23 +5,23 @@ description: "Entwicklung der Socialverse-Software: Eine Plattform zur Verwaltun
 shortDescription: "Entwicklung der Socialverse-Software zur Optimierung von Social Media Management Prozessen."
 pubDate: "2025-07-01"
 category: "entwicklung"
-heroImage: "socialverse/socialverse_dashboard.png"
+heroImage: "/socialverse/socialverse_dashboard.png"
 assets:
   [
-    "socialverse/socialverse_dashboard.png",
-    "socialverse/socialverse_ai.png",
-    "socialverse/socialverse_aisettings.png",
-    "socialverse/socialverse_campaign.png",
-    "socialverse/socialverse_campaignoverview.png",
-    "socialverse/socialverse_campaigns.png",
-    "socialverse/socialverse_dashboards.png",
-    "socialverse/socialverse_lead.png",
-    "socialverse/socialverse_leadoverview.png",
-    "socialverse/socialverse_leads.png",
-    "socialverse/socialverse_login.png",
-    "socialverse/socialverse_profile.png",
-    "socialverse/socialverse_settings.png",
-    "socialverse/socialverse_socials.png",
+    "/socialverse/socialverse_dashboard.png",
+    "/socialverse/socialverse_ai.png",
+    "/socialverse/socialverse_aisettings.png",
+    "/socialverse/socialverse_campaign.png",
+    "/socialverse/socialverse_campaignoverview.png",
+    "/socialverse/socialverse_campaigns.png",
+    "/socialverse/socialverse_dashboards.png",
+    "/socialverse/socialverse_lead.png",
+    "/socialverse/socialverse_leadoverview.png",
+    "/socialverse/socialverse_leads.png",
+    "/socialverse/socialverse_login.png",
+    "/socialverse/socialverse_profile.png",
+    "/socialverse/socialverse_settings.png",
+    "/socialverse/socialverse_socials.png",
   ]
 problem: "Als Social Media Manager oder Unternehmen ist die Verwaltung von Inhalten, die Planung von Beiträgen und die Analyse von Nutzerinteraktionen oft komplex und zeitaufwändig. Es fehlte eine benutzerfreundliche Lösung, um diese Aufgaben effizient zu bewältigen."
 client: {

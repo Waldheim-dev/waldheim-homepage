@@ -2,7 +2,7 @@
 title: "CloudLand 2025: Treffen Sie mich im Heidepark Soltau! ☁️🤝"
 description: "Ich bin auf der CloudLand 2025 Konferenz im Heidepark Soltau (01.-04. Juli) dabei! Erfahren Sie mehr über meinen Vortrag und tauschen Sie sich mit mir aus. 🚀"
 pubDate: "2024-12-06"
-heroImage: "https://images.unsplash.com/photo-1667372335937-d03be6fb0a9c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/cloudland_2025.webp"
 author: 'markus-waldheim'
 keywords: CloudLand, 2025, Konferenz, Heidepark, Soltau, Cloud, Computing, Vortrag, Workshop, Networking, markus-waldheim, IT, Technologie, Digitalisierung, Niedersachsen
 ---

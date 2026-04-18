@@ -5,14 +5,14 @@ description: "Entwicklung von Aether: Eine Plattform für sicheren, zeitlich beg
 shortDescription: "Entwicklung von Aether für sicheren, selbstzerstörenden Dateitransfer."
 pubDate: "2025-12-01"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/aether/aether_homepage.png"
+heroImage: "/referenzen/waldheim-dev/aether/aether_homepage.png"
 assets:
   [
-    "referenzen/waldheim-dev/aether/aether_homepage.png",
-    "referenzen/waldheim-dev/aether/aether_login.png",
-    "referenzen/waldheim-dev/aether/aether_audit.png",
-    "referenzen/waldheim-dev/aether/aether_dashboard.png",
-    "referenzen/waldheim-dev/aether/aether_settings.png",
+    "/referenzen/waldheim-dev/aether/aether_homepage.png",
+    "/referenzen/waldheim-dev/aether/aether_login.png",
+    "/referenzen/waldheim-dev/aether/aether_audit.png",
+    "/referenzen/waldheim-dev/aether/aether_dashboard.png",
+    "/referenzen/waldheim-dev/aether/aether_settings.png",
   ]
 problem: "Traditionelle Cloud-Speicher sammeln Nutzerdaten, speichern Dateien dauerhaft und bieten keine Garantie für automatische Löschung. Für sensible Daten fehlt eine sichere, ephemere Alternative ohne Datenvermüllung."
 solution: "Entwicklung von Aether als Plattform für zeitlich begrenzten Dateitransfer. Auto-Burn löscht Dateien nach Ablauf automatisch, TLS 1.3 und CDN sorgen für sichere Übertragung, DSGVO-konforme Infrastruktur in Deutschland. Von 100 MB (kostenlos) bis 50 GB (Pro-Tier)."

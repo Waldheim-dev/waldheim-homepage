@@ -19,25 +19,25 @@ overview:
     meta: "2FA & Passkey"
 pubDate: "2025-11-05"
 category: "entwicklung"
-heroImage: "referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp"
+heroImage: "/referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp"
 assets:
   [
-    "referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_abos.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_pricing.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_consulting.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_analytics.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_ticketadmin.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_admindashboard.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_users.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_change_plan.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_invoice.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_abrechnung.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_support.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_lizenzen.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_dashboard_dark.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_login.webp",
-    "referenzen/waldheim-dev/customer-portal/customer_portal_register.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_abos.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_pricing.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_consulting.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_analytics.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_ticketadmin.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_admindashboard.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_users.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_change_plan.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_invoice.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_abrechnung.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_support.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_lizenzen.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_dashboard_dark.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_login.webp",
+    "/referenzen/waldheim-dev/customer-portal/customer_portal_register.webp",
   ]
 problem: "Die Verwaltung von Lizenzen, Abonnements und Support-Anfragen für mehrere Produkte (Ecodrive, Socialverse, Silvacore) über verschiedene Plattformen hinweg war ineffizient und fehleranfällig. Es fehlte eine zentrale, automatisierte Lösung zur Kundenverwaltung, Zahlungsabwicklung und Support-Koordination."
 solution: "Entwicklung eines modernen Customer Portals als zentrale Verwaltungsplattform für alle Waldheim.dev-Produkte. Die Lösung bietet automatische Lizenzverwaltung, Stripe-Integration für Abonnements, ein dialogbasiertes Ticket-System und Produktmonitoring. Durch die vollständige Automatisierung und RBAC-basierte Zugriffskontrolle wird die Kundenverwaltung erheblich vereinfacht und professionalisiert."

@@ -5,7 +5,7 @@ description: "Kompletter Relaunch der waldheim.dev Website mit Astro.js und Tail
 shortDescription: "Relaunch der waldheim.dev Website mit Astro.js und Tailwind CSS."
 pubDate: "2023-06-29"
 category: "website"
-heroImage: "referenzen/waldheim-dev/homepage_24/waldheim.dev-webseite-v24.png"
+heroImage: "/referenzen/waldheim-dev/homepage_24/waldheim.dev-webseite-v24.png"
 assets: []
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

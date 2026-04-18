@@ -2,7 +2,7 @@
 title: "Smart Home einfach gemacht: Meine neuen Dienstleistungen für Ihr Zuhause 🏡"
 description: "Ich biete individuelle Smart Home Lösungen – von der Automation bis zur Sicherheit. Entdecken Sie die Vorteile lokaler Cluster und unabhängiger Systeme! ✨"
 pubDate: "2024-12-05"
-heroImage: "https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "/images/blog/neue-dienste-2025.webp"
 author: 'markus-waldheim'
 keywords: Smart Home, Hausautomation, Heimautomation, IoT, Smart Home Sicherheit, Local Cluster, lokale Steuerung, unabhängige Systeme, Beratung, Planung, Umsetzung, Installation, [weitere relevante Keywords, z.B. spezifische Technologien/Protokolle]
 ---

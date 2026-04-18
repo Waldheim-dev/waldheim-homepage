@@ -5,7 +5,7 @@ description: "Rebranding der waldheim.dev Website: Neues Farbkonzept, das die Un
 shortDescription: "Rebranding von waldheim.dev mit neuem Farb- und Emotionskonzept."
 pubDate: "2024-10-01"
 category: "website"  #  Oder besser "design", wenn es *hauptsächlich* um das Rebranding geht?
-heroImage: "referenzen/waldheim-dev/homepage_25/homepage.webp"
+heroImage: "/referenzen/waldheim-dev/homepage_25/homepage.webp"
 assets: []
 overview: [ # Bleibt, wie vom Schema vorgegeben
   {

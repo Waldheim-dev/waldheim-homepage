@@ -9,9 +9,9 @@ year: 2025
 eventSeries: "teenyparty"
 previousYear: "mv-obermeitingen/2024/teenyparty"
 nextYear: "mv-obermeitingen/2026/teenyparty"
-heroImage: "referenzen/mvo-obermeitingen/teenieparty_2025.jpg"
+heroImage: "/referenzen/mvo-obermeitingen/teenieparty_2025.jpg"
 assets: [
-  "referenzen/mvo-obermeitingen/teenieparty_2025.jpg"
+  "/referenzen/mvo-obermeitingen/teenieparty_2025.jpg"
 ]
 overview: [
   {
