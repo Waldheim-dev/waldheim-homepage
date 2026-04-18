@@ -116,3 +116,7 @@ Ein schnelles Frontend-Erlebnis ist das Ergebnis einer optimierten Zusammenarbei
 
 **Ist Ihre Angular-Anwendung langsamer als sie sein sollte, und Sie vermuten den Flaschenhals in der Datenbank?**
 Ich biete Full-Stack-Performance-Analysen an. Lassen Sie uns gemeinsam Ihre API-Endpunkte und PostgreSQL-Abfragen durchleuchten und optimieren, um die Ladezeiten Ihrer Anwendung drastisch zu verkürzen. [Kontaktieren Sie mich für ein Performance-Audit.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

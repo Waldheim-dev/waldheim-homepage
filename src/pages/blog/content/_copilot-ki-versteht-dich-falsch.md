@@ -48,3 +48,8 @@ Abschluss & Zusammenfassung der Serie:
 Die Arbeit mit Copilot ist ein Dialog. Manchmal muss man führen, manchmal erklären und manchmal korrigieren. Wenn du lernst, klar und kontextreich zu kommunizieren, wird die KI von einem einfachen Werkzeug zu einem echten Partner, der deine Produktivität auf ein neues Level hebt.
 
 Wir hoffen, diese 10-teilige Serie hat euch geholfen, das Potenzial von GitHub Copilot besser zu verstehen und zu nutzen. Jetzt seid ihr dran: Probiert es aus, experimentiert und findet euren eigenen Weg, um das Beste aus dieser Technologie herauszuholen! Viel Erfolg! 🚀
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

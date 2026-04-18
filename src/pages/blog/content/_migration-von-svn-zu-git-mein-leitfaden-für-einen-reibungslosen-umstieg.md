@@ -52,9 +52,3 @@ Die Migration von SVN zu Git ist oft der erste Schritt einer umfassenden digital
 
 **Hängt Ihr Projekt noch in SVN fest?**  
 Ich unterstütze Sie bei der technischen Migration Ihrer Repositories und schule Ihr Team im sicheren Umgang mit Git. [Lassen Sie uns gemeinsam modernisieren.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

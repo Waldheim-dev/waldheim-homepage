@@ -84,3 +84,7 @@ Die Migration eines Monolithen zu Microservices ist eine strategische Transforma
 
 **Steht Ihr gewachsener Monolith der weiteren Entwicklung im Weg und Sie erwägen eine Migration zu Microservices?**
 Ich unterstütze Sie bei der strategischen Planung und schrittweisen, risikominimierten Umsetzung Ihrer Migrationsstrategie. Lassen Sie uns gemeinsam einen sicheren und pragmatischen Weg für Ihre Anwendung finden. [Kontaktieren Sie mich für eine Migrations-Strategie-Session.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

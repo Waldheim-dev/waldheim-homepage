@@ -48,3 +48,8 @@ Abschluss & Ausblick:
 Die /explain-Funktion ist ein Game-Changer für das Onboarding in neue Projekte und den Umgang mit Legacy-Code. Sie spart nicht nur Zeit, sondern fördert auch das Verständnis und die Lernkurve im Team.
 
 Im nächsten Beitrag gehen wir einen Schritt weiter und zeigen Copilot, wie es sich Dinge über unser Projekt merken kann. Sei gespannt auf: "Das Gedächtnis der KI 🧠: So gibst du Copilot Kontext mit @workspace und /instructions."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

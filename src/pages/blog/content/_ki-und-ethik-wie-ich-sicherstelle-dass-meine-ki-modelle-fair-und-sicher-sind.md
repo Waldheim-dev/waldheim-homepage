@@ -51,3 +51,8 @@ Die Entwicklung von verantwortungsvoller KI ist eine interdisziplinäre Herausfo
 
 **Entwickeln Sie KI-Lösungen und möchten sicherstellen, dass diese nicht nur technisch exzellent, sondern auch ethisch und sicher sind?**
 Ich unterstütze Sie bei der Implementierung von "Responsible AI"-Praktiken in Ihren Entwicklungsprozess. Von der Bias-Analyse Ihrer Trainingsdaten bis zum Adversarial Testing Ihrer Modelle – lassen Sie uns gemeinsam KI schaffen, der wir vertrauen können. [Kontaktieren Sie mich für einen KI-Ethik-Workshop.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

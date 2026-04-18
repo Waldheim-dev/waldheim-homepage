@@ -1,54 +1,67 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
 import Blog from '../components/Blog.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 
-const { title, description, pubDate, heroImage, schema } = Astro.props;
+const { title, description, pubDate, heroImage, headings, readingTime } = Astro.props;
 ---
 
 <div class='px-6 py-6 lg:px-8'>
-  <div class='mx-auto max-w-3xl text-base leading-7 text-meg-text-primary-dark'>
-    {heroImage && <img width={1024} height={512} src={heroImage} loading='lazy' alt={title} class='aspect-video w-full rounded-2xl object-cover shadow-xl ring-1 ring-meg-border-dark'/>}
-    <h1 class='mt-8 text-4xl font-bold tracking-tight text-meg-text-primary-dark sm:text-5xl gsap-fadein'>{title}</h1>
+  <div class='mx-auto max-w-7xl lg:flex lg:gap-16 justify-center'>
+    <div class='max-w-3xl text-base leading-7 text-meg-text-primary-dark lg:shrink'>
+      {heroImage && <img width={1024} height={512} src={heroImage} loading='lazy' alt={title} class='aspect-video w-full rounded-2xl object-cover shadow-xl ring-1 ring-meg-border-dark'/>}
+      <h1 class='mt-8 text-4xl font-bold tracking-tight text-meg-text-primary-dark sm:text-5xl gsap-fadein'>{title}</h1>
 
-    <div class="relative mt-6 flex flex-col gap-2">
-      <div class="flex items-center gap-2 text-meg-accent font-medium">
-        <i class="fa-solid fa-calendar-day" aria-hidden="true"></i>
-        <FormattedDate date={pubDate} />
+      <div class="relative mt-6 flex flex-col gap-4">
+        <div class="flex flex-wrap items-center gap-6 text-sm">
+          <div class="flex items-center gap-2 text-meg-accent font-medium">
+            <i class="fa-solid fa-calendar-day" aria-hidden="true"></i>
+            <FormattedDate date={pubDate} />
+          </div>
+          {readingTime && (
+            <div class="flex items-center gap-2 text-meg-text-secondary font-medium">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              <span>{readingTime} Min. Lesezeit</span>
+            </div>
+          )}
+        </div>
+        <p class="text-lg text-meg-text-secondary leading-relaxed italic border-l-4 border-meg-accent pl-4 py-1 bg-meg-accent/5 rounded-r-lg">
+          {description}
+        </p>
       </div>
-      <p class="text-lg text-meg-text-secondary leading-relaxed italic border-l-4 border-meg-accent pl-4 py-1 bg-meg-accent/5 rounded-r-lg">
-        {description}
-      </p>
-    </div>
-    <div class="relative mt-10">
-      <div class="absolute inset-0 flex items-center" aria-hidden="true">
-        <div class="w-full border-t border-meg-border-dark"></div>
+      <div class="relative mt-10">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-meg-border-dark"></div>
+        </div>
       </div>
-    </div>
-    <div class="mt-16 prose prose-invert prose-meg w-full max-w-none">
-      <slot />
+      <div class="mt-16 prose prose-invert prose-meg w-full max-w-none">
+        <slot />
+      </div>
+
+      <!-- CTA & Internal Linking Section -->
+      <div class="mt-20 p-8 rounded-2xl bg-meg-surface-dark/50 border border-meg-border-dark shadow-sm">
+        <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">Interesse an einer Lösung?</h3>
+        <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+          Ich unterstütze Unternehmen und Verbände bei der digitalen Transformation. Erfahre mehr über meine <a href="/services/entwicklung/" class="text-meg-accent hover:underline font-bold">Softwareentwicklung</a> oder lass dich im Bereich <a href="/services/devsecops/" class="text-meg-accent hover:underline font-bold">DevSecOps</a> beraten.
+        </p>
+        <a 
+          href="https://portal.waldheim.dev" 
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-meg-accent text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
+        >
+          <i class="fa-solid fa-calendar-check"></i>
+          Beratungstermin vereinbaren
+        </a>
+      </div>
+
+      <div class='relative mt-16'>
+        <div class='absolute inset-0 flex items-center' aria-hidden='true'>
+          <div class='w-full border-t border-meg-border-dark'></div>
+        </div>
+      </div>
     </div>
 
-    <!-- CTA & Internal Linking Section -->
-    <div class="mt-20 p-8 rounded-2xl bg-meg-surface-dark/50 border border-meg-border-dark shadow-sm">
-      <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4">Interesse an einer Lösung?</h3>
-      <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-        Ich unterstütze Unternehmen und Verbände bei der digitalen Transformation. Erfahre mehr über meine <a href="/services/entwicklung/" class="text-meg-accent hover:underline font-bold">Softwareentwicklung</a> oder lass dich im Bereich <a href="/services/devsecops/" class="text-meg-accent hover:underline font-bold">DevSecOps</a> beraten.
-      </p>
-      <a 
-        href="https://portal.waldheim.dev" 
-        target="_blank"
-        class="inline-flex items-center gap-2 bg-meg-accent text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
-      >
-        <i class="fa-solid fa-calendar-check"></i>
-        Beratungstermin vereinbaren
-      </a>
-    </div>
-
-    <div class='relative mt-16'>
-      <div class='absolute inset-0 flex items-center' aria-hidden='true'>
-        <div class='w-full border-t border-meg-border-dark'></div>
-      </div>
-    </div>
+    {headings && <TableOfContents headings={headings} />}
   </div>
 </div>
 

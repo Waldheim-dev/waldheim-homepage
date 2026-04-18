@@ -1,0 +1,180 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+// Filter for H2 and H3
+const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+
+if (filteredHeadings.length === 0) return null;
+---
+
+<!-- Desktop Sidebar Container -->
+<aside class="hidden lg:block w-64 shrink-0 self-start sticky top-28">
+  <nav 
+    id="toc-desktop" 
+    class="p-6 rounded-2xl bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark shadow-xl overflow-y-auto max-h-[calc(100vh-8rem)]"
+    aria-label="Inhaltsverzeichnis"
+  >
+    <div class="absolute -inset-1 bg-gradient-to-r from-meg-accent/10 to-cyan-500/10 blur-lg -z-10 rounded-2xl opacity-50"></div>
+    
+    <h2 class="text-xs font-bold text-meg-text-primary-dark uppercase tracking-widest mb-4 flex items-center gap-2">
+      <i class="fa-solid fa-list-ol text-meg-accent"></i>
+      Inhalt
+    </h2>
+    
+    <ul class="space-y-3">
+      {filteredHeadings.map((h) => (
+        <li class={`text-sm transition-all duration-300 ${h.depth === 3 ? 'pl-4 border-l border-meg-border-dark ml-1' : ''}`}>
+          <a 
+            href={`${currentPath}#${h.slug}`}
+            class="block text-meg-text-secondary hover:text-meg-accent transition-colors py-1"
+            data-toc-link={h.slug}
+          >
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<!-- Mobile FAB -->
+<button 
+  id="toc-fab"
+  class="lg:hidden fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-meg-accent text-white shadow-2xl shadow-meg-accent/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all border border-white/20"
+  aria-label="Inhaltsverzeichnis öffnen"
+>
+  <i class="fa-solid fa-list-ul text-xl"></i>
+</button>
+
+<!-- Mobile Overlay -->
+<div 
+  id="toc-overlay" 
+  class="lg:hidden fixed inset-0 z-[100] bg-meg-bg-dark/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+>
+  <div class="absolute inset-x-0 bottom-0 max-h-[85vh] bg-meg-surface-dark rounded-t-[2.5rem] border-t border-meg-border-dark p-8 pb-12 transform translate-y-full transition-transform duration-500 ease-out overflow-y-auto">
+    <div class="w-12 h-1.5 bg-meg-border-dark rounded-full mx-auto mb-8"></div>
+    
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-2xl font-bold text-meg-text-primary-dark flex items-center gap-3">
+        <i class="fa-solid fa-list-ul text-meg-accent"></i>
+        Inhaltsverzeichnis
+      </h2>
+      <button id="toc-close" class="w-10 h-10 rounded-full bg-meg-border-dark/30 flex items-center justify-center text-meg-text-primary-dark hover:bg-meg-border-dark/50 transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    
+    <nav aria-label="Mobile Inhaltsverzeichnis">
+      <ul class="space-y-4">
+        {filteredHeadings.map((h) => (
+          <li class={`${h.depth === 3 ? 'pl-8 opacity-80' : 'text-lg font-semibold text-meg-text-primary-dark'}`}>
+            <a 
+              href={`${currentPath}#${h.slug}`}
+              class="block py-2 text-meg-text-secondary active:text-meg-accent transition-colors"
+              data-toc-link={h.slug}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  // Script runs on every page load (Astro View Transitions support)
+  const initToC = () => {
+    const fab = document.getElementById('toc-fab');
+    const overlay = document.getElementById('toc-overlay');
+    const overlayContent = overlay?.querySelector('div');
+    const closeBtn = document.getElementById('toc-close');
+    const links = document.querySelectorAll('[data-toc-link]');
+    
+    if (!fab || !overlay || !overlayContent) return;
+
+    const toggleOverlay = (open: boolean) => {
+      if (open) {
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlayContent.classList.remove('translate-y-full');
+        document.body.style.overflow = 'hidden';
+      } else {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlayContent.classList.add('translate-y-full');
+        document.body.style.overflow = '';
+      }
+    };
+
+    fab.addEventListener('click', () => toggleOverlay(true));
+    closeBtn?.addEventListener('click', () => toggleOverlay(false));
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggleOverlay(false);
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => toggleOverlay(false));
+    });
+
+    // ScrollSpy Implementation
+    const observerOptions = {
+      rootMargin: '-100px 0px -70% 0px',
+      threshold: 0
+    };
+
+    const headingElements = Array.from(document.querySelectorAll('.prose h2[id], .prose h3[id]'));
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          const currentPath = window.location.pathname;
+          links.forEach(link => {
+            const href = link.getAttribute('href');
+            // Check if it's the current path + hash or just the hash
+            if (href === `${currentPath}#${id}` || href === `#${id}`) {
+              link.classList.add('text-meg-accent', 'font-bold');
+              link.classList.remove('text-meg-text-secondary');
+            } else {
+              link.classList.remove('text-meg-accent', 'font-bold');
+              link.classList.add('text-meg-text-secondary');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    headingElements.forEach(el => observer.observe(el));
+  };
+
+  // Re-initialize on View Transitions
+  document.addEventListener('astro:page-load', initToC);
+</script>
+
+<style>
+  /* Optional: Subtile indicator for the active link */
+  [data-toc-link].text-meg-accent {
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    [data-toc-link].text-meg-accent::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 16px;
+      background-color: var(--color-meg-accent);
+      border-radius: 9999px;
+      box-shadow: 0 0 8px var(--color-meg-accent);
+    }
+  }
+</style>

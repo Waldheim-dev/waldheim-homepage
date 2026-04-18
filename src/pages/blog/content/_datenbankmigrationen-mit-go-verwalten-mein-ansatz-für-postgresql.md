@@ -54,8 +54,3 @@ Die Verwaltung von Datenbank-Migrationen direkt mit Go-Tools reduziert die Kompl
 
 **Suchen Sie nach einer effizienteren Methode, Ihre PostgreSQL-Migrationen in Go zu verwalten?**  
 Ich unterstütze Sie bei der Einrichtung professioneller Datenbank-Workflows und der Integration in Ihre Go-Backend-Architektur. [Lassen Sie uns Ihre Migrationen automatisieren.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

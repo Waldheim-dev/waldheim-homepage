@@ -71,3 +71,7 @@ Eine Migration zu Microservices ist eine enorme Chance, die Sicherheit Ihrer Anw
 
 **Planen Sie die Migration eines Monolithen und wollen sicherstellen, dass Sie keine alten Sicherheitsrisiken in Ihre neue Microservice-Architektur einschleppen?**
 Ich unterstütze Sie bei der systematischen Analyse Ihrer Legacy-Anwendung. Lassen Sie uns gemeinsam die versteckten Risiken aufdecken und einen sicheren Migrationsplan erstellen. [Kontaktieren Sie mich für ein umfassendes Legacy-Code-Audit.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

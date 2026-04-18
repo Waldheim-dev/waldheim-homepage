@@ -60,3 +60,8 @@ Abschluss & Ausblick:
 Der Inline-Chat ist eine der Funktionen, die man nicht mehr missen möchte, wenn man sie einmal verinnerlicht hat. Er macht die Interaktion mit der KI nahtlos und extrem effizient.
 
 Im nächsten Beitrag wechseln wir die Perspektive: Wir lassen uns von Copilot helfen, wenn wir mal nicht weiterwissen. Freu dich auf: "Dein persönlicher Code-Erklärer 🧑‍🏫: Wie du mit /explain selbst den komplexesten Code in Sekunden verstehst."
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -110,3 +110,8 @@ Die Git-Historie ist ein wertvolles Archiv Ihrer Softwareentwicklung, kann aber 
 
 **Befürchten Sie, dass in Ihren Git-Repositories sensible Daten schlummern?**
 Als Ihr DevSecOps-Experte führe ich professionelle Git-Sicherheits-Audits durch, identifiziere und eliminiere potenzielle Datenlecks und implementiere präventive Maßnahmen für eine sichere Code-Verwaltung. Lassen Sie uns gemeinsam Ihre Code-Historie bereinigen und absichern. [Kontaktieren Sie mich für eine vertrauliche Analyse Ihrer Git-Sicherheitslage.](mailto:kontakt@waldheim.dev)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

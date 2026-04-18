@@ -42,3 +42,8 @@ Wir verwandeln Socialverse von einem reinen Social-Media-Tool zu einer echten Ze
 Welches dieser Features findet ihr am spannendsten? Lasst es mich in den Kommentaren wissen!
 
 #Socialverse #Update #CRM #LeadManagement #Sales #Vertrieb #Go #Golang #SaaS #SelfHosted #Kanban #Softwareentwicklung #Tech
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

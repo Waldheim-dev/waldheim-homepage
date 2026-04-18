@@ -42,3 +42,8 @@ Abschluss & Ausblick:
 Die Arbeit mit Copilot in einem Monolithen ist weniger "Frage-Antwort" und mehr ein Dialog. Indem du ihn führst, anleitest und ihm den richtigen Kontext gibst, wird er zu einem unschätzbar wertvollen Werkzeug, um auch in der komplexesten Codebase produktiv und sicher zu arbeiten.
 
 Im letzten Teil unserer Serie widmen wir uns der Königsdisziplin: "Der Fachlogik-Flüsterer 🗣️: Wie vermittelst du der KI komplexe Business-Logik?"
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

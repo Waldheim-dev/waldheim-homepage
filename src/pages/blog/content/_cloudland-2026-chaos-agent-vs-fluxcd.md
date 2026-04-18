@@ -245,3 +245,7 @@ Bleibt dran. Es wird wild. 🔥
 **PS:** Wer von euch nutzt Go für Ops-Tooling? Was sind eure Lieblings-Libraries? Ich bin immer auf der Suche nach neuen Tools.
 
 *Hashtags:* #Go #Golang #ChaosEngineering #FluxCD #GitOps #Kubernetes #DevOps #CloudNative #CloudLand2026 #OpsTooling #K8s
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

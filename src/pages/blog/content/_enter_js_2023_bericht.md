@@ -51,3 +51,8 @@ Frontend-Entwicklung erweitern, neue Technologien kennenlernen und mich mit ande
 die Konferenz auf jeden Fall weiterempfehlen, besonders für Entwickler, die im Frontend-Bereich arbeiten oder sich dafür
 interessieren. Ich nehme viele neue Ideen und Impulse für meine Arbeit mit. Besonders werde ich WebAssembly im Auge
 behalten.
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

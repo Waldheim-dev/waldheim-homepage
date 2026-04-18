@@ -107,3 +107,7 @@ Es gibt nicht "das eine" richtige Caching-Muster. Die Wahl zwischen Cache-Aside,
 
 **Ist die Performance Ihrer Microservices durch langsame Datenbankzugriffe limitiert?**
 Ich helfe Ihnen bei der Konzeption und Implementierung einer maßgeschneiderten Caching-Strategie mit Go und Redis. Lassen Sie uns gemeinsam die Antwortzeiten Ihrer APIs drastisch reduzieren und Ihre Infrastruktur entlasten. [Kontaktieren Sie mich für eine Performance-Architektur-Beratung.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

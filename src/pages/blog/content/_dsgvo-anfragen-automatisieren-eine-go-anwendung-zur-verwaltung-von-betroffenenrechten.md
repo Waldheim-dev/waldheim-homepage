@@ -132,3 +132,8 @@ Die Einhaltung der DSGVO ist nicht nur eine rechtliche, sondern auch eine techni
 
 **Kämpfen Sie mit der manuellen und zeitaufwändigen Bearbeitung von DSGVO-Anfragen?**
 Ich helfe Ihnen bei der Konzeption und Entwicklung einer maßgeschneiderten Automatisierungslösung. Lassen Sie uns gemeinsam einen robusten und revisionssicheren Prozess aufbauen, der Ihre Compliance sicherstellt und Ihr Team entlastet. [Kontaktieren Sie mich für eine Analyse Ihrer Datenschutz-Prozesse.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

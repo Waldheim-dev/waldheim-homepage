@@ -43,3 +43,7 @@ Die CloudLand Konferenz bietet ein umfangreiches Programm für alle, die sich f�
 Weitere Informationen zur Konferenz und das vollständige Programm finden Sie auf der offiziellen Website.
 
 Ich freue mich auf inspirierende Gespräche und neue Kontakte im Heidepark Soltau! 😊
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

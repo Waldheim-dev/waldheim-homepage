@@ -108,3 +108,7 @@ Die Kombination aus VS Code, WSL 2, Go und Angular ermöglicht eine Entwicklungs
 
 **Verbringen Sie mehr Zeit mit der Konfiguration Ihrer Werkzeuge als mit dem eigentlichen Entwickeln?**
 Ich helfe Teams, ihre Entwicklungsumgebungen zu standardisieren und zu optimieren. Lassen Sie uns gemeinsam ein Setup schaffen, das Reibungsverluste minimiert und die Produktivität maximiert. [Kontaktieren Sie mich für einen Workshop zu effizienten Entwickler-Workflows.](/kontakt/)
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

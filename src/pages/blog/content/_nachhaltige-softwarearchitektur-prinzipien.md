@@ -49,8 +49,3 @@ Nachhaltige Softwarearchitektur ist kein Zufallsprodukt, sondern das Ergebnis vo
 
 **Steckt Ihr Projekt in einer Sackgasse aus technischer Schuld?**  
 Ich helfe Ihnen bei der Analyse Ihrer bestehenden Architektur und entwickle mit Ihnen einen Fahrplan für eine nachhaltige Modernisierung. [Kontaktieren Sie mich für ein Architektur-Audit.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

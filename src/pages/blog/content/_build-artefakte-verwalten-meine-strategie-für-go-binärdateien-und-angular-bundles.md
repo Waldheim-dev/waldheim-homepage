@@ -48,9 +48,3 @@ Wer seine Artefakte im Griff hat, minimiert das Risiko von Fehl-Deployments und 
 
 **Haben Sie Schwierigkeiten bei der Verwaltung Ihrer Build-Artefakte oder suchen nach einer sichereren Deployment-Strategie?**  
 Ich unterstütze Sie bei der Einrichtung professioneller Artifact-Workflows für Ihre Go- und Angular-Projekte. [Lassen Sie uns Ihre Pipeline optimieren.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

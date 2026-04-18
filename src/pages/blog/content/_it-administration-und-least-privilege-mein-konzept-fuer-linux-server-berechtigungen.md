@@ -78,3 +78,8 @@ Das Principle of Least Privilege ist mehr als nur eine technische Maßnahme; es 
 
 **Ist die Berechtigungsstruktur Ihrer Linux-Server über die Jahre unübersichtlich und zu permissiv geworden?**
 Ich helfe Ihnen, ein klares und sicheres Berechtigungskonzept nach dem Principle of Least Privilege zu entwerfen und umzusetzen. Lassen Sie uns gemeinsam die Angriffsfläche Ihrer Infrastruktur minimieren. [Kontaktieren Sie mich für ein Berechtigungs-Audit.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

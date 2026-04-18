@@ -36,3 +36,8 @@ Ich bin unglaublich gespannt auf die letzten Schritte und kann es kaum erwarten,
 Bleibt dran für das offizielle Release!
 
 #Socialverse #EntwicklerTagebuch #Go #Golang #AI #OpenSource #SocialMediaTool #LeadGeneration #SaaS #SelfHosted #Docker #Kubernetes
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

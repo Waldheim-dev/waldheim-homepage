@@ -49,9 +49,3 @@ PostgreSQL-Replikation ist das Fundament für moderne, hochverfügbare Enterpris
 
 **Planen Sie den Aufbau eines hochverfügbaren PostgreSQL-Clusters oder möchten Sie Ihre Lese-Performance steigern?**  
 Ich unterstütze Sie bei der Konzeption und Einrichtung von Replikations-Szenarien und dem Management Ihrer Datenbank-Infrastruktur. [Kontaktieren Sie mich für eine Architektur-Beratung.](mailto:admin@waldheim.dev)
-
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

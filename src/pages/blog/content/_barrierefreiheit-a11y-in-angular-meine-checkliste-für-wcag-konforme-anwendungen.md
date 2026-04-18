@@ -48,8 +48,3 @@ Accessibility lässt sich nicht "nachträglich dranflanschen". Sie muss von der 
 
 **Benötigen Sie Unterstützung bei der Optimierung Ihrer Angular-Anwendung hinsichtlich Barrierefreiheit?**  
 Ich führe Accessibility-Audits durch und helfe Ihrem Team bei der Umsetzung inklusiver Frontends. [Kontaktieren Sie mich für ein Beratungsgespräch.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

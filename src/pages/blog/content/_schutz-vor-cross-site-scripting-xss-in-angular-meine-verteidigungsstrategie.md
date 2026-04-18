@@ -65,3 +65,8 @@ Ein effektiver Schutz vor XSS in Angular ist keine einmalige Aufgabe, sondern ei
 
 **Ist Ihre Angular-Anwendung wirklich so sicher gegen XSS, wie Sie hoffen?**
 Ich biete umfassende Sicherheits-Audits für Frontend-Anwendungen an. Lassen Sie uns gemeinsam Ihre Verteidigungsstrategie überprüfen und potenzielle Schwachstellen schließen, bevor sie ausgenutzt werden können. [Kontaktieren Sie mich für einen professionellen Security-Check.](/kontakt/)
+
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

@@ -47,8 +47,3 @@ Durch die Automatisierung der DSGVO-Berichterstattung verwandeln wir eine lästi
 
 **Quälen Sie sich noch mit manuellen DSGVO-Listen herum?**  
 Ich unterstütze Sie dabei, Ihre Datenschutz-Dokumentation zu automatisieren und nahtlos in Ihre IT-Prozesse zu integrieren. [Kontaktieren Sie mich für eine Analyse Ihrer Datenprozesse.](mailto:admin@waldheim.dev)
-
------
-
-**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
-Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)

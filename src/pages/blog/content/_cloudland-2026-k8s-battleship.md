@@ -242,3 +242,7 @@ Wir sehen uns im Mai. Trainiert eure Daumen. 👾
 **PS:** Ja, ich weiß. "Schiffe versenken" heißt eigentlich "Battleship". Aber "K8s Battleship" klingt einfach besser als "K8s Schiffe Versenken". 😉
 
 *Hashtags:* #Kubernetes #K8s #Battleship #Gamification #CloudLand2026 #PlatformEngineering #DevOps #Resilience #GitOps #FluxCD #Go #Golang #LiveDemo #Interactive
+-----
+
+**Interessieren Sie sich für dieses Thema oder benötigen Sie Beratung?**  
+Ich unterstütze Sie gerne bei Ihren Projekten. [Kontaktieren Sie mich für eine strategische Beratung.](mailto:admin@waldheim.dev)
