@@ -50,4 +50,4 @@ Die Integration eines professionellen Design-Systems in Angular erfordert initia
 -----
 
 **Planen Sie den Aufbau eines eigenen Design-Systems oder möchten Sie ein bestehendes in Angular integrieren?**  
-Ich unterstütze Sie bei der Architektur Ihrer Komponenten-Bibliothek und der technischen Umsetzung Ihrer Design-Tokens. [Kontaktieren Sie mich für ein Strategie-Gespräch.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Architektur Ihrer Komponenten-Bibliothek und der technischen Umsetzung Ihrer Design-Tokens. [Kontaktieren Sie mich für ein Strategie-Gespräch.](mailto:kontakt@waldheim.dev)

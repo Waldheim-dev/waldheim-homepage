@@ -47,4 +47,4 @@ Ein Redis-Cluster nimmt die Angst vor dem nächsten Lastpeak oder dem Ausfall ei
 -----
 
 **Benötigen Sie Unterstützung beim Aufbau eines hochverfügbaren Caching-Layers oder suchen Sie nach einer Lösung, um Ihre Redis-Infrastruktur zu skalieren?**  
-Ich helfe Ihnen bei der Konzeption, Installation und Optimierung Ihrer Redis-Cluster – für maximale Performance und Sicherheit. [Lassen Sie uns Ihre Daten beschleunigen.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Konzeption, Installation und Optimierung Ihrer Redis-Cluster – für maximale Performance und Sicherheit. [Lassen Sie uns Ihre Daten beschleunigen.](mailto:kontakt@waldheim.dev)

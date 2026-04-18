@@ -54,7 +54,7 @@ def extract_from_blog_md():
                     if pub_date_match:
                         block = re.sub(r'pubDate: ".*?"', f'pubDate: "{pub_date_match.group(1)}"', block)
                     
-                    block = block.replace('beispiel@email.com', 'admin@waldheim.dev')
+                    block = block.replace('beispiel@email.com', 'kontakt@waldheim.dev')
                     
                     # Ensure linkedinPost is preserved
                     if 'linkedinPost:' in existing_content and 'linkedinPost:' not in block:

@@ -47,4 +47,4 @@ Die Zukunft 2027 wird uns mehr Automatisierung, höhere Sicherheitsstandards und
 -----
 
 **Möchten Sie Ihre Softwarestrategie für die kommenden Jahre zukunftssicher machen?**  
-Ich unterstütze Unternehmen dabei, moderne Technologien wie KI und Cloud-Native-Architekturen sinnvoll und sicher zu adaptieren. [Kontaktieren Sie mich für eine strategische Technologie-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Unternehmen dabei, moderne Technologien wie KI und Cloud-Native-Architekturen sinnvoll und sicher zu adaptieren. [Kontaktieren Sie mich für eine strategische Technologie-Beratung.](mailto:kontakt@waldheim.dev)

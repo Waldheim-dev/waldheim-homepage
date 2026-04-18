@@ -52,4 +52,4 @@ Ein robuster Monitoring-Stack mit Go, Prometheus und Grafana ist die Lebensversi
 -----
 
 **Haben Sie den Überblick über Ihre Microservices verloren?**  
-Ich unterstütze Sie bei der Einführung von professionellem Monitoring und Alerting für Ihre Go-Infrastruktur. [Lassen Sie uns Ihre System-Transparenz erhöhen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Einführung von professionellem Monitoring und Alerting für Ihre Go-Infrastruktur. [Lassen Sie uns Ihre System-Transparenz erhöhen.](mailto:kontakt@waldheim.dev)

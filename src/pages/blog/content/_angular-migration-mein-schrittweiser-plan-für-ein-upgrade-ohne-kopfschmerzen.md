@@ -48,4 +48,4 @@ Der Schlüssel zu schmerzfreien Angular-Upgrades ist Regelmäßigkeit. Wer alle 
 -----
 
 **Steht bei Ihnen ein großes Angular-Upgrade an und Sie suchen nach einem erfahrenen Partner?**  
-Ich begleite Sie bei der Migration Ihrer Enterprise-Anwendungen und sorge für einen reibungslosen Übergang. [Kontaktieren Sie mich für eine Migrations-Analyse.](mailto:admin@waldheim.dev)
+Ich begleite Sie bei der Migration Ihrer Enterprise-Anwendungen und sorge für einen reibungslosen Übergang. [Kontaktieren Sie mich für eine Migrations-Analyse.](mailto:kontakt@waldheim.dev)

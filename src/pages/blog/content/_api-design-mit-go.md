@@ -53,4 +53,4 @@ Gutes API-Design ist ein Akt der Empathie gegenüber den Entwicklern, die Ihre S
 -----
 
 **Steht bei Ihnen die Entwicklung einer neuen API an oder möchten Sie eine bestehende Schnittstelle verbessern?**  
-Ich unterstütze Sie bei der Konzeption und dem Design von entwicklerfreundlichen und zukunftssicheren RESTful APIs. Lassen Sie uns gemeinsam eine Schnittstelle schaffen, die die Zusammenarbeit in Ihrem Team beschleunigt. [Kontaktieren Sie mich für ein API-Design-Review.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und dem Design von entwicklerfreundlichen und zukunftssicheren RESTful APIs. Lassen Sie uns gemeinsam eine Schnittstelle schaffen, die die Zusammenarbeit in Ihrem Team beschleunigt. [Kontaktieren Sie mich für ein API-Design-Review.](mailto:kontakt@waldheim.dev)

@@ -46,4 +46,4 @@ Go macht den technischen Teil der Portierung extrem einfach. Die wirkliche Herau
 -----
 
 **Benötigen Sie Hilfe bei der Portierung Ihrer Go-Anwendungen auf Linux oder planen Sie den Wechsel von einer Windows-Infrastruktur?**  
-Ich unterstütze Sie beim Deployment und Betrieb Ihrer Services in professionellen Linux-Umgebungen. [Kontaktieren Sie mich für eine Deployment-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie beim Deployment und Betrieb Ihrer Services in professionellen Linux-Umgebungen. [Kontaktieren Sie mich für eine Deployment-Beratung.](mailto:kontakt@waldheim.dev)

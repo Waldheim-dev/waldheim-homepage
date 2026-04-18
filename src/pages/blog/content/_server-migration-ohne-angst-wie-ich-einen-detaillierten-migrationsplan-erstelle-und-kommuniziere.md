@@ -49,4 +49,4 @@ Eine Server-Migration ist ein handwerkliches Projekt. Wer sich die Zeit nimmt, d
 -----
 
 **Planen Sie eine komplexe Server-Migration oder möchten Sie Ihre IT-Infrastruktur modernisieren, ohne den laufenden Betrieb zu gefährden?**  
-Ich unterstütze Sie als erfahrener Projektleiter und Techniker bei der Planung und Durchführung Ihrer Migrationsprojekte. [Lassen Sie uns gemeinsam einen sicheren Migrationsplan erstellen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie als erfahrener Projektleiter und Techniker bei der Planung und Durchführung Ihrer Migrationsprojekte. [Lassen Sie uns gemeinsam einen sicheren Migrationsplan erstellen.](mailto:kontakt@waldheim.dev)

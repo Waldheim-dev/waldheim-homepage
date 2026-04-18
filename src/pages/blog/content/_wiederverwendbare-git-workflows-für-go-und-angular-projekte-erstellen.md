@@ -51,4 +51,4 @@ Wiederverwendbare Workflows sind eine Investition, die sich sofort auszahlt. Sie
 -----
 
 **Möchten Sie Ihre CI/CD-Pipelines professionalisieren oder suchen Sie nach einer Strategie, um Ihre DevOps-Prozesse zu skalieren?**  
-Ich unterstütze Sie bei der Konzeption und Implementierung von automatisierten Workflows, die perfekt auf Ihre Go- und Angular-Umgebungen zugeschnitten sind. [Lassen Sie uns Ihre Pipelines optimieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und Implementierung von automatisierten Workflows, die perfekt auf Ihre Go- und Angular-Umgebungen zugeschnitten sind. [Lassen Sie uns Ihre Pipelines optimieren.](mailto:kontakt@waldheim.dev)

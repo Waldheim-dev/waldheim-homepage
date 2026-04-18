@@ -54,4 +54,4 @@ Go kombiniert die Einfachheit von Skriptsprachen mit der Robustheit und Performa
 -----
 
 **Möchten auch Sie Ihre IT-Infrastruktur effizienter automatisieren?**  
-Ich unterstütze Sie bei der Entwicklung maßgeschneiderter Automatisierungslösungen mit Go – von einfachen Skripten bis hin zu komplexen Monitoring-Tools. [Kontaktieren Sie mich für eine Tooling-Beratung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Entwicklung maßgeschneiderter Automatisierungslösungen mit Go – von einfachen Skripten bis hin zu komplexen Monitoring-Tools. [Kontaktieren Sie mich für eine Tooling-Beratung.](mailto:kontakt@waldheim.dev)

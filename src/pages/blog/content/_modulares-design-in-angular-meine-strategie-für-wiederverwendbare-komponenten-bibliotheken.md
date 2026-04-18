@@ -48,4 +48,4 @@ Ein modulares Design in Angular ist die Grundlage für langfristig wartbare Ente
 -----
 
 **Möchten Sie Ihre Frontend-Entwicklung durch eine eigene Komponenten-Bibliothek beschleunigen?**  
-Ich unterstütze Sie bei der Konzeption und Umsetzung Ihrer modularen Frontend-Architektur. [Kontaktieren Sie mich für ein Design-System-Audit.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Konzeption und Umsetzung Ihrer modularen Frontend-Architektur. [Kontaktieren Sie mich für ein Design-System-Audit.](mailto:kontakt@waldheim.dev)

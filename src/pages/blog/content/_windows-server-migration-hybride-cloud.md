@@ -49,4 +49,4 @@ Eine Windows-Server-Migration ist ein komplexes Unterfangen, aber mit einem klar
 -----
 
 **Planen Sie die Migration Ihrer Windows-Server und wollen dabei keine Kompromisse bei der Sicherheit eingehen?**  
-Ich unterstütze Sie als erfahrener IT-Administrator und Sicherheitsexperte bei der Planung, Durchführung und Absicherung Ihrer Migration in eine hybride Cloud. Lassen Sie uns gemeinsam einen sicheren und effizienten Weg für Ihre Workloads gestalten. [Kontaktieren Sie mich für eine unverbindliche Erstberatung.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie als erfahrener IT-Administrator und Sicherheitsexperte bei der Planung, Durchführung und Absicherung Ihrer Migration in eine hybride Cloud. Lassen Sie uns gemeinsam einen sicheren und effizienten Weg für Ihre Workloads gestalten. [Kontaktieren Sie mich für eine unverbindliche Erstberatung.](mailto:kontakt@waldheim.dev)

@@ -49,4 +49,4 @@ Ein klares Umgebungsmodell und ein strukturierter Git-Workflow nehmen den Stress
 -----
 
 **Suchen Sie nach einem stabilen und sicheren Deployment-Modell für Ihre Softwareprojekte oder benötigen Sie Unterstützung bei der Optimierung Ihrer CI/CD-Pipelines?**  
-Ich helfe Ihnen beim Aufbau professioneller Workflows, die Ihre Time-to-Market verkürzen und gleichzeitig die Qualität erhöhen. [Kontaktieren Sie mich für eine DevOps-Beratung.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen beim Aufbau professioneller Workflows, die Ihre Time-to-Market verkürzen und gleichzeitig die Qualität erhöhen. [Kontaktieren Sie mich für eine DevOps-Beratung.](mailto:kontakt@waldheim.dev)

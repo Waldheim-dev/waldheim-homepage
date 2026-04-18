@@ -50,4 +50,4 @@ Ein durchdachter Backup- und Recovery-Plan für PostgreSQL ist eine Investition 
 -----
 
 **Ist Ihre PostgreSQL-Datenbank ausreichend gegen Datenverlust geschützt?**  
-Ich unterstütze IT-Manager bei der Erstellung von krisenfesten Backup-Konzepten und der technischen Umsetzung von Recovery-Strategien. [Kontaktieren Sie mich für ein unverbindliches Beratungsgespräch.](mailto:admin@waldheim.dev)
+Ich unterstütze IT-Manager bei der Erstellung von krisenfesten Backup-Konzepten und der technischen Umsetzung von Recovery-Strategien. [Kontaktieren Sie mich für ein unverbindliches Beratungsgespräch.](mailto:kontakt@waldheim.dev)

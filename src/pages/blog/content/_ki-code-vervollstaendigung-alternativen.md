@@ -44,4 +44,4 @@ Es gibt nicht die eine "beste" KI. Wer maximale Geschwindigkeit und Kontext will
 -----
 
 **Suchen Sie nach dem richtigen KI-Setup für Ihr Entwicklerteam oder sind Sie unsicher bezüglich der Datenschutz-Implikationen?**  
-Ich berate Sie bei der Auswahl und Einführung von KI-Werkzeugen, um Ihre Entwicklungsprozesse sicher und effizient zu beschleunigen. [Kontaktieren Sie mich für eine Tool-Beratung.](mailto:admin@waldheim.dev)
+Ich berate Sie bei der Auswahl und Einführung von KI-Werkzeugen, um Ihre Entwicklungsprozesse sicher und effizient zu beschleunigen. [Kontaktieren Sie mich für eine Tool-Beratung.](mailto:kontakt@waldheim.dev)

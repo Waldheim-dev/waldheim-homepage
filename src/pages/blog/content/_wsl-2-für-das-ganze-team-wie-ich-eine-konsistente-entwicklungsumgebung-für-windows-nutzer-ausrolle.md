@@ -47,4 +47,4 @@ Ein strukturiertes Rollout von WSL 2 verwandelt Windows-Laptops in erstklassige 
 -----
 
 **Stehen Sie vor der Herausforderung, Ihre Entwicklungsumgebungen zu standardisieren oder planen Sie ein Rollout von WSL 2 in Ihrem Team?**  
-Ich unterstütze IT-Abteilungen und Entwicklerteams dabei, effiziente und konsistente Workflows auf Basis von Windows und Linux zu etablieren. [Kontaktieren Sie mich für ein Strategiegespräch.](mailto:admin@waldheim.dev)
+Ich unterstütze IT-Abteilungen und Entwicklerteams dabei, effiziente und konsistente Workflows auf Basis von Windows und Linux zu etablieren. [Kontaktieren Sie mich für ein Strategiegespräch.](mailto:kontakt@waldheim.dev)

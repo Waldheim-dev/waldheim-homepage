@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Blog from '../../components/Blog.astro';
+import BlogPagination from '../../components/BlogPagination.astro';
+import BlogSearch from '../../components/BlogSearch.astro';
 import { getCollection } from 'astro:content';
 import { SchemaUtils } from '../../utils/schema';
 import { SITE_TITLE } from '../../consts';
@@ -10,6 +12,29 @@ const blogs = (await getCollection('blog'))
 
 const pageSize = 6;
 const paginatedProjects = blogs.slice(0, pageSize);
+
+// Mock page object for the first page to use with BlogPagination
+const mockPage = {
+  data: paginatedProjects,
+  start: 0,
+  end: paginatedProjects.length - 1,
+  total: blogs.length,
+  currentPage: 1,
+  size: pageSize,
+  lastPage: Math.ceil(blogs.length / pageSize),
+  url: {
+    current: '/blog',
+    next: blogs.length > pageSize ? '/blog/2' : undefined,
+    prev: undefined
+  }
+};
+
+// Get all blogs for search index
+const allBlogs = blogs.map(post => ({
+  title: post.data.title,
+  description: post.data.description,
+  id: post.id
+}));
 
 // SEO & Meta
 const titel = 'IT-Insights & Tech-Blog | Waldheim.dev';
@@ -54,23 +79,25 @@ const articleSchema = paginatedProjects.map((post) => SchemaUtils.getArticleSche
           </p>
         </header>
 
+        <!-- Search & Top Pagination -->
+        <div class="mb-12 flex flex-col lg:flex-row gap-8 items-end justify-between">
+          <div class="w-full lg:max-w-md">
+            <BlogSearch allBlogs={allBlogs} />
+          </div>
+          <div class="w-full lg:w-auto">
+             <BlogPagination page={mockPage} />
+          </div>
+        </div>
+
         <!-- Blog Grid Component -->
-        <div class="relative">
+        <div class="relative min-h-[600px]">
           <Blog blog={paginatedProjects}/>
         </div>
         
-        <!-- Action Area -->
-        {blogs.length > pageSize && (
-          <div class="mt-20 text-center">
-            <a 
-              href="/blog/1/" 
-              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold rounded-2xl hover:border-meg-accent/50 transition-all"
-            >
-              Alle Beiträge durchsuchen
-              <i class="fa-solid fa-grid-horizontal"></i>
-            </a>
-          </div>
-        )}
+        <!-- Bottom Pagination -->
+        <div class="mt-20">
+          <BlogPagination page={mockPage} />
+        </div>
       </div>
     </section>
 

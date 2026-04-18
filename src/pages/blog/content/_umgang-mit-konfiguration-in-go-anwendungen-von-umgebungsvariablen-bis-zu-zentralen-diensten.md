@@ -48,4 +48,4 @@ In meinen Go-Projekten fahre ich meist zweigleisig: Ein stabiles Fundament aus U
 -----
 
 **Suchen Sie nach einem sauberen Architektur-Muster für Ihre Anwendungskonfiguration oder planen Sie die Einführung eines zentralen Secret-Managements?**  
-Ich unterstütze Sie bei der Auswahl und Implementierung der passenden Strategie für Ihre Go-Services. [Lassen Sie uns Ihre Konfigurations-Logik professionalisieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Auswahl und Implementierung der passenden Strategie für Ihre Go-Services. [Lassen Sie uns Ihre Konfigurations-Logik professionalisieren.](mailto:kontakt@waldheim.dev)

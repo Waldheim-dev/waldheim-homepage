@@ -42,4 +42,4 @@ End-to-End-Verschlüsselung erhöht die Komplexität einer Architektur deutlich,
 -----
 
 **Müssen Sie hochsensible Daten in Ihrer Microservice-Architektur verarbeiten und benötigen den höchstmöglichen Schutz?**  
-Ich helfe Ihnen bei der Konzeption und Implementierung von End-to-End-Verschlüsselungslösungen. Von der Auswahl des richtigen KMS bis zur Implementierung in Ihren Go-Services – lassen Sie uns eine Datensicherheitsarchitektur bauen, der Sie vertrauen können. [Kontaktieren Sie mich für eine vertrauliche Beratung.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Konzeption und Implementierung von End-to-End-Verschlüsselungslösungen. Von der Auswahl des richtigen KMS bis zur Implementierung in Ihren Go-Services – lassen Sie uns eine Datensicherheitsarchitektur bauen, der Sie vertrauen können. [Kontaktieren Sie mich für eine vertrauliche Beratung.](mailto:kontakt@waldheim.dev)

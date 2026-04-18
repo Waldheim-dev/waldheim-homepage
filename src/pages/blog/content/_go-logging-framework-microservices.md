@@ -49,4 +49,4 @@ Ein exzellentes Logging-Framework ist kein Luxus, sondern die Grundlage für den
 -----
 
 **Haben Sie Schwierigkeiten, Fehler in Ihrer Microservice-Landschaft zu finden oder ist Ihr aktuelles Logging unübersichtlich?**  
-Ich helfe Ihnen bei der Implementierung einer modernen Observability-Strategie und dem Aufbau eines performanten Logging-Frameworks in Go. [Kontaktieren Sie mich für ein Monitoring-Review.](mailto:admin@waldheim.dev)
+Ich helfe Ihnen bei der Implementierung einer modernen Observability-Strategie und dem Aufbau eines performanten Logging-Frameworks in Go. [Kontaktieren Sie mich für ein Monitoring-Review.](mailto:kontakt@waldheim.dev)

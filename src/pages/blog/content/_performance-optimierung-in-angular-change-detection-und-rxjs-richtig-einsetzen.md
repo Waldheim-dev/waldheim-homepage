@@ -49,4 +49,4 @@ Eine schnelle Angular-Anwendung ist kein Zufall, sondern das Ergebnis bewusster 
 -----
 
 **Ist Ihre Angular-Anwendung zu langsam oder fühlt sie sich "zäh" an?**  
-Ich führe Performance-Audits durch und helfe Ihnen, Engpässe in Ihrem Frontend zu beseitigen. [Kontaktieren Sie mich für eine Analyse.](mailto:admin@waldheim.dev)
+Ich führe Performance-Audits durch und helfe Ihnen, Engpässe in Ihrem Frontend zu beseitigen. [Kontaktieren Sie mich für eine Analyse.](mailto:kontakt@waldheim.dev)

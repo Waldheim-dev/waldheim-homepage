@@ -49,4 +49,4 @@ Die Wahl zwischen Monorepo und Polyrepo hängt von der Teamgröße, der technisc
 -----
 
 **Stehen Sie vor der Entscheidung für eine neue Git-Strategie oder kämpfen Sie mit den Nachteilen Ihrer aktuellen Struktur?**  
-Ich unterstütze Sie bei der Planung und Migration Ihrer Repository-Landschaft und der Optimierung Ihrer CI/CD-Prozesse. [Lassen Sie uns Ihre Git-Strategie gemeinsam optimieren.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Planung und Migration Ihrer Repository-Landschaft und der Optimierung Ihrer CI/CD-Prozesse. [Lassen Sie uns Ihre Git-Strategie gemeinsam optimieren.](mailto:kontakt@waldheim.dev)

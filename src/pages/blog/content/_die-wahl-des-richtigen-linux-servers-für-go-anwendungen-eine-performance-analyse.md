@@ -50,4 +50,4 @@ Die Wahl des richtigen Linux-Servers für Ihre Go-Anwendung ist die Basis für e
 -----
 
 **Suchen Sie nach dem optimalen Hosting-Setup für Ihre Go-Services?**  
-Ich unterstütze Sie bei der Performance-Analyse Ihrer Linux-Server und der Optimierung Ihrer Deployment-Strategie. [Lassen Sie uns Ihre Infrastruktur auf Höchstleistung trimmen.](mailto:admin@waldheim.dev)
+Ich unterstütze Sie bei der Performance-Analyse Ihrer Linux-Server und der Optimierung Ihrer Deployment-Strategie. [Lassen Sie uns Ihre Infrastruktur auf Höchstleistung trimmen.](mailto:kontakt@waldheim.dev)
