@@ -238,7 +238,7 @@ pnpm lighthouse:assert
 - `tailwindcss@4.1.14` - Styling
 - `@tailwindcss/vite@4.1.14` - Vite Integration
 - `gsap@3.13.0` - Animationen
-- `@fortawesome/fontawesome-pro@7.1.0` - Icons
+- `@fortawesome/fontawesome-free@6.x` - Icons
 - `@astrojs/sitemap@3.6.0` - Sitemap Generation
 - `@waldheimdev/astro-ai-llms-txt@1.1.3` - LLMs.txt für KI-Crawler
 - `@sentry/astro@10.19.0` - Error Tracking
