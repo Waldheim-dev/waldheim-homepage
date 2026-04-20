@@ -1,4 +1,4 @@
-@import "@fortawesome/fontawesome-pro/css/all.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "vanilla-cookieconsent/dist/cookieconsent.css";
 @import "tailwindcss";
 @config '../../tailwind.config.cjs';

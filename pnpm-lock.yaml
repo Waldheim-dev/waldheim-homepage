@@ -20,7 +20,7 @@ importers:
       '@astrojs/sitemap':
         specifier: 3.7.2
         version: 3.7.2
-      '@fortawesome/fontawesome-pro':
+      '@fortawesome/fontawesome-free':
         specifier: 7.2.0
         version: 7.2.0
       '@google/genai':
@@ -491,8 +491,8 @@ packages:
   '@formatjs/intl-localematcher@0.6.2':
     resolution: {integrity: sha512-XOMO2Hupl0wdd172Y06h6kLpBz6Dv+J4okPLl4LPtzbr8f66WbIoy4ev98EBuZ6ZK4h5ydTN6XneT4QVpD7cdA==}
 
-  '@fortawesome/fontawesome-pro@7.2.0':
-    resolution: {integrity: sha512-RwDO9NWOVdUdO2yDzyTx5cA1PjyqwPmTqAtfJZa82ap+OS4H89IZ4Jhr5VCEtS6Ij94L5if411CgF0BzI+/b7Q==}
+  '@fortawesome/fontawesome-free@7.2.0':
+    resolution: {integrity: sha512-3DguDv/oUE+7vjMeTSOjCSG+KeawgVQOHrKRnvUuqYh1mfArrh7s+s8hXW3e4RerBA1+Wh+hBqf8sJNpqNrBWg==}
     engines: {node: '>=6'}
 
   '@google/genai@1.50.1':
@@ -5863,7 +5863,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@fortawesome/fontawesome-pro@7.2.0': {}
+  '@fortawesome/fontawesome-free@7.2.0': {}
 
   '@google/genai@1.50.1':
     dependencies:

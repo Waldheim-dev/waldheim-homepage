@@ -23,7 +23,7 @@
     "@astrojs/mdx": "5.0.3",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "3.7.2",
-    "@fortawesome/fontawesome-pro": "7.2.0",
+    "@fortawesome/fontawesome-free": "7.2.0",
     "@google/genai": "1.50.1",
     "@tailwindcss/vite": "4.2.2",
     "@waldheimdev/astro-ai-llms-txt": "^1.3.0",
