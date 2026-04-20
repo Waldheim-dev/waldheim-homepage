@@ -12,7 +12,7 @@ blogPosts.splice(1, blogPosts.length - 1);
 const blog = blogPosts[0];
 ---
 {blog ? (
-<div class="relative">
+<div class="relative pb-2">
   <a class="text-white text-center block gsap-fadein focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent rounded-2xl" href={`/blog/${blog.id.replace(/^_/, '')}/`}>
     <article
       class="flex justify-center items-center gap-x-6 bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark px-10 sm:px-6 py-3 relative rounded-2xl shadow-sm hover:shadow-lg hover:shadow-meg-accent/10 hover:border-meg-accent/30 transition-all duration-300">
