@@ -42,7 +42,7 @@ const itServiceColors = getServiceColors('it-service');
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
               <a href="/suite/" class="group relative flex gap-x-6 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-accent/20">
                 <div class="size-11 flex-none flex items-center justify-center rounded-lg bg-meg-accent/10 border border-meg-accent/30 group-hover:bg-meg-accent/20 transition-all">
-                  <i class="fa-solid fa-grid-2 text-xl text-meg-accent"></i>
+                  <i class="fa-solid fa-table-cells-large text-xl text-meg-accent"></i>
                 </div>
                 <div>
                   <span class="font-bold text-meg-text-primary-dark">Waldheim Suite</span>
@@ -110,8 +110,8 @@ const itServiceColors = getServiceColors('it-service');
                 { href: '/ausgabeschein-generator/', icon: 'fa-clipboard-list', color: 'text-emerald-400', title: 'Ausgabeschein', desc: 'Vereins-Tooling' },
                 { href: '/waetherapp/', icon: 'fa-cloud-sun', color: 'text-blue-400', title: 'WetterApp', desc: 'Multi-Source Daten' },
                 { href: '/amigo/', icon: 'fa-robot', color: 'text-amber-400', title: 'Amigo', desc: 'Agentic Framework' },
-                { href: '/obsidian-gemini-agent/', icon: 'fa-brain-circuit', color: 'text-indigo-400', title: 'Obsidian Agent', desc: 'AI Knowledge' },
-                { href: '/astro-ai-llms-txt/', icon: 'fa-sparkles', color: 'text-meg-accent', title: 'llms.txt', desc: 'Astro AI Plugin' }
+                { href: '/obsidian-gemini-agent/', icon: 'fa-brain', color: 'text-indigo-400', title: 'Obsidian Agent', desc: 'AI Knowledge' },
+                { href: '/astro-ai-llms-txt/', icon: 'fa-wand-magic-sparkles', color: 'text-meg-accent', title: 'llms.txt', desc: 'Astro AI Plugin' }
               ].map(p => (
                 <a href={p.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark">
                   <div class={`size-10 flex-none flex items-center justify-center rounded-lg bg-meg-surface-dark border border-meg-border-dark ${p.color} group-hover:scale-110 transition-transform`}>
