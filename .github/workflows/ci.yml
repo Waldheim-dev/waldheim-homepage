@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main, next]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 concurrency:
   group: homepage-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
@@ -49,6 +52,8 @@ jobs:
           name: homepage-dist
           path: dist/
           retention-days: 1
+          compression-level: 9
+          overwrite: true
 
   # ──────────────────────────────────────────
   # Job 2: Semantic Release
