@@ -154,41 +154,50 @@ const finalSchema = [
       gtag('config', 'G-F6PFMBR146');
     </script>
 
-    <!-- GSAP & Animations Core -->
+    <!-- GSAP Core (for cursor effect) -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
-    ></script>
 
     <script is:inline>
-      function initGsapAnimations() {
-        if (!window.gsap || !window.ScrollTrigger) return;
+      function initFadeInAnimations() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '50px', // Start slightly earlier for better feel
+        };
 
-        // Register plugin (safe to call multiple times)
-        window.gsap.registerPlugin(window.ScrollTrigger);
-
-        // Kill stale instances from previous page (ViewTransitions)
-        window.ScrollTrigger.getAll().forEach(function (t) {
-          t.kill();
-        });
-
-        window.gsap.utils.toArray('.gsap-fadein').forEach(function (el) {
-          var delay = parseFloat(el.style.animationDelay) || 0;
-          window.gsap.from(el, {
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            delay: delay,
-            ease: 'power2.out',
-            scrollTrigger: { trigger: el, start: 'top 80%', once: true },
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              el.classList.add('visible');
+              observer.unobserve(el);
+            }
           });
+        }, observerOptions);
+
+        document.querySelectorAll('.gsap-fadein').forEach((el) => {
+          // Map animation-delay to transition-delay for the CSS transition
+          const animDelay = el.style.animationDelay;
+          if (animDelay) {
+            el.style.transitionDelay = animDelay;
+          }
+
+          // Check if already in viewport
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            // Small timeout to allow browser to register initial state
+            setTimeout(() => el.classList.add('visible'), 50);
+          } else {
+            observer.observe(el);
+          }
         });
       }
 
-      document.addEventListener('astro:page-load', initGsapAnimations);
+      // Run immediately and on Astro events
+      initFadeInAnimations();
+      document.addEventListener('astro:page-load', initFadeInAnimations);
+      document.addEventListener('astro:after-swap', initFadeInAnimations);
     </script>
 
     <ClientRouter />
@@ -240,12 +249,18 @@ const finalSchema = [
       const cursor = document.getElementById('cursor-blur');
       if (cursor) {
         window.addEventListener('mousemove', (e) => {
-          window.gsap.to(cursor, {
-            x: e.clientX - 300,
-            y: e.clientY - 300,
-            duration: 0.8,
-            ease: 'power3.out',
-          });
+          if (window.gsap) {
+            window.gsap.to(cursor, {
+              x: e.clientX - 300,
+              y: e.clientY - 300,
+              duration: 0.8,
+              ease: 'power3.out',
+            });
+          } else {
+            // Fallback: simpler CSS-based movement if GSAP isn't ready
+            cursor.style.transform = `translate(${e.clientX - 300}px, ${e.clientY - 300}px)`;
+            cursor.style.transition = 'transform 0.1s ease-out';
+          }
         });
       }
     </script>
