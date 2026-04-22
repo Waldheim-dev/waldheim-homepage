@@ -71,6 +71,7 @@ export default defineConfig({
     compress(),
     compressor({ gzip: true }),
     partytown({
+      lib: 'partytown',
       config: {
         forward: ['dataLayer.push'],
       },
