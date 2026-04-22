@@ -118,6 +118,42 @@ const finalSchema = [
     <link rel="manifest" href="/favicons/site.webmanifest" />
     <meta name="theme-color" content="#020617" />
 
+    <!-- Web Vitals Monitoring -->
+    <script type="text/partytown" data-category="analytics">
+      (async () => {
+        try {
+          const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('https://unpkg.com/web-vitals@4/dist/web-vitals.attribution.js?module');
+          
+          function sendToAnalytics({ name, delta, id, attribution }) {
+            const eventParams = {
+              event_category: 'Web Vitals',
+              event_label: id,
+              value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+              non_interaction: true,
+              attribution: JSON.stringify(attribution)
+            };
+
+            if (window.gtag) {
+              window.gtag('event', name, eventParams);
+            }
+            
+            if (location.hostname === 'localhost') {
+              console.log(`[Web Vitals] ${name}:`, delta, attribution);
+            }
+          }
+
+          onCLS(sendToAnalytics);
+          onFID(sendToAnalytics);
+          onLCP(sendToAnalytics);
+          onFCP(sendToAnalytics);
+          onTTFB(sendToAnalytics);
+          onINP(sendToAnalytics);
+        } catch (e) {
+          console.warn('Web Vitals failed:', e);
+        }
+      })();
+    </script>
+
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="robots" content={robots} />
     <meta name="generator" content={Astro.generator} />
