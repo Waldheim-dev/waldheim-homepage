@@ -98,7 +98,7 @@ if (nextYear) {
       {results.map((res, i) => (
         <div class="gsap-fadein bg-meg-surface-dark/80 backdrop-blur-xl border border-meg-accent/30 rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-transform" style={`animation-delay: ${0.5 + i * 0.1}s`}>
           <div class="text-3xl font-black text-meg-accent mb-1">{res.value}</div>
-          <div class="text-[10px] uppercase tracking-widest font-bold text-meg-text-secondary leading-tight">{res.label}</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-slate-400 leading-tight">{res.label}</div>
         </div>
       ))}
     </div>
@@ -116,7 +116,7 @@ if (nextYear) {
                 {previousYearProject ? (
                   <a 
                     href={`/referenzen/${previousYear}/`} 
-                    class="group inline-flex items-center gap-3 text-meg-text-secondary hover:text-meg-accent transition-all"
+                    class="group inline-flex items-center gap-3 text-slate-400 hover:text-meg-accent transition-all"
                     aria-label={`Vorjahresprojekt: ${previousYearProject.data.title}`}
                   >
                     <div class="flex items-center justify-center size-10 rounded-full bg-meg-surface-dark border border-meg-border-dark group-hover:border-meg-accent/50 group-hover:bg-meg-accent/10 transition-all">
@@ -143,7 +143,7 @@ if (nextYear) {
                     <i class="fa-solid fa-calendar-days text-xl" aria-hidden="true"></i>
                   </div>
                   <div>
-                    <div class="text-[10px] text-meg-text-secondary uppercase tracking-widest font-bold">Event-Serie</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Event-Serie</div>
                     <div class="text-2xl font-black text-meg-text-primary-dark tracking-tighter">{year}</div>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ if (nextYear) {
                 {nextYearProject ? (
                   <a 
                     href={`/referenzen/${nextYear}/`} 
-                    class="group inline-flex items-center gap-3 text-meg-text-secondary hover:text-meg-accent transition-all flex-row-reverse"
+                    class="group inline-flex items-center gap-3 text-slate-400 hover:text-meg-accent transition-all flex-row-reverse"
                     aria-label={`Folgejahresprojekt: ${nextYearProject.data.title}`}
                   >
                     <div class="flex items-center justify-center size-10 rounded-full bg-meg-surface-dark border border-meg-border-dark group-hover:border-meg-accent/50 group-hover:bg-meg-accent/10 transition-all">
@@ -192,7 +192,7 @@ if (nextYear) {
                 class="absolute -inset-2 bg-gradient-to-r from-meg-accent/10 via-sky-400/10 to-violet-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div
                 class="relative overflow-hidden rounded-2xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-                <img loading="lazy"
+                <img fetchpriority="high"
                   class="absolute inset-0 h-full w-full object-cover brightness-50 saturate-50 group-hover:scale-105 transition-transform duration-700"
                   src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
                   alt={client.name}
@@ -235,15 +235,15 @@ if (nextYear) {
               </p>
               <div class="max-w-xl">
                 {client.shortDescription ? (
-                  <p class="mt-6 text-lg text-meg-text-secondary leading-relaxed">{client.shortDescription}</p>
+                  <p class="mt-6 text-lg text-slate-400 leading-relaxed">{client.shortDescription}</p>
                 ) : null}
-                <p class="mt-6 text-meg-text-secondary leading-relaxed">{client.description}</p>
+                <p class="mt-6 text-slate-400 leading-relaxed">{client.description}</p>
               </div>
             </div>
             <dl class="mt-10 flex flex-wrap gap-8 border-t border-meg-border-dark pt-10">
               {overview.map((item) => (
                 <div class="bg-meg-surface-dark/30 rounded-xl p-4 border border-meg-border-dark shadow-sm">
-                  <dt class="text-xs font-bold uppercase tracking-wider text-meg-text-secondary opacity-70">
+                  <dt class="text-xs font-bold uppercase tracking-wider text-slate-400 opacity-70">
                     {item.title}
                   </dt>
                   <dd class="mt-1 text-2xl font-black tracking-tight text-meg-accent">
@@ -284,7 +284,7 @@ if (nextYear) {
           Das Problem
         </h2>
         <p
-          class="mx-auto mt-6 text-xl leading-8 text-meg-text-secondary max-w-2xl italic border-l-4 border-rose-500/30 pl-6 text-left"
+          class="mx-auto mt-6 text-xl leading-8 text-slate-400 max-w-2xl italic border-l-4 border-rose-500/30 pl-6 text-left"
           set:text={problem}
         />
       </div>
@@ -332,7 +332,7 @@ if (nextYear) {
           Unsere Lösung
         </h2>
         <p
-          class="mx-auto mt-6 text-lg leading-8 text-meg-text-secondary max-w-2xl"
+          class="mx-auto mt-6 text-lg leading-8 text-slate-400 max-w-2xl"
           set:text={solution}
         />
       </div>
@@ -365,7 +365,7 @@ if (nextYear) {
                 </div>
                 Design & UX
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {design.map((item) => (
                     <li class="flex gap-2">
@@ -388,7 +388,7 @@ if (nextYear) {
                 </div>
                 Frontend
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {frontend.map((item) => (
                     <li class="flex gap-2">
@@ -411,7 +411,7 @@ if (nextYear) {
                 </div>
                 Backend
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {backend.map((item) => (
                     <li class="flex gap-2">
@@ -434,7 +434,7 @@ if (nextYear) {
                 </div>
                 Allgemein
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {general.map((item) => (
                     <li class="flex gap-2">
@@ -457,7 +457,7 @@ if (nextYear) {
                 </div>
                 DevOps
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {devops.map((item) => (
                     <li class="flex gap-2">
@@ -480,7 +480,7 @@ if (nextYear) {
                 </div>
                 Key Features
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {features.map((item) => (
                     <li class="flex gap-2">
@@ -503,7 +503,7 @@ if (nextYear) {
                 </div>
                 Security
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {security.map((item) => (
                     <li class="flex gap-2">
@@ -526,7 +526,7 @@ if (nextYear) {
                 </div>
                 Qualitätssicherung
               </dt>
-              <dd class="mt-4 text-base leading-7 text-meg-text-secondary">
+              <dd class="mt-4 text-base leading-7 text-slate-400">
                 <ul class="space-y-3">
                   {testing.map((item) => (
                     <li class="flex gap-2">
@@ -629,7 +629,7 @@ if (nextYear) {
   </div>
   <div class="mt-4 flex flex-wrap items-center justify-center gap-3 max-w-2xl">
   {tags.map((item) => (
-  <span class='inline-flex items-center rounded-full bg-meg-surface-dark border border-meg-border-dark px-4 py-1.5 text-xs font-semibold text-meg-text-secondary hover:border-meg-accent/50 hover:text-meg-accent transition-all cursor-default shadow-sm'>
+  <span class='inline-flex items-center rounded-full bg-meg-surface-dark border border-meg-border-dark px-4 py-1.5 text-xs font-semibold text-slate-400 hover:border-meg-accent/50 hover:text-meg-accent transition-all cursor-default shadow-sm'>
     <span class="size-1.5 rounded-full bg-meg-accent/40 mr-2"></span>
     {item}
   </span>

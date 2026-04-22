@@ -66,15 +66,15 @@ try {
         <!-- Social Media Links (Komplette Liste wiederhergestellt) -->
         <div class="flex flex-wrap gap-x-4 gap-y-4 sm:justify-end">
           {[
-            { href: 'https://www.linkedin.com/in/markus-waldheim-03827a312/', icon: 'fa-brands fa-linkedin', color: 'hover:text-[#0a66c2]' },
-            { href: 'https://www.xing.com/profile/Markus_Waldheim/cv', icon: 'fa-brands fa-xing', color: 'hover:text-[#006567]' },
-            { href: 'https://github.com/Waldheim-dev', icon: 'fa-brands fa-github', color: 'hover:text-white' },
-            { href: 'https://gitlab.com/mwaldheim', icon: 'fa-brands fa-gitlab', color: 'hover:text-[#fc6d26]' },
-            { href: 'https://www.twitch.tv/blackbird995', icon: 'fa-brands fa-twitch', color: 'hover:text-[#9146ff]' },
-            { href: 'https://www.designenlassen.de/profil/622353', icon: 'fa-solid fa-pen-ruler', color: 'hover:text-meg-accent' },
-            { href: 'mailto:kontakt@waldheim.dev', icon: 'fa-solid fa-envelope', color: 'hover:text-meg-accent' }
+            { href: 'https://www.linkedin.com/in/markus-waldheim-03827a312/', icon: 'fa-brands fa-linkedin', color: 'hover:text-[#0a66c2]', label: 'LinkedIn' },
+            { href: 'https://www.xing.com/profile/Markus_Waldheim/cv', icon: 'fa-brands fa-xing', color: 'hover:text-[#006567]', label: 'Xing' },
+            { href: 'https://github.com/Waldheim-dev', icon: 'fa-brands fa-github', color: 'hover:text-white', label: 'GitHub' },
+            { href: 'https://gitlab.com/mwaldheim', icon: 'fa-brands fa-gitlab', color: 'hover:text-[#fc6d26]', label: 'GitLab' },
+            { href: 'https://www.twitch.tv/blackbird995', icon: 'fa-brands fa-twitch', color: 'hover:text-[#9146ff]', label: 'Twitch' },
+            { href: 'https://www.designenlassen.de/profil/622353', icon: 'fa-solid fa-pen-ruler', color: 'hover:text-meg-accent', label: 'Designenlassen' },
+            { href: 'mailto:kontakt@waldheim.dev', icon: 'fa-solid fa-envelope', color: 'hover:text-meg-accent', label: 'E-Mail' }
           ].map(s => (
-            <a href={s.href} target="_blank" rel="noopener noreferrer" 
+            <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
                class={`inline-flex h-12 w-12 items-center justify-center rounded-xl border border-meg-border-dark/70 bg-meg-surface-dark/60 p-2 text-meg-text-secondary transition-all hover:scale-110 hover:border-meg-accent/50 ${s.color}`}>
               <i class={`${s.icon} text-2xl`} aria-hidden="true"></i>
             </a>
