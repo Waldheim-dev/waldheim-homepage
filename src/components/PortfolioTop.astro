@@ -118,17 +118,17 @@ const categories = await getCollection('projects_kategorie');
       if (isActive) {
         // Active: Pill (wide) - dark background so progress is visible
         indicator.style.width = '80px';
-        indicator.style.height = '8px';
+        indicator.style.height = '12px';
         bg.style.backgroundColor = 'rgb(26 72 95 / 0.8)'; // dark-800/80
       } else if (index < currentIndex) {
         // Completed: Small dot (filled with primary color)
-        indicator.style.width = '8px';
-        indicator.style.height = '8px';
+        indicator.style.width = '24px';
+        indicator.style.height = '12px';
         bg.style.backgroundColor = 'rgb(0 212 208)'; // primary-500 solid
       } else {
         // Upcoming: Small dot (gray/empty)
-        indicator.style.width = '8px';
-        indicator.style.height = '8px';
+        indicator.style.width = '24px';
+        indicator.style.height = '12px';
         bg.style.backgroundColor = 'rgb(138 190 171 / 0.4)'; // light-500/40
       }
     };
