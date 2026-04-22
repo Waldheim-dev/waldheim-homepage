@@ -33,14 +33,14 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           <h1 id="portfolio-heading" class="text-4xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
             Projekte & <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Erfolge</span>
           </h1>
-          <p class="text-xl text-meg-text-secondary">
+          <p class="text-xl text-slate-400">
             Ein Auszug meiner Arbeit: Von der strategischen Beratung bis zur fertigen Applikation. Messbare Ergebnisse für anspruchsvolle Kunden.
           </p>
         </header>
 
         <div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {
-            paginatedProjects.map((project) => {
+            paginatedProjects.map((project, index) => {
               const categoryName = categories.find(category => category.id === project.data?.category.id)?.data.name;
               return (
                 <article class="relative bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl overflow-hidden hover:border-meg-accent/50 transition-all duration-500 group shadow-lg flex flex-col">
@@ -50,17 +50,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                       class="relative h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
                       src={project.data.heroImage} 
                       alt={`Referenzprojekt: ${project.data.title}`} 
-                      loading="lazy"
+                      loading={index < 2 ? "eager" : "lazy"}
+                      fetchpriority={index < 2 ? "high" : "auto"}
                     >
                     <div class="absolute top-4 left-4 z-20">
-                      <span class="px-3 py-1 bg-meg-accent/90 text-white text-[10px] font-black uppercase tracking-widest rounded-lg backdrop-blur-md">
+                      <span class="px-3 py-1 bg-meg-accent/90 text-slate-900 text-[10px] font-black uppercase tracking-widest rounded-lg backdrop-blur-md">
                         {categoryName}
                       </span>
                     </div>
                   </div>
                   
                   <div class="p-8 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-meg-text-secondary text-xs font-bold mb-4">
+                    <div class="flex items-center gap-2 text-slate-400 text-xs font-bold mb-4">
                       <i class="fa-solid fa-calendar-check text-meg-accent"></i>
                       <FormattedDate date={project.data.pubDate} />
                     </div>
@@ -69,7 +70,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                       {project.data.title}
                     </h2>
                     
-                    <p class="text-meg-text-secondary text-sm leading-relaxed mb-8 line-clamp-3">
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8 line-clamp-3">
                       {project.data.shortDescription}
                     </p>
                     
@@ -93,7 +94,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           <div class="mt-20 text-center">
             <a 
               href="/referenzen/1/" 
-              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-accent text-white font-bold rounded-2xl shadow-xl shadow-meg-accent/20 hover:scale-[1.05] transition-all"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-accent text-slate-900 font-bold rounded-2xl shadow-xl shadow-meg-accent/20 hover:scale-[1.05] transition-all"
             >
               Alle Fallstudien entdecken
               <i class="fa-solid fa-table-cells"></i>
