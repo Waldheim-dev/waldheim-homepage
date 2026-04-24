@@ -46,7 +46,7 @@ jobs:
 
       # Only upload the artifact on release branches (needed by the deploy job)
       - name: Upload dist artifact
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: homepage-dist
@@ -61,7 +61,7 @@ jobs:
   # ──────────────────────────────────────────
   release:
     name: Semantic Release
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: qa
     runs-on: ubuntu-latest
     permissions:
@@ -112,7 +112,7 @@ jobs:
   # ──────────────────────────────────────────
   deploy:
     name: Deploy → IONOS (FTP)
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [qa, release]
     runs-on: ubuntu-latest
     environment: FTP_PASSWORD
