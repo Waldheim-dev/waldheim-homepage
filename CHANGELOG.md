@@ -1,3 +1,30 @@
+# [26.9.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.8.1...26.9.0) (2026-05-11)
+
+
+### Bug Fixes
+
+* add missing 'lib' property in Partytown configuration ([8ea286e](https://github.com/Waldheim-dev/waldheim-homepage/commit/8ea286ea1efd3f6f2f62fed0fbb85b6898cf4909))
+* Add new blog posts on various software development topics including Go monolith refactoring, responsive design in Angular, Nginx reverse proxy configuration, server migration strategies, DevSecOps for Go microservices, private certificate authority setup, state management in Angular, test-driven development with Go, configuration management in Go applications, environment management with Git branching, strangler pattern for legacy systems, porting Go applications from Windows to Linux, reusable Git workflows, maximizing productivity with Windows Terminal and WSL, standardizing development environments with WSL 2, centralized log management with ELK stack, zero-downtime PostgreSQL migration, and future trends in software development for 2027. ([ce37e36](https://github.com/Waldheim-dev/waldheim-homepage/commit/ce37e3621f5773ea239d5d4753e840e1b41fba79))
+* enhance fade-in animations and add CSS styles for smoother transitions ([4c7462c](https://github.com/Waldheim-dev/waldheim-homepage/commit/4c7462c3e0b42ad24e97b39e6a46ebf7f4a181c4))
+* fill blog skeletons, implement dynamic ToC and reading time ([0f7e51e](https://github.com/Waldheim-dev/waldheim-homepage/commit/0f7e51ec08c119f4454d79254fed4ae221925d3d))
+* implement blog pagination component and update content metadata across all posts ([ee61f39](https://github.com/Waldheim-dev/waldheim-homepage/commit/ee61f396cbaf20a404e4afa517fb902b5a70ba3d))
+* replace remaining Pro-only icons with Free alternatives (Obsidian, llms.txt, Safe & Secure) ([00e2405](https://github.com/Waldheim-dev/waldheim-homepage/commit/00e24059abb01cf91cf679d593e3f05e1228b2d2))
+* resolve missing images, fix leading slashes in project paths, and normalize extensions ([cb64e8f](https://github.com/Waldheim-dev/waldheim-homepage/commit/cb64e8f7b314b98ba4ea13e40fb96f2cbffdf7fd))
+* sanitize search result links (remove underscore and add trailing slash) ([fa70e6c](https://github.com/Waldheim-dev/waldheim-homepage/commit/fa70e6ca9dad9aef644868d16e38cfe850362f73))
+* Update CI workflow to optionally upload artifacts based on repository variable ([9b64328](https://github.com/Waldheim-dev/waldheim-homepage/commit/9b64328e27b62df137ea464a820156e975d959b8))
+* Update CI workflow to restrict artifact upload and deployment to main branch only ([c03335a](https://github.com/Waldheim-dev/waldheim-homepage/commit/c03335ab34ab022805d1616446693bab333f27d2))
+
+
+### Features
+
+* Add new homepage image and service worker for improved performance ([80e17bf](https://github.com/Waldheim-dev/waldheim-homepage/commit/80e17bfba8981d39e4c5c56a23cf02743d20e5b9))
+* Add Web Vitals monitoring script for enhanced performance tracking ([3d04097](https://github.com/Waldheim-dev/waldheim-homepage/commit/3d04097ca6a0fcea972022ea65493b76ebc3a64a))
+
+
+### Performance Improvements
+
+* optimize third-party scripts with Partytown and automate robots.txt ([b6c3ab4](https://github.com/Waldheim-dev/waldheim-homepage/commit/b6c3ab4f70420b3860f3135b6c4c1eb8e9a7effa))
+
 ## [26.8.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.8.0...26.8.1) (2026-04-12)
 
 
