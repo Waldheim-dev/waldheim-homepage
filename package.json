@@ -19,15 +19,15 @@
     "lighthouse:assert": "lhci assert"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/mdx": "5.0.3",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/mdx": "5.0.4",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "3.7.2",
     "@fortawesome/fontawesome-free": "7.2.0",
     "@google/genai": "1.50.1",
     "@tailwindcss/vite": "4.2.2",
     "@waldheimdev/astro-ai-llms-txt": "^1.3.0",
-    "astro": "6.1.8",
+    "astro": "6.2.1",
     "astro-compress": "2.4.1",
     "astro-compressor": "1.3.0",
     "astro-robots-txt": "^1.0.0",
