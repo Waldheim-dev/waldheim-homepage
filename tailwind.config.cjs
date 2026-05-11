@@ -34,7 +34,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
 
-    plugin(function ({ addBase, theme }) {
+    plugin(function ({ addBase, addUtilities, theme }) {
       addBase({
         ':root': {
           '--primary': theme('colors.meg-accent'),
@@ -83,6 +83,39 @@ module.exports = {
               transform: 'rotateY(180deg)',
               transition: 'transform 1s',
             },
+          },
+        },
+      });
+
+      // Custom scrollbar styles
+      addUtilities({
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+        '.scrollbar-thin': {
+          'scrollbar-width': 'thin',
+          '&::-webkit-scrollbar': {
+            width: '6px',
+            height: '6px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: 'rgba(148, 163, 184, 0.3)',
+            borderRadius: '3px',
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            background: 'rgba(148, 163, 184, 0.5)',
+          },
+        },
+        '.scrollbar-track-transparent': {
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent',
           },
         },
       });
