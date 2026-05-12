@@ -119,7 +119,9 @@ const finalSchema = [
     <meta name="theme-color" content="#020617" />
 
     <!-- Web Vitals Monitoring -->
-    <script type="text/partytown" data-category="analytics">
+    <!-- NOTE: Deliberately NOT using type="text/partytown" — web-vitals requires
+         direct DOM/document access and cannot run in a Web Worker context. -->
+    <script>
       (async () => {
         try {
           const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('https://unpkg.com/web-vitals@4/dist/web-vitals.attribution.js?module');

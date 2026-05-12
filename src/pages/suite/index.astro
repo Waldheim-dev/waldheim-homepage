@@ -40,6 +40,16 @@ const softwareSchema = {
 
 const modules = [
   {
+    href: '/suite/portal/',
+    icon: 'fa-id-card',
+    color: 'sky',
+    title: 'CustomerPortal',
+    subtitle: 'Identität, Billing & Self-Service',
+    description:
+      'Zentrales Kundenportal mit SSO, Ticket-System, Rechnungsverwaltung, Abo-Steuerung und Stripe-Integration.',
+    badge: 'Live',
+  },
+  {
     href: '/suite/socialverse/',
     icon: 'fa-users-gear',
     color: 'violet',
@@ -51,9 +61,9 @@ const modules = [
   },
   {
     href: '/suite/forge/',
-    icon: 'fa-hammer',
-    color: 'amber',
-    title: 'Forge ERP',
+    icon: 'fa-building-columns',
+    color: 'green',
+    title: 'Silvacore ERP',
     subtitle: 'Produkte, Projekte & Aufträge',
     description:
       'Enterprise-Ressourcenplanung mit Produktkatalog, Projektmanagement, Zeiterfassung, Angeboten und Auftragsabwicklung.',
@@ -61,7 +71,7 @@ const modules = [
   },
   {
     href: '/suite/aether/',
-    icon: 'fa-folder-open',
+    icon: 'fa-atom',
     color: 'rose',
     title: 'Aether',
     subtitle: 'Dokumente, Assets & Wissen',
@@ -71,8 +81,8 @@ const modules = [
   },
   {
     href: '/suite/ecodrive/',
-    icon: 'fa-car-side',
-    color: 'teal',
+    icon: 'fa-leaf',
+    color: 'emerald',
     title: 'Ecodrive',
     subtitle: 'Flotten, Routen & CO₂',
     description:
@@ -80,24 +90,44 @@ const modules = [
     badge: 'Beta',
   },
   {
-    href: '/suite/portal/',
-    icon: 'fa-headset',
-    color: 'emerald',
-    title: 'Customer Portal',
-    subtitle: 'Tickets, Rechnungen & Support',
+    href: '/suite/treasury/',
+    icon: 'fa-coins',
+    color: 'yellow',
+    title: 'Treasury',
+    subtitle: 'Finanzen & Liquiditätsplanung',
     description:
-      'Self-Service-Portal für Kunden: Ticket-System, Rechnungsverwaltung, Abo-Verwaltung, Stripe-Integration und Support-Queue.',
-    badge: 'Live',
+      'Liquiditätsübersicht, Kostenstellen, Budgetcontrolling, Cashflow-Analyse und DATEV-Export für Ihre Finanzabteilung.',
+    badge: 'Alpha',
   },
   {
-    href: '/suite/nexus/',
-    icon: 'fa-shield-halved',
-    color: 'indigo',
-    title: 'Nexus Admin',
-    subtitle: 'Tenants, Audit & Plattform',
+    href: '/suite/properties/',
+    icon: 'fa-building',
+    color: 'orange',
+    title: 'Properties',
+    subtitle: 'Objekt- & Immobilienverwaltung',
     description:
-      'Super-Admin-Konsole für Tenant-Management, Audit Trail, Plattform-KPIs, Revenue-Übersicht und Benutzer-Administration.',
-    badge: 'Live',
+      'Digitale Verwaltung von Liegenschaften, Mietverträgen, Nebenkostenabrechnungen und Instandhaltungsmaßnahmen.',
+    badge: 'Alpha',
+  },
+  {
+    href: '/suite/relay/',
+    icon: 'fa-tower-broadcast',
+    color: 'cyan',
+    title: 'Relay',
+    subtitle: 'Kommunikation & Benachrichtigungen',
+    description:
+      'Zentraler Kommunikations-Hub für E-Mail, Push, SMS und In-App-Notifications aus allen Suite-Modulen.',
+    badge: 'Alpha',
+  },
+  {
+    href: '/suite/conductor/',
+    icon: 'fa-gears',
+    color: 'indigo',
+    title: 'Conductor',
+    subtitle: 'Workflows & Automatisierung',
+    description:
+      'Visueller Workflow-Builder für Business-Automatisierung, Event-Trigger und prozessübergreifende Integrationen.',
+    badge: 'Alpha',
   },
 ];
 
@@ -264,7 +294,7 @@ const complianceItems = [
       aria-hidden="true"
     >
       <div
-        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-500/25 to-indigo-500/25 opacity-40 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-sky-500/25 to-indigo-500/25 opacity-40 sm:left-[calc(50%-30rem)] sm:w-288.75"
         style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
       >
       </div>
@@ -289,7 +319,7 @@ const complianceItems = [
         >
           Keine Datensilos mehr.<br />
           Nur noch <span
-            class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400"
+            class="text-transparent bg-clip-text bg-linear-to-r from-meg-accent to-sky-400"
             >eine Plattform</span
           >.
         </h1>
@@ -595,12 +625,12 @@ const complianceItems = [
             <div class="grid grid-cols-3 gap-3 mb-4">
               {
                 [
+                  { icon: 'fa-id-card', label: 'Portal', color: 'sky' },
                   { icon: 'fa-users-gear', label: 'CRM', color: 'violet' },
-                  { icon: 'fa-hammer', label: 'ERP', color: 'amber' },
-                  { icon: 'fa-folder-open', label: 'Docs', color: 'rose' },
-                  { icon: 'fa-car-side', label: 'Fleet', color: 'teal' },
-                  { icon: 'fa-headset', label: 'Portal', color: 'emerald' },
-                  { icon: 'fa-shield-halved', label: 'Nexus', color: 'indigo' },
+                  { icon: 'fa-building-columns', label: 'ERP', color: 'green' },
+                  { icon: 'fa-atom', label: 'Aether', color: 'rose' },
+                  { icon: 'fa-leaf', label: 'Ecodrive', color: 'emerald' },
+                  { icon: 'fa-gears', label: 'Conductor', color: 'indigo' },
                 ].map((m) => (
                   <div
                     class={`bg-meg-bg-dark/60 border border-${m.color}-500/20 rounded-xl p-3 flex flex-col items-center gap-2 cursor-pointer hover:border-${m.color}-500/50 transition-colors`}
@@ -1020,14 +1050,517 @@ const complianceItems = [
             </div>
           </div>
         </div>
+
+        <!-- Customer Portal Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-sky-500/20 rounded-3xl p-8 items-center"
+        >
+          <div
+            class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-sky-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Kunden-Workspace
+              </p>
+              <span
+                class="text-xs bg-sky-500/10 text-sky-400 border border-sky-500/20 px-2 py-1 rounded-lg font-bold"
+                >Self-Service</span
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  { label: 'Offene Tickets', value: '4', sub: '1 kritisch' },
+                  { label: 'Antwortzeit', value: '1h 12m', sub: 'unter SLA' },
+                  { label: 'Offene Rechnungen', value: '€ 2.480', sub: '2 Belege' },
+                  { label: 'Aktive Module', value: '5', sub: 'Suite-weit' },
+                ].map((k) => (
+                  <div class="bg-meg-bg-dark/60 rounded-xl p-3">
+                    <p class="text-xs text-meg-text-secondary mb-1">
+                      {k.label}
+                    </p>
+                    <p class="text-xl font-black text-sky-400">{k.value}</p>
+                    <p class="text-xs text-meg-text-secondary">{k.sub}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-id-card text-sky-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  CustomerPortal
+                </h3>
+                <p class="text-sm text-sky-400 font-semibold">
+                  Identität, Billing & Support
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Ein zentraler Self-Service-Zugang für Kunden: Supportfälle,
+              Rechnungen, Abos und Nutzerzugänge laufen im selben Workspace
+              zusammen statt über Backoffice-Mails und manuelle Freigaben.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'Tickets mit SLA & Historie',
+                  'Rechnungen & Zahlungsstatus',
+                  'Abo- und Modulverwaltung',
+                  'Nutzer & Rollen',
+                  'Belege aus Aether',
+                  'Benachrichtigungen via Relay',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-sky-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Aether Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-rose-500/20 rounded-3xl p-8 items-center"
+        >
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-atom text-rose-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  Aether
+                </h3>
+                <p class="text-sm text-rose-400 font-semibold">
+                  Dokumente, Assets & Wissen
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Aether gibt Dokumenten und Wissen wieder Kontext. Dateien hängen
+              an Objekten, Projekten und Kunden statt in Laufwerken,
+              Mailanhängen oder unklaren Ordnern zu verschwinden.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'Versionierung & Historie',
+                  'Freigaben & Review-Prozesse',
+                  'Objektverknüpfte Akten',
+                  'Suche über Inhalte & Metadaten',
+                  'Berechtigungen pro Kontext',
+                  'Export & Archivierung',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-rose-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div
+            class="bg-meg-surface-dark/60 rounded-2xl border border-rose-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Dokumentencenter
+              </p>
+              <span
+                class="text-xs bg-rose-500/10 text-rose-400 border border-rose-500/20 px-2 py-1 rounded-lg font-bold"
+                >Versioniert</span
+              >
+            </div>
+            <div class="space-y-3">
+              {
+                [
+                  { name: 'Projektakte Nord', state: 'Freigabe offen', color: 'rose' },
+                  { name: 'Mietvertrag Schillerpark', state: 'Veröffentlicht', color: 'green' },
+                  { name: 'Rechnungspaket Mai', state: 'Mit Treasury verknüpft', color: 'yellow' },
+                ].map((row) => (
+                  <div class="flex items-center justify-between py-2.5 border-b border-meg-border-dark last:border-0">
+                    <p class="text-sm text-meg-text-primary-dark font-semibold">
+                      {row.name}
+                    </p>
+                    <span class={`text-xs font-bold text-${row.color}-400`}>
+                      {row.state}
+                    </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Treasury Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-yellow-500/20 rounded-3xl p-8 items-center"
+        >
+          <div
+            class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-yellow-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Liquiditätsblick
+              </p>
+              <span
+                class="text-xs bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-2 py-1 rounded-lg font-bold"
+                >Cashflow</span
+              >
+            </div>
+            <div class="flex items-end gap-2 h-20 mb-3">
+              {
+                [55, 72, 48, 88, 65, 91].map((h) => (
+                  <div
+                    class="flex-1 rounded-t-md bg-yellow-500/40"
+                    style={`height:${h}%`}
+                  />
+                ))
+              }
+            </div>
+            <div class="flex justify-between text-[10px] text-meg-text-secondary">
+              <span>Dez</span><span>Jan</span><span>Feb</span><span>Mär</span><span>Apr</span><span>Mai</span>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-coins text-yellow-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  Treasury
+                </h3>
+                <p class="text-sm text-yellow-400 font-semibold">
+                  Finanzen, Budgets & Cashflow
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Treasury macht Liquidität, offene Forderungen und Budgetrisiken
+              in Echtzeit sichtbar. Statt Excel-Nachpflege sehen Finanzteams,
+              was in 7, 30 oder 90 Tagen wirklich auf sie zukommt.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'Liquiditätsvorschau',
+                  'Kostenstellen & Budgets',
+                  'Mahnwesen',
+                  'Soll-Ist-Vergleich',
+                  'DATEV-Export',
+                  'Cashflow-Berichte',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-yellow-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Properties Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-orange-500/20 rounded-3xl p-8 items-center"
+        >
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-building text-orange-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  Properties
+                </h3>
+                <p class="text-sm text-orange-400 font-semibold">
+                  Immobilien, Einheiten & Abrechnung
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Properties bringt Objektverwaltung, Mietverträge,
+              Nebenkostenabrechnung und Mieterkommunikation in ein digitales
+              Modell statt in Ordner, Word-Dateien und Telefonnotizen.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'Objekte & Einheiten',
+                  'Mietvertragsverwaltung',
+                  'Nebenkostenabrechnung',
+                  'Schadensmeldungen',
+                  'Mieter-Self-Service',
+                  'Portfolio-Reporting',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-orange-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div
+            class="bg-meg-surface-dark/60 rounded-2xl border border-orange-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Portfolio Übersicht
+              </p>
+              <span
+                class="text-xs bg-orange-500/10 text-orange-400 border border-orange-500/20 px-2 py-1 rounded-lg font-bold"
+                >Live</span
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  { label: 'Objekte', value: '12', sub: '84 Einheiten' },
+                  { label: 'Leerstand', value: '6%', sub: '5 Einheiten' },
+                  { label: 'Miete / Monat', value: '€ 22.4k', sub: 'aktuell' },
+                  { label: 'Tickets offen', value: '9', sub: '3 dringend' },
+                ].map((k) => (
+                  <div class="bg-meg-bg-dark/60 rounded-xl p-3">
+                    <p class="text-xs text-meg-text-secondary mb-1">
+                      {k.label}
+                    </p>
+                    <p class="text-xl font-black text-orange-400">{k.value}</p>
+                    <p class="text-xs text-meg-text-secondary">{k.sub}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Relay Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-cyan-500/20 rounded-3xl p-8 items-center"
+        >
+          <div
+            class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-cyan-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Kanal-Mix
+              </p>
+              <span
+                class="text-xs bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-1 rounded-lg font-bold"
+                >4 Kanäle</span
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  { label: 'E-Mail', value: '98.2%', sub: 'Zustellrate' },
+                  { label: 'In-App', value: '100%', sub: 'sofort' },
+                  { label: 'Web Push', value: 'Opt-in', sub: 'DSGVO-konform' },
+                  { label: 'SMS', value: 'Optional', sub: 'kritische Fälle' },
+                ].map((k) => (
+                  <div class="bg-meg-bg-dark/60 rounded-xl p-3">
+                    <p class="text-xs text-meg-text-secondary mb-1">
+                      {k.label}
+                    </p>
+                    <p class="text-xl font-black text-cyan-400">{k.value}</p>
+                    <p class="text-xs text-meg-text-secondary">{k.sub}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-tower-broadcast text-cyan-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  Relay
+                </h3>
+                <p class="text-sm text-cyan-400 font-semibold">
+                  Kommunikation & Notifications
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Relay zentralisiert Versand, Präferenzen und Delivery-Log für die
+              komplette Suite. Kein eigenes Mailer-Chaos pro Modul, sondern ein
+              gemeinsamer Kommunikations-Hub mit Nutzersteuerung.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'E-Mail & Templates',
+                  'In-App-Notifications',
+                  'Web Push & SMS',
+                  'Opt-in / Opt-out',
+                  'Delivery-Log',
+                  'Bounce & Retry',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-cyan-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Conductor Deep-dive -->
+        <div
+          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-indigo-500/20 rounded-3xl p-8 items-center"
+        >
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-gears text-indigo-400 text-xl"
+                  aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-black text-meg-text-primary-dark">
+                  Conductor
+                </h3>
+                <p class="text-sm text-indigo-400 font-semibold">
+                  Workflows & Automatisierung
+                </p>
+              </div>
+            </div>
+            <p class="text-meg-text-secondary mb-6 leading-relaxed">
+              Conductor verknüpft Events, Bedingungen und Aktionen über die
+              gesamte Suite hinweg. Repetitive Übergaben werden zu sichtbaren,
+              auditierbaren Workflows statt zu Copy-Paste-Routinen.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+              {
+                [
+                  'Visueller Workflow-Builder',
+                  'Event-Trigger',
+                  'Bedingungen & Branching',
+                  'Retry & Fehlerbehandlung',
+                  'Zeitgesteuerte Läufe',
+                  'HTTP-Webhooks',
+                ].map((f) => (
+                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
+                    <i
+                      class="fa-solid fa-circle-check text-indigo-400 text-xs shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{f}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div
+            class="bg-meg-surface-dark/60 rounded-2xl border border-indigo-500/10 p-5"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <p
+                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
+              >
+                Workflow Beispiel
+              </p>
+              <span
+                class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-1 rounded-lg font-bold"
+                >No-Code</span
+              >
+            </div>
+            <div class="flex items-center gap-2 text-center">
+              {
+                [
+                  { label: 'Trigger', detail: 'Deal gewonnen', color: 'violet' },
+                  { label: 'Bedingung', detail: '> €5k', color: 'yellow' },
+                  { label: 'Aktion', detail: 'ERP Auftrag', color: 'green' },
+                  { label: 'Aktion', detail: 'Relay Mail', color: 'cyan' },
+                ].map((n, i) => (
+                  <>
+                    <div class={`flex-1 min-w-0 rounded-xl px-2 py-3 bg-${n.color}-500/10 border border-${n.color}-500/20`}>
+                      <p class={`text-[10px] font-bold text-${n.color}-400 mb-1`}>
+                        {n.label}
+                      </p>
+                      <p class="text-[10px] text-meg-text-secondary truncate">
+                        {n.detail}
+                      </p>
+                    </div>
+                    {i < 3 && (
+                      <i
+                        class="fa-solid fa-arrow-right text-meg-text-secondary opacity-40 text-xs shrink-0"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </>
+                ))
+              }
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Nexus Admin Section -->
+  <!-- USP placeholder (Nexus removed – internal tool only) -->
   <section
     class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="nexus-heading"
+    aria-labelledby="usp-placeholder"
+    style="display:none"
   >
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -1541,7 +2074,7 @@ const complianceItems = [
       <div class="max-w-2xl mx-auto">
         <div class="gsap-fadein relative group">
           <div
-            class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700"
+            class="absolute -inset-0.5 bg-linear-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700"
             aria-hidden="true"
           >
           </div>
@@ -1598,7 +2131,7 @@ const complianceItems = [
             <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="/kontakt/"
-                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
+                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-linear-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
               >
                 <i class="fa-solid fa-rocket" aria-hidden="true"></i>
                 Early Access

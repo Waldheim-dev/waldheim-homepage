@@ -1,0 +1,295 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { SchemaUtils } from '../../../utils/schema';
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  { name: 'Home', link: 'https://waldheim.dev' },
+  { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
+  { name: 'Conductor', link: 'https://waldheim.dev/suite/conductor' },
+]);
+
+const titel = 'Conductor – Workflow-Automatisierung | Waldheim Suite';
+const description = 'Conductor: Visueller Workflow-Builder für die Waldheim Suite. Automatisieren Sie Prozesse zwischen CRM, ERP, Treasury, Relay und weiteren Modulen – ohne eine Zeile Code. Teil der Waldheim Suite.';
+const keywords = 'Conductor, Workflow-Automatisierung, No-Code, Trigger, Prozessautomatisierung, Waldheim Suite';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Waldheim Conductor',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: description,
+  url: 'https://waldheim.dev/suite/conductor',
+  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://waldheim.dev' },
+};
+
+const features = [
+  { icon: 'fa-diagram-project', title: 'Visueller Workflow-Builder', description: 'Drag-and-Drop-Editor zum Erstellen von Automatisierungen. Trigger, Bedingungen und Aktionen werden als Nodes verbunden – kein Code nötig.' },
+  { icon: 'fa-bolt', title: 'Event-Trigger', description: 'Starten Sie Workflows über Module-Events: CRM-Deal gewonnen, ERP-Auftrag erstellt, Rechnung bezahlt, Schadensmeldung eingegangen.' },
+  { icon: 'fa-code-branch', title: 'Bedingungen & Verzweigungen', description: 'If-Else-Logik, Wertevergleiche und Switch-Nodes für verzweigte Prozesse. Komplexe Entscheidungsbäume ohne Programmierung.' },
+  { icon: 'fa-webhook', title: 'HTTP-Webhooks', description: 'Externe Systeme als Trigger-Quelle oder Aktionsziel einbinden. Keine nativen Konnektoren nötig – offene REST-Schnittstelle für alles.' },
+  { icon: 'fa-clock-rotate-left', title: 'Ausführungshistorie', description: 'Vollständiges Log aller Workflow-Ausführungen mit Status, Dauer, Fehlerdetails und Eingangsdaten. Vollständig auditierbar.' },
+  { icon: 'fa-rotate-right', title: 'Fehlerbehandlung & Retry', description: 'Konfigurierbare Retry-Logik mit Backoff, Dead-Letter-Queue für fehlgeschlagene Runs und automatische Team-Benachrichtigung über Relay.' },
+  { icon: 'fa-calendar-days', title: 'Zeitgesteuerte Trigger', description: 'Cron-basierte Zeitpläne: täglich, wöchentlich, monatlich oder mit benutzerdefiniertem Intervall. Perfekt für Reports, Abrechnungen und Erinnerungen.' },
+  { icon: 'fa-puzzle-piece', title: 'Suite-Konnektoren', description: 'Native Aktionen für alle Suite-Module: Deal in CRM aktualisieren, Auftrag in ERP erstellen, E-Mail über Relay senden, Dokument in Aether ablegen.' },
+];
+
+const problems = [
+  { icon: 'fa-copy', text: 'Wenn ein Deal im CRM gewonnen wird, muss jemand manuell den ERP-Auftrag erstellen und dem Projektteam Bescheid sagen. Fehler garantiert.' },
+  { icon: 'fa-eye-slash', text: 'Niemand weiß, in welchem Schritt ein Prozess gerade steckt. Laufende Automatisierungen sind unsichtbar bis sie scheitern.' },
+  { icon: 'fa-plug-circle-xmark', text: 'Jedes Tool hat seine eigene Automatisierung – Zapier hier, Mailchimp-Automations dort. Kein zentrales Bild vom Gesamtprozess.' },
+];
+
+const integrations = [
+  { icon: 'fa-network-wired', label: 'Socialverse CRM', desc: 'Trigger: Deal-Events, Kontakt-Updates, Segment-Eintritte', color: 'violet' },
+  { icon: 'fa-building-columns', label: 'Silvacore ERP', desc: 'Trigger + Aktion: Aufträge, Projekte, Ressourcen', color: 'green' },
+  { icon: 'fa-tower-broadcast', label: 'Relay', desc: 'Aktion: E-Mail, Push, In-App-Notification senden', color: 'cyan' },
+  { icon: 'fa-atom', label: 'Aether', desc: 'Aktion: Dokument erstellen, Datei ablegen, Verknüpfen', color: 'rose' },
+];
+
+const nodeGraph = [
+  { icon: 'fa-bolt', label: 'Trigger', detail: 'CRM Deal gewonnen', color: 'violet' },
+  { icon: 'fa-code-branch', label: 'Bedingung', detail: 'Auftragswert > €5.000', color: 'yellow' },
+  { icon: 'fa-building-columns', label: 'Aktion', detail: 'ERP-Auftrag erstellen', color: 'green' },
+  { icon: 'fa-envelope', label: 'Aktion', detail: 'Relay E-Mail an Projektteam', color: 'cyan' },
+];
+---
+
+<Layout title={titel} description={description} keywords={keywords} schema={[softwareSchema, breadCrumbSchema]}>
+
+  <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/suite/" class="hover:text-meg-accent transition-colors font-semibold">Waldheim Suite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-indigo-400 font-bold">Conductor</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-indigo-500/20 to-violet-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="max-w-7xl mx-auto py-16 sm:py-24">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="gsap-fadein mb-4">
+          <span class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-3 py-1.5 rounded-full text-xs font-bold">
+            <i class="fa-solid fa-table-cells-large text-[10px]" aria-hidden="true"></i>
+            Teil der Waldheim Suite
+          </span>
+        </div>
+        <div class="gsap-fadein mb-6 flex flex-wrap justify-center gap-2" style="animation-delay: 0.1s">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-sm font-bold text-indigo-400">
+            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            In Entwicklung
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
+            <i class="fa-solid fa-code-slash text-indigo-400" aria-hidden="true"></i>
+            No-Code
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
+            <i class="fa-solid fa-diagram-project text-indigo-400" aria-hidden="true"></i>
+            Visueller Builder
+          </span>
+        </div>
+        <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+          Prozesse automatisieren.<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">Ohne Entwickler.</span>
+        </h1>
+        <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.3s">
+          Conductor verbindet alle Suite-Module zu automatisierten Workflows. Deal gewonnen →
+          Auftrag erstellt → Team benachrichtigt. Visuell, nachvollziehbar, ohne Code.
+        </p>
+        <div class="gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.45s">
+          <a href="https://portal.waldheim.dev" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto group px-8 py-4 bg-indigo-500 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]">
+            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            Frühen Zugang anfragen
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+          </a>
+          <a href="/suite/" class="w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-indigo-500/40 transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Alle Module
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-meg-surface-dark border-b border-meg-border-dark">
+    <div class="max-w-5xl mx-auto">
+      <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-red-400 mb-8 text-center">
+        <i class="fa-solid fa-triangle-exclamation mr-2" aria-hidden="true"></i>
+        Der Alltag ohne Conductor
+      </p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {problems.map((p, i) => (
+          <div class="gsap-fadein flex gap-4 bg-red-500/5 border border-red-500/20 rounded-2xl p-5" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <i class={`fa-solid ${p.icon} text-red-400`} aria-hidden="true"></i>
+            </div>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="conductor-dashboard">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">
+            <i class="fa-solid fa-diagram-project mr-2" aria-hidden="true"></i>
+            Workflow-Builder
+          </p>
+          <h2 id="conductor-dashboard" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+            Einmal gebaut.<br />
+            <span class="text-indigo-400">Für immer automatisiert.</span>
+          </h2>
+          <p class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.3s">
+            Im visuellen Builder verbinden Sie Trigger aus beliebigen Modulen mit Bedingungen und Aktionen.
+            Jede Ausführung wird protokolliert, jeder Fehler dokumentiert und eskaliert.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Drag-and-Drop-Workflow-Editor ohne Programmierung',
+              'Vollständiges Ausführungslog mit Fehlerdetails',
+              'Automatisches Retry mit konfigurierbarem Backoff',
+              'Zeitgesteuerte und Event-basierte Trigger kombinierbar',
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
+                <i class="fa-solid fa-check text-indigo-400 text-xs" aria-hidden="true"></i>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="gsap-fadein" style="animation-delay: 0.2s">
+          <div class="bg-meg-surface-dark/60 border border-indigo-500/20 rounded-3xl p-6 shadow-2xl shadow-indigo-500/5">
+            <div class="flex items-center justify-between mb-5">
+              <p class="text-sm font-bold text-meg-text-primary-dark">Conductor · Workflow</p>
+              <span class="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>Aktiv
+              </span>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+              {[
+                { label: 'Workflows aktiv', value: '14', color: 'indigo' },
+                { label: 'Läufe heute', value: '847', color: 'violet' },
+                { label: 'Fehlerrate', value: '0.2%', color: 'green' },
+              ].map((k) => (
+                <div class={`bg-meg-bg-dark/60 border border-${k.color}-500/10 rounded-xl p-3 text-center`}>
+                  <p class="text-[10px] text-meg-text-secondary mb-1">{k.label}</p>
+                  <p class={`text-xl font-black text-${k.color}-400`}>{k.value}</p>
+                </div>
+              ))}
+            </div>
+            <div class="mb-4">
+              <p class="text-[10px] font-bold text-meg-text-secondary uppercase tracking-wider mb-3">Workflow: Deal → Auftrag → Benachrichtigung</p>
+              <div class="flex items-center gap-2">
+                {nodeGraph.map((node, i) => (
+                  <>
+                    <div class={`bg-${node.color}-500/10 border border-${node.color}-500/30 rounded-xl px-2 py-2 text-center flex-1 min-w-0`}>
+                      <i class={`fa-solid ${node.icon} text-${node.color}-400 text-xs mb-1 block`} aria-hidden="true"></i>
+                      <p class={`text-[9px] font-bold text-${node.color}-400 leading-none mb-0.5`}>{node.label}</p>
+                      <p class="text-[8px] text-meg-text-secondary leading-tight truncate">{node.detail}</p>
+                    </div>
+                    {i < nodeGraph.length - 1 && <i class="fa-solid fa-arrow-right text-meg-text-secondary opacity-30 text-xs shrink-0" aria-hidden="true"></i>}
+                  </>
+                ))}
+              </div>
+            </div>
+            <div class="space-y-2">
+              {[
+                { label: 'Deal "Müller GmbH" → Auftrag ERP-4921 erstellt', time: 'vor 2 Min', color: 'green' },
+                { label: 'Zeitplan "Monatsbericht" ausgeführt', time: 'vor 1 Std', color: 'indigo' },
+                { label: 'Retry "Webhook extern" fehlgeschlagen', time: 'vor 3 Std', color: 'red' },
+              ].map((e) => (
+                <div class="flex items-center gap-3 text-xs">
+                  <i class={`fa-solid fa-circle-dot text-${e.color}-400`} aria-hidden="true"></i>
+                  <span class="text-meg-text-secondary flex-1 truncate">{e.label}</span>
+                  <span class="text-meg-text-secondary opacity-60 shrink-0">{e.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="conductor-features">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">
+          <i class="fa-solid fa-list-check mr-2" aria-hidden="true"></i>Was Conductor kann
+        </p>
+        <h2 id="conductor-features" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
+          Automatisierung. Ohne Grenzen.
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {features.map((feat, i) => (
+          <div class="gsap-fadein bg-meg-bg-dark/50 border border-meg-border-dark rounded-2xl p-5 hover:border-indigo-500/40 hover:shadow-lg hover:shadow-indigo-500/10 transition-all group" style={`animation-delay: ${i * 0.07}s`}>
+            <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 mb-4 group-hover:bg-indigo-500/20 transition-colors">
+              <i class={`fa-solid ${feat.icon} text-indigo-400 text-lg`} aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-bold text-meg-text-primary-dark mb-2">{feat.title}</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{feat.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="conductor-integrations">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">
+        <i class="fa-solid fa-plug mr-2" aria-hidden="true"></i>Verbindet alles
+      </p>
+      <h2 id="conductor-integrations" class="gsap-fadein text-3xl md:text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.1s">
+        Jedes Modul. Trigger und Aktion.
+      </h2>
+      <p class="gsap-fadein text-meg-text-secondary mb-12 max-w-2xl mx-auto" style="animation-delay: 0.2s">
+        Alle Suite-Module können Events senden und Aktionen empfangen. Conductor ist das Nervensystem der Waldheim Suite.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {integrations.map((int, i) => (
+          <div class={`gsap-fadein bg-meg-surface-dark/50 border border-${int.color}-500/20 rounded-2xl p-5 text-left`} style={`animation-delay: ${i * 0.1}s`}>
+            <div class={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-${int.color}-500/10 border border-${int.color}-500/20 mb-4`}>
+              <i class={`fa-solid ${int.icon} text-${int.color}-400`} aria-hidden="true"></i>
+            </div>
+            <p class={`font-bold text-sm text-${int.color}-400 mb-1`}>{int.label}</p>
+            <p class="text-xs text-meg-text-secondary leading-relaxed">{int.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-conductor">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="gsap-fadein relative group">
+        <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700" aria-hidden="true"></div>
+        <div class="relative bg-meg-surface-dark/60 border border-indigo-500/20 rounded-3xl p-12">
+          <i class="fa-solid fa-gears text-4xl text-indigo-400 mb-6" aria-hidden="true"></i>
+          <h2 id="cta-conductor" class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+            Automatisierung ohne Code.
+          </h2>
+          <p class="text-xl text-meg-text-secondary mb-8 max-w-xl mx-auto">
+            Beantragen Sie frühen Zugang zu Conductor und automatisieren Sie Ihre wichtigsten Geschäftsprozesse.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://portal.waldheim.dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-indigo-500 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 hover:scale-[1.02]">
+              <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>Zum Kundenportal
+            </a>
+            <a href="/suite/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-meg-bg-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-indigo-500/40 transition-all">
+              Alle Module ansehen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

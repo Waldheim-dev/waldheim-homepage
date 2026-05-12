@@ -38,7 +38,7 @@ const itServiceColors = getServiceColors('it-service');
           <span>Suite</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-md -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-2xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
               <a href="/suite/" class="group relative flex gap-x-6 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-accent/20">
                 <div class="size-11 flex-none flex items-center justify-center rounded-lg bg-meg-accent/10 border border-meg-accent/30 group-hover:bg-meg-accent/20 transition-all">
@@ -46,17 +46,20 @@ const itServiceColors = getServiceColors('it-service');
                 </div>
                 <div>
                   <span class="font-bold text-meg-text-primary-dark">Waldheim Suite</span>
-                  <p class="mt-1 text-xs text-slate-400">Zentrale Plattform für Business-Prozesse.</p>
+                  <p class="mt-1 text-xs text-slate-400">Zentrale Plattform für alle Business-Prozesse.</p>
                 </div>
               </a>
-              <div class="mt-4 grid grid-cols-2 gap-1 px-2 border-t border-meg-border-dark/50 pt-4">
+              <div class="mt-4 grid grid-cols-3 gap-1 px-2 border-t border-meg-border-dark/50 pt-4">
                 {[
+                  { icon: 'fa-id-card', label: 'CustomerPortal', color: 'text-sky-400', href: '/suite/portal/' },
                   { icon: 'fa-users-gear', label: 'Socialverse CRM', color: 'text-violet-400', href: '/suite/socialverse/' },
-                  { icon: 'fa-hammer', label: 'Forge ERP', color: 'text-amber-400', href: '/suite/forge/' },
-                  { icon: 'fa-folder-open', label: 'Aether DMS', color: 'text-rose-400', href: '/suite/aether/' },
-                  { icon: 'fa-car-side', label: 'Ecodrive', color: 'text-teal-400', href: '/suite/ecodrive/' },
-                  { icon: 'fa-headset', label: 'Customer Portal', color: 'text-emerald-400', href: '/suite/portal/' },
-                  { icon: 'fa-tag', label: 'Suite Preise', color: 'text-meg-accent', href: '/suite/preise/' },
+                  { icon: 'fa-building-columns', label: 'Silvacore ERP', color: 'text-green-400', href: '/suite/forge/' },
+                  { icon: 'fa-atom', label: 'Aether', color: 'text-rose-400', href: '/suite/aether/' },
+                  { icon: 'fa-leaf', label: 'Ecodrive', color: 'text-emerald-400', href: '/suite/ecodrive/' },
+                  { icon: 'fa-coins', label: 'Treasury', color: 'text-yellow-400', href: '/suite/treasury/' },
+                  { icon: 'fa-building', label: 'Properties', color: 'text-orange-400', href: '/suite/properties/' },
+                  { icon: 'fa-tower-broadcast', label: 'Relay', color: 'text-cyan-400', href: '/suite/relay/' },
+                  { icon: 'fa-gears', label: 'Conductor', color: 'text-indigo-400', href: '/suite/conductor/' },
                 ].map(mod => (
                   <a href={mod.href} class="flex items-center gap-2 text-[11px] text-slate-400 hover:text-meg-text-primary-dark p-2 rounded-xl hover:bg-meg-bg-dark transition-all">
                     <i class={`fa-solid ${mod.icon} ${mod.color} w-4 text-center`}></i> {mod.label}
@@ -157,11 +160,15 @@ const itServiceColors = getServiceColors('it-service');
             </button>
             <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-meg-accent/20">
               <a href="/suite/" class="block p-2 text-sm font-bold text-meg-accent">Übersicht</a>
+              <a href="/suite/portal/" class="block p-2 text-sm text-slate-400">CustomerPortal</a>
               <a href="/suite/socialverse/" class="block p-2 text-sm text-slate-400">Socialverse CRM</a>
-              <a href="/suite/forge/" class="block p-2 text-sm text-slate-400">Forge ERP</a>
-              <a href="/suite/aether/" class="block p-2 text-sm text-slate-400">Aether DMS</a>
+              <a href="/suite/forge/" class="block p-2 text-sm text-slate-400">Silvacore ERP</a>
+              <a href="/suite/aether/" class="block p-2 text-sm text-slate-400">Aether</a>
               <a href="/suite/ecodrive/" class="block p-2 text-sm text-slate-400">Ecodrive</a>
-              <a href="/suite/portal/" class="block p-2 text-sm text-slate-400">Customer Portal</a>
+              <a href="/suite/treasury/" class="block p-2 text-sm text-slate-400">Treasury</a>
+              <a href="/suite/properties/" class="block p-2 text-sm text-slate-400">Properties</a>
+              <a href="/suite/relay/" class="block p-2 text-sm text-slate-400">Relay</a>
+              <a href="/suite/conductor/" class="block p-2 text-sm text-slate-400">Conductor</a>
               <a href="/suite/preise/" class="block p-2 text-sm font-bold text-meg-text-primary-dark">Preise</a>
             </div>
           </div>
