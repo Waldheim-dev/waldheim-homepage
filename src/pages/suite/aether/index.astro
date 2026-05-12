@@ -10,9 +10,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
 
 const titel = 'Aether – Dokumente, Assets & Wissen | Waldheim Suite';
 const description =
-  'Aether: Zentrales Dokumentenmanagement mit Ordnerstruktur, Explorer-Ansicht, Entwürfen und Storage-Übersicht. Teil der Waldheim Suite.';
+  'Aether organisiert Dokumente, Assets, Freigaben und verknüpftes Wissen an einem Ort statt in Laufwerken, E-Mails und Chat-Threads. Teil der Waldheim Suite.';
 const keywords =
-  'Aether, Dokumentenmanagement, Assets, Wissensmanagement, Ordner, Explorer, Entwürfe, Speicher, Waldheim Suite';
+  'Aether, Dokumentenmanagement, Assets, Freigaben, Wissen, Versionierung, Suche, Waldheim Suite';
 
 const softwareSchema = {
   '@context': 'https://schema.org',
@@ -28,41 +28,66 @@ const softwareSchema = {
 const features = [
   {
     icon: 'fa-file-lines',
-    title: 'Dokumente verwalten',
-    description: 'Alle Unternehmensdokumente zentral speichern, versionieren und mit Berechtigungen versehen.',
+    title: 'Dokumente mit Versionen',
+    description: 'Verträge, Angebote, Projektdokumente und Freigaben inklusive Versionierung und klarer Änderungsverläufe.',
   },
   {
-    icon: 'fa-sitemap',
-    title: 'Ordnerstruktur',
-    description: 'Intuitive Hierarchie für Ihre Dokumente und Assets – anpassbar an Ihre Unternehmensstruktur.',
+    icon: 'fa-folder-tree',
+    title: 'Strukturierte Ablage',
+    description: 'Ordner, Objekte und kontextbezogene Verknüpfungen statt lose Dateiablage ohne Verantwortung.',
   },
   {
-    icon: 'fa-compass',
-    title: 'Explorer-Ansicht',
-    description: 'Datei-Explorer-artige Navigation durch alle Inhalte mit Vorschau, Suche und Filter.',
+    icon: 'fa-eye',
+    title: 'Vorschau & Annotation',
+    description: 'PDFs, Bilder und Dokumente direkt sichten, kommentieren und freigeben ohne lokalen Download-Zirkus.',
   },
   {
     icon: 'fa-pen-to-square',
-    title: 'Entwurfs-System',
-    description: 'Dokumente als Entwurf anlegen, bearbeiten und gezielt veröffentlichen – mit Versionsverlauf.',
+    title: 'Entwürfe & Freigaben',
+    description: 'Dokumente im Entwurfsstatus halten, prüfen lassen und kontrolliert veröffentlichen.',
   },
   {
-    icon: 'fa-hard-drive',
-    title: 'Storage-Übersicht',
-    description: 'Transparente Übersicht über genutzten Speicher, Datei-Typen und Verbrauch pro Bereich.',
+    icon: 'fa-link',
+    title: 'Verknüpfte Wissensobjekte',
+    description: 'Dokumente hängen direkt an Kunden, Projekten, Objekten oder Rechnungen und verlieren nie ihren Kontext.',
+  },
+  {
+    icon: 'fa-lock',
+    title: 'Berechtigungen',
+    description: 'Zugriffe rollen- und kontextbezogen steuern, statt sensible Dokumente per Mail herumzureichen.',
   },
   {
     icon: 'fa-magnifying-glass',
-    title: 'Volltext-Suche',
-    description: 'Dokumente und Assets blitzschnell per Volltext-Suche finden – über alle Ordner hinweg.',
+    title: 'Suche über alles',
+    description: 'Titel, Inhalte, Metadaten und Referenzen in Sekunden durchsuchen, statt Ordnerhierarchien zu erraten.',
+  },
+  {
+    icon: 'fa-database',
+    title: 'Storage-Transparenz',
+    description: 'Belegte Speicher, häufig genutzte Asset-Typen und Archive zentral sichtbar und sauber verwaltet.',
   },
 ];
 
-const kpis = [
-  { value: 'Dokumente', icon: 'fa-file-lines', color: 'rose' },
-  { value: 'Ordner', icon: 'fa-folder', color: 'rose' },
-  { value: 'Speicher', icon: 'fa-hard-drive', color: 'rose' },
-  { value: 'Entwürfe', icon: 'fa-pen-to-square', color: 'rose' },
+const problems = [
+  {
+    icon: 'fa-paperclip',
+    text: 'Dokumente liegen in Mailanhängen, Teams-Chats, lokalen Downloads und Netzlaufwerken. Niemand weiß sicher, welche Version gilt.',
+  },
+  {
+    icon: 'fa-folder-open',
+    text: 'Wissen bleibt an Personen hängen. Sobald jemand ausfällt oder das Team wechselt, beginnt die Suche nach dem letzten Stand von vorn.',
+  },
+  {
+    icon: 'fa-shield-halved',
+    text: 'Sensible Unterlagen werden unkontrolliert geteilt, weil zentrale Berechtigungen und dokumentierte Freigabepfade fehlen.',
+  },
+];
+
+const integrations = [
+  { icon: 'fa-building-columns', label: 'Silvacore ERP', desc: 'Projektakten, Lieferscheine und Nachweise bleiben am Auftrag verknüpft', color: 'green' },
+  { icon: 'fa-building', label: 'Properties', desc: 'Verträge, Pläne und Abrechnungen hängen direkt an Objekten und Einheiten', color: 'orange' },
+  { icon: 'fa-coins', label: 'Treasury', desc: 'Belege und Finanzdokumente sind unmittelbar aus Prozessen aufrufbar', color: 'yellow' },
+  { icon: 'fa-id-card', label: 'CustomerPortal', desc: 'Kunden können freigegebene Dokumente direkt im Portal einsehen', color: 'sky' },
 ];
 ---
 
@@ -72,7 +97,6 @@ const kpis = [
   keywords={keywords}
   schema={[softwareSchema, breadCrumbSchema]}
 >
-  <!-- Breadcrumb -->
   <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
     <div class="max-w-7xl mx-auto">
       <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
@@ -83,11 +107,10 @@ const kpis = [
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
       <div
-        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-rose-500/20 to-pink-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-rose-500/20 to-pink-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
         style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
       ></div>
     </div>
@@ -99,21 +122,27 @@ const kpis = [
             Teil der Waldheim Suite
           </span>
         </div>
-        <div class="gsap-fadein mb-6" style="animation-delay: 0.1s">
+        <div class="gsap-fadein mb-6 flex flex-wrap justify-center gap-2" style="animation-delay: 0.1s">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/20 text-sm font-bold text-rose-400">
             <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
             Closed Alpha
           </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
+            <i class="fa-solid fa-lock text-rose-400" aria-hidden="true"></i>
+            Freigaben & Rechte
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
+            <i class="fa-solid fa-magnifying-glass text-rose-400" aria-hidden="true"></i>
+            Kontextsuche
+          </span>
         </div>
         <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Aether
+          Wissen ablegen.<br />
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-rose-400 to-pink-500">Nicht verstecken.</span>
         </h1>
-        <p class="gsap-fadein text-2xl font-bold text-rose-400 mb-6" style="animation-delay: 0.2s">
-          Dokumente, Assets & Wissen
-        </p>
         <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.3s">
-          Zentrales Wissens- und Dokumentenmanagement für Ihr Unternehmen: Ordnerstruktur, Explorer,
-          Entwurfssystem und Storage-Transparenz – alles an einem Ort.
+          Aether hält Dokumente, Assets und Freigaben im richtigen Kontext zusammen. Statt Sucherei in Ordnern,
+          Chats und Anhängen arbeitet Ihr Team mit einer belastbaren Wissens- und Dokumentenbasis.
         </p>
         <div class="gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.45s">
           <a
@@ -131,47 +160,121 @@ const kpis = [
             class="w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-rose-500/40 transition-all duration-300 inline-flex items-center justify-center gap-2"
           >
             <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-            Zurück zur Suite
+            Alle Module
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KPI Highlights -->
-  <section class="py-16 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="aether-kpis-heading">
-    <div class="max-w-7xl mx-auto">
-      <h2 id="aether-kpis-heading" class="sr-only">KPI-Metriken</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {kpis.map((kpi, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 border border-rose-500/20 rounded-2xl p-6 text-center" style={`animation-delay: ${i * 0.1}s`}>
-            <i class={`fa-solid ${kpi.icon} text-rose-400 text-2xl mb-3`} aria-hidden="true"></i>
-            <p class="text-meg-text-primary-dark font-bold">{kpi.value}</p>
+  <section class="py-20 px-6 bg-meg-surface-dark border-b border-meg-border-dark">
+    <div class="max-w-5xl mx-auto">
+      <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-red-400 mb-8 text-center">
+        <i class="fa-solid fa-triangle-exclamation mr-2" aria-hidden="true"></i>
+        Der Alltag ohne Aether
+      </p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {problems.map((p, i) => (
+          <div class="gsap-fadein flex gap-4 bg-red-500/5 border border-red-500/20 rounded-2xl p-5" style={`animation-delay: ${i * 0.1}s`}>
+            <div class="shrink-0 w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <i class={`fa-solid ${p.icon} text-red-400`} aria-hidden="true"></i>
+            </div>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">{p.text}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Features Grid -->
-  <section class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="aether-features-heading">
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="aether-dashboard-heading">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4">
+            <i class="fa-solid fa-gauge-high mr-2" aria-hidden="true"></i>
+            Knowledge & Document Hub
+          </p>
+          <h2 id="aether-dashboard-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
+            Finden statt fragen.<br />
+            <span class="text-rose-400">Freigeben statt schicken.</span>
+          </h2>
+          <p class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.3s">
+            Aether zeigt, welche Dokumente gerade in Freigabe sind, welche Version veröffentlicht wurde und
+            an welchem Objekt oder Prozess die Datei eigentlich hängt. So wird Wissen benutzbar statt bloß gespeichert.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Dokumente bleiben an Kunden, Projekten oder Objekten verankert',
+              'Versionen und Freigaben sind nachvollziehbar statt implizit',
+              'Suche über Inhalte und Metadaten spart Zeit im Alltag',
+              'Sensible Dateien werden gezielt freigegeben statt breit verschickt',
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
+                <i class="fa-solid fa-check text-rose-400 text-xs" aria-hidden="true"></i>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="gsap-fadein" style="animation-delay: 0.2s">
+          <div class="bg-meg-surface-dark/60 border border-rose-500/20 rounded-3xl p-6 shadow-2xl shadow-rose-500/5">
+            <div class="flex items-center justify-between mb-5">
+              <p class="text-sm font-bold text-meg-text-primary-dark">Aether · Dokumentencenter</p>
+              <span class="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-1 rounded-lg font-bold flex items-center gap-1.5">
+                <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>Live
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mb-5">
+              {[
+                { label: 'Dokumente', value: '12.842', sub: 'über 38 Bereiche', color: 'rose' },
+                { label: 'Freigaben offen', value: '17', sub: '6 kritisch', color: 'yellow' },
+                { label: 'Entwürfe', value: '42', sub: '11 neu diese Woche', color: 'pink' },
+                { label: 'Storage', value: '284 GB', sub: '73% genutzt', color: 'cyan' },
+              ].map((k) => (
+                <div class={`bg-meg-bg-dark/60 border border-${k.color}-500/10 rounded-xl p-3`}>
+                  <p class="text-[10px] text-meg-text-secondary mb-1">{k.label}</p>
+                  <p class={`text-xl font-black text-${k.color}-400`}>{k.value}</p>
+                  <p class="text-[10px] text-meg-text-secondary opacity-60">{k.sub}</p>
+                </div>
+              ))}
+            </div>
+            <div class="space-y-2">
+              {[
+                { label: 'Vertrag „Objekt Schillerpark“ freigegeben', time: 'vor 8 Min', color: 'rose' },
+                { label: 'Rechnungspaket Mai an Treasury verknüpft', time: 'heute', color: 'yellow' },
+                { label: 'Neuer Entwurf „Projektakte Nord“ erstellt', time: 'heute', color: 'pink' },
+              ].map((entry) => (
+                <div class="flex items-center gap-3 text-xs bg-meg-bg-dark/40 rounded-xl px-3 py-2">
+                  <i class={`fa-solid fa-circle-dot text-${entry.color}-400`} aria-hidden="true"></i>
+                  <span class="text-meg-text-secondary flex-1 truncate">{entry.label}</span>
+                  <span class="text-meg-text-secondary opacity-60 shrink-0">{entry.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark" aria-labelledby="aether-features-heading">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4">
           <i class="fa-solid fa-list-check mr-2" aria-hidden="true"></i>
-          Features
+          Was Aether kann
         </p>
         <h2 id="aether-features-heading" class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark" style="animation-delay: 0.15s">
-          Wissensmanagement neu gedacht
+          Dokumente mit Kontext
         </h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {features.map((feat, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-rose-500/40 hover:shadow-lg hover:shadow-rose-500/10 transition-all" style={`animation-delay: ${i * 0.1}s`}>
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 mb-4">
+          <div class="gsap-fadein bg-meg-bg-dark/50 border border-meg-border-dark rounded-2xl p-5 hover:border-rose-500/40 hover:shadow-lg hover:shadow-rose-500/10 transition-all group" style={`animation-delay: ${i * 0.07}s`}>
+            <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-rose-500/10 border border-rose-500/20 mb-4 group-hover:bg-rose-500/20 transition-colors">
               <i class={`fa-solid ${feat.icon} text-rose-400 text-xl`} aria-hidden="true"></i>
             </div>
-            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-2">{feat.title}</h3>
+            <h3 class="text-base font-bold text-meg-text-primary-dark mb-2">{feat.title}</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">{feat.description}</p>
           </div>
         ))}
@@ -179,27 +282,58 @@ const kpis = [
     </div>
   </section>
 
-  <!-- CTA -->
+  <section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark" aria-labelledby="aether-integrations-heading">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="gsap-fadein text-sm font-bold uppercase tracking-widest text-rose-400 mb-4">
+        <i class="fa-solid fa-plug mr-2" aria-hidden="true"></i>Nahtlos integriert
+      </p>
+      <h2 id="aether-integrations-heading" class="gsap-fadein text-3xl md:text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4" style="animation-delay: 0.1s">
+        Wissen bleibt im Prozess.
+      </h2>
+      <p class="gsap-fadein text-meg-text-secondary mb-12 max-w-2xl mx-auto" style="animation-delay: 0.2s">
+        Aether ist kein separates Laufwerk, sondern die Dokumentenschicht der gesamten Suite.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {integrations.map((int, i) => (
+          <div class={`gsap-fadein bg-meg-surface-dark/50 border border-${int.color}-500/20 rounded-2xl p-5 text-left`} style={`animation-delay: ${i * 0.1}s`}>
+            <div class={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-${int.color}-500/10 border border-${int.color}-500/20 mb-4`}>
+              <i class={`fa-solid ${int.icon} text-${int.color}-400`} aria-hidden="true"></i>
+            </div>
+            <p class={`font-bold text-sm text-${int.color}-400 mb-1`}>{int.label}</p>
+            <p class="text-xs text-meg-text-secondary leading-relaxed">{int.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-aether-heading">
     <div class="max-w-4xl mx-auto text-center">
-      <div class="gsap-fadein bg-meg-surface-dark/50 border border-rose-500/20 rounded-3xl p-12">
+      <div class="gsap-fadein relative group">
+        <div class="absolute -inset-0.5 bg-linear-to-r from-rose-500/20 to-pink-500/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700" aria-hidden="true"></div>
+        <div class="relative bg-meg-surface-dark/60 border border-rose-500/20 rounded-3xl p-12">
         <i class="fa-solid fa-folder-open text-4xl text-rose-400 mb-6" aria-hidden="true"></i>
         <h2 id="cta-aether-heading" class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
-          Wissen zentral verwalten
+          Schluss mit Dateichaos
         </h2>
-        <p class="text-xl text-meg-text-secondary mb-8">
-          Beantragen Sie frühen Zugang zu Aether über das Waldheim Kundenportal.
+        <p class="text-xl text-meg-text-secondary mb-8 max-w-xl mx-auto">
+          Geben Sie Dokumenten, Freigaben und Wissen einen festen Platz in Ihrer Suite statt in Schattenablagen.
         </p>
-        <a
-          href="https://portal.waldheim.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-8 py-4 bg-rose-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-rose-500/30 transition-all duration-300 hover:scale-[1.02]"
-        >
-          <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
-          Zum Kundenportal
-          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://portal.waldheim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rose-600 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-rose-500/30 transition-all duration-300 hover:scale-[1.02]"
+          >
+            <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+            Zum Kundenportal
+          </a>
+          <a href="/suite/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-meg-bg-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-rose-500/40 transition-all">
+            Alle Module ansehen
+          </a>
+        </div>
+        </div>
       </div>
     </div>
   </section>
