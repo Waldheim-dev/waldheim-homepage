@@ -8,9 +8,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   { name: 'Properties', link: 'https://waldheim.dev/suite/properties' },
 ]);
 
-const titel = 'Properties – Objekt- & Immobilienverwaltung | Waldheim Suite';
-const description = 'Properties: Digitale WEG-Verwaltung, Mietverträge, Nebenkostenabrechnungen, Instandhaltungstickets und Mieterportal – rechtssicher und DSGVO-konform. Teil der Waldheim Suite.';
-const keywords = 'Immobilienverwaltung, WEG-Verwaltung, Mieterverwaltung, Nebenkostenabrechnung, Hausverwaltung, Properties, Waldheim Suite';
+const titel = 'Properties – Schlanke WEG-Verwaltung mit Owner Portal | Waldheim Suite';
+const description = 'Properties: Schlanke, cloud-basierte WEG-Verwaltung mit Owner Portal, Tickets, KI-gestuetzter Uebersetzung, automatisierten E-Mails sowie WEG-Abrechnung, Mahnwesen, Jahresabrechnung, Wirtschaftsplan und Ruecklagenkonto.';
+const keywords = 'WEG Verwaltung Software, Owner Portal, Mahnwesen WEG, Jahresabrechnung WEG, Wirtschaftsplan, Ruecklagenkonto, Hausverwaltung Cloud, Properties, Waldheim Suite';
 
 const softwareSchema = {
   '@context': 'https://schema.org',
@@ -24,27 +24,29 @@ const softwareSchema = {
 };
 
 const features = [
-  { icon: 'fa-building', title: 'Objektverwaltung', description: 'Liegenschaften, Gebäude und Einheiten digital erfassen. Vollständige Stammdaten, Grundrisse, Dokumente und Kostenhistorie auf einen Blick.' },
-  { icon: 'fa-file-contract', title: 'Mietvertragsverwaltung', description: 'Vertragserstellung, Laufzeiten, Indexmiete, automatische Verlängerungserinnerung und revisionssichere Archivierung in Aether.' },
-  { icon: 'fa-receipt', title: 'Nebenkostenabrechnung', description: 'DSGVO-konforme NK-Abrechnungen auf Knopfdruck mit individualisierbaren Verteilerschlüsseln – Fläche, Personenanzahl oder Zählerstand.' },
-  { icon: 'fa-wrench', title: 'Instandhaltungstickets', description: 'Schadensmeldungen digital erfassen, Dienstleister beauftragen, Kosten dokumentieren und Fristen tracken – alles lückenlos protokolliert.' },
-  { icon: 'fa-users', title: 'Mieter-Self-Service', description: 'Ihr Mieterportal: Schadensmeldungen einreichen, Dokumente abrufen, Betriebskostenabrechnungen herunterladen – ohne Anruf, ohne Papierkram.' },
-  { icon: 'fa-chart-bar', title: 'Portfolio-Reporting', description: 'Renditekennzahlen, Leerstandsquoten, Kostenentwicklung und Instandhaltungsbudgets auf Objekt- und Portfolioebene – exportierbar nach Excel und DATEV.' },
-  { icon: 'fa-calendar-check', title: 'Eigentümerversammlungen', description: 'WEG-Protokolle digital erstellen, Beschlüsse dokumentieren, Abstimmungsergebnisse festhalten und rechtssicher archivieren.' },
-  { icon: 'fa-euro-sign', title: 'Hausgeldverwaltung', description: 'Hausgeldabrechnungen, Rücklagenplanung und Sonderumlagen direkt aus dem System – verknüpft mit Treasury für vollständige Finanztransparenz.' },
+  { icon: 'fa-building', title: 'WEG-Basisdaten', description: 'Objekte, Einheiten und Eigentuemer digital pflegen. Jeder Datensatz bleibt tenant-sicher und revisionsfaehig im Cloud-Betrieb.' },
+  { icon: 'fa-id-card', title: 'Owner Portal', description: 'Eigentuemer sehen Tickets, Dokumente, Zahlstatus und wichtige Beschluesse in einem Self-Service-Workspace statt per E-Mail-Pingpong.' },
+  { icon: 'fa-ticket', title: 'Ticketing fuer Verwaltung', description: 'Anfragen, Maengel und Rueckfragen laufen ueber eine zentrale Queue mit Status, Prioritaet und nachvollziehbarer Historie.' },
+  { icon: 'fa-file-invoice-dollar', title: 'WEG-Abrechnung', description: 'Hausgeld-Sollstellungen, offene Posten und Abrechnungslaeufe in einem durchgaengigen Prozess fuer den Verwalteralltag.' },
+  { icon: 'fa-bell', title: 'Mahnwesen', description: 'Stufenbasierte Mahnlaeufe mit automatisierten Benachrichtigungen und klarer Nachverfolgung aller Forderungen.' },
+  { icon: 'fa-calendar-days', title: 'Jahresabrechnung', description: 'Jahresabrechnungen je Objekt strukturiert erstellen, pruefen und fuer Eigentuemer bereitstellen.' },
+  { icon: 'fa-chart-pie', title: 'Wirtschaftsplan', description: 'Planwerte, Kategorien und Verteilung je Wirtschaftsjahr transparent steuern und als Entscheidungsgrundlage aufbereiten.' },
+  { icon: 'fa-piggy-bank', title: 'Ruecklagenkonto', description: 'Ruecklagenbewegungen, Salden und zweckgebundene Mittel pro Objekt nachvollziehbar verwalten.' },
+  { icon: 'fa-language', title: 'KI-Uebersetzung', description: 'Kommunikation fuer internationale Eigentuemer automatisch in die passende Sprache uebertragen.' },
+  { icon: 'fa-envelope-circle-check', title: 'Automatisierte E-Mails', description: 'Ereignisbasierte Mails fuer Faelligkeiten, Mahnungen, Beschluesse und Dokumentbereitstellung ohne manuelle Serienarbeit.' },
 ];
 
 const problems = [
-  { icon: 'fa-folder-open', text: 'Mietverträge in Papierordnern, NK-Abrechnungen in Excel, Schadensmeldungen per Telefonanruf – kein System, das alles kennt.' },
-  { icon: 'fa-clock', text: 'Nebenkostenabrechnung dauert Wochen. Fehlerquellen überall, Beschwerden der Mieter vorprogrammiert.' },
-  { icon: 'fa-eye-slash', text: 'Kein Überblick über Portfolio-Rendite, Leerstand oder offene Instandhaltungskosten ohne stundenlanges Zusammensuchen.' },
+  { icon: 'fa-folder-open', text: 'Eigentuemerlisten, Hausgeld, Mahnungen und Beschluesse liegen verteilt in Excel, E-Mail und Papierordnern.' },
+  { icon: 'fa-clock', text: 'Kleine Verwalterteams verlieren zu viel Zeit mit manuellen Rueckfragen, Uebersetzungen und wiederkehrenden Mailaufgaben.' },
+  { icon: 'fa-eye-slash', text: 'Ohne Owner Portal und Ticketing fehlt Transparenz fuer Eigentuemer und Nachvollziehbarkeit fuer die Verwaltung.' },
 ];
 
 const integrations = [
-  { icon: 'fa-atom', label: 'Aether', desc: 'Verträge, Grundrisse und Belege direkt im DMS verknüpft', color: 'rose' },
-  { icon: 'fa-coins', label: 'Treasury', desc: 'Hausgeld, Mieteinnahmen und Kosten automatisch in Finanzen', color: 'yellow' },
-  { icon: 'fa-tower-broadcast', label: 'Relay', desc: 'Mieter per E-Mail über Abrechnungen und Termine informieren', color: 'cyan' },
-  { icon: 'fa-id-card', label: 'CustomerPortal', desc: 'Mieterportal als Self-Service direkt im Kundenportal', color: 'sky' },
+  { icon: 'fa-atom', label: 'Aether', desc: 'Beschluesse, Abrechnungen und Belege direkt am Objekt verknuepft', color: 'rose' },
+  { icon: 'fa-coins', label: 'Treasury', desc: 'WEG-Abrechnung, Mahnwesen und Ruecklagen mit Finanzkontext', color: 'yellow' },
+  { icon: 'fa-tower-broadcast', label: 'Relay', desc: 'Automatisierte, mehrsprachige E-Mails fuer Eigentuemerkommunikation', color: 'cyan' },
+  { icon: 'fa-id-card', label: 'CustomerPortal', desc: 'Owner Portal fuer Self-Service, Tickets und Dokumentzugriff', color: 'sky' },
 ];
 ---
 
@@ -62,7 +64,7 @@ const integrations = [
 
   <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-orange-500/20 to-amber-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-orange-500/20 to-amber-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
     <div class="max-w-7xl mx-auto py-16 sm:py-24">
       <div class="mx-auto max-w-3xl text-center">
@@ -88,11 +90,11 @@ const integrations = [
         </div>
         <h1 class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
           Immobilien verwalten.<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Nicht ertragen.</span>
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-amber-500">Nicht ertragen.</span>
         </h1>
         <p class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay: 0.3s">
-          Von der Nebenkostenabrechnung bis zum Mieterportal – Properties digitalisiert Ihre gesamte
-          Objektverwaltung und ist dabei rechtssicher, DSGVO-konform und direkt mit der Suite verknüpft.
+          Properties ist auf schlanke WEG-Verwaltung ausgelegt: wenig Administration, dafuer Cloud-Prozesse,
+          Owner Portal, Ticketing, KI-Uebersetzung und automatisierte Kommunikation fuer internationale Eigentuemer.
         </p>
         <div class="gsap-fadein flex flex-col sm:flex-row items-center justify-center gap-4" style="animation-delay: 0.45s">
           <a href="https://portal.waldheim.dev" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto group px-8 py-4 bg-orange-500 text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 inline-flex items-center justify-center gap-2 hover:scale-[1.02]">
@@ -140,15 +142,15 @@ const integrations = [
             <span class="text-orange-400">Ein Überblick.</span>
           </h2>
           <p class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed" style="animation-delay: 0.3s">
-            Properties aggregiert Leerstand, offene Schadensmeldungen, fällige Abrechnungen und Portfolio-Rendite
-            auf einem zentralen Dashboard – verknüpft mit Treasury für vollständige Finanztransparenz.
+            Properties aggregiert offene Tickets, Faelligkeiten, Mahnstatus, Ruecklagen und Jahreskennzahlen
+            auf einem zentralen Dashboard und reduziert manuelle Verwaltungsarbeit spuerbar.
           </p>
           <ul class="space-y-3">
             {[
-              'NK-Abrechnungen auf Knopfdruck – korrekt, rechtssicher, DSGVO-konform',
-              'Mieterportal: Schadensmeldung in 2 Minuten, kein Anruf nötig',
-              'Instandhaltungskosten automatisch in Treasury gebucht',
-              'Eigentümerversammlungen digital protokolliert und archiviert',
+              'WEG-Abrechnung und Jahresabrechnung in einem durchgaengigen Ablauf',
+              'Owner Portal mit Ticketing und Dokumentzugriff fuer Eigentuemer',
+              'Mahnwesen mit regelbasierten Erinnerungen und Eskalationsstufen',
+              'Wirtschaftsplan und Ruecklagenkonto transparent pro Objekt steuern',
             ].map((item) => (
               <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
                 <i class="fa-solid fa-check text-orange-400 text-xs" aria-hidden="true"></i>
@@ -167,10 +169,10 @@ const integrations = [
             </div>
             <div class="grid grid-cols-2 gap-3 mb-5">
               {[
-                { label: 'Objekte', value: '12', sub: '3 WEGs, 9 Mietobjekte', color: 'orange' },
-                { label: 'Einheiten', value: '84', sub: '79 vermietet', color: 'amber' },
-                { label: 'Leerstand', value: '6.0%', sub: '5 Einheiten', color: 'red' },
-                { label: 'Ø Rendite', value: '4.8%', sub: '+0.3% ggü. Vorjahr', color: 'green' },
+                { label: 'Objekte', value: '12', sub: '6 WEGs aktiv', color: 'orange' },
+                { label: 'Offene Tickets', value: '9', sub: '2 mit hoher Prioritaet', color: 'amber' },
+                { label: 'Offene Mahnungen', value: '4', sub: 'Stufe 1/2', color: 'red' },
+                { label: 'Ruecklage', value: 'EUR 184k', sub: 'gesamt verfuegbar', color: 'green' },
               ].map((k) => (
                 <div class={`bg-meg-bg-dark/60 border border-${k.color}-500/10 rounded-xl p-3`}>
                   <p class="text-[10px] text-meg-text-secondary mb-1">{k.label}</p>
@@ -181,9 +183,9 @@ const integrations = [
             </div>
             <div class="space-y-2">
               {[
-                { label: 'NK-Abrechnung "Musterstr. 4" erstellt', time: 'heute', color: 'orange' },
-                { label: 'Schadensmeldung: Wasserschaden EG', time: 'vor 2 Std', color: 'red' },
-                { label: 'Mietvertrag läuft aus: Einheit 3b', time: 'in 30 Tagen', color: 'yellow' },
+                { label: 'Jahresabrechnung 2025 fuer WEG Seebogen freigegeben', time: 'heute', color: 'orange' },
+                { label: 'Ticket #1492: Aufzugstoerung, Dienstleister informiert', time: 'vor 2 Std', color: 'red' },
+                { label: 'Automail: Mahnstufe 1 an 3 Eigentuemer gesendet', time: 'vor 30 Min', color: 'yellow' },
               ].map((e) => (
                 <div class="flex items-center gap-3 text-xs">
                   <i class={`fa-solid fa-circle-dot text-${e.color}-400`} aria-hidden="true"></i>
@@ -246,7 +248,7 @@ const integrations = [
   <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-prop">
     <div class="max-w-4xl mx-auto text-center">
       <div class="gsap-fadein relative group">
-        <div class="absolute -inset-0.5 bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700" aria-hidden="true"></div>
+        <div class="absolute -inset-0.5 bg-linear-to-r from-orange-500/20 to-amber-500/20 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700" aria-hidden="true"></div>
         <div class="relative bg-meg-surface-dark/60 border border-orange-500/20 rounded-3xl p-12">
           <i class="fa-solid fa-building text-4xl text-orange-400 mb-6" aria-hidden="true"></i>
           <h2 id="cta-prop" class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">Zettelwirtschaft war gestern.</h2>
