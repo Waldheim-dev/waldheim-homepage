@@ -1,3 +1,10 @@
+## [26.10.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.0...26.10.1) (2026-06-03)
+
+
+### Bug Fixes
+
+* **ci:** replace wlixcc/SFTP-Deploy-Action with lftp shell step ([4d569ab](https://github.com/Waldheim-dev/waldheim-homepage/commit/4d569abbb476219bf68f07b8f86c577d65a69194))
+
 # [26.10.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.9.0...26.10.0) (2026-06-03)
 
 
