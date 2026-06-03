@@ -1,3 +1,15 @@
+# [26.10.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.9.0...26.10.0) (2026-06-03)
+
+
+### Bug Fixes
+
+* Update descriptions and titles for suite and properties pages to enhance clarity and SEO ([2890d11](https://github.com/Waldheim-dev/waldheim-homepage/commit/2890d112dd4475b5e4c61756aeea94f0d66d44cb))
+
+
+### Features
+
+* add semrel landing page components and content ([c2a3459](https://github.com/Waldheim-dev/waldheim-homepage/commit/c2a3459f7cc804861129f3d0df72642063e246bc))
+
 # [26.9.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.8.1...26.9.0) (2026-05-11)
 
 
