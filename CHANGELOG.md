@@ -1,3 +1,10 @@
+# [26.11.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.2...26.11.0) (2026-06-03)
+
+
+### Features
+
+* **i18n:** add EN/DE multilingual support with fallback ([4a06e15](https://github.com/Waldheim-dev/waldheim-homepage/commit/4a06e1562aa4d8f2be92d8121a4744c92550bc1f))
+
 ## [26.10.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.1...26.10.2) (2026-06-03)
 
 
