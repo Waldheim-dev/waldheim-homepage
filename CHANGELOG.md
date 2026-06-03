@@ -1,3 +1,10 @@
+## [26.10.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.1...26.10.2) (2026-06-03)
+
+
+### Bug Fixes
+
+* **semrel:** correct roadmap milestone statuses ([b51942f](https://github.com/Waldheim-dev/waldheim-homepage/commit/b51942f8d733b53e7b91b115d0651c994e4e9171))
+
 ## [26.10.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.0...26.10.1) (2026-06-03)
 
 
