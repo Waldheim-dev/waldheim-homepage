@@ -27,6 +27,16 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://www.waldheim.dev',
+  i18n: {
+    defaultLocale: 'de',
+    locales: ['de', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    fallback: {
+      en: 'de',
+    },
+  },
 
   integrations: [
     mdx(),
@@ -59,6 +69,16 @@ export default defineConfig({
     }),
     llmsTxt({
       site: 'https://www.waldheim.dev',
+  i18n: {
+    defaultLocale: 'de',
+    locales: ['de', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    fallback: {
+      en: 'de',
+    },
+  },
       projectName: 'waldheim.dev',
       description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
       sectionTitle: 'Seitenübersicht',
