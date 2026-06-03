@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SchemaUtils } from '../../utils/schema';
+import SemrelHero from '../../components/SemrelHero.astro';
+import SemrelFeatures from '../../components/SemrelFeatures.astro';
+import SemrelPlugins from '../../components/SemrelPlugins.astro';
+import SemrelQuickStart from '../../components/SemrelQuickStart.astro';
+import SemrelRoadmap from '../../components/SemrelRoadmap.astro';
+import SemrelContribute from '../../components/SemrelContribute.astro';
+
+const titel = 'semrel — Semantic Releases. Fully Automated. Open Source.';
+const description = 'semrel ist ein Go-basiertes Semantic Release System mit Plugin-Architektur. Conventional Commits, Monorepo-Support, 30+ Plugins für GitHub, Docker, npm, Helm u.v.m. Apache 2.0.';
+const keywords = 'semrel, semantic release, go, conventional commits, monorepo, plugin, open source, ci cd automation, github actions, release automation';
+const ogImage = 'https://waldheim.dev/semrel/og-image.jpg';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'semrel',
+  'applicationCategory': 'DeveloperApplication',
+  'operatingSystem': 'Linux, macOS, Windows',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'EUR',
+    'availability': 'https://schema.org/OnlineOnly'
+  },
+  'softwareVersion': '0.3.x',
+  'description': 'Go-basiertes Semantic Release System mit Plugin-Architektur. Automatisiert den vollständigen Release-Lifecycle via Conventional Commits.',
+  'license': 'https://www.apache.org/licenses/LICENSE-2.0',
+  'author': [
+    { '@type': 'Person', 'name': 'Markus Waldheim', 'url': 'https://waldheim.dev' },
+    { '@type': 'Person', 'name': 'Thomas Boerger' }
+  ],
+  'url': 'https://www.semrel.io/',
+  'codeRepository': 'https://github.com/SemRels/semrel'
+};
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  { name: 'Home', link: 'https://waldheim.dev' },
+  { name: 'semrel', link: 'https://waldheim.dev/semrel' },
+]);
+---
+
+<Layout
+  title={titel}
+  description={description}
+  keywords={keywords}
+  schema={[softwareSchema, breadCrumbSchema]}
+  image={ogImage}
+>
+  <main id='main-content'>
+    <SemrelHero />
+    <SemrelFeatures />
+    <SemrelPlugins />
+    <SemrelQuickStart />
+    <SemrelRoadmap />
+    <SemrelContribute />
+  </main>
+</Layout>
