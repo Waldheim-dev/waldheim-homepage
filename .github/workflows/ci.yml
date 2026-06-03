@@ -99,17 +99,17 @@ jobs:
         run: npx semantic-release
 
   # ──────────────────────────────────────────
-  # Job 3: Deploy via FTP to IONOS
+  # Job 3: Deploy via SFTP to IONOS
   # Only on push to main or next; runs after release
   # (deploys even if no new version was published)
   #
   # Required repository secrets:
-  #   FTP_HOST      → e.g. ftp.waldheim.dev or the IONOS FTP server address
-  #   FTP_USER      → IONOS FTP username
-  #   FTP_PASSWORD  → IONOS FTP password
+  #   FTP_HOST      → IONOS SFTP server hostname
+  #   FTP_USER      → IONOS SFTP username
+  #   FTP_PASSWORD  → IONOS SFTP password
   #
   # Optional repository variable:
-  #   FTP_SERVER_DIR → remote target directory (default: /)
+  #   FTP_SERVER_DIR → remote target directory (default: /websites/waldheim.dev/www/)
   # ──────────────────────────────────────────
   deploy:
     name: Deploy → IONOS (FTP)
@@ -135,13 +135,21 @@ jobs:
       - name: Build for deployment
         run: pnpm build
 
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
       - name: SFTP Deploy to IONOS
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local_path: './dist/*'
-          remote_path: ${{ vars.FTP_SERVER_DIR || '/websites/waldheim.dev/www/' }}
-          sftp_only: true
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+          REMOTE_DIR: ${{ vars.FTP_SERVER_DIR || '/websites/waldheim.dev/www/' }}
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes
+            set net:max-retries 3
+            set net:reconnect-interval-base 5
+            open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST
+            mirror --reverse --delete --verbose ./dist/ $REMOTE_DIR
+            bye
+          "
