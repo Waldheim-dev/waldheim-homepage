@@ -1,77 +1,128 @@
 ---
+import type { Lang } from '../i18n/utils';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    sectionLabel: 'Warum semrel?',
+    headlinePrefix: 'Release-Automation auf',
+    headlineAccent: 'Enterprise-Level',
+    subtitle:
+      'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
+  },
+  en: {
+    sectionLabel: 'Why semrel?',
+    headlinePrefix: 'Release Automation at',
+    headlineAccent: 'Enterprise Scale',
+    subtitle:
+      'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
+  },
+}[lang];
+const features = [
+  {
+    icon: 'fa-code-commit',
+    title: 'Conventional Commits',
+    desc: {
+      de: 'Analysiert euren Commit-Verlauf und entscheidet automatisch ob ein major, minor oder patch-Bump nötig ist. Konfigurierbare Bump-Rules per .semrel.yaml.',
+      en: 'Analyses your commit history and automatically decides whether a major, minor or patch bump is needed. Configurable bump rules via .semrel.yaml.',
+    },
+    badge: 'Core',
+  },
+  {
+    icon: 'fa-puzzle-piece',
+    title: 'Pluggable Pipeline',
+    desc: {
+      de: 'Jeder Schritt ist ein austauschbares Subprocess-Plugin. GitHub gegen GitLab tauschen, Changelog-Renderer wechseln oder Slack-Notifications — ohne Core zu ändern.',
+      en: 'Every step is an interchangeable subprocess plugin. Swap GitHub for GitLab, change the changelog renderer or add Slack notifications — without touching the core.',
+    },
+    badge: 'Plugin System',
+  },
+  {
+    icon: 'fa-diagram-project',
+    title: 'Monorepo Ready',
+    desc: {
+      de: 'Mehrere unabhängige Module in einem Repository — jedes mit eigener Tag-Serie, Config und Changelog. Dependency Graph und topologische Release-Reihenfolge.',
+      en: 'Multiple independent modules in a single repository — each with its own tag series, config and changelog. Dependency graph and topological release ordering.',
+    },
+    badge: 'v0.5.0',
+  },
+  {
+    icon: 'fa-language',
+    title: 'Language Agnostic',
+    desc: {
+      de: 'Plugins kommunizieren via subprocess-Protokoll und können in Go, Python, Rust, Node.js oder jeder anderen Sprache geschrieben werden.',
+      en: 'Plugins communicate via subprocess protocol and can be written in Go, Python, Rust, Node.js or any other language.',
+    },
+    badge: 'Ecosystem',
+  },
+  {
+    icon: 'fa-shield-halved',
+    title: 'Supply Chain Security',
+    desc: {
+      de: 'Signierte Releases mit Sigstore Cosign, CycloneDX/SPDX SBOM, SLSA Level 1 Provenance. DCO Sign-off und REUSE/SPDX Compliance auf jedem PR.',
+      en: 'Signed releases with Sigstore Cosign, CycloneDX/SPDX SBOM, SLSA Level 1 Provenance. DCO sign-off and REUSE/SPDX compliance on every PR.',
+    },
+    badge: 'Security',
+  },
+  {
+    icon: 'fa-flask',
+    title: 'Dry-Run Mode',
+    desc: {
+      de: 'Vorschau was semrel tun würde, ohne etwas anzufassen. Ideal für CI-Validierung: semrel release --dry-run vor dem tatsächlichen Release.',
+      en: 'Preview what semrel would do without touching anything. Ideal for CI validation: semrel release --dry-run before the actual release.',
+    },
+    badge: 'Safety',
+  },
+  {
+    icon: 'fa-file-lines',
+    title: 'Multi-Format Changelog',
+    desc: {
+      de: 'Keep-a-Changelog Markdown, GitHub/GitLab Release Notes, ArtifactHub Annotations, OCI Labels, NuGet, PyPI, RSS/Atom — alles aus einem strukturierten ReleaseNotes-Modell.',
+      en: 'Keep-a-Changelog Markdown, GitHub/GitLab Release Notes, ArtifactHub Annotations, OCI Labels, NuGet, PyPI, RSS/Atom — all from a single structured ReleaseNotes model.',
+    },
+    badge: 'Changelog',
+  },
+  {
+    icon: 'fa-github',
+    title: 'GitHub Actions Native',
+    desc: {
+      de: 'Native action.yml Composite Action, strukturierter JSON Release Output und wiederverwendbare Workflow Templates für CI/CD-Pipelines.',
+      en: 'Native action.yml Composite Action, structured JSON release output and reusable workflow templates for CI/CD pipelines.',
+    },
+    badge: 'CI/CD',
+  },
+  {
+    icon: 'fa-chart-bar',
+    title: 'Release Analytics',
+    desc: {
+      de: 'Append-only NDJSON Release-History Tracking, Jira/GitHub Issue Reference Extraction und commitlint für CLI, Git Range oder stdin.',
+      en: 'Append-only NDJSON release history tracking, Jira/GitHub issue reference extraction and commitlint for CLI, git range or stdin.',
+    },
+    badge: 'Insights',
+  },
+];
 ---
 
 <section class='py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark' id='features' aria-labelledby='semrel-features-heading'>
   <div class='mx-auto max-w-7xl'>
     <header class='mx-auto max-w-2xl text-center mb-16'>
       <h2 id='semrel-features-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
-        Warum semrel?
+        {t.sectionLabel}
       </h2>
       <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-        Release-Automation auf <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>Enterprise-Level</span>
+        {t.headlinePrefix} <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>{t.headlineAccent}</span>
       </p>
       <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
-        Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.
+        {t.subtitle}
       </p>
     </header>
 
     <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-      {[
-        {
-          icon: 'fa-code-commit',
-          title: 'Conventional Commits',
-          desc: 'Analysiert euren Commit-Verlauf und entscheidet automatisch ob ein major, minor oder patch-Bump nötig ist. Konfigurierbare Bump-Rules per .semrel.yaml.',
-          badge: 'Core',
-        },
-        {
-          icon: 'fa-puzzle-piece',
-          title: 'Pluggable Pipeline',
-          desc: 'Jeder Schritt ist ein austauschbares Subprocess-Plugin. GitHub gegen GitLab tauschen, Changelog-Renderer wechseln oder Slack-Notifications — ohne Core zu ändern.',
-          badge: 'Plugin System',
-        },
-        {
-          icon: 'fa-diagram-project',
-          title: 'Monorepo Ready',
-          desc: 'Mehrere unabhängige Module in einem Repository — jedes mit eigener Tag-Serie, Config und Changelog. Dependency Graph und topologische Release-Reihenfolge.',
-          badge: 'v0.5.0',
-        },
-        {
-          icon: 'fa-language',
-          title: 'Language Agnostic',
-          desc: 'Plugins kommunizieren via subprocess-Protokoll und können in Go, Python, Rust, Node.js oder jeder anderen Sprache geschrieben werden.',
-          badge: 'Ecosystem',
-        },
-        {
-          icon: 'fa-shield-halved',
-          title: 'Supply Chain Security',
-          desc: 'Signierte Releases mit Sigstore Cosign, CycloneDX/SPDX SBOM, SLSA Level 1 Provenance. DCO Sign-off und REUSE/SPDX Compliance auf jedem PR.',
-          badge: 'Security',
-        },
-        {
-          icon: 'fa-flask',
-          title: 'Dry-Run Mode',
-          desc: 'Vorschau was semrel tun würde, ohne etwas anzufassen. Ideal für CI-Validierung: semrel release --dry-run vor dem tatsächlichen Release.',
-          badge: 'Safety',
-        },
-        {
-          icon: 'fa-file-lines',
-          title: 'Multi-Format Changelog',
-          desc: 'Keep-a-Changelog Markdown, GitHub/GitLab Release Notes, ArtifactHub Annotations, OCI Labels, NuGet, PyPI, RSS/Atom — alles aus einem strukturierten ReleaseNotes-Modell.',
-          badge: 'Changelog',
-        },
-        {
-          icon: 'fa-github',
-          title: 'GitHub Actions Native',
-          desc: 'Native action.yml Composite Action, strukturierter JSON Release Output und wiederverwendbare Workflow Templates für CI/CD-Pipelines.',
-          badge: 'CI/CD',
-        },
-        {
-          icon: 'fa-chart-bar',
-          title: 'Release Analytics',
-          desc: 'Append-only NDJSON Release-History Tracking, Jira/GitHub Issue Reference Extraction und commitlint für CLI, Git Range oder stdin.',
-          badge: 'Insights',
-        },
-      ].map((feature, i) => (
+      {features.map((feature, i) => (
         <article
           class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all group'
           style={`animation-delay: ${0.45 + i * 0.08}s`}
@@ -85,7 +136,7 @@
             </span>
           </div>
           <h3 class='text-lg font-bold text-meg-text-primary-dark mb-2'>{feature.title}</h3>
-          <p class='text-meg-text-secondary text-sm leading-relaxed'>{feature.desc}</p>
+          <p class='text-meg-text-secondary text-sm leading-relaxed'>{feature.desc[lang]}</p>
         </article>
       ))}
     </div>

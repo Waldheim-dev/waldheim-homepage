@@ -1,40 +1,87 @@
 ---
+import type { Lang } from '../i18n/utils';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    sectionLabel: 'Roadmap',
+    headlinePrefix: 'Der Weg zu',
+    headlineAccent: 'v1.0.0',
+    subtitle:
+      'semrel ist in aktiver Entwicklung. Jeder Meilenstein kann auf GitHub mitverfolgt werden.',
+    ariaLabel: 'Entwicklungs-Roadmap',
+    linkText: 'Vollständige Roadmap auf GitHub',
+    linkLabel: 'Vollständige Roadmap auf GitHub',
+  },
+  en: {
+    sectionLabel: 'Roadmap',
+    headlinePrefix: 'The road to',
+    headlineAccent: 'v1.0.0',
+    subtitle:
+      'semrel is in active development. Every milestone can be followed on GitHub.',
+    ariaLabel: 'Development roadmap',
+    linkText: 'Full Roadmap on GitHub',
+    linkLabel: 'Open full roadmap on GitHub',
+  },
+}[lang];
 const roadmilestones = [
   {
     version: 'v0.1.0',
     label: 'Foundation',
     status: 'done',
-    desc: 'CLI, SemVer-Engine, Conventional Commits, Git Tag Management, Dry-Run',
+    desc: {
+      de: 'CLI, SemVer-Engine, Conventional Commits, Git Tag Management, Dry-Run',
+      en: 'CLI, SemVer engine, Conventional Commits, Git tag management, dry-run',
+    },
   },
   {
     version: 'v0.2.0',
     label: 'Plugin System',
     status: 'done',
-    desc: 'Stable Core/Plugin-Boundary, Subprocess-basiertes Plugin-Execution-Modell',
+    desc: {
+      de: 'Stable Core/Plugin-Boundary, Subprocess-basiertes Plugin-Execution-Modell',
+      en: 'Stable core/plugin boundary, subprocess-based plugin execution model',
+    },
   },
   {
     version: 'v0.3.0',
     label: 'CI Integration',
     status: 'done',
-    desc: 'GitHub Actions native, JSON Output, End-to-End Tests',
+    desc: {
+      de: 'GitHub Actions native, JSON Output, End-to-End Tests',
+      en: 'GitHub Actions native, JSON output, end-to-end tests',
+    },
   },
   {
     version: 'v0.4.0',
     label: 'Ecosystem Plugins',
     status: 'done',
-    desc: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven u.v.m.',
+    desc: {
+      de: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven u.v.m.',
+      en: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven and more.',
+    },
   },
   {
     version: 'v0.5.0',
     label: 'Monorepo & Advanced',
     status: 'current',
-    desc: 'Changelog Engine, Workspace Discovery, Independent Versioning, Dependency Graph, Pre-release Channels — aktuell aktiv',
+    desc: {
+      de: 'Changelog Engine, Workspace Discovery, Independent Versioning, Dependency Graph, Pre-release Channels — aktuell aktiv',
+      en: 'Changelog engine, workspace discovery, independent versioning, dependency graph, pre-release channels — currently active',
+    },
   },
   {
     version: 'v1.0.0',
     label: 'Stable Release',
     status: 'planned',
-    desc: 'Production-ready, vollständige Dokumentation, Plugin SDK für Third-Party Plugins',
+    desc: {
+      de: 'Production-ready, vollständige Dokumentation, Plugin SDK für Third-Party Plugins',
+      en: 'Production-ready, complete documentation, plugin SDK for third-party plugins',
+    },
   },
 ];
 ---
@@ -43,17 +90,17 @@ const roadmilestones = [
   <div class='mx-auto max-w-4xl'>
     <header class='text-center mb-16'>
       <h2 id='semrel-roadmap-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
-        Roadmap
+        {t.sectionLabel}
       </h2>
       <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-        Der Weg zu <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>v1.0.0</span>
+        {t.headlinePrefix} <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>{t.headlineAccent}</span>
       </p>
       <p class='gsap-fadein text-meg-text-secondary' style='animation-delay: 0.3s'>
-        semrel ist in aktiver Entwicklung. Jeder Meilenstein kann auf GitHub mitverfolgt werden.
+        {t.subtitle}
       </p>
     </header>
 
-    <ol class='relative' aria-label='Entwicklungs-Roadmap'>
+    <ol class='relative' aria-label={t.ariaLabel}>
       {roadmilestones.map((m, i) => (
         <li
           class={`gsap-fadein relative pl-10 pb-10 last:pb-0 ${i < roadmilestones.length - 1 ? 'before:absolute before:left-[15px] before:top-6 before:bottom-0 before:w-px before:bg-meg-border-dark' : ''}`}
@@ -63,8 +110,8 @@ const roadmilestones = [
             m.status === 'done'
               ? 'bg-blue-500/20 border-blue-500 text-blue-400'
               : m.status === 'current'
-              ? 'bg-sky-400/20 border-sky-400 text-sky-400 animate-pulse'
-              : 'bg-meg-surface-dark border-meg-border-dark text-meg-text-secondary'
+                ? 'bg-sky-400/20 border-sky-400 text-sky-400 animate-pulse'
+                : 'bg-meg-surface-dark border-meg-border-dark text-meg-text-secondary'
           }`} aria-hidden='true'>
             <i class={`fa-solid text-xs ${
               m.status === 'done' ? 'fa-check' : m.status === 'current' ? 'fa-circle-dot' : 'fa-clock'
@@ -84,7 +131,7 @@ const roadmilestones = [
                 <span class='ml-auto text-[10px] font-black uppercase tracking-widest text-meg-text-secondary bg-meg-bg-dark border border-meg-border-dark px-2 py-0.5 rounded'>planned</span>
               )}
             </div>
-            <p class='text-meg-text-secondary text-sm'>{m.desc}</p>
+            <p class='text-meg-text-secondary text-sm'>{m.desc[lang]}</p>
           </div>
         </li>
       ))}
@@ -96,9 +143,9 @@ const roadmilestones = [
         target='_blank'
         rel='noopener noreferrer'
         class='inline-flex items-center gap-2 text-blue-400 font-bold hover:underline'
-        aria-label='Vollständige Roadmap auf GitHub'
+        aria-label={t.linkLabel}
       >
-        Vollständige Roadmap auf GitHub
+        {t.linkText}
         <i class='fa-solid fa-arrow-up-right-from-square text-xs' aria-hidden='true'></i>
       </a>
     </div>

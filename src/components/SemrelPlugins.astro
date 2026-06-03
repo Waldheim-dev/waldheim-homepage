@@ -1,4 +1,33 @@
 ---
+import type { Lang } from '../i18n/utils';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    sectionLabel: 'Plugin Ecosystem',
+    headlinePrefix: '30+ Plugins',
+    headlineAccent: 'für jeden Stack',
+    subtitleBefore: 'Installiert per ',
+    subtitleAfter:
+      ' — jedes Plugin lebt in eigenem Repository und released unabhängig.',
+    cta: 'Plugin-Registry erkunden',
+    ctaLabel: 'Zum semrel Plugin-Registry',
+  },
+  en: {
+    sectionLabel: 'Plugin Ecosystem',
+    headlinePrefix: '30+ Plugins',
+    headlineAccent: 'for every stack',
+    subtitleBefore: 'Install via ',
+    subtitleAfter:
+      ' — each plugin lives in its own repository and releases independently.',
+    cta: 'Explore Plugin Registry',
+    ctaLabel: 'Explore semrel Plugin Registry',
+  },
+}[lang];
 const categories = [
   {
     name: 'Conditions',
@@ -7,10 +36,10 @@ const categories = [
     bg: 'bg-sky-500/10',
     border: 'border-sky-500/20',
     plugins: [
-      { name: 'github-actions', desc: 'Nur auf GitHub Actions CI' },
-      { name: 'gitlab-ci', desc: 'Nur auf GitLab CI' },
-      { name: 'gitea-actions', desc: 'Nur auf Gitea Actions' },
-      { name: 'generic', desc: 'Generische CI-Umgebung' },
+      { name: 'github-actions', desc: { de: 'Nur auf GitHub Actions CI', en: 'Only on GitHub Actions CI' } },
+      { name: 'gitlab-ci', desc: { de: 'Nur auf GitLab CI', en: 'Only on GitLab CI' } },
+      { name: 'gitea-actions', desc: { de: 'Nur auf Gitea Actions', en: 'Only on Gitea Actions' } },
+      { name: 'generic', desc: { de: 'Generische CI-Umgebung', en: 'Generic CI environment' } },
     ],
   },
   {
@@ -20,8 +49,8 @@ const categories = [
     bg: 'bg-blue-500/10',
     border: 'border-blue-500/20',
     plugins: [
-      { name: 'conventional', desc: 'Conventional Commits Parser' },
-      { name: 'default', desc: 'Standard Commit Analyzer' },
+      { name: 'conventional', desc: { de: 'Conventional Commits Parser', en: 'Conventional Commits Parser' } },
+      { name: 'default', desc: { de: 'Standard Commit Analyzer', en: 'Standard Commit Analyzer' } },
     ],
   },
   {
@@ -31,9 +60,9 @@ const categories = [
     bg: 'bg-indigo-500/10',
     border: 'border-indigo-500/20',
     plugins: [
-      { name: 'changelog-md', desc: 'Markdown (Keep a Changelog)' },
-      { name: 'changelog-html', desc: 'HTML Changelog' },
-      { name: 'release-notes', desc: 'Release Notes Generator' },
+      { name: 'changelog-md', desc: { de: 'Markdown (Keep a Changelog)', en: 'Markdown (Keep a Changelog)' } },
+      { name: 'changelog-html', desc: { de: 'HTML Changelog', en: 'HTML Changelog' } },
+      { name: 'release-notes', desc: { de: 'Release Notes Generator', en: 'Release Notes Generator' } },
     ],
   },
   {
@@ -43,11 +72,11 @@ const categories = [
     bg: 'bg-violet-500/10',
     border: 'border-violet-500/20',
     plugins: [
-      { name: 'github', desc: 'GitHub Releases & Tags' },
-      { name: 'gitlab', desc: 'GitLab Releases & Tags' },
-      { name: 'gitea', desc: 'Gitea / Forgejo' },
-      { name: 'bitbucket', desc: 'Bitbucket' },
-      { name: 'git', desc: 'Nur lokale Git-Tags' },
+      { name: 'github', desc: { de: 'GitHub Releases & Tags', en: 'GitHub Releases & Tags' } },
+      { name: 'gitlab', desc: { de: 'GitLab Releases & Tags', en: 'GitLab Releases & Tags' } },
+      { name: 'gitea', desc: { de: 'Gitea / Forgejo', en: 'Gitea Releases & Tags' } },
+      { name: 'bitbucket', desc: { de: 'Bitbucket', en: 'Bitbucket Releases & Tags' } },
+      { name: 'git', desc: { de: 'Nur lokale Git-Tags', en: 'Local git tag only' } },
     ],
   },
   {
@@ -57,17 +86,17 @@ const categories = [
     bg: 'bg-emerald-500/10',
     border: 'border-emerald-500/20',
     plugins: [
-      { name: 'npm', desc: 'package.json Version' },
-      { name: 'docker', desc: 'Docker Images bauen & pushen' },
-      { name: 'helm', desc: 'Helm Chart Version' },
-      { name: 'cargo', desc: 'Rust / Cargo Crate' },
-      { name: 'python', desc: 'PyPI Package' },
-      { name: 'gradle', desc: 'Gradle Version' },
-      { name: 'maven', desc: 'Maven Artifact' },
-      { name: 'nuget', desc: 'NuGet Package' },
-      { name: 'gobinary', desc: 'Go Version Variable' },
-      { name: 'homebrew', desc: 'Homebrew Formula' },
-      { name: 'terraform', desc: 'Terraform Module Version' },
+      { name: 'npm', desc: { de: 'package.json Version', en: 'package.json version' } },
+      { name: 'docker', desc: { de: 'Docker Images bauen & pushen', en: 'Build & push Docker images' } },
+      { name: 'helm', desc: { de: 'Helm Chart Version', en: 'Helm chart version' } },
+      { name: 'cargo', desc: { de: 'Rust / Cargo Crate', en: 'Rust / Cargo crate' } },
+      { name: 'python', desc: { de: 'PyPI Package', en: 'PyPI package' } },
+      { name: 'gradle', desc: { de: 'Gradle Version', en: 'Gradle version' } },
+      { name: 'maven', desc: { de: 'Maven Artifact', en: 'Maven artifact' } },
+      { name: 'nuget', desc: { de: 'NuGet Package', en: 'NuGet package' } },
+      { name: 'gobinary', desc: { de: 'Go Version Variable', en: 'Go version variable' } },
+      { name: 'homebrew', desc: { de: 'Homebrew Formula', en: 'Homebrew formula' } },
+      { name: 'terraform', desc: { de: 'Terraform Module Version', en: 'Terraform module version' } },
     ],
   },
   {
@@ -77,12 +106,12 @@ const categories = [
     bg: 'bg-amber-500/10',
     border: 'border-amber-500/20',
     plugins: [
-      { name: 'slack', desc: 'Slack Notifications' },
-      { name: 'teams', desc: 'Microsoft Teams' },
-      { name: 'matrix', desc: 'Matrix / Element' },
-      { name: 'email', desc: 'E-Mail Benachrichtigungen' },
-      { name: 'jira', desc: 'Jira Issues schließen' },
-      { name: 'gitplugin', desc: 'Git-Operationen post-release' },
+      { name: 'slack', desc: { de: 'Slack Notifications', en: 'Slack Notifications' } },
+      { name: 'teams', desc: { de: 'Microsoft Teams', en: 'Microsoft Teams' } },
+      { name: 'matrix', desc: { de: 'Matrix / Element', en: 'Matrix / Element' } },
+      { name: 'email', desc: { de: 'E-Mail Benachrichtigungen', en: 'Email notifications' } },
+      { name: 'jira', desc: { de: 'Jira Issues schließen', en: 'Close Jira issues' } },
+      { name: 'gitplugin', desc: { de: 'Git-Operationen post-release', en: 'Git operations post-release' } },
     ],
   },
 ];
@@ -92,13 +121,13 @@ const categories = [
   <div class='mx-auto max-w-7xl'>
     <header class='mx-auto max-w-2xl text-center mb-16'>
       <h2 id='semrel-plugins-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
-        Plugin Ecosystem
+        {t.sectionLabel}
       </h2>
       <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-        30+ Plugins <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>für jeden Stack</span>
+        {t.headlinePrefix} <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>{t.headlineAccent}</span>
       </p>
       <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
-        Installiert per <code class='bg-meg-surface-dark border border-meg-border-dark rounded px-2 py-0.5 text-sky-400 font-mono text-base'>semrel plugin install &lt;name&gt;</code> — jedes Plugin lebt in eigenem Repository und released unabhängig.
+        {t.subtitleBefore}<code class='bg-meg-surface-dark border border-meg-border-dark rounded px-2 py-0.5 text-sky-400 font-mono text-base'>semrel plugin install &lt;name&gt;</code>{t.subtitleAfter}
       </p>
     </header>
 
@@ -116,7 +145,7 @@ const categories = [
             {cat.plugins.map(p => (
               <li class='flex items-center gap-2 text-sm'>
                 <code class='font-mono text-meg-text-primary-dark bg-meg-bg-dark border border-meg-border-dark rounded px-2 py-0.5 text-xs whitespace-nowrap'>{p.name}</code>
-                <span class='text-meg-text-secondary text-xs'>{p.desc}</span>
+                <span class='text-meg-text-secondary text-xs'>{p.desc[lang]}</span>
               </li>
             ))}
           </ul>
@@ -130,10 +159,10 @@ const categories = [
         target='_blank'
         rel='noopener noreferrer'
         class='inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 font-bold hover:bg-blue-500/20 hover:shadow-lg hover:shadow-blue-500/10 transition-all'
-        aria-label='Zum semrel Plugin-Registry'
+        aria-label={t.ctaLabel}
       >
         <i class='fa-solid fa-store' aria-hidden='true'></i>
-        Plugin-Registry erkunden
+        {t.cta}
         <i class='fa-solid fa-arrow-up-right-from-square text-xs' aria-hidden='true'></i>
       </a>
     </div>

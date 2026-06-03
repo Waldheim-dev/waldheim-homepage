@@ -1,61 +1,160 @@
 ---
+import type { Lang } from '../i18n/utils';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    sectionLabel: 'Mitmachen',
+    headlinePrefix: 'Gesucht:',
+    headlineAccent: 'Contributors!',
+    introBefore: 'semrel ist ein Community-Projekt von Markus Waldheim und ',
+    introAfter:
+      ' — offen für alle, die mitmachen möchten, egal ob Go-Profi oder Einsteiger.',
+    contributingLabel: 'Contributing Guide für semrel lesen',
+    issuesLabel: 'Good First Issues auf GitHub anzeigen',
+    orgLabel: 'SemRels GitHub Organisation ansehen',
+    linkFor: 'für',
+    maintainersHeading: 'Owner & Maintainer',
+    ownerLabel: 'Owner, Creator & Maintainer',
+    githubLabelSuffix: 'auf GitHub',
+    bottomBefore: 'semrel ist ein offenes Community-Projekt unter ',
+    bottomAfter:
+      '. Alle Contributions werden mit DCO Sign-off und Conventional Commits gerne angenommen.',
+  },
+  en: {
+    sectionLabel: 'Contribute',
+    headlinePrefix: 'Looking for',
+    headlineAccent: 'Contributors!',
+    introBefore: 'semrel is a community project by Markus Waldheim and ',
+    introAfter:
+      " — open to everyone who wants to contribute, whether you're a Go expert or a beginner.",
+    contributingLabel: 'Read the semrel contributing guide',
+    issuesLabel: 'View good first issues on GitHub',
+    orgLabel: 'View the SemRels GitHub organization',
+    linkFor: 'for',
+    maintainersHeading: 'Owner & Maintainer',
+    ownerLabel: 'Owner, Creator & Maintainer',
+    githubLabelSuffix: 'on GitHub',
+    bottomBefore: 'semrel is an open community project under ',
+    bottomAfter:
+      '. All contributions are welcome with DCO sign-off and Conventional Commits.',
+  },
+}[lang];
 const areas = [
   {
     icon: 'fa-plug',
-    title: 'Plugins entwickeln',
-    desc: 'Schreibt neue Provider, Updater oder Hooks für eure bevorzugten Tools. Plugins sprechen ein einfaches subprocess-Protokoll und können in jeder Sprache implementiert werden.',
+    title: {
+      de: 'Plugins entwickeln',
+      en: 'Build plugins',
+    },
+    desc: {
+      de: 'Schreibt neue Provider, Updater oder Hooks für eure bevorzugten Tools. Plugins sprechen ein einfaches subprocess-Protokoll und können in jeder Sprache implementiert werden.',
+      en: 'Build new providers, updaters or hooks for your preferred tools. Plugins use a simple subprocess protocol and can be implemented in any language.',
+    },
     link: 'https://github.com/SemRels/semrel/blob/main/docs/plugin-development.md',
-    linkLabel: 'Plugin Dev Guide',
+    linkLabel: {
+      de: 'Plugin Dev Guide',
+      en: 'Plugin Dev Guide',
+    },
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
     border: 'border-blue-500/20',
   },
   {
     icon: 'fa-bug',
-    title: 'Bugs finden & fixen',
-    desc: 'Probiert semrel in euren Projekten aus und meldet Bugs. Gute Einstiegs-Issues sind gelabelt und neuen Contributoren wird beim ersten PR geholfen.',
+    title: {
+      de: 'Bugs finden & fixen',
+      en: 'Find & fix bugs',
+    },
+    desc: {
+      de: 'Probiert semrel in euren Projekten aus und meldet Bugs. Gute Einstiegs-Issues sind gelabelt und neuen Contributoren wird beim ersten PR geholfen.',
+      en: 'Try semrel in your projects and report bugs. Good first issues are labeled and new contributors get help with their first PR.',
+    },
     link: 'https://github.com/SemRels/semrel/issues',
-    linkLabel: 'Issues ansehen',
+    linkLabel: {
+      de: 'Issues ansehen',
+      en: 'View issues',
+    },
     color: 'text-sky-400',
     bg: 'bg-sky-500/10',
     border: 'border-sky-500/20',
   },
   {
     icon: 'fa-book',
-    title: 'Dokumentation verbessern',
-    desc: 'Docs, Tutorials, Beispiel-Configs oder deutsche Übersetzungen — gute Dokumentation ist genauso wichtig wie Code.',
+    title: {
+      de: 'Dokumentation verbessern',
+      en: 'Improve documentation',
+    },
+    desc: {
+      de: 'Docs, Tutorials, Beispiel-Configs oder deutsche Übersetzungen — gute Dokumentation ist genauso wichtig wie Code.',
+      en: 'Docs, tutorials, example configs or translations — good documentation matters just as much as code.',
+    },
     link: 'https://github.com/SemRels/semrel-docs',
-    linkLabel: 'Docs Repository',
+    linkLabel: {
+      de: 'Docs Repository',
+      en: 'Docs Repository',
+    },
     color: 'text-indigo-400',
     bg: 'bg-indigo-500/10',
     border: 'border-indigo-500/20',
   },
   {
     icon: 'fa-diagram-project',
-    title: 'Monorepo-Support (v0.5.0)',
-    desc: 'Die nächste große Milestone: Workspace Discovery, Independent Versioning, Dependency Graph. Ideal für Go-Entwickler mit großen Repositories.',
+    title: {
+      de: 'Monorepo-Support (v0.5.0)',
+      en: 'Monorepo support (v0.5.0)',
+    },
+    desc: {
+      de: 'Die nächste große Milestone: Workspace Discovery, Independent Versioning, Dependency Graph. Ideal für Go-Entwickler mit großen Repositories.',
+      en: 'The next major milestone: workspace discovery, independent versioning, dependency graph. Ideal for Go developers with large repositories.',
+    },
     link: 'https://github.com/SemRels/semrel/blob/main/ROADMAP.md',
-    linkLabel: 'Roadmap v0.5.0',
+    linkLabel: {
+      de: 'Roadmap v0.5.0',
+      en: 'Roadmap v0.5.0',
+    },
     color: 'text-violet-400',
     bg: 'bg-violet-500/10',
     border: 'border-violet-500/20',
   },
   {
     icon: 'fa-flask',
-    title: 'Testing & CI',
-    desc: 'E2E-Tests schreiben, Edge Cases abdecken, CI-Workflows für neue Plattformen hinzufügen — jeder Beitrag bringt semrel näher an Produktionsreife.',
+    title: {
+      de: 'Testing & CI',
+      en: 'Testing & CI',
+    },
+    desc: {
+      de: 'E2E-Tests schreiben, Edge Cases abdecken, CI-Workflows für neue Plattformen hinzufügen — jeder Beitrag bringt semrel näher an Produktionsreife.',
+      en: 'Write end-to-end tests, cover edge cases, add CI workflows for new platforms — every contribution brings semrel closer to production readiness.',
+    },
     link: 'https://github.com/SemRels/semrel/blob/main/CONTRIBUTING.md',
-    linkLabel: 'Contributing Guide',
+    linkLabel: {
+      de: 'Contributing Guide',
+      en: 'Contributing Guide',
+    },
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/10',
     border: 'border-emerald-500/20',
   },
   {
     icon: 'fa-bullhorn',
-    title: 'Community & Feedback',
-    desc: 'Nutzt semrel in eurem Projekt und teilt euer Feedback. Zeigt, was ihr gebaut habt — Showcases und Use Cases sind herzlich willkommen.',
+    title: {
+      de: 'Community & Feedback',
+      en: 'Community & feedback',
+    },
+    desc: {
+      de: 'Nutzt semrel in eurem Projekt und teilt euer Feedback. Zeigt, was ihr gebaut habt — Showcases und Use Cases sind herzlich willkommen.',
+      en: 'Use semrel in your project and share your feedback. Show what you built — showcases and use cases are very welcome.',
+    },
     link: 'https://github.com/SemRels/semrel/discussions',
-    linkLabel: 'GitHub Discussions',
+    linkLabel: {
+      de: 'GitHub Discussions',
+      en: 'GitHub Discussions',
+    },
     color: 'text-amber-400',
     bg: 'bg-amber-500/10',
     border: 'border-amber-500/20',
@@ -67,13 +166,13 @@ const areas = [
   <div class='mx-auto max-w-7xl'>
     <header class='mx-auto max-w-3xl text-center mb-16'>
       <h2 id='semrel-contribute-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4'>
-        Mitmachen
+        {t.sectionLabel}
       </h2>
       <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-        Gesucht: <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>Contributors!</span>
+        {t.headlinePrefix} <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>{t.headlineAccent}</span>
       </p>
       <p class='gsap-fadein text-xl text-meg-text-secondary mb-8' style='animation-delay: 0.3s'>
-        semrel ist ein Community-Projekt von Markus Waldheim und <strong class='text-meg-text-primary-dark'>Thomas Boerger</strong> — offen für alle, die mitmachen möchten, egal ob Go-Profi oder Einsteiger.
+        {t.introBefore}<strong class='text-meg-text-primary-dark'>Thomas Boerger</strong>{t.introAfter}
       </p>
       <div class='gsap-fadein flex flex-wrap justify-center gap-3' style='animation-delay: 0.45s'>
         <a
@@ -81,7 +180,7 @@ const areas = [
           target='_blank'
           rel='noopener noreferrer'
           class='inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/20 hover:scale-[1.02] transition-all'
-          aria-label='Contributing Guide für semrel lesen'
+          aria-label={t.contributingLabel}
         >
           <i class='fa-solid fa-book-open' aria-hidden='true'></i>
           Contributing Guide
@@ -91,7 +190,7 @@ const areas = [
           target='_blank'
           rel='noopener noreferrer'
           class='inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-meg-surface-dark border border-emerald-500/30 text-emerald-400 font-bold hover:bg-emerald-500/10 transition-all'
-          aria-label='Good First Issues auf GitHub anzeigen'
+          aria-label={t.issuesLabel}
         >
           <i class='fa-solid fa-seedling' aria-hidden='true'></i>
           Good First Issues
@@ -101,7 +200,7 @@ const areas = [
           target='_blank'
           rel='noopener noreferrer'
           class='inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-blue-500/30 transition-all'
-          aria-label='SemRels GitHub Organisation ansehen'
+          aria-label={t.orgLabel}
         >
           <i class='fa-brands fa-github' aria-hidden='true'></i>
           GitHub Org
@@ -119,16 +218,16 @@ const areas = [
           <div class={`size-12 ${area.bg} border ${area.border} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
             <i class={`fa-solid ${area.icon} ${area.color} text-xl`} aria-hidden='true'></i>
           </div>
-          <h3 class='text-lg font-bold text-meg-text-primary-dark mb-2'>{area.title}</h3>
-          <p class='text-meg-text-secondary text-sm leading-relaxed flex-grow mb-4'>{area.desc}</p>
+          <h3 class='text-lg font-bold text-meg-text-primary-dark mb-2'>{area.title[lang]}</h3>
+          <p class='text-meg-text-secondary text-sm leading-relaxed flex-grow mb-4'>{area.desc[lang]}</p>
           <a
             href={area.link}
             target='_blank'
             rel='noopener noreferrer'
             class={`inline-flex items-center gap-2 text-sm font-bold ${area.color} hover:underline mt-auto`}
-            aria-label={`${area.linkLabel} für ${area.title}`}
+            aria-label={`${area.linkLabel[lang]} ${t.linkFor} ${area.title[lang]}`}
           >
-            {area.linkLabel}
+            {area.linkLabel[lang]}
             <i class='fa-solid fa-arrow-up-right-from-square text-xs' aria-hidden='true'></i>
           </a>
         </article>
@@ -138,7 +237,7 @@ const areas = [
     <!-- Maintainers -->
     <div class='bg-meg-surface-dark/50 border border-blue-500/20 rounded-3xl p-8 md:p-12' aria-labelledby='semrel-maintainers-heading'>
       <h3 id='semrel-maintainers-heading' class='text-2xl font-black text-meg-text-primary-dark text-center mb-8'>
-        Owner &amp; Maintainer
+        {t.maintainersHeading}
       </h3>
       <div class='flex flex-col sm:flex-row items-center justify-center gap-8'>
         <article class='flex items-center gap-4 bg-meg-bg-dark/50 border border-meg-border-dark rounded-2xl px-8 py-5'>
@@ -147,13 +246,13 @@ const areas = [
           </div>
           <div>
             <p class='font-black text-meg-text-primary-dark'>Markus Waldheim</p>
-            <p class='text-sm text-meg-text-secondary'>Owner, Creator & Maintainer</p>
+            <p class='text-sm text-meg-text-secondary'>{t.ownerLabel}</p>
             <a
               href='https://github.com/mwaldheim'
               target='_blank'
               rel='noopener noreferrer'
               class='text-xs text-blue-400 hover:underline font-mono'
-              aria-label='Markus Waldheim auf GitHub'
+              aria-label={`Markus Waldheim ${t.githubLabelSuffix}`}
             >
               @mwaldheim
             </a>
@@ -168,13 +267,13 @@ const areas = [
           </div>
           <div>
             <p class='font-black text-meg-text-primary-dark'>Thomas Boerger</p>
-            <p class='text-sm text-meg-text-secondary'>Owner, Creator & Maintainer</p>
+            <p class='text-sm text-meg-text-secondary'>{t.ownerLabel}</p>
             <a
               href='https://github.com/tboerger'
               target='_blank'
               rel='noopener noreferrer'
               class='text-xs text-sky-400 hover:underline font-mono'
-              aria-label='Thomas Boerger auf GitHub'
+              aria-label={`Thomas Boerger ${t.githubLabelSuffix}`}
             >
               @tboerger
             </a>
@@ -183,7 +282,7 @@ const areas = [
       </div>
 
       <p class='text-center text-meg-text-secondary text-sm mt-8 max-w-xl mx-auto'>
-        semrel ist ein offenes Community-Projekt unter <strong class='text-meg-text-primary-dark'>Apache 2.0</strong>. Alle Contributions werden mit DCO Sign-off und Conventional Commits gerne angenommen.
+        {t.bottomBefore}<strong class='text-meg-text-primary-dark'>Apache 2.0</strong>{t.bottomAfter}
       </p>
     </div>
   </div>

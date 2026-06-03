@@ -1,54 +1,35 @@
 ---
----
+import type { Lang } from '../i18n/utils';
 
-<section class='py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark' aria-labelledby='semrel-quickstart-heading'>
-  <div class='mx-auto max-w-5xl'>
-    <header class='text-center mb-16'>
-      <h2 id='semrel-quickstart-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
-        Quick Start
-      </h2>
-      <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4' style='animation-delay: 0.15s'>
-        In <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>3 Schritten</span> zum ersten Release
-      </p>
-      <p class='gsap-fadein text-meg-text-secondary' style='animation-delay: 0.3s'>
-        Alpha-Phase — empfohlen mit <code class='bg-meg-surface-dark border border-meg-border-dark rounded px-2 py-0.5 text-sky-400 font-mono'>--dry-run</code> testen bevor es live geht.
-      </p>
-    </header>
+export interface Props {
+  lang?: Lang;
+}
 
-    <div class='space-y-6'>
-      <!-- Step 1 -->
-      <div class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden' style='animation-delay: 0.45s'>
-        <div class='flex items-center gap-4 px-6 py-4 border-b border-meg-border-dark bg-meg-bg-dark/50'>
-          <span class='size-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-sm'>1</span>
-          <span class='font-bold text-meg-text-primary-dark'>Installieren</span>
-        </div>
-        <div class='p-6 font-mono text-sm' role='region' aria-label='Installationsbefehl'>
-          <div class='flex items-center gap-2 text-meg-text-secondary mb-2'>
-            <i class='fa-solid fa-terminal text-xs' aria-hidden='true'></i>
-            <span class='text-xs uppercase tracking-widest'>terminal</span>
-          </div>
-          <pre class='text-sky-300 overflow-x-auto'><code>go install github.com/GoSemantics/semrel/cmd/semrel@latest
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    sectionLabel: 'Quick Start',
+    headlinePrefix: 'In',
+    headlineAccent: '3 Schritten',
+    headlineSuffix: 'zum ersten Release',
+    subtitleBefore: 'Alpha-Phase — empfohlen mit ',
+    subtitleAfter: ' testen bevor es live geht.',
+    step1: 'Installieren',
+    step1Aria: 'Installationsbefehl',
+    step2: 'Konfigurieren',
+    step2Aria: 'Konfigurationsbeispiel',
+    step3: 'Releasen',
+    step3Aria: 'Release-Befehle',
+    linkText: 'Vollständige Konfigurationsreferenz',
+    linkLabel: 'Vollständige Konfigurationsreferenz auf GitHub',
+    installCode: `go install github.com/GoSemantics/semrel/cmd/semrel@latest
 semrel --version
 
 # Plugins nach Bedarf installieren
 semrel plugin install github
 semrel plugin install npm
-semrel plugin install docker</code></pre>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden' style='animation-delay: 0.55s'>
-        <div class='flex items-center gap-4 px-6 py-4 border-b border-meg-border-dark bg-meg-bg-dark/50'>
-          <span class='size-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-sm'>2</span>
-          <span class='font-bold text-meg-text-primary-dark'>Konfigurieren (<code class='font-mono text-sky-400 text-sm'>.semrel.yaml</code>)</span>
-        </div>
-        <div class='p-6 font-mono text-sm' role='region' aria-label='Konfigurationsbeispiel'>
-          <div class='flex items-center gap-2 text-meg-text-secondary mb-2'>
-            <i class='fa-solid fa-file-code text-xs' aria-hidden='true'></i>
-            <span class='text-xs uppercase tracking-widest'>.semrel.yaml</span>
-          </div>
-          <pre class='text-sky-300 overflow-x-auto'><code>branches:
+semrel plugin install docker`,
+    configureCode: `branches:
   - name: main
   - name: next
     prerelease: true
@@ -60,7 +41,105 @@ plugins:
   - uses: npm             # package.json bumpen
   - uses: slack           # Team benachrichtigen
     args:
-      channel: "#releases"</code></pre>
+      channel: "#releases"`,
+    releaseCode: `# Erst Dry-Run — kein Output, kein Tag, kein Release
+semrel release --dry-run
+
+# Commit-Messages validieren
+semrel lint
+
+# Vollständiger Release-Durchlauf
+semrel release`,
+  },
+  en: {
+    sectionLabel: 'Quick Start',
+    headlinePrefix: 'Your first release in',
+    headlineAccent: '3 steps',
+    headlineSuffix: '',
+    subtitleBefore: 'Alpha phase — recommended to test with ',
+    subtitleAfter: ' before going live.',
+    step1: 'Install',
+    step1Aria: 'Installation command',
+    step2: 'Configure',
+    step2Aria: 'Configuration example',
+    step3: 'Release',
+    step3Aria: 'Release commands',
+    linkText: 'Full configuration reference',
+    linkLabel: 'Open full configuration reference on GitHub',
+    installCode: `go install github.com/GoSemantics/semrel/cmd/semrel@latest
+semrel --version
+
+# Install plugins as needed
+semrel plugin install github
+semrel plugin install npm
+semrel plugin install docker`,
+    configureCode: `branches:
+  - name: main
+  - name: next
+    prerelease: true
+
+plugins:
+  - uses: conventional    # Commit analysis
+  - uses: changelog-md    # Generate CHANGELOG.md
+  - uses: github          # Create GitHub release
+  - uses: npm             # Bump package.json
+  - uses: slack           # Notify team
+    args:
+      channel: "#releases"`,
+    releaseCode: `# First dry-run — no output, no tag, no release
+semrel release --dry-run
+
+# Validate commit messages
+semrel lint
+
+# Full release run
+semrel release`,
+  },
+}[lang];
+---
+
+<section class='py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark' aria-labelledby='semrel-quickstart-heading'>
+  <div class='mx-auto max-w-5xl'>
+    <header class='text-center mb-16'>
+      <h2 id='semrel-quickstart-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
+        {t.sectionLabel}
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4' style='animation-delay: 0.15s'>
+        {t.headlinePrefix} <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>{t.headlineAccent}</span>{t.headlineSuffix ? ` ${t.headlineSuffix}` : ''}
+      </p>
+      <p class='gsap-fadein text-meg-text-secondary' style='animation-delay: 0.3s'>
+        {t.subtitleBefore}<code class='bg-meg-surface-dark border border-meg-border-dark rounded px-2 py-0.5 text-sky-400 font-mono'>--dry-run</code>{t.subtitleAfter}
+      </p>
+    </header>
+
+    <div class='space-y-6'>
+      <!-- Step 1 -->
+      <div class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden' style='animation-delay: 0.45s'>
+        <div class='flex items-center gap-4 px-6 py-4 border-b border-meg-border-dark bg-meg-bg-dark/50'>
+          <span class='size-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-sm'>1</span>
+          <span class='font-bold text-meg-text-primary-dark'>{t.step1}</span>
+        </div>
+        <div class='p-6 font-mono text-sm' role='region' aria-label={t.step1Aria}>
+          <div class='flex items-center gap-2 text-meg-text-secondary mb-2'>
+            <i class='fa-solid fa-terminal text-xs' aria-hidden='true'></i>
+            <span class='text-xs uppercase tracking-widest'>terminal</span>
+          </div>
+          <pre class='text-sky-300 overflow-x-auto'><code>{t.installCode}</code></pre>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden' style='animation-delay: 0.55s'>
+        <div class='flex items-center gap-4 px-6 py-4 border-b border-meg-border-dark bg-meg-bg-dark/50'>
+          <span class='size-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-sm'>2</span>
+          <span class='font-bold text-meg-text-primary-dark'>{t.step2} (<code class='font-mono text-sky-400 text-sm'>.semrel.yaml</code>)</span>
+        </div>
+        <div class='p-6 font-mono text-sm' role='region' aria-label={t.step2Aria}>
+          <div class='flex items-center gap-2 text-meg-text-secondary mb-2'>
+            <i class='fa-solid fa-file-code text-xs' aria-hidden='true'></i>
+            <span class='text-xs uppercase tracking-widest'>.semrel.yaml</span>
+          </div>
+          <pre class='text-sky-300 overflow-x-auto'><code>{t.configureCode}</code></pre>
         </div>
       </div>
 
@@ -68,21 +147,14 @@ plugins:
       <div class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl overflow-hidden' style='animation-delay: 0.65s'>
         <div class='flex items-center gap-4 px-6 py-4 border-b border-meg-border-dark bg-meg-bg-dark/50'>
           <span class='size-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-black text-sm'>3</span>
-          <span class='font-bold text-meg-text-primary-dark'>Releasen</span>
+          <span class='font-bold text-meg-text-primary-dark'>{t.step3}</span>
         </div>
-        <div class='p-6 font-mono text-sm' role='region' aria-label='Release-Befehle'>
+        <div class='p-6 font-mono text-sm' role='region' aria-label={t.step3Aria}>
           <div class='flex items-center gap-2 text-meg-text-secondary mb-2'>
             <i class='fa-solid fa-terminal text-xs' aria-hidden='true'></i>
             <span class='text-xs uppercase tracking-widest'>terminal</span>
           </div>
-          <pre class='text-sky-300 overflow-x-auto'><code># Erst Dry-Run — kein Output, kein Tag, kein Release
-semrel release --dry-run
-
-# Commit-Messages validieren
-semrel lint
-
-# Vollständiger Release-Durchlauf
-semrel release</code></pre>
+          <pre class='text-sky-300 overflow-x-auto'><code>{t.releaseCode}</code></pre>
         </div>
       </div>
     </div>
@@ -93,9 +165,9 @@ semrel release</code></pre>
         target='_blank'
         rel='noopener noreferrer'
         class='inline-flex items-center gap-2 text-blue-400 font-bold hover:underline'
-        aria-label='Vollständige Konfigurationsreferenz auf GitHub'
+        aria-label={t.linkLabel}
       >
-        Vollständige Konfigurationsreferenz
+        {t.linkText}
         <i class='fa-solid fa-arrow-up-right-from-square text-xs' aria-hidden='true'></i>
       </a>
     </div>

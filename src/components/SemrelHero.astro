@@ -1,4 +1,34 @@
 ---
+import type { Lang } from '../i18n/utils';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'de' } = Astro.props;
+const t = {
+  de: {
+    description:
+      'semrel analysiert eure Conventional Commits, berechnet das nächste SemVer-Tag und führt den kompletten Release-Lifecycle durch — vollständig plugin-basiert, monorepo-ready und sprachunabhängig.',
+    btnGithub: 'GitHub öffnen',
+    btnGithubLabel: 'semrel auf GitHub ansehen',
+    btnDocs: 'Dokumentation',
+    btnDocsLabel: 'semrel.io Dokumentation öffnen',
+    btnContribute: 'Mitmachen',
+    btnContributeLabel: 'Zum Mitmachen-Bereich springen',
+  },
+  en: {
+    description:
+      'semrel analyses your Conventional Commits, calculates the next SemVer tag and runs the full release lifecycle — fully plugin-based, monorepo-ready and language-agnostic.',
+    btnGithub: 'Open on GitHub',
+    btnGithubLabel: 'View semrel on GitHub',
+    btnDocs: 'Documentation',
+    btnDocsLabel: 'Open semrel.io Documentation',
+    btnContribute: 'Contribute',
+    btnContributeLabel: 'Jump to Contribute section',
+  },
+}[lang];
+const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#contribute';
 ---
 
 <section class='relative isolate pt-14 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden'>
@@ -20,7 +50,7 @@
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary uppercase tracking-widest'>
           <i class="fa-solid fa-code-branch text-blue-400" aria-hidden="true"></i>
-          v0.3.x Alpha
+          v0.4.x Alpha
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary'>
           <i class="fa-solid fa-scale-balanced text-sky-400" aria-hidden="true"></i>
@@ -44,7 +74,7 @@
       </p>
 
       <p class='gsap-fadein text-xl text-meg-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed' style='animation-delay: 0.45s'>
-        semrel analysiert eure <strong class='text-meg-text-primary-dark'>Conventional Commits</strong>, berechnet das nächste SemVer-Tag und führt den kompletten Release-Lifecycle durch — vollständig plugin-basiert, monorepo-ready und sprachunabhängig.
+        {t.description}
       </p>
 
       <!-- CTAs -->
@@ -54,28 +84,28 @@
           target='_blank'
           rel='noopener noreferrer'
           class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-500 text-white font-bold text-lg hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] transition-all'
-          aria-label='semrel auf GitHub ansehen'
+          aria-label={t.btnGithubLabel}
         >
           <i class='fa-brands fa-github' aria-hidden='true'></i>
-          GitHub öffnen
+          {t.btnGithub}
         </a>
         <a
           href='https://www.semrel.io/'
           target='_blank'
           rel='noopener noreferrer'
           class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg hover:border-blue-500/50 transition-all'
-          aria-label='semrel.io Dokumentation öffnen'
+          aria-label={t.btnDocsLabel}
         >
           <i class='fa-solid fa-book' aria-hidden='true'></i>
-          Dokumentation
+          {t.btnDocs}
         </a>
         <a
-          href='/semrel/#contribute'
+          href={contributeHref}
           class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-lg hover:bg-emerald-500/20 transition-all'
-          aria-label='Zum Mitmachen-Bereich springen'
+          aria-label={t.btnContributeLabel}
         >
           <i class='fa-solid fa-hand-holding-heart' aria-hidden='true'></i>
-          Mitmachen
+          {t.btnContribute}
         </a>
       </div>
 
