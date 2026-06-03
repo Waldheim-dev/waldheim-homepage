@@ -134,8 +134,9 @@ referencedProjects.sort((a, b) => {
             <div class="flex items-center gap-4">
               {project.data.heroImage && (
                 <img 
-                  src={`/${project.data.heroImage}`} 
+                  src={`${project.data.heroImage}`} 
                   alt="" 
+                  loading="lazy"
                   class="size-14 rounded-lg object-cover border border-meg-border-dark group-hover:border-meg-accent/20 transition-colors"
                 />
               )}
