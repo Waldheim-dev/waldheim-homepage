@@ -1,3 +1,11 @@
+## [26.11.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.0...26.11.1) (2026-06-03)
+
+
+### Bug Fixes
+
+* **KarriereProject:** add lazy loading to project hero images ([e05af32](https://github.com/Waldheim-dev/waldheim-homepage/commit/e05af3208779915b929953522538d3e6130edf3f))
+* **SemrelFeatures:** update GitHub Actions icon class for consistency ([54b71b1](https://github.com/Waldheim-dev/waldheim-homepage/commit/54b71b18ad5cd90b83e22b49b4236ca4e447a84f))
+
 # [26.11.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.10.2...26.11.0) (2026-06-03)
 
 
