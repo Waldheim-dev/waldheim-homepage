@@ -195,6 +195,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-amber-400/20',
     },
   },
+  semrel: {
+    name: 'semrel',
+    version: '0.3.x',
+    status: 'alpha',
+    releaseDate: '2026',
+    colors: {
+      name: 'semrel',
+      primary: 'blue-400',
+      secondary: 'sky-400',
+      glowColor: 'blue-400/50',
+      badgeBg: 'bg-blue-500/10',
+      badgeBorder: 'border-blue-500/30',
+      badgeText: 'text-blue-400',
+      iconColor: 'blue-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-blue-400/20',
+    },
+  },
 };
 
 // Rückwärtskompatibilität: Nur Farben

@@ -1,0 +1,106 @@
+---
+const roadmilestones = [
+  {
+    version: 'v0.1.0',
+    label: 'Foundation',
+    status: 'done',
+    desc: 'CLI, SemVer-Engine, Conventional Commits, Git Tag Management, Dry-Run',
+  },
+  {
+    version: 'v0.2.0',
+    label: 'Plugin System',
+    status: 'done',
+    desc: 'Stable Core/Plugin-Boundary, Subprocess-basiertes Plugin-Execution-Modell',
+  },
+  {
+    version: 'v0.3.0',
+    label: 'CI Integration',
+    status: 'current',
+    desc: 'GitHub Actions native, JSON Output, End-to-End Tests — aktuell aktiv',
+  },
+  {
+    version: 'v0.4.0',
+    label: 'Ecosystem Plugins',
+    status: 'done',
+    desc: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven u.v.m.',
+  },
+  {
+    version: 'v0.5.0',
+    label: 'Monorepo & Advanced',
+    status: 'planned',
+    desc: 'Workspace Discovery, Independent Versioning, Dependency Graph, Pre-release Channels',
+  },
+  {
+    version: 'v1.0.0',
+    label: 'Stable Release',
+    status: 'planned',
+    desc: 'Production-ready, vollständige Dokumentation, Plugin SDK für Third-Party Plugins',
+  },
+];
+---
+
+<section class='py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark' id='roadmap' aria-labelledby='semrel-roadmap-heading'>
+  <div class='mx-auto max-w-4xl'>
+    <header class='text-center mb-16'>
+      <h2 id='semrel-roadmap-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
+        Roadmap
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+        Der Weg zu <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>v1.0.0</span>
+      </p>
+      <p class='gsap-fadein text-meg-text-secondary' style='animation-delay: 0.3s'>
+        semrel ist in aktiver Entwicklung. Jeder Meilenstein kann auf GitHub mitverfolgt werden.
+      </p>
+    </header>
+
+    <ol class='relative' aria-label='Entwicklungs-Roadmap'>
+      {roadmilestones.map((m, i) => (
+        <li
+          class={`gsap-fadein relative pl-10 pb-10 last:pb-0 ${i < roadmilestones.length - 1 ? 'before:absolute before:left-[15px] before:top-6 before:bottom-0 before:w-px before:bg-meg-border-dark' : ''}`}
+          style={`animation-delay: ${0.45 + i * 0.1}s`}
+        >
+          <div class={`absolute left-0 top-1 size-8 rounded-full border-2 flex items-center justify-center ${
+            m.status === 'done'
+              ? 'bg-blue-500/20 border-blue-500 text-blue-400'
+              : m.status === 'current'
+              ? 'bg-sky-400/20 border-sky-400 text-sky-400 animate-pulse'
+              : 'bg-meg-surface-dark border-meg-border-dark text-meg-text-secondary'
+          }`} aria-hidden='true'>
+            <i class={`fa-solid text-xs ${
+              m.status === 'done' ? 'fa-check' : m.status === 'current' ? 'fa-circle-dot' : 'fa-clock'
+            }`}></i>
+          </div>
+          <div class='bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-5 hover:border-blue-500/20 transition-all'>
+            <div class='flex items-center gap-3 mb-2'>
+              <code class='font-mono font-black text-blue-400 text-sm'>{m.version}</code>
+              <span class='font-bold text-meg-text-primary-dark'>{m.label}</span>
+              {m.status === 'done' && (
+                <span class='ml-auto text-[10px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded'>shipped</span>
+              )}
+              {m.status === 'current' && (
+                <span class='ml-auto text-[10px] font-black uppercase tracking-widest text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded'>in progress</span>
+              )}
+              {m.status === 'planned' && (
+                <span class='ml-auto text-[10px] font-black uppercase tracking-widest text-meg-text-secondary bg-meg-bg-dark border border-meg-border-dark px-2 py-0.5 rounded'>planned</span>
+              )}
+            </div>
+            <p class='text-meg-text-secondary text-sm'>{m.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <div class='mt-8 text-center'>
+      <a
+        href='https://github.com/SemRels/semrel/blob/main/ROADMAP.md'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='inline-flex items-center gap-2 text-blue-400 font-bold hover:underline'
+        aria-label='Vollständige Roadmap auf GitHub'
+      >
+        Vollständige Roadmap auf GitHub
+        <i class='fa-solid fa-arrow-up-right-from-square text-xs' aria-hidden='true'></i>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+---
+---
+
+<section class='py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark' id='features' aria-labelledby='semrel-features-heading'>
+  <div class='mx-auto max-w-7xl'>
+    <header class='mx-auto max-w-2xl text-center mb-16'>
+      <h2 id='semrel-features-heading' class='gsap-fadein text-sm font-bold uppercase tracking-widest text-blue-400 mb-4'>
+        Warum semrel?
+      </h2>
+      <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
+        Release-Automation auf <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>Enterprise-Level</span>
+      </p>
+      <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
+        Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.
+      </p>
+    </header>
+
+    <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      {[
+        {
+          icon: 'fa-code-commit',
+          title: 'Conventional Commits',
+          desc: 'Analysiert euren Commit-Verlauf und entscheidet automatisch ob ein major, minor oder patch-Bump nötig ist. Konfigurierbare Bump-Rules per .semrel.yaml.',
+          badge: 'Core',
+        },
+        {
+          icon: 'fa-puzzle-piece',
+          title: 'Pluggable Pipeline',
+          desc: 'Jeder Schritt ist ein austauschbares Subprocess-Plugin. GitHub gegen GitLab tauschen, Changelog-Renderer wechseln oder Slack-Notifications — ohne Core zu ändern.',
+          badge: 'Plugin System',
+        },
+        {
+          icon: 'fa-diagram-project',
+          title: 'Monorepo Ready',
+          desc: 'Mehrere unabhängige Module in einem Repository — jedes mit eigener Tag-Serie, Config und Changelog. Dependency Graph und topologische Release-Reihenfolge.',
+          badge: 'v0.5.0',
+        },
+        {
+          icon: 'fa-language',
+          title: 'Language Agnostic',
+          desc: 'Plugins kommunizieren via subprocess-Protokoll und können in Go, Python, Rust, Node.js oder jeder anderen Sprache geschrieben werden.',
+          badge: 'Ecosystem',
+        },
+        {
+          icon: 'fa-shield-halved',
+          title: 'Supply Chain Security',
+          desc: 'Signierte Releases mit Sigstore Cosign, CycloneDX/SPDX SBOM, SLSA Level 1 Provenance. DCO Sign-off und REUSE/SPDX Compliance auf jedem PR.',
+          badge: 'Security',
+        },
+        {
+          icon: 'fa-flask',
+          title: 'Dry-Run Mode',
+          desc: 'Vorschau was semrel tun würde, ohne etwas anzufassen. Ideal für CI-Validierung: semrel release --dry-run vor dem tatsächlichen Release.',
+          badge: 'Safety',
+        },
+        {
+          icon: 'fa-file-lines',
+          title: 'Multi-Format Changelog',
+          desc: 'Keep-a-Changelog Markdown, GitHub/GitLab Release Notes, ArtifactHub Annotations, OCI Labels, NuGet, PyPI, RSS/Atom — alles aus einem strukturierten ReleaseNotes-Modell.',
+          badge: 'Changelog',
+        },
+        {
+          icon: 'fa-github',
+          title: 'GitHub Actions Native',
+          desc: 'Native action.yml Composite Action, strukturierter JSON Release Output und wiederverwendbare Workflow Templates für CI/CD-Pipelines.',
+          badge: 'CI/CD',
+        },
+        {
+          icon: 'fa-chart-bar',
+          title: 'Release Analytics',
+          desc: 'Append-only NDJSON Release-History Tracking, Jira/GitHub Issue Reference Extraction und commitlint für CLI, Git Range oder stdin.',
+          badge: 'Insights',
+        },
+      ].map((feature, i) => (
+        <article
+          class='gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all group'
+          style={`animation-delay: ${0.45 + i * 0.08}s`}
+        >
+          <div class='flex items-start justify-between mb-4'>
+            <div class='size-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform'>
+              <i class={`fa-solid ${feature.icon} text-blue-400 text-xl`} aria-hidden='true'></i>
+            </div>
+            <span class='text-[10px] font-black uppercase tracking-widest text-blue-500/70 border border-blue-500/20 px-2 py-1 rounded-md bg-blue-500/5'>
+              {feature.badge}
+            </span>
+          </div>
+          <h3 class='text-lg font-bold text-meg-text-primary-dark mb-2'>{feature.title}</h3>
+          <p class='text-meg-text-secondary text-sm leading-relaxed'>{feature.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
