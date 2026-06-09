@@ -7,33 +7,25 @@ import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home',
-  link: 'https://waldheim.dev'
-},{
-  name: 'Services',
-  link: 'https://waldheim.dev/services'
-}, {
-  name: 'Smart Home',
-  link: 'https://waldheim.dev/services/smarthome'
-}]);
+const titel = 'Smart Home & KNX Augsburg | Gebäudeautomation, Rollos, Heizung, AI-Kameras';
+const description = 'Professionelle Smart-Home-Automation in Augsburg & München: KNX-Gebäudetechnik, Rollladensteuerung, Fußbodenheizung, Beleuchtung, AI-Kamerasicherheit und vollständige Hausautomation. Für Neubau und Bestandsgebäude.';
+const keywords = 'KNX Smart Home Augsburg, Gebäudeautomation Bayern, Rollladensteuerung KNX, Fußbodenheizung Steuerung, Smart Home Kameras AI, Hausautomation München, KNX Planung Augsburg, Smarthome Beratung Bayern';
+const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
 
-const titel = "Smart Home Beratung Augsburg & München | Unabhängig | Waldheim.dev";
-const description = "Unabhängige Smart Home Beratung in Augsburg & München. Planung und Umsetzung Ihres sicheren Zuhauses mit Home Assistant – ohne Herstellerbindung.";
-const keywords = "Smart Home Augsburg, Hausautomation München, Home Assistant Beratung, IoT Sicherheit Bayern, Unabhängige Smart Home Planung";
-
-// Structured Data: Service
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Smart Home Beratung & Konzepte',
+  name: 'Smart Home & KNX Gebäudeautomation',
   provider: {
     '@type': 'Organization',
     name: 'waldheim.dev',
     url: 'https://waldheim.dev'
   },
-  serviceType: 'Smart Home Consulting',
-  areaServed: 'DE',
+  serviceType: 'Smart Home & Building Automation',
+  areaServed: [
+    { '@type': 'City', 'name': 'Augsburg' },
+    { '@type': 'City', 'name': 'München' }
+  ],
   description: description,
   offers: {
     '@type': 'Offer',
@@ -48,25 +40,37 @@ const serviceSchema = {
   }
 };
 
-const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
+  name: 'Home',
+  link: 'https://waldheim.dev'
+},{
+  name: 'Services',
+  link: 'https://waldheim.dev/services'
+}, {
+  name: 'Smart Home & KNX',
+  link: 'https://waldheim.dev/services/smarthome'
+}]);
 
-// Structured Data: FAQ
 const faqSchema = SchemaUtils.getFAQSchema([
   {
-    question: 'Alexa/Google-Integration?',
-    answer: 'Ja! Home Assistant bindet diese als Sprach-Schnittstelle ein. Sie behalten Ihre gewohnten Geräte.'
+    question: 'Was ist KNX und warum ist es besser als günstige Smart-Home-Systeme?',
+    answer: 'KNX ist ein internationaler Gebäudebus-Standard (ISO/IEC 14543), der seit 30 Jahren die Grundlage professioneller Gebäudeautomation ist. Im Gegensatz zu WLAN-basierten Systemen (Shelly, Tasmota, etc.) läuft KNX komplett kabelgebunden, unabhängig vom Internet und ohne Cloud. Das bedeutet: keine Ausfälle bei Internet-Problemen, keine Datenschutzbedenken, unbegrenzte Zuverlässigkeit und eine Lebensdauer von mehreren Jahrzehnten – ideal für den Neubau.'
   },
   {
-    question: 'Internet-Ausfall?',
-    answer: 'Lokale Automatisierungen laufen weiter! Nur Cloud-Dienste (z.B. Wetter) sind kurzzeitig offline.'
+    question: 'Kann ich ein Smart Home auch ohne KNX (z.B. im Bestand) nachrüsten?',
+    answer: 'Absolut. Für Bestandsgebäude ohne KNX-Verkabelung setzen wir auf Home Assistant als zentrale Steuereinheit. Damit lassen sich WLAN-, Zigbee- und Z-Wave-Geräte integrieren: Rollläden per Shelly, Heizung per Heizkörperthermostate, Beleuchtung per Philips Hue oder IKEA und Kameras über ONVIF. Alles lokal, ohne Cloud.'
   },
   {
-    question: 'Wie sicher ist das?',
-    answer: 'Sehr sicher, da alles lokal läuft. Kein Cloud-Zwang, keine Datenweitergabe an Dritte.'
+    question: 'Was können AI-Kameras im Smart Home, die normale Kameras nicht können?',
+    answer: 'KI-basierte Kamerasysteme wie Frigate NVR erkennen automatisch Personen, Fahrzeuge und Tiere – ohne False Positives durch Blätter oder Lichtveränderungen. Das System läuft lokal auf einem kleinen Rechner (Coral TPU), sendet Echtzeit-Alarme ans Telefon und speichert Clips nur bei echten Ereignissen. Kein Cloud-Abonnement, keine Datenweitergabe.'
   },
   {
-    question: 'Arbeiten Sie vor Ort?',
-    answer: 'Ich berate 100% remote. Die Installation ist dank meiner Anleitung oft selbst machbar.'
+    question: 'Kann man Rollläden, Heizung und Licht miteinander verknüpfen?',
+    answer: 'Ja – und genau das macht Smart Home aus! Beispiele: Beim Verlassen des Hauses fahren alle Rollläden auf Sicherheitsposition, die Heizung geht in den Eco-Modus und das Licht wird ausgeschaltet. Morgens öffnet der Rollladen automatisch mit dem Wecker. Bei zu viel Sonneneinstrahlung fährt der Rollladen halb, damit die Raumtemperatur stabil bleibt. Solche Szenarien erstellen wir gemeinsam nach Ihren Wünschen.'
+  },
+  {
+    question: 'Arbeiten Sie auch vor Ort in Augsburg und München?',
+    answer: 'Ja. Für KNX-Planung, Inbetriebnahme und Hardware-Installation bin ich vor Ort im Raum Augsburg und München tätig. Beratung, Konzepte und Software-Konfiguration erfolgen auch remote. Für die KNX-Elektroinstallation arbeite ich mit zertifizierten Elektrikern zusammen.'
   }
 ]);
 ---
@@ -77,144 +81,251 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
-  <!-- Hero Section -->
-  <ServiceHero 
-    title="Smart Home"
-    subtitle="Unabhängiges & sicheres"
-    description="Keine teuren Systeme mit Herstellerbindung! Ich zeige Ihnen, wie Sie mit Home Assistant & Co. Ihr eigenes Smart Home aufbauen – kostengünstig, sicher und selbstbestimmt. Von der Planung bis zur Umsetzung."
-    gradient="orange"
-    icon="fa-house"
-    badge="Open Source & unabhängig"
-  />
+  <main id="main-content">
+    <ServiceHero 
+      title="Smart Home & KNX"
+      subtitle="Professionelle Gebäudeautomation –"
+      description="Von KNX-Bustechnik für den Neubau bis zur smarten Nachrüstung im Bestand: Ich plane und realisiere Ihr intelligentes Gebäude – Rollläden, Fußbodenheizung, Beleuchtung, Sicherheit und mehr. Alles lokal, alles unter Ihrer Kontrolle."
+      gradient="orange"
+      icon="fa-house"
+      badge="KNX · Home Assistant · AI-Kameras · Augsburg"
+    />
 
-  <!-- Main Features Section -->
-  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark' id='leistungen'>
-    <div class='mx-auto max-w-7xl'>
-      <div class='mx-auto max-w-2xl text-center mb-16'>
-        <h2 class='gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4' style='animation-delay: 0s'>
-          <i class='fa-solid fa-house mr-2' aria-hidden='true'></i>
-          Konzept-Beratung
-        </h2>
-        <p class='gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6' style='animation-delay: 0.15s'>
-          Intelligente <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Vernetzung</span> – herstellerunabhängig
-        </p>
-        <p class='gsap-fadein text-xl text-meg-text-secondary' style='animation-delay: 0.3s'>
-          Ich unterstütze Sie bei der Planung Ihres individuellen Smart Homes – Fokus auf offene Systeme und volle Kontrolle.
-        </p>
-      </div>
-      
-      <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        {[
-          { title: 'Hardware-Beratung', desc: 'Herstellerunabhängige Auswahl passender Geräte (z.B. Raspberry Pi, Zigbee, Z-Wave).', icon: 'fa-microchip' },
-          { title: 'Zentrale Steuerung', desc: 'Vernetzung mit Home Assistant, MQTT und Node-RED – keine Insellösungen.', icon: 'fa-network-wired' },
-          { title: 'Sicherheit & Privacy', desc: 'Lokale Steuerung ohne Cloud-Zwang für maximale Kontrolle über Ihre Daten.', icon: 'fa-lock' },
-          { title: 'Support & Wartung', desc: 'Anleitung zur Selbsthilfe und kompetente Unterstützung bei Erweiterungen.', icon: 'fa-wrench' }
-        ].map((feat, i) => (
-          <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300 group' style={`animation-delay: ${0.45 + i * 0.15}s`}>
-            <div class='w-14 h-14 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
-              <i class={`fa-solid ${feat.icon} text-orange-400 text-2xl`}></i>
-            </div>
-            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-4'>{feat.title}</h3>
-            <p class='text-meg-text-secondary leading-relaxed'>{feat.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- System Comparison -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-y border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4" style="animation-delay: 0s">
-          <i class='fa-solid fa-scale-balanced mr-2' aria-hidden='true'></i>
-          Vergleich
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Smart Home <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Ökosysteme</span>
-        </p>
-      </div>
-      
-      <div tabindex="0" class="overflow-x-auto rounded-2xl border border-meg-border-dark bg-meg-surface-dark/30 backdrop-blur-md shadow-sm">
-        <table class="w-full text-left border-collapse">
-          <thead class="bg-meg-surface-dark/50 text-meg-text-primary-dark">
-            <tr>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Kriterium</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Google/Alexa</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark">Apple HomeKit</th>
-              <th class="px-6 py-4 font-bold border-b border-meg-border-dark bg-orange-500/5 text-orange-400">
-                <i class='fa-solid fa-crown mr-2' aria-hidden='true'></i>
-                Home Assistant
-              </th>
-            </tr>
-          </thead>
-          <tbody class="text-meg-text-secondary">
-            {[
-              { f: 'Kosten', c1: '€', c2: '€€', c3: '€ (günstig)', c3color: 'text-emerald-400' },
-              { f: 'Datenschutz', c1: 'Cloud (kritisch)', c2: 'Cloud', c3: 'Lokal (top)', c3color: 'text-emerald-400' },
-              { f: 'Flexibilität', c1: 'Begrenzt', c2: 'Begrenzt', c3: 'Sehr hoch', c3color: 'text-emerald-400' },
-              { f: 'Komplexität', c1: 'Einfach', c2: 'Einfach', c3: 'Mittel', c3color: 'text-orange-400' },
-              { f: 'Automatisierung', c1: 'Basic', c2: 'Basic', c3: 'Sehr hoch', c3color: 'text-emerald-400' }
-            ].map((row) => (
-              <tr class="border-b border-meg-border-dark/50 hover:bg-meg-accent/5 transition-colors">
-                <td class="px-6 py-4 font-bold text-meg-text-primary-dark">{row.f}</td>
-                <td class="px-6 py-4">{row.c1}</td>
-                <td class="px-6 py-4">{row.c2}</td>
-                <td class={`px-6 py-4 bg-orange-500/5 font-medium ${row.c3color}`}>{row.c3}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="mt-8 text-center">
-        <div class="gsap-fadein inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full shadow-sm">
-          <i class='fa-solid fa-lightbulb text-orange-400 text-xs' aria-hidden='true'></i>
-          <p class="text-meg-text-secondary text-[10px] font-black uppercase tracking-widest">
-            Empfehlung: <span class="text-meg-text-primary-dark">Home Assistant</span> für maximale Freiheit
+    <!-- Hauptleistungen -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="smarthome-services-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="smarthome-services-heading" class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-4">
+            <i class="fa-solid fa-house mr-2" aria-hidden="true"></i>
+            Leistungen
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Ihr Haus denkt <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">mit</span>
           </p>
+          <p class="text-xl text-meg-text-secondary">
+            Komfort, Effizienz und Sicherheit – intelligent vernetzt und vollständig in Ihrer Hand.
+          </p>
+        </header>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-bolt text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">KNX-Gebäudeautomation</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Planung und Inbetriebnahme professioneller KNX-Installationen für Neubau und Sanierung. Bustopologie, Aktor-/Sensor-Auswahl, ETS5/6-Programmierung und vollständige Dokumentation.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-grid-horizontal text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Rollläden & Jalousien</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Automatische Steuerung per Zeit, Helligkeit, Windwächter und Szenarien. Sonnenschutz-Automatik hält die Raumtemperatur stabil. Integration per KNX-Jalousieaktoren oder WLAN-Nachrüstmodulen (Shelly).</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-temperature-half text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Heizungssteuerung</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Intelligente Regelung von Fußbodenheizung, Heizkörpern und Wärmepumpen. Raumweise Temperaturprofile, Anwesenheitserkennung und Eco-Modi reduzieren den Energieverbrauch deutlich.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-lightbulb text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Beleuchtungssteuerung</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">DALI, DMX oder Tasterdimmer via KNX: stimmungsvolle Lichtszenen, Tageslichtsimulation für besseres Wohlbefinden und automatische Nachtbeleuchtung. Auch für Smart-Bulbs und WLAN-Nachrüstung.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-camera text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Sicherheit & AI-Kameras</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Lokales Kamera-Sicherheitssystem mit AI-Personenerkennung (Frigate NVR + Coral TPU). Echtzeit-Benachrichtigungen, Türklingel-Integration (Reolink, Amcrest) und Alarmsystem-Anbindung – vollständig ohne Cloud.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+            <i class="fa-solid fa-mobile-screen-button text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Zentrale Steuerung & Apps</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Ein Dashboard für alles: Home Assistant auf dem lokalen Server, Steuerung per Smartphone (iOS & Android), Sprachsteuerung via Alexa/Google/HomeKit und individuelle Touchpanel-Lösungen.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-7xl">
-      <div class="mx-auto max-w-2xl text-center mb-16">
-        <h2 class="gsap-fadein text-sm font-bold uppercase tracking-widest text-orange-400 mb-4" style="animation-delay: 0s">
-          Support
-        </h2>
-        <p class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6" style="animation-delay: 0.15s">
-          Fragen & <span class='text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500'>Antworten</span>
-        </p>
-      </div>
-      
-      <div class="max-w-4xl mx-auto space-y-4">
-        {[
-          { q: 'Alexa/Google-Integration?', a: 'Ja! Home Assistant bindet diese als Sprach-Schnittstelle ein. Sie behalten Ihre gewohnten Geräte.' },
-          { q: 'Internet-Ausfall?', a: 'Lokale Automatisierungen laufen weiter! Nur Cloud-Dienste (z.B. Wetter) sind kurzzeitig offline.' },
-          { q: 'Wie sicher ist das?', a: 'Sehr sicher, da alles lokal läuft. Kein Cloud-Zwang, keine Datenweitergabe an Dritte.' },
-          { q: 'Arbeiten Sie vor Ort?', a: 'Ich berate 100% remote. Die Installation ist dank meiner Anleitung oft selbst machbar.' }
-        ].map((faq, i) => (
-          <div class="gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/20 transition-all shadow-sm group" style={`animation-delay: ${0.3 + i * 0.15}s`}>
-            <h3 class="text-lg font-bold text-meg-text-primary-dark mb-4 flex items-start gap-3">
-              <span class="text-orange-400 font-black">Q</span> {faq.q}
-            </h3>
-            <p class="text-meg-text-secondary pl-7 leading-relaxed">
-              <span class="text-meg-accent font-bold mr-2">A:</span> {faq.a}
+    <!-- KNX vs. Nachrüstung -->
+    <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="systems-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="systems-heading" class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-4">
+            <i class="fa-solid fa-scale-balanced mr-2" aria-hidden="true"></i>
+            Welches System passt zu mir?
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Neubau oder <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Bestand</span>
+          </p>
+        </header>
+        
+        <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <article class="bg-meg-surface-dark/50 border border-orange-500/30 rounded-2xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="size-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-house-chimney text-orange-400 text-2xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-meg-text-primary-dark">Neubau: KNX</h3>
+                <span class="text-orange-400 text-sm font-bold">Empfohlen für Bauherren</span>
+              </div>
+            </div>
+            <ul class="space-y-3">
+              {[
+                'Kabelgebunden – keine WLAN-Abhängigkeit',
+                'Internationaler ISO-Standard seit 30+ Jahren',
+                'Jeder Elektriker kann erweitern',
+                'Unbegrenzte Lebenserwartung der Installationen',
+                'Maximale Zuverlässigkeit & Reaktionszeit',
+                'Unabhängig von Herstellern & Cloud-Diensten'
+              ].map((point) => (
+                <li class="flex items-start gap-3 text-meg-text-secondary text-sm">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </article>
+          
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="size-14 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-screwdriver-wrench text-emerald-400 text-2xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-meg-text-primary-dark">Bestand: Home Assistant</h3>
+                <span class="text-emerald-400 text-sm font-bold">Nachrüstung ohne Umbau</span>
+              </div>
+            </div>
+            <ul class="space-y-3">
+              {[
+                'Keine Leitungen – Funk (Zigbee, WLAN, Z-Wave)',
+                'Günstiger Einstieg ohne Elektriker',
+                'Kompatibel mit 3.000+ Geräten & Marken',
+                'Home Assistant läuft lokal – kein Cloud-Zwang',
+                'Alexa, Google & HomeKit Integration',
+                'Ideal für Mieter oder schrittweisen Ausbau'
+              ].map((point) => (
+                <li class="flex items-start gap-3 text-meg-text-secondary text-sm">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+        
+        <div class="mt-8 text-center">
+          <div class="inline-flex items-center gap-3 px-4 py-2 bg-meg-surface-dark/50 border border-meg-border-dark rounded-full">
+            <i class="fa-solid fa-lightbulb text-orange-400 text-xs" aria-hidden="true"></i>
+            <p class="text-meg-text-secondary text-xs font-bold uppercase tracking-widest">
+              Auch Kombinationen möglich: <span class="text-meg-text-primary-dark">KNX-Backbone + Home Assistant als Oberfläche</span>
             </p>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <PriceService />
+    <!-- AI-Kameras Highlight -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="security-heading">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-4 block">
+              <i class="fa-solid fa-camera mr-2" aria-hidden="true"></i>
+              Sicherheitstechnik
+            </span>
+            <h2 id="security-heading" class="text-3xl font-bold mb-6">
+              KI-Sicherheit – <span class="text-orange-400">ohne Cloud, ohne Abo</span>
+            </h2>
+            <p class="text-meg-text-secondary mb-8 leading-relaxed text-lg">
+              Moderne AI-Kameras erkennen Personen, Fahrzeuge und Tiere mit hoher Präzision – ganz ohne störende Fehlalarme durch Katzen, Schatten oder Blätter. Alles läuft lokal auf Ihrer Hardware.
+            </p>
+            <dl class="space-y-6">
+              <div class="flex gap-4">
+                <dt class="size-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Lokale KI-Erkennung (Frigate NVR)</strong>
+                  <span class="text-meg-text-secondary text-sm">Personenerkennung mit Google Coral TPU – Echtzeit ohne Cloud-Upload. Nur echte Ereignisse lösen Alarme aus.</span>
+                </dd>
+              </div>
+              <div class="flex gap-4">
+                <dt class="size-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Push-Benachrichtigungen mit Foto</strong>
+                  <span class="text-meg-text-secondary text-sm">Sofort wissen, was auf Ihrem Grundstück passiert – mit Vorschaubild direkt aufs Smartphone.</span>
+                </dd>
+              </div>
+              <div class="flex gap-4">
+                <dt class="size-10 bg-orange-500/10 rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                </dt>
+                <dd>
+                  <strong class="text-meg-text-primary-dark block">Vollständige Datensouveränität</strong>
+                  <span class="text-meg-text-secondary text-sm">Kein Abo, kein Cloud-Speicher. Alle Aufnahmen liegen lokal auf Ihrem NAS – DSGVO-konform und privat.</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-orange-500/10 rounded-3xl blur-2xl group-hover:bg-orange-500/15 transition-all" aria-hidden="true"></div>
+            <div class="relative bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8">
+              <h3 class="text-lg font-bold text-meg-text-primary-dark mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-diagram-project text-orange-400" aria-hidden="true"></i>
+                Typisches Sicherheitssystem
+              </h3>
+              <ul class="space-y-4">
+                {[
+                  { icon: 'fa-camera', label: 'IP-Kameras', detail: 'Reolink, Amcrest, Hikvision (ONVIF)' },
+                  { icon: 'fa-microchip', label: 'Frigate NVR + Coral TPU', detail: 'Lokale AI-Objekterkennung' },
+                  { icon: 'fa-hard-drive', label: 'NAS-Speicher', detail: 'Clips & Zeitrafferaufnahmen lokal' },
+                  { icon: 'fa-bell-concierge', label: 'Video-Türklingel', detail: 'Integration in Home Assistant' },
+                  { icon: 'fa-mobile-screen', label: 'App & Alexa/Google', detail: 'Steuerung & Benachrichtigungen' }
+                ].map((item) => (
+                  <li class="flex items-center gap-4 p-3 bg-meg-bg-dark/50 rounded-xl border border-meg-border-dark">
+                    <div class="size-8 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <i class={`fa-solid ${item.icon} text-orange-400 text-sm`} aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <span class="text-meg-text-primary-dark text-sm font-bold block">{item.label}</span>
+                      <span class="text-meg-text-secondary text-xs">{item.detail}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <Blog limits={2} />
+    <!-- FAQ -->
+    <section class="py-24 px-6 border-t border-meg-border-dark" aria-labelledby="smarthome-faq-heading">
+      <div class="mx-auto max-w-4xl">
+        <header class="text-center mb-12">
+          <h2 id="smarthome-faq-heading" class="text-3xl font-bold">Fragen zu <span class="text-orange-400">Smart Home & KNX</span></h2>
+        </header>
+        <div class="space-y-6">
+          {faqSchema.mainEntity.map((faq) => (
+            <details class="group border border-meg-border-dark rounded-2xl p-6 bg-meg-surface-dark/50 cursor-pointer hover:border-orange-500/30 transition-all">
+              <summary class="flex justify-between items-center font-bold text-meg-text-primary-dark list-none">
+                {faq.name}
+                <span class="text-orange-400 group-open:rotate-180 transition-transform">
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </span>
+              </summary>
+              <p class="mt-4 text-meg-text-secondary leading-relaxed border-t border-meg-border-dark pt-4">
+                {faq.acceptedAnswer.text}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
 
-  <RelatedServices />
-
-  <Partner />
+    <PriceService />
+    <Blog limits={2} />
+    <RelatedServices />
+    <Partner />
+  </main>
 </Layout>

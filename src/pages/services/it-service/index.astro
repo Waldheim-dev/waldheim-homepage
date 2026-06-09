@@ -8,16 +8,15 @@ import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 
 // SEO & Meta
-const titel = 'Managed IT-Service Augsburg & München | Cloud & Support';
-const description = 'Professioneller IT-Service für KMU: Managed Cloud, Netzwerk-Sicherheit & Remote-Support in Augsburg und München. Maximale Verfügbarkeit für Ihre IT.';
-const keywords = 'IT-Service Augsburg, IT-Support München, Managed Services Bayern, Cloud Migration KMU, IT-Infrastruktur Wartung, Remote IT-Administration';
+const titel = 'IT-Service Augsburg & München | Custom PC, Unifi-Netzwerk, NAS, Microsoft 365, Linux & Windows';
+const description = 'Ganzheitlicher IT-Service in Bayern: Custom PCs & Workstations (Gaming, Office, Server), Unifi-Netzwerke, NAS & Backup nach 3-2-1-Regel, On-Premise-Dienste, Microsoft 365 und Systembetreuung für Windows, macOS & Linux – von Ubuntu bis CachyOS.';
+const keywords = 'IT Service Augsburg, Custom PC Bayern, Gaming PC bauen Augsburg, Workstation PC München, Unifi Netzwerk Augsburg, NAS Einrichtung Bayern, Microsoft 365 Beratung, On-Premise Server, Linux CachyOS Augsburg, ArchLinux Setup, IT Infrastruktur KMU, Netzwerkinfrastruktur Augsburg, Home Server Einrichtung';
 const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
 
-// Structured Data: Professional Service (Specific to IT Support)
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  'name': 'Managed IT-Service & Cloud Support',
+  'name': 'IT-Service & Infrastruktur',
   'provider': {
     '@type': 'ProfessionalService',
     'name': 'Waldheim.dev',
@@ -28,15 +27,15 @@ const serviceSchema = {
       'addressCountry': 'DE'
     }
   },
-  'serviceType': 'IT Support & Cloud Consulting',
+  'serviceType': 'IT Support & Infrastructure',
   'areaServed': [
     { '@type': 'City', 'name': 'Augsburg' },
     { '@type': 'City', 'name': 'München' }
   ],
-  'description': 'Ganzheitliche IT-Betreuung für Unternehmen: Von der Cloud-Migration bis zum täglichen Support. Fokus auf Sicherheit und Hochverfügbarkeit.',
+  'description': 'Umfassender IT-Service: Custom-PC-Konfiguration (Gaming, Workstation, Server), professionelle Unifi-Netzwerke, NAS & Backup, On-Premise-Server mit Proxmox, Microsoft 365 und Betreuung für Windows, macOS & Linux (Ubuntu bis CachyOS/Arch).',
   'offers': {
     '@type': 'Offer',
-    'description': 'Monatliche Managed Service Pakete & On-Demand Support'
+    'description': 'Monatliche Wartungsverträge & On-Demand Support'
   }
 };
 
@@ -47,24 +46,133 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Services',
   link: 'https://waldheim.dev/services'
 }, {
-  name: 'IT-Service',
+  name: 'IT-Service & Infrastruktur',
   link: 'https://waldheim.dev/services/it-service'
 }]);
 
 const faqSchema = SchemaUtils.getFAQSchema([
   {
+    question: 'Welche PC-Typen konfigurieren und bauen Sie?',
+    answer: 'Ich baue und konfiguriere vier Hauptkategorien: leise Office-PCs für produktives Arbeiten, High-End Gaming-Rigs mit aktueller GPU (z.B. RTX 4080/4090), leistungsstarke Workstations für Videobearbeitung, 3D, CAD und KI-Training sowie dedizierte Home-Server (z.B. Proxmox-Basis für VMs, NAS und Self-Hosted-Dienste). Bei jeder Konfiguration achte ich auf optimales Preis-Leistungs-Verhältnis, Langlebigkeit und Kühlung.'
+  },
+  {
+    question: 'Was bringt ein professionelles Unifi-Netzwerk im Vergleich zu Consumer-Hardware?',
+    answer: 'Unifi-Hardware von Ubiquiti bietet professionelle Features, die kein Heimrouter liefert: stabile VLANs (z.B. IoT, Gäste und Büro getrennt), nahtloses WLAN-Roaming zwischen Access Points, IDS/IPS-Firewall, detailliertes Traffic-Monitoring und zentrales Management über eine einzige Konsole. Auch für größere Flächen, mehrere Etagen oder Außenbereiche skaliert Unifi problemlos – mit professioneller Planung der Kanalaufteilung und Sendeleistung.'
+  },
+  {
+    question: 'Warum brauche ich ein NAS, wenn ich OneDrive oder iCloud nutze?',
+    answer: 'Cloud-Speicher ist praktisch – aber kein Backup. Ein NAS (z.B. Synology oder TrueNAS) gibt Ihnen lokale Hochgeschwindigkeitszugriffe (1 GbE / 10 GbE) auf große Datenmengen (Videos, RAW-Fotos, VM-Images), läuft unabhängig vom Internet und erlaubt vollautomatische Backups. Kombiniert mit Cloud-Replikation erfüllen Sie die professionelle 3-2-1-Backup-Strategie: 3 Kopien, auf 2 verschiedenen Medien, 1 davon offsite – Datenverlust wird damit praktisch unmöglich.'
+  },
+  {
+    question: 'Unterstützen Sie auch spezialisierte Linux-Distributionen wie CachyOS oder Arch Linux?',
+    answer: 'Ja. Neben Server-Distros (Ubuntu, Debian, Rocky Linux) betreue ich auch Desktop- und Gaming-orientierte Systeme. CachyOS mit optimiertem Kernel (BORE/EEVDF-Scheduler) und ArchLinux bieten maximale Performance auf aktueller Hardware. Ich helfe bei der Installation, Pacman/AUR-Verwaltung, Kernel-Konfiguration, Treiber-Setup (NVIDIA/AMD), Gaming-Optimierungen (GameMode, MangoHud, Proton) und der Systemhärtung.'
+  },
+  {
+    question: 'Was kann ich mit einem eigenen On-Premise-Server selbst hosten?',
+    answer: 'Sehr vieles: Nextcloud (eigener Cloud-Speicher), Vaultwarden (Passwort-Manager), Gitea/GitLab (Code-Repository), Home Assistant (Smart Home), Paperless-ngx (Dokumentenverwaltung), Immich (Foto-Backup wie Google Photos), Jellyfin (Media-Server), Pi-hole (Netzwerk-Adblocker) und viele weitere Dienste. Mit Proxmox als Virtualisierungsschicht laufen alle Dienste sauber getrennt in VMs oder LXC-Containern.'
+  },
+  {
+    question: 'Helfen Sie bei der Microsoft 365 Einrichtung und Migration?',
+    answer: 'Absolut. Ich begleite Sie von der Lizenzauswahl (Business Basic bis E3/E5) über die initiale Einrichtung (Exchange Online, Teams, SharePoint, OneDrive) bis zur Security-Härtung mit MFA, Conditional Access und DLP-Richtlinien. Auch Migrationen von bestehenden Exchange-Servern, Google Workspace oder anderen Systemen sowie die laufende Benutzerverwaltung übernehme ich gerne.'
+  },
+  {
     question: 'Bieten Sie IT-Support vor Ort in Augsburg an?',
-    answer: 'Mein Modell ist "Remote-First", was Ihnen schnellste Reaktionszeiten und geringere Kosten ermöglicht. Für physische Hardware-Einsätze vor Ort in Augsburg oder München arbeite ich mit erfahrenen Partnern zusammen.'
-  },
-  {
-    question: 'Wie schnell helfen Sie bei IT-Problemen?',
-    answer: 'In kritischen Fällen garantiere ich eine Remote-Reaktionszeit von unter 2 Stunden. Mein Ziel ist es, Ausfallzeiten für Ihr Unternehmen auf ein absolutes Minimum zu reduzieren.'
-  },
-  {
-    question: 'Unterstützen Sie auch Microsoft 365 und Google Workspace?',
-    answer: 'Ja, ich bin spezialisiert auf die Migration und Verwaltung moderner Cloud-Arbeitsplätze inkl. Security-Härtung und Compliance-Checks.'
+    answer: 'Mein Ansatz ist Remote-First – das ermöglicht Ihnen schnellste Reaktionszeiten (unter 2 Stunden in kritischen Fällen) ohne Wartezeit auf einen Techniker. Für physische Installationen (Netzwerk-Verkabelung, PC-Aufbau, Server-Rack) bin ich im Raum Augsburg und München direkt vor Ort. Weiter entfernte Hardware-Einsätze koordiniere ich über mein Partner-Netzwerk.'
   }
 ]);
+
+const pcTypes = [
+  {
+    icon: 'fa-gamepad',
+    title: 'Gaming-PC',
+    color: 'text-purple-400',
+    borderColor: 'border-purple-500/30 hover:border-purple-500/50',
+    iconBg: 'bg-purple-500/10',
+    specs: ['Aktuelle GPUs: RTX 4070–4090, RX 7900 XT/XTX', 'Leistungsstarke CPUs: Ryzen 9 / Core i9', 'DDR5-RAM, PCIe 5.0 NVMe-SSD', 'Optimales Kühlkonzept: AIO oder Custom-Loop', 'Betrieb mit Windows 11 oder CachyOS/ArchLinux'],
+    desc: 'Höchstleistung für AAA-Titel und E-Sports. Durchdachte Kühlung für Dauerbetrieb unter Last – ohne Kompromisse.'
+  },
+  {
+    icon: 'fa-photo-film',
+    title: 'Workstation',
+    color: 'text-blue-400',
+    borderColor: 'border-blue-500/30 hover:border-blue-500/50',
+    iconBg: 'bg-blue-500/10',
+    specs: ['Profi-GPUs für GPU-Rendering & KI (RTX A-Serie)', 'High-Core-Count CPUs: Threadripper, EPYC, i9', 'ECC-RAM optional für maximale Stabilität', 'Schnelle NVMe-RAID-Konfigurationen', 'Silent-Kühlung für konzentriertes Arbeiten'],
+    desc: 'Für Video-Editing (DaVinci, Premiere), 3D/CAD (Blender, Fusion 360) und KI-Training – maßgeschneidert auf Ihre Software.'
+  },
+  {
+    icon: 'fa-briefcase',
+    title: 'Office-PC',
+    color: 'text-emerald-400',
+    borderColor: 'border-emerald-500/30 hover:border-emerald-500/50',
+    iconBg: 'bg-emerald-500/10',
+    specs: ['Effiziente CPUs: Intel Core i5/i7, Ryzen 5/7', 'Lautlose Kühlung – ideal im Büroumfeld', 'SSD-only für kurze Boot- und Ladezeiten', 'M.2-basiert, kompaktes ITX/mATX-Format', 'Windows 11 Pro mit AD-Integration'],
+    desc: 'Zuverlässig, leise, wartungsarm. Produktiv mit Microsoft 365, Buchhaltungssoftware oder branchenspezifischen Anwendungen.'
+  },
+  {
+    icon: 'fa-server',
+    title: 'Home-Server / NAS',
+    color: 'text-orange-400',
+    borderColor: 'border-orange-500/30 hover:border-orange-500/50',
+    iconBg: 'bg-orange-500/10',
+    specs: ['24/7-tauglich mit ECC-RAM & ZFS-Dateisystem', 'Proxmox VE für VMs & LXC-Container', 'Hot-Swap-Bays für RAID-Festplatten-Array', 'Geringer Stromverbrauch: 20–60 W im Betrieb', 'TrueNAS, Debian oder Ubuntu Server'],
+    desc: 'Ihr eigenes Rechenzentrum zu Hause: Cloud-Speicher, Backups, Smart-Home, Medienserver – alles unter Ihrer Kontrolle.'
+  }
+];
+
+const linuxDistros = [
+  {
+    name: 'CachyOS',
+    badge: 'Gaming & Performance',
+    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+    desc: 'Arch-basiertes System mit hochoptimiertem Kernel (BORE/EEVDF-Scheduler, x86-64-v3/v4-Optimierungen) und automatisierten Performance-Tweaks. Ideal für Gaming-Rigs: deutlich niedrigere Latenzen, bessere CPU-Auslastung und native Proton-/Steam-Integration.'
+  },
+  {
+    name: 'Arch Linux',
+    badge: 'Maximale Kontrolle',
+    badgeColor: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+    desc: 'Das Rolling-Release-System für Entwickler und Power-User, die volle Kontrolle wollen. Kein Bloatware, kein veraltetes Repository. AUR bietet Zugriff auf praktisch jedes Paket. Ich begleite Setup, Konfiguration, Btrfs-Snapshots mit Snapper und Systemhärtung.'
+  },
+  {
+    name: 'Ubuntu / Ubuntu LTS',
+    badge: 'Allround & Business',
+    badgeColor: 'bg-orange-500/20 text-orange-300 border-orange-500/30',
+    desc: 'Der beliebteste Linux-Desktop und Server-Standard. Breite Hardware-Unterstützung, 5 Jahre LTS-Support und riesige Community. Perfekt für Unternehmen, Entwickler und Einsteiger gleichermaßen. Snap- und Flatpak-fähig, Samba-Integration für Windows-Netzwerke.'
+  },
+  {
+    name: 'Debian',
+    badge: 'Server & Stabilität',
+    badgeColor: 'bg-red-500/20 text-red-300 border-red-500/30',
+    desc: 'Der stabilste und bewährteste Linux-Server-Standard. Kein Canonical-Overhead, kein Snap. Minimale Installations-Basis für dedizierte Server, Proxmox-Host-OS oder sicherheitskritische Produktivsysteme. Ideal für langfristig betriebene Infrastruktur.'
+  },
+  {
+    name: 'Fedora / RHEL',
+    badge: 'Entwickler & Enterprise',
+    badgeColor: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+    desc: 'Fedora als Bleeding-Edge-Desktop mit aktuellstem Kernel und modernsten Desktop-Features (Wayland, PipeWire, Flatpak-First). Rocky Linux / AlmaLinux als kostenfreie RHEL-Alternative für Enterprise-Server mit 10 Jahren Supportzeitraum.'
+  },
+  {
+    name: 'TrueNAS / Proxmox',
+    badge: 'Hypervisor & NAS',
+    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+    desc: 'Spezialdistributionen für Home-Server: TrueNAS (Scale/Core) für ZFS-basiertes NAS mit WebUI, RAID, S3-API und Apps. Proxmox VE für professionelle Hypervisor-Umgebungen – VMs und LXC-Container auf einem System, mit HA-Clustering und Ceph-Storage.'
+  }
+];
+
+const selfHostedServices = [
+  { icon: 'fa-cloud', name: 'Nextcloud', desc: 'Eigener Cloud-Speicher, Kalender & Kontakte' },
+  { icon: 'fa-key', name: 'Vaultwarden', desc: 'Self-Hosted Bitwarden Passwort-Manager' },
+  { icon: 'fa-code-branch', name: 'Gitea / GitLab', desc: 'Private Git-Repositories & CI/CD' },
+  { icon: 'fa-photo-film', name: 'Immich', desc: 'Google-Photos-Alternative – lokal & privat' },
+  { icon: 'fa-film', name: 'Jellyfin', desc: 'Media-Server für Filme, Serien & Musik' },
+  { icon: 'fa-file-lines', name: 'Paperless-ngx', desc: 'Digitales Dokumentenarchiv mit OCR' },
+  { icon: 'fa-house', name: 'Home Assistant', desc: 'Smart-Home-Zentrale – lokal & offline-fähig' },
+  { icon: 'fa-ban', name: 'Pi-hole / AdGuard', desc: 'Netzwerkweiter DNS-Adblocker' },
+  { icon: 'fa-chart-line', name: 'Grafana / Prometheus', desc: 'System-Monitoring & Alerting' },
+  { icon: 'fa-envelope', name: 'Stalwart / Mailcow', desc: 'Eigener Mail-Server – DSGVO-konform' },
+  { icon: 'fa-shield-halved', name: 'Authentik / Keycloak', desc: 'SSO & Identity-Provider für alle Dienste' },
+  { icon: 'fa-link', name: 'Traefik / Nginx Proxy', desc: 'Reverse-Proxy mit automatischem TLS' }
+];
 ---
 <Layout 
   title={titel} 
@@ -74,108 +182,297 @@ const faqSchema = SchemaUtils.getFAQSchema([
   image={ogImage}
 >
   <main id="main-content">
-    <!-- Hero Section: Fokus auf Zuverlässigkeit -->
     <ServiceHero 
-      title="Managed IT-Service"
-      subtitle="Sorgenfreie IT-Infrastruktur für"
-      description="Ich übernehme die Verantwortung für Ihre IT, damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Modern, sicher und dank Remote-First-Ansatz extrem schnell einsatzbereit."
+      title="IT-Service & Infrastruktur"
+      subtitle="Von der Workstation bis zur Cloud –"
+      description="Ihr kompletter IT-Partner: Ich plane, baue und betreue Ihre gesamte IT-Infrastruktur – vom maßgeschneiderten Gaming-PC oder Workstation über professionelle Unifi-Netzwerke und NAS-Systeme bis hin zu On-Premise-Servern, Microsoft 365 und Linux-Desktops jeder Art."
       gradient="green"
-      icon="fa-server"
-      badge="IT-Support für KMU & Verbände"
+      icon="fa-desktop"
+      badge="Augsburg & München · Windows · macOS · Linux · CachyOS · Arch"
     />
 
-    <!-- Leistungen: Managed Services Fokus -->
+    <!-- Leistungsübersicht -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="it-services-heading">
       <div class="mx-auto max-w-7xl">
         <header class="mx-auto max-w-2xl text-center mb-16">
           <h2 id="it-services-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
-            Ihre externe IT-Abteilung
+            Leistungsübersicht
           </h2>
           <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
-            Maximale <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">Verfügbarkeit</span>
+            Alles aus <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">einer Hand</span>
           </p>
           <p class="text-xl text-meg-text-secondary">
-            Proaktive Wartung statt reaktiver Fehlerbehebung. Ich halte Ihre Systeme am Laufen.
+            Professionelle IT-Infrastruktur muss nicht teuer oder kompliziert sein – wenn der richtige Partner dabei ist.
           </p>
         </header>
         
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
-            <i class="fa-solid fa-cloud-arrow-up text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-            <h3 class="text-xl font-bold mb-4">Cloud Migration & Management</h3>
-            <p class="text-meg-text-secondary text-sm">Sicherer Umzug Ihrer Daten und Anwendungen in die Cloud (M365, Google, AWS). Ortsunabhängiges Arbeiten für Ihr gesamtes Team.</p>
+            <i class="fa-solid fa-computer text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Custom PCs & Workstations</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Maßgeschneiderte Systeme für jeden Zweck: leise Office-PCs, High-End-Workstations für Grafik, Video & KI, Gaming-Rigs und dedizierte Home-Server. Komponentenauswahl nach Ihren Anforderungen und Budget, Zusammenbau und vollständige Einrichtung inklusive.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-network-wired text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Netzwerkinfrastruktur (Unifi)</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Professionelle WLAN- und LAN-Infrastruktur mit Ubiquiti Unifi: Access Points für lückenlose Abdeckung, Managed Switches, Security Gateways mit IDS/IPS, VLANs für Gerätesegmentierung, VPN-Fernzugriff und zentrales Netzwerk-Monitoring. Für Heim, Büro und Gewerbe.</p>
           </article>
           <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-vault text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-            <h3 class="text-xl font-bold mb-4">IT-Sicherheit & Backup</h3>
-            <p class="text-meg-text-secondary text-sm">Implementierung von Multi-Faktor-Authentifizierung (MFA), Firewall-Management und automatisierten Offsite-Backups.</p>
+            <h3 class="text-xl font-bold mb-3">NAS & Backup-Strategie</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Einrichtung von NAS-Systemen (Synology, QNAP, TrueNAS) mit ZFS oder Btrfs für maximale Datensicherheit. Automatisierte Backup-Konzepte nach der 3-2-1-Regel: lokale Kopie, zweites Medium und verschlüsseltes Offsite-Backup. Niemals wieder Datenverlust.</p>
           </article>
           <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
-            <i class="fa-solid fa-microchip text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-            <h3 class="text-xl font-bold mb-4">System-Administration</h3>
-            <p class="text-meg-text-secondary text-sm">Zentrale Verwaltung Ihrer Windows-, macOS- und Linux-Flotte. Patch-Management und Software-Verteilung aus der Ferne.</p>
+            <i class="fa-solid fa-server text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">On-Premise Server & Self-Hosting</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Eigene Server für maximale Datensouveränität: Proxmox-Virtualisierung, Active Directory & LDAP, File-Server, und eine breite Palette an Self-Hosted-Diensten (Nextcloud, Gitea, Immich, Jellyfin, Vaultwarden u.v.m.) – alles in Ihrem Netzwerk, unter Ihrer Kontrolle.</p>
           </article>
           <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
-            <i class="fa-solid fa-headset text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
-            <h3 class="text-xl font-bold mb-4">Priority Remote Support</h3>
-            <p class="text-meg-text-secondary text-sm">Schnelle Hilfe per Fernwartung. Kurze Wege, keine Anfahrtskosten und garantierte Reaktionszeiten für Ihre Mitarbeiter.</p>
+            <i class="fa-brands fa-microsoft text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">Microsoft 365 & Cloud</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Microsoft 365 Setup, Lizenzberatung und Migration von bestehenden Systemen: Exchange Online, Teams, SharePoint, OneDrive und Entra ID (Azure AD). Inklusive Security-Härtung: MFA, Conditional Access, DLP-Policies und Compliance-Einstellungen für DSGVO-konforme Nutzung.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            <h3 class="text-xl font-bold mb-3">IT-Sicherheit & Endpoint</h3>
+            <p class="text-meg-text-secondary text-sm leading-relaxed">Ganzheitliche Absicherung Ihrer IT: Firewall-Konfiguration (pfSense, OPNsense, Unifi), Endpoint-Security, automatisiertes Patch-Management, MFA-Rollout und regelmäßige Security-Audits. Aktiver Schutz vor Ransomware, Phishing und unbefugtem Zugriff auf allen Plattformen.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Remote-First Vorteil -->
-    <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10">
+    <!-- Custom PC Deep-Dive -->
+    <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="pc-types-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="pc-types-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
+            <i class="fa-solid fa-computer mr-2" aria-hidden="true"></i>
+            Custom PC-Konfigurationen
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Der richtige PC für <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">jeden Einsatzzweck</span>
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Kein Stangenschnitt. Ich konfiguriere Ihren PC präzise nach Anforderung, Budget und gewünschtem Betriebssystem.
+          </p>
+        </header>
+        <div class="grid md:grid-cols-2 gap-8">
+          {pcTypes.map((pc) => (
+            <article class={`bg-meg-surface-dark/50 border ${pc.borderColor} rounded-2xl p-8 transition-all group`}>
+              <div class="flex items-start gap-5 mb-6">
+                <div class={`size-14 ${pc.iconBg} border border-current/20 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                  <i class={`fa-solid ${pc.icon} ${pc.color} text-2xl`} aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-meg-text-primary-dark">{pc.title}</h3>
+                  <p class="text-meg-text-secondary text-sm mt-1 leading-relaxed">{pc.desc}</p>
+                </div>
+              </div>
+              <ul class="space-y-2 border-t border-meg-border-dark pt-6">
+                {pc.specs.map((spec) => (
+                  <li class="flex items-start gap-3 text-meg-text-secondary text-sm">
+                    <i class={`fa-solid fa-check ${pc.color} mt-0.5 flex-shrink-0`} aria-hidden="true"></i>
+                    {spec}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Betriebssysteme & Linux-Distros -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="os-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="os-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
+            <i class="fa-brands fa-linux mr-2" aria-hidden="true"></i>
+            Betriebssysteme & Plattformen
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Windows, macOS & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">Linux – jede Distro</span>
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Von der Windows-Domain im Firmennetz über macOS-Geräteflotten bis zu spezialisierten Linux-Distributionen für Gaming und Server – ich kenne alle drei Welten.
+          </p>
+        </header>
+
+        <!-- Windows & macOS -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+          <article class="bg-meg-surface-dark/50 border border-blue-500/20 hover:border-blue-500/40 rounded-2xl p-8 transition-all">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="size-14 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-windows text-blue-400 text-2xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-meg-text-primary-dark">Windows 10 / 11</h3>
+                <span class="text-blue-400 text-sm font-bold">Business & Enterprise</span>
+              </div>
+            </div>
+            <ul class="space-y-2">
+              {[
+                'Active Directory & Gruppenrichtlinien (GPOs)',
+                'Microsoft Intune MDM für Remote-Geräteverwaltung',
+                'Windows Server (2019/2022) – DNS, DHCP, AD DS',
+                'Hyper-V-Virtualisierung & WSUS-Updateverwaltung',
+                'BitLocker-Verschlüsselung & Security-Baseline',
+                'Microsoft 365 Business Premium Deployment'
+              ].map((item) => (
+                <li class="flex items-start gap-3 text-meg-text-secondary text-sm">
+                  <i class="fa-solid fa-check text-blue-400 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article class="bg-meg-surface-dark/50 border border-gray-500/20 hover:border-gray-400/40 rounded-2xl p-8 transition-all">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="size-14 bg-gray-500/10 border border-gray-500/20 rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-apple text-gray-300 text-2xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-meg-text-primary-dark">macOS (Ventura – Sequoia)</h3>
+                <span class="text-gray-300 text-sm font-bold">Apple Silicon & Intel</span>
+              </div>
+            </div>
+            <ul class="space-y-2">
+              {[
+                'Setup & Migration neuer Macs (M1/M2/M3/M4)',
+                'Time Machine & Carbon Copy Cloner Backups',
+                'MDM-Verwaltung mit Jamf / Apple Business Manager',
+                'Integration in Windows-Netzwerke (AD, SMB, VPN)',
+                'Homebrew-Paketmanagement & Entwicklersetup',
+                'iCloud, Apple ID & Business-Konfiguration'
+              ].map((item) => (
+                <li class="flex items-start gap-3 text-meg-text-secondary text-sm">
+                  <i class="fa-solid fa-check text-gray-300 mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+
+        <!-- Linux Distros Grid -->
+        <div class="bg-meg-surface-dark/30 border border-emerald-500/20 rounded-3xl p-8">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="size-10 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+              <i class="fa-brands fa-linux text-emerald-400 text-xl" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-meg-text-primary-dark">Linux – Desktop, Gaming & Server</h3>
+              <p class="text-meg-text-secondary text-sm">Von der Mainstream-Distro bis zum Performance-optimierten Gaming-System</p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {linuxDistros.map((distro) => (
+              <div class="bg-meg-bg-dark/50 border border-meg-border-dark rounded-xl p-5 hover:border-emerald-500/30 transition-all">
+                <div class="flex items-center justify-between mb-3">
+                  <h4 class="font-bold text-meg-text-primary-dark">{distro.name}</h4>
+                  <span class={`text-xs font-bold px-2 py-1 rounded-full border ${distro.badgeColor}`}>{distro.badge}</span>
+                </div>
+                <p class="text-meg-text-secondary text-xs leading-relaxed">{distro.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2 border-t border-meg-border-dark pt-6">
+            <span class="text-xs text-meg-text-secondary font-bold uppercase tracking-widest mr-2">Auch verfügbar:</span>
+            {['Pop!_OS', 'Linux Mint', 'openSUSE Tumbleweed', 'Manjaro', 'EndeavourOS', 'NixOS', 'Rocky Linux', 'AlmaLinux'].map((d) => (
+              <span class="text-xs px-3 py-1 bg-meg-surface-dark/80 border border-meg-border-dark rounded-full text-meg-text-secondary">{d}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Self-Hosted Dienste -->
+    <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="selfhosted-heading">
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-2xl text-center mb-16">
+          <h2 id="selfhosted-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
+            <i class="fa-solid fa-server mr-2" aria-hidden="true"></i>
+            On-Premise & Self-Hosting
+          </h2>
+          <p class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+            Ihre eigene <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-meg-accent">Cloud – bei Ihnen zu Hause</span>
+          </p>
+          <p class="text-xl text-meg-text-secondary">
+            Mit einem Home-Server auf Proxmox-Basis hosten Sie Dutzende Dienste selbst – DSGVO-konform, ohne monatliche Abogebühren und vollständig unter Ihrer Kontrolle.
+          </p>
+        </header>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {selfHostedServices.map((svc) => (
+            <div class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-xl p-5 hover:border-emerald-500/30 transition-all group flex flex-col gap-3">
+              <div class="size-10 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class={`fa-solid ${svc.icon} text-emerald-400 text-sm`} aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-meg-text-primary-dark text-sm">{svc.name}</h3>
+                <p class="text-meg-text-secondary text-xs mt-1 leading-relaxed">{svc.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="mt-10 text-center">
+          <div class="inline-flex items-center gap-3 px-5 py-3 bg-meg-surface-dark/50 border border-emerald-500/20 rounded-2xl">
+            <i class="fa-solid fa-circle-info text-emerald-400" aria-hidden="true"></i>
+            <p class="text-meg-text-secondary text-sm">
+              <span class="text-meg-text-primary-dark font-bold">Proxmox VE</span> als Basis ermöglicht alle Dienste parallel – sauber getrennt in LXC-Containern oder VMs, mit automatischen Snapshots und Backups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unifi Netzwerk Deep-Dive -->
+    <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="unifi-heading">
       <div class="mx-auto max-w-7xl">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-3xl font-bold mb-6">Digitale Effizienz durch <span class="text-emerald-400">Remote-Service</span></h2>
-            <p class="text-meg-text-secondary mb-8">
-              Warum auf den Techniker warten, wenn das Problem in Minuten gelöst sein kann? Mein Remote-First-Ansatz ist der Standard für moderne Unternehmen.
+            <span class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4 block">
+              <i class="fa-solid fa-wifi mr-2" aria-hidden="true"></i>
+              Netzwerk-Expertise
+            </span>
+            <h2 id="unifi-heading" class="text-3xl font-bold mb-6">
+              Professionelles <span class="text-emerald-400">Unifi-Netzwerk</span> – für Heim & Büro
+            </h2>
+            <p class="text-meg-text-secondary mb-8 text-lg leading-relaxed">
+              Consumer-Router stoßen schnell an Grenzen: schlechte WLAN-Abdeckung, keine Gerätesegmentierung, unübersichtliches Management. Ein durchdachtes Unifi-Setup löst das dauerhaft.
             </p>
             <dl class="space-y-6">
-              <div class="flex gap-4">
-                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <i class="fa-solid fa-gauge-high"></i>
-                </dt>
-                <dd>
-                  <strong class="text-meg-text-primary-dark block">Höchste Geschwindigkeit</strong>
-                  <span class="text-meg-text-secondary text-sm">Sofortiger Start der Fehlerbehebung per gesicherter Fernwartung.</span>
-                </dd>
-              </div>
-              <div class="flex gap-4">
-                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <i class="fa-solid fa-euro-sign"></i>
-                </dt>
-                <dd>
-                  <strong class="text-meg-text-primary-dark block">Keine Anfahrtskosten</strong>
-                  <span class="text-meg-text-secondary text-sm">Transparente Abrechnung ohne versteckte Nebenkosten für Augsburg/München.</span>
-                </dd>
-              </div>
-              <div class="flex gap-4">
-                <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
-                  <i class="fa-solid fa-network-wired"></i>
-                </dt>
-                <dd>
-                  <strong class="text-meg-text-primary-dark block">Partner-Netzwerk</strong>
-                  <span class="text-meg-text-secondary text-sm">Für Hardware-Rollouts und Vor-Ort-Verkabelung greife ich auf ein lokales Experten-Netzwerk zu.</span>
-                </dd>
-              </div>
+              {[
+                { icon: 'fa-wifi', title: 'WLAN Access Points & Roaming', desc: 'Lückenlose Abdeckung auf allen Etagen und im Außenbereich. Nahtloses Roaming – kein Verbindungsabbruch beim Bewegen im Gebäude.' },
+                { icon: 'fa-sitemap', title: 'VLANs: IoT, Gäste & Büro sauber getrennt', desc: 'Smart-Home-Geräte, Gäste-WLAN und Ihre PCs kommunizieren nie direkt miteinander. Volle Netzwerkkontrolle ohne Aufwand.' },
+                { icon: 'fa-shield-halved', title: 'Security Gateway, IDS/IPS & VPN', desc: 'Threat-Management mit Intrusion-Detection, Geo-IP-Blocking und sicherer WireGuard/OpenVPN-Fernzugriff auf Ihr Heimnetz.' },
+                { icon: 'fa-chart-bar', title: 'Zentrales Monitoring & Alerts', desc: 'Alle Clients, Traffic-Statistiken, Uptime und Alerts in einer einzigen Konsole – Web oder App. Probleme erkennen, bevor sie stören.' }
+              ].map((item) => (
+                <div class="flex gap-4">
+                  <dt class="size-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 flex-shrink-0">
+                    <i class={`fa-solid ${item.icon}`} aria-hidden="true"></i>
+                  </dt>
+                  <dd>
+                    <strong class="text-meg-text-primary-dark block">{item.title}</strong>
+                    <span class="text-meg-text-secondary text-sm">{item.desc}</span>
+                  </dd>
+                </div>
+              ))}
             </dl>
           </div>
           <div class="relative group">
-            <div class="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
-            <video src="/videos/video_cloud-security.mp4" poster="/videos/video_cloud-security-poster.webp" loop muted playsinline autoplay class="relative rounded-2xl w-full border border-meg-border-dark shadow-2xl"></video>
+            <div class="absolute -inset-4 bg-emerald-500/10 rounded-3xl blur-2xl group-hover:bg-emerald-500/20 transition-all" aria-hidden="true"></div>
+            <video src="/videos/video_cloud-security.mp4" poster="/videos/video_cloud-security-poster.webp" loop muted playsinline autoplay class="relative rounded-2xl w-full border border-meg-border-dark shadow-2xl" aria-label="IT-Infrastruktur und Netzwerksicherheit im Überblick"></video>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 px-6" aria-labelledby="it-faq-heading">
+    <section class="py-24 px-6 border-t border-meg-border-dark" aria-labelledby="it-faq-heading">
       <div class="mx-auto max-w-4xl">
         <header class="text-center mb-12">
-          <h2 id="it-faq-heading" class="text-3xl font-bold">Häufige Fragen zum <span class="text-emerald-400">IT-Support</span></h2>
+          <h2 id="it-faq-heading" class="text-3xl font-bold">Häufige Fragen zum <span class="text-emerald-400">IT-Service</span></h2>
         </header>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (
@@ -183,10 +480,10 @@ const faqSchema = SchemaUtils.getFAQSchema([
               <summary class="flex justify-between items-center font-bold text-meg-text-primary-dark list-none">
                 {faq.name}
                 <span class="text-emerald-400 group-open:rotate-180 transition-transform">
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </span>
               </summary>
-              <p class="mt-4 text-meg-text-secondary leading-relaxed border-t border-meg-border-dark pt-4 italic">
+              <p class="mt-4 text-meg-text-secondary leading-relaxed border-t border-meg-border-dark pt-4">
                 {faq.acceptedAnswer.text}
               </p>
             </details>
