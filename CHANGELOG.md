@@ -1,3 +1,10 @@
+## [26.11.3](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.2...26.11.3) (2026-06-09)
+
+
+### Bug Fixes
+
+* update Suite demo URL from portal.waldheim.dev to suite.waldheim.dev ([9bcd2ce](https://github.com/Waldheim-dev/waldheim-homepage/commit/9bcd2ce8ac7112cd9a4807ee152ef8ca30ddd929))
+
 ## [26.11.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.1...26.11.2) (2026-06-09)
 
 
