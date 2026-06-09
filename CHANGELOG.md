@@ -1,3 +1,10 @@
+## [26.11.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.1...26.11.2) (2026-06-09)
+
+
+### Bug Fixes
+
+* align prod port wd-web 8105→8084 ([55ac2c9](https://github.com/Waldheim-dev/waldheim-homepage/commit/55ac2c991031a7da173e8b6288ff6db06801325d))
+
 ## [26.11.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.0...26.11.1) (2026-06-03)
 
 
