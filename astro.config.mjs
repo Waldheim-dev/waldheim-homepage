@@ -67,27 +67,6 @@ export default defineConfig({
         return item;
       }
     }),
-    llmsTxt({
-      site: 'https://www.waldheim.dev',
-  i18n: {
-    defaultLocale: 'de',
-    locales: ['de', 'en'],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-    fallback: {
-      en: 'de',
-    },
-  },
-      projectName: 'waldheim.dev',
-      description: 'Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation. Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.',
-      sectionTitle: 'Seitenübersicht',
-      aiProvider: 'gemini',
-      aiModel: 'gemini-2.5-flash',
-      aiApiKey: process.env.GEMINI_API_KEY,
-      llmsFull: true,
-      debug: true
-    }),
     compress(),
     compressor({ gzip: true }),
     partytown({
