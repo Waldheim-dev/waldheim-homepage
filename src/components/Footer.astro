@@ -82,29 +82,75 @@ try {
         </div>
       </div>
 
-      <!-- Footer Nav Grid -->
-      <div class="grid grid-cols-2 gap-12 md:grid-cols-3 lg:grid-cols-5 border-t border-meg-border-dark/50 pt-12">
+      <!-- Footer Nav Grid: Suite-Card (col-span-2) + 4 reguläre Spalten -->
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6 border-t border-meg-border-dark/50 pt-12">
+
+        <!-- Waldheim Suite – Featured Hero-Card (2 Spalten) -->
+        <div class="col-span-2 lg:col-span-2">
+          <a href="/suite/" class="group relative flex flex-col justify-between h-full min-h-[280px] rounded-2xl p-6 bg-gradient-to-b from-meg-accent/10 to-meg-bg-dark border border-meg-accent/20 hover:border-meg-accent/50 transition-all duration-300 overflow-hidden">
+            <div class="absolute -inset-1 bg-meg-accent/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" aria-hidden="true"></div>
+
+            <!-- Header -->
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="size-11 flex items-center justify-center rounded-xl bg-meg-accent/15 border border-meg-accent/30 text-meg-accent group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
+                </div>
+                <span class="text-[9px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-2 py-1 rounded-full">SaaS Suite</span>
+              </div>
+              <p class="text-lg font-black text-meg-text-primary-dark tracking-tight mb-1">Waldheim Suite</p>
+              <p class="text-[11px] font-bold text-meg-accent mb-3">Business-Plattform. Alles integriert.</p>
+            </div>
+
+            <!-- Module-Grid -->
+            <div class="grid grid-cols-2 gap-x-4 gap-y-2 my-4">
+              {[
+                { href: '/suite/portal/',      label: 'CustomerPortal' },
+                { href: '/suite/socialverse/', label: 'Socialverse CRM' },
+                { href: '/suite/forge/',       label: 'Silvacore ERP' },
+                { href: '/suite/aether/',      label: 'Aether KI' },
+                { href: '/suite/ecodrive/',    label: 'Ecodrive' },
+                { href: '/suite/treasury/',    label: 'Treasury' },
+                { href: '/suite/properties/',  label: 'Properties' },
+                { href: '/suite/relay/',       label: 'Relay' },
+                { href: '/suite/conductor/',   label: 'Conductor' },
+                { href: '/suite/preise/',      label: '→ Preise' },
+              ].map(m => (
+                <span class="text-[11px] text-slate-400 hover:text-meg-accent transition-colors truncate">{m.label}</span>
+              ))}
+            </div>
+
+            <!-- Tags + CTA -->
+            <div class="flex items-center justify-between mt-2">
+              <div class="flex flex-wrap gap-1">
+                {['CRM', 'ERP', 'Portal', 'Finance'].map(tag => (
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-meg-surface-dark border border-meg-border-dark text-slate-400">{tag}</span>
+                ))}
+              </div>
+              <span class="flex items-center gap-1 text-[11px] font-bold text-meg-accent group-hover:gap-2 transition-all">
+                Zur Suite <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- IT-Consulting -->
         <div>
           <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">IT-Consulting</h3>
           <ul class="space-y-4">
-            <li><a href="/services/devsecops/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">DevSecOps</a></li>
-            <li><a href="/services/entwicklung/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Entwicklung</a></li>
-            <li><a href="/services/design/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">UI/UX Design</a></li>
-            <li><a href="/services/it-service/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Service</a></li>
+            <li><a href="/services/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Alle Services</a></li>
+            <li><a href="/services/entwicklung/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Custom Software</a></li>
+            <li><a href="/services/devsecops/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">DevSecOps & Cloud</a></li>
+            <li><a href="/services/it-service/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Service & Infra</a></li>
+            <li><a href="/services/smarthome/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Smart Home & KNX</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">SaaS Suite</h3>
-          <ul class="space-y-4">
-            <li><a href="/suite/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Übersicht</a></li>
-            <li><a href="/suite/socialverse/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Socialverse CRM</a></li>
-            <li><a href="/suite/forge/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Forge ERP</a></li>
-            <li><a href="/suite/preise/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Preise</a></li>
-          </ul>
-        </div>
+
+        <!-- Open Source (semrel prominent) -->
         <div>
           <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Open Source</h3>
           <ul class="space-y-4">
+            <li><a href="/semrel/" class="text-sm font-bold text-sky-400 hover:text-sky-300 transition-colors">semrel</a></li>
             <li><a href="/waetherapp/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">WetterApp</a></li>
             <li><a href="/amigo/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Amigo Framework</a></li>
             <li><a href="/obsidian-gemini-agent/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Obsidian Plugin</a></li>
@@ -112,24 +158,30 @@ try {
             <li><a href="/astro-ai-llms-txt/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">llms.txt Plugin</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Firma</h3>
-          <ul class="space-y-4">
-            <li><a href="/ueber-mich/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Über mich</a></li>
-            <li><a href="/blog/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Blog</a></li>
-            <li><a href="/referenzen/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Referenzen</a></li>
-            <li><a href="/kontakt/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors font-bold">Kontakt</a></li>
-          </ul>
+
+        <!-- Firma + Rechtliches kombiniert -->
+        <div class="col-span-2 lg:col-span-2 grid grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Firma</h3>
+            <ul class="space-y-4">
+              <li><a href="/ueber-mich/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Über mich</a></li>
+              <li><a href="/blog/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Blog</a></li>
+              <li><a href="/referenzen/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Referenzen</a></li>
+              <li><a href="/kontakt/" class="text-sm font-bold text-meg-text-secondary hover:text-meg-accent transition-colors">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Rechtliches</h3>
+            <ul class="space-y-4">
+              <li><a href="/impressum/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Impressum</a></li>
+              <li><a href="/datenschutz/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Datenschutz</a></li>
+              <li><a href="/agb/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">AGB</a></li>
+              <li><a href="/widerrufsbelehrung/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Widerrufsbelehrung</a></li>
+              <li><button type="button" data-cc="show-preferencesModal" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Cookies</button></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">Rechtliches</h3>
-          <ul class="space-y-4">
-            <li><a href="/impressum/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Impressum</a></li>
-            <li><a href="/datenschutz/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Datenschutz</a></li>
-            <li><a href="/agb/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">AGB</a></li>
-            <li><button type="button" data-cc="show-preferencesModal" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Cookies</button></li>
-          </ul>
-        </div>
+
       </div>
     </div>
 

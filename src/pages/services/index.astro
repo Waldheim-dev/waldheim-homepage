@@ -10,41 +10,109 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   link: Astro.url.href
 }]);
 
-const titel = 'Services & IT-Dienstleistungen | Waldheim.dev';
-const description = 'Entdecken Sie unsere Services: DevSecOps, Webentwicklung, Design, IT-Service und Smart Home. Professionelle Lösungen für Ihren digitalen Erfolg.';
+const titel = 'IT-Services Augsburg & München | Custom Software, IT-Infrastruktur, Smart Home | Waldheim.dev';
+const description = 'Professionelle IT-Dienstleistungen: Custom Software-Entwicklung, DevSecOps, ganzheitlicher IT-Service (Netzwerk, NAS, Cloud, Microsoft 365) und KNX-Smart-Home-Automation in Augsburg & München.';
+const keywords = 'IT Services Augsburg, Custom Software Bayern, IT Infrastruktur München, Smart Home KNX Augsburg, DevSecOps Beratung, Unifi Netzwerk, Microsoft 365 Beratung';
+
+const services = [
+  {
+    name: 'Custom Software',
+    href: '/services/entwicklung/',
+    icon: 'fa-code',
+    color: 'text-meg-accent',
+    borderHover: 'hover:border-meg-accent/40',
+    desc: 'Maßgeschneiderte Web-Apps, SaaS-Plattformen und Business-Software. Ihr Produkt, präzise auf Ihre Prozesse zugeschnitten.'
+  },
+  {
+    name: 'DevSecOps & Cloud',
+    href: '/services/devsecops/',
+    icon: 'fa-shield-halved',
+    color: 'text-violet-400',
+    borderHover: 'hover:border-violet-500/40',
+    desc: 'CI/CD-Pipelines, Kubernetes, Terraform und Cloud-Infrastruktur für sichere, schnelle Software-Releases.'
+  },
+  {
+    name: 'IT-Service & Infrastruktur',
+    href: '/services/it-service/',
+    icon: 'fa-desktop',
+    color: 'text-emerald-400',
+    borderHover: 'hover:border-emerald-500/40',
+    desc: 'Custom PCs, Unifi-Netzwerke, NAS, Backup, Microsoft 365 und On-Premise – für Windows, macOS & Linux.'
+  },
+  {
+    name: 'Smart Home & KNX',
+    href: '/services/smarthome/',
+    icon: 'fa-house',
+    color: 'text-orange-400',
+    borderHover: 'hover:border-orange-500/40',
+    desc: 'KNX-Gebäudeautomation, Rollladensteuerung, Fußbodenheizung und AI-Kamerasicherheit.'
+  }
+];
 ---
 
-<Layout title={titel} description={description} schema={[breadCrumbSchema]}>
-  <div class="px-6 py-32 lg:px-8 bg-meg-bg-dark">
-    <div class="mx-auto max-w-3xl text-center">
-      <h1 class="text-4xl font-black tracking-tighter sm:text-6xl text-meg-text-primary-dark">Meine Services</h1>
-      <p class="mt-6 text-lg leading-8 text-meg-text-secondary">
-        Ich biete Ihnen ein breites Spektrum an IT-Dienstleistungen, um Ihr Unternehmen digital voranzubringen.
-      </p>
-    </div>
-    
-    <div class="mx-auto max-w-7xl mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        { name: 'Entwicklung', href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent' },
-        { name: 'Design / UX', href: '/services/design/', icon: 'fa-pen-ruler', color: 'text-rose-400' },
-        { name: 'IT-Service', href: '/services/it-service/', icon: 'fa-cloud', color: 'text-emerald-400' },
-        { name: 'DevSecOps', href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400' },
-        { name: 'Smarthome', href: '/services/smarthome/', icon: 'fa-house', color: 'text-sky-400' }
-      ].map((service) => (
-        <a href={service.href} class="group relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-8 rounded-2xl hover:border-meg-accent/30 transition-all">
-          <div class={`size-12 rounded-xl bg-meg-bg-dark border border-meg-border-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-            <i class={`fa-solid ${service.icon} ${service.color} text-xl`}></i>
-          </div>
-          <h2 class="text-xl font-bold text-meg-text-primary-dark mb-4">{service.name}</h2>
-          <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-            Professionelle Unterstützung und Beratung im Bereich {service.name.toLowerCase()}.
-          </p>
-          <span class="text-meg-accent text-sm font-bold flex items-center gap-2">
-            Mehr erfahren
-            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-          </span>
+<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="px-6 py-32 lg:px-8 bg-meg-bg-dark border-b border-meg-border-dark">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark/50 border border-meg-border-dark text-sm font-bold text-meg-text-primary-dark mb-8">
+          <i class="fa-solid fa-briefcase text-meg-accent" aria-hidden="true"></i>
+          IT-Dienstleistungen aus einer Hand
+        </span>
+        <h1 class="text-4xl font-black tracking-tighter sm:text-6xl text-meg-text-primary-dark mt-4">
+          Services & <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">IT-Lösungen</span>
+        </h1>
+        <p class="mt-6 text-xl leading-8 text-meg-text-secondary max-w-2xl mx-auto">
+          Von der maßgeschneiderten Software über sichere IT-Infrastruktur bis zur professionellen Gebäudeautomation – alles aus einer Hand, in Augsburg und München.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="px-6 py-24 bg-meg-bg-dark" aria-labelledby="services-grid-heading">
+      <h2 id="services-grid-heading" class="sr-only">Alle Services im Überblick</h2>
+      <div class="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {services.map((service) => (
+          <a
+            href={service.href}
+            class={`group relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-8 rounded-2xl ${service.borderHover} transition-all duration-300 hover:shadow-xl`}
+          >
+            <div class="size-14 rounded-xl bg-meg-bg-dark border border-meg-border-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class={`fa-solid ${service.icon} ${service.color} text-2xl`} aria-hidden="true"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-meg-text-primary-dark mb-3">{service.name}</h2>
+            <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+              {service.desc}
+            </p>
+            <span class={`${service.color} text-sm font-bold flex items-center gap-2 group-hover:gap-4 transition-all`}>
+              Mehr erfahren
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-6 py-24 bg-meg-surface-dark/20 border-t border-meg-border-dark">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-black tracking-tight text-meg-text-primary-dark mb-4">
+          Nicht sicher, welcher Service passt?
+        </h2>
+        <p class="text-meg-text-secondary text-lg mb-8">
+          In einem kurzen kostenlosen Erstgespräch finden wir gemeinsam die optimale Lösung für Ihre Anforderungen.
+        </p>
+        <a
+          href="https://calendly.com/markus-waldheim/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-meg-accent text-white font-bold text-lg rounded-xl hover:shadow-xl hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300"
+        >
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+          Kostenloses Erstgespräch buchen
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
-      ))}
-    </div>
-  </div>
+      </div>
+    </section>
+  </main>
 </Layout>
