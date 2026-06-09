@@ -9,43 +9,35 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
-    key: 'devsecops',
-    title: 'Effiziente Entwicklung / DevSecOps',
-    href: '/services/devsecops/',
-    icon: 'fa-solid fa-rotate',
-    description: 'Optimierung Ihrer Entwicklungsprozesse durch CI/CD, Containerisierung und integrierte Sicherheit.',
-    color: 'purple'
-  },
-  {
     key: 'entwicklung',
-    title: 'Softwareentwicklung',
+    title: 'Custom Software',
     href: '/services/entwicklung/',
     icon: 'fa-solid fa-code',
-    description: 'Individuelle Webseiten, Plugins und maßgeschneiderte Softwarelösungen für Ihre Anforderungen.',
+    description: 'Maßgeschneiderte Software als fertiges Produkt – von der Web-App bis zur Enterprise-Plattform. Zukunftssicher, skalierbar, ganz auf Ihre Prozesse zugeschnitten.',
     color: 'blue'
   },
   {
-    key: 'design',
-    title: 'Design / UX',
-    href: '/services/design/',
-    icon: 'fa-solid fa-palette',
-    description: 'Kreatives Webdesign, Branding und UX/UI-Design für digitale Produkte und Printmedien.',
-    color: 'pink'
+    key: 'devsecops',
+    title: 'DevSecOps & Cloud',
+    href: '/services/devsecops/',
+    icon: 'fa-solid fa-shield-halved',
+    description: 'Sichere CI/CD-Pipelines, Kubernetes-Cluster, GitOps und Cloud-Infrastruktur für schnellere und zuverlässigere Software-Releases.',
+    color: 'purple'
   },
   {
     key: 'it-service',
-    title: 'IT-Service',
+    title: 'IT-Service & Infrastruktur',
     href: '/services/it-service/',
     icon: 'fa-solid fa-desktop',
-    description: 'Zuverlässiger IT-Support, Netzwerktechnik und Systemadministration für Ihr Unternehmen.',
+    description: 'Custom PCs & Workstations, Unifi-Netzwerke, NAS, Backup, Microsoft 365 und On-Premise-Dienste – komplett aus einer Hand für Windows, macOS & Linux.',
     color: 'green'
   },
   {
     key: 'smarthome',
-    title: 'Smarthome',
+    title: 'Smart Home & KNX',
     href: '/services/smarthome/',
     icon: 'fa-solid fa-house',
-    description: 'Unabhängige Beratung und Planung für Ihr intelligentes, sicheres Zuhause ohne Herstellerbindung.',
+    description: 'KNX-Gebäudeautomation, intelligente Aktoren (Rollo, Heizung, Licht), AI-Kameras und vollständige Haussteuerung – Profitechnik für anspruchsvolle Gebäude.',
     color: 'orange'
   }
 ];

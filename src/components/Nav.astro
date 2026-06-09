@@ -13,7 +13,6 @@ const astroAi = getProductInfo('astro-ai-llms-txt')!;
 
 const devsecopsColors = getServiceColors('devsecops');
 const entwicklungColors = getServiceColors('entwicklung');
-const designColors = getServiceColors('design');
 const itServiceColors = getServiceColors('it-service');
 ---
 
@@ -38,34 +37,62 @@ const itServiceColors = getServiceColors('it-service');
           <span>Suite</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-2xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-5xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
-              <a href="/suite/" class="group relative flex gap-x-6 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-accent/20">
-                <div class="size-11 flex-none flex items-center justify-center rounded-lg bg-meg-accent/10 border border-meg-accent/30 group-hover:bg-meg-accent/20 transition-all">
-                  <i class="fa-solid fa-table-cells-large text-xl text-meg-accent"></i>
-                </div>
+            <div class="flex gap-4">
+
+              <!-- Waldheim Suite – prominente Hero-Card links -->
+              <a href="/suite/" class="group relative flex flex-col justify-between flex-shrink-0 w-56 rounded-2xl p-5 bg-gradient-to-b from-meg-accent/10 to-meg-bg-dark border border-meg-accent/20 hover:border-meg-accent/50 transition-all duration-300 overflow-hidden">
+                <div class="absolute -inset-1 bg-meg-accent/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" aria-hidden="true"></div>
                 <div>
-                  <span class="font-bold text-meg-text-primary-dark">Waldheim Suite</span>
-                  <p class="mt-1 text-xs text-slate-400">Zentrale Plattform für alle Business-Prozesse.</p>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="size-11 flex items-center justify-center rounded-xl bg-meg-accent/15 border border-meg-accent/30 text-meg-accent group-hover:scale-110 transition-transform">
+                      <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-2 py-1 rounded-full">SaaS Suite</span>
+                  </div>
+                  <p class="text-xl font-black text-meg-text-primary-dark tracking-tight mb-1">Waldheim Suite</p>
+                  <p class="text-[11px] font-bold text-meg-accent mb-3">Business-Plattform.<br/>Alles integriert.</p>
+                  <p class="text-[11px] text-slate-400 leading-relaxed">CRM, ERP, Portal, Finanzen, Properties – eine Suite, vollständig vernetzt für Ihr Unternehmen.</p>
+                </div>
+                <div class="mt-5 flex flex-wrap gap-1">
+                  {['CRM', 'ERP', 'Portal', 'Finance'].map(tag => (
+                    <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-meg-surface-dark border border-meg-border-dark text-slate-400">{tag}</span>
+                  ))}
+                </div>
+                <div class="mt-4 flex items-center gap-1 text-[11px] font-bold text-meg-accent group-hover:gap-2 transition-all">
+                  Zur Suite <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i>
                 </div>
               </a>
-              <div class="mt-4 grid grid-cols-3 gap-1 px-2 border-t border-meg-border-dark/50 pt-4">
+
+              <!-- Module rechts: 3-Spalten-Grid mit Icon + Titel + Beschreibung -->
+              <div class="flex-1 grid grid-cols-3 gap-1.5 content-start">
                 {[
-                  { icon: 'fa-id-card', label: 'CustomerPortal', color: 'text-sky-400', href: '/suite/portal/' },
-                  { icon: 'fa-users-gear', label: 'Socialverse CRM', color: 'text-violet-400', href: '/suite/socialverse/' },
-                  { icon: 'fa-building-columns', label: 'Silvacore ERP', color: 'text-green-400', href: '/suite/forge/' },
-                  { icon: 'fa-atom', label: 'Aether', color: 'text-rose-400', href: '/suite/aether/' },
-                  { icon: 'fa-leaf', label: 'Ecodrive', color: 'text-emerald-400', href: '/suite/ecodrive/' },
-                  { icon: 'fa-coins', label: 'Treasury', color: 'text-yellow-400', href: '/suite/treasury/' },
-                  { icon: 'fa-building', label: 'Properties', color: 'text-orange-400', href: '/suite/properties/' },
-                  { icon: 'fa-tower-broadcast', label: 'Relay', color: 'text-cyan-400', href: '/suite/relay/' },
-                  { icon: 'fa-gears', label: 'Conductor', color: 'text-indigo-400', href: '/suite/conductor/' },
+                  { icon: 'fa-id-card',          color: 'text-sky-400',     bg: 'bg-sky-500/10',     href: '/suite/portal/',      label: 'CustomerPortal',  desc: 'Ihr digitales Kundenportal' },
+                  { icon: 'fa-users-gear',        color: 'text-violet-400',  bg: 'bg-violet-500/10',  href: '/suite/socialverse/', label: 'Socialverse CRM', desc: 'Kontakte, Sales & Kommunikation' },
+                  { icon: 'fa-building-columns',  color: 'text-green-400',   bg: 'bg-green-500/10',   href: '/suite/forge/',       label: 'Silvacore ERP',   desc: 'WEG-Verwaltung & Immobilien' },
+                  { icon: 'fa-atom',              color: 'text-rose-400',    bg: 'bg-rose-500/10',    href: '/suite/aether/',      label: 'Aether',          desc: 'KI-gestützte Automatisierung' },
+                  { icon: 'fa-leaf',              color: 'text-emerald-400', bg: 'bg-emerald-500/10', href: '/suite/ecodrive/',    label: 'Ecodrive',        desc: 'Nachhaltige Flottensteuerung' },
+                  { icon: 'fa-coins',             color: 'text-yellow-400',  bg: 'bg-yellow-500/10',  href: '/suite/treasury/',    label: 'Treasury',        desc: 'Finanzen & Buchhaltung' },
+                  { icon: 'fa-building',          color: 'text-orange-400',  bg: 'bg-orange-500/10',  href: '/suite/properties/',  label: 'Properties',      desc: 'Immobilien & Objektverwaltung' },
+                  { icon: 'fa-tower-broadcast',   color: 'text-cyan-400',    bg: 'bg-cyan-500/10',    href: '/suite/relay/',       label: 'Relay',           desc: 'Messaging & Benachrichtigungen' },
+                  { icon: 'fa-gears',             color: 'text-indigo-400',  bg: 'bg-indigo-500/10',  href: '/suite/conductor/',   label: 'Conductor',       desc: 'Workflow-Orchestrierung' },
                 ].map(mod => (
-                  <a href={mod.href} class="flex items-center gap-2 text-[11px] text-slate-400 hover:text-meg-text-primary-dark p-2 rounded-xl hover:bg-meg-bg-dark transition-all">
-                    <i class={`fa-solid ${mod.icon} ${mod.color} w-4 text-center`}></i> {mod.label}
+                  <a href={mod.href} class="group flex gap-x-3 rounded-xl p-3 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark">
+                    <div class={`size-10 flex-none flex items-center justify-center rounded-lg ${mod.bg} border border-current/10 ${mod.color} group-hover:scale-110 transition-transform`}>
+                      <i class={`fa-solid ${mod.icon}`} aria-hidden="true"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="block font-bold text-sm text-meg-text-primary-dark truncate">{mod.label}</span>
+                      <p class="text-[10px] text-slate-400 mt-0.5 leading-tight">{mod.desc}</p>
+                    </div>
                   </a>
                 ))}
+                <a href="/suite/preise/" class="group col-span-3 flex items-center justify-center gap-2 rounded-xl p-2 mt-1 border border-meg-border-dark/50 hover:border-meg-accent/30 hover:bg-meg-bg-dark transition-all text-[11px] font-bold text-slate-400 hover:text-meg-accent">
+                  <i class="fa-solid fa-tag text-xs" aria-hidden="true"></i> Suite-Preise ansehen
+                </a>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,10 +107,10 @@ const itServiceColors = getServiceColors('it-service');
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
             <div class="grid grid-cols-2 gap-2">
               {[
-                { href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400', bg: 'bg-violet-500/10', hover: 'hover:border-violet-500/20', title: 'DevSecOps', desc: 'Speed & Security' },
-                { href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent', bg: 'bg-meg-accent/10', hover: 'hover:border-meg-accent/20', title: 'Entwicklung', desc: 'Individualsoftware' },
-                { href: '/services/design/', icon: 'fa-palette', color: 'text-rose-400', bg: 'bg-rose-500/10', hover: 'hover:border-rose-500/20', title: 'UI/UX Design', desc: 'Conversion-Fokus' },
-                { href: '/services/it-service/', icon: 'fa-desktop', color: 'text-emerald-400', bg: 'bg-emerald-500/10', hover: 'hover:border-emerald-500/20', title: 'IT-Service', desc: 'Managed Support' }
+                { href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent', bg: 'bg-meg-accent/10', hover: 'hover:border-meg-accent/20', title: 'Custom Software', desc: 'Individualsoftware & SaaS' },
+                { href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400', bg: 'bg-violet-500/10', hover: 'hover:border-violet-500/20', title: 'DevSecOps & Cloud', desc: 'Pipelines & Infrastruktur' },
+                { href: '/services/it-service/', icon: 'fa-desktop', color: 'text-emerald-400', bg: 'bg-emerald-500/10', hover: 'hover:border-emerald-500/20', title: 'IT-Service & Infrastruktur', desc: 'PC, Netzwerk, NAS, M365' },
+                { href: '/services/smarthome/', icon: 'fa-house', color: 'text-orange-400', bg: 'bg-orange-500/10', hover: 'hover:border-orange-500/20', title: 'Smart Home & KNX', desc: 'Gebäudeautomation & Sicherheit' }
               ].map(s => (
                 <a href={s.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark shadow-sm hover:shadow-md">
                   <div class={`size-10 flex-none flex items-center justify-center rounded-lg ${s.bg} ${s.color} group-hover:scale-110 transition-transform`}>
@@ -106,27 +133,55 @@ const itServiceColors = getServiceColors('it-service');
           <span>Open Source</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-3xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
-            <div class="grid grid-cols-2 gap-2">
-              {[
-                { href: '/ausgabeschein-generator/', icon: 'fa-clipboard-list', color: 'text-emerald-400', title: 'Ausgabeschein', desc: 'Vereins-Tooling' },
-                { href: '/waetherapp/', icon: 'fa-cloud-sun', color: 'text-blue-400', title: 'WetterApp', desc: 'Multi-Source Daten' },
-                { href: '/amigo/', icon: 'fa-robot', color: 'text-amber-400', title: 'Amigo', desc: 'Agentic Framework' },
-                { href: '/obsidian-gemini-agent/', icon: 'fa-brain', color: 'text-indigo-400', title: 'Obsidian Agent', desc: 'AI Knowledge' },
-                { href: '/astro-ai-llms-txt/', icon: 'fa-wand-magic-sparkles', color: 'text-meg-accent', title: 'llms.txt', desc: 'Astro AI Plugin' },
-                { href: '/semrel/', icon: 'fa-code-branch', color: 'text-blue-400', title: 'semrel', desc: 'Semantic Releases' }
-              ].map(p => (
-                <a href={p.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark">
-                  <div class={`size-10 flex-none flex items-center justify-center rounded-lg bg-meg-surface-dark border border-meg-border-dark ${p.color} group-hover:scale-110 transition-transform`}>
-                    <i class={`fa-solid ${p.icon}`}></i>
+            <div class="flex gap-4">
+
+              <!-- semrel – prominente Hero-Card links -->
+              <a href="/semrel/" class="group relative flex flex-col justify-between flex-shrink-0 w-56 rounded-2xl p-5 bg-gradient-to-b from-blue-500/10 to-meg-bg-dark border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 overflow-hidden">
+                <!-- Ambient glow -->
+                <div class="absolute -inset-1 bg-blue-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" aria-hidden="true"></div>
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="size-11 flex items-center justify-center rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 group-hover:scale-110 transition-transform">
+                      <i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded-full">Apache 2.0</span>
                   </div>
-                  <div>
-                    <span class="block font-bold text-sm">{p.title}</span>
-                    <p class="text-[10px] text-slate-400 mt-1">{p.desc}</p>
-                  </div>
-                </a>
-              ))}
+                  <p class="text-xl font-black text-meg-text-primary-dark tracking-tight mb-1">semrel</p>
+                  <p class="text-[11px] font-bold text-blue-400 mb-3">Semantic Releases.<br/>Fully Automated.</p>
+                  <p class="text-[11px] text-slate-400 leading-relaxed">Go-basiertes Release-System mit Plugin-Architektur. Conventional Commits, Monorepo-Support, 30+ Plugins.</p>
+                </div>
+                <div class="mt-5 flex flex-wrap gap-1">
+                  {['Go', 'CI/CD', 'Plugins', 'GitHub'].map(tag => (
+                    <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-meg-surface-dark border border-meg-border-dark text-slate-400">{tag}</span>
+                  ))}
+                </div>
+                <div class="mt-4 flex items-center gap-1 text-[11px] font-bold text-blue-400 group-hover:gap-2 transition-all">
+                  Mehr erfahren <i class="fa-solid fa-arrow-right text-[9px]" aria-hidden="true"></i>
+                </div>
+              </a>
+
+              <!-- Restliche Projekte rechts im Grid -->
+              <div class="flex-1 grid grid-cols-2 gap-1.5 content-start">
+                {[
+                  { href: '/ausgabeschein-generator/', icon: 'fa-clipboard-list', color: 'text-emerald-400', title: 'Ausgabeschein', desc: 'Vereins-Tooling' },
+                  { href: '/waetherapp/', icon: 'fa-cloud-sun', color: 'text-blue-400', title: 'WetterApp', desc: 'Multi-Source Daten' },
+                  { href: '/amigo/', icon: 'fa-robot', color: 'text-amber-400', title: 'Amigo', desc: 'Agentic Framework' },
+                  { href: '/obsidian-gemini-agent/', icon: 'fa-brain', color: 'text-indigo-400', title: 'Obsidian Agent', desc: 'AI Knowledge' },
+                  { href: '/astro-ai-llms-txt/', icon: 'fa-wand-magic-sparkles', color: 'text-meg-accent', title: 'llms.txt', desc: 'Astro AI Plugin' },
+                ].map(p => (
+                  <a href={p.href} class="group flex gap-x-3 rounded-xl p-3 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark">
+                    <div class={`size-9 flex-none flex items-center justify-center rounded-lg bg-meg-surface-dark border border-meg-border-dark ${p.color} group-hover:scale-110 transition-transform`}>
+                      <i class={`fa-solid ${p.icon} text-sm`} aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-sm">{p.title}</span>
+                      <p class="text-[10px] text-slate-400 mt-0.5">{p.desc}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -181,10 +236,10 @@ const itServiceColors = getServiceColors('it-service');
               <i class="fa-solid fa-chevron-down transition-transform"></i>
             </button>
             <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-violet-500/20">
-              <a href="/services/devsecops/" class="block p-2 text-sm text-slate-400">DevSecOps & Automation</a>
-              <a href="/services/entwicklung/" class="block p-2 text-sm text-slate-400">Softwareentwicklung</a>
-              <a href="/services/design/" class="block p-2 text-sm text-slate-400">UI/UX Design</a>
-              <a href="/services/it-service/" class="block p-2 text-sm text-slate-400">Managed IT-Service</a>
+              <a href="/services/entwicklung/" class="block p-2 text-sm text-slate-400">Custom Software</a>
+              <a href="/services/devsecops/" class="block p-2 text-sm text-slate-400">DevSecOps & Cloud</a>
+              <a href="/services/it-service/" class="block p-2 text-sm text-slate-400">IT-Service & Infrastruktur</a>
+              <a href="/services/smarthome/" class="block p-2 text-sm text-slate-400">Smart Home & KNX</a>
             </div>
           </div>
 
@@ -194,13 +249,16 @@ const itServiceColors = getServiceColors('it-service');
               <span>Open Source</span>
               <i class="fa-solid fa-chevron-down transition-transform"></i>
             </button>
-            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-emerald-500/20">
+            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-blue-500/30">
+              <a href="/semrel/" class="flex items-center gap-2 p-2 text-sm font-bold text-blue-400">
+                <i class="fa-solid fa-code-branch text-xs" aria-hidden="true"></i>
+                semrel <span class="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20">Featured</span>
+              </a>
               <a href="/ausgabeschein-generator/" class="block p-2 text-sm text-slate-400">Ausgabeschein</a>
               <a href="/waetherapp/" class="block p-2 text-sm text-slate-400">WetterApp</a>
               <a href="/amigo/" class="block p-2 text-sm text-slate-400">Amigo Framework</a>
               <a href="/obsidian-gemini-agent/" class="block p-2 text-sm text-slate-400">Obsidian Agent</a>
               <a href="/astro-ai-llms-txt/" class="block p-2 text-sm text-slate-400">llms.txt Plugin</a>
-              <a href="/semrel/" class="block p-2 text-sm text-slate-400">semrel</a>
             </div>
           </div>
 

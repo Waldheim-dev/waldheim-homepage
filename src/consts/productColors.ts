@@ -233,7 +233,7 @@ export const SERVICE_COLORS: Record<string, ProductColors> = {
     hoverShadow: 'hover:shadow-lg hover:shadow-purple-500/20',
   },
   entwicklung: {
-    name: 'Softwareentwicklung',
+    name: 'Custom Software',
     primary: 'blue-400',
     secondary: 'cyan-500',
     glowColor: 'blue-500/50',
@@ -255,7 +255,7 @@ export const SERVICE_COLORS: Record<string, ProductColors> = {
     hoverShadow: 'hover:shadow-lg hover:shadow-pink-500/20',
   },
   'it-service': {
-    name: 'IT-Service',
+    name: 'IT-Service & Infrastruktur',
     primary: 'green-400',
     secondary: 'emerald-500',
     glowColor: 'green-500/50',
@@ -266,7 +266,7 @@ export const SERVICE_COLORS: Record<string, ProductColors> = {
     hoverShadow: 'hover:shadow-lg hover:shadow-green-500/20',
   },
   smarthome: {
-    name: 'Smarthome',
+    name: 'Smart Home & KNX',
     primary: 'orange-400',
     secondary: 'red-500',
     glowColor: 'orange-500/50',
