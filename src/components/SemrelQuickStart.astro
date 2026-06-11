@@ -34,9 +34,13 @@ semrel plugin install docker`,
   - name: next
     prerelease: true
 
+commit_changelog: false
+
 plugins:
   - uses: conventional    # Commit-Analyse
-  - uses: changelog-md    # CHANGELOG.md generieren
+  - uses: changelog-md     # Built-in Changelog-Entry
+  - uses: generator-release-notes
+    phase: generator       # Neu in v0.14.0
   - uses: github          # GitHub Release erstellen
   - uses: npm             # package.json bumpen
   - uses: slack           # Team benachrichtigen
@@ -78,9 +82,13 @@ semrel plugin install docker`,
   - name: next
     prerelease: true
 
+commit_changelog: false
+
 plugins:
   - uses: conventional    # Commit analysis
-  - uses: changelog-md    # Generate CHANGELOG.md
+  - uses: changelog-md     # Built-in changelog entry
+  - uses: generator-release-notes
+    phase: generator       # New in v0.14.0
   - uses: github          # Create GitHub release
   - uses: npm             # Bump package.json
   - uses: slack           # Notify team

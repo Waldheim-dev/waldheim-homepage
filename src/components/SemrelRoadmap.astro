@@ -12,7 +12,7 @@ const t = {
     headlinePrefix: 'Der Weg zu',
     headlineAccent: 'v1.0.0',
     subtitle:
-      'semrel ist in aktiver Entwicklung. Jeder Meilenstein kann auf GitHub mitverfolgt werden.',
+      'semrel ist in aktiver Entwicklung (aktuell: v0.14.0). Jeder Meilenstein kann auf GitHub mitverfolgt werden.',
     ariaLabel: 'Entwicklungs-Roadmap',
     linkText: 'Vollständige Roadmap auf GitHub',
     linkLabel: 'Vollständige Roadmap auf GitHub',
@@ -22,7 +22,7 @@ const t = {
     headlinePrefix: 'The road to',
     headlineAccent: 'v1.0.0',
     subtitle:
-      'semrel is in active development. Every milestone can be followed on GitHub.',
+      'semrel is in active development (current: v0.14.0). Every milestone can be followed on GitHub.',
     ariaLabel: 'Development roadmap',
     linkText: 'Full Roadmap on GitHub',
     linkLabel: 'Open full roadmap on GitHub',
@@ -66,12 +66,21 @@ const roadmilestones = [
     },
   },
   {
+    version: 'v0.10.0-v0.14.0',
+    label: 'Release Hardening & Workspace',
+    status: 'done',
+    desc: {
+      de: 'Workspace-Orchestrierung und Schema-Ausbau, robustere Dry-Run/Locking-Pfade, Plugin-Restore aus .semrel.lock sowie generator-Phase und verbessertes Changelog-Verhalten in v0.14.0.',
+      en: 'Workspace orchestration and schema expansion, hardened dry-run/locking paths, plugin restore from .semrel.lock plus generator phase and improved changelog behavior in v0.14.0.',
+    },
+  },
+  {
     version: 'v0.5.0',
     label: 'Monorepo & Advanced',
     status: 'current',
     desc: {
-      de: 'Changelog Engine, Workspace Discovery, Independent Versioning, Dependency Graph, Pre-release Channels — aktuell aktiv',
-      en: 'Changelog engine, workspace discovery, independent versioning, dependency graph, pre-release channels — currently active',
+      de: 'Changelog-Engine (v0.2.5-Ziele), vertiefte Workspace-/Monorepo-Flows, Dependency-Graph-Reihenfolge, Pre-release-Channels und erweiterte Release-Workflows — aktuell aktiv.',
+      en: 'Changelog engine goals (v0.2.5), deeper workspace/monorepo flows, dependency-graph ordering, pre-release channels and advanced release workflows — currently active.',
     },
   },
   {
