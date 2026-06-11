@@ -10,6 +10,12 @@ const t = {
   de: {
     description:
       'semrel analysiert eure Conventional Commits, berechnet das nächste SemVer-Tag und führt den kompletten Release-Lifecycle durch — vollständig plugin-basiert, monorepo-ready und sprachunabhängig.',
+    releaseHeadline: 'Neu in v0.14.0',
+    releaseHighlights: [
+      'Neue generator-Phase: Plugin-Output kann Release Notes zentral überschreiben.',
+      'SEMREL_CHANGELOG wird konsistent an nachgelagerte Phasen übergeben.',
+      'commit_changelog: false überlässt CHANGELOG.md vollständig Generator-Plugins.',
+    ],
     btnGithub: 'GitHub öffnen',
     btnGithubLabel: 'semrel auf GitHub ansehen',
     btnDocs: 'Dokumentation',
@@ -20,6 +26,12 @@ const t = {
   en: {
     description:
       'semrel analyses your Conventional Commits, calculates the next SemVer tag and runs the full release lifecycle — fully plugin-based, monorepo-ready and language-agnostic.',
+    releaseHeadline: 'New in v0.14.0',
+    releaseHighlights: [
+      'New generator phase: plugin output can override release notes centrally.',
+      'SEMREL_CHANGELOG is now forwarded consistently to downstream phases.',
+      'commit_changelog: false lets generator plugins fully own CHANGELOG.md.',
+    ],
     btnGithub: 'Open on GitHub',
     btnGithubLabel: 'View semrel on GitHub',
     btnDocs: 'Documentation',
@@ -50,7 +62,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary uppercase tracking-widest'>
           <i class="fa-solid fa-code-branch text-blue-400" aria-hidden="true"></i>
-          v0.4.x Alpha
+          v0.14.0
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary'>
           <i class="fa-solid fa-scale-balanced text-sky-400" aria-hidden="true"></i>
@@ -76,6 +88,18 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
       <p class='gsap-fadein text-xl text-meg-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed' style='animation-delay: 0.45s'>
         {t.description}
       </p>
+
+      <div class='gsap-fadein mb-12 max-w-3xl mx-auto text-left bg-meg-surface-dark/50 border border-blue-500/20 rounded-2xl p-5' style='animation-delay: 0.52s'>
+        <p class='text-sm font-black uppercase tracking-widest text-blue-400 mb-3'>{t.releaseHeadline}</p>
+        <ul class='space-y-2 text-meg-text-secondary text-sm md:text-base'>
+          {t.releaseHighlights.map((item) => (
+            <li class='flex items-start gap-2'>
+              <i class='fa-solid fa-circle-check text-emerald-400 mt-1' aria-hidden='true'></i>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <!-- CTAs -->
       <div class='gsap-fadein flex flex-col sm:flex-row gap-4 justify-center items-center mb-16' style='animation-delay: 0.6s'>

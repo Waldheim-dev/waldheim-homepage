@@ -13,6 +13,13 @@ const t = {
     headlineAccent: 'Enterprise-Level',
     subtitle:
       'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
+    compareHeadline: 'Warum semrel statt klassischer Tools wie semantic-release?',
+    comparePoints: [
+      'Language-agnostische Plugin-Executables statt Runtime-Lock-in auf ein Oekosystem.',
+      'Monorepo-Orchestrierung mit semrel workspace und dry-run in allen betroffenen Paketen.',
+      'Generator-Phase seit v0.14.0: Release Notes koennen zentral erzeugt und an Folgephasen durchgereicht werden.',
+      'Reproduzierbare Releases mit versionierten Binaer-Artefakten fuer Linux, macOS und Windows pro Tag.',
+    ],
   },
   en: {
     sectionLabel: 'Why semrel?',
@@ -20,6 +27,13 @@ const t = {
     headlineAccent: 'Enterprise Scale',
     subtitle:
       'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
+    compareHeadline: 'Why semrel over classic tools like semantic-release?',
+    comparePoints: [
+      'Language-agnostic plugin executables instead of runtime lock-in to one ecosystem.',
+      'Monorepo orchestration with semrel workspace and dry-run behavior across affected packages.',
+      'Generator phase since v0.14.0: release notes can be centrally produced and propagated downstream.',
+      'Reproducible releases with versioned binary artifacts for Linux, macOS and Windows on each tag.',
+    ],
   },
 }[lang];
 const features = [
@@ -87,6 +101,15 @@ const features = [
     badge: 'Changelog',
   },
   {
+    icon: 'fa-wand-magic-sparkles',
+    title: 'Generator Phase (v0.14.0)',
+    desc: {
+      de: 'Neue Pipeline-Phase zwischen Changelog-Generierung und Release: Generator-Plugins koennen Release Notes via stdout zentral setzen und an spaetere Phasen weiterreichen.',
+      en: 'New pipeline phase between changelog generation and release: generator plugins can set release notes via stdout and pass them to downstream phases.',
+    },
+    badge: 'Neu',
+  },
+  {
     icon: 'fa-brands fa-github',
     title: 'GitHub Actions Native',
     desc: {
@@ -120,6 +143,20 @@ const features = [
         {t.subtitle}
       </p>
     </header>
+
+    <section class='gsap-fadein mb-12 bg-meg-surface-dark/50 border border-blue-500/20 rounded-2xl p-6 md:p-8' style='animation-delay: 0.38s' aria-label={t.compareHeadline}>
+      <h3 class='text-lg md:text-xl font-black text-meg-text-primary-dark mb-4'>
+        {t.compareHeadline}
+      </h3>
+      <ul class='grid md:grid-cols-2 gap-3'>
+        {t.comparePoints.map((point) => (
+          <li class='flex items-start gap-2 text-sm md:text-base text-meg-text-secondary'>
+            <i class='fa-solid fa-circle-check text-emerald-400 mt-1' aria-hidden='true'></i>
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {features.map((feature, i) => (
