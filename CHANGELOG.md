@@ -1,3 +1,21 @@
+# [26.12.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.3...26.12.0) (2026-06-12)
+
+
+### Bug Fixes
+
+* add fallback notice for artifact upload failure in CI workflow ([e810b54](https://github.com/Waldheim-dev/waldheim-homepage/commit/e810b5479414e89c04dbc8b833ef8f9b154d55e8))
+* remove llmsTxt integration and related configuration from astro.config.mjs ([3191300](https://github.com/Waldheim-dev/waldheim-homepage/commit/319130079e3b902a9713e61c04deb3573058623e))
+* restore portal.waldheim.dev in legal pages (AGB, Impressum, Datenschutz) ([da2ea86](https://github.com/Waldheim-dev/waldheim-homepage/commit/da2ea869cc76d804fd96dbf426423a4f5f3f113b))
+* update call-to-action text from "Zugang anfragen" to "Demo ausprobieren" across multiple components ([33dffbe](https://github.com/Waldheim-dev/waldheim-homepage/commit/33dffbea1d0fe815735caa2137eb5bafd200fba7))
+* update Kundenportal links from suite.waldheim.dev to portal.waldheim.dev ([a2fb600](https://github.com/Waldheim-dev/waldheim-homepage/commit/a2fb6000e6115efde7c56c5177791d9f2562e230))
+* update module count and descriptions for clarity in suite and pricing pages ([ffec0e5](https://github.com/Waldheim-dev/waldheim-homepage/commit/ffec0e5efcee8af910932254e1df6c41efc76efa))
+
+
+### Features
+
+* **semrel:** update homepage to v0.15.0 — roadmap, hero, features ([5163d0f](https://github.com/Waldheim-dev/waldheim-homepage/commit/5163d0f227fb1c22cefc6c580ba0c156d37fb323))
+* update Semrel features and roadmap for v0.14.0 release highlights and improvements ([5475ccf](https://github.com/Waldheim-dev/waldheim-homepage/commit/5475ccf3b2a74e6b596f46234e0c561d242185a9))
+
 ## [26.11.3](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.2...26.11.3) (2026-06-09)
 
 
