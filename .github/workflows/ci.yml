@@ -48,6 +48,7 @@ jobs:
       # Disable if you hit artifact storage quota: set UPLOAD_ARTIFACTS=false in repo settings
       - name: Upload dist artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false'
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: homepage-dist
@@ -55,6 +56,12 @@ jobs:
           retention-days: 1
           compression-level: 9
           overwrite: true
+
+      - name: Artifact upload fallback notice
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false' && failure()
+        run: |
+          echo "Artifact upload failed (likely storage quota reached)."
+          echo "Continuing pipeline so release/deploy can still run."
 
   # ──────────────────────────────────────────
   # Job 2: Semantic Release
