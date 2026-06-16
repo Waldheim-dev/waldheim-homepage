@@ -195,6 +195,23 @@ export const PRODUCTS: Record<string, ProductInfo> = {
       hoverShadow: 'hover:shadow-lg hover:shadow-amber-400/20',
     },
   },
+  'tailwind-cv': {
+    name: 'CV Generator',
+    version: '1.0.0',
+    status: 'stable',
+    releaseDate: '2025-06-15',
+    colors: {
+      name: 'tailwind-cv',
+      primary: 'cyan-400',
+      secondary: 'teal-500',
+      glowColor: 'cyan-400/50',
+      badgeBg: 'bg-cyan-500/10',
+      badgeBorder: 'border-cyan-500/30',
+      badgeText: 'text-cyan-400',
+      iconColor: 'cyan-400',
+      hoverShadow: 'hover:shadow-lg hover:shadow-cyan-400/20',
+    },
+  },
   semrel: {
     name: 'semrel',
     version: '0.3.x',

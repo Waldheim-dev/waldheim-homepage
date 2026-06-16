@@ -1,0 +1,150 @@
+---
+import { getProductInfo } from '../consts/productColors';
+const product = getProductInfo('tailwind-cv')!;
+---
+
+<section class="relative py-24 sm:py-32 px-6 overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark">
+  <!-- Background accent glow -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-cyan-500/8 blur-3xl"></div>
+    <div class="absolute top-1/2 right-0 w-[300px] h-[300px] rounded-full bg-teal-400/5 blur-2xl"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl relative">
+    <!-- Badge row -->
+    <div class="text-center mb-14 gsap-fadein">
+      <div class="mb-8 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark shadow-sm backdrop-blur-md">
+        <i class="fa-solid fa-file-lines text-cyan-400" aria-hidden="true"></i>
+        <span class="text-meg-text-primary-dark font-bold text-sm tracking-tight">CV Generator</span>
+        <span class="bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-tighter ml-1">v{product.version}</span>
+        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-tighter">MIT Open Source</span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-6 leading-none">
+        CV <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">Generator</span>
+      </h1>
+      <p class="text-sm text-meg-text-secondary/50 font-mono mb-2">github.com/mwaldheim/tailwind-cv</p>
+
+      <p class="text-xl md:text-2xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed">
+        Der <strong class="text-meg-text-primary-dark">quelloffene CV-Builder</strong> auf Basis von Tailwind CSS&nbsp;v4 und Vite.
+        Entwerfen, bearbeiten und exportieren — direkt im Browser, ohne Account, ohne Backend.
+      </p>
+
+      <!-- Stat chips -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        {[
+          { icon: 'fa-palette', label: '13 Layouts', color: 'text-cyan-400' },
+          { icon: 'fa-swatchbook', label: '10 Farbthemen', color: 'text-teal-400' },
+          { icon: 'fa-file-pdf', label: 'A4 PDF-Export', color: 'text-emerald-400' },
+          { icon: 'fa-code', label: 'Zero Dependencies', color: 'text-sky-400' },
+          { icon: 'fa-floppy-disk', label: 'Auto-Save', color: 'text-cyan-300' },
+        ].map(s => (
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-semibold text-meg-text-secondary">
+            <i class={`${s.icon} fa-solid ${s.color} text-xs`}></i>
+            {s.label}
+          </span>
+        ))}
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="https://mwaldheim.github.io/tailwind-cv/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto group px-8 py-4 bg-cyan-500 text-white font-bold text-lg rounded-xl hover:bg-cyan-400 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-2"
+        >
+          <i class="fa-solid fa-play text-lg" aria-hidden="true"></i>
+          Live Demo starten
+        </a>
+        <a
+          href="https://github.com/mwaldheim/tailwind-cv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto group px-8 py-4 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-cyan-500/40 transition-all duration-300 inline-flex items-center justify-center gap-2"
+        >
+          <i class="fa-brands fa-github text-cyan-400 text-xl" aria-hidden="true"></i>
+          GitHub Repository
+        </a>
+      </div>
+    </div>
+
+    <!-- Live Preview mockup -->
+    <div class="relative mx-auto max-w-5xl gsap-fadein">
+      <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent rounded-3xl blur-xl -z-10"></div>
+      <div class="rounded-2xl border border-meg-border-dark overflow-hidden shadow-2xl bg-slate-900">
+        <!-- Browser chrome -->
+        <div class="bg-slate-800 border-b border-meg-border-dark px-4 py-2.5 flex items-center gap-2">
+          <div class="flex gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/70"></span>
+          </div>
+          <div class="flex-1 mx-4 bg-slate-700 rounded-md px-3 py-1 text-xs text-slate-400 font-mono">
+            localhost:5173
+          </div>
+        </div>
+        <!-- App preview mockup -->
+        <div class="flex bg-slate-900" style="height: 340px;">
+          <!-- Sidebar -->
+          <div class="w-72 shrink-0 bg-slate-800 border-r border-slate-700 p-4 flex flex-col gap-3">
+            <div class="flex items-center gap-2 pb-3 border-b border-slate-700">
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span class="text-xs font-bold text-white">CV Baustein-System</span>
+            </div>
+            <div class="grid grid-cols-4 gap-1 bg-slate-900/50 p-1 rounded-lg">
+              {['Design', 'Daten', 'Blöcke', 'JSON'].map((t, i) => (
+                <div class={`py-1.5 text-[9px] font-bold text-center rounded ${i === 0 ? 'bg-slate-700 text-white' : 'text-slate-500'}`}>{t}</div>
+              ))}
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="text-[8px] font-bold text-slate-500 uppercase tracking-wider">Layout-Stil</div>
+              <div class="bg-slate-900 border border-slate-700 rounded px-2 py-1.5 text-[10px] text-cyan-400 font-bold">Magazine Cover</div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="text-[8px] font-bold text-slate-500 uppercase tracking-wider">Farbschema</div>
+              <div class="flex flex-wrap gap-1.5">
+                {['#1e293b','#064e3b','#3b0764','#115e59','#7c2d12'].map(c => (
+                  <span class="w-5 h-5 rounded-full border-2 border-slate-700 cursor-pointer" style={`background:${c}`}></span>
+                ))}
+              </div>
+            </div>
+            <div class="mt-auto">
+              <div class="w-full py-1.5 bg-cyan-600 text-white text-[10px] font-bold rounded-lg text-center">PDF Exportieren</div>
+            </div>
+          </div>
+          <!-- CV Paper -->
+          <div class="flex-1 flex items-center justify-center p-6 overflow-hidden bg-slate-950">
+            <div class="bg-white rounded shadow-xl w-full" style="max-width:320px; height:280px; overflow:hidden;">
+              <!-- Magazine header -->
+              <div class="bg-gradient-to-br from-slate-900 to-cyan-900 px-5 pt-6 pb-4">
+                <div class="text-[8px] text-cyan-400/70 uppercase tracking-widest font-bold mb-1">Senior Developer</div>
+                <div class="text-lg font-black text-white leading-none tracking-tight">ALEXANDER<br/>NEUMANN</div>
+                <div class="mt-2 text-[7px] text-white/50">München · alexander@example.dev · github.com/a-neumann</div>
+              </div>
+              <!-- Content area -->
+              <div class="px-4 pt-3 flex flex-col gap-2">
+                <div>
+                  <div class="text-[6px] bg-slate-900 text-white px-1.5 py-0.5 inline-block font-black uppercase tracking-wider mb-1">BERUFSERFAHRUNG</div>
+                  <div class="border-l-2 border-cyan-200 pl-2">
+                    <div class="text-[7px] font-bold text-slate-800">Senior IT-Consultant</div>
+                    <div class="text-[6px] text-cyan-600 font-semibold">Global Technology AG • Seit 2022</div>
+                    <div class="text-[6px] text-slate-500 mt-0.5">· DevSecOps, Cloud-Architektur, Angular</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="text-[6px] bg-slate-900 text-white px-1.5 py-0.5 inline-block font-black uppercase tracking-wider mb-1">SKILLS</div>
+                  <div class="flex flex-wrap gap-1">
+                    {['Angular','Go','K8s','Tailwind'].map(t => (
+                      <span class="text-[6px] bg-cyan-50 text-cyan-700 border border-cyan-200 px-1 py-0.5 rounded font-bold">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
