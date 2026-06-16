@@ -1,0 +1,177 @@
+---
+const features = [
+  {
+    icon: 'fa-solid fa-palette',
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500/10 border-cyan-500/20',
+    title: '13 visuelle Layout-Stile',
+    desc: 'Von Minimal über Cyberpunk bis zum brechenden Magazine-Cover — alle per Klick wechselbar. Drei neue Layouts brechen das klassische Top-Down-Schema.',
+  },
+  {
+    icon: 'fa-solid fa-swatchbook',
+    color: 'text-teal-400',
+    bg: 'bg-teal-500/10 border-teal-500/20',
+    title: '10 Farbthemen',
+    desc: 'Navy, Emerald, Purple, Teal, Terracotta, Sage, Royal, Dusty Rose, Amber — alle Farben steuern sich über CSS-Variablen, auch im Print.',
+  },
+  {
+    icon: 'fa-solid fa-file-pdf',
+    color: 'text-emerald-400',
+    bg: 'bg-emerald-500/10 border-emerald-500/20',
+    title: 'A4 PDF-Export',
+    desc: 'Pixel-genaues Drucklayout mit @page-Regeln, background-graphics Support und @media print Overrides. Kein Layout-Shift, kein abgeschnittener Text.',
+  },
+  {
+    icon: 'fa-solid fa-pen-to-square',
+    color: 'text-sky-400',
+    bg: 'bg-sky-500/10 border-sky-500/20',
+    title: 'In-Browser-Bearbeitung',
+    desc: 'Jeden Text direkt auf dem CV anklicken und tippen. Keine versteckten Formulare. Auto-Save in localStorage — nichts geht verloren.',
+  },
+  {
+    icon: 'fa-solid fa-code',
+    color: 'text-violet-400',
+    bg: 'bg-violet-500/10 border-violet-500/20',
+    title: 'JSON-Datenmodell',
+    desc: 'Der gesamte CV-Inhalt ist exportier- und importierbare JSON-Datei. Dein Lebenslauf als strukturiertes, maschinenlesbares Format.',
+  },
+  {
+    icon: 'fa-solid fa-cube',
+    color: 'text-pink-400',
+    bg: 'bg-pink-500/10 border-pink-500/20',
+    title: 'Modulares Sektionssystem',
+    desc: 'Berufserfahrung, Projekte, Skills, Open Source, Zertifikate, Bildung, Hobbys — einzeln ein- und ausblendbar, mit eigenem Editor-Block.',
+  },
+  {
+    icon: 'fa-solid fa-bolt',
+    color: 'text-amber-400',
+    bg: 'bg-amber-500/10 border-amber-500/20',
+    title: 'Tailwind CSS v4 + Vite',
+    desc: 'CSS-Variable-gesteuertes Theming ohne Runtime-Overhead. Keine React, keine Vue — pure Webplattform-APIs, blitzschnell im Dev und Prod.',
+  },
+  {
+    icon: 'fa-solid fa-lock-open',
+    color: 'text-emerald-400',
+    bg: 'bg-emerald-500/10 border-emerald-500/20',
+    title: '100% Open Source (MIT)',
+    desc: 'Keine Accounts, keine Datenuploads, kein Tracking. Alles bleibt lokal. Fork it, extend it, ship it.',
+  },
+];
+
+const layouts = [
+  { name: 'Minimal', emoji: '⬜', desc: 'Klassisch' },
+  { name: 'Executive', emoji: '🎩', desc: 'Serif' },
+  { name: 'Modernist', emoji: '⚡', desc: 'Tech Bold' },
+  { name: 'Vintage', emoji: '📰', desc: 'Editorial' },
+  { name: 'Avant-Garde', emoji: '◼', desc: 'Bauhaus' },
+  { name: 'Cyberpunk', emoji: '💻', desc: 'Terminal' },
+  { name: 'Swiss', emoji: '🇨🇭', desc: 'Typografisch' },
+  { name: 'Warm', emoji: '📖', desc: 'Cozy Serif' },
+  { name: 'Terminal', emoji: '>', desc: 'Console' },
+  { name: 'Neumorphic', emoji: '🫧', desc: 'Soft UI' },
+  { name: 'Magazine', emoji: '🗞️', desc: 'Hero Layout' },
+  { name: 'Poster', emoji: '🖼️', desc: 'Giant Type' },
+  { name: 'Brutalist', emoji: '◧', desc: 'Raw Bold' },
+];
+---
+
+<!-- Features Grid -->
+<section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark">
+  <div class="mx-auto max-w-7xl">
+    <div class="text-center mb-16 gsap-fadein">
+      <p class="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4">Features</p>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
+        Alles drin — <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">nichts übrig</span>
+      </h2>
+      <p class="text-lg text-meg-text-secondary max-w-2xl mx-auto">
+        Ein schlankes Tool ohne Abhängigkeiten. Kein Build-Overhead, kein Cloud-Lock-in, kein Abo.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {features.map((f, i) => (
+        <div class={`gsap-fadein group bg-meg-surface-dark/30 border border-meg-border-dark rounded-2xl p-6 hover:border-cyan-500/30 transition-all`} style={`animation-delay:${i*0.06}s`}>
+          <div class={`size-12 ${f.bg} border rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+            <i class={`${f.icon} ${f.color} text-xl`}></i>
+          </div>
+          <h3 class="text-base font-bold text-meg-text-primary-dark mb-2">{f.title}</h3>
+          <p class="text-sm text-meg-text-secondary leading-relaxed">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Layout Showcase -->
+<section class="py-24 px-6 bg-meg-surface-dark border-b border-meg-border-dark">
+  <div class="mx-auto max-w-7xl">
+    <div class="text-center mb-14 gsap-fadein">
+      <p class="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4">Layout-Stile</p>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+        13 Designs — ein Klick
+      </h2>
+      <p class="text-lg text-meg-text-secondary max-w-xl mx-auto">
+        Die letzten drei brechen das klassische Top-Down-Schema mit neuen Struktur-Konzepten.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 gsap-fadein">
+      {layouts.map((l, i) => (
+        <div class={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold transition-all ${i >= 10 ? 'bg-cyan-500/10 border-cyan-500/40 text-cyan-300' : 'bg-meg-bg-dark border-meg-border-dark text-meg-text-secondary'}`}>
+          <span class="text-base">{l.emoji}</span>
+          <span>{l.name}</span>
+          <span class={`text-[10px] font-bold ${i >= 10 ? 'text-cyan-500' : 'text-meg-text-secondary/50'}`}>{l.desc}</span>
+          {i >= 10 && <span class="text-[9px] font-black uppercase tracking-wider bg-cyan-500/20 text-cyan-400 px-1.5 py-0.5 rounded-full">NEU</span>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Quick Start -->
+<section class="py-24 px-6 bg-meg-bg-dark border-b border-meg-border-dark">
+  <div class="mx-auto max-w-3xl">
+    <div class="text-center mb-12 gsap-fadein">
+      <p class="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4">Quick Start</p>
+      <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">In 30 Sekunden loslegen</h2>
+      <p class="text-meg-text-secondary">Node.js 18+ und pnpm (oder npm) vorausgesetzt.</p>
+    </div>
+
+    <div class="bg-meg-surface-dark border border-meg-border-dark rounded-2xl p-6 font-mono text-sm shadow-2xl gsap-fadein">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="w-3 h-3 rounded-full bg-red-500/60"></span>
+        <span class="w-3 h-3 rounded-full bg-amber-500/60"></span>
+        <span class="w-3 h-3 rounded-full bg-emerald-500/60"></span>
+        <span class="ml-2 text-xs text-meg-text-secondary/60">terminal</span>
+      </div>
+      <p class="text-slate-500 mb-1"># Repository klonen</p>
+      <p class="text-meg-text-primary-dark mb-3">git clone https://github.com/mwaldheim/tailwind-cv.git</p>
+      <p class="text-slate-500 mb-1"># Abhängigkeiten installieren</p>
+      <p class="text-meg-text-primary-dark mb-3">cd tailwind-cv && pnpm install</p>
+      <p class="text-slate-500 mb-1"># Dev-Server starten</p>
+      <p class="text-cyan-400 font-bold">pnpm dev</p>
+      <p class="mt-3 text-slate-500"># → http://localhost:5173</p>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="https://mwaldheim.github.io/tailwind-cv/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-cyan-500 text-white font-bold text-lg rounded-xl hover:bg-cyan-400 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300"
+      >
+        <i class="fa-solid fa-play text-lg"></i>
+        Live Demo starten
+      </a>
+      <a
+        href="https://github.com/mwaldheim/tailwind-cv"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:border-cyan-500/40 transition-all duration-300"
+      >
+        <i class="fa-brands fa-github text-cyan-400 text-xl"></i>
+        Auf GitHub ansehen
+      </a>
+    </div>
+  </div>
+</section>
