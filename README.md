@@ -1,9 +1,9 @@
 # 🌐 waldheim.dev - Moderne Webpräsenz
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1-38bdf8)](https://tailwindcss.com/)
-[![Playwright](https://img.shields.io/badge/Playwright-1.56-45ba4b)](https://playwright.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.3-38bdf8)](https://tailwindcss.com/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.60-45ba4b)](https://playwright.dev/)
 
 Moderne Webpräsenz für digitale Beratung, Webentwicklung, Cloud, DevOps, KI und Automatisierung.
 
@@ -14,17 +14,18 @@ Moderne Webpräsenz für digitale Beratung, Webentwicklung, Cloud, DevOps, KI un
 ## 📋 Projekt-Übersicht
 
 **Tech Stack:**
-- **Framework:** Astro 5.x (Static Site Generation)
-- **Styling:** TailwindCSS 4.x mit Custom Design System
+- **Framework:** Astro 6.x (Static Site Generation)
+- **Styling:** TailwindCSS 4.3 mit Custom Design System
 - **Animationen:** GSAP
 - **Icons:** Font Awesome Pro 7.x
 - **Testing:** Playwright (Visual + A11y Tests)
-- **Package Manager:** pnpm 10.18.2
+- **Package Manager:** pnpm 11.5.1
 
 **Produkte & Services:**
-- 🌱 **Ecodrive** - Digitales Fahrtenbuch
-- 🏢 **Silvacore** - WEG-Verwaltungssoftware
-- 💬 **Socialverse** - KI-Marketing-Plattform
+- 🌱 **Ecodrive** - Digitales Fahrtenbuch & Fuhrparkmanagement
+- 🏢 **Silvacore ERP (Forge)** - Enterprise-Ressourcenplanung (Produkte, Projekte, Aufträge)
+- 🏢 **Properties** - WEG-Verwaltungssoftware (Abrechnung, Mahnwesen)
+- 💬 **Socialverse** - KI-Marketing-Plattform & CRM
 - 🛠️ **Services** - Webentwicklung, Cloud, DevOps, KI, Design
 
 ---
@@ -61,21 +62,32 @@ pnpm preview
 
 ### 🛠️ Utility Scripts
 
-| Script | Beschreibung |
-|--------|--------------|
-| `./scripts/convert-pngs-to-webp.sh` | Konvertiert alle PNGs im `public/`-Ordner zu WebP |
-| `./scripts/convert-missing-webp.sh` | Konvertiert nur fehlende WebP-Dateien |
-| `./scripts/optimize-images.sh` | Optimiert Bilder (Komprimierung) |
-| `./scripts/generate-video-posters.sh` | Generiert Video-Vorschaubilder |
-| `./scripts/fix-trailing-slashes.sh` | Korrigiert Trailing Slashes in Links |
+Diese Skripte liegen im Ordner `scripts/` und sind sowohl als Bash-Skripte (`.sh` für Unix/macOS) als auch als PowerShell-Skripte (`.ps1` für Windows) verfügbar.
 
-**Beispiel:**
+| Unix/macOS (Bash) | Windows (PowerShell) | Beschreibung |
+|-------------------|----------------------|--------------|
+| `./scripts/convert-pngs-to-webp.sh` | `.\scripts\convert-pngs-to-webp.ps1` | Konvertiert alle PNGs im `public/`-Ordner zu WebP |
+| `./scripts/convert-missing-webp.sh` | `.\scripts\convert-missing-webp.ps1` | Konvertiert nur fehlende WebP-Dateien |
+| `./scripts/optimize-images.sh` | `.\scripts\optimize-images.ps1` | Optimiert große Bilder (> 50 KB) nach WebP |
+| `./scripts/generate-video-posters.sh` | `.\scripts\generate-video-posters.ps1` | Generiert Video-Vorschaubilder via ffmpeg |
+| `./scripts/fix-trailing-slashes.sh` | `.\scripts\fix-trailing-slashes.ps1` | Korrigiert Trailing Slashes in internen Links |
+
+**Beispiel (Bash):**
 ```bash
 # Alle PNGs zu WebP konvertieren (Qualität: 85)
 ./scripts/convert-pngs-to-webp.sh
 
 # Mit benutzerdefinierter Qualität (0-100)
 ./scripts/convert-pngs-to-webp.sh 90
+```
+
+**Beispiel (Windows PowerShell):**
+```powershell
+# Alle PNGs zu WebP konvertieren (Qualität: 85)
+.\scripts\convert-pngs-to-webp.ps1
+
+# Mit benutzerdefinierter Qualität (0-100)
+.\scripts\convert-pngs-to-webp.ps1 -Quality 90
 ```
 
 ---
@@ -234,16 +246,15 @@ pnpm lighthouse:assert
 ## 📦 Dependencies
 
 **Wichtige Packages:**
-- `astro@5.14.4` - Framework
-- `tailwindcss@4.1.14` - Styling
-- `@tailwindcss/vite@4.1.14` - Vite Integration
-- `gsap@3.13.0` - Animationen
-- `@fortawesome/fontawesome-free@6.x` - Icons
-- `@astrojs/sitemap@3.6.0` - Sitemap Generation
-- `@waldheimdev/astro-ai-llms-txt@1.1.3` - LLMs.txt für KI-Crawler
-- `@sentry/astro@10.19.0` - Error Tracking
-- `@playwright/test@1.56.1` - Testing
-- `@axe-core/playwright@4.11.0` - A11y Testing
+- `astro@6.4.4` - Framework
+- `tailwindcss@4.3.0` - Styling
+- `@tailwindcss/vite@4.3.0` - Vite Integration
+- `gsap@3.15.0` - Animationen
+- `@fortawesome/fontawesome-free@7.2.0` - Icons
+- `@astrojs/sitemap@3.7.3` - Sitemap Generation
+- `@waldheimdev/astro-ai-llms-txt@1.3.0` - LLMs.txt für KI-Crawler
+- `@playwright/test@1.60.0` - Testing
+- `@axe-core/playwright@4.11.3` - A11y Testing
 
 **Installation:**
 ```bash
@@ -359,7 +370,6 @@ test: Tests hinzugefügt
 
 **Website:** https://www.waldheim.dev  
 **Google Search Console:** https://search.google.com/search-console  
-**Sentry:** Error Tracking Dashboard
 
 **Tech Docs:**
 - [Astro](https://docs.astro.build)
@@ -369,7 +379,7 @@ test: Tests hinzugefügt
 
 ---
 
-**Version:** 26.3.0  
-**Letzte Aktualisierung:** 27. Oktober 2025  
-**Package Manager:** pnpm@10.18.2
+**Version:** 26.12.0  
+**Letzte Aktualisierung:** 21. Juni 2026  
+**Package Manager:** pnpm@11.5.1
 

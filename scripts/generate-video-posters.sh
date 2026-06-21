@@ -25,6 +25,7 @@ declare -a videos=(
     "public/videos/video_software.mp4"
     "public/videos/video_neuronen.mp4"
     "public/videos/video_assistentin.mp4"
+    "public/videos/video_smarthome.mp4"
 )
 
 # Generiere Poster für jedes Video

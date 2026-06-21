@@ -6,7 +6,7 @@
 set -e
 
 # Konfiguration
-BASE_DIR="/home/mawa/development/waldheim.dev/waldheim.dev.homepage/public"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../public" && pwd)"
 QUALITY="${1:-85}"  # Standard: 85, kann als Parameter übergeben werden
 CONVERTED_COUNT=0
 SKIPPED_COUNT=0
