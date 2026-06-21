@@ -1,0 +1,13 @@
+{
+  "name": "Ollama",
+  "image": "/brands/ollama.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2024-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "invertImage": true,
+  "layer": ["ai", "infrastructure"]
+}

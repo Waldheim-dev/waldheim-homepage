@@ -1,0 +1,14 @@
+{
+  "name": "Antigravity",
+  "image": "/brands/google-antigravity.webp",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": [
+    "ai"
+  ]
+}

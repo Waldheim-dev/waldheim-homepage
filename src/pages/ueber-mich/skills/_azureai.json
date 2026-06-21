@@ -1,0 +1,14 @@
+{
+  "name": "Azure AI",
+  "image": "/brands/azureai-color.svg",
+  "productive": false,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "layer": [
+    "ai"
+  ]
+}

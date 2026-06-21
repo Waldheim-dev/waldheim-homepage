@@ -1,0 +1,13 @@
+{
+  "name": "OpenCode",
+  "image": "/brands/opencode.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2025-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "invertImage": true,
+  "layer": ["ai", "general"]
+}
