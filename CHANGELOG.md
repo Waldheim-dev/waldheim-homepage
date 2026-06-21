@@ -1,3 +1,19 @@
+# [26.13.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.12.0...26.13.0) (2026-06-21)
+
+
+### Bug Fixes
+
+* update roadmap milestones and descriptions for clarity ([00d1625](https://github.com/Waldheim-dev/waldheim-homepage/commit/00d1625579cb0b9ab7e2bbd8fd123f567248339f))
+
+
+### Features
+
+* add CV Generator product with features and hero section ([1c0ba58](https://github.com/Waldheim-dev/waldheim-homepage/commit/1c0ba58e5fc4006c3b36e12c58ab8842716a9cb3))
+* add new skill definitions and associated brand assets to the portfolio ([58b50d1](https://github.com/Waldheim-dev/waldheim-homepage/commit/58b50d1b8c26a3ddbb62db69ed2d62f9bd061c6f))
+* add project assets, automation scripts, and documentation for homepage site updates ([6a5e85f](https://github.com/Waldheim-dev/waldheim-homepage/commit/6a5e85f3eee2144b7d4174a72eddf5196315d541))
+* add Socialverse CRM landing page to suite products ([156850d](https://github.com/Waldheim-dev/waldheim-homepage/commit/156850d6ddf15c4e93eebc28890a430e37f9ddc5))
+* implement new website structure with service, suite, and landing pages ([1013468](https://github.com/Waldheim-dev/waldheim-homepage/commit/10134689119487289761631381a439a34503e72e))
+
 # [26.12.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.11.3...26.12.0) (2026-06-12)
 
 
