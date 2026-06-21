@@ -1,4 +1,5 @@
 ---
+import PromoSuite from '../../../components/PromoSuite.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
@@ -194,7 +195,7 @@ const selfHostedServices = [
     <!-- Leistungsübersicht -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="it-services-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="it-services-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
             Leistungsübersicht
           </h2>
@@ -207,32 +208,32 @@ const selfHostedServices = [
         </header>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-computer text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Custom PCs & Workstations</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Maßgeschneiderte Systeme für jeden Zweck: leise Office-PCs, High-End-Workstations für Grafik, Video & KI, Gaming-Rigs und dedizierte Home-Server. Komponentenauswahl nach Ihren Anforderungen und Budget, Zusammenbau und vollständige Einrichtung inklusive.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-network-wired text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Netzwerkinfrastruktur (Unifi)</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Professionelle WLAN- und LAN-Infrastruktur mit Ubiquiti Unifi: Access Points für lückenlose Abdeckung, Managed Switches, Security Gateways mit IDS/IPS, VLANs für Gerätesegmentierung, VPN-Fernzugriff und zentrales Netzwerk-Monitoring. Für Heim, Büro und Gewerbe.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-vault text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">NAS & Backup-Strategie</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Einrichtung von NAS-Systemen (Synology, QNAP, TrueNAS) mit ZFS oder Btrfs für maximale Datensicherheit. Automatisierte Backup-Konzepte nach der 3-2-1-Regel: lokale Kopie, zweites Medium und verschlüsseltes Offsite-Backup. Niemals wieder Datenverlust.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-server text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">On-Premise Server & Self-Hosting</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Eigene Server für maximale Datensouveränität: Proxmox-Virtualisierung, Active Directory & LDAP, File-Server, und eine breite Palette an Self-Hosted-Diensten (Nextcloud, Gitea, Immich, Jellyfin, Vaultwarden u.v.m.) – alles in Ihrem Netzwerk, unter Ihrer Kontrolle.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-brands fa-microsoft text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Microsoft 365 & Cloud</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Microsoft 365 Setup, Lizenzberatung und Migration von bestehenden Systemen: Exchange Online, Teams, SharePoint, OneDrive und Entra ID (Azure AD). Inklusive Security-Härtung: MFA, Conditional Access, DLP-Policies und Compliance-Einstellungen für DSGVO-konforme Nutzung.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-emerald-500/40 transition-all group">
             <i class="fa-solid fa-shield-halved text-emerald-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">IT-Sicherheit & Endpoint</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Ganzheitliche Absicherung Ihrer IT: Firewall-Konfiguration (pfSense, OPNsense, Unifi), Endpoint-Security, automatisiertes Patch-Management, MFA-Rollout und regelmäßige Security-Audits. Aktiver Schutz vor Ransomware, Phishing und unbefugtem Zugriff auf allen Plattformen.</p>
@@ -244,7 +245,7 @@ const selfHostedServices = [
     <!-- Custom PC Deep-Dive -->
     <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="pc-types-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="pc-types-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
             <i class="fa-solid fa-computer mr-2" aria-hidden="true"></i>
             Custom PC-Konfigurationen
@@ -285,7 +286,7 @@ const selfHostedServices = [
     <!-- Betriebssysteme & Linux-Distros -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="os-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="os-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
             <i class="fa-brands fa-linux mr-2" aria-hidden="true"></i>
             Betriebssysteme & Plattformen
@@ -300,7 +301,7 @@ const selfHostedServices = [
 
         <!-- Windows & macOS -->
         <div class="grid lg:grid-cols-2 gap-8 mb-8">
-          <article class="bg-meg-surface-dark/50 border border-blue-500/20 hover:border-blue-500/40 rounded-2xl p-8 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-blue-500/20 hover:border-blue-500/40 rounded-2xl p-8 transition-all">
             <div class="flex items-center gap-4 mb-6">
               <div class="size-14 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center">
                 <i class="fa-brands fa-windows text-blue-400 text-2xl" aria-hidden="true"></i>
@@ -327,7 +328,7 @@ const selfHostedServices = [
             </ul>
           </article>
 
-          <article class="bg-meg-surface-dark/50 border border-gray-500/20 hover:border-gray-400/40 rounded-2xl p-8 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-gray-500/20 hover:border-gray-400/40 rounded-2xl p-8 transition-all">
             <div class="flex items-center gap-4 mb-6">
               <div class="size-14 bg-gray-500/10 border border-gray-500/20 rounded-xl flex items-center justify-center">
                 <i class="fa-brands fa-apple text-gray-300 text-2xl" aria-hidden="true"></i>
@@ -390,7 +391,7 @@ const selfHostedServices = [
     <!-- Self-Hosted Dienste -->
     <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="selfhosted-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="selfhosted-heading" class="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-4">
             <i class="fa-solid fa-server mr-2" aria-hidden="true"></i>
             On-Premise & Self-Hosting
@@ -468,11 +469,14 @@ const selfHostedServices = [
       </div>
     </section>
 
+    <!-- SaaS Suite Promotion -->
+    <PromoSuite />
+
     <!-- FAQ -->
     <section class="py-24 px-6 border-t border-meg-border-dark" aria-labelledby="it-faq-heading">
       <div class="mx-auto max-w-4xl">
-        <header class="text-center mb-12">
-          <h2 id="it-faq-heading" class="text-3xl font-bold">Häufige Fragen zum <span class="text-emerald-400">IT-Service</span></h2>
+        <header class="gsap-fadein text-center mb-12">
+          <h2 id="it-faq-heading" class="gsap-fadein text-3xl font-bold">Häufige Fragen zum <span class="text-emerald-400">IT-Service</span></h2>
         </header>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (

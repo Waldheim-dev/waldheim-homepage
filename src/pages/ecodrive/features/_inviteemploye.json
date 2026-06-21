@@ -1,8 +1,0 @@
-{
-    "name": "Verwalte deinen Fuhrpark",
-    "description": "Verwalte deinen Fuhrpark und lade deine Mitarbeiter ein, die Ecodrive App zu nutzen.",
-    "image": "/ecodrive/ecodrive_einladungen.PNG",
-    "tier": "pro",
-    "planned": false,
-    "since": "1.1"
-   }

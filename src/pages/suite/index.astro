@@ -1,5 +1,9 @@
 ---
+import ROICalculator from '../../components/ROICalculator.astro';
+import InteractiveHeroCanvas from '../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../layouts/Layout.astro';
+import PromoServices from '../../components/PromoServices.astro';
+
 import { SchemaUtils } from '../../utils/schema';
 import { getProductInfo } from '../../consts/productColors';
 
@@ -86,7 +90,7 @@ const modules = [
     title: 'Ecodrive',
     subtitle: 'Flotten, Routen & CO₂',
     description:
-      'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, GPS-Tracking, CO₂-Reporting und ESG-Kennzahlen.',
+      'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, CO₂-Reporting und ESG-Kennzahlen.',
     badge: 'Beta',
   },
   {
@@ -203,47 +207,9 @@ const integrationItems = [
   { icon: 'fa-linkedin', label: 'LinkedIn', desc: 'Kampagnen & Lead-Gen' },
   { icon: 'fa-instagram', label: 'Instagram', desc: 'Content & Reichweite' },
   { icon: 'fa-bell', label: 'Web Push', desc: 'Browser-Benachrichtigungen' },
-  {
-    icon: 'fa-location-dot',
-    label: 'GPS / Telematik',
-    desc: 'Fahrzeug-Tracking',
-  },
   { icon: 'fa-code', label: 'REST API', desc: 'Offene Schnittstelle' },
   { icon: 'fa-book', label: 'API-Docs', desc: 'OpenAPI Spec verfügbar' },
   { icon: 'fa-link', label: 'Webhooks', desc: 'Event-basierte Integration' },
-];
-
-const usps = [
-  {
-    icon: 'fa-key',
-    title: 'Single Sign-On',
-    description:
-      'Ein Login für alle Module. Keine separaten Accounts, keine Reibungsverluste – einmal authentifiziert, überall Zugriff.',
-  },
-  {
-    icon: 'fa-building',
-    title: 'Multi-Tenant',
-    description:
-      'Vollständige Mandantentrennung auf Datenbankebene. Ihre Daten bleiben sicher isoliert von anderen Organisationen.',
-  },
-  {
-    icon: 'fa-table-cells-large',
-    title: 'App Switcher',
-    description:
-      'Blitzschnell zwischen allen Modulen wechseln – direkt aus der App-Shell ohne Reload und ohne erneuten Login.',
-  },
-];
-
-const techStack = [
-  { icon: 'fa-atom', label: 'React 19', desc: 'Modernste UI-Architektur' },
-  {
-    icon: 'fa-wand-magic-sparkles',
-    label: 'Framer Motion',
-    desc: 'Flüssige Animationen',
-  },
-  { icon: 'fa-server', label: 'Go API', desc: 'Hochperformantes Backend' },
-  { icon: 'fa-shield-halved', label: 'DSGVO', desc: 'Server in Deutschland' },
-  { icon: 'fa-palette', label: 'waldheim-ui', desc: 'Eigenes Design System' },
 ];
 
 const complianceItems = [
@@ -290,6 +256,10 @@ const complianceItems = [
   <section
     class="relative isolate pt-14 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden"
   >
+
+    <!-- Three.js Interactive WebGL Background -->
+    <InteractiveHeroCanvas particleColor="#0ea5e9" lineColor="#6366f1" />
+
     <div
       class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
       aria-hidden="true"
@@ -354,13 +324,11 @@ const complianceItems = [
               aria-hidden="true"></i>
           </a>
           <a
-            href="https://suite.waldheim.dev"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#preisrechner"
             class="w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center justify-center gap-2"
           >
-            <i class="fa-solid fa-play" aria-hidden="true"></i>
-            Demo ausprobieren
+            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+            Kosten berechnen
           </a>
         </div>
 
@@ -392,7 +360,7 @@ const complianceItems = [
             class="flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl"
           >
             <i class="fa-solid fa-cubes text-meg-accent" aria-hidden="true"></i>
-            <span class="font-semibold">6+ Module</span>
+            <span class="font-semibold">9 Module</span>
           </div>
         </div>
       </div>
@@ -445,7 +413,7 @@ const complianceItems = [
             {
               icon: 'fa-eye-slash',
               label: 'Kein Gesamtüberblick',
-              desc: 'Wer möchte wissen, wie profitabel ein Kunde wirklich ist? Das erfordert heute 4 verschiedene Systeme und ein Tabellenkalulierblatt.',
+              desc: 'Wer möchte wissen, wie profitabel ein Kunde wirklich ist? Das erfordert heute 4 verschiedene Systeme und ein Tabellenkalkulierblatt.',
             },
           ].map((p, i) => (
             <div
@@ -497,7 +465,7 @@ const complianceItems = [
             {
               icon: 'fa-chart-line',
               label: 'Cross-Suite KPIs auf einen Blick',
-              desc: 'Revenue pro Kunde, Support-Aufwand, Projektprofitabilität – alles live im Nexus Dashboard, ohne BI-Tool dazwischen.',
+              desc: 'Revenue pro Kunde, Support-Aufwand, Projektprofitabilität – alles live im Dashboard, ohne BI-Tool dazwischen.',
             },
           ].map((s, i) => (
             <div
@@ -534,7 +502,8 @@ const complianceItems = [
           <p
             class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
           >
-            <i class="fa-solid fa-table-cells-large mr-2" aria-hidden="true"></i>
+            <i class="fa-solid fa-table-cells-large mr-2" aria-hidden="true"
+            ></i>
             App Shell & App Switch
           </p>
           <h2
@@ -989,19 +958,19 @@ const complianceItems = [
               </div>
             </div>
             <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Komplettes Flottenmanagement mit Echtzeit-GPS-Tracking,
-              CO₂-Reporting und ESG-konformer Berichterstattung. Erfüllen Sie
-              die Nachhaltigkeitspflichten und optimieren Sie gleichzeitig Ihre
+              Komplettes Flottenmanagement mit Fahrzeugverwaltung, CO₂-Reporting
+              und ESG-konformer Berichterstattung. Erfüllen Sie die
+              Nachhaltigkeitspflichten und optimieren Sie gleichzeitig Ihre
               Flottenkosten.
             </p>
             <div class="grid grid-cols-2 gap-3">
               {
                 [
-                  'GPS-Echtzeit-Tracking',
+                  'Digitale Fahrzeugakte',
                   'CO₂-Emissionsberechnung',
                   'ESG-Reporting',
                   'Routenplanung',
-                  'Fahrzeugverwaltung',
+                  'Führerscheinkontrolle',
                   'Wartungsalerts',
                 ].map((f) => (
                   <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
@@ -1026,7 +995,7 @@ const complianceItems = [
               </p>
               <span
                 class="text-xs bg-teal-500/10 text-teal-400 border border-teal-500/20 px-2 py-1 rounded-lg font-bold"
-                >GPS Live</span
+                >Live</span
               >
             </div>
             <div class="grid grid-cols-2 gap-3">
@@ -1130,89 +1099,6 @@ const complianceItems = [
                       aria-hidden="true"
                     />
                     <span>{f}</span>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-
-        <!-- Aether Deep-dive -->
-        <div
-          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-rose-500/20 rounded-3xl p-8 items-center"
-        >
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center"
-              >
-                <i
-                  class="fa-solid fa-atom text-rose-400 text-xl"
-                  aria-hidden="true"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-black text-meg-text-primary-dark">
-                  Aether
-                </h3>
-                <p class="text-sm text-rose-400 font-semibold">
-                  Dokumente, Assets & Wissen
-                </p>
-              </div>
-            </div>
-            <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Aether gibt Dokumenten und Wissen wieder Kontext. Dateien hängen
-              an Objekten, Projekten und Kunden statt in Laufwerken,
-              Mailanhängen oder unklaren Ordnern zu verschwinden.
-            </p>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  'Versionierung & Historie',
-                  'Freigaben & Review-Prozesse',
-                  'Objektverknüpfte Akten',
-                  'Suche über Inhalte & Metadaten',
-                  'Berechtigungen pro Kontext',
-                  'Export & Archivierung',
-                ].map((f) => (
-                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
-                    <i
-                      class="fa-solid fa-circle-check text-rose-400 text-xs shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span>{f}</span>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-          <div
-            class="bg-meg-surface-dark/60 rounded-2xl border border-rose-500/10 p-5"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <p
-                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
-              >
-                Dokumentencenter
-              </p>
-              <span
-                class="text-xs bg-rose-500/10 text-rose-400 border border-rose-500/20 px-2 py-1 rounded-lg font-bold"
-                >Versioniert</span
-              >
-            </div>
-            <div class="space-y-3">
-              {
-                [
-                  { name: 'Projektakte Nord', state: 'Freigabe offen', color: 'rose' },
-                  { name: 'Mietvertrag Schillerpark', state: 'Veröffentlicht', color: 'green' },
-                  { name: 'Rechnungspaket Mai', state: 'Mit Treasury verknüpft', color: 'yellow' },
-                ].map((row) => (
-                  <div class="flex items-center justify-between py-2.5 border-b border-meg-border-dark last:border-0">
-                    <p class="text-sm text-meg-text-primary-dark font-semibold">
-                      {row.name}
-                    </p>
-                    <span class={`text-xs font-bold text-${row.color}-400`}>
-                      {row.state}
-                    </span>
                   </div>
                 ))
               }
@@ -1380,674 +1266,100 @@ const complianceItems = [
             </div>
           </div>
         </div>
-
-        <!-- Relay Deep-dive -->
-        <div
-          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-cyan-500/20 rounded-3xl p-8 items-center"
-        >
-          <div
-            class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-cyan-500/10 p-5"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <p
-                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
-              >
-                Kanal-Mix
-              </p>
-              <span
-                class="text-xs bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-1 rounded-lg font-bold"
-                >4 Kanäle</span
-              >
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  { label: 'E-Mail', value: '98.2%', sub: 'Zustellrate' },
-                  { label: 'In-App', value: '100%', sub: 'sofort' },
-                  { label: 'Web Push', value: 'Opt-in', sub: 'DSGVO-konform' },
-                  { label: 'SMS', value: 'Optional', sub: 'kritische Fälle' },
-                ].map((k) => (
-                  <div class="bg-meg-bg-dark/60 rounded-xl p-3">
-                    <p class="text-xs text-meg-text-secondary mb-1">
-                      {k.label}
-                    </p>
-                    <p class="text-xl font-black text-cyan-400">{k.value}</p>
-                    <p class="text-xs text-meg-text-secondary">{k.sub}</p>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-          <div class="order-1 lg:order-2">
-            <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center"
-              >
-                <i
-                  class="fa-solid fa-tower-broadcast text-cyan-400 text-xl"
-                  aria-hidden="true"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-black text-meg-text-primary-dark">
-                  Relay
-                </h3>
-                <p class="text-sm text-cyan-400 font-semibold">
-                  Kommunikation & Notifications
-                </p>
-              </div>
-            </div>
-            <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Relay zentralisiert Versand, Präferenzen und Delivery-Log für die
-              komplette Suite. Kein eigenes Mailer-Chaos pro Modul, sondern ein
-              gemeinsamer Kommunikations-Hub mit Nutzersteuerung.
-            </p>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  'E-Mail & Templates',
-                  'In-App-Notifications',
-                  'Web Push & SMS',
-                  'Opt-in / Opt-out',
-                  'Delivery-Log',
-                  'Bounce & Retry',
-                ].map((f) => (
-                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
-                    <i
-                      class="fa-solid fa-circle-check text-cyan-400 text-xs shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span>{f}</span>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-
-        <!-- Conductor Deep-dive -->
-        <div
-          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-indigo-500/20 rounded-3xl p-8 items-center"
-        >
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center"
-              >
-                <i
-                  class="fa-solid fa-gears text-indigo-400 text-xl"
-                  aria-hidden="true"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-black text-meg-text-primary-dark">
-                  Conductor
-                </h3>
-                <p class="text-sm text-indigo-400 font-semibold">
-                  Workflows & Automatisierung
-                </p>
-              </div>
-            </div>
-            <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Conductor verknüpft Events, Bedingungen und Aktionen über die
-              gesamte Suite hinweg. Repetitive Übergaben werden zu sichtbaren,
-              auditierbaren Workflows statt zu Copy-Paste-Routinen.
-            </p>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  'Visueller Workflow-Builder',
-                  'Event-Trigger',
-                  'Bedingungen & Branching',
-                  'Retry & Fehlerbehandlung',
-                  'Zeitgesteuerte Läufe',
-                  'HTTP-Webhooks',
-                ].map((f) => (
-                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
-                    <i
-                      class="fa-solid fa-circle-check text-indigo-400 text-xs shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span>{f}</span>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-          <div
-            class="bg-meg-surface-dark/60 rounded-2xl border border-indigo-500/10 p-5"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <p
-                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
-              >
-                Workflow Beispiel
-              </p>
-              <span
-                class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-1 rounded-lg font-bold"
-                >No-Code</span
-              >
-            </div>
-            <div class="flex items-center gap-2 text-center">
-              {
-                [
-                  { label: 'Trigger', detail: 'Deal gewonnen', color: 'violet' },
-                  { label: 'Bedingung', detail: '> €5k', color: 'yellow' },
-                  { label: 'Aktion', detail: 'ERP Auftrag', color: 'green' },
-                  { label: 'Aktion', detail: 'Relay Mail', color: 'cyan' },
-                ].map((n, i) => (
-                  <>
-                    <div class={`flex-1 min-w-0 rounded-xl px-2 py-3 bg-${n.color}-500/10 border border-${n.color}-500/20`}>
-                      <p class={`text-[10px] font-bold text-${n.color}-400 mb-1`}>
-                        {n.label}
-                      </p>
-                      <p class="text-[10px] text-meg-text-secondary truncate">
-                        {n.detail}
-                      </p>
-                    </div>
-                    {i < 3 && (
-                      <i
-                        class="fa-solid fa-arrow-right text-meg-text-secondary opacity-40 text-xs shrink-0"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </>
-                ))
-              }
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- USP placeholder (Nexus removed – internal tool only) -->
+  <!-- Compliance & Integrations Section -->
   <section
     class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="usp-placeholder"
-    style="display:none"
+    aria-labelledby="compliance-heading"
   >
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <p
-            class="gsap-fadein text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4"
+            class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
           >
             <i class="fa-solid fa-shield-halved mr-2" aria-hidden="true"></i>
-            Nexus Super-Admin
+            Compliance & Sicherheit
           </p>
           <h2
-            id="nexus-heading"
-            class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
+            id="compliance-heading"
+            class="gsap-fadein text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-8"
             style="animation-delay: 0.15s"
           >
-            Vollständige Plattformkontrolle.
+            Enterprise-grade Security.<br />DSGVO by Design.
           </h2>
-          <p
-            class="gsap-fadein text-lg text-meg-text-secondary mb-8 leading-relaxed"
-            style="animation-delay: 0.3s"
-          >
-            Nexus ist die Super-Admin-Konsole für Plattformbetreiber.
-            Operator-Modus und Tenant-Modus sind strikt getrennt. Jeder Zugriff
-            wird lückenlos auditiert.
-          </p>
-          <div class="grid grid-cols-1 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {
-              [
-                {
-                  icon: 'fa-building',
-                  label: 'Tenant-Management',
-                  desc: 'Mandanten anlegen, sperren, konfigurieren in Sekunden',
-                },
-                {
-                  icon: 'fa-list-check',
-                  label: 'Audit Trail',
-                  desc: 'Jede Aktion vollständig protokolliert und durchsuchbar',
-                },
-                {
-                  icon: 'fa-chart-bar',
-                  label: 'Plattform-KPIs',
-                  desc: 'Revenue, Seats, MAU und Technical Health auf einem Screen',
-                },
-                {
-                  icon: 'fa-user-shield',
-                  label: 'Operator vs. Tenant',
-                  desc: 'Explizite Modi-Trennung schützt vor unbeabsichtigtem Zugriff',
-                },
-              ].map((f, i) => (
+              complianceItems.map((item, i) => (
                 <div
-                  class={`gsap-fadein flex items-start gap-4 bg-meg-surface-dark/50 border border-indigo-500/10 rounded-xl p-4 hover:border-indigo-500/30 transition-colors`}
-                  style={`animation-delay: ${i * 0.1}s`}
+                  class={`gsap-fadein flex items-start gap-3 bg-meg-surface-dark/40 border border-meg-border-dark rounded-xl p-4`}
+                  style={`animation-delay: ${i * 0.07}s`}
                 >
-                  <div class="shrink-0 w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+                  <div class="shrink-0 w-9 h-9 rounded-lg bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center">
                     <i
-                      class={`fa-solid ${f.icon} text-indigo-400 text-sm`}
+                      class={`fa-solid ${item.icon} text-meg-accent text-sm`}
                       aria-hidden="true"
                     />
                   </div>
                   <div>
                     <p class="text-meg-text-primary-dark font-bold text-sm">
-                      {f.label}
+                      {item.label}
                     </p>
-                    <p class="text-meg-text-secondary text-sm">{f.desc}</p>
+                    <p class="text-meg-text-secondary text-xs">{item.desc}</p>
                   </div>
                 </div>
               ))
             }
           </div>
         </div>
-        <div class="gsap-fadein" style="animation-delay: 0.2s">
-          <div
-            class="bg-meg-surface-dark/60 border border-indigo-500/20 rounded-3xl p-6 shadow-2xl shadow-indigo-500/5"
+        <div>
+          <p
+            class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
           >
-            <div class="flex items-center justify-between mb-6">
-              <p class="text-sm font-bold text-meg-text-primary-dark">
-                Nexus · Operator Dashboard
-              </p>
-              <span
-                class="text-xs bg-green-500/10 text-green-400 border border-green-500/20 px-2 py-1 rounded-lg font-bold flex items-center gap-1.5"
-              >
-                <i
-                  class="fa-solid fa-circle text-[6px] animate-pulse"
-                  aria-hidden="true"></i>
-                Live
-              </span>
-            </div>
-            <div class="grid grid-cols-2 gap-3 mb-5">
-              {
-                [
-                  { label: 'Tenants', value: '47', color: 'indigo' },
-                  { label: 'Seats Total', value: '892', color: 'violet' },
-                  { label: 'MRR', value: '€ 43.7k', color: 'sky' },
-                  { label: 'Audit Events', value: '12.4k', color: 'emerald' },
-                ].map((k) => (
-                  <div
-                    class={`bg-meg-bg-dark/60 border border-${k.color}-500/10 rounded-xl p-4`}
-                  >
-                    <p class="text-xs text-meg-text-secondary mb-1">
-                      {k.label}
+            <i class="fa-solid fa-plug mr-2" aria-hidden="true"></i>
+            Integrationen
+          </p>
+          <h2
+            class="gsap-fadein text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-8"
+            style="animation-delay: 0.15s"
+          >
+            Verbunden mit Ihrem<br />bestehenden Stack.
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {
+              integrationItems.map((item, i) => (
+                <div
+                  class={`gsap-fadein bg-meg-surface-dark/40 border border-meg-border-dark rounded-xl p-3 flex items-center gap-3 hover:border-meg-accent/30 transition-colors`}
+                  style={`animation-delay: ${i * 0.05}s`}
+                >
+                  <i
+                    class={`fa-brands ${item.icon} text-meg-accent text-sm shrink-0`}
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <p class="text-meg-text-primary-dark text-xs font-bold">
+                      {item.label}
                     </p>
-                    <p class={`text-2xl font-black text-${k.color}-400`}>
-                      {k.value}
+                    <p class="text-meg-text-secondary text-[10px]">
+                      {item.desc}
                     </p>
                   </div>
-                ))
-              }
-            </div>
-            <div class="space-y-2">
-              {
-                [
-                  {
-                    action: 'Tenant "Acme Corp" erstellt',
-                    time: 'vor 2 Min',
-                    color: 'green',
-                  },
-                  {
-                    action: 'MFA-Login: kontakt@waldheim.dev',
-                    time: 'vor 8 Min',
-                    color: 'sky',
-                  },
-                  {
-                    action: 'Seat-Upgrade: "TechCo" → 20 Seats',
-                    time: 'vor 15 Min',
-                    color: 'violet',
-                  },
-                ].map((e) => (
-                  <div class="flex items-center gap-3 text-xs">
-                    <i
-                      class={`fa-solid fa-circle-dot text-${e.color}-400`}
-                      aria-hidden="true"
-                    />
-                    <span class="text-meg-text-secondary flex-1">
-                      {e.action}
-                    </span>
-                    <span class="text-meg-text-secondary opacity-60">
-                      {e.time}
-                    </span>
-                  </div>
-                ))
-              }
-            </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- USP Section -->
-  <section
-    class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="usp-heading"
-  >
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p
-          class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
-        >
-          <i class="fa-solid fa-star mr-2" aria-hidden="true"></i>
-          Plattform-Vorteile
-        </p>
-        <h2
-          id="usp-heading"
-          class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark"
-          style="animation-delay: 0.15s"
-        >
-          Eine Plattform. Alles verbunden.
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {
-          usps.map((usp, i) => (
-            <div
-              class="gsap-fadein text-center"
-              style={`animation-delay: ${i * 0.15}s`}
-            >
-              <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-meg-accent/10 border border-meg-accent/20 mb-6">
-                <i
-                  class={`fa-solid ${usp.icon} text-meg-accent text-2xl`}
-                  aria-hidden="true"
-                />
-              </div>
-              <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">
-                {usp.title}
-              </h3>
-              <p class="text-meg-text-secondary leading-relaxed">
-                {usp.description}
-              </p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech Stack Section -->
-  <section
-    class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="tech-heading"
-  >
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p
-          class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
-        >
-          <i class="fa-solid fa-microchip mr-2" aria-hidden="true"></i>
-          Technologie
-        </p>
-        <h2
-          id="tech-heading"
-          class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark"
-          style="animation-delay: 0.15s"
-        >
-          Gebaut für die Zukunft
-        </h2>
-        <p
-          class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto mt-4"
-          style="animation-delay: 0.3s"
-        >
-          Modernste Technologie-Architektur für maximale Performance, Sicherheit
-          und Entwicklerfreundlichkeit.
-        </p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4">
-        {
-          techStack.map((tech, i) => (
-            <div
-              class="gsap-fadein flex items-center gap-3 bg-meg-surface-dark/50 border border-meg-border-dark rounded-xl px-5 py-3 hover:border-meg-accent/30 transition-all"
-              style={`animation-delay: ${i * 0.1}s`}
-            >
-              <i
-                class={`fa-solid ${tech.icon} text-meg-accent text-lg`}
-                aria-hidden="true"
-              />
-              <div>
-                <p class="text-meg-text-primary-dark font-bold text-sm">
-                  {tech.label}
-                </p>
-                <p class="text-meg-text-secondary text-xs">{tech.desc}</p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Compliance Section -->
-  <section
-    class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="compliance-heading"
-  >
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p
-          class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
-        >
-          <i class="fa-solid fa-shield-halved mr-2" aria-hidden="true"></i>
-          Compliance & Sicherheit
-        </p>
-        <h2
-          id="compliance-heading"
-          class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4"
-          style="animation-delay: 0.15s"
-        >
-          Sicherheit ist kein Feature – sie ist Standard.
-        </h2>
-        <p
-          class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
-          style="animation-delay: 0.3s"
-        >
-          E-Rechnungspflicht, DSGVO, Audit Trail und Mandantentrennung: Die
-          Waldheim Suite erfüllt alle regulatorischen Anforderungen für den
-          DACH-Mittelstand.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          complianceItems.map((item, i) => (
-            <div
-              class="gsap-fadein flex items-start gap-4 bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6 hover:border-meg-accent/30 transition-all"
-              style={`animation-delay: ${i * 0.1}s`}
-            >
-              <div class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-meg-accent/10 border border-meg-accent/20">
-                <i
-                  class={`fa-solid ${item.icon} text-meg-accent`}
-                  aria-hidden="true"
-                />
-              </div>
-              <div>
-                <h3 class="text-meg-text-primary-dark font-bold text-sm mb-1">
-                  {item.label}
-                </h3>
-                <p class="text-meg-text-secondary text-xs leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Integrations Section -->
-  <section
-    class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark"
-    aria-labelledby="integrations-heading"
-  >
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p
-          class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
-        >
-          <i class="fa-solid fa-plug mr-2" aria-hidden="true"></i>
-          Integrationen & API
-        </p>
-        <h2
-          id="integrations-heading"
-          class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4"
-          style="animation-delay: 0.15s"
-        >
-          Verbindet sich mit Ihrer Welt.
-        </h2>
-        <p
-          class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
-          style="animation-delay: 0.3s"
-        >
-          Offene REST API, Webhooks und native Integrationen für alle
-          marktführenden Drittanbieter.
-        </p>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {
-          integrationItems.map((item, i) => (
-            <div
-              class={`gsap-fadein bg-meg-bg-dark border border-meg-border-dark rounded-2xl p-4 flex flex-col items-center text-center gap-2 hover:border-meg-accent/30 transition-all`}
-              style={`animation-delay: ${i * 0.05}s`}
-            >
-              <div class="w-10 h-10 rounded-xl bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center">
-                <i
-                  class={`fa-brands ${item.icon} text-meg-accent`}
-                  aria-hidden="true"
-                />
-              </div>
-              <p class="text-meg-text-primary-dark font-bold text-sm">
-                {item.label}
-              </p>
-              <p class="text-meg-text-secondary text-xs">{item.desc}</p>
-            </div>
-          ))
-        }
-      </div>
-      <div class="mt-12 text-center">
-        <a
-          href="/kontakt/"
-          class="inline-flex items-center gap-2 text-meg-accent font-bold text-sm hover:underline"
-        >
-          <i class="fa-solid fa-book" aria-hidden="true"></i>
-          API-Dokumentation anfragen
-          <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Migration & Onboarding Section -->
-  <section
-    class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
-    aria-labelledby="migration-heading"
-  >
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p
-          class="gsap-fadein text-sm font-bold uppercase tracking-widest text-meg-accent mb-4"
-        >
-          <i class="fa-solid fa-route mr-2" aria-hidden="true"></i>
-          Migration & Onboarding
-        </p>
-        <h2
-          id="migration-heading"
-          class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4"
-          style="animation-delay: 0.15s"
-        >
-          Risikoarme Einführung in 3 Phasen.
-        </h2>
-        <p
-          class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
-          style="animation-delay: 0.3s"
-        >
-          Kein Big-Bang-Replace. Wir begleiten Sie Schritt für Schritt – von der
-          Analyse über den Pilot bis zum vollständigen Rollout.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        {
-          [
-            {
-              step: '01',
-              icon: 'fa-magnifying-glass',
-              label: 'Assessment',
-              color: 'sky',
-              items: [
-                'Bestandsaufnahme bestehender Systeme',
-                'Datenmapping und -qualität',
-                'Rollout-Priorisierung',
-                'Risikoanalyse',
-              ],
-            },
-            {
-              step: '02',
-              icon: 'fa-flask',
-              label: 'Pilot',
-              color: 'violet',
-              items: [
-                'Parallelbetrieb Alt- und Neusystem',
-                'Datenübernahme ausgewählter Mandanten',
-                'User Acceptance Testing',
-                'Schulungen und Enablement',
-              ],
-            },
-            {
-              step: '03',
-              icon: 'fa-rocket',
-              label: 'Rollout',
-              color: 'emerald',
-              items: [
-                'Sukzessive Migration aller Daten',
-                'Ablösung der Altsysteme',
-                'Hypercare-Phase (4 Wochen)',
-                'Kontinuierliche Optimierung',
-              ],
-            },
-          ].map((phase, i) => (
-            <div
-              class={`gsap-fadein bg-meg-surface-dark/50 border border-${phase.color}-500/20 rounded-3xl p-8`}
-              style={`animation-delay: ${i * 0.1}s`}
-            >
-              <div class="flex items-center gap-4 mb-6">
-                <span class={`text-4xl font-black text-${phase.color}-500/30`}>
-                  {phase.step}
-                </span>
-                <div
-                  class={`w-12 h-12 rounded-xl bg-${phase.color}-500/10 border border-${phase.color}-500/20 flex items-center justify-center`}
-                >
-                  <i
-                    class={`fa-solid ${phase.icon} text-${phase.color}-400 text-lg`}
-                    aria-hidden="true"
-                  />
-                </div>
-                <h3 class={`text-xl font-black text-${phase.color}-400`}>
-                  {phase.label}
-                </h3>
-              </div>
-              <ul class="space-y-3">
-                {phase.items.map((item) => (
-                  <li class="flex items-start gap-3 text-sm text-meg-text-secondary">
-                    <i
-                      class={`fa-solid fa-circle-check text-${phase.color}-400 text-xs mt-0.5 shrink-0`}
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-      <div class="text-center">
-        <a
-          href="/kontakt/"
-          class="inline-flex items-center gap-2 px-8 py-4 bg-meg-surface-dark/50 border border-meg-accent/30 text-meg-text-primary-dark font-bold rounded-xl hover:border-meg-accent/60 transition-all"
-        >
-          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-          Migration Assessment anfragen
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Pricing Section -->
   <section
-    class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
+    class="py-24 sm:py-32 px-6 bg-meg-surface-dark border-b border-meg-border-dark"
+    id="preisrechner"
     aria-labelledby="pricing-heading"
   >
     <div class="max-w-7xl mx-auto">
@@ -2063,100 +1375,184 @@ const complianceItems = [
           class="gsap-fadein text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4"
           style="animation-delay: 0.15s"
         >
-          Ein Preis. Alle Module.
+          Einfache Tiers.
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-meg-accent to-sky-400">Volle Flexibilität.</span>
         </h2>
         <p
           class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
           style="animation-delay: 0.3s"
         >
-          Keine Tier-Verwirrung. Die Waldheim Suite kommt als vollständiges
-          Paket – pro Seat, pro Monat.
+          Transparente Abrechnung ohne versteckte Kosten. Starten Sie ab
+          <strong class="text-meg-text-primary-dark">€29/Seat/Monat</strong> und wählen Sie exakt das Paket, das zu Ihrem Business passt.
         </p>
       </div>
 
-      <div class="max-w-2xl mx-auto">
-        <div class="gsap-fadein relative group">
-          <div
-            class="absolute -inset-0.5 bg-linear-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700"
-            aria-hidden="true"
-          >
-          </div>
-          <div
-            class="relative bg-meg-surface-dark border border-meg-accent/30 rounded-3xl p-10 shadow-2xl shadow-meg-accent/10"
-          >
-            <div class="flex items-center justify-between mb-8">
-              <span
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-meg-accent/10 border border-meg-accent/20 text-meg-accent text-xs font-black uppercase tracking-widest"
-              >
-                <i
-                  class="fa-solid fa-circle text-[6px] animate-pulse"
-                  aria-hidden="true"></i>
-                Early Access
-              </span>
-              <span class="text-meg-text-secondary text-sm font-semibold"
-                >Monatlich kündbar</span
-              >
-            </div>
+      <!-- 3-Tier Preview Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
-            <div class="mb-8">
-              <p
-                class="text-meg-text-secondary text-sm font-semibold uppercase tracking-widest mb-2"
-              >
-                Waldheim Suite
-              </p>
-              <div class="flex items-end gap-2">
-                <span
-                  class="text-7xl font-black text-meg-text-primary-dark tracking-tighter"
-                  >€49</span
-                >
-                <div class="pb-3 text-meg-text-secondary">
-                  <span class="text-lg font-bold">/Seat</span>
-                  <br />
-                  <span class="text-sm">/Monat</span>
-                </div>
+        <!-- Starter -->
+        <div class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300">
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Starter</span>
+          <div class="flex items-baseline gap-1.5 mb-4">
+            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€29</span>
+            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+          </div>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">CRM-Kern, E-Rechnungen, Basis-Ticketing & DE-Server.</p>
+          <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition">Demo starten</a>
+        </div>
+
+        <!-- Professional (highlight) -->
+        <div class="gsap-fadein relative flex flex-col bg-meg-surface-dark/80 border border-meg-accent/50 rounded-2xl p-7 shadow-2xl shadow-meg-accent/5 transition duration-300">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-meg-accent text-slate-900 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest">Beliebt</div>
+          <span class="text-xs font-bold uppercase tracking-widest text-meg-accent mb-3">Professional</span>
+          <div class="flex items-baseline gap-1.5 mb-4">
+            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€59</span>
+            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+          </div>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">Voller Funktionsumfang, Automation & Workflow-Builder für KMU.</p>
+          <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-2.5 text-center bg-gradient-to-r from-meg-accent to-sky-600 text-white text-sm font-bold rounded-xl hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20">Professional starten</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300">
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Enterprise</span>
+          <div class="flex items-baseline gap-1.5 mb-4">
+            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€89</span>
+            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+          </div>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">Mandanten-Isolation, SSO/SAML, API & SLA-Support.</p>
+          <a href="/kontakt/" class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition">Angebot anfragen</a>
+        </div>
+
+      </div>
+
+      <!-- Pricing Calculator -->
+      <div class="gsap-fadein bg-meg-bg-dark border border-meg-accent/20 rounded-3xl p-8 shadow-2xl shadow-meg-accent/5">
+        <div class="text-center mb-8">
+          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full mb-3">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            Preisrechner
+          </span>
+          <h3 class="text-2xl font-black tracking-tighter text-meg-text-primary-dark">Was kostet die Suite für Ihr Team?</h3>
+          <p class="text-meg-text-secondary text-sm mt-2">Bewegen Sie die Regler – der Preis aktualisiert sich in Echtzeit.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <!-- Controls -->
+          <div class="space-y-8">
+            <!-- Tier Selection -->
+            <div>
+              <label class="block text-sm font-bold text-meg-text-primary-dark mb-3">Paket wählen</label>
+              <div class="grid grid-cols-3 gap-2" id="calc-tier-group">
+                <button id="calc-tier-starter" data-tier="starter" data-price="29"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent">
+                  Starter<br/><span class="text-[10px] font-normal opacity-70">€29/Seat</span>
+                </button>
+                <button id="calc-tier-professional" data-tier="professional" data-price="59"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40">
+                  Professional<br/><span class="text-[10px] font-normal opacity-70">€59/Seat</span>
+                </button>
+                <button id="calc-tier-enterprise" data-tier="enterprise" data-price="89"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40">
+                  Enterprise<br/><span class="text-[10px] font-normal opacity-70">€89/Seat</span>
+                </button>
               </div>
             </div>
 
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-              {
-                includedFeatures.map((item) => (
-                  <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
-                    <i
-                      class="fa-solid fa-check-circle text-meg-accent text-base shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))
-              }
-            </ul>
+            <!-- Seats Slider -->
+            <div>
+              <div class="flex justify-between items-center mb-3">
+                <label for="calc-seats" class="text-sm font-bold text-meg-text-primary-dark">Anzahl Nutzer (Seats)</label>
+                <span id="calc-seats-display" class="text-meg-accent font-black text-lg">5</span>
+              </div>
+              <input id="calc-seats" type="range" min="1" max="100" value="5" step="1"
+                class="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-[#0ea5e9] bg-meg-border-dark" />
+              <div class="flex justify-between text-[10px] text-meg-text-secondary mt-1">
+                <span>1</span><span>25</span><span>50</span><span>75</span><span>100</span>
+              </div>
+            </div>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://suite.waldheim.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-linear-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] transition-all"
-              >
-                <i class="fa-solid fa-play" aria-hidden="true"></i>
-                Demo starten
-              </a>
-              <a
-                href="/suite/preise/"
-                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
-              >
-                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
-                Details ansehen
-              </a>
+            <!-- Early Adopter Toggle -->
+            <div class="flex items-center justify-between p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+              <div>
+                <p class="text-sm font-bold text-meg-text-primary-dark">Early-Adopter-Rabatt</p>
+                <p class="text-xs text-meg-text-secondary">40% Rabatt im ersten Jahr</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="calc-discount" class="sr-only peer" />
+                <div class="w-11 h-6 bg-meg-border-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
+              </label>
+            </div>
+
+            <!-- Immobilien Add-on -->
+            <div class="flex items-center justify-between p-4 bg-orange-500/5 border border-orange-500/20 rounded-xl">
+              <div>
+                <p class="text-sm font-bold text-meg-text-primary-dark">+ Immobilien & WG-Verwaltung</p>
+                <p class="text-xs text-meg-text-secondary">ab €15/Mo. + €0,30–€1,00 pro Einheit</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <input id="calc-units" type="number" min="0" max="500" value="0" placeholder="0 Einh."
+                  class="w-20 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-lg px-2 py-1.5 text-center focus:border-orange-400 focus:outline-none" />
+              </div>
             </div>
           </div>
+
+          <!-- Result Display -->
+          <div class="bg-meg-surface-dark/60 border border-meg-border-dark rounded-2xl p-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-meg-text-secondary mb-2">Ihre monatlichen Kosten</p>
+
+            <div id="calc-original-price" class="text-meg-text-secondary line-through text-lg mb-1 hidden"></div>
+            <div class="flex items-baseline gap-2 mb-1">
+              <span id="calc-total" class="text-5xl font-black text-meg-text-primary-dark tracking-tighter">€145</span>
+              <span class="text-meg-text-secondary font-semibold">/ Monat</span>
+            </div>
+            <div id="calc-discount-badge" class="hidden mb-4">
+              <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded-lg">Early-Adopter-Rabatt aktiv</span>
+            </div>
+
+            <div class="border-t border-meg-border-dark/50 pt-5 mt-4 space-y-2 text-sm">
+              <div class="flex justify-between text-meg-text-secondary">
+                <span id="calc-breakdown-seats">5 Seats × €29</span>
+                <span id="calc-breakdown-base" class="text-meg-text-primary-dark font-bold">€145</span>
+              </div>
+              <div id="calc-breakdown-units-row" class="flex justify-between text-meg-text-secondary hidden">
+                <span id="calc-breakdown-units-label">Immobilien-Add-on</span>
+                <span id="calc-breakdown-units-val" class="text-orange-400 font-bold">€15</span>
+              </div>
+              <div id="calc-breakdown-discount-row" class="flex justify-between text-meg-text-secondary hidden">
+                <span>Early-Adopter-Rabatt (–40%)</span>
+                <span id="calc-breakdown-discount-val" class="text-emerald-400 font-bold">–€0</span>
+              </div>
+            </div>
+
+            <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer"
+              class="mt-6 w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20">
+              <i class="fa-solid fa-play text-sm"></i>
+              Jetzt kostenlos testen
+            </a>
+            <a href="/suite/preise/" class="mt-3 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-transparent border border-meg-border-dark text-meg-text-secondary text-sm hover:border-meg-accent/40 transition">
+              <i class="fa-solid fa-list-check text-xs"></i>
+              Alle Preise & Fachmodule ansehen
+            </a>
+
+            <p class="text-center text-meg-text-secondary text-xs mt-4">Alle Preise zzgl. MwSt. · Monatlich kündbar</p>
+          </div>
         </div>
-        <p class="text-center text-meg-text-secondary text-sm mt-8">
-          Alle Preise zzgl. MwSt. · Jährliche Abrechnung auf Anfrage.
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-meg-text-secondary text-sm">
+          <span class="text-emerald-400 font-semibold">Bis zu 40% Early-Adopter-Rabatt im 1. Jahr</span>
+          · Monatlich kündbar · Jährliche Abrechnung auf Anfrage
         </p>
       </div>
     </div>
   </section>
+
+  <!-- ROI Calculator Section -->
+  <ROICalculator />
+
+  <PromoServices />
 
   <!-- CTA Banner -->
   <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-heading">
@@ -2204,3 +1600,81 @@ const complianceItems = [
     </div>
   </section>
 </Layout>
+
+<script>
+  // Pricing Calculator Logic
+  const seatsInput = document.getElementById('calc-seats') as HTMLInputElement;
+  const seatsDisplay = document.getElementById('calc-seats-display')!;
+  const discountToggle = document.getElementById('calc-discount') as HTMLInputElement;
+  const unitsInput = document.getElementById('calc-units') as HTMLInputElement;
+  const totalEl = document.getElementById('calc-total')!;
+  const originalPriceEl = document.getElementById('calc-original-price')!;
+  const discountBadge = document.getElementById('calc-discount-badge')!;
+  const breakdownSeats = document.getElementById('calc-breakdown-seats')!;
+  const breakdownBase = document.getElementById('calc-breakdown-base')!;
+  const breakdownUnitsRow = document.getElementById('calc-breakdown-units-row')!;
+  const breakdownUnitsLabel = document.getElementById('calc-breakdown-units-label')!;
+  const breakdownUnitsVal = document.getElementById('calc-breakdown-units-val')!;
+  const breakdownDiscountRow = document.getElementById('calc-breakdown-discount-row')!;
+  const breakdownDiscountVal = document.getElementById('calc-breakdown-discount-val')!;
+  const tierBtns = document.querySelectorAll<HTMLButtonElement>('.calc-tier-btn');
+
+  let currentPrice = 29;
+
+  function updateCalc() {
+    const seats = parseInt(seatsInput.value) || 1;
+    const units = parseInt(unitsInput.value) || 0;
+    const discount = discountToggle.checked;
+
+    seatsDisplay.textContent = seats.toString();
+
+    const basePrice = seats * currentPrice;
+    const unitsAddon = units > 0 ? 15 + Math.round(units * 0.5) : 0;
+    const subtotal = basePrice + unitsAddon;
+    const discountAmt = discount ? Math.round(subtotal * 0.4) : 0;
+    const total = subtotal - discountAmt;
+
+    breakdownSeats.textContent = `${seats} Seat${seats > 1 ? 's' : ''} × €${currentPrice}`;
+    breakdownBase.textContent = `€${basePrice}`;
+
+    if (units > 0) {
+      breakdownUnitsRow.classList.remove('hidden');
+      breakdownUnitsLabel.textContent = `Immobilien-Add-on (${units} Einh.)`;
+      breakdownUnitsVal.textContent = `€${unitsAddon}`;
+    } else {
+      breakdownUnitsRow.classList.add('hidden');
+    }
+
+    if (discount) {
+      originalPriceEl.classList.remove('hidden');
+      originalPriceEl.textContent = `€${subtotal}`;
+      discountBadge.classList.remove('hidden');
+      breakdownDiscountRow.classList.remove('hidden');
+      breakdownDiscountVal.textContent = `–€${discountAmt}`;
+    } else {
+      originalPriceEl.classList.add('hidden');
+      discountBadge.classList.add('hidden');
+      breakdownDiscountRow.classList.add('hidden');
+    }
+
+    totalEl.textContent = `€${total}`;
+  }
+
+  tierBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentPrice = parseInt(btn.dataset.price || '29');
+      tierBtns.forEach(b => {
+        b.className = 'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40';
+      });
+      btn.className = 'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent';
+      updateCalc();
+    });
+  });
+
+  seatsInput?.addEventListener('input', updateCalc);
+  discountToggle?.addEventListener('change', updateCalc);
+  unitsInput?.addEventListener('input', updateCalc);
+
+  // Initial calculation
+  updateCalc();
+</script>

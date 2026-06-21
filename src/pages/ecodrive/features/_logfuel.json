@@ -1,8 +1,0 @@
-{
-    "name": "Füge Tankdaten hinzu",
-    "description": "Du hast getankt? Dann füge die Tankdaten hinzu, um den Verbrauch und die Kosten zu berechnen.",
-    "image": "/ecodrive/ecodrive_fuel_log.PNG",
-    "tier": "free",
-    "planned": false,
-    "since": "1.0"
-   }

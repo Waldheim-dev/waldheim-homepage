@@ -1,4 +1,6 @@
 ---
+import PromoServices from '../../../components/PromoServices.astro';
+import InteractiveHeroCanvas from '../../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
@@ -108,6 +110,10 @@ const integrations = [
   </nav>
 
   <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
+    
+    <!-- Three.js Interactive WebGL Background -->
+    <InteractiveHeroCanvas particleColor="#10b981" lineColor="#06b6d4" />
+
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
       <div
         class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-emerald-500/20 to-teal-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
@@ -115,7 +121,7 @@ const integrations = [
       ></div>
     </div>
     <div class="max-w-7xl mx-auto py-16 sm:py-24">
-      <div class="mx-auto max-w-3xl text-center">
+      <div class="mx-auto max-w-3xl text-center gsap-fadein">
         <div class="gsap-fadein mb-4">
           <span class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-3 py-1.5 rounded-full text-xs font-bold">
             <i class="fa-solid fa-table-cells-large text-[10px]" aria-hidden="true"></i>
@@ -306,6 +312,9 @@ const integrations = [
       </div>
     </div>
   </section>
+
+  <!-- Custom Consulting & Development Promotion -->
+  <PromoServices />
 
   <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-eco-heading">
     <div class="max-w-4xl mx-auto text-center">
