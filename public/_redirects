@@ -3,14 +3,14 @@
 # Diese Datei behebt 404-Fehler durch 301 Redirects
 # Format: /alte-url /neue-url STATUS_CODE
 
-# TODO: URLs aus Google Search Console hier eintragen
-# Anleitung: Siehe SEO_ZUSAMMENFASSUNG.md
-
-# Beispiele (durch echte URLs ersetzen):
-# /alte-blog-url           /blog/neue-url/              301
-# /veraltetes-produkt      /silvacore/                  301
-# /spam-seite              /                            410
+# Suite Modul-Redirects (alte URLs → neue Suite-Struktur)
+/silvacore/           /suite/forge/         301
+/suite/silvacore/     /suite/forge/         301
+/ecodrive/            /suite/ecodrive/      301
+/socialverse/         /suite/socialverse/   301
+/aether/              /suite/aether/        301
 
 # Domain-Weiterleitungen (falls nötig)
 # http://waldheim.dev/*    https://www.waldheim.dev/:splat   301!
 # https://waldheim.dev/*   https://www.waldheim.dev/:splat   301!
+

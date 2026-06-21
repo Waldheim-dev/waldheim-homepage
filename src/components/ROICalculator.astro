@@ -1,0 +1,276 @@
+---
+// Interactive ROI & IT Efficiency Calculator Component
+---
+
+<section id="roi-rechner" class="py-24 px-6 bg-gradient-to-b from-[#090d16] to-[#020617] border-t border-slate-800/40 relative overflow-hidden" aria-labelledby="roi-heading">
+  <!-- Glowing Background Blur -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] rounded-full bg-meg-accent/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="mx-auto max-w-7xl relative z-10">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 gsap-fadein">
+      <span class="text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-4">
+        <i class="fa-solid fa-calculator text-xs"></i>
+        Interaktiver ROI-Rechner
+      </span>
+      <h2 id="roi-heading" class="text-4xl md:text-5xl font-black tracking-tight text-meg-text-primary-dark mb-6">
+        Berechnen Sie Ihr <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-indigo-400">Effizienz-Potenzial</span>
+      </h2>
+      <p class="text-lg text-slate-400">
+        Wie viel Zeit und Geld verlieren Sie durch manuelle Deployments und unstrukturierte Workflows? Ermitteln Sie Ihre Ersparnis mit moderner CI/CD und KI-Integration.
+      </p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
+      <!-- Input Controls (col-span-7) -->
+      <div class="lg:col-span-7 bg-[#0f172a]/30 border border-slate-800/40 p-8 sm:p-10 rounded-3xl backdrop-blur-xl meg-glass flex flex-col justify-between">
+        <div class="space-y-8">
+          <!-- Team Size Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-team-size" class="text-sm font-bold text-slate-300">Teamgröße (Entwickler)</label>
+              <span class="text-lg font-black text-meg-accent" id="val-team-size">10</span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-team-size" 
+              min="1" 
+              max="50" 
+              value="10" 
+              class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-meg-accent"
+            />
+          </div>
+
+          <!-- AI Hebel Toggle -->
+          <label for="toggle-ai-power" class="p-5 bg-slate-900/40 border border-slate-800/40 rounded-2xl flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-900/60 transition-colors select-none">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-sm font-bold text-slate-300">KI- & Agenten-Hebel (z.B. Amigo)</span>
+                <span class="text-[9px] font-black uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded">Multiplikator</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Solo-Entwickler & kleine Teams entfalten durch KI-Agenten einen 5x höheren Output, was manuelle Releases zum kritischen Flaschenhals macht.</p>
+            </div>
+            <div class="relative inline-flex items-center">
+              <input type="checkbox" id="toggle-ai-power" class="sr-only peer" />
+              <div class="w-11 h-6 bg-slate-800 rounded-full peer peer-focus:ring-0 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-meg-accent"></div>
+            </div>
+          </label>
+
+          <!-- Deployments Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-deployments" class="text-sm font-bold text-slate-300">Manuelle Releases (pro Entwickler/Monat)</label>
+              <span class="text-lg font-black text-meg-accent" id="val-deployments">5</span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-deployments" 
+              min="1" 
+              max="20" 
+              value="5" 
+              class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-meg-accent"
+            />
+            <p class="text-[11px] text-slate-500 mt-2">Dauer pro Release: ca. 1.5 Stunden (Builds, Tests, manuelle Freigaben, Deployments)</p>
+          </div>
+
+          <!-- Hourly Rate Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <label for="slider-rate" class="text-sm font-bold text-slate-300">Ø Stundensatz (€)</label>
+              <span class="text-lg font-black text-meg-accent" id="val-rate">80 €</span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-rate" 
+              min="50" 
+              max="150" 
+              value="80" 
+              step="5"
+              class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-meg-accent"
+            />
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/30 grid grid-cols-2 gap-4 text-sm text-slate-400">
+          <div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Zeitverlust / Monat</p>
+            <p class="text-lg font-black text-meg-text-primary-dark" id="out-lost-hours">75 Std.</p>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Aktuelle Kosten / Jahr</p>
+            <p class="text-lg font-black text-meg-text-primary-dark" id="out-lost-cost">72.000 €</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card (col-span-5) -->
+      <div class="lg:col-span-5 bg-gradient-to-br from-[#0e50e9]/20 to-[#6366f1]/10 border border-meg-accent/30 p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden group">
+        <!-- Glow Overlay -->
+        <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-meg-accent/25 blur-3xl pointer-events-none group-hover:scale-150 transition-transform duration-700"></div>
+
+        <div>
+          <span class="text-[9px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/15 border border-meg-accent/30 px-2.5 py-1 rounded-full inline-block mb-6">
+            Mögliche Optimierung
+          </span>
+          <h3 class="text-xl font-bold text-slate-200 mb-2">Jährliche Netto-Ersparnis</h3>
+          <p class="text-xs text-slate-400 mb-6">Durch 80% Automatisierung manueller DevOps & KI-Workflows</p>
+          
+          <div class="mb-8">
+            <span class="text-5xl sm:text-6xl font-black text-meg-text-primary-dark tracking-tight" id="out-savings">0</span>
+            <span class="text-2xl font-black text-meg-accent ml-1">€</span>
+          </div>
+
+          <ul class="space-y-3.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+              <span><strong>80% Zeitersparnis</strong> bei Release-Pipelines</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+              <span>Fehlerminimierung durch CI/CD Checks</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+              <span>Entwickler fokussieren sich auf Features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-10">
+          <a
+            href="https://calendly.com/markus-waldheim/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-lg shadow-meg-accent/25 hover:scale-[1.02] hover:shadow-meg-accent/40 active:scale-[0.98] transition-all cursor-pointer"
+            id="roi-cta-btn"
+          >
+            <i class="fa-solid fa-calendar-check animate-pulse"></i>
+            Potenzial-Audit vereinbaren
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap';
+
+  function initRoiCalculator() {
+    const slTeam = document.getElementById('slider-team-size') as HTMLInputElement | null;
+    const slDeploy = document.getElementById('slider-deployments') as HTMLInputElement | null;
+    const slRate = document.getElementById('slider-rate') as HTMLInputElement | null;
+    const toggleAIPower = document.getElementById('toggle-ai-power') as HTMLInputElement | null;
+
+    if (!slTeam || !slDeploy || !slRate) return;
+
+    // Display fields
+    const valTeam = document.getElementById('val-team-size');
+    const valDeploy = document.getElementById('val-deployments');
+    const valRate = document.getElementById('val-rate');
+    const outHours = document.getElementById('out-lost-hours');
+    const outCost = document.getElementById('out-lost-cost');
+    const outSavings = document.getElementById('out-savings');
+
+    // Values holder for GSAP interpolation
+    const results = {
+      lostHours: 0,
+      lostCost: 0,
+      savings: 0
+    };
+
+    function calculate() {
+      const team = parseInt(slTeam!.value);
+      const deployments = parseInt(slDeploy!.value);
+      const rate = parseInt(slRate!.value);
+      const isAIPower = toggleAIPower ? toggleAIPower.checked : false;
+
+      const multiplier = isAIPower ? 5 : 1;
+      const effectiveTeam = team * multiplier;
+
+      // Display inputs
+      if (valTeam) {
+        if (isAIPower) {
+          valTeam.innerHTML = `${team} <span class="text-xs text-amber-400 font-bold ml-1.5">(5x KI-Hebel = ${effectiveTeam} Effektiv)</span>`;
+        } else {
+          valTeam.textContent = String(team);
+        }
+      }
+      if (valDeploy) valDeploy.textContent = String(deployments);
+      if (valRate) valRate.textContent = `${rate} €`;
+
+      // Formel:
+      // Zeitverlust pro Monat = Effektives Team * Deployments * 1.5 Std.
+      const targetHours = effectiveTeam * deployments * 1.5;
+      // Kosten pro Jahr = Stunden pro Monat * Rate * 12 Monate
+      const targetCost = targetHours * rate * 12;
+      // Ersparnis pro Jahr = 80% der jährlichen Kosten
+      const targetSavings = targetCost * 0.8;
+
+      // GSAP smooth number animation
+      gsap.to(results, {
+        lostHours: targetHours,
+        lostCost: targetCost,
+        savings: targetSavings,
+        duration: 0.45,
+        ease: 'power1.out',
+        onUpdate: () => {
+          if (outHours) outHours.textContent = `${Math.round(results.lostHours)} Std.`;
+          if (outCost) outCost.textContent = `${Math.round(results.lostCost).toLocaleString('de-DE')} €`;
+          if (outSavings) outSavings.textContent = Math.round(results.savings).toLocaleString('de-DE');
+        }
+      });
+    }
+
+    // Attach listeners
+    slTeam.addEventListener('input', calculate);
+    slDeploy.addEventListener('input', calculate);
+    slRate.addEventListener('input', calculate);
+    if (toggleAIPower) toggleAIPower.addEventListener('change', calculate);
+
+    // Initial calculation
+    calculate();
+  }
+
+  // Trigger on load
+  initRoiCalculator();
+  document.addEventListener('astro:page-load', initRoiCalculator);
+</script>
+
+<style>
+  /* Custom styled range slider inputs to fit Modern Enterprise Glass aesthetics */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #38bdf8;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0ea5e9;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    background: #38bdf8;
+  }
+</style>

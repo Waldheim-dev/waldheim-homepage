@@ -1,9 +1,11 @@
 ---
+import InteractiveHeroCanvas from './InteractiveHeroCanvas.astro';
+
 interface Props {
   title: string;
   subtitle: string;
   description: string;
-  gradient: 'blue' | 'purple' | 'green' | 'orange' | 'pink';
+  gradient: 'blue' | 'purple' | 'green' | 'orange' | 'pink' | 'rose';
   icon: string;
   badge?: string;
 }
@@ -15,7 +17,8 @@ const gradientClasses = {
   purple: 'from-violet-400 to-fuchsia-500',
   green: 'from-emerald-400 to-meg-accent',
   orange: 'from-orange-400 to-amber-500',
-  pink: 'from-rose-400 to-pink-500'
+  pink: 'from-rose-400 to-pink-500',
+  rose: 'from-rose-400 to-pink-500'
 };
 
 const gradientBg = {
@@ -23,11 +26,24 @@ const gradientBg = {
   purple: 'from-violet-600 to-fuchsia-600',
   green: 'from-emerald-600 to-meg-accent',
   orange: 'from-orange-600 to-amber-600',
-  pink: 'from-rose-600 to-pink-600'
+  pink: 'from-rose-600 to-pink-600',
+  rose: 'from-rose-600 to-pink-600'
+};
+
+const colors = {
+  blue: { particle: '#0ea5e9', line: '#6366f1' },
+  purple: { particle: '#a855f7', line: '#d946ef' },
+  green: { particle: '#10b981', line: '#0ea5e9' },
+  orange: { particle: '#f97316', line: '#eab308' },
+  pink: { particle: '#f43f5e', line: '#ec4899' },
+  rose: { particle: '#f43f5e', line: '#ec4899' }
 };
 ---
 
 <section class='relative isolate pt-14 overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark'>
+  <!-- Three.js Interactive WebGL Background -->
+  <InteractiveHeroCanvas particleColor={colors[gradient].particle} lineColor={colors[gradient].line} />
+
   <!-- Background Gradient -->
   <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
     <div

@@ -5,6 +5,8 @@ import SkillFlipCard from '../components/SkillFlipCard.astro';
 import HeroBackground from '../components/HeroBackground.astro';
 import PriceService from '../components/PriceService.astro';
 import RelatedServices from '../components/RelatedServices.astro';
+import PromoSuite from '../components/PromoSuite.astro';
+
 
 
 const {
@@ -645,6 +647,8 @@ if (nextYear) {
   <div class="bg-meg-bg-dark">
     <RelatedServices exclude={category?.id} />
   </div>
+
+  <PromoSuite />
 
   <!-- Final CTA -->
   <section class="py-24 px-6 bg-meg-bg-dark text-center border-t border-meg-border-dark">

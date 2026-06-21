@@ -1,4 +1,5 @@
 ---
+import PromoSuite from '../../../components/PromoSuite.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
@@ -90,7 +91,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Produktkategorien -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="software-products-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="software-products-heading" class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
             Was ich für Sie baue
           </h2>
@@ -103,32 +104,32 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </header>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-rocket text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Web-Apps & SaaS-Plattformen</h3>
             <p class="text-meg-text-secondary text-sm">Hochperformante Webanwendungen und Software-as-a-Service-Produkte, die Sie vermarkten oder intern nutzen können. Multi-Tenant-fähig, skalierbar, DSGVO-konform.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-gears text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Business-Automatisierung</h3>
             <p class="text-meg-text-secondary text-sm">Digitalisierung Ihrer manuellen Prozesse: ERP-Erweiterungen, Workflow-Automatisierung, individuelle CRM-Lösungen und Reporting-Dashboards für fundierte Entscheidungen.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-plug text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">APIs & Integrationen</h3>
             <p class="text-meg-text-secondary text-sm">RESTful und GraphQL-APIs, Drittsystem-Anbindungen (ERP, CRM, Payment, IoT) und Microservice-Architekturen für nahtlose Integration in Ihre IT-Landschaft.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-mobile-screen text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Progressive Web Apps (PWA)</h3>
             <p class="text-meg-text-secondary text-sm">Webbasierte Apps, die sich wie native Anwendungen anfühlen. Offline-fähig, installierbar und nach WCAG 2.1 AA barrierefrei – für iOS, Android und Desktop.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-building text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Enterprise-Anwendungen</h3>
             <p class="text-meg-text-secondary text-sm">Komplexe Geschäftsanwendungen für große Teams: Rollen- & Rechteverwaltung, Audit-Logs, Single Sign-On (SSO) und Integration in Microsoft 365 oder Active Directory.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-meg-accent/40 transition-all group">
             <i class="fa-solid fa-brain text-meg-accent text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">KI-Integration & Automatisierung</h3>
             <p class="text-meg-text-secondary text-sm">Einbindung von LLMs (OpenAI, lokale Modelle) in Ihre Software: intelligente Suche, Dokument-Analyse, automatisierte Klassifizierung und KI-gestützte Workflows.</p>
@@ -192,7 +193,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Prozess -->
     <section class="py-24 px-6" aria-labelledby="process-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="text-center mb-16">
+        <header class="gsap-fadein text-center mb-16">
           <h2 id="process-heading" class="text-3xl font-black tracking-tight">
             Vom <span class="text-meg-accent">ersten Gespräch</span> zum fertigen Produkt
           </h2>
@@ -221,11 +222,11 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Qualität Bento -->
     <section class="py-24 px-6 bg-meg-surface-dark/10 border-t border-meg-border-dark" aria-labelledby="quality-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="text-center mb-16">
+        <header class="gsap-fadein text-center mb-16">
           <h2 id="quality-heading" class="text-3xl font-black tracking-tight">Qualität, die <span class="text-meg-accent">messbar</span> ist</h2>
         </header>
         <div class="grid lg:grid-cols-6 lg:grid-rows-2 gap-4">
-          <article class="lg:col-span-3 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 flex flex-col justify-between hover:border-meg-accent/50 transition-all">
+          <article class="gsap-fadein lg:col-span-3 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 flex flex-col justify-between hover:border-meg-accent/50 transition-all">
             <div>
               <span class="text-meg-accent font-bold uppercase tracking-widest text-xs">Performance</span>
               <h3 class="text-2xl font-bold mt-4 mb-4 text-meg-text-primary-dark">Lighthouse Score &gt; 90</h3>
@@ -237,7 +238,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
               <div class="size-12 border-2 border-emerald-500 rounded-full flex items-center justify-center text-emerald-500 font-bold text-sm" aria-label="Accessibility: 100">100</div>
             </div>
           </article>
-          <article class="lg:col-span-3 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
+          <article class="gsap-fadein lg:col-span-3 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
             <span class="text-meg-accent font-bold uppercase tracking-widest text-xs">Sicherheit</span>
             <h3 class="text-2xl font-bold mt-4 mb-4 text-meg-text-primary-dark">Clean Code & Security Audit</h3>
             <p class="text-meg-text-secondary text-sm">Jede Anwendung durchläuft SAST-Scans, manuelle Security-Reviews und automatisierte Dependency-Checks nach OWASP Top 10.</p>
@@ -245,15 +246,15 @@ const faqSchema = SchemaUtils.getFAQSchema([
               <code class="text-xs text-emerald-400">✓ OWASP Top 10 · SAST · Dependency Audit · MFA-ready</code>
             </div>
           </article>
-          <article class="lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
+          <article class="gsap-fadein lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
             <h3 class="font-bold text-meg-text-primary-dark mb-4">100% Dokumentation</h3>
             <p class="text-meg-text-secondary text-xs">OpenAPI-Spezifikationen, Deployment-Guides, Datenbankschemas – alles transparent und wartbar.</p>
           </article>
-          <article class="lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
+          <article class="gsap-fadein lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
             <h3 class="font-bold text-meg-text-primary-dark mb-4">Agiles Mindset · PSPO I</h3>
             <p class="text-meg-text-secondary text-xs">Ich bin nicht nur Entwickler, sondern Sparringspartner für Ihre Produktvision und Ihr Backlog-Management.</p>
           </article>
-          <article class="lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
+          <article class="gsap-fadein lg:col-span-2 bg-meg-surface-dark border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all">
             <h3 class="font-bold text-meg-text-primary-dark mb-4">10+ Jahre Erfahrung</h3>
             <p class="text-meg-text-secondary text-xs">Vom Startup-MVP bis zum Enterprise-System – ich habe alle Fallstricke erlebt und weiß, wie man sie vermeidet.</p>
           </article>
@@ -261,11 +262,14 @@ const faqSchema = SchemaUtils.getFAQSchema([
       </div>
     </section>
 
+    <!-- SaaS Suite Promotion -->
+    <PromoSuite />
+
     <!-- FAQ -->
     <section class="py-24 px-6" aria-labelledby="software-faq-heading">
       <div class="mx-auto max-w-4xl">
-        <header class="text-center mb-12">
-          <h2 id="software-faq-heading" class="text-3xl font-bold">Häufige Fragen zur <span class="text-meg-accent">Custom Software</span></h2>
+        <header class="gsap-fadein text-center mb-12">
+          <h2 id="software-faq-heading" class="gsap-fadein text-3xl font-bold">Häufige Fragen zur <span class="text-meg-accent">Custom Software</span></h2>
         </header>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (

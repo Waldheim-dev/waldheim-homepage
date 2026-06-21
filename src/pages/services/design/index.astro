@@ -1,4 +1,5 @@
 ---
+import PromoSuite from '../../../components/PromoSuite.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
@@ -87,7 +88,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Fokus-Bereiche -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="design-focus-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="design-focus-heading" class="text-sm font-bold uppercase tracking-widest text-rose-500 mb-4">
             Mein Design-Ansatz
           </h2>
@@ -100,17 +101,17 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </header>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
             <i class="fa-solid fa-pen-nib text-rose-500 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Corporate Identity</h3>
             <p class="text-meg-text-secondary text-sm">Entwicklung unverwechselbarer Brandings, die Vertrauen schaffen und Ihre Kompetenz im Raum Augsburg/München unterstreichen.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
             <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
             <p class="text-meg-text-secondary text-sm">Interfaces, die Spaß machen. Ich optimiere User-Flows für maximale Conversion und intuitive Bedienbarkeit Ihrer Software.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-rose-500/40 transition-all group">
             <i class="fa-solid fa-layer-group text-rose-500 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Design Systems</h3>
             <p class="text-meg-text-secondary text-sm">Skalierbare Komponenten-Bibliotheken in Figma und Code für ein konsistentes Markenerlebnis über alle Touchpoints hinweg.</p>
@@ -143,11 +144,14 @@ const faqSchema = SchemaUtils.getFAQSchema([
       </div>
     </section>
 
+    <!-- SaaS Suite Promotion -->
+    <PromoSuite />
+
     <!-- FAQ -->
     <section class="py-24 px-6" aria-labelledby="design-faq-heading">
       <div class="mx-auto max-w-4xl">
-        <header class="text-center mb-12">
-          <h2 id="design-faq-heading" class="text-3xl font-bold">Fragen zum <span class="text-rose-500">Design-Prozess</span></h2>
+        <header class="gsap-fadein text-center mb-12">
+          <h2 id="design-faq-heading" class="gsap-fadein text-3xl font-bold">Fragen zum <span class="text-rose-500">Design-Prozess</span></h2>
         </header>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (

@@ -1,4 +1,6 @@
 ---
+import InteractiveHeroCanvas from './InteractiveHeroCanvas.astro';
+
 const { title, subtitle, image, video, posterImage } = Astro.props;
 
 // Video-Poster: Ersetze .mp4 mit -poster.jpg
@@ -6,44 +8,120 @@ const defaultPoster = video ? video.replace('.mp4', '-poster.webp') : '';
 const poster = posterImage || defaultPoster;
 ---
 
-<div class="relative isolate">
-    <div aria-hidden="true" class="absolute max-sm:w-full sm:inset-0 flex justify-center items-center py-12 px-3 md:px-12">
-      <figure class="rounded-3xl overflow-hidden relative w-full h-full">
-          { image ? <img src={image} class="object-contains w-full brightness-50" alt={title}  loading="eager" width="1920" height="1080"/> : null }
-          { video ?
-            <video
-              class="lazy-video object-contains max-sm:max-w-none sm:w-full brightness-50"
-              width="1920"
-              height="1080"
-              style="aspect-ratio: 16/9;"
-              preload="none"
-              poster={poster}
-              autoplay
-              loop
-              muted
-              playsinline
-              data-src={video}
-            >
-              <source
-                data-src={video} type="video/mp4" />
-            </video> : null }
+<div class="relative isolate min-h-[90vh] flex items-center justify-center py-20 overflow-hidden">
+    <!-- Three.js Interactive WebGL Background -->
+    <InteractiveHeroCanvas />
 
-        </figure>
-    </div>
-    <div class="py-24 sm:py-32 lg:pb-40 z-10 relative">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-3xl text-center bg-meg-surface-dark/50 p-12 rounded-2xl border border-meg-border-dark shadow-2xl backdrop-blur-xl">
-                <h1 class="text-balance text-5xl font-bold tracking-normal text-meg-text-primary-dark sm:text-7xl gsap-fadein">
-                  {title.split(' ').map((word: string, i: number) => i === 0 ? word : ' ' + word)}
-                </h1>
-                <h2 class="mt-8 text-pretty text-lg font-medium text-meg-text-secondary sm:text-xl/8 gsap-fadein">{subtitle}</h2>
+    <!-- Static Background Video/Image Fallback Overlay (if props provided) -->
+    { (video || image) && (
+      <div aria-hidden="true" class="absolute inset-0 flex justify-center items-center opacity-30 pointer-events-none mix-blend-color-dodge">
+        <figure class="w-full h-full">
+            { image ? <img src={image} class="object-cover w-full h-full brightness-50" alt={title} loading="eager" width="1920" height="1080"/> : null }
+            { video ?
+              <video
+                class="lazy-video object-cover w-full h-full brightness-50"
+                width="1920"
+                height="1080"
+                preload="none"
+                poster={poster}
+                autoplay
+                loop
+                muted
+                playsinline
+                data-src={video}
+              >
+                <source data-src={video} type="video/mp4" />
+              </video> : null }
+          </figure>
+      </div>
+    )}
+
+    <!-- Content Card -->
+    <div class="relative z-10 w-full max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center bg-[#0f172a]/30 border border-slate-800/40 p-8 sm:p-14 rounded-3xl shadow-2xl backdrop-blur-xl meg-glass">
+            <h1 id="hero-heading" class="text-balance text-4xl font-black tracking-tight text-meg-text-primary-dark sm:text-6xl md:text-7xl leading-[1.1] mb-6">
+              {title.split(' ').map((word: string, i: number) => (
+                <span class="inline-block hero-word opacity-0 translate-y-4 filter blur-[2px]" style={`--index: ${i}`}>
+                  {word === 'Software&shy;entwicklung' ? 'Softwareentwicklung' : word}&nbsp;
+                </span>
+              ))}
+            </h1>
+            
+            <p id="hero-desc" class="hero-subtitle mt-6 text-pretty text-base font-medium text-slate-300 sm:text-xl/8 opacity-0 translate-y-3 max-w-2xl mx-auto leading-relaxed">
+              {subtitle}
+            </p>
+            
+            <div id="hero-actions" class="hero-ctas-container mt-10 flex items-center justify-center flex-wrap gap-4 opacity-0 translate-y-3">
                 <slot />
             </div>
         </div>
     </div>
 </div>
 
+<style>
+  /* Base Reveal styles */
+  .hero-word {
+    will-change: transform, opacity, filter;
+  }
+  
+  /* Fallback in case JS fails */
+  .no-js .hero-word,
+  .no-js .hero-subtitle,
+  .no-js .hero-ctas-container {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+</style>
+
 <script>
+  import gsap from 'gsap';
+  
+  function initHeroAnimations() {
+    // Split heading animation
+    const words = document.querySelectorAll('.hero-word');
+    if (words.length > 0) {
+      gsap.to(words, {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        stagger: 0.04,
+        duration: 0.8,
+        ease: 'back.out(1.2)',
+        delay: 0.2
+      });
+    }
+    
+    // Subtitle
+    const sub = document.getElementById('hero-desc');
+    if (sub) {
+      gsap.to(sub, {
+        opacity: 1,
+        y: 0,
+        duration: 1.0,
+        ease: 'power3.out',
+        delay: 0.6
+      });
+    }
+    
+    // CTAs
+    const actions = document.getElementById('hero-actions');
+    if (actions) {
+      gsap.to(actions, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.9
+      });
+    }
+  }
+
+  // Run on page load and swaps
+  initHeroAnimations();
+  document.addEventListener('astro:page-load', initHeroAnimations);
+  
+  // Lazy video fallback helper
   function initLazyVideos() {
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -73,7 +151,6 @@ const poster = posterImage || defaultPoster;
     });
   }
 
-  // Run on initial load and after view transitions
   initLazyVideos();
   document.addEventListener('astro:page-load', initLazyVideos);
 </script>

@@ -11,6 +11,7 @@ import TrackedButton from '../components/TrackedButton.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FreeTools from '../components/FreeTools.astro';
 import SuiteClaim from '../components/SuiteClaim.astro';
+import ROICalculator from '../components/ROICalculator.astro';
 
 // SEO & Meta
 const titel = 'IT-Consulting & Softwareentwicklung Augsburg/München | Waldheim.dev';
@@ -119,7 +120,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <div class="grid lg:grid-cols-6 grid-cols-1 gap-6">
           
           <!-- Core Principles Card (Engineering Excellence) -->
-          <article class="lg:col-span-3 lg:row-span-2 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 flex flex-col justify-between group hover:border-meg-accent/50 transition-all duration-500">
+          <article class="bento-card lg:col-span-3 lg:row-span-2 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 flex flex-col justify-between group hover:border-meg-accent/50 transition-all duration-500">
             <div>
               <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
                 Maximale Qualität durch <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Engineering Excellence</span>
@@ -161,7 +162,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </article>
 
           <!-- Service Card: DevSecOps -->
-          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-violet-500/50 transition-all group">
+          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-violet-500/50 transition-all group">
             <header>
               <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">DevSecOps & Automation</h3>
             </header>
@@ -189,7 +190,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </article>
 
           <!-- Service Card: Custom Software -->
-          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all group">
+          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all group">
             <header>
               <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Custom Software</h3>
             </header>
@@ -217,7 +218,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </article>
 
           <!-- Service Card: Smart Home & KNX -->
-          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-orange-500/50 transition-all group flex flex-col justify-between">
             <div>
               <header>
                 <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Smart Home & KNX</h3>
@@ -247,7 +248,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </article>
 
           <!-- Service Card: IT-Service & Cloud -->
-          <article class="lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
+          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
             <div>
               <header>
                 <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">Cloud & IT-Support</h3>
@@ -277,7 +278,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           </article>
 
           <!-- Zertifizierungen Card (Wiederhergestellt in vollem Umfang) -->
-          <article class="lg:col-span-6 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 hover:border-meg-accent/30 transition-all duration-500 group shadow-lg">
+          <article class="bento-card lg:col-span-6 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 hover:border-meg-accent/30 transition-all duration-500 group shadow-lg">
             <div class="flex flex-col md:flex-row gap-12 items-center">
               <div class="flex-1">
                 <span class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Garantierte Qualität</span>
@@ -318,6 +319,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
       </div>
     </section>
 
+    <ROICalculator />
+
     <PortfolioTop />
     <Testimonials />
     <PriceService />
@@ -327,3 +330,35 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
     <SuiteClaim />
   </main>
 </Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  function initIndexAnimations() {
+    // Animate bento cards with a stagger when services section enters viewport
+    const bentoCards = document.querySelectorAll('.bento-card');
+    if (bentoCards.length > 0) {
+      gsap.fromTo(bentoCards,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.bento-service',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    }
+  }
+  
+  initIndexAnimations();
+  document.addEventListener('astro:page-load', initIndexAnimations);
+</script>

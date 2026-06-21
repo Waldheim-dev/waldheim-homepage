@@ -38,29 +38,40 @@ Intelligente Haussteuerung für mehr Komfort und Effizienz.
 - Umsetzung mit Home Assistant
 - Integration von IoT-Geräten
 
-### Produkte
+### Waldheim Suite
+Die waldheim.dev Suite vereint wichtige Business-Module in einer einheitlichen App-Shell mit Single Sign-On (SSO) und nahtloser Workflow-Orchestrierung.
 
-#### Silvacore
-Eine moderne SaaS-Lösung für die Verwaltung von Wohnungseigentümergemeinschaften (WEG).
-- Features: Abrechnungen, Dokumentenmanagement, Eigentümerportal
-- Fokus: DSGVO-konform, Benutzerfreundlich, Automatisierung
+#### CustomerPortal
+Digitales Kundenportal für SSO, Tenant-Verwaltung, Abrechnung, Support-Tickets & Self-Service.
 
-#### Ecodrive
-Digitales Fahrtenbuch und Fuhrparkmanagement.
-- Zielgruppe: Unternehmen und Selbstständige
-- Funktionen: GPS-Tracking, Finanzamt-konforme Berichte, Kostenanalyse
+#### Socialverse CRM
+AI-gestütztes Customer Relationship Management (CRM) für Kontakte, Deal-Pipelines & automatisierte Revenue-Workflows.
 
-#### Socialverse
-AI-gestütztes CRM-System für modernes Kundenbeziehungsmanagement.
-- Features: Lead-Scoring, Automatisierte Kommunikation, Social Media Integration
+#### Silvacore ERP (Forge)
+Ressourcenplanung, Zeiterfassung, Projektmanagement und digitale WEG-Verwaltung.
 
 #### Aether
-Dienst für den sicheren und verschlüsselten Dateitransfer.
-- Fokus: Sicherheit, Ephemeral Storage (selbstlöschend), Einfachheit
+Dokumentenmanagement, sicherer Ephemeral Dateitransfer und XRechnung/ZUGFeRD-Verarbeitung.
+
+#### Ecodrive
+CO₂-Flotten-Bilanzierung, Routenplanung, GPS-Tracking und ESG-Reporting für Fuhrparks.
+
+#### Treasury
+Liquiditätsplanung, Budgetcontrolling, Kostenstellenrechnung und DATEV-Export.
+
+#### Properties
+Immobilien- und Objektverwaltung inklusive Mietverträgen & Abrechnungen.
+
+#### Relay
+Zentraler Benachrichtigungsdienst für E-Mail, Push, SMS und In-App-Meldungen.
+
+#### Conductor
+Visueller Workflow-Builder und Event-Trigger-System für Low-Code-Automatisierung über alle Module.
+
+### Weitere Produkte
 
 #### WetterApp
-Eine Open-Source Wetter-Anwendung.
-- Features: Lokale Vorhersagen, Radar, Unwetterwarnungen
+Eine Open-Source Wetter-Anwendung mit lokalen Vorhersagen und Radar-Daten.
 
 ### Über mich
 Markus Waldheim - Full Stack Developer & IT-Consultant.

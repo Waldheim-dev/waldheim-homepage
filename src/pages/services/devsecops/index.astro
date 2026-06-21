@@ -1,4 +1,5 @@
 ---
+import PromoSuite from '../../../components/PromoSuite.astro';
 import Layout from '../../../layouts/Layout.astro';
 import ServiceHero from '../../../components/ServiceHero.astro';
 import PriceService from '../../../components/PriceService.astro';
@@ -87,7 +88,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Value Proposition: Warum DevSecOps? -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="benefits-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="benefits-heading" class="text-sm font-bold uppercase tracking-widest text-violet-400 mb-4">
             Der Business-Case
           </h2>
@@ -100,22 +101,22 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </header>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
             <i class="fa-solid fa-bolt text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Speed-to-Market</h3>
             <p class="text-meg-text-secondary text-sm">Automatisierte Deployments reduzieren manuelle Fehler und bringen Features schneller zum Kunden.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
             <i class="fa-solid fa-user-shield text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Risiko-Minimierung</h3>
             <p class="text-meg-text-secondary text-sm">Integrierte SAST/DAST-Scans finden Sicherheitslücken, bevor sie die Produktion erreichen.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
             <i class="fa-solid fa-chart-line text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Kosteneffizienz</h3>
             <p class="text-meg-text-secondary text-sm">Frühe Fehlererkennung spart bis zu 40% der Entwicklungskosten für nachträgliche Bugfixes.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-violet-500/40 transition-all">
             <i class="fa-solid fa-scale-balanced text-violet-400 text-3xl mb-6" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-4">Compliance</h3>
             <p class="text-meg-text-secondary text-sm">Lückenlose Dokumentation und automatisierte Audits für höchste regulatorische Ansprüche.</p>
@@ -162,7 +163,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Workflow: Der Weg zur DevSecOps Excellence -->
     <section class="py-24 px-6" aria-labelledby="workflow-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="text-center mb-16">
+        <header class="gsap-fadein text-center mb-16">
           <h2 id="workflow-heading" class="text-3xl font-black tracking-tight">Ihr Fahrplan zum <span class="text-violet-400">Secure Release</span></h2>
         </header>
         <div class="relative">
@@ -185,10 +186,13 @@ const faqSchema = SchemaUtils.getFAQSchema([
       </div>
     </section>
 
+    <!-- SaaS Suite Promotion -->
+    <PromoSuite />
+
     <!-- FAQ -->
     <section class="py-24 px-6 bg-meg-surface-dark/20 border-t border-meg-border-dark">
       <div class="mx-auto max-w-4xl">
-        <h2 class="text-3xl font-bold text-center mb-12">Häufige Fragen zu <span class="text-violet-400">DevSecOps</span></h2>
+        <h2 class="text-3xl font-bold text-center mb-12 gsap-fadein">Häufige Fragen zu <span class="text-violet-400">DevSecOps</span></h2>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (
             <details class="group border border-meg-border-dark rounded-2xl p-6 bg-meg-surface-dark/50 cursor-pointer">

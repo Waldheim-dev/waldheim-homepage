@@ -1,8 +1,0 @@
-{
-    "name": "Was gibt es neues?",
-    "description": "In der Software findest du immer eine Aufstellung der neusten Features und Verbesserungen.",
-    "image": "/ecodrive/ecodrive_releasenotes.PNG",
-    "tier": "free",
-    "planned": false,
-    "since": "1.0"
-   }
