@@ -4,7 +4,7 @@
 
 set -e
 
-BASE_DIR="/home/mawa/development/waldheim.dev/waldheim.dev.homepage/public"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../public" && pwd)"
 QUALITY=85
 MISSING_COUNT=0
 CONVERTED_COUNT=0

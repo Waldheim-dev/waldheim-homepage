@@ -1,5 +1,5 @@
 ---
-title: "Ecodrive: Software zur Fahrzeugkosten- und Verbrauchsoptimierung"
+title: "Ecodrive: Software zur Fahrzeugkosten- und Verbrauchs&shy;optimierung"
 isTopProject: true
 description: "Entwicklung der Ecodrive-Software: Eine Plattform zur Erfassung und Analyse von Fahrzeugdaten, Kosten und Verbrauch. Mit Funktionen für Privatanwender und Fuhrparkmanagement (Fahrtenbuch)."
 shortDescription: "Entwicklung der Ecodrive-Software zur Fahrzeugkosten- und Verbrauchsoptimierung."

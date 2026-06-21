@@ -14,56 +14,70 @@ import SuiteClaim from '../components/SuiteClaim.astro';
 import ROICalculator from '../components/ROICalculator.astro';
 
 // SEO & Meta
-const titel = 'IT-Consulting & Softwareentwicklung Augsburg/München | Waldheim.dev';
-const description = 'Experte für DevSecOps, Webentwicklung & IT-Strategie. +150% Produktivität durch KI-Workflows. Zertifizierte Qualität für KMU & Startups in Bayern.';
-const keywords = 'IT-Consulting Augsburg, Softwareentwicklung München, DevSecOps Experte, B2B Webentwicklung, Scrum Master Augsburg, IT-Sicherheit KMU, Waldheim IT';
+const titel =
+  'IT-Consulting & Softwareentwicklung Augsburg/München | Waldheim.dev';
+const description =
+  'Experte für DevSecOps, Webentwicklung & IT-Strategie. +150% Produktivität durch KI-Workflows. Zertifizierte Qualität für KMU & Startups in Bayern.';
+const keywords =
+  'IT-Consulting Augsburg, Softwareentwicklung München, DevSecOps Experte, B2B Webentwicklung, Scrum Master Augsburg, IT-Sicherheit KMU, Waldheim IT';
 const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
 
 // Structured Data: ProfessionalService & Breadcrumbs
 const professionalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  'name': 'Waldheim.dev - Markus Waldheim',
-  'image': 'https://waldheim.dev/waldheim.dev.svg',
-  'url': 'https://waldheim.dev',
-  'address': {
+  name: 'Waldheim.dev - Markus Waldheim',
+  image: 'https://waldheim.dev/waldheim.dev.svg',
+  url: 'https://waldheim.dev',
+  address: {
     '@type': 'PostalAddress',
-    'addressLocality': 'Augsburg',
-    'addressRegion': 'Bayern',
-    'addressCountry': 'DE'
+    addressLocality: 'Augsburg',
+    addressRegion: 'Bayern',
+    addressCountry: 'DE',
   },
-  'geo': {
+  geo: {
     '@type': 'GeoShape',
-    'region': 'DE-BY'
+    region: 'DE-BY',
   },
-  'areaServed': [
-    { '@type': 'City', 'name': 'Augsburg' },
-    { '@type': 'City', 'name': 'München' },
-    { '@type': 'City', 'name': 'Landsberg am Lech' }
+  areaServed: [
+    { '@type': 'City', name: 'Augsburg' },
+    { '@type': 'City', name: 'München' },
+    { '@type': 'City', name: 'Landsberg am Lech' },
   ],
-  'description': 'Senior IT-Consulting, DevSecOps und Individualsoftware. Spezialisiert auf KI-gestützte Effizienzsteigerung (+150%) und agile Transformation.',
-  'memberOf': [
-    { '@type': 'Organization', 'name': 'Scrum.org', 'description': 'PSM I, PSM II, PSPO I' },
-    { '@type': 'Organization', 'name': 'IHK', 'description': 'Zertifizierter Ausbilder' }
+  description:
+    'Senior IT-Consulting, DevSecOps und Individualsoftware. Spezialisiert auf KI-gestützte Effizienzsteigerung (+150%) und agile Transformation.',
+  memberOf: [
+    {
+      '@type': 'Organization',
+      name: 'Scrum.org',
+      description: 'PSM I, PSM II, PSPO I',
+    },
+    {
+      '@type': 'Organization',
+      name: 'IHK',
+      description: 'Zertifizierter Ausbilder',
+    },
   ],
-  'priceRange': '€€€'
+  priceRange: '€€€',
 };
 
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home',
-  link: 'https://waldheim.dev'
-}]);
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  {
+    name: 'Home',
+    link: 'https://waldheim.dev',
+  },
+]);
 ---
 
-<Layout 
-  title={titel} 
-  description={description} 
-  keywords={keywords} 
+<Layout
+  title={titel}
+  description={description}
+  keywords={keywords}
   schema={[professionalServiceSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <HeroBackground 
-    title="High-End IT-Consulting & Software&shy;entwicklung"
+  <HeroBackground
+    title="High-End IT-Consulting & Software­entwicklung"
     subtitle="Ich transformiere Ihre IT-Prozesse mit DevSecOps und KI-gestützten Workflows für bis zu 150% mehr Produktivität. Ihr lokaler Partner für messbare Ergebnisse im Raum Augsburg und München."
     video="/videos/video_chip.mp4"
   >
@@ -91,9 +105,11 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         Case Studies ansehen
       </TrackedButton>
     </div>
-    
+
     <!-- Trust-Bar: Direkte Sichtbarkeit der USPs -->
-    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-meg-text-secondary text-sm border-t border-meg-border-dark/30 pt-8">
+    <div
+      class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-meg-text-secondary text-sm border-t border-meg-border-dark/30 pt-8"
+    >
       <div class="flex flex-col items-center">
         <span class="text-meg-accent font-bold text-lg">10+ Jahre</span>
         <span>IT-Expertise</span>
@@ -114,63 +130,104 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   </HeroBackground>
 
   <main id="main-content">
-    <section class="bento-service relative isolate py-24" aria-labelledby="services-heading">
+    <section
+      class="bento-service relative isolate py-24"
+      aria-labelledby="services-heading"
+    >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 id="services-heading" class="sr-only">Meine IT-Services und Prinzipien</h2>
+        <h2 id="services-heading" class="sr-only">
+          Meine IT-Services und Prinzipien
+        </h2>
         <div class="grid lg:grid-cols-6 grid-cols-1 gap-6">
-          
           <!-- Core Principles Card (Engineering Excellence) -->
-          <article class="bento-card lg:col-span-3 lg:row-span-2 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 flex flex-col justify-between group hover:border-meg-accent/50 transition-all duration-500">
+          <article
+            class="bento-card lg:col-span-3 lg:row-span-2 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 flex flex-col justify-between group hover:border-meg-accent/50 transition-all duration-500"
+          >
             <div>
               <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-                Maximale Qualität durch <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Engineering Excellence</span>
+                Maximale Qualität durch <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400"
+                  >Engineering Excellence</span
+                >
               </h2>
               <p class="text-lg text-meg-text-secondary mb-8">
-                IT ist kein Selbstzweck, sondern Ihr stärkster Hebel. Ich garantiere Lösungen, die nicht nur funktionieren, sondern Ihr Business skalierbar machen.
+                IT ist kein Selbstzweck, sondern Ihr stärkster Hebel. Ich
+                garantiere Lösungen, die nicht nur funktionieren, sondern Ihr
+                Business skalierbar machen.
               </p>
               <dl class="space-y-6">
                 <div>
-                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
-                    <i class="fa-solid fa-shield-halved text-meg-accent" aria-hidden="true"></i> Sicherheit (By Design)
+                  <dt
+                    class="flex items-center gap-3 text-meg-text-primary-dark font-bold"
+                  >
+                    <i
+                      class="fa-solid fa-shield-halved text-meg-accent"
+                      aria-hidden="true"></i> Sicherheit (By Design)
                   </dt>
-                  <dd class="mt-2 ml-8 text-meg-text-secondary">Präventive Absicherung Ihrer Infrastruktur ab der ersten Codezeile.</dd>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">
+                    Präventive Absicherung Ihrer Infrastruktur ab der ersten
+                    Codezeile.
+                  </dd>
                 </div>
                 <div>
-                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
-                    <i class="fa-solid fa-gauge-high text-meg-accent" aria-hidden="true"></i> High Performance
+                  <dt
+                    class="flex items-center gap-3 text-meg-text-primary-dark font-bold"
+                  >
+                    <i
+                      class="fa-solid fa-gauge-high text-meg-accent"
+                      aria-hidden="true"></i> High Performance
                   </dt>
-                  <dd class="mt-2 ml-8 text-meg-text-secondary">Ladezeiten unter 1s und optimierte Core Web Vitals für beste UX und SEO.</dd>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">
+                    Ladezeiten unter 1s und optimierte Core Web Vitals für beste
+                    UX und SEO.
+                  </dd>
                 </div>
                 <div>
-                  <dt class="flex items-center gap-3 text-meg-text-primary-dark font-bold">
-                    <i class="fa-solid fa-code-branch text-meg-accent" aria-hidden="true"></i> Saubere Dokumentation
+                  <dt
+                    class="flex items-center gap-3 text-meg-text-primary-dark font-bold"
+                  >
+                    <i
+                      class="fa-solid fa-code-branch text-meg-accent"
+                      aria-hidden="true"></i> Saubere Dokumentation
                   </dt>
-                  <dd class="mt-2 ml-8 text-meg-text-secondary">100% nachvollziehbarer Code und Architekturentscheidungen (ADR).</dd>
+                  <dd class="mt-2 ml-8 text-meg-text-secondary">
+                    100% nachvollziehbarer Code und Architekturentscheidungen
+                    (ADR).
+                  </dd>
                 </div>
               </dl>
             </div>
             <div class="mt-12">
-               <Image 
-                 src="/bento/cert.webp" 
-                 alt="Zertifizierte IT-Qualität durch Markus Waldheim" 
-                 class="rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-transform duration-500" 
-                 width={600} 
-                 height={546} 
-                 loading="eager" 
-               />
+              <Image
+                src="/bento/cert.webp"
+                alt="Zertifizierte IT-Qualität durch Markus Waldheim"
+                class="rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-transform duration-500"
+                width={600}
+                height={546}
+                loading="eager"
+              />
             </div>
           </article>
 
           <!-- Service Card: DevSecOps -->
-          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-violet-500/50 transition-all group">
+          <article
+            class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-violet-500/50 transition-all group"
+          >
             <header>
-              <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">DevSecOps & Automation</h3>
+              <h3
+                class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500"
+              >
+                DevSecOps & Automation
+              </h3>
             </header>
-            <p class="text-meg-text-secondary mb-6">Automatisierte Pipelines und Cloud-Native Strategien, die Ihre Time-to-Market drastisch verkürzen.</p>
-            <TrackedButton 
-              href="/services/devsecops/" 
-              variant="ghost" 
-              icon="fa-solid fa-arrow-right" 
+            <p class="text-meg-text-secondary mb-6">
+              Automatisierte Pipelines und Cloud-Native Strategien, die Ihre
+              Time-to-Market drastisch verkürzen.
+            </p>
+            <TrackedButton
+              href="/services/devsecops/"
+              variant="ghost"
+              icon="fa-solid fa-arrow-right"
               class="group-hover:text-violet-400"
               trackEvent="cta_service_devsecops"
               trackCategory="service_card"
@@ -178,27 +235,42 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             >
               Operations skalieren
             </TrackedButton>
-            <figure class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
-               <video 
-                 src="/videos/video_devsecops.mp4" 
-                 poster="/videos/video_devsecops-poster.webp" 
-                 loop muted playsinline autoplay 
-                 class="w-full aspect-video object-cover"
-                 aria-label="Visualisierung einer automatisierten DevSecOps Pipeline"
-               ></video>
+            <figure
+              class="mt-8 rounded-xl overflow-hidden transition-all duration-700"
+            >
+              <video
+                src="/videos/video_devsecops.mp4"
+                poster="/videos/video_devsecops-poster.webp"
+                loop
+                muted
+                playsinline
+                autoplay
+                class="w-full aspect-video object-cover"
+                aria-label="Visualisierung einer automatisierten DevSecOps Pipeline"
+              ></video>
             </figure>
           </article>
 
           <!-- Service Card: Custom Software -->
-          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all group">
+          <article
+            class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-meg-accent/50 transition-all group"
+          >
             <header>
-              <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Custom Software</h3>
+              <h3
+                class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400"
+              >
+                Custom Software
+              </h3>
             </header>
-            <p class="text-meg-text-secondary mb-6">Maßgeschneiderte Software als fertiges Produkt – Web-Apps, SaaS-Plattformen und Enterprise-Lösungen, präzise auf Ihre Prozesse zugeschnitten.</p>
-            <TrackedButton 
-              href="/services/entwicklung/" 
-              variant="ghost" 
-              icon="fa-solid fa-arrow-right" 
+            <p class="text-meg-text-secondary mb-6">
+              Maßgeschneiderte Software als fertiges Produkt – Web-Apps,
+              SaaS-Plattformen und Enterprise-Lösungen, präzise auf Ihre
+              Prozesse zugeschnitten.
+            </p>
+            <TrackedButton
+              href="/services/entwicklung/"
+              variant="ghost"
+              icon="fa-solid fa-arrow-right"
               class="group-hover:text-meg-accent"
               trackEvent="cta_service_development"
               trackCategory="service_card"
@@ -206,28 +278,42 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             >
               Projekt anfragen
             </TrackedButton>
-            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
-               <video 
-                 src="/videos/video_software.mp4" 
-                 poster="/videos/video_software-poster.webp" 
-                 loop muted playsinline autoplay 
-                 class="w-full aspect-video object-cover"
-                 aria-label="Code-Visualisierung moderner Softwareentwicklung"
-               ></video>
+            <div
+              class="mt-8 rounded-xl overflow-hidden transition-all duration-700"
+            >
+              <video
+                src="/videos/video_software.mp4"
+                poster="/videos/video_software-poster.webp"
+                loop
+                muted
+                playsinline
+                autoplay
+                class="w-full aspect-video object-cover"
+                aria-label="Code-Visualisierung moderner Softwareentwicklung"
+              ></video>
             </div>
           </article>
 
           <!-- Service Card: Smart Home & KNX -->
-          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+          <article
+            class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-orange-500/50 transition-all group flex flex-col justify-between"
+          >
             <div>
               <header>
-                <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Smart Home & KNX</h3>
+                <h3
+                  class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500"
+                >
+                  Smart Home & KNX
+                </h3>
               </header>
-              <p class="text-meg-text-secondary mb-6">KNX-Gebäudeautomation, Rollläden, Fußbodenheizung, Beleuchtung und AI-Kamerasicherheit – professionell geplant und umgesetzt.</p>
-              <TrackedButton 
-                href="/services/smarthome/" 
-                variant="ghost" 
-                icon="fa-solid fa-arrow-right" 
+              <p class="text-meg-text-secondary mb-6">
+                KNX-Gebäudeautomation, Rollläden, Fußbodenheizung, Beleuchtung
+                und AI-Kamerasicherheit – professionell geplant und umgesetzt.
+              </p>
+              <TrackedButton
+                href="/services/smarthome/"
+                variant="ghost"
+                icon="fa-solid fa-arrow-right"
                 class="group-hover:text-orange-400"
                 trackEvent="cta_service_smarthome"
                 trackCategory="service_card"
@@ -236,28 +322,42 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                 Gebäude automatisieren
               </TrackedButton>
             </div>
-            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
-               <video 
-                 src="/videos/video_cloud-security.mp4" 
-                 poster="/videos/video_cloud-security-poster.webp" 
-                 loop muted playsinline autoplay 
-                 class="w-full aspect-video object-cover"
-                 aria-label="Smart Home Automation und Gebäudesicherheit"
-               ></video>
+            <div
+              class="mt-8 rounded-xl overflow-hidden transition-all duration-700"
+            >
+              <video
+                src="/videos/video_smarthome.mp4"
+                poster="/videos/video_smarthome-poster.webp"
+                loop
+                muted
+                playsinline
+                autoplay
+                class="w-full aspect-video object-cover"
+                aria-label="Smart Home Automation und Gebäudesicherheit"
+              ></video>
             </div>
           </article>
 
           <!-- Service Card: IT-Service & Cloud -->
-          <article class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
+          <article
+            class="bento-card lg:col-span-3 bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/50 transition-all group flex flex-col justify-between"
+          >
             <div>
               <header>
-                <h3 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">Cloud & IT-Support</h3>
+                <h3
+                  class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500"
+                >
+                  Cloud & IT-Support
+                </h3>
               </header>
-              <p class="text-meg-text-secondary mb-6">Sichere Cloud-Infrastruktur und proaktive Wartung Ihrer IT-Systeme – lokal in Augsburg & München.</p>
-              <TrackedButton 
-                href="/services/it-service/" 
-                variant="ghost" 
-                icon="fa-solid fa-arrow-right" 
+              <p class="text-meg-text-secondary mb-6">
+                Sichere Cloud-Infrastruktur und proaktive Wartung Ihrer
+                IT-Systeme – lokal in Augsburg & München.
+              </p>
+              <TrackedButton
+                href="/services/it-service/"
+                variant="ghost"
+                icon="fa-solid fa-arrow-right"
                 class="group-hover:text-emerald-400"
                 trackEvent="cta_service_it"
                 trackCategory="service_card"
@@ -266,55 +366,90 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
                 Infrastruktur härten
               </TrackedButton>
             </div>
-            <div class="mt-8 rounded-xl overflow-hidden transition-all duration-700">
-              <video 
-                src="/videos/video_cloud-security.mp4" 
-                poster="/videos/video_cloud-security-poster.webp" 
-                loop muted playsinline autoplay 
+            <div
+              class="mt-8 rounded-xl overflow-hidden transition-all duration-700"
+            >
+              <video
+                src="/videos/video_cloud-security.mp4"
+                poster="/videos/video_cloud-security-poster.webp"
+                loop
+                muted
+                playsinline
+                autoplay
                 class="w-full aspect-video object-cover"
-                aria-label="Sichere Cloud-Infrastruktur"
-              ></video>
+                aria-label="Sichere Cloud-Infrastruktur"></video>
             </div>
           </article>
 
           <!-- Zertifizierungen Card (Wiederhergestellt in vollem Umfang) -->
-          <article class="bento-card lg:col-span-6 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 hover:border-meg-accent/30 transition-all duration-500 group shadow-lg">
+          <article
+            class="bento-card lg:col-span-6 bg-meg-surface-dark/40 backdrop-blur-xl border border-meg-border-dark rounded-3xl p-10 hover:border-meg-accent/30 transition-all duration-500 group shadow-lg"
+          >
             <div class="flex flex-col md:flex-row gap-12 items-center">
               <div class="flex-1">
-                <span class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Garantierte Qualität</span>
-                <h3 class="text-3xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
-                  Profitieren Sie von <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">zertifizierter</span> Expertise
+                <span
+                  class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block"
+                  >Garantierte Qualität</span
+                >
+                <h3
+                  class="text-3xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
+                >
+                  Profitieren Sie von <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400"
+                    >zertifizierter</span
+                  > Expertise
                 </h3>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-meg-text-secondary">
+                <ul
+                  class="grid grid-cols-1 md:grid-cols-2 gap-6 text-meg-text-secondary"
+                >
                   <li class="flex items-start gap-3">
-                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
-                    <span><strong>Professional Scrum Master II:</strong> Fortgeschrittene agile Führung für komplexe Projekte.</span>
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"
+                    ></i>
+                    <span
+                      ><strong>Professional Scrum Master II:</strong> Fortgeschrittene
+                      agile Führung für komplexe Projekte.</span
+                    >
                   </li>
                   <li class="flex items-start gap-3">
-                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
-                    <span><strong>Professional Scrum Product Owner I:</strong> Strategisches Backlog-Management & Business-Value.</span>
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"
+                    ></i>
+                    <span
+                      ><strong>Professional Scrum Product Owner I:</strong> Strategisches
+                      Backlog-Management & Business-Value.</span
+                    >
                   </li>
                   <li class="flex items-start gap-3">
-                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
-                    <span><strong>IHK Ausbilder:</strong> Zertifizierte Qualität in der Wissensvermittlung für Fachinformatiker.</span>
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"
+                    ></i>
+                    <span
+                      ><strong>IHK Ausbilder:</strong> Zertifizierte Qualität in der
+                      Wissensvermittlung für Fachinformatiker.</span
+                    >
                   </li>
                   <li class="flex items-start gap-3">
-                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"></i>
-                    <span><strong>10+ Jahre Full-Stack:</strong> Tiefgreifendes Verständnis der gesamten IT-Lieferkette.</span>
+                    <i class="fa-solid fa-circle-check text-meg-accent mt-1"
+                    ></i>
+                    <span
+                      ><strong>10+ Jahre Full-Stack:</strong> Tiefgreifendes Verständnis
+                      der gesamten IT-Lieferkette.</span
+                    >
                   </li>
                 </ul>
               </div>
-              <div class="w-full md:w-1/3 rounded-2xl overflow-hidden shadow-2xl border border-meg-border-dark/50">
-                <video 
-                  src="/videos/video_certification.mp4" 
-                  poster="/videos/video_certification-poster.webp" 
-                  loop muted playsinline autoplay 
-                  class="w-full h-auto"
-                ></video>
+              <div
+                class="w-full md:w-1/3 rounded-2xl overflow-hidden shadow-2xl border border-meg-border-dark/50"
+              >
+                <video
+                  src="/videos/video_certification.mp4"
+                  poster="/videos/video_certification-poster.webp"
+                  loop
+                  muted
+                  playsinline
+                  autoplay
+                  class="w-full h-auto"></video>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -334,14 +469,15 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 <script>
   import gsap from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  
+
   gsap.registerPlugin(ScrollTrigger);
-  
+
   function initIndexAnimations() {
     // Animate bento cards with a stagger when services section enters viewport
     const bentoCards = document.querySelectorAll('.bento-card');
     if (bentoCards.length > 0) {
-      gsap.fromTo(bentoCards,
+      gsap.fromTo(
+        bentoCards,
         { opacity: 0, y: 30 },
         {
           opacity: 1,
@@ -352,13 +488,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
           scrollTrigger: {
             trigger: '.bento-service',
             start: 'top 80%',
-            toggleActions: 'play none none none'
-          }
-        }
+            toggleActions: 'play none none none',
+          },
+        },
       );
     }
   }
-  
+
   initIndexAnimations();
   document.addEventListener('astro:page-load', initIndexAnimations);
 </script>
