@@ -1,0 +1,12 @@
+{
+  "name": "Webhooks",
+  "image": "/brands/webhook.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2020-01-01",
+  "knowledgebase": "expert",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "layer": ["backend", "infrastructure"]
+}

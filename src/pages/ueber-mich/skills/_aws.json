@@ -1,6 +1,6 @@
 {
   "name": "AWS",
-  "image": "/brands/aws-2.svg",
+  "image": "/brands/aws-light.svg",
   "productive": false,
   "isActive": true,
   "fixedExperience": 0,
@@ -9,5 +9,7 @@
   "isTopSkill": true,
   "isTechStack": true,
   "invertImage": true,
-  "layer": ["infrastructure"]
+  "layer": [
+    "infrastructure"
+  ]
 }

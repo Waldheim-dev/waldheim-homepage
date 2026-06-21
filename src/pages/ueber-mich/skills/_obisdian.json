@@ -1,0 +1,14 @@
+{
+  "name": "Obsidian",
+  "image": "/brands/obsidian.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2024-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "layer": [
+    "infrastructure"
+  ]
+}

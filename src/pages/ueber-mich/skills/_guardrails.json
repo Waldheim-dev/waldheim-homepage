@@ -1,0 +1,12 @@
+{
+  "name": "Guardrails AI",
+  "image": "/brands/guardrails.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2025-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "layer": ["ai", "security"]
+}
