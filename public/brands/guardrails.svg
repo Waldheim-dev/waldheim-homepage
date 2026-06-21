@@ -1,0 +1,6 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Guardrails AI</title>
+  <!-- Shield with rail/fence motif for guardrails -->
+  <path d="M12 2L4 5v6c0 5.25 3.5 10.15 8 11.5C16.5 21.15 20 16.25 20 11V5L12 2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M8 11h8M8 14h8M10 9v6M14 9v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

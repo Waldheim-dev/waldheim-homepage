@@ -1,0 +1,16 @@
+{
+  "name": "LangChain",
+  "image": "/brands/langgraph-color.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2024-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "invertImage": true,
+  "layer": [
+    "ai",
+    "backend"
+  ]
+}

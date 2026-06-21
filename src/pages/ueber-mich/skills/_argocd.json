@@ -1,0 +1,14 @@
+{
+  "name": "ArgoCD",
+  "image": "/brands/argo-cd.svg",
+  "productive": true,
+  "isActive": false,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2022-01-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": false,
+  "layer": [
+    "infrastructure"
+  ]
+}

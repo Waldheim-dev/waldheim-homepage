@@ -1,0 +1,15 @@
+{
+  "name": "OpenTelemetry",
+  "image": "/brands/opentelemetry.svg",
+  "productive": true,
+  "isActive": true,
+  "fixedExperience": 0,
+  "sinceLastRollup": "2023-06-01",
+  "knowledgebase": "advanced",
+  "isTopSkill": false,
+  "isTechStack": true,
+  "layer": [
+    "infrastructure",
+    "quality"
+  ]
+}
