@@ -11,9 +11,9 @@ test.describe('Link-Validation Tests', () => {
   // Wichtige Seiten zum Testen
   const pagesToTest = [
     { url: '/', name: 'Homepage' },
-    { url: '/ecodrive/', name: 'Ecodrive' },
-    { url: '/silvacore/', name: 'Silvacore' },
-    { url: '/socialverse/', name: 'Socialverse' },
+    { url: '/suite/ecodrive/', name: 'Suite - Ecodrive' },
+    { url: '/suite/forge/', name: 'Suite - Forge' },
+    { url: '/suite/socialverse/', name: 'Suite - Socialverse' },
     { url: '/services/entwicklung/', name: 'Service - Entwicklung' },
     { url: '/services/devsecops/', name: 'Service - DevSecOps' },
     { url: '/services/design/', name: 'Service - Design' },
@@ -234,5 +234,19 @@ test.describe('Link-Validation Tests', () => {
     }
 
     expect(brokenLinks, `Mobile Navigation hat ${brokenLinks.length} defekte Link(s)`).toEqual([]);
+  });
+
+  test('Alte Unterseiten leiten per 301/302 auf Suite-Module weiter', async ({ page }) => {
+    const redirects = [
+      { from: '/silvacore/', to: '/suite/forge/' },
+      { from: '/ecodrive/', to: '/suite/ecodrive/' },
+      { from: '/socialverse/', to: '/suite/socialverse/' },
+      { from: '/aether/', to: '/suite/aether/' },
+    ];
+
+    for (const redir of redirects) {
+      await page.goto(redir.from);
+      expect(page.url()).toContain(redir.to);
+    }
   });
 });

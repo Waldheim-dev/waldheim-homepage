@@ -204,50 +204,48 @@ const finalSchema = [
       gtag('config', 'G-F6PFMBR146');
     </script>
 
-    <!-- GSAP Core (for cursor effect) -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- Global GSAP & ScrollTrigger Animations -->
+    <script>
+      import gsap from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      
+      gsap.registerPlugin(ScrollTrigger);
 
-    <script is:inline>
-      function initFadeInAnimations() {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '50px', // Start slightly earlier for better feel
-        };
+      // Expose to window for inline scripts
+      if (typeof window !== 'undefined') {
+        (window as any).gsap = gsap;
+        (window as any).ScrollTrigger = ScrollTrigger;
+      }
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-              el.classList.add('visible');
-              observer.unobserve(el);
+      function initGlobalFadeInAnimations() {
+        gsap.utils.toArray('.gsap-fadein').forEach((el: any) => {
+          // Reset CSS transition to avoid conflict with GSAP animations
+          el.style.transition = 'none';
+          
+          const delay = parseFloat(el.style.animationDelay) || 0;
+          
+          gsap.fromTo(el,
+            { opacity: 0, y: 25 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              delay: delay,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 88%',
+                toggleActions: 'play none none none',
+                once: true
+              }
             }
-          });
-        }, observerOptions);
-
-        document.querySelectorAll('.gsap-fadein').forEach((el) => {
-          // Map animation-delay to transition-delay for the CSS transition
-          const animDelay = el.style.animationDelay;
-          if (animDelay) {
-            el.style.transitionDelay = animDelay;
-          }
-
-          // Check if already in viewport
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            // Small timeout to allow browser to register initial state
-            setTimeout(() => el.classList.add('visible'), 50);
-          } else {
-            observer.observe(el);
-          }
+          );
         });
       }
 
-      // Run immediately and on Astro events
-      initFadeInAnimations();
-      document.addEventListener('astro:page-load', initFadeInAnimations);
-      document.addEventListener('astro:after-swap', initFadeInAnimations);
+      // Run immediately and on Astro page changes
+      initGlobalFadeInAnimations();
+      document.addEventListener('astro:page-load', initGlobalFadeInAnimations);
     </script>
 
     <ClientRouter />

@@ -8,9 +8,9 @@ import { test, expect } from '@playwright/test';
 // Wichtige Seiten für Performance-Tests
 const PAGES_TO_TEST = [
   { name: 'Homepage', url: '/' },
-  { name: 'Ecodrive', url: '/ecodrive/' },
-  { name: 'Silvacore', url: '/silvacore/' },
-  { name: 'Socialverse', url: '/socialverse/' },
+  { name: 'Suite - Ecodrive', url: '/suite/ecodrive/' },
+  { name: 'Suite - Forge', url: '/suite/forge/' },
+  { name: 'Suite - Socialverse', url: '/suite/socialverse/' },
   { name: 'Service - DevSecOps', url: '/services/devsecops/' },
   { name: 'Service - Entwicklung', url: '/services/entwicklung/' },
   { name: 'Service - Design', url: '/services/design/' },

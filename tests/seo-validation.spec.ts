@@ -6,9 +6,9 @@ test.describe('SEO Validation Tests', () => {
   const criticalPages = [
     { path: '/', name: 'Homepage' },
     { path: '/services/', name: 'Services' },
-    { path: '/silvacore/', name: 'Silvacore' },
-    { path: '/ecodrive/', name: 'Ecodrive' },
-    { path: '/socialverse/', name: 'Socialverse' },
+    { path: '/suite/forge/', name: 'Suite - Forge' },
+    { path: '/suite/ecodrive/', name: 'Suite - Ecodrive' },
+    { path: '/suite/socialverse/', name: 'Suite - Socialverse' },
     { path: '/referenzen/', name: 'Referenzen' },
   ];
 

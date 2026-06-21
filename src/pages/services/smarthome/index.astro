@@ -1,4 +1,5 @@
 ---
+import PromoSuite from '../../../components/PromoSuite.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 import ServiceHero from '../../../components/ServiceHero.astro';
@@ -94,7 +95,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- Hauptleistungen -->
     <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="smarthome-services-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="smarthome-services-heading" class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-4">
             <i class="fa-solid fa-house mr-2" aria-hidden="true"></i>
             Leistungen
@@ -108,32 +109,32 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </header>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-bolt text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">KNX-Gebäudeautomation</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Planung und Inbetriebnahme professioneller KNX-Installationen für Neubau und Sanierung. Bustopologie, Aktor-/Sensor-Auswahl, ETS5/6-Programmierung und vollständige Dokumentation.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-grid-horizontal text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Rollläden & Jalousien</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Automatische Steuerung per Zeit, Helligkeit, Windwächter und Szenarien. Sonnenschutz-Automatik hält die Raumtemperatur stabil. Integration per KNX-Jalousieaktoren oder WLAN-Nachrüstmodulen (Shelly).</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-temperature-half text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Heizungssteuerung</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Intelligente Regelung von Fußbodenheizung, Heizkörpern und Wärmepumpen. Raumweise Temperaturprofile, Anwesenheitserkennung und Eco-Modi reduzieren den Energieverbrauch deutlich.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-lightbulb text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Beleuchtungssteuerung</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">DALI, DMX oder Tasterdimmer via KNX: stimmungsvolle Lichtszenen, Tageslichtsimulation für besseres Wohlbefinden und automatische Nachtbeleuchtung. Auch für Smart-Bulbs und WLAN-Nachrüstung.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-camera text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Sicherheit & AI-Kameras</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Lokales Kamera-Sicherheitssystem mit AI-Personenerkennung (Frigate NVR + Coral TPU). Echtzeit-Benachrichtigungen, Türklingel-Integration (Reolink, Amcrest) und Alarmsystem-Anbindung – vollständig ohne Cloud.</p>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8 hover:border-orange-500/40 transition-all group">
             <i class="fa-solid fa-mobile-screen-button text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3">Zentrale Steuerung & Apps</h3>
             <p class="text-meg-text-secondary text-sm leading-relaxed">Ein Dashboard für alles: Home Assistant auf dem lokalen Server, Steuerung per Smartphone (iOS & Android), Sprachsteuerung via Alexa/Google/HomeKit und individuelle Touchpanel-Lösungen.</p>
@@ -145,7 +146,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
     <!-- KNX vs. Nachrüstung -->
     <section class="py-24 px-6 border-y border-meg-border-dark bg-meg-surface-dark/10" aria-labelledby="systems-heading">
       <div class="mx-auto max-w-7xl">
-        <header class="mx-auto max-w-2xl text-center mb-16">
+        <header class="gsap-fadein mx-auto max-w-2xl text-center mb-16">
           <h2 id="systems-heading" class="text-sm font-bold uppercase tracking-widest text-orange-400 mb-4">
             <i class="fa-solid fa-scale-balanced mr-2" aria-hidden="true"></i>
             Welches System passt zu mir?
@@ -156,7 +157,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </header>
         
         <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <article class="bg-meg-surface-dark/50 border border-orange-500/30 rounded-2xl p-8">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-orange-500/30 rounded-2xl p-8">
             <div class="flex items-center gap-4 mb-6">
               <div class="size-14 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center">
                 <i class="fa-solid fa-house-chimney text-orange-400 text-2xl" aria-hidden="true"></i>
@@ -183,7 +184,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
             </ul>
           </article>
           
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8">
+          <article class="gsap-fadein bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-8">
             <div class="flex items-center gap-4 mb-6">
               <div class="size-14 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center">
                 <i class="fa-solid fa-screwdriver-wrench text-emerald-400 text-2xl" aria-hidden="true"></i>
@@ -299,11 +300,14 @@ const faqSchema = SchemaUtils.getFAQSchema([
       </div>
     </section>
 
+    <!-- SaaS Suite Promotion -->
+    <PromoSuite />
+
     <!-- FAQ -->
     <section class="py-24 px-6 border-t border-meg-border-dark" aria-labelledby="smarthome-faq-heading">
       <div class="mx-auto max-w-4xl">
-        <header class="text-center mb-12">
-          <h2 id="smarthome-faq-heading" class="text-3xl font-bold">Fragen zu <span class="text-orange-400">Smart Home & KNX</span></h2>
+        <header class="gsap-fadein text-center mb-12">
+          <h2 id="smarthome-faq-heading" class="gsap-fadein text-3xl font-bold">Fragen zu <span class="text-orange-400">Smart Home & KNX</span></h2>
         </header>
         <div class="space-y-6">
           {faqSchema.mainEntity.map((faq) => (

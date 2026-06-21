@@ -1,8 +1,0 @@
-{
-    "name": "Auditlogs für alle Aktionen",
-    "description": "Alle Aktionen, die in der App durchgeführt werden, werden protokolliert und können in der Webanwendung eingesehen werden.",
-    "image": "/ecodrive/ecodrive_audit.PNG",
-    "tier": "pro",
-    "planned": false,
-    "since": "1.2"
-   }

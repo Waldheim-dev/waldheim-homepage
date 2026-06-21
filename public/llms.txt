@@ -16,11 +16,18 @@
   - [DevSecOps](https://www.waldheim.dev/services/devsecops/): CI/CD Pipelines, Containerisierung & Security
   - [Smarthome](https://www.waldheim.dev/services/smarthome/): Home Assistant Integration & Automation
 
-- [Produkte](https://www.waldheim.dev/)
-  - [Silvacore](https://www.waldheim.dev/silvacore/): Cloud-basierte WEG-Verwaltung
-  - [Ecodrive](https://www.waldheim.dev/ecodrive/): Fuhrparkmanagement & Fahrtenbuch
-  - [Socialverse](https://www.waldheim.dev/socialverse/): AI-gestütztes CRM & Marketing-Automation
-  - [Aether](https://www.waldheim.dev/aether/): Sicherer Dateitransfer
+- [Waldheim Suite](https://www.waldheim.dev/suite/)
+  - [CustomerPortal](https://www.waldheim.dev/suite/portal/): Digitales Kundenportal
+  - [Socialverse CRM](https://www.waldheim.dev/suite/socialverse/): AI-gestütztes CRM & Sales
+  - [Silvacore ERP](https://www.waldheim.dev/suite/forge/): WEG-Verwaltung & Ressourcen
+  - [Aether](https://www.waldheim.dev/suite/aether/): Dateitransfer & Automatisierung
+  - [Ecodrive](https://www.waldheim.dev/suite/ecodrive/): Nachhaltiges Fuhrparkmanagement
+  - [Treasury](https://www.waldheim.dev/suite/treasury/): Finanzen & Controlling
+  - [Properties](https://www.waldheim.dev/suite/properties/): Immobilienverwaltung
+  - [Relay](https://www.waldheim.dev/suite/relay/): Messaging & Notifications
+  - [Conductor](https://www.waldheim.dev/suite/conductor/): Workflow-Orchestrierung
+
+- [Weitere Produkte](https://www.waldheim.dev/)
   - [WetterApp](https://www.waldheim.dev/waetherapp/): Open Source Wetter-Anwendung
   - [Amigo](https://www.waldheim.dev/amigo/): Autonomes Multi-Agent Framework in Go
 

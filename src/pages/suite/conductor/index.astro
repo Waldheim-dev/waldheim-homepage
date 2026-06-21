@@ -1,4 +1,6 @@
 ---
+import PromoServices from '../../../components/PromoServices.astro';
+import InteractiveHeroCanvas from '../../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { SchemaUtils } from '../../../utils/schema';
 
@@ -68,11 +70,15 @@ const nodeGraph = [
   </nav>
 
   <section class="relative isolate pt-6 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden">
+    
+    <!-- Three.js Interactive WebGL Background -->
+    <InteractiveHeroCanvas particleColor="#6366f1" lineColor="#8b5cf6" />
+
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
       <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-indigo-500/20 to-violet-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
     <div class="max-w-7xl mx-auto py-16 sm:py-24">
-      <div class="mx-auto max-w-3xl text-center">
+      <div class="mx-auto max-w-3xl text-center gsap-fadein">
         <div class="gsap-fadein mb-4">
           <span class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-3 py-1.5 rounded-full text-xs font-bold">
             <i class="fa-solid fa-table-cells-large text-[10px]" aria-hidden="true"></i>
@@ -267,6 +273,9 @@ const nodeGraph = [
       </div>
     </div>
   </section>
+
+  <!-- Custom Consulting & Development Promotion -->
+  <PromoServices />
 
   <section class="py-24 px-6 bg-meg-bg-dark" aria-labelledby="cta-conductor">
     <div class="max-w-4xl mx-auto text-center">

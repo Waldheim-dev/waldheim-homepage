@@ -1,8 +1,0 @@
-{
-    "name": "Du willst ein neues Fahrzeug anschaffen?",
-    "description": "Blindkäufe können oft teuer werden! Nutze unseren Fahrzeugkalkulator, um die Kosten für ein neues Fahrzeug zu berechnen.",
-    "image": "/ecodrive/ecodrive_vehicle_calc.PNG",
-    "tier": "free",
-    "planned": false,
-    "since": "1.0"
-   }

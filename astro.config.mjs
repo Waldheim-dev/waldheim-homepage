@@ -27,6 +27,13 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://www.waldheim.dev',
+  redirects: {
+    '/silvacore/': '/suite/forge/',
+    '/suite/silvacore/': '/suite/forge/',
+    '/ecodrive/': '/suite/ecodrive/',
+    '/socialverse/': '/suite/socialverse/',
+    '/aether/': '/suite/aether/',
+  },
   i18n: {
     defaultLocale: 'de',
     locales: ['de', 'en'],
@@ -53,9 +60,7 @@ export default defineConfig({
         if (item.url === 'https://www.waldheim.dev/') {
           item.priority = 1.0; // Homepage
         } else if (item.url.includes('/services/') ||
-          item.url.includes('/silvacore/') ||
-          item.url.includes('/ecodrive/') ||
-          item.url.includes('/socialverse/')) {
+          item.url.includes('/suite/')) {
           item.priority = 0.9; // Hauptprodukte/Services
         } else if (item.url.includes('/blog/')) {
           item.priority = 0.7; // Blog-Artikel

@@ -1,8 +1,0 @@
-{
-    "name": "Übersicht über deine Fahrten",
-    "description": "Sammle alle deine Fahrten und erhalte eine Übersicht über deine Fahrten.",
-    "image": "/ecodrive/ecodrive_trip_reports.PNG",
-    "tier": "basic",
-    "planned": false,
-    "since": "1.1"
-   }

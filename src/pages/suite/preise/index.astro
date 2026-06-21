@@ -1,5 +1,8 @@
 ---
+import InteractiveHeroCanvas from '../../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../../layouts/Layout.astro';
+import PromoServices from '../../../components/PromoServices.astro';
+
 import { SchemaUtils } from '../../../utils/schema';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
@@ -10,53 +13,167 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
 
 const titel = 'Preise – Waldheim Suite | Waldheim.dev';
 const description =
-  'Ein Preis, alle Module: Die Waldheim Suite als vollständig integrierte Business-Suite für den DACH-Mittelstand. Transparentes Seat-basiertes Modell ohne versteckte Kosten.';
+  'Modulares Value-based Pricing fur den DACH-Mittelstand: Starter ab 29 EUR, Professional ab 59 EUR, Enterprise ab 99 EUR – inklusive E-Rechnung, CRM, ERP, BYO-AI und DSGVO-konformer Datenhaltung in Deutschland.';
 const keywords =
-  'Waldheim Suite Preise, SaaS Pricing, per Seat, CRM ERP Suite, Mittelstand, DACH, Flatrate';
+  'Waldheim Suite Preise, SaaS Pricing DACH, per Seat, CRM ERP Suite, Mittelstand, E-Rechnung, ZUGFeRD, XRechnung, Starter Professional Enterprise';
+
+const pricingTiers = [
+  {
+    name: 'Starter',
+    price: '29',
+    badge: 'Compliance-Wedge',
+    popular: false,
+    desc: 'Das ideale Fundament fur E-Rechnungs-Compliance, Basisbuchhaltung und Kundenportal.',
+    modules: ['Customer Portal', 'Forge ERP', 'Treasury'],
+    features: [
+      { icon: 'fa-file-invoice', text: 'E-Rechnung: ZUGFeRD & XRechnung' },
+      { icon: 'fa-calculator', text: 'Finanzbuchhaltung & DATEV-Schnittstelle' },
+      { icon: 'fa-building-columns', text: 'Banking-Abgleich & Mahnwesen' },
+      { icon: 'fa-headset', text: 'Basis-Ticketing (Customer Portal)' },
+      { icon: 'fa-shield-halved', text: 'RLS Mandanten-Isolation & MFA' },
+    ],
+    cta: 'Demo starten',
+    ctaHref: 'https://suite.waldheim.dev',
+    ctaExternal: true,
+    ctaStyle: 'secondary',
+  },
+  {
+    name: 'Professional',
+    price: '59',
+    badge: 'Empfohlen',
+    popular: true,
+    desc: 'Die komplette Suite fur Vertrieb, Dokumente, Automation und eigene KI-Modelle.',
+    modules: ['Customer Portal', 'Forge ERP', 'Treasury', 'Socialverse CRM', 'Aether', 'Relay', 'Conductor'],
+    features: [
+      { icon: 'fa-check', text: 'Alle Features aus Starter' },
+      { icon: 'fa-network-wired', text: 'Lead- & Opportunity-Pipeline (Socialverse CRM)' },
+      { icon: 'fa-folder-open', text: 'DMS mit Versionierung & Belegerkennung (Aether)' },
+      { icon: 'fa-envelope-open-text', text: 'Omnichannel Inbox & Benachrichtigungen (Relay)' },
+      { icon: 'fa-gears', text: 'Workflow-Automation & Orchestrierung (Conductor)' },
+      { icon: 'fa-microchip', text: 'Bring Your Own AI (OpenAI / Anthropic via LiteLLM)' },
+      { icon: 'fa-vial', text: '14-Tage-Trial, keine Kreditkarte erforderlich' },
+    ],
+    cta: 'Professional starten',
+    ctaHref: 'https://suite.waldheim.dev',
+    ctaExternal: true,
+    ctaStyle: 'primary',
+  },
+  {
+    name: 'Enterprise',
+    price: '89',
+    badge: 'Premium',
+    popular: false,
+    desc: 'Fur komplexe Immobilien- und Flottenprozesse mit hochsten Compliance- und Isolationsanforderungen.',
+    modules: ['Alle Professional-Module', 'Ecodrive', 'Properties'],
+    features: [
+      { icon: 'fa-check', text: 'Alle Features aus Professional' },
+      { icon: 'fa-building', text: 'WEG-Hausgeldabrechnung & Nebenkosten (Properties)' },
+      { icon: 'fa-truck', text: 'Digitale Fahrzeugakte & Fuhrerscheinkontrolle (Ecodrive)' },
+      { icon: 'fa-map-location-dot', text: 'Optionale GPS-Ortung & finanzamtkonformes Fahrtenbuch' },
+      { icon: 'fa-database', text: 'Optionale physische DB-per-Tenant-Isolation' },
+      { icon: 'fa-user-tie', text: 'Dedizierter Account-Manager' },
+      { icon: 'fa-clock', text: 'Support-SLA mit Reaktionszeit-Garantie' },
+    ],
+    cta: 'Angebot anfragen',
+    ctaHref: '/kontakt/',
+    ctaExternal: false,
+    ctaStyle: 'secondary',
+  },
+];
+
+const addons = [
+  {
+    icon: 'fa-building',
+    iconColor: 'text-orange-400',
+    bgColor: 'bg-orange-500/10',
+    borderColor: 'border-orange-500/20',
+    hoverBorder: 'hover:border-orange-500/30',
+    title: 'Immobilien- & WG-Verwaltung',
+    subtitle: 'Miet-, WEG- & Zimmerabrechnung',
+    subtitleColor: 'text-orange-400',
+    desc: 'Komplette Objektverwaltung, BGH-konforme Hausgeldabrechnungen, Sollstellungen, Mieterportal und Zimmer-/WG-Verwaltung fur anteilige Kostenaufteilung.',
+    price: 'Ab 15 EUR',
+    priceUnit: '/ Monat + 0,30 EUR - 1,00 EUR pro Einheit',
+  },
+  {
+    icon: 'fa-truck',
+    iconColor: 'text-teal-400',
+    bgColor: 'bg-teal-500/10',
+    borderColor: 'border-teal-500/20',
+    hoverBorder: 'hover:border-teal-500/30',
+    title: 'Flottenmanagement',
+    subtitle: 'Digitale Fahrzeugakte & Fahrtenbuch',
+    subtitleColor: 'text-teal-400',
+    desc: 'Führerscheinkontrolle, Schadenmanagement, HU/AU-Erinnerungen und finanzamtkonformes Fahrtenbuch.',
+    price: 'ab €8',
+    priceUnit: '/ Fahrzeug / Monat',
+  },
+  {
+    icon: 'fa-headset',
+    iconColor: 'text-indigo-400',
+    bgColor: 'bg-indigo-500/10',
+    borderColor: 'border-indigo-500/20',
+    hoverBorder: 'hover:border-indigo-500/30',
+    title: 'Erweitertes Helpdesk',
+    subtitle: 'Omnichannel Service & SLA',
+    subtitleColor: 'text-indigo-400',
+    desc: 'Zentraler Kundenservice-Kanal mit SLA-Überwachung, Makros/Textbausteinen, Zuweisungs-Regeln und integrierter KI zur automatischen Beantwortung.',
+    price: 'ab €25',
+    priceUnit: '/ Agent / Monat',
+  },
+];
 
 const modules = [
   { icon: 'fa-network-wired', name: 'Socialverse CRM', desc: 'Pipeline, Deals, Kontakte, Revenue-Workflows', color: 'text-violet-400', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
-  { icon: 'fa-building-columns', name: 'Forge ERP', desc: 'Produkte, Projekte, Aufträge, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
+  { icon: 'fa-building-columns', name: 'Forge ERP', desc: 'Produkte, Projekte, Auftrage, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
   { icon: 'fa-folder-open', name: 'Aether', desc: 'Dokumente, Assets, Wissens-Objekte', color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20' },
-  { icon: 'fa-truck', name: 'Ecodrive', desc: 'Flotten, Routen, CO₂, ESG-Reporting', color: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
+  { icon: 'fa-truck', name: 'Ecodrive', desc: 'Flotten, Routen, CO2, ESG-Reporting', color: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
   { icon: 'fa-headset', name: 'Customer Portal', desc: 'Tickets, Rechnungen, Abo-Verwaltung', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
-  { icon: 'fa-coins', name: 'Treasury', desc: 'Liquiditaet, Budgets, Kostenstellen, Cashflow', color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20' },
-  { icon: 'fa-building', name: 'Properties', desc: 'Objekte, Einheiten, WEG-Abrechnung, Ruecklagen', color: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/20' },
+  { icon: 'fa-coins', name: 'Treasury', desc: 'Liquiditat, Budgets, Kostenstellen, Cashflow', color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20' },
+  { icon: 'fa-building', name: 'Properties', desc: 'Objekte, Einheiten, WEG-Abrechnung, Rucklagen', color: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/20' },
   { icon: 'fa-tower-broadcast', name: 'Relay', desc: 'E-Mail, Push, SMS und In-App-Benachrichtigungen', color: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/20' },
-  { icon: 'fa-gears', name: 'Conductor', desc: 'Workflow-Orchestrierung und prozessuebergreifende Automatisierung', color: 'text-indigo-400', bg: 'bg-indigo-500/10', border: 'border-indigo-500/20' },
+  { icon: 'fa-gears', name: 'Conductor', desc: 'Workflow-Orchestrierung und prozessubergreifende Automatisierung', color: 'text-indigo-400', bg: 'bg-indigo-500/10', border: 'border-indigo-500/20' },
 ];
 
 const included = [
-  'Alle 9 Suite-Module inklusive',
-  'Unbegrenzte Mandanten-Isolation (Multi-Tenant)',
-  'Single Sign-On über das Kundenportal',
+  'Module flexibel nach Bedarf aktivierbar',
+  'Strikte RLS Mandanten-Isolation (Multi-Tenant)',
+  'Single Sign-On (SSO) und MFA uber Kundenportal',
   'App Switcher zwischen allen Modulen',
   'DSGVO-konforme Datenhaltung in Deutschland',
-  'Stripe-Abo, monatlich kündbar',
-  'Audit-Log & Rollen-/Rechteverwaltung (RBAC)',
+  'Stripe-Abo, monatlich kundbar',
+  'Detailliertes Audit-Log & RBAC-Rollen',
   'E-Mail-Support mit SLA',
 ];
 
 const faqs = [
   {
     q: 'Was ist in einem Seat enthalten?',
-    a: 'Ein Seat gibt einem Benutzer vollen Zugang zu allen 9 Suite-Modulen. Module sind nicht einzeln buchbar – die Suite kommt als vollständiges Paket.'
+    a: 'Ein Seat gibt einem Benutzer Zugang zu allen im Tier enthaltenen Suite-Modulen. Starter: Portal, ERP, Treasury. Professional: + CRM, DMS, Relay, Conductor. Enterprise: + Ecodrive, Properties.'
+  },
+  {
+    q: 'Was kostet das Enterprise-Tier?',
+    a: 'Das Enterprise-Tier kostet 99 EUR pro Seat und Monat. Es enthalt alle Professional-Module plus die spezialisierten Fachmodule Ecodrive und Properties sowie optionale physische DB-per-Tenant-Isolation und dedizierten Account-Manager.'
   },
   {
     q: 'Wo werden meine Daten gespeichert?',
-    a: 'Alle Daten werden ausschließlich auf Servern in Deutschland gehostet. Die Verarbeitung erfolgt vollständig DSGVO-konform.'
+    a: 'Alle Daten werden ausschliesslich auf Servern in Deutschland gehostet. Die Verarbeitung erfolgt vollstandig DSGVO-konform.'
   },
   {
-    q: 'Kann ich monatlich kündigen?',
-    a: 'Ja. Abonnements laufen monatlich und können jederzeit zum Ende des Abrechnungszeitraums gekündigt werden. Keine Mindestvertragslaufzeit.'
+    q: 'Kann ich monatlich kundigen?',
+    a: 'Ja. Abonnements laufen monatlich und konnen jederzeit zum Ende des Abrechnungszeitraums gekundigt werden. Keine Mindestvertragslaufzeit.'
   },
   {
     q: 'Gibt es eine kostenlose Testphase?',
-            a: 'Die Demo ist frei zugänglich unter suite.waldheim.dev – einfach registrieren und direkt loslegen.'
+    a: 'Die Demo ist frei zuganglich unter suite.waldheim.dev. Professional-Features konnen 14 Tage lang ohne Kreditkarte getestet werden.'
+  },
+  {
+    q: 'Was bedeutet "Bring Your Own AI"?',
+    a: 'Im Professional- und Enterprise-Tier konnen Sie Ihre eigenen API-Schlussel fur OpenAI, Anthropic oder andere Anbieter hinterlegen. Die Suite leitet Anfragen uber einen LiteLLM-Proxy weiter – Ihre Schlussel bleiben verschlusselt und verlassen nie unkontrolliert Ihren Mandanten.'
   },
   {
     q: 'Was bedeutet Multi-Tenant?',
-    a: 'Jeder Kunde erhält einen eigenen, vollständig isolierten Mandanten. Ihre Daten sind strikt von denen anderer Kunden getrennt – technisch und organisatorisch.'
+    a: 'Jeder Kunde erhalt einen eigenen, vollstandig isolierten Mandanten mit strikter Row-Level Security (RLS). Im Enterprise-Tier ist optional sogar eine physische DB-per-Tenant-Isolation moglich.'
   },
 ];
 ---
@@ -69,143 +186,173 @@ const faqs = [
 >
   <!-- Hero -->
   <section class="relative isolate px-6 pt-32 pb-16 bg-meg-bg-dark">
+    <InteractiveHeroCanvas particleColor="#eab308" lineColor="#6366f1" />
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
       <div
         class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-meg-accent/20 to-sky-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
         style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
       ></div>
     </div>
-
     <div class="mx-auto max-w-3xl text-center gsap-fadein">
       <a href="/suite/" class="inline-flex items-center gap-2 text-sm text-meg-text-secondary hover:text-meg-accent transition-colors mb-8">
         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-        Zurück zur Suite-Übersicht
+        Zuruck zur Suite-Ubersicht
       </a>
       <p class="text-sm font-bold uppercase tracking-widest text-meg-accent mb-4">
         <i class="fa-solid fa-tag mr-2" aria-hidden="true"></i>
-        Preise & Pakete
+        Preise &amp; Pakete
       </p>
       <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-meg-text-primary-dark mb-6">
-        Ein Preis.<br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Alle Module.</span>
+        Klare Tiers.<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">Volle Kontrolle.</span>
       </h1>
       <p class="text-xl text-meg-text-secondary leading-relaxed">
-        Keine Tier-Verwirrung, keine versteckten Modul-Aufpreise.<br />
-        Die Waldheim Suite kommt als vollständiges Paket – pro Seat, pro Monat.
+        Value-based Pricing ohne versteckte Kosten.<br />
+        Wahlen Sie das passende Fundament und erweitern Sie es exakt nach Bedarf.
       </p>
     </div>
   </section>
 
-  <!-- Single Price Card -->
-  <section class="px-6 pb-16 bg-meg-bg-dark">
-    <div class="mx-auto max-w-2xl">
-      <div class="gsap-fadein relative group">
-        <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent/30 to-sky-500/30 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-700" aria-hidden="true"></div>
-        <div class="relative bg-meg-surface-dark border border-meg-accent/30 rounded-3xl p-10 shadow-2xl shadow-meg-accent/10">
-          <!-- Badge -->
-          <div class="flex items-center justify-between mb-8">
-            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-meg-accent/10 border border-meg-accent/30 text-meg-accent text-xs font-black uppercase tracking-widest">
-              <i class="fa-solid fa-circle text-[6px] animate-pulse" aria-hidden="true"></i>
-              Early Access
-            </span>
-            <span class="text-meg-text-secondary text-sm font-semibold">Monatlich kündbar</span>
-          </div>
-
-          <!-- Price -->
-          <div class="mb-8">
-            <p class="text-meg-text-secondary text-sm font-semibold uppercase tracking-widest mb-2">Waldheim Suite</p>
-            <div class="flex items-end gap-2">
-              <span class="text-7xl font-black text-meg-text-primary-dark tracking-tighter">€49</span>
-              <div class="pb-3 text-meg-text-secondary">
-                <span class="text-lg font-bold">/Seat</span>
-                <br />
-                <span class="text-sm">/Monat</span>
+  <!-- Pricing Tiers Grid -->
+  <section class="px-6 pb-24 bg-meg-bg-dark">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {pricingTiers.map((tier) => (
+          <div
+            class={`gsap-fadein relative group flex flex-col justify-between rounded-3xl p-8 transition duration-300 ${
+              tier.popular
+                ? 'bg-meg-surface-dark/80 border border-meg-accent/50 shadow-2xl shadow-meg-accent/5'
+                : 'bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30'
+            }`}
+          >
+            {tier.popular && (
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-meg-accent text-slate-900 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Beliebt</div>
+            )}
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class={`text-xs font-bold uppercase tracking-widest ${tier.popular ? 'text-meg-accent' : 'text-slate-400'}`}>{tier.name}</span>
+                <span class={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full ${tier.popular ? 'bg-meg-accent text-slate-900' : tier.name === 'Enterprise' ? 'bg-violet-500/20 text-violet-300 border border-violet-500/30' : 'bg-slate-700 text-slate-200'}`}>{tier.badge}</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-2">
+                <span class="text-5xl font-black text-meg-text-primary-dark tracking-tighter">EUR {tier.price}</span>
+                <div class="text-meg-text-secondary text-[10px] leading-tight uppercase font-bold">
+                  <span>/ Seat</span>
+                  <br />
+                  <span>/ Monat</span>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-meg-text-secondary leading-relaxed">{tier.desc}</p>
+              <ul class="mt-8 space-y-3 text-sm text-slate-300">
+                {tier.features.map((f) => (
+                  <li class="flex items-start gap-2.5">
+                    <i class={`fa-solid ${f.icon} text-meg-accent text-xs mt-0.5 shrink-0`}></i>
+                    {f.text}
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-1.5">
+                {tier.modules.map((mod) => (
+                  <span class="text-[10px] font-bold uppercase tracking-wide bg-meg-surface-dark border border-meg-border-dark text-meg-text-secondary px-2 py-0.5 rounded-full">{mod}</span>
+                ))}
               </div>
             </div>
-            <p class="mt-3 text-meg-text-secondary text-sm leading-relaxed">
-              Volle Suite-Funktionalitaet ab <strong class="text-meg-text-primary-dark">1 Seat</strong>.
-              Jeder Seat kostet <strong class="text-meg-text-primary-dark">€49/Monat</strong>.
-            </p>
+            {tier.ctaStyle === 'primary' ? (
+              <a
+                href={tier.ctaHref}
+                target={tier.ctaExternal ? '_blank' : undefined}
+                rel={tier.ctaExternal ? 'noopener noreferrer' : undefined}
+                class="mt-8 w-full py-3 text-center bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold rounded-xl hover:scale-[1.02] shadow-lg shadow-meg-accent/20 transition block"
+              >
+                {tier.cta}
+              </a>
+            ) : (
+              <a
+                href={tier.ctaHref}
+                target={tier.ctaExternal ? '_blank' : undefined}
+                rel={tier.ctaExternal ? 'noopener noreferrer' : undefined}
+                class="mt-8 w-full py-3 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark hover:border-meg-accent/40 font-bold rounded-xl transition block"
+              >
+                {tier.cta}
+              </a>
+            )}
           </div>
+        ))}
+      </div>
 
-          <!-- Modules included -->
-          <div class="mb-8">
-            <p class="text-xs font-black uppercase tracking-widest text-meg-text-secondary mb-4">Enthaltene Module</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {modules.map(mod => (
-                <div class={`flex items-center gap-3 p-3 rounded-xl ${mod.bg} border ${mod.border}`}>
-                  <i class={`fa-solid ${mod.icon} ${mod.color} text-sm w-4 text-center`} aria-hidden="true"></i>
-                  <span class="text-meg-text-primary-dark font-semibold text-sm">{mod.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- What's included -->
-          <ul class="space-y-3 mb-10">
-            {included.map(item => (
-              <li class="flex items-center gap-3 text-meg-text-secondary text-sm">
-                <i class="fa-solid fa-check-circle text-meg-accent text-base shrink-0" aria-hidden="true"></i>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://suite.waldheim.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold shadow-xl shadow-meg-accent/20 hover:scale-[1.02] hover:shadow-meg-accent/30 transition-all"
-            >
-              <i class="fa-solid fa-play" aria-hidden="true"></i>
-              Demo starten
-            </a>
-            <a
-              href="https://suite.waldheim.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
-            >
-              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              Zur Demo
-            </a>
-          </div>
-        </div>
+      <!-- Early-Adopter Banner -->
+      <div class="mt-10 gsap-fadein p-5 bg-emerald-500/5 border border-emerald-500/20 rounded-2xl text-center">
+        <p class="text-emerald-400 text-sm font-bold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-percent"></i>
+          <strong>Penetrations-Vorteil fur Early Adopter:</strong>&nbsp;Profitieren Sie von bis zu&nbsp;<strong>40% Rabatt</strong>&nbsp;im ersten Jahr.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Enterprise / Custom -->
-  <section class="px-6 py-16 bg-meg-bg-dark border-t border-meg-border-dark">
-    <div class="mx-auto max-w-3xl text-center gsap-fadein">
-      <div class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-10">
-        <i class="fa-solid fa-building text-3xl text-meg-accent mb-4" aria-hidden="true"></i>
-        <h2 class="text-2xl font-black text-meg-text-primary-dark mb-3">Großkunden & Enterprise</h2>
-        <p class="text-meg-text-secondary leading-relaxed mb-6 max-w-xl mx-auto">
-          Mehr als 25 Seats, individuelle SLA, Compliance-Anforderungen oder ein maßgeschneidertes Onboarding?
-          Wir erstellen Ihnen ein individuelles Angebot.
+  <!-- Alles inklusive -->
+  <section class="px-6 py-16 bg-meg-surface-dark/20 border-t border-meg-border-dark">
+    <div class="mx-auto max-w-5xl">
+      <div class="text-center mb-10 gsap-fadein">
+        <h2 class="text-3xl font-black tracking-tighter text-meg-text-primary-dark mb-2">In jedem Tier inklusive</h2>
+        <p class="text-meg-text-secondary">Was immer dabei ist – unabhangig vom gewahlten Plan.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {included.map((item) => (
+          <div class="gsap-fadein flex items-start gap-3 bg-meg-surface-dark/50 border border-meg-border-dark rounded-xl p-4">
+            <i class="fa-solid fa-circle-check text-meg-accent mt-0.5 shrink-0 text-sm"></i>
+            <span class="text-sm text-slate-300">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Fachmodule / Add-ons -->
+  <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark" id="fachmodule">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center mb-16 gsap-fadein">
+        <span class="text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-4">
+          <i class="fa-solid fa-puzzle-piece text-xs"></i>
+          Zubuchbare Module
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
+          Spezialisierte Fachmodule &amp; Add-ons
+        </h2>
+        <p class="text-lg text-meg-text-secondary max-w-2xl mx-auto">
+          Erweitern Sie Ihre Suite exakt um die Funktionalitaten, die Ihr Geschaft erfordert.
         </p>
-        <a
-          href="/kontakt/"
-          class="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
-        >
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          Angebot anfragen
-        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {addons.map((addon) => (
+          <div class={`gsap-fadein bg-meg-surface-dark/50 border ${addon.borderColor} rounded-3xl p-8 ${addon.hoverBorder} transition duration-300`}>
+            <div class="flex items-center gap-4 mb-6">
+              <div class={`size-12 rounded-xl ${addon.bgColor} border ${addon.borderColor} flex items-center justify-center`}>
+                <i class={`fa-solid ${addon.icon} ${addon.iconColor} text-xl`}></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-meg-text-primary-dark">{addon.title}</h3>
+                <p class={`text-xs ${addon.subtitleColor} font-bold uppercase tracking-wider`}>{addon.subtitle}</p>
+              </div>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">{addon.desc}</p>
+            <div class="flex items-baseline gap-2 border-t border-meg-border-dark/30 pt-6">
+              <span class="text-3xl font-black text-meg-text-primary-dark">{addon.price}</span>
+              <span class="text-sm text-meg-text-secondary">{addon.priceUnit}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Module Detail Grid -->
-  <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
+  <section class="px-6 py-24 bg-meg-surface-dark/20 border-t border-meg-border-dark">
     <div class="mx-auto max-w-7xl">
       <div class="text-center mb-16 gsap-fadein">
         <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
           Was ist <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400">enthalten?</span>
         </h2>
-        <p class="text-meg-text-secondary text-xl">Jedes Modul vollständig – kein Modul-Aufpreis, kein Feature-Gate.</p>
+        <p class="text-meg-text-secondary text-xl">Jedes Modul vollstandig – kein Feature-Gate, keine kunstlichen Limits.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {modules.map((mod, i) => (
@@ -220,7 +367,6 @@ const faqs = [
             <p class="text-meg-text-secondary text-sm leading-relaxed">{mod.desc}</p>
           </div>
         ))}
-
       </div>
     </div>
   </section>
@@ -229,7 +375,7 @@ const faqs = [
   <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-3xl">
       <div class="text-center mb-16 gsap-fadein">
-        <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">Häufige Fragen</h2>
+        <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">Haufige Fragen</h2>
       </div>
       <div class="space-y-4">
         {faqs.map((faq, i) => (
@@ -248,13 +394,13 @@ const faqs = [
     </div>
   </section>
 
+  <PromoServices />
+
   <!-- Final CTA -->
   <section class="px-6 py-24 bg-meg-bg-dark border-t border-meg-border-dark">
     <div class="mx-auto max-w-3xl text-center gsap-fadein">
-      <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">
-        Bereit für die Suite?
-      </h2>
-      <p class="text-meg-text-secondary text-xl mb-10">Jetzt kostenlos testen – direkt starten, kein Kontakt nötig.</p>
+      <h2 class="text-4xl font-black tracking-tighter text-meg-text-primary-dark mb-4">Bereit fur die Suite?</h2>
+      <p class="text-meg-text-secondary text-xl mb-10">Jetzt kostenlos testen – direkt starten, kein Kontakt notig.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="https://suite.waldheim.dev"
@@ -266,13 +412,11 @@ const faqs = [
           Demo starten
         </a>
         <a
-          href="https://suite.waldheim.dev"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/kontakt/"
           class="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 transition-all"
         >
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-          suite.waldheim.dev
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          Angebot anfragen
         </a>
       </div>
     </div>
