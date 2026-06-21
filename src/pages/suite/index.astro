@@ -180,36 +180,56 @@ const faqItems = [
 
 const integrationItems = [
   {
-    icon: 'fa-file-invoice',
+    icon: 'fa-solid fa-file-invoice',
     label: 'XRechnung / ZUGFeRD',
     desc: 'E-Rechnungspflicht ab 2025',
   },
   {
-    icon: 'fa-stripe-s',
+    icon: 'fa-brands fa-stripe-s',
     label: 'Stripe Billing',
     desc: 'Abonnements & Zahlungen',
   },
   {
-    icon: 'fa-calendar',
+    icon: 'fa-brands fa-google',
     label: 'Google Calendar',
     desc: 'Kalender-Sync via OAuth',
   },
   {
-    icon: 'fa-microsoft',
+    icon: 'fa-brands fa-microsoft',
     label: 'Microsoft 365',
     desc: 'Calendar & Mail-Integration',
   },
   {
-    icon: 'fa-facebook',
+    icon: 'fa-brands fa-facebook',
     label: 'Facebook Pages',
     desc: 'Social Posting & Analytics',
   },
-  { icon: 'fa-linkedin', label: 'LinkedIn', desc: 'Kampagnen & Lead-Gen' },
-  { icon: 'fa-instagram', label: 'Instagram', desc: 'Content & Reichweite' },
-  { icon: 'fa-bell', label: 'Web Push', desc: 'Browser-Benachrichtigungen' },
-  { icon: 'fa-code', label: 'REST API', desc: 'Offene Schnittstelle' },
-  { icon: 'fa-book', label: 'API-Docs', desc: 'OpenAPI Spec verfügbar' },
-  { icon: 'fa-link', label: 'Webhooks', desc: 'Event-basierte Integration' },
+  {
+    icon: 'fa-brands fa-linkedin',
+    label: 'LinkedIn',
+    desc: 'Kampagnen & Lead-Gen',
+  },
+  {
+    icon: 'fa-brands fa-instagram',
+    label: 'Instagram',
+    desc: 'Content & Reichweite',
+  },
+  {
+    icon: 'fa-solid fa-bell',
+    label: 'Web Push',
+    desc: 'Browser-Benachrichtigungen',
+  },
+  { icon: 'fa-solid fa-code', label: 'REST API', desc: 'Offene Schnittstelle' },
+  {
+    icon: 'fa-solid fa-book',
+    label: 'API-Docs',
+    desc: 'OpenAPI Spec verfügbar',
+  },
+  {
+    icon: 'fa-solid fa-link',
+    label: 'Webhooks',
+    desc: 'Event-basierte Integration',
+  },
 ];
 
 const complianceItems = [
@@ -256,7 +276,6 @@ const complianceItems = [
   <section
     class="relative isolate pt-14 pb-20 px-6 bg-meg-bg-dark border-b border-meg-border-dark overflow-hidden"
   >
-
     <!-- Three.js Interactive WebGL Background -->
     <InteractiveHeroCanvas particleColor="#0ea5e9" lineColor="#6366f1" />
 
@@ -1046,7 +1065,11 @@ const complianceItems = [
                 [
                   { label: 'Offene Tickets', value: '4', sub: '1 kritisch' },
                   { label: 'Antwortzeit', value: '1h 12m', sub: 'unter SLA' },
-                  { label: 'Offene Rechnungen', value: '€ 2.480', sub: '2 Belege' },
+                  {
+                    label: 'Offene Rechnungen',
+                    value: '€ 2.480',
+                    sub: '2 Belege',
+                  },
                   { label: 'Aktive Module', value: '5', sub: 'Suite-weit' },
                 ].map((k) => (
                   <div class="bg-meg-bg-dark/60 rounded-xl p-3">
@@ -1134,8 +1157,11 @@ const complianceItems = [
                 ))
               }
             </div>
-            <div class="flex justify-between text-[10px] text-meg-text-secondary">
-              <span>Dez</span><span>Jan</span><span>Feb</span><span>Mär</span><span>Apr</span><span>Mai</span>
+            <div
+              class="flex justify-between text-[10px] text-meg-text-secondary"
+            >
+              <span>Dez</span><span>Jan</span><span>Feb</span><span>Mär</span
+              ><span>Apr</span><span>Mai</span>
             </div>
           </div>
           <div class="order-1 lg:order-2">
@@ -1157,9 +1183,9 @@ const complianceItems = [
               </div>
             </div>
             <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Treasury macht Liquidität, offene Forderungen und Budgetrisiken
-              in Echtzeit sichtbar. Statt Excel-Nachpflege sehen Finanzteams,
-              was in 7, 30 oder 90 Tagen wirklich auf sie zukommt.
+              Treasury macht Liquidität, offene Forderungen und Budgetrisiken in
+              Echtzeit sichtbar. Statt Excel-Nachpflege sehen Finanzteams, was
+              in 7, 30 oder 90 Tagen wirklich auf sie zukommt.
             </p>
             <div class="grid grid-cols-2 gap-3">
               {
@@ -1336,7 +1362,7 @@ const complianceItems = [
                   style={`animation-delay: ${i * 0.05}s`}
                 >
                   <i
-                    class={`fa-brands ${item.icon} text-meg-accent text-sm shrink-0`}
+                    class={`${item.icon} text-meg-accent text-sm shrink-0`}
                     aria-hidden="true"
                   />
                   <div>
@@ -1376,65 +1402,133 @@ const complianceItems = [
           style="animation-delay: 0.15s"
         >
           Einfache Tiers.
-          <span class="text-transparent bg-clip-text bg-linear-to-r from-meg-accent to-sky-400">Volle Flexibilität.</span>
+          <span
+            class="text-transparent bg-clip-text bg-linear-to-r from-meg-accent to-sky-400"
+            >Volle Flexibilität.</span
+          >
         </h2>
         <p
           class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
           style="animation-delay: 0.3s"
         >
           Transparente Abrechnung ohne versteckte Kosten. Starten Sie ab
-          <strong class="text-meg-text-primary-dark">€29/Seat/Monat</strong> und wählen Sie exakt das Paket, das zu Ihrem Business passt.
+          <strong class="text-meg-text-primary-dark">€29/Seat/Monat</strong> und wählen
+          Sie exakt das Paket, das zu Ihrem Business passt.
         </p>
       </div>
 
       <!-- 3-Tier Preview Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-
         <!-- Starter -->
-        <div class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300">
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Starter</span>
+        <div
+          class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300"
+        >
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3"
+            >Starter</span
+          >
           <div class="flex items-baseline gap-1.5 mb-4">
-            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€29</span>
-            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+            <span
+              class="text-4xl font-black text-meg-text-primary-dark tracking-tighter"
+              >€29</span
+            >
+            <span class="text-meg-text-secondary text-xs font-bold uppercase"
+              >/Seat/Mo.</span
+            >
           </div>
-          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">CRM-Kern, E-Rechnungen, Basis-Ticketing & DE-Server.</p>
-          <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition">Demo starten</a>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">
+            CRM-Kern, E-Rechnungen, Basis-Ticketing & DE-Server.
+          </p>
+          <a
+            href="https://suite.waldheim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition"
+            >Demo starten</a
+          >
         </div>
 
         <!-- Professional (highlight) -->
-        <div class="gsap-fadein relative flex flex-col bg-meg-surface-dark/80 border border-meg-accent/50 rounded-2xl p-7 shadow-2xl shadow-meg-accent/5 transition duration-300">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-meg-accent text-slate-900 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest">Beliebt</div>
-          <span class="text-xs font-bold uppercase tracking-widest text-meg-accent mb-3">Professional</span>
-          <div class="flex items-baseline gap-1.5 mb-4">
-            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€59</span>
-            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+        <div
+          class="gsap-fadein relative flex flex-col bg-meg-surface-dark/80 border border-meg-accent/50 rounded-2xl p-7 shadow-2xl shadow-meg-accent/5 transition duration-300"
+        >
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-meg-accent text-slate-900 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest"
+          >
+            Beliebt
           </div>
-          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">Voller Funktionsumfang, Automation & Workflow-Builder für KMU.</p>
-          <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="mt-auto w-full py-2.5 text-center bg-gradient-to-r from-meg-accent to-sky-600 text-white text-sm font-bold rounded-xl hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20">Professional starten</a>
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-meg-accent mb-3"
+            >Professional</span
+          >
+          <div class="flex items-baseline gap-1.5 mb-4">
+            <span
+              class="text-4xl font-black text-meg-text-primary-dark tracking-tighter"
+              >€59</span
+            >
+            <span class="text-meg-text-secondary text-xs font-bold uppercase"
+              >/Seat/Mo.</span
+            >
+          </div>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">
+            Voller Funktionsumfang, Automation & Workflow-Builder für KMU.
+          </p>
+          <a
+            href="https://suite.waldheim.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-auto w-full py-2.5 text-center bg-gradient-to-r from-meg-accent to-sky-600 text-white text-sm font-bold rounded-xl hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20"
+            >Professional starten</a
+          >
         </div>
 
         <!-- Enterprise -->
-        <div class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300">
-          <span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Enterprise</span>
+        <div
+          class="gsap-fadein flex flex-col bg-meg-surface-dark/40 border border-meg-border-dark hover:border-meg-accent/30 rounded-2xl p-7 transition duration-300"
+        >
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3"
+            >Enterprise</span
+          >
           <div class="flex items-baseline gap-1.5 mb-4">
-            <span class="text-4xl font-black text-meg-text-primary-dark tracking-tighter">€89</span>
-            <span class="text-meg-text-secondary text-xs font-bold uppercase">/Seat/Mo.</span>
+            <span
+              class="text-4xl font-black text-meg-text-primary-dark tracking-tighter"
+              >€89</span
+            >
+            <span class="text-meg-text-secondary text-xs font-bold uppercase"
+              >/Seat/Mo.</span
+            >
           </div>
-          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">Mandanten-Isolation, SSO/SAML, API & SLA-Support.</p>
-          <a href="/kontakt/" class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition">Angebot anfragen</a>
+          <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">
+            Mandanten-Isolation, SSO/SAML, API & SLA-Support.
+          </p>
+          <a
+            href="/kontakt/"
+            class="mt-auto w-full py-2.5 text-center bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-xl hover:border-meg-accent/40 transition"
+            >Angebot anfragen</a
+          >
         </div>
-
       </div>
 
       <!-- Pricing Calculator -->
-      <div class="gsap-fadein bg-meg-bg-dark border border-meg-accent/20 rounded-3xl p-8 shadow-2xl shadow-meg-accent/5">
+      <div
+        class="gsap-fadein bg-meg-bg-dark border border-meg-accent/20 rounded-3xl p-8 shadow-2xl shadow-meg-accent/5"
+      >
         <div class="text-center mb-8">
-          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full mb-3">
+          <span
+            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full mb-3"
+          >
             <i class="fa-solid fa-calculator text-xs"></i>
             Preisrechner
           </span>
-          <h3 class="text-2xl font-black tracking-tighter text-meg-text-primary-dark">Was kostet die Suite für Ihr Team?</h3>
-          <p class="text-meg-text-secondary text-sm mt-2">Bewegen Sie die Regler – der Preis aktualisiert sich in Echtzeit.</p>
+          <h3
+            class="text-2xl font-black tracking-tighter text-meg-text-primary-dark"
+          >
+            Was kostet die Suite für Ihr Team?
+          </h3>
+          <p class="text-meg-text-secondary text-sm mt-2">
+            Bewegen Sie die Regler – der Preis aktualisiert sich in Echtzeit.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -1442,19 +1536,40 @@ const complianceItems = [
           <div class="space-y-8">
             <!-- Tier Selection -->
             <div>
-              <label class="block text-sm font-bold text-meg-text-primary-dark mb-3">Paket wählen</label>
+              <label
+                class="block text-sm font-bold text-meg-text-primary-dark mb-3"
+                >Paket wählen</label
+              >
               <div class="grid grid-cols-3 gap-2" id="calc-tier-group">
-                <button id="calc-tier-starter" data-tier="starter" data-price="29"
-                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent">
-                  Starter<br/><span class="text-[10px] font-normal opacity-70">€29/Seat</span>
+                <button
+                  id="calc-tier-starter"
+                  data-tier="starter"
+                  data-price="29"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent"
+                >
+                  Starter<br /><span class="text-[10px] font-normal opacity-70"
+                    >€29/Seat</span
+                  >
                 </button>
-                <button id="calc-tier-professional" data-tier="professional" data-price="59"
-                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40">
-                  Professional<br/><span class="text-[10px] font-normal opacity-70">€59/Seat</span>
+                <button
+                  id="calc-tier-professional"
+                  data-tier="professional"
+                  data-price="59"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40"
+                >
+                  Professional<br /><span
+                    class="text-[10px] font-normal opacity-70">€59/Seat</span
+                  >
                 </button>
-                <button id="calc-tier-enterprise" data-tier="enterprise" data-price="89"
-                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40">
-                  Enterprise<br/><span class="text-[10px] font-normal opacity-70">€89/Seat</span>
+                <button
+                  id="calc-tier-enterprise"
+                  data-tier="enterprise"
+                  data-price="89"
+                  class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40"
+                >
+                  Enterprise<br /><span
+                    class="text-[10px] font-normal opacity-70">€89/Seat</span
+                  >
                 </button>
               </div>
             </div>
@@ -1462,87 +1577,176 @@ const complianceItems = [
             <!-- Seats Slider -->
             <div>
               <div class="flex justify-between items-center mb-3">
-                <label for="calc-seats" class="text-sm font-bold text-meg-text-primary-dark">Anzahl Nutzer (Seats)</label>
-                <span id="calc-seats-display" class="text-meg-accent font-black text-lg">5</span>
+                <label
+                  for="calc-seats"
+                  class="text-sm font-bold text-meg-text-primary-dark"
+                  >Anzahl Nutzer (Seats)</label
+                >
+                <span
+                  id="calc-seats-display"
+                  class="text-meg-accent font-black text-lg">5</span
+                >
               </div>
-              <input id="calc-seats" type="range" min="1" max="100" value="5" step="1"
-                class="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-[#0ea5e9] bg-meg-border-dark" />
-              <div class="flex justify-between text-[10px] text-meg-text-secondary mt-1">
-                <span>1</span><span>25</span><span>50</span><span>75</span><span>100</span>
+              <input
+                id="calc-seats"
+                type="range"
+                min="1"
+                max="100"
+                value="5"
+                step="1"
+                class="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-[#0ea5e9] bg-meg-border-dark"
+              />
+              <div
+                class="flex justify-between text-[10px] text-meg-text-secondary mt-1"
+              >
+                <span>1</span><span>25</span><span>50</span><span>75</span><span
+                  >100</span
+                >
               </div>
             </div>
 
             <!-- Early Adopter Toggle -->
-            <div class="flex items-center justify-between p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+            <div
+              class="flex items-center justify-between p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl"
+            >
               <div>
-                <p class="text-sm font-bold text-meg-text-primary-dark">Early-Adopter-Rabatt</p>
-                <p class="text-xs text-meg-text-secondary">40% Rabatt im ersten Jahr</p>
+                <p class="text-sm font-bold text-meg-text-primary-dark">
+                  Early-Adopter-Rabatt
+                </p>
+                <p class="text-xs text-meg-text-secondary">
+                  40% Rabatt im ersten Jahr
+                </p>
               </div>
               <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="calc-discount" class="sr-only peer" />
-                <div class="w-11 h-6 bg-meg-border-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
+                <input
+                  type="checkbox"
+                  id="calc-discount"
+                  class="sr-only peer"
+                />
+                <div
+                  class="w-11 h-6 bg-meg-border-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"
+                >
+                </div>
               </label>
             </div>
 
             <!-- Immobilien Add-on -->
-            <div class="flex items-center justify-between p-4 bg-orange-500/5 border border-orange-500/20 rounded-xl">
+            <div
+              class="flex items-center justify-between p-4 bg-orange-500/5 border border-orange-500/20 rounded-xl"
+            >
               <div>
-                <p class="text-sm font-bold text-meg-text-primary-dark">+ Immobilien & WG-Verwaltung</p>
-                <p class="text-xs text-meg-text-secondary">ab €15/Mo. + €0,30–€1,00 pro Einheit</p>
+                <p class="text-sm font-bold text-meg-text-primary-dark">
+                  + Immobilien & WG-Verwaltung
+                </p>
+                <p class="text-xs text-meg-text-secondary">
+                  ab €15/Mo. + €0,30–€1,00 pro Einheit
+                </p>
               </div>
               <div class="flex items-center gap-2">
-                <input id="calc-units" type="number" min="0" max="500" value="0" placeholder="0 Einh."
-                  class="w-20 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-lg px-2 py-1.5 text-center focus:border-orange-400 focus:outline-none" />
+                <input
+                  id="calc-units"
+                  type="number"
+                  min="0"
+                  max="500"
+                  value="0"
+                  placeholder="0 Einh."
+                  class="w-20 bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark text-sm font-bold rounded-lg px-2 py-1.5 text-center focus:border-orange-400 focus:outline-none"
+                />
               </div>
             </div>
           </div>
 
           <!-- Result Display -->
-          <div class="bg-meg-surface-dark/60 border border-meg-border-dark rounded-2xl p-7">
-            <p class="text-xs font-bold uppercase tracking-widest text-meg-text-secondary mb-2">Ihre monatlichen Kosten</p>
+          <div
+            class="bg-meg-surface-dark/60 border border-meg-border-dark rounded-2xl p-7"
+          >
+            <p
+              class="text-xs font-bold uppercase tracking-widest text-meg-text-secondary mb-2"
+            >
+              Ihre monatlichen Kosten
+            </p>
 
-            <div id="calc-original-price" class="text-meg-text-secondary line-through text-lg mb-1 hidden"></div>
+            <div
+              id="calc-original-price"
+              class="text-meg-text-secondary line-through text-lg mb-1 hidden"
+            >
+            </div>
             <div class="flex items-baseline gap-2 mb-1">
-              <span id="calc-total" class="text-5xl font-black text-meg-text-primary-dark tracking-tighter">€145</span>
+              <span
+                id="calc-total"
+                class="text-5xl font-black text-meg-text-primary-dark tracking-tighter"
+                >€145</span
+              >
               <span class="text-meg-text-secondary font-semibold">/ Monat</span>
             </div>
             <div id="calc-discount-badge" class="hidden mb-4">
-              <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded-lg">Early-Adopter-Rabatt aktiv</span>
+              <span
+                class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded-lg"
+                >Early-Adopter-Rabatt aktiv</span
+              >
             </div>
 
-            <div class="border-t border-meg-border-dark/50 pt-5 mt-4 space-y-2 text-sm">
+            <div
+              class="border-t border-meg-border-dark/50 pt-5 mt-4 space-y-2 text-sm"
+            >
               <div class="flex justify-between text-meg-text-secondary">
                 <span id="calc-breakdown-seats">5 Seats × €29</span>
-                <span id="calc-breakdown-base" class="text-meg-text-primary-dark font-bold">€145</span>
+                <span
+                  id="calc-breakdown-base"
+                  class="text-meg-text-primary-dark font-bold">€145</span
+                >
               </div>
-              <div id="calc-breakdown-units-row" class="flex justify-between text-meg-text-secondary hidden">
+              <div
+                id="calc-breakdown-units-row"
+                class="flex justify-between text-meg-text-secondary hidden"
+              >
                 <span id="calc-breakdown-units-label">Immobilien-Add-on</span>
-                <span id="calc-breakdown-units-val" class="text-orange-400 font-bold">€15</span>
+                <span
+                  id="calc-breakdown-units-val"
+                  class="text-orange-400 font-bold">€15</span
+                >
               </div>
-              <div id="calc-breakdown-discount-row" class="flex justify-between text-meg-text-secondary hidden">
+              <div
+                id="calc-breakdown-discount-row"
+                class="flex justify-between text-meg-text-secondary hidden"
+              >
                 <span>Early-Adopter-Rabatt (–40%)</span>
-                <span id="calc-breakdown-discount-val" class="text-emerald-400 font-bold">–€0</span>
+                <span
+                  id="calc-breakdown-discount-val"
+                  class="text-emerald-400 font-bold">–€0</span
+                >
               </div>
             </div>
 
-            <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer"
-              class="mt-6 w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20">
+            <a
+              href="https://suite.waldheim.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-meg-accent to-sky-600 text-white font-bold hover:scale-[1.02] transition shadow-lg shadow-meg-accent/20"
+            >
               <i class="fa-solid fa-play text-sm"></i>
               Jetzt kostenlos testen
             </a>
-            <a href="/suite/preise/" class="mt-3 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-transparent border border-meg-border-dark text-meg-text-secondary text-sm hover:border-meg-accent/40 transition">
+            <a
+              href="/suite/preise/"
+              class="mt-3 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-transparent border border-meg-border-dark text-meg-text-secondary text-sm hover:border-meg-accent/40 transition"
+            >
               <i class="fa-solid fa-list-check text-xs"></i>
               Alle Preise & Fachmodule ansehen
             </a>
 
-            <p class="text-center text-meg-text-secondary text-xs mt-4">Alle Preise zzgl. MwSt. · Monatlich kündbar</p>
+            <p class="text-center text-meg-text-secondary text-xs mt-4">
+              Alle Preise zzgl. MwSt. · Monatlich kündbar
+            </p>
           </div>
         </div>
       </div>
 
       <div class="text-center mt-8">
         <p class="text-meg-text-secondary text-sm">
-          <span class="text-emerald-400 font-semibold">Bis zu 40% Early-Adopter-Rabatt im 1. Jahr</span>
+          <span class="text-emerald-400 font-semibold"
+            >Bis zu 40% Early-Adopter-Rabatt im 1. Jahr</span
+          >
           · Monatlich kündbar · Jährliche Abrechnung auf Anfrage
         </p>
       </div>
@@ -1605,19 +1809,32 @@ const complianceItems = [
   // Pricing Calculator Logic
   const seatsInput = document.getElementById('calc-seats') as HTMLInputElement;
   const seatsDisplay = document.getElementById('calc-seats-display')!;
-  const discountToggle = document.getElementById('calc-discount') as HTMLInputElement;
+  const discountToggle = document.getElementById(
+    'calc-discount',
+  ) as HTMLInputElement;
   const unitsInput = document.getElementById('calc-units') as HTMLInputElement;
   const totalEl = document.getElementById('calc-total')!;
   const originalPriceEl = document.getElementById('calc-original-price')!;
   const discountBadge = document.getElementById('calc-discount-badge')!;
   const breakdownSeats = document.getElementById('calc-breakdown-seats')!;
   const breakdownBase = document.getElementById('calc-breakdown-base')!;
-  const breakdownUnitsRow = document.getElementById('calc-breakdown-units-row')!;
-  const breakdownUnitsLabel = document.getElementById('calc-breakdown-units-label')!;
-  const breakdownUnitsVal = document.getElementById('calc-breakdown-units-val')!;
-  const breakdownDiscountRow = document.getElementById('calc-breakdown-discount-row')!;
-  const breakdownDiscountVal = document.getElementById('calc-breakdown-discount-val')!;
-  const tierBtns = document.querySelectorAll<HTMLButtonElement>('.calc-tier-btn');
+  const breakdownUnitsRow = document.getElementById(
+    'calc-breakdown-units-row',
+  )!;
+  const breakdownUnitsLabel = document.getElementById(
+    'calc-breakdown-units-label',
+  )!;
+  const breakdownUnitsVal = document.getElementById(
+    'calc-breakdown-units-val',
+  )!;
+  const breakdownDiscountRow = document.getElementById(
+    'calc-breakdown-discount-row',
+  )!;
+  const breakdownDiscountVal = document.getElementById(
+    'calc-breakdown-discount-val',
+  )!;
+  const tierBtns =
+    document.querySelectorAll<HTMLButtonElement>('.calc-tier-btn');
 
   let currentPrice = 29;
 
@@ -1660,13 +1877,15 @@ const complianceItems = [
     totalEl.textContent = `€${total}`;
   }
 
-  tierBtns.forEach(btn => {
+  tierBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       currentPrice = parseInt(btn.dataset.price || '29');
-      tierBtns.forEach(b => {
-        b.className = 'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40';
+      tierBtns.forEach((b) => {
+        b.className =
+          'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40';
       });
-      btn.className = 'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent';
+      btn.className =
+        'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-accent bg-meg-accent/10 text-meg-accent';
       updateCalc();
     });
   });

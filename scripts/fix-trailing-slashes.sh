@@ -4,7 +4,7 @@
 
 set -e
 
-SRC_DIR="/home/mawa/development/waldheim.dev/waldheim.dev.homepage/src"
+SRC_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../src" && pwd)"
 FIXED_COUNT=0
 DRY_RUN=false
 
