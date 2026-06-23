@@ -11,13 +11,9 @@ import compressor from 'astro-compressor';
 
 import compress from 'astro-compress';
 
-import llmsTxt from '@waldheimdev/astro-ai-llms-txt';
-
 import partytown from '@astrojs/partytown';
 
 import robotsTxt from 'astro-robots-txt';
-
-import pageInsight from 'astro-page-insight';
 
 import 'dotenv/config';
 
@@ -58,7 +54,7 @@ export default defineConfig({
       serialize: (item) => {
         // Prioritäten nach URL-Muster setzen
         if (item.url === 'https://www.waldheim.dev/') {
-          item.priority = 1.0; // Homepage
+          item.priority = 1; // Homepage
         } else if (item.url.includes('/services/') ||
           item.url.includes('/suite/')) {
           item.priority = 0.9; // Hauptprodukte/Services
@@ -72,10 +68,11 @@ export default defineConfig({
         return item;
       }
     }),
-    compress(),
+    compress({
+      Image: false,
+    }),
     compressor({ gzip: true }),
     partytown({
-      lib: 'partytown',
       config: {
         forward: ['dataLayer.push'],
       },
@@ -91,7 +88,6 @@ export default defineConfig({
         },
       ],
     }),
-    pageInsight(),
   ],
   build: {
     inlineStylesheets: 'auto',
