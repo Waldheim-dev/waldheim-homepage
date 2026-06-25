@@ -1,3 +1,10 @@
+## [26.13.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.0...26.13.1) (2026-06-25)
+
+
+### Bug Fixes
+
+* add newest versions ([54351db](https://github.com/Waldheim-dev/waldheim-homepage/commit/54351dbe3937ccf4be4ed160fcfbd18639b9723e))
+
 # [26.13.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.12.0...26.13.0) (2026-06-21)
 
 
