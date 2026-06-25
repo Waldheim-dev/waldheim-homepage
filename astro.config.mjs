@@ -70,6 +70,9 @@ export default defineConfig({
     }),
     compress({
       Image: false,
+      // csso 5.0.5 strips TailwindCSS v4 range media queries (@media (width >= 1024px))
+      // Vite + TailwindCSS v4 already minify CSS via Lightning CSS — double-minification breaks breakpoints
+      CSS: false,
     }),
     compressor({ gzip: true }),
     partytown({
