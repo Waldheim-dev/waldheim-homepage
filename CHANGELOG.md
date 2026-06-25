@@ -1,3 +1,10 @@
+## [26.13.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.1...26.13.2) (2026-06-25)
+
+
+### Bug Fixes
+
+* restore responsive breakpoints in production build ([bc93f25](https://github.com/Waldheim-dev/waldheim-homepage/commit/bc93f2516dea8648119d599bb41e8b394f2f5e7d))
+
 ## [26.13.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.0...26.13.1) (2026-06-25)
 
 
