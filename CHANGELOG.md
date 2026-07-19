@@ -1,3 +1,10 @@
+# [26.14.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.2...26.14.0) (2026-07-19)
+
+
+### Features
+
+* Update Waldheim.dev Suite landing pages and pricing details ([61b4050](https://github.com/Waldheim-dev/waldheim-homepage/commit/61b4050bf0d5d409c92e0daf10a38e7138d5615c))
+
 ## [26.13.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.1...26.13.2) (2026-06-25)
 
 
