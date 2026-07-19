@@ -1,3 +1,11 @@
+## [26.14.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.14.0...26.14.1) (2026-07-19)
+
+
+### Bug Fixes
+
+* Correct spelling errors in pricing descriptions and FAQs for improved clarity ([1aea8bd](https://github.com/Waldheim-dev/waldheim-homepage/commit/1aea8bd820e0bd467dc7d357113f50774084f56a))
+* Revise SEO metadata and update hero section content for improved clarity and engagement ([75c1442](https://github.com/Waldheim-dev/waldheim-homepage/commit/75c1442661df2ac52018696e11824308af137603))
+
 # [26.14.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.13.2...26.14.0) (2026-07-19)
 
 
