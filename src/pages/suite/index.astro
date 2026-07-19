@@ -15,9 +15,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
 ]);
 
 // SEO & Meta
-const titel = 'Waldheim Suite | Die integrierte All-in-One Business Plattform';
+const titel = 'Waldheim Suite | Die modulare ERP- & CRM-Suite fuer den DACH-Mittelstand';
 const description =
-  'CRM, ERP, DMS & Fuhrparkmanagement in einer DSGVO-konformen SaaS-Suite. Bereit für die E-Rechnungspflicht 2025 (XRechnung/ZUGFeRD). Made in Germany.';
+  'Eine Suite statt Tool-Flickenteppich: Customer Portal, CRM, ERP, Dokumente, Treasury, Kommunikation und Automatisierung in einer tenant-sicheren Plattform. DSGVO-konform, E-Rechnung-ready, Made in Germany.';
 const keywords =
   'Business Software Suite Deutschland, E-Rechnungspflicht 2025 Software, ERP CRM integriert, Cloud-Native Business Apps, ZUGFeRD Rechnungssoftware, Mittelstand SaaS';
 
@@ -47,11 +47,11 @@ const modules = [
     href: '/suite/portal/',
     icon: 'fa-id-card',
     color: 'sky',
-    title: 'CustomerPortal',
+    title: 'Customer Portal',
     subtitle: 'Identität, Billing & Self-Service',
     description:
       'Zentrales Owner- und Kundenportal mit SSO, Ticket-System, Rechnungsverwaltung, Abo-Steuerung und Self-Service fuer internationale Nutzer.',
-    badge: 'Live',
+    badge: 'Closed Alpha',
   },
   {
     href: '/suite/socialverse/',
@@ -61,7 +61,7 @@ const modules = [
     subtitle: 'Pipeline, Deals & Kontakte',
     description:
       'Professionelles CRM mit Deal-Pipeline, Kontaktmanagement, Kampagnen, Revenue-Workflows und KPI-Dashboard für Ihren Vertrieb.',
-    badge: 'Beta',
+    badge: 'Closed Alpha',
   },
   {
     href: '/suite/forge/',
@@ -71,7 +71,7 @@ const modules = [
     subtitle: 'Produkte, Projekte & Aufträge',
     description:
       'Enterprise-Ressourcenplanung mit Produktkatalog, Projektmanagement, Zeiterfassung, Angeboten und Auftragsabwicklung.',
-    badge: 'Beta',
+    badge: 'Closed Alpha',
   },
   {
     href: '/suite/aether/',
@@ -81,7 +81,7 @@ const modules = [
     subtitle: 'Dokumente, Assets & Wissen',
     description:
       'Zentrales Dokumentenmanagement mit Ordnerstruktur, Explorer-Ansicht, XRechnung-Export und verknüpften Wissensobjekten.',
-    badge: 'Beta',
+    badge: 'Closed Alpha',
   },
   {
     href: '/suite/ecodrive/',
@@ -91,7 +91,7 @@ const modules = [
     subtitle: 'Flotten, Routen & CO₂',
     description:
       'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, CO₂-Reporting und ESG-Kennzahlen.',
-    badge: 'Beta',
+    badge: 'Closed Alpha',
   },
   {
     href: '/suite/treasury/',
@@ -101,7 +101,7 @@ const modules = [
     subtitle: 'Finanzen & Liquiditätsplanung',
     description:
       'Liquiditätsübersicht, Kostenstellen, Budgetcontrolling, Cashflow-Analyse und DATEV-Export für Ihre Finanzabteilung.',
-    badge: 'Alpha',
+    badge: 'In Entwicklung',
   },
   {
     href: '/suite/properties/',
@@ -111,7 +111,7 @@ const modules = [
     subtitle: 'Schlanke WEG-Verwaltung',
     description:
       'Objekte, Einheiten, Eigentuemerportal, Tickets sowie WEG-Abrechnung, Mahnwesen, Jahresabrechnung, Wirtschaftsplan und Ruecklagenkonto in einem Cloud-Modul.',
-    badge: 'Alpha',
+    badge: 'In Entwicklung',
   },
   {
     href: '/suite/relay/',
@@ -121,7 +121,7 @@ const modules = [
     subtitle: 'Kommunikation & Benachrichtigungen',
     description:
       'Zentraler Kommunikations-Hub für E-Mail, Push, SMS und In-App-Notifications aus allen Suite-Modulen.',
-    badge: 'Alpha',
+    badge: 'In Entwicklung',
   },
   {
     href: '/suite/conductor/',
@@ -131,7 +131,7 @@ const modules = [
     subtitle: 'Workflows & Automatisierung',
     description:
       'Visueller Workflow-Builder für Business-Automatisierung, Event-Trigger und prozessübergreifende Integrationen.',
-    badge: 'Alpha',
+    badge: 'In Entwicklung',
   },
 ];
 
@@ -307,7 +307,7 @@ const complianceItems = [
           class="gsap-fadein text-5xl md:text-7xl font-black tracking-tighter text-meg-text-primary-dark mb-8"
           style="animation-delay: 0.15s"
         >
-          Keine Datensilos mehr.<br />
+          Eine Suite statt<br />
           Nur noch <span
             class="text-transparent bg-clip-text bg-linear-to-r from-meg-accent to-sky-400"
             >eine Plattform</span
@@ -343,11 +343,11 @@ const complianceItems = [
               aria-hidden="true"></i>
           </a>
           <a
-            href="#preisrechner"
+            href="/suite/preise/"
             class="w-full sm:w-auto px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center justify-center gap-2"
           >
-            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
-            Kosten berechnen
+            <i class="fa-solid fa-tag" aria-hidden="true"></i>
+            Preise ansehen
           </a>
         </div>
 
@@ -681,8 +681,8 @@ const complianceItems = [
           class="gsap-fadein text-xl text-meg-text-secondary max-w-2xl mx-auto"
           style="animation-delay: 0.3s"
         >
-          Modular einsetzbar, nahtlos integriert. Starten Sie mit einem Modul
-          und erweitern Sie jederzeit.
+          Jedes Modul bringt echten Business-Nutzen, alle Module laufen in
+          derselben App-Shell mit gemeinsamem Identity- und Tenant-Modell.
         </p>
       </div>
 

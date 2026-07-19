@@ -15,11 +15,11 @@ import ROICalculator from '../components/ROICalculator.astro';
 
 // SEO & Meta
 const titel =
-  'IT-Consulting & Softwareentwicklung Augsburg/München | Waldheim.dev';
+  'Waldheim.dev-Suite | Multi-Tenant ERP, CRM, Billing & Automatisierung';
 const description =
-  'Experte für DevSecOps, Webentwicklung & IT-Strategie. +150% Produktivität durch KI-Workflows. Zertifizierte Qualität für KMU & Startups in Bayern.';
+  'Die Waldheim.dev-Suite verbindet CRM, ERP, Billing, Support und Dokumente in einer Plattform. Internationale Rechnungen, zentrale Tenant-Defaults und sichere Multi-Tenant-Architektur.';
 const keywords =
-  'IT-Consulting Augsburg, Softwareentwicklung München, DevSecOps Experte, B2B Webentwicklung, Scrum Master Augsburg, IT-Sicherheit KMU, Waldheim IT';
+  'Waldheim.dev-Suite, Multi-Tenant ERP CRM, internationale Rechnungsstellung SaaS, XRechnung ZUGFeRD, B2B Business Suite DACH';
 const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
 
 // Structured Data: ProfessionalService & Breadcrumbs
@@ -77,8 +77,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   image={ogImage}
 >
   <HeroBackground
-    title="High-End IT-Consulting & Software­entwicklung"
-    subtitle="Ich transformiere Ihre IT-Prozesse mit DevSecOps und KI-gestützten Workflows für bis zu 150% mehr Produktivität. Ihr lokaler Partner für messbare Ergebnisse im Raum Augsburg und München."
+    title="Eine Suite statt zehn Insellösungen"
+    subtitle="Die Waldheim.dev-Suite bringt CRM, ERP, Billing, Support, Dokumente und Workflows in eine zentrale Plattform. Multi-Tenant-sicher, international einsetzbar und bereit für E-Invoicing."
     video="/videos/video_chip.mp4"
   >
     <div class="mt-10 flex items-center justify-center flex-wrap gap-4">
@@ -87,22 +87,22 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
         target="_blank"
         trackEvent="cta_homepage_calendly"
         trackCategory="hero"
-        trackLabel="Strategiegespräch buchen"
+        trackLabel="Suite Demo starten"
         variant="primary"
         icon="fa-solid fa-calendar-check animate-pulse"
         iconPosition="left"
       >
-        Kostenloses Strategiegespräch
+        Suite-Demo starten
       </TrackedButton>
       <TrackedButton
-        href="/referenzen/1/"
-        trackEvent="cta_homepage_references"
+        href="/suite/preise/"
+        trackEvent="cta_homepage_pricing"
         trackCategory="hero"
-        trackLabel="Referenzen"
+        trackLabel="Suite Preise"
         variant="secondary"
         icon="fa-solid fa-arrow-right"
       >
-        Case Studies ansehen
+        Preise ansehen
       </TrackedButton>
     </div>
 
@@ -111,25 +111,86 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
       class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-meg-text-secondary text-sm border-t border-meg-border-dark/30 pt-8"
     >
       <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">10+ Jahre</span>
-        <span>IT-Expertise</span>
+        <span class="text-meg-accent font-bold text-lg">9 Module</span>
+        <span>Eine Plattform</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">+150%</span>
-        <span>Produktivität durch KI</span>
+        <span class="text-meg-accent font-bold text-lg">International</span>
+        <span>Währung & Template-Defaults</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">PSM I/II & PSPO</span>
-        <span>Zertifiziert</span>
+        <span class="text-meg-accent font-bold text-lg">E-Invoicing</span>
+        <span>XRechnung & ZUGFeRD-ready</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">90+ Score</span>
-        <span>Lighthouse-Performance</span>
+        <span class="text-meg-accent font-bold text-lg">Tenant-Safe</span>
+        <span>Auditierbar & isoliert</span>
       </div>
     </div>
   </HeroBackground>
 
   <main id="main-content">
+    <section
+      class="py-20 border-b border-meg-border-dark/30"
+      aria-labelledby="suite-launch-heading"
+    >
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4">
+            Waldheim.dev-Suite
+          </p>
+          <h2
+            id="suite-launch-heading"
+            class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
+          >
+            Mehr Umsatz, weniger Reibung – mit einer integrierten Business-Plattform
+          </h2>
+          <p class="text-lg text-meg-text-secondary">
+            Statt Tool-Chaos steuern Sie Vertrieb, Rechnungen, Support und Operations aus einem App-Shell-System mit zentralem Tenant- und App-Switch.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Globale Defaults pro Tenant</h3>
+            <p class="text-meg-text-secondary">Standardsprache, Rechnungswährung, Rechnungstemplate und Mail-Default zentral steuern – ohne Wildwuchs.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Internationale Rechnungsstellung</h3>
+            <p class="text-meg-text-secondary">Währungs- und Template-Logik direkt im ERP-Flow, inklusive validierter Kombinationen statt stiller Fallbacks.</p>
+          </article>
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
+            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Security & Compliance by Default</h3>
+            <p class="text-meg-text-secondary">Mandantenisolation, Audit-Trail, MFA und E-Invoicing-Fähigkeit als belastbares Fundament für den Mittelstand.</p>
+          </article>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <TrackedButton
+            href="/suite/"
+            trackEvent="cta_homepage_suite_overview"
+            trackCategory="suite_launch"
+            trackLabel="Suite Overview"
+            variant="primary"
+            icon="fa-solid fa-layer-group"
+            iconPosition="left"
+          >
+            Suite entdecken
+          </TrackedButton>
+          <TrackedButton
+            href="/suite/preise/"
+            trackEvent="cta_homepage_suite_pricing"
+            trackCategory="suite_launch"
+            trackLabel="Suite Pricing"
+            variant="secondary"
+            icon="fa-solid fa-arrow-right"
+          >
+            Pricing ansehen
+          </TrackedButton>
+        </div>
+      </div>
+    </section>
+
     <section
       class="bento-service relative isolate py-24"
       aria-labelledby="services-heading"

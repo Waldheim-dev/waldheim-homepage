@@ -17,6 +17,17 @@ const description =
 const keywords =
   'Waldheim Suite Preise, SaaS Pricing DACH, per Seat, CRM ERP Suite, Mittelstand, E-Rechnung, ZUGFeRD, XRechnung, Starter Professional Enterprise';
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Waldheim Suite Pricing',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: description,
+  url: 'https://waldheim.dev/suite/preise',
+  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://waldheim.dev' },
+};
+
 const pricingTiers = [
   {
     name: 'Starter',
@@ -24,7 +35,7 @@ const pricingTiers = [
     badge: 'Compliance-Wedge',
     popular: false,
     desc: 'Das ideale Fundament fur E-Rechnungs-Compliance, Basisbuchhaltung und Kundenportal.',
-    modules: ['Customer Portal', 'Forge ERP', 'Treasury'],
+    modules: ['Customer Portal', 'Silvacore ERP', 'Treasury'],
     features: [
       { icon: 'fa-file-invoice', text: 'E-Rechnung: ZUGFeRD & XRechnung' },
       { icon: 'fa-calculator', text: 'Finanzbuchhaltung & DATEV-Schnittstelle' },
@@ -43,7 +54,7 @@ const pricingTiers = [
     badge: 'Empfohlen',
     popular: true,
     desc: 'Die komplette Suite fur Vertrieb, Dokumente, Automation und eigene KI-Modelle.',
-    modules: ['Customer Portal', 'Forge ERP', 'Treasury', 'Socialverse CRM', 'Aether', 'Relay', 'Conductor'],
+    modules: ['Customer Portal', 'Silvacore ERP', 'Treasury', 'Socialverse CRM', 'Aether', 'Relay', 'Conductor'],
     features: [
       { icon: 'fa-check', text: 'Alle Features aus Starter' },
       { icon: 'fa-network-wired', text: 'Lead- & Opportunity-Pipeline (Socialverse CRM)' },
@@ -60,7 +71,7 @@ const pricingTiers = [
   },
   {
     name: 'Enterprise',
-    price: '89',
+    price: '99',
     badge: 'Premium',
     popular: false,
     desc: 'Fur komplexe Immobilien- und Flottenprozesse mit hochsten Compliance- und Isolationsanforderungen.',
@@ -125,7 +136,7 @@ const addons = [
 
 const modules = [
   { icon: 'fa-network-wired', name: 'Socialverse CRM', desc: 'Pipeline, Deals, Kontakte, Revenue-Workflows', color: 'text-violet-400', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
-  { icon: 'fa-building-columns', name: 'Forge ERP', desc: 'Produkte, Projekte, Auftrage, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
+  { icon: 'fa-building-columns', name: 'Silvacore ERP', desc: 'Produkte, Projekte, Auftrage, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
   { icon: 'fa-folder-open', name: 'Aether', desc: 'Dokumente, Assets, Wissens-Objekte', color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20' },
   { icon: 'fa-truck', name: 'Ecodrive', desc: 'Flotten, Routen, CO2, ESG-Reporting', color: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
   { icon: 'fa-headset', name: 'Customer Portal', desc: 'Tickets, Rechnungen, Abo-Verwaltung', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
@@ -182,7 +193,7 @@ const faqs = [
   title={titel}
   description={description}
   keywords={keywords}
-  schema={[breadCrumbSchema]}
+  schema={[softwareSchema, breadCrumbSchema]}
 >
   <!-- Hero -->
   <section class="relative isolate px-6 pt-32 pb-16 bg-meg-bg-dark">
