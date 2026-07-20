@@ -33,6 +33,8 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
           id="contact-form"
           class="relative transform overflow-hidden transition-all p-6 sm:p-10"
       >
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="absolute -left-[9999px] top-auto h-px w-px opacity-0 pointer-events-none" aria-hidden="true" />
+          <input type="hidden" name="submitted_at" id="contact-submitted-at" value="" />
           <div>
               {!isEmbedded && (
                 <>
@@ -128,8 +130,12 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
       const btn = document.getElementById('submit-btn');
+      const submittedAtField = document.getElementById('contact-submitted-at');
 
       if (!form) return;
+      if (submittedAtField instanceof HTMLInputElement) {
+        submittedAtField.value = String(Date.now());
+      }
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -138,6 +144,10 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
         btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Wird gesendet...';
         
         const formData = new FormData(form);
+        if (submittedAtField instanceof HTMLInputElement && !submittedAtField.value) {
+          submittedAtField.value = String(Date.now());
+          formData.set('submitted_at', submittedAtField.value);
+        }
         const data = Object.fromEntries(formData.entries());
 
         try {
