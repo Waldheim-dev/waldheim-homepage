@@ -9,12 +9,13 @@ const { lang = 'de' } = Astro.props;
 const t = {
   de: {
     description:
-      'semrel analysiert eure Conventional Commits, berechnet das nächste SemVer-Tag und führt den kompletten Release-Lifecycle durch — vollständig plugin-basiert, monorepo-ready und sprachunabhängig.',
-    releaseHeadline: 'Neu in v0.15.0',
+      'semrel ist die zero-dependency Alternative zu semantic-release: eine statische Go-Binärdatei, die Conventional Commits auswertet, SemVer berechnet und Releases automatisiert ausliefert.',
+    releaseHeadline: 'Kernversprechen',
     releaseHighlights: [
-      'Pre-release Channels: alpha/beta/rc-Branches erzeugen automatisch Pre-release-Tags (z. B. 1.3.0-alpha.1).',
-      'Workspace Lockstep: alle Pakete werden mit derselben SemVer-Version synchron released.',
-      '--next-version Override: manuelle Versionsvorgabe für außerplanmäßige oder Major-Releases.',
+      'Kein Node.js, keine node_modules, kein Runtime-Overhead — nur eine Binärdatei.',
+      'Air-gap ready: Plugins einmalig cachen, danach ohne ausgehende Netzwerkzugriffe releasen.',
+      'Supply-chain sicher: Cosign Signaturen, CycloneDX/SPDX SBOM und SLSA Provenance.',
+      'Jeder Pipeline-Schritt ist austauschbar: Condition, Analyzer, Generator, Updater, Packager, Publisher, Provider, Hook.',
     ],
     btnGithub: 'GitHub öffnen',
     btnGithubLabel: 'semrel auf GitHub ansehen',
@@ -25,12 +26,13 @@ const t = {
   },
   en: {
     description:
-      'semrel analyses your Conventional Commits, calculates the next SemVer tag and runs the full release lifecycle — fully plugin-based, monorepo-ready and language-agnostic.',
-    releaseHeadline: 'New in v0.15.0',
+      'semrel is the zero-dependency alternative to semantic-release: one static Go binary that reads Conventional Commits, calculates SemVer and ships releases automatically.',
+    releaseHeadline: 'Core promises',
     releaseHighlights: [
-      'Pre-release channels: alpha/beta/rc branches automatically produce pre-release tags (e.g. 1.3.0-alpha.1).',
-      'Workspace lockstep: all packages are released synchronously at the same SemVer version.',
-      '--next-version override: manual version control for out-of-band or major releases.',
+      'No Node.js, no node_modules, no runtime overhead — one single binary.',
+      'Air-gap ready: cache plugins once, then release with zero outbound network calls.',
+      'Supply-chain secure: Cosign signatures, CycloneDX/SPDX SBOMs and SLSA provenance.',
+      'Every pipeline step is swappable: condition, analyzer, generator, updater, packager, publisher, provider, hook.',
     ],
     btnGithub: 'Open on GitHub',
     btnGithubLabel: 'View semrel on GitHub',
@@ -62,7 +64,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary uppercase tracking-widest'>
           <i class="fa-solid fa-code-branch text-blue-400" aria-hidden="true"></i>
-          v0.15.0
+          latest
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary'>
           <i class="fa-solid fa-scale-balanced text-sky-400" aria-hidden="true"></i>

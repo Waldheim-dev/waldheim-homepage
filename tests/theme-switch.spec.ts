@@ -1,0 +1,29 @@
+import { test, expect } from '@playwright/test';
+
+const DARK_BASE = 'rgb(2, 6, 23)';
+
+test.describe('Theme switch', () => {
+  test('light mode renders hero areas with light surfaces', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('waldheim-theme', 'light');
+      localStorage.setItem('waldheim-contrast', 'normal');
+    });
+
+    const checks = [
+      { path: '/', selector: 'body' },
+      { path: '/suite', selector: '#hero-suite' },
+      { path: '/services/entwicklung', selector: 'main section' },
+    ];
+
+    for (const check of checks) {
+      await page.goto(check.path);
+      await page.waitForLoadState('networkidle');
+
+      const htmlTheme = await page.getAttribute('html', 'data-theme');
+      expect(htmlTheme).toBe('light');
+
+      const bg = await page.locator(check.selector).evaluate((el) => getComputedStyle(el).backgroundColor);
+      expect(bg).not.toBe(DARK_BASE);
+    }
+  });
+});

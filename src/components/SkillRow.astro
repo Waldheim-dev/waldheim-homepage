@@ -26,7 +26,7 @@ const layer = JSON.stringify(entry.data.layer);
 <tr class="odd:bg-meg-surface-dark/30 even:bg-meg-surface-dark/50 hover:bg-meg-accent/5 transition-colors" data-layer={layer} data-entry={JSON.stringify(entry.data)}>
   <td class="px-4 py-4">
       <img
-      class={`max-h-6 w-full object-contain duration-300 ${entry.data.invertImage ? 'invert opacity-70' : 'opacity-90'}`}
+      class={`max-h-6 w-full object-contain duration-300 ${entry.data.invertImage ? 'skill-logo-invert' : 'opacity-90'}`}
       loading="lazy"
       src={entry.data.image}
       alt={entry.data.name}

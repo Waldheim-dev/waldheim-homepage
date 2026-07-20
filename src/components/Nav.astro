@@ -19,7 +19,7 @@ const itServiceColors = getServiceColors('it-service');
 <nav class="sticky top-0 z-50 flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-2xl text-meg-text-primary-dark bg-meg-surface-dark/90 backdrop-blur-xl border border-meg-border-dark shadow-xl hover:border-meg-accent/30" aria-label="Hauptnavigation">
     <div class="flex items-center gap-4">
         <a href="/" class="-m-1.5 flex items-center gap-2 text-meg-text-primary-dark rounded-xl px-2 py-1 hover:bg-meg-surface-dark/50 transition-all group" aria-label="Waldheim.dev">
-          <img class="h-8 w-auto block logo transition-transform group-hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Logo" loading="lazy" width="32" height="32">
+          <img class="h-8 w-auto block logo-theme-aware transition-transform group-hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Logo" loading="lazy" width="32" height="32">
           <span class="font-bold tracking-tight">Waldheim.dev</span>
         </a>
         <span class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-[10px] font-black text-meg-accent">
@@ -190,11 +190,64 @@ const itServiceColors = getServiceColors('it-service');
 
       <a href="/referenzen/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Referenzen</a>
       <a href="/blog/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Blog</a>
-      
+
       <a href="https://portal.waldheim.dev" target="_blank" class="ml-4 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-slate-900 shadow-lg shadow-meg-accent/20 hover:scale-[1.05] transition-all">
         <span>Kundenportal</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
       </a>
+
+      <div class="relative dropdown ml-2">
+        <button
+          type="button"
+          class="dropdown-trigger cursor-pointer inline-flex items-center justify-center size-10 rounded-xl border border-meg-border-dark bg-meg-surface-dark/60 text-slate-400 hover:text-meg-text-primary-dark hover:border-meg-accent/40 transition-all"
+          aria-label="Anzeige-Einstellungen öffnen"
+          title="Anzeige-Einstellungen"
+        >
+          <i class="fa-solid fa-sliders text-sm" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-menu hidden absolute right-0 z-30 mt-4 w-[280px] opacity-0 translate-y-2 transition-all duration-300">
+          <div class="overflow-hidden rounded-2xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-3 space-y-3">
+            <p class="text-xs font-black uppercase tracking-wide text-slate-400">Anzeige</p>
+            <div class="grid grid-cols-3 gap-1.5">
+              <button
+                type="button"
+                data-appearance-theme="system"
+                class="appearance-theme-btn appearance-mode-btn rounded-lg border border-meg-border-dark bg-meg-bg-dark/50 px-2.5 py-2 text-xs font-bold text-meg-text-primary-dark"
+              >
+                <i class="fa-solid fa-laptop mr-1" aria-hidden="true"></i>Auto
+              </button>
+              <button
+                type="button"
+                data-appearance-theme="dark"
+                class="appearance-theme-btn appearance-mode-btn rounded-lg border border-meg-border-dark bg-meg-bg-dark/50 px-2.5 py-2 text-xs font-bold text-meg-text-primary-dark"
+              >
+                <i class="fa-solid fa-moon mr-1" aria-hidden="true"></i>Dark
+              </button>
+              <button
+                type="button"
+                data-appearance-theme="light"
+                class="appearance-theme-btn appearance-mode-btn rounded-lg border border-meg-border-dark bg-meg-surface-light/10 px-2.5 py-2 text-xs font-bold text-meg-text-primary-dark"
+              >
+                <i class="fa-solid fa-sun mr-1" aria-hidden="true"></i>Light
+              </button>
+            </div>
+            <button
+              type="button"
+              data-appearance-toggle-contrast
+              class="appearance-contrast-btn w-full flex items-center justify-between rounded-lg border border-meg-border-dark bg-meg-bg-dark/50 px-3 py-2 transition-all hover:border-meg-accent/40"
+              aria-pressed="false"
+            >
+              <div class="text-left">
+                <p class="text-xs font-bold text-meg-text-primary-dark">Kontrastmodus</p>
+              </div>
+              <span class="appearance-switch" aria-hidden="true">
+                <span class="appearance-switch-knob"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Mobile Menu Trigger -->
@@ -270,7 +323,45 @@ const itServiceColors = getServiceColors('it-service');
           <a href="/referenzen/" class="block p-3 font-bold text-meg-text-primary-dark">Referenzen</a>
           <a href="/blog/" class="block p-3 font-bold text-meg-text-primary-dark">IT-Blog</a>
           <a href="/ueber-mich/" class="block p-3 font-bold text-meg-text-primary-dark">Über mich</a>
-          
+
+          <div class="rounded-2xl border border-meg-border-dark bg-meg-bg-dark/40 p-3">
+            <p class="text-xs font-black uppercase tracking-wide text-slate-400 mb-3">Anzeige</p>
+            <div class="grid grid-cols-3 gap-2 mb-2">
+              <button
+                type="button"
+                data-appearance-theme="system"
+                class="appearance-theme-btn appearance-mode-btn rounded-xl border border-meg-border-dark bg-meg-bg-dark/50 px-3 py-2 text-left"
+              >
+                <span class="block text-sm font-bold text-meg-text-primary-dark"><i class="fa-solid fa-laptop mr-1.5" aria-hidden="true"></i>Auto</span>
+              </button>
+              <button
+                type="button"
+                data-appearance-theme="dark"
+                class="appearance-theme-btn appearance-mode-btn rounded-xl border border-meg-border-dark bg-meg-bg-dark/50 px-3 py-2 text-left"
+              >
+                <span class="block text-sm font-bold text-meg-text-primary-dark"><i class="fa-solid fa-moon mr-1.5" aria-hidden="true"></i>Dark</span>
+              </button>
+              <button
+                type="button"
+                data-appearance-theme="light"
+                class="appearance-theme-btn appearance-mode-btn rounded-xl border border-meg-border-dark bg-meg-surface-light/10 px-3 py-2 text-left"
+              >
+                <span class="block text-sm font-bold text-meg-text-primary-dark"><i class="fa-solid fa-sun mr-1.5" aria-hidden="true"></i>Light</span>
+              </button>
+            </div>
+            <button
+              type="button"
+              data-appearance-toggle-contrast
+              class="appearance-contrast-btn w-full flex items-center justify-between rounded-xl border border-meg-border-dark bg-meg-bg-dark/50 px-3 py-2"
+              aria-pressed="false"
+            >
+              <span class="text-sm font-bold text-meg-text-primary-dark">Kontrastmodus</span>
+              <span class="appearance-switch" aria-hidden="true">
+                <span class="appearance-switch-knob"></span>
+              </span>
+            </button>
+          </div>
+
           <a href="https://portal.waldheim.dev" target="_blank" class="flex items-center justify-center gap-2 rounded-2xl bg-meg-accent py-4 font-black text-white shadow-xl shadow-meg-accent/20">
             Kundenportal <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -292,6 +383,9 @@ const itServiceColors = getServiceColors('it-service');
         const menu = dd.querySelector('.dropdown-menu');
         const icon = dd.querySelector('.fa-chevron-down');
 
+        if (!trigger || !menu) return;
+        menu.addEventListener('click', (e) => e.stopPropagation());
+
         trigger.addEventListener('click', (e) => {
           e.stopPropagation();
           const isOpen = !menu.classList.contains('hidden');
@@ -307,7 +401,7 @@ const itServiceColors = getServiceColors('it-service');
             requestAnimationFrame(() => {
               menu.classList.remove('opacity-0', 'translate-y-2');
               menu.classList.add('opacity-100', 'translate-y-0');
-              icon.classList.add('rotate-180');
+              if (icon) icon.classList.add('rotate-180');
             });
           }
         });
@@ -326,12 +420,50 @@ const itServiceColors = getServiceColors('it-service');
         trigger.addEventListener('click', () => {
           const content = trigger.nextElementSibling;
           const icon = trigger.querySelector('.fa-chevron-down');
+          if (!content || !icon) return;
           const isHidden = content.classList.contains('hidden');
           
           content.classList.toggle('hidden');
           icon.classList.toggle('rotate-180');
         });
       });
+
+      const appearanceApi = window.waldheimAppearance;
+      const themeButtons = document.querySelectorAll('[data-appearance-theme]');
+      const contrastButtons = document.querySelectorAll('[data-appearance-toggle-contrast]');
+
+      const renderAppearance = () => {
+        if (!appearanceApi) return;
+        const { theme, themeSource, contrast } = appearanceApi.getState();
+        const activeTheme = themeSource || theme;
+
+        themeButtons.forEach((btn) => {
+          const isActive = btn.dataset.appearanceTheme === activeTheme;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+        contrastButtons.forEach((btn) => {
+          const isActive = contrast === 'high';
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      };
+
+      themeButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          appearanceApi?.setTheme(btn.dataset.appearanceTheme);
+        });
+      });
+
+      contrastButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          appearanceApi?.toggleContrast();
+        });
+      });
+
+      window.addEventListener('waldheim:appearance-change', renderAppearance);
+      renderAppearance();
 
       // Global Close
       document.addEventListener('click', () => {
