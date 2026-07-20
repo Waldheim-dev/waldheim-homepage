@@ -1,3 +1,12 @@
+# [26.15.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.14.1...26.15.0) (2026-07-20)
+
+
+### Features
+
+* Add contact API URL definition and update fetch call in Contact component ([0d3aad4](https://github.com/Waldheim-dev/waldheim-homepage/commit/0d3aad455d4546e0293a4bd73f105d17ea7e6aba))
+* Add timestamp field to contact form for submission tracking ([c3c9517](https://github.com/Waldheim-dev/waldheim-homepage/commit/c3c95179b75059f5da1c5e8b5a90251b50b23aed))
+* update Semrel components and features for improved clarity and functionality ([d99e943](https://github.com/Waldheim-dev/waldheim-homepage/commit/d99e9431aa1e0c4308969b337db2196fcc8b4dbc))
+
 ## [26.14.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.14.0...26.14.1) (2026-07-19)
 
 
