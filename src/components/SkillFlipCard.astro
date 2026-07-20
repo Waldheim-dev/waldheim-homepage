@@ -28,7 +28,7 @@ const layer = JSON.stringify(entry.data.layer)
     <!-- Front Face -->
     <div class='absolute inset-0 [backface-visibility:hidden] flex flex-col justify-center items-center gap-2 p-8 bg-meg-surface-dark border border-meg-border-dark rounded-2xl shadow-sm'>
       <img
-        class={`max-h-12 w-full object-contain transition-all duration-300 ${entry.data.invertImage ? 'brightness-0 invert' : ''}`}
+        class={`max-h-12 w-full object-contain transition-all duration-300 ${entry.data.invertImage ? 'skill-logo-invert' : ''}`}
         loading='lazy'
         src={entry.data.image} alt={entry.data.name} width='50'
         height='50'>

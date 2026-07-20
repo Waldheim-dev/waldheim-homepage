@@ -123,6 +123,97 @@ const finalSchema = [
     />
     <link rel="manifest" href="/favicons/site.webmanifest" />
     <meta name="theme-color" content="#020617" />
+    <script is:inline>
+      (() => {
+        const THEME_KEY = 'waldheim-theme';
+        const CONTRAST_KEY = 'waldheim-contrast';
+        const validThemes = new Set(['dark', 'light', 'system']);
+        const validContrasts = new Set(['normal', 'high']);
+
+        const getSystemTheme = () =>
+          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+        const getSavedThemeSelection = () => {
+          const theme = localStorage.getItem(THEME_KEY);
+          return validThemes.has(theme) ? theme : 'system';
+        };
+
+        const getSavedContrast = () => {
+          const contrast = localStorage.getItem(CONTRAST_KEY);
+          return validContrasts.has(contrast) ? contrast : 'normal';
+        };
+
+        const resolveTheme = (themeSelection) =>
+          themeSelection === 'system' ? getSystemTheme() : themeSelection;
+
+        const updateThemeColor = (resolvedTheme, contrast) => {
+          const metaTheme = document.querySelector('meta[name="theme-color"]');
+          if (!metaTheme) return;
+
+          if (contrast === 'high') {
+            metaTheme.setAttribute('content', resolvedTheme === 'dark' ? '#000000' : '#ffffff');
+            return;
+          }
+          metaTheme.setAttribute('content', resolvedTheme === 'dark' ? '#020617' : '#f8fafc');
+        };
+
+        const applyAppearance = (themeSelection, contrast) => {
+          const root = document.documentElement;
+          const resolvedTheme = resolveTheme(themeSelection);
+          root.dataset.theme = resolvedTheme;
+          root.dataset.themeSource = themeSelection;
+          root.dataset.contrast = contrast;
+          updateThemeColor(resolvedTheme, contrast);
+          window.dispatchEvent(
+            new CustomEvent('waldheim:appearance-change', {
+              detail: { theme: resolvedTheme, themeSource: themeSelection, contrast },
+            }),
+          );
+        };
+
+        const setTheme = (themeSelection) => {
+          if (!validThemes.has(themeSelection)) return;
+          if (themeSelection === 'system') {
+            localStorage.removeItem(THEME_KEY);
+          } else {
+            localStorage.setItem(THEME_KEY, themeSelection);
+          }
+          applyAppearance(themeSelection, getSavedContrast());
+        };
+
+        const setContrast = (contrast) => {
+          if (!validContrasts.has(contrast)) return;
+          localStorage.setItem(CONTRAST_KEY, contrast);
+          applyAppearance(getSavedThemeSelection(), contrast);
+        };
+
+        const toggleContrast = () => {
+          setContrast(getSavedContrast() === 'high' ? 'normal' : 'high');
+        };
+
+        applyAppearance(getSavedThemeSelection(), getSavedContrast());
+        document.addEventListener('astro:page-load', () => {
+          applyAppearance(getSavedThemeSelection(), getSavedContrast());
+        });
+
+        window.waldheimAppearance = {
+          getState: () => ({
+            theme: resolveTheme(getSavedThemeSelection()),
+            themeSource: getSavedThemeSelection(),
+            contrast: getSavedContrast(),
+          }),
+          setTheme,
+          setContrast,
+          toggleContrast,
+        };
+
+        const colorSchemeWatcher = window.matchMedia('(prefers-color-scheme: dark)');
+        colorSchemeWatcher.addEventListener('change', () => {
+          if (getSavedThemeSelection() !== 'system') return;
+          applyAppearance('system', getSavedContrast());
+        });
+      })();
+    </script>
 
     <!-- Web Vitals Monitoring -->
     <!-- NOTE: Deliberately NOT using type="text/partytown" — web-vitals requires
@@ -270,6 +361,10 @@ const finalSchema = [
         filter: blur(100px);
         will-change: transform;
         mix-blend-mode: screen;
+      }
+
+      html[data-theme='light'] #cursor-blur {
+        mix-blend-mode: multiply;
       }
     </style>
   </head>

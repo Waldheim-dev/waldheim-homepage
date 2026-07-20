@@ -12,13 +12,13 @@ const t = {
     headlinePrefix: 'Release-Automation auf',
     headlineAccent: 'Enterprise-Level',
     subtitle:
-      'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
-    compareHeadline: 'Warum semrel statt klassischer Tools wie semantic-release?',
+      'Go-native, zero-dependency und für regulierte CI/CD-Umgebungen gebaut.',
+    compareHeadline: 'Warum semrel statt semantic-release oder reinem Packaging-Tooling?',
     comparePoints: [
-      'Language-agnostische Plugin-Executables statt Runtime-Lock-in auf ein Oekosystem.',
-      'Monorepo-Orchestrierung mit semrel workspace und dry-run in allen betroffenen Paketen — inkl. Lockstep-Strategie für synchrone Versionen seit v0.15.0.',
-      'Generator-Phase seit v0.14.0: Release Notes koennen zentral erzeugt und an Folgephasen durchgereicht werden.',
-      'Reproduzierbare Releases mit versionierten Binaer-Artefakten fuer Linux, macOS und Windows pro Tag.',
+      'Keine Node.js Runtime: eine statische Go-Binärdatei statt npm-Abhängigkeitsbaum.',
+      'Automatisches SemVer + Changelog aus Conventional Commits statt manueller Release-Entscheidungen.',
+      'Air-gap-fähig: Plugin-Cache ermöglicht Releases ohne ausgehende Netzwerkverbindungen.',
+      'Supply-chain Security by default mit Cosign, CycloneDX/SPDX SBOM und SLSA Provenance.',
     ],
   },
   en: {
@@ -26,13 +26,13 @@ const t = {
     headlinePrefix: 'Release Automation at',
     headlineAccent: 'Enterprise Scale',
     subtitle:
-      'Designed for Go and cloud-native environments — inspired by semantic-release, but built from the ground up.',
-    compareHeadline: 'Why semrel over classic tools like semantic-release?',
+      'Go-native, zero-dependency and built for regulated CI/CD environments.',
+    compareHeadline: 'Why semrel over semantic-release or packaging-only tooling?',
     comparePoints: [
-      'Language-agnostic plugin executables instead of runtime lock-in to one ecosystem.',
-      'Monorepo orchestration with semrel workspace and dry-run behavior across affected packages — including lockstep strategy for synchronised versions since v0.15.0.',
-      'Generator phase since v0.14.0: release notes can be centrally produced and propagated downstream.',
-      'Reproducible releases with versioned binary artifacts for Linux, macOS and Windows on each tag.',
+      'No Node.js runtime: one static Go binary instead of a large npm dependency tree.',
+      'Automatic SemVer + changelog from Conventional Commits instead of manual release decisions.',
+      'Air-gap ready: plugin caching enables releases without outbound network access.',
+      'Supply-chain security by default with Cosign, CycloneDX/SPDX SBOM and SLSA provenance.',
     ],
   },
 }[lang];
@@ -62,7 +62,7 @@ const features = [
       de: 'Mehrere unabhängige Module in einem Repository — jedes mit eigener Tag-Serie, Config und Changelog. Dependency Graph und topologische Release-Reihenfolge.',
       en: 'Multiple independent modules in a single repository — each with its own tag series, config and changelog. Dependency graph and topological release ordering.',
     },
-    badge: 'v0.5.0',
+    badge: 'Workspace',
   },
   {
     icon: 'fa-language',
@@ -107,7 +107,7 @@ const features = [
       de: 'Neue Pipeline-Phase zwischen Changelog-Generierung und Release: Generator-Plugins koennen Release Notes via stdout zentral setzen und an spaetere Phasen weiterreichen.',
       en: 'New pipeline phase between changelog generation and release: generator plugins can set release notes via stdout and pass them to downstream phases.',
     },
-    badge: 'Neu',
+    badge: 'Pipeline',
   },
   {
     icon: 'fa-brands fa-github',

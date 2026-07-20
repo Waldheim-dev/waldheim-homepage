@@ -2,7 +2,7 @@
 // PromoSuite component to cross-promote the SaaS product on services pages
 ---
 
-<section class="py-24 px-6 bg-gradient-to-b from-[#090d16] to-[#020617] border-t border-slate-800/40 relative overflow-hidden">
+<section class="promo-suite-section py-24 px-6 bg-meg-bg-dark border-t border-meg-border-dark relative overflow-hidden">
   <!-- Glow Overlay -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] rounded-full bg-meg-accent/5 blur-[120px] pointer-events-none"></div>
 
@@ -11,7 +11,7 @@
       <!-- Glow border effect -->
       <div class="absolute -inset-0.5 bg-gradient-to-r from-meg-accent/30 to-indigo-500/30 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-700" aria-hidden="true"></div>
       
-      <div class="relative bg-meg-surface-dark/60 backdrop-blur-xl border border-slate-800/40 p-8 sm:p-14 rounded-3xl meg-glass grid lg:grid-cols-12 gap-8 items-center">
+      <div class="promo-suite-card relative bg-meg-surface-dark/60 backdrop-blur-xl border border-meg-border-dark p-8 sm:p-14 rounded-3xl meg-glass grid lg:grid-cols-12 gap-8 items-center">
         <!-- Text content (col-span-8) -->
         <div class="lg:col-span-8 text-center lg:text-left">
           <span class="gsap-fadein text-xs font-bold uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-6">
@@ -21,10 +21,10 @@
           <h3 class="gsap-fadein text-3xl sm:text-4xl font-black text-meg-text-primary-dark tracking-tight mb-4">
             Das Fundament: <span class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-indigo-400">Die Waldheim Suite</span>
           </h3>
-          <p class="gsap-fadein text-base text-slate-300 leading-relaxed mb-6">
+          <p class="gsap-fadein text-base text-meg-text-secondary leading-relaxed mb-6">
             Warum bei Null anfangen? Viele meiner Individual-Softwareprojekte bauen auf der <strong>Waldheim Suite</strong> als robustem Kern auf (CRM, ERP, DMS & SSO). Dadurch sparen Sie bis zu <strong>50% der Entwicklungszeit und -kosten</strong>. Wir müssen grundlegende Administrations- und Standardfunktionen nicht neu programmieren, sondern konzentrieren uns zu 100% auf Ihre individuellen Spezialanforderungen.
           </p>
-          <div class="gsap-fadein flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-xs text-slate-400">
+          <div class="gsap-fadein flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-xs text-meg-text-secondary">
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> Fertiges Kundenportal & SSO</span>
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> XRechnung & ZUGFeRD PDF</span>
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-400"></i> DSGVO-konforme Server</span>
@@ -44,7 +44,7 @@
             href="https://suite.waldheim.dev"
             target="_blank"
             rel="noopener noreferrer"
-            class="gsap-fadein w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 hover:bg-slate-900/40 transition-all cursor-pointer"
+            class="gsap-fadein w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold hover:border-meg-accent/40 hover:bg-meg-surface-dark/80 transition-all cursor-pointer"
           >
             <i class="fa-solid fa-play"></i>
             Live-Demo testen
@@ -54,3 +54,14 @@
     </div>
   </div>
 </section>
+
+<style>
+  :global(html[data-theme='light']) .promo-suite-section {
+    background: color-mix(in oklab, var(--color-meg-bg-dark) 92%, white);
+  }
+
+  :global(html[data-theme='light']) .promo-suite-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(148, 163, 184, 0.35);
+  }
+</style>

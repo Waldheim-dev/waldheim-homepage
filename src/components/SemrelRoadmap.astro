@@ -12,7 +12,7 @@ const t = {
     headlinePrefix: 'Der Weg zu',
     headlineAccent: 'v1.0.0',
     subtitle:
-      'semrel ist in aktiver Entwicklung (aktuell: v0.15.0). Jeder Meilenstein kann auf GitHub mitverfolgt werden.',
+      'semrel entwickelt sich kontinuierlich weiter. Fokus: Stabilität, Ecosystem-Ausbau und Enterprise-Readiness.',
     ariaLabel: 'Entwicklungs-Roadmap',
     linkText: 'Vollständige Roadmap auf GitHub',
     linkLabel: 'Vollständige Roadmap auf GitHub',
@@ -22,7 +22,7 @@ const t = {
     headlinePrefix: 'The road to',
     headlineAccent: 'v1.0.0',
     subtitle:
-      'semrel is in active development (current: v0.15.0). Every milestone can be followed on GitHub.',
+      'semrel evolves continuously. Focus: stability, ecosystem growth and enterprise readiness.',
     ariaLabel: 'Development roadmap',
     linkText: 'Full Roadmap on GitHub',
     linkLabel: 'Open full roadmap on GitHub',
@@ -30,66 +30,66 @@ const t = {
 }[lang];
 const roadmilestones = [
   {
-    version: 'v0.1.0',
-    label: 'Foundation',
+    version: 'Now',
+    label: 'Zero-Dependency Core',
     status: 'done',
     desc: {
-      de: 'CLI, SemVer-Engine, Conventional Commits, Git Tag Management, Dry-Run',
-      en: 'CLI, SemVer engine, Conventional Commits, Git tag management, dry-run',
+      de: 'Statische Go-Binärdatei ohne Node.js- oder Runtime-Abhängigkeiten.',
+      en: 'Static Go binary with zero Node.js or runtime dependencies.',
     },
   },
   {
-    version: 'v0.2.0',
-    label: 'Plugin System',
+    version: 'Now',
+    label: 'Pluggable Pipeline',
     status: 'done',
     desc: {
-      de: 'Stable Core/Plugin-Boundary, Subprocess-basiertes Plugin-Execution-Modell',
-      en: 'Stable core/plugin boundary, subprocess-based plugin execution model',
+      de: 'Austauschbare Schritte von Condition bis Hook inkl. Packager und Publisher.',
+      en: 'Swappable steps from condition to hook, including packagers and publishers.',
     },
   },
   {
-    version: 'v0.3.0',
-    label: 'CI Integration',
+    version: 'Now',
+    label: 'Monorepo & Workspace',
     status: 'done',
     desc: {
-      de: 'GitHub Actions native, JSON Output, End-to-End Tests',
-      en: 'GitHub Actions native, JSON output, end-to-end tests',
+      de: 'Mehrere Module mit eigener Config und Tag-Serie, orchestrierbar über semrel workspace.',
+      en: 'Multiple modules with their own config and tag series, orchestrated via semrel workspace.',
     },
   },
   {
-    version: 'v0.4.0',
-    label: 'Ecosystem Plugins',
+    version: 'Now',
+    label: 'Supply-Chain Security',
     status: 'done',
     desc: {
-      de: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven u.v.m.',
-      en: 'GitHub, GitLab, Gitea, Bitbucket, npm, Docker, Helm, Cargo, Python, Gradle, Maven and more.',
+      de: 'Cosign Signaturen, CycloneDX/SPDX SBOM und SLSA Provenance für offizielle Releases.',
+      en: 'Cosign signatures, CycloneDX/SPDX SBOM and SLSA provenance for official releases.',
     },
   },
   {
-    version: 'v0.5.0',
-    label: 'Monorepo & Advanced',
+    version: 'Now',
+    label: 'Air-Gap Ready',
     status: 'done',
     desc: {
-      de: 'Changelog-Engine (v0.2.5-Ziele), vertiefte Workspace-/Monorepo-Flows, Dependency-Graph-Reihenfolge, Pre-release-Channels und erweiterte Release-Workflows',
-      en: 'Changelog engine goals (v0.2.5), deeper workspace/monorepo flows, dependency-graph ordering, pre-release channels and advanced release workflows',
+      de: 'Plugin-Cache ermöglicht Releases ohne ausgehende Netzwerkverbindungen in restriktiven Umgebungen.',
+      en: 'Plugin caching enables releases without outbound network connections in restricted environments.',
     },
   },
   {
-    version: 'v0.10.0–v0.15.0',
-    label: 'Release Hardening & Workspace',
-    status: 'done',
-    desc: {
-      de: 'Workspace-Orchestrierung, Schema-Ausbau, robustere Dry-Run/Locking-Pfade, Plugin-Restore aus .semrel.lock, generator-Phase, verbessertes Changelog-Verhalten, Pre-release-Channels (alpha/beta/rc), Workspace-Lockstep und --next-version Override.',
-      en: 'Workspace orchestration, schema expansion, hardened dry-run/locking paths, plugin restore from .semrel.lock, generator phase, improved changelog behaviour, pre-release channels (alpha/beta/rc), workspace lockstep and --next-version override.',
-    },
-  },
-  {
-    version: 'v1.0.0',
-    label: 'Stable Release',
+    version: 'Next',
+    label: 'Ecosystem Expansion',
     status: 'current',
     desc: {
-      de: 'Production-ready, vollständige Dokumentation, Plugin SDK für Third-Party Plugins',
-      en: 'Production-ready, complete documentation, plugin SDK for third-party plugins',
+      de: 'Weitere Provider-/Publisher-/Packager-Integrationen und tiefere CI/CD-Templates.',
+      en: 'More provider/publisher/packager integrations and deeper CI/CD templates.',
+    },
+  },
+  {
+    version: 'Next',
+    label: 'v1.0 Stabilization',
+    status: 'planned',
+    desc: {
+      de: 'Weitere Stabilisierung, dokumentierte Upgrade-Pfade und langfristige API-/Schema-Garantien.',
+      en: 'Further stabilization, documented upgrade paths and long-term API/schema guarantees.',
     },
   },
 ];

@@ -100,6 +100,27 @@ const categories = [
     ],
   },
   {
+    name: 'Packagers',
+    icon: 'fa-box-open',
+    color: 'text-fuchsia-400',
+    bg: 'bg-fuchsia-500/10',
+    border: 'border-fuchsia-500/20',
+    plugins: [
+      { name: 'nfpm', desc: { de: '.deb / .rpm Paketierung', en: '.deb / .rpm packaging' } },
+    ],
+  },
+  {
+    name: 'Publishers',
+    icon: 'fa-share-nodes',
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500/10',
+    border: 'border-cyan-500/20',
+    plugins: [
+      { name: 'oci', desc: { de: 'OCI Registry Publishing', en: 'OCI registry publishing' } },
+      { name: 'generic-http', desc: { de: 'HTTP Upload Targets', en: 'HTTP upload targets' } },
+    ],
+  },
+  {
     name: 'Hooks',
     icon: 'fa-bell',
     color: 'text-amber-400',
