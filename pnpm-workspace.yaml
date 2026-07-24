@@ -4,6 +4,11 @@ allowBuilds:
   protobufjs: false
   puppeteer: false
   sharp: false
+overrides:
+  fast-uri: 3.1.4
+  js-yaml: 4.3.0
+  sharp: 0.35.3
+  svgo: 4.0.2
 minimumReleaseAgeExclude:
   - '@astrojs/mdx@6.0.2 || 7.0.0'
   - astro@6.4.4 || 7.0.0
