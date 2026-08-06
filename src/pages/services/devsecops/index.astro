@@ -7,6 +7,7 @@ import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 import { SchemaUtils } from '../../../utils/schema';
+import AiImageBadge from '../../../components/AiImageBadge.astro';
 
 // SEO & Meta
 const titel = 'DevSecOps & Cloud-Infrastruktur Augsburg & München | CI/CD, Kubernetes & Security';
@@ -153,8 +154,9 @@ const faqSchema = SchemaUtils.getFAQSchema([
               </li>
             </ul>
           </div>
-          <div class="bg-meg-surface-dark/30 rounded-3xl p-4 ring-1 ring-meg-border-dark">
+          <div class="relative bg-meg-surface-dark/30 rounded-3xl p-4 ring-1 ring-meg-border-dark">
             <video src="/videos/video_devsecops.mp4" poster="/videos/video_devsecops-poster.webp" loop muted playsinline autoplay class="rounded-2xl w-full"></video>
+            <AiImageBadge class="absolute top-3 right-3 z-10" />
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 ---
 import InteractiveHeroCanvas from './InteractiveHeroCanvas.astro';
+import AiImageBadge from './AiImageBadge.astro';
 
-const { title, subtitle, image, video, posterImage } = Astro.props;
+const { title, subtitle, image, video, posterImage, aiGenerated } = Astro.props;
 
 // Video-Poster: Ersetze .mp4 mit -poster.jpg
 const defaultPoster = video ? video.replace('.mp4', '-poster.webp') : '';
@@ -50,6 +51,12 @@ const poster = posterImage || defaultPoster;
           ) : null}
         </figure>
       </div>
+    )
+  }
+
+  {
+    (video || image) && aiGenerated && (
+      <AiImageBadge class="absolute top-4 right-4 z-10" />
     )
   }
 

@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<span
+  class={`inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-sm px-2.5 py-1 text-xs font-medium text-white ring-1 ring-white/20 ${className}`}
+  title="Dieses Bild wurde mit Künstlicher Intelligenz (KI) erstellt."
+>
+  <i class="fa-solid fa-wand-magic-sparkles text-[10px]" aria-hidden="true"></i>
+  KI-generiert
+</span>

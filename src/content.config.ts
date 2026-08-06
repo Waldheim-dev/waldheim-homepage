@@ -13,6 +13,9 @@ const blog = defineCollection({
     description: z.string(),
     keywords: z.string().optional(),
     heroImage: z.string(),
+    imagePrompt: z.string().optional(),
+    // Almost all blog hero images are AI-generated; set to false for the rare exception (real screenshot/photo).
+    aiGenerated: z.boolean().optional().default(true),
     author: reference('authors'),
     // Transform string to Date object
     pubDate: z
@@ -140,6 +143,9 @@ const projects = defineCollection({
     }).optional(),
 
     heroImage: z.string(),
+    imagePrompt: z.string().optional(),
+    // Most reference images are real project screenshots/photos; set to true for the rare AI-generated one.
+    aiGenerated: z.boolean().optional().default(false),
     keywords: z.array(z.string()).optional(),
 
     tags: z.array(z.string()).optional(),
