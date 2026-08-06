@@ -4,6 +4,7 @@ description: "Wir stellen vor: Das Customer Portal – Ihre zentrale Plattform z
 pubDate: "2025-10-09"
 heroImage: "/referenzen/waldheim-dev/customer-portal/customer_portal_dashboard.webp"
 imagePrompt: "Professional high-tech 3D render or minimalist illustration for a blog post titled '🎉 Das neue Waldheim Customer Portal ist live – Zentrale Verwaltung für alle unsere Produkte!'. Theme: Wir stellen vor: Das Customer Portal – Ihre zentrale Plattform zur Verwaltung von Lizenzen, Abonnements und Support für Ecodrive, Socialverse und Silvacore. Mit vollständiger Stripe-Integration, Multi-User-System und 2FA-Sicherheit.. Style: Modern enterprise glass aesthetic, dark mode, accent colors (cyan, amber, or violet), high resolution, 16:9 aspect ratio."
+aiGenerated: false
 author: "markus-waldheim"
 keywords: "Customer Portal, Lizenzverwaltung, Abonnementverwaltung, Waldheim.dev, Ecodrive, Socialverse, Silvacore, SaaS, Stripe, Go, HTMX, PostgreSQL, 2FA, WebAuthn, Ticketing, Support-System"
 ---

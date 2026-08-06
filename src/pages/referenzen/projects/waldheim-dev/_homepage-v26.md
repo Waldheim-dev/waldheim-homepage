@@ -7,6 +7,7 @@ pubDate: "2026-04-01"
 category: "website"
 heroImage: "/referenzen/waldheim-dev/homepage/homepage_v26.webp"
 imagePrompt: "A futuristic, clean software suite dashboard interface, deep blue and teal color palette, holographic elements representing AI agents, 3D data visualization, sleek glassmorphism design, professional and high-tech atmosphere, wide angle, 8k resolution"
+aiGenerated: true
 assets: []
 overview: [
   {

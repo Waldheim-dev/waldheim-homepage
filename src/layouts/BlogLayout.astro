@@ -2,14 +2,20 @@
 import FormattedDate from '../components/FormattedDate.astro';
 import Blog from '../components/Blog.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import AiImageBadge from '../components/AiImageBadge.astro';
 
-const { title, description, pubDate, heroImage, headings, readingTime } = Astro.props;
+const { title, description, pubDate, heroImage, aiGenerated, headings, readingTime } = Astro.props;
 ---
 
 <div class='px-6 py-6 lg:px-8'>
   <div class='mx-auto max-w-7xl lg:flex lg:gap-16 justify-center'>
     <div class='max-w-3xl text-base leading-7 text-meg-text-primary-dark lg:shrink'>
-      {heroImage && <img width={1024} height={512} src={heroImage} loading='lazy' alt={title} class='aspect-video w-full rounded-2xl object-cover shadow-xl ring-1 ring-meg-border-dark'/>}
+      {heroImage && (
+        <div class='relative'>
+          <img width={1024} height={512} src={heroImage} loading='lazy' alt={title} class='aspect-video w-full rounded-2xl object-cover shadow-xl ring-1 ring-meg-border-dark'/>
+          {aiGenerated !== false && <AiImageBadge class='absolute bottom-3 right-3' />}
+        </div>
+      )}
       <h1 class='mt-8 text-4xl font-bold tracking-tight text-meg-text-primary-dark sm:text-5xl gsap-fadein'>{title}</h1>
 
       <div class="relative mt-6 flex flex-col gap-4">

@@ -6,6 +6,7 @@ shortDescription: "Ein autonomes Multi-Agenten-Framework für komplexe Software-
 pubDate: "2026-04-10"
 category: "entwicklung"
 heroImage: "/referenzen/waldheim-dev/amigo/amigo_main.png"
+aiGenerated: true
 assets:
   [
     "/referenzen/waldheim-dev/amigo/amigo_main.png",

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import AiImageBadge from './AiImageBadge.astro';
 
 const projects = (await getCollection('projects', ({data}) => data.isTopProject === true)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const categories = await getCollection('projects_kategorie');
@@ -52,6 +53,7 @@ const categories = await getCollection('projects_kategorie');
                   alt={`${project.data.title} – Referenzprojekt Webentwicklung und Design von waldheim.dev`}
                   loading="lazy"
                 />
+                {project.data.aiGenerated && <AiImageBadge class="absolute top-3 right-3 z-20" />}
               </div>
             </div>
             <div class="w-full max-w-2xl pb-8">

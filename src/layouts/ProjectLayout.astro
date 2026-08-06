@@ -6,6 +6,7 @@ import HeroBackground from '../components/HeroBackground.astro';
 import PriceService from '../components/PriceService.astro';
 import RelatedServices from '../components/RelatedServices.astro';
 import PromoSuite from '../components/PromoSuite.astro';
+import AiImageBadge from '../components/AiImageBadge.astro';
 
 
 
@@ -13,6 +14,7 @@ const {
   title,
   description,
   heroImage,
+  aiGenerated,
   client,
   tags,
   techStack,
@@ -101,7 +103,7 @@ if (nextYear) {
 
 
 
-<HeroBackground title={title} subtitle={description} image={heroImage} class="">
+<HeroBackground title={title} subtitle={description} image={heroImage} aiGenerated={aiGenerated} class="">
   {results && results.length > 0 && (
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
       {results.map((res, i) => (
@@ -596,6 +598,7 @@ if (nextYear) {
                     class="absolute cursor-pointer inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-110"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-meg-bg-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  {aiGenerated && <AiImageBadge class="absolute top-3 right-3 z-10" />}
                 </span>
           );
         })}
