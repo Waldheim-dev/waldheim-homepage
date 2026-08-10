@@ -1,3 +1,10 @@
+# [26.16.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.15.0...26.16.0) (2026-08-10)
+
+
+### Features
+
+* label AI-generated images/videos per EU AI Act Art. 50 ([90e2a76](https://github.com/Waldheim-dev/waldheim-homepage/commit/90e2a76138559c2309a4c185ac8619261c40f020))
+
 # [26.15.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.14.1...26.15.0) (2026-07-20)
 
 
