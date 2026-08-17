@@ -1,3 +1,12 @@
+## [26.16.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.0...26.16.1) (2026-08-17)
+
+
+### Bug Fixes
+
+* add mandatory postal address and contact form link to Impressum ([2d52d92](https://github.com/Waldheim-dev/waldheim-homepage/commit/2d52d92b25c03f33cbadafb86c343a35c108f2ea))
+* hero video/image invisible in light theme, add edge fade ([3e3ac09](https://github.com/Waldheim-dev/waldheim-homepage/commit/3e3ac095b45bf5aa2944ad0bffd5cfd1848860c3)), closes [#cursor-blur](https://github.com/Waldheim-dev/waldheim-homepage/issues/cursor-blur)
+* prevent mobile nav button from shifting when menu opens ([8ff0d06](https://github.com/Waldheim-dev/waldheim-homepage/commit/8ff0d06c9eff4050aad6e2616a49ad8080698e63))
+
 # [26.16.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.15.0...26.16.0) (2026-08-10)
 
 
