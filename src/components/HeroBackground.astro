@@ -20,7 +20,7 @@ const poster = posterImage || defaultPoster;
     (video || image) && (
       <div
         aria-hidden="true"
-        class="absolute inset-0 flex justify-center items-center opacity-30 pointer-events-none mix-blend-color-dodge"
+        class="hero-bg-overlay absolute inset-0 flex justify-center items-center opacity-30 pointer-events-none"
       >
         <figure class="w-full h-full">
           {image ? (
@@ -104,6 +104,17 @@ const poster = posterImage || defaultPoster;
 </div>
 
 <style>
+  /* color-dodge glows against the dark backdrop; on light theme it just washes out to white */
+  .hero-bg-overlay {
+    mix-blend-mode: color-dodge;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  }
+
+  html[data-theme='light'] .hero-bg-overlay {
+    mix-blend-mode: multiply;
+  }
+
   /* Base Reveal styles */
   .hero-word {
     will-change: transform, opacity, filter;
