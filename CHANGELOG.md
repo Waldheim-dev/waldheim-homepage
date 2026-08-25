@@ -1,3 +1,11 @@
+## [26.16.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.1...26.16.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* **deps:** patch vulnerable transitive packages ([7c33ab5](https://github.com/Waldheim-dev/waldheim-homepage/commit/7c33ab5497277c30052cbca21fd0895da826cc4b))
+* Refactor code structure for improved readability and maintainability ([af95f2f](https://github.com/Waldheim-dev/waldheim-homepage/commit/af95f2fb69dfc73dcdb90b67e8f1c61e3dc81c0b))
+
 ## [26.16.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.0...26.16.1) (2026-08-17)
 
 
