@@ -1,3 +1,10 @@
+## [26.16.3](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.2...26.16.3) (2026-08-25)
+
+
+### Bug Fixes
+
+* add asset verification and deployment steps for Ausgabeschein generator ([263dcb5](https://github.com/Waldheim-dev/waldheim-homepage/commit/263dcb5b3e03eb6c9e7691154c5f86152a485700))
+
 ## [26.16.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.1...26.16.2) (2026-08-25)
 
 
