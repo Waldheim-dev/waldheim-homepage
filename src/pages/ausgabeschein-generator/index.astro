@@ -8,8 +8,8 @@ const product = getProductInfo(productKey)!;
 const colors = product.colors;
 
 const pageTitle = `${product.name} - Netbox Plugin | waldheim.dev`;
-const pageDescription = 'Netbox Plugin für effiziente Ausgabeschein-Verwaltung. Open Source, GitLab-basiert und einfach zu integrieren. Docker-Support, PDF-Generation.';
-const keywords = 'Ausgabeschein Generator, Netbox Plugin, Open Source, GitLab, Docker, PDF Generation, IT-Asset Management';
+const pageDescription = 'Open-Source Ausgabeschein-Generator für Netbox: schnelle Übergabe-, Rückgabe- und Überlassungsprotokolle inklusive Druckvorschau, Mobile-Flow und Docker-Setup.';
+const keywords = 'Ausgabeschein Generator, Netbox Plugin, Open Source, GitLab, Docker, PDF Generation, IT-Asset Management, Uebergabeprotokoll, Rueckgabeprotokoll, Mobile';
 
 // Structured Data: Software Application
 const softwareSchema = {
@@ -67,7 +67,7 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
         </h1>
         
         <p class='text-xl md:text-2xl text-meg-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed'>
-          Automatisierte Ausgabeschein-Verwaltung für IT-Assets. Nahtlos integriert in Netbox.
+          Erstelle Übergabe-, Rückgabe- und Überlassungsprotokolle in Sekunden. Open Source, Netbox-ready und optimiert für Desktop wie Mobile.
         </p>
 
         <div class='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -91,6 +91,73 @@ const breadcrumbSchema = SchemaUtils.getBreadcrumbSchema([
             <i class='fa-solid fa-arrow-right' aria-hidden='true'></i>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Preview Section -->
+  <section class='py-24 sm:py-32 px-6 bg-meg-bg-dark border-y border-meg-border-dark'>
+    <div class='mx-auto max-w-7xl'>
+      <div class='text-center mb-16 gsap-fadein'>
+        <h2 class='text-sm font-bold uppercase tracking-widest text-meg-accent mb-4'>
+          Produkt-Preview
+        </h2>
+        <p class='text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6'>
+          Die wichtigsten <span class='text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400'>Workflows</span> auf einen Blick
+        </p>
+        <p class='text-meg-text-secondary max-w-3xl mx-auto text-lg leading-relaxed'>
+          Vom Suchen des Assets bis zum druckfertigen Protokoll: Der Generator bildet den kompletten Ausgabeprozess transparent und teamtauglich ab.
+        </p>
+      </div>
+
+      <div class='grid lg:grid-cols-3 gap-6'>
+        <article class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl overflow-hidden shadow-sm hover:border-meg-accent/30 transition-all duration-300'>
+          <img
+            src='/products/ausgabeschein-generator/workbench.png'
+            alt='Workbench des Ausgabeschein-Generators mit Formular fuer Uebergabeprotokolle'
+            class='w-full h-64 object-cover object-center'
+            loading='lazy'
+            decoding='async'
+          />
+          <div class='p-6'>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-2'>Intuitive Workbench</h3>
+            <p class='text-meg-text-secondary text-sm leading-relaxed'>
+              Einheitlicher Flow fuer Suche, Protokolltyp und Ausgabe. So entstehen weniger Klicks und weniger Fehler bei der Hardware-Uebergabe.
+            </p>
+          </div>
+        </article>
+
+        <article class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl overflow-hidden shadow-sm hover:border-meg-accent/30 transition-all duration-300'>
+          <img
+            src='/products/ausgabeschein-generator/print-preview.png'
+            alt='Druckvorschau eines Ausgabescheins mit Geraete- und Mitarbeiterdaten'
+            class='w-full h-64 object-cover object-top'
+            loading='lazy'
+            decoding='async'
+          />
+          <div class='p-6'>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-2'>Saubere Druckvorschau</h3>
+            <p class='text-meg-text-secondary text-sm leading-relaxed'>
+              Alle relevanten Netbox-Informationen werden strukturiert aufbereitet und sind sofort fuer PDF-Export oder Ausdruck bereit.
+            </p>
+          </div>
+        </article>
+
+        <article class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl overflow-hidden shadow-sm hover:border-meg-accent/30 transition-all duration-300'>
+          <img
+            src='/products/ausgabeschein-generator/mobile.png'
+            alt='Mobile Ansicht des Ausgabeschein-Generators auf Smartphone'
+            class='w-full h-64 object-cover object-top'
+            loading='lazy'
+            decoding='async'
+          />
+          <div class='p-6'>
+            <h3 class='text-xl font-bold text-meg-text-primary-dark mb-2'>Mobile-ready im Alltag</h3>
+            <p class='text-meg-text-secondary text-sm leading-relaxed'>
+              Ideal fuer Service-Desk, Ausgabeplatz oder Vor-Ort-Termine: Das Interface bleibt auch auf kleinen Screens klar und schnell bedienbar.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
