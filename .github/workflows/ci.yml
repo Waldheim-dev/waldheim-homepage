@@ -44,6 +44,13 @@ jobs:
       - name: Astro build
         run: pnpm build
 
+      - name: Verify Ausgabeschein assets
+        run: |
+          set -euo pipefail
+          for asset in workbench.png print-preview.png mobile.png; do
+            test -s "dist/products/ausgabeschein-generator/${asset}"
+          done
+
       # Optionally upload the artifact (controlled by repository variable)
       # Disable if you hit artifact storage quota: set UPLOAD_ARTIFACTS=false in repo settings
       - name: Upload dist artifact
@@ -142,6 +149,13 @@ jobs:
       - name: Build for deployment
         run: pnpm build
 
+      - name: Verify Ausgabeschein assets
+        run: |
+          set -euo pipefail
+          for asset in workbench.png print-preview.png mobile.png; do
+            test -s "dist/products/ausgabeschein-generator/${asset}"
+          done
+
       - name: Install lftp
         run: sudo apt-get install -y lftp
 
@@ -159,5 +173,9 @@ jobs:
             open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST
             rm -rf ${REMOTE_DIR}_astro
             mirror --reverse --delete --verbose ./dist/ $REMOTE_DIR
+            mkdir -p ${REMOTE_DIR}products/ausgabeschein-generator/
+            put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/workbench.png
+            put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/print-preview.png
+            put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/mobile.png
             bye
           "
