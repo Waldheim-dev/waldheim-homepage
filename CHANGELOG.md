@@ -1,3 +1,10 @@
+## [26.16.4](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.3...26.16.4) (2026-08-26)
+
+
+### Bug Fixes
+
+* update Ausgabeschein Generator version and release date ([6b4a962](https://github.com/Waldheim-dev/waldheim-homepage/commit/6b4a96233cb1898ade2cfdea8c7e48eceab685cc))
+
 ## [26.16.3](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.2...26.16.3) (2026-08-25)
 
 
