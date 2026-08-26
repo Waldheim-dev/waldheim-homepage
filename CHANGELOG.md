@@ -1,3 +1,10 @@
+## [26.16.5](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.4...26.16.5) (2026-08-26)
+
+
+### Bug Fixes
+
+* add new images and update layout for Ausgabeschein Generator v3 ([beab542](https://github.com/Waldheim-dev/waldheim-homepage/commit/beab54255288da015543f12ccee074fb9059694e))
+
 ## [26.16.4](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.3...26.16.4) (2026-08-26)
 
 
