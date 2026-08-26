@@ -95,9 +95,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   'ausgabeschein-generator': {
     name: 'Ausgabeschein Generator',
-    version: '2.16.2',
+    version: '3.0.0',
     status: 'stable',
-    releaseDate: '2025-09-09',
+    releaseDate: '2026-08-26',
     colors: {
       name: 'Ausgabeschein Generator',
       primary: 'primary-500',
