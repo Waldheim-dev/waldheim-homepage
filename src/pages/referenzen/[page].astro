@@ -66,7 +66,7 @@ const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Refere
                       </blockquote>
                       <div
                         class="font-medium text-meg-text-secondary mt-1">
-                        {categories.find(category => category.id === project.data?.category.id)?.data.name
+                        {categories.find(category => category.id.replace(/^_/, '') === project.data?.category.id.replace(/^_/, ''))?.data.name
                         }</div>
 
                       <p

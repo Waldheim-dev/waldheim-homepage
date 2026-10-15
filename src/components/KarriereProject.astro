@@ -128,7 +128,7 @@ referencedProjects.sort((a, b) => {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {referencedProjects.map((project) => (
           <a 
-            href={`/referenzen/${project.id.replace(/\/_/g, '/')}/`}
+            href={`/referenzen/${project.id.replace(/^_/, '').replace(/\/_/g, '/')}/`}
             class="group relative bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark hover:border-meg-accent/30 rounded-xl p-4 transition-all shadow-sm"
           >
             <div class="flex items-center gap-4">

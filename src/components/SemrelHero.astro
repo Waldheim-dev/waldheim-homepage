@@ -26,6 +26,8 @@ const t = {
     btnDocsLabel: 'semrel.io Dokumentation öffnen',
     btnContribute: 'Mitmachen',
     btnContributeLabel: 'Zum Mitmachen-Bereich springen',
+    btnCaseStudy: 'Case Study',
+    btnCaseStudyLabel: 'semrel Referenz & Case Study ansehen',
   },
   en: {
     description:
@@ -43,6 +45,8 @@ const t = {
     btnDocsLabel: 'Open semrel.io Documentation',
     btnContribute: 'Contribute',
     btnContributeLabel: 'Jump to Contribute section',
+    btnCaseStudy: 'Case Study',
+    btnCaseStudyLabel: 'View semrel Case Study & Reference',
   },
 }[lang];
 const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#contribute';
@@ -135,6 +139,14 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         >
           <i class='fa-solid fa-hand-holding-heart' aria-hidden='true'></i>
           {t.btnContribute}
+        </a>
+        <a
+          href='/referenzen/waldheim-dev/semrel/'
+          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-meg-surface-dark/80 border border-blue-500/30 text-blue-400 font-bold text-lg hover:bg-blue-500/10 transition-all'
+          aria-label={t.btnCaseStudyLabel}
+        >
+          <i class='fa-solid fa-diagram-project' aria-hidden='true'></i>
+          {t.btnCaseStudy}
         </a>
       </div>
 
