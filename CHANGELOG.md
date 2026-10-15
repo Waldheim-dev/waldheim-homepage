@@ -1,3 +1,10 @@
+# [26.18.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.17.0...26.18.0) (2026-10-15)
+
+
+### Features
+
+* add product & Open-Source reference case studies and highlight section ([358f27f](https://github.com/Waldheim-dev/waldheim-homepage/commit/358f27fc7093add93e68ad1c6726dee7131813a4))
+
 # [26.17.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.5...26.17.0) (2026-10-15)
 
 
