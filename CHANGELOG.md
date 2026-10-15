@@ -1,3 +1,10 @@
+## [26.18.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.18.0...26.18.1) (2026-10-15)
+
+
+### Bug Fixes
+
+* **content:** normalize collection entry IDs and eliminate all 601 content reference errors ([1f31562](https://github.com/Waldheim-dev/waldheim-homepage/commit/1f3156296c8c06b60f9e218fe70757689cfd34ab))
+
 # [26.18.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.17.0...26.18.0) (2026-10-15)
 
 
