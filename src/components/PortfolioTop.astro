@@ -64,7 +64,7 @@ const categories = await getCollection('projects_kategorie');
                   <p class="gsap-fadein">{project.data.title}</p>
                 </blockquote>
                 <div class="font-medium text-meg-text-secondary mt-2">
-                  {categories.find(category => category.id === project.data?.category.id)?.data.name}
+                {categories.find(category => category.id.replace(/^_/, '') === project.data?.category.id.replace(/^_/, ''))?.data.name}
                 </div>
                 <figcaption class="mt-8 text-base">
                   <a

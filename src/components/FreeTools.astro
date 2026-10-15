@@ -9,6 +9,7 @@ const tools = [
     title: "Amigo Agentic Framework",
     desc: "Ein professionelles Go-Framework zum Aufbau autonomer Multi-Agenten-Systeme mit MCP-Support, Circuit Breakern und HTMX/Bubble-Tea UI.",
     link: "/amigo/",
+    refLink: "/referenzen/waldheim-dev/amigo/",
     icon: "fa-solid fa-robot",
     tag: "Go Framework"
   },
@@ -16,6 +17,7 @@ const tools = [
     title: "Astro AI llms.txt Generator",
     desc: "NPM-Package (v1.4.0) zur automatischen Erstellung von llms.txt Dateien für KI-optimierte SEO und LLM-Sichtbarkeit.",
     link: "/astro-ai-llms-txt/",
+    refLink: "/referenzen/waldheim-dev/astro-ai-llms-txt/",
     icon: "fa-solid fa-wand-magic-sparkles",
     tag: "NPM Package"
   },
@@ -23,6 +25,7 @@ const tools = [
     title: "CV Generator",
     desc: "Open-Source Lebenslauf-Builder mit Tailwind CSS v4: 13 Layouts, 10 Farbthemen, A4 PDF-Export — komplett im Browser, ohne Account.",
     link: "/tailwind-cv/",
+    refLink: "/referenzen/waldheim-dev/tailwind-cv/",
     icon: "fa-solid fa-file-lines",
     tag: "Open Source"
   },
@@ -30,6 +33,7 @@ const tools = [
     title: "Obsidian Gemini AI Agent",
     desc: "Ein Obsidian-Plugin, das Gemini AI Agenten für intelligente Wissensarbeit und Notizinteraktionen integriert.",
     link: "/obsidian-gemini-agent/",
+    refLink: "/referenzen/waldheim-dev/obsidian-gemini-agent/",
     icon: "fa-solid fa-brain",
     tag: "Obsidian Plugin"
   },
@@ -37,6 +41,7 @@ const tools = [
     title: "Ausgabeschein Generator v3",
     desc: "Spezialisiertes Web-Tool für Vereine und Organisationen zur schnellen Erstellung und Verwaltung von Material-Ausgabescheinen.",
     link: "/ausgabeschein-generator/",
+    refLink: "/referenzen/waldheim-dev/ausgabeschein/",
     icon: "fa-solid fa-clipboard-list",
     tag: "Web Tool"
   },
@@ -44,6 +49,7 @@ const tools = [
     title: "WetterApp (Open Source)",
     desc: "Moderne Wettervorhersage mit intelligentem Multi-Provider-Fallback als Referenzarchitektur für Cloud-Resilienz.",
     link: "/waetherapp/",
+    refLink: "/referenzen/waldheim-dev/waetherapp/",
     icon: "fa-solid fa-cloud-sun",
     tag: "Open Source"
   }
@@ -141,6 +147,14 @@ const tools = [
               <i class="fa-solid fa-book" aria-hidden="true"></i>
               semrel.io Docs
             </a>
+            <a
+              href="/referenzen/waldheim-dev/semrel/"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-meg-surface-dark border border-blue-500/30 text-blue-400 font-bold text-sm hover:bg-blue-500/10 transition-all"
+              aria-label="semrel Referenz und Case Study lesen"
+            >
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              Case Study
+            </a>
           </div>
         </div>
 
@@ -172,21 +186,29 @@ semrel release</code></pre>
 
     <div class="grid md:grid-cols-3 gap-8">
       {tools.map((tool, i) => (
-        <a href={tool.link} class="gsap-fadein group bg-meg-surface-dark/30 border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/30 transition-all shadow-sm flex flex-col h-full" style={`animation-delay: ${i * 0.1}s`}>
+        <article class="gsap-fadein group bg-meg-surface-dark/30 border border-meg-border-dark rounded-3xl p-8 hover:border-emerald-500/30 transition-all shadow-sm flex flex-col h-full" style={`animation-delay: ${i * 0.1}s`}>
           <div class="size-14 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
             <i class={`${tool.icon} text-emerald-400 text-2xl`} aria-hidden="true"></i>
           </div>
           <div class="mb-2">
             <span class="text-[10px] font-black uppercase tracking-widest text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-md">{tool.tag}</span>
           </div>
-          <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4 group-hover:text-emerald-400 transition-colors">{tool.title}</h3>
+          <h3 class="text-xl font-bold text-meg-text-primary-dark mb-4 group-hover:text-emerald-400 transition-colors">
+            <a href={tool.link}>{tool.title}</a>
+          </h3>
           <p class="text-meg-text-secondary text-sm leading-relaxed flex-grow">
             {tool.desc}
           </p>
-          <div class="mt-8 flex items-center gap-2 text-meg-text-primary-dark font-bold text-sm">
-            Jetzt ausprobieren <i class="fa-solid fa-chevron-right text-xs group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+          <div class="mt-8 pt-4 border-t border-meg-border-dark/60 flex items-center justify-between gap-4 text-sm">
+            <a href={tool.link} class="flex items-center gap-2 text-meg-text-primary-dark font-bold hover:text-emerald-400 transition-colors">
+              Produktseite <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
+            </a>
+            <a href={tool.refLink} class="flex items-center gap-1.5 text-xs font-bold text-meg-accent hover:underline" aria-label={`Case Study zu ${tool.title} lesen`}>
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              Case Study
+            </a>
           </div>
-        </a>
+        </article>
       ))}
     </div>
   </div>
