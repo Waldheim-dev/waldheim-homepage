@@ -79,9 +79,8 @@ techStack: [
   "gitlab",
   "git",
   "playwright",
-  "lighthouse",
-  "partytown",
-  "gsap"
+  "ts",
+  "webstandards"
 ]
 keywords:
   - waldheim.dev

@@ -120,7 +120,7 @@ const poster = posterImage || defaultPoster;
     will-change: transform, opacity, filter;
   }
 
-  /* Fallback in case JS fails */
+  /* Fallback in case JS fails or user prefers reduced motion */
   .no-js .hero-word,
   .no-js .hero-subtitle,
   .no-js .hero-ctas-container {
@@ -128,12 +128,25 @@ const poster = posterImage || defaultPoster;
     transform: none !important;
     filter: none !important;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-word,
+    .hero-subtitle,
+    .hero-ctas-container {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  }
 </style>
 
 <script>
   import gsap from 'gsap';
 
   function initHeroAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
     // Split heading animation
     const words = document.querySelectorAll('.hero-word');
     if (words.length > 0) {
