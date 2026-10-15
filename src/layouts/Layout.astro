@@ -4,6 +4,8 @@ import { ClientRouter } from 'astro:transitions';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import faSolidWoff2 from '@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2?url';
+import faBrandsWoff2 from '@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2?url';
 import { SchemaUtils } from '../utils/schema';
 import Banner from '../components/Banner.astro';
 import { getAlternateUrl, getLangFromUrl } from '../i18n/utils';
@@ -104,7 +106,9 @@ const finalSchema = [
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Performance: Preconnect to CDNs -->
+    <!-- Performance: Preload Icon Webfonts & Preconnect to CDNs -->
+    <link rel="preload" href={faSolidWoff2} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={faBrandsWoff2} as="font" type="font/woff2" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
@@ -135,7 +139,7 @@ const finalSchema = [
 
         const getSavedThemeSelection = () => {
           const theme = localStorage.getItem(THEME_KEY);
-          return validThemes.has(theme) ? theme : 'system';
+          return validThemes.has(theme) ? theme : 'dark';
         };
 
         const getSavedContrast = () => {
@@ -309,9 +313,14 @@ const finalSchema = [
       }
 
       function initGlobalFadeInAnimations() {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         gsap.utils.toArray('.gsap-fadein').forEach((el: any) => {
-          // Reset CSS transition to avoid conflict with GSAP animations
           el.style.transition = 'none';
+          if (prefersReducedMotion) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+            return;
+          }
           
           const delay = parseFloat(el.style.animationDelay) || 0;
           

@@ -10,7 +10,7 @@ import { SchemaUtils } from '../../../utils/schema';
 import AiImageBadge from '../../../components/AiImageBadge.astro';
 
 // SEO & Meta
-const titel = 'DevSecOps & Cloud-Infrastruktur Augsburg & München | CI/CD, Kubernetes & Security';
+const titel = 'DevSecOps & Cloud Augsburg/München | CI/CD & Kubernetes';
 const description = 'Ihr DevSecOps-Experte in Bayern: Sichere CI/CD-Pipelines, Kubernetes-Cluster, Terraform, GitOps und Cloud-Infrastruktur für schnellere Releases ohne Sicherheitskompromisse. KMU & Startups.';
 const keywords = 'DevSecOps Beratung Augsburg, CI/CD Automatisierung Bayern, Kubernetes Consulting München, Cloud Security KMU, GitOps Experte Augsburg, Terraform Bayern, Cloud-Infrastruktur KMU, Sichere Software-Lieferkette';
 const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
@@ -152,6 +152,10 @@ const faqSchema = SchemaUtils.getFAQSchema([
                 <i class="fa-solid fa-check text-emerald-400"></i>
                 <span class="text-meg-text-primary-dark font-semibold">Prometheus & Grafana:</span> Full-Stack Observability & Monitoring.
               </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i>
+                <span><strong class="text-meg-text-primary-dark font-semibold">semrel (v0.26.3 Open Source):</strong> Eigenentwickelte Go-native Release- &amp; Supply-Chain-Automation (Cosign v3, SBOM, SLSA, Air-Gap). <a href="/semrel/" class="text-violet-400 font-bold underline hover:text-violet-300">semrel entdecken →</a></span>
+              </li>
             </ul>
           </div>
           <div class="relative bg-meg-surface-dark/30 rounded-3xl p-4 ring-1 ring-meg-border-dark">
@@ -178,7 +182,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
               { step: '04', title: 'Scale', desc: 'Kontinuierliche Optimierung und Team-Coaching für agilen Betrieb.' }
             ].map((s) => (
               <li class="bg-meg-bg-dark border border-meg-border-dark p-6 rounded-2xl text-center hover:border-violet-500/50 transition-all">
-                <span class="text-4xl font-black text-violet-500/20 block mb-4">{s.step}</span>
+                <span class="text-4xl font-black text-violet-400 block mb-4" aria-hidden="true">{s.step}</span>
                 <h3 class="text-lg font-bold mb-2">{s.title}</h3>
                 <p class="text-sm text-meg-text-secondary">{s.desc}</p>
               </li>

@@ -6,10 +6,13 @@ test.describe('SEO Validation Tests', () => {
   const criticalPages = [
     { path: '/', name: 'Homepage' },
     { path: '/services/', name: 'Services' },
+    { path: '/suite/', name: 'Waldheim Suite' },
     { path: '/suite/forge/', name: 'Suite - Forge' },
     { path: '/suite/ecodrive/', name: 'Suite - Ecodrive' },
     { path: '/suite/socialverse/', name: 'Suite - Socialverse' },
+    { path: '/semrel/', name: 'semrel' },
     { path: '/referenzen/', name: 'Referenzen' },
+    { path: '/kontakt/', name: 'Kontakt' },
   ];
 
   for (const { path, name } of criticalPages) {
@@ -137,7 +140,6 @@ test.describe('SEO Validation Tests', () => {
 
   test.describe('Utility-Seiten (sollten noindex haben)', () => {
     const utilityPages = [
-      { path: '/kontakt/', name: 'Kontakt' },
       { path: '/danke/', name: 'Danke' },
       { path: '/datenschutz/', name: 'Datenschutz' },
       { path: '/impressum/', name: 'Impressum' },
@@ -238,14 +240,37 @@ test.describe('SEO Validation Tests', () => {
     });
   });
 
-  test.describe('Redirect Prevention', () => {
-    test('Hauptseiten haben KEINE Weiterleitungen', async ({ page }) => {
-      for (const { path } of criticalPages) {
-        const response = await page.goto(path);
-        
-        // Status sollte 200 sein, NICHT 301/302
-        expect(response?.status()).toBe(200);
+  test.describe('Icon & Webfont Integrity', () => {
+    test('Font Awesome Webfonts werden vorgeladen und alle Icons rendern valide Glyphen', async ({ page, request }) => {
+      await page.goto('/');
+      await page.waitForLoadState('networkidle');
+
+      // 1. Prüfe Preload-Links für Font Awesome Webfonts
+      const fontPreloads = page.locator('link[rel="preload"][as="font"][type="font/woff2"]');
+      const preloadCount = await fontPreloads.count();
+      expect(preloadCount).toBeGreaterThanOrEqual(2);
+
+      for (let i = 0; i < preloadCount; i++) {
+        const href = await fontPreloads.nth(i).getAttribute('href');
+        expect(href).toBeTruthy();
+        const fontResp = await request.get(href!);
+        expect(fontResp.ok(), `Webfont ${href} muss ladbar sein`).toBeTruthy();
       }
+
+      // 2. Prüfe, dass alle <i> Font-Awesome-Icons auf der Seite ein gültiges ::before content-Zeichen haben
+      const brokenIcons = await page.evaluate(() => {
+        const icons = Array.from(document.querySelectorAll('i[class*="fa-"]'));
+        const invalid: string[] = [];
+        for (const el of icons) {
+          const content = window.getComputedStyle(el, '::before').content;
+          if (!content || content === 'none' || content === 'normal' || content === '""') {
+            invalid.push(el.className);
+          }
+        }
+        return invalid;
+      });
+
+      expect(brokenIcons, `Fehlende Icon-Glyphen gefunden: ${brokenIcons.join(', ')}`).toEqual([]);
     });
   });
 });

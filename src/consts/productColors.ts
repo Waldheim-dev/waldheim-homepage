@@ -112,7 +112,7 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   'astro-ai-llms-txt': {
     name: 'Astro AI llms.txt Generator',
-    version: '1.3.0',
+    version: '1.4.0',
     status: 'stable',
     releaseDate: '2026-04-01',
     colors: {
@@ -214,9 +214,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   semrel: {
     name: 'semrel',
-    version: '0.3.x',
-    status: 'alpha',
-    releaseDate: '2026',
+    version: '0.26.3',
+    status: 'beta',
+    releaseDate: '2026-09-21',
     colors: {
       name: 'semrel',
       primary: 'blue-400',

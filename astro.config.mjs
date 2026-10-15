@@ -20,7 +20,23 @@ import 'dotenv/config';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [
+      tailwindcss(),
+      {
+        name: 'ensure-css-utf8-and-font-display',
+        generateBundle(_, bundle) {
+          for (const [fileName, chunk] of Object.entries(bundle)) {
+            if (fileName.endsWith('.css') && chunk.type === 'asset' && typeof chunk.source === 'string') {
+              let css = chunk.source.replace(/font-display:\s*block/g, 'font-display:swap');
+              if (!css.startsWith('@charset')) {
+                css = `@charset "UTF-8";${css}`;
+              }
+              chunk.source = css;
+            }
+          }
+        },
+      },
+    ],
   },
   site: 'https://www.waldheim.dev',
   redirects: {
@@ -56,8 +72,9 @@ export default defineConfig({
         if (item.url === 'https://www.waldheim.dev/') {
           item.priority = 1; // Homepage
         } else if (item.url.includes('/services/') ||
-          item.url.includes('/suite/')) {
-          item.priority = 0.9; // Hauptprodukte/Services
+          item.url.includes('/suite/') ||
+          item.url.includes('/semrel/')) {
+          item.priority = 0.9; // 3 strategische Hauptanker: Services, Suite, semrel
         } else if (item.url.includes('/blog/')) {
           item.priority = 0.7; // Blog-Artikel
         } else if (item.url.includes('/referenzen/')) {
@@ -96,7 +113,7 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   prefetch: {
-    prefetchAll: true
+    defaultStrategy: 'hover'
   },
   compressHTML: true,
   scopedStyleStrategy: 'class',

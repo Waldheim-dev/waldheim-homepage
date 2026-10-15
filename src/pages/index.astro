@@ -132,63 +132,169 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   </HeroBackground>
 
   <main id="main-content">
+    <!-- Strategische 3-Anker-Architektur: Services · Waldheim Suite · Open Source (semrel) -->
     <section
       class="py-20 border-b border-meg-border-dark/30"
-      aria-labelledby="suite-launch-heading"
+      aria-labelledby="strategic-anchors-heading"
     >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto">
           <p class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4">
-            Waldheim.dev-Suite
+            Drei Kernbereiche · Ein Qualitätsanspruch
           </p>
           <h2
-            id="suite-launch-heading"
+            id="strategic-anchors-heading"
             class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
           >
-            Mehr Umsatz, weniger Reibung – mit einer integrierten Business-Plattform
+            Consulting, SaaS-Plattform &amp; Open-Source Engineering
           </h2>
           <p class="text-lg text-meg-text-secondary">
-            Statt Tool-Chaos steuern Sie Vertrieb, Rechnungen, Support und Operations aus einem App-Shell-System mit zentralem Tenant- und App-Switch.
+            Ob maßgeschneiderte Enterprise-Beratung, schlüsselfertige Business-Suite für den Mittelstand oder supply-chain-sichere Open-Source-Automatisierung – wählen Sie den passenden Hebel für Ihr Vorhaben.
           </p>
         </div>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Globale Defaults pro Tenant</h3>
-            <p class="text-meg-text-secondary">Standardsprache, Rechnungswährung, Rechnungstemplate und Mail-Default zentral steuern – ohne Wildwuchs.</p>
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <!-- Anker 1: Dienstleistungen (Services) -->
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-violet-500/40 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="size-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+                  <i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full">
+                  1 · IT-Services &amp; Consulting
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
+                DevSecOps, Custom Software &amp; Cloud
+              </h3>
+              <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+                Zertifizierte Senior-Expertise (PSM II, PSPO I) für automatisierte CI/CD-Pipelines, maßgeschneiderte Web- &amp; Enterprise-Software, sichere IT-Infrastruktur und KNX Smart Home in Augsburg &amp; München.
+              </p>
+              <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>DevSecOps, Kubernetes, GitOps &amp; Cloud-Härtung</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Individualsoftware &amp; KI-gestützte Workflows (+150%)</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>IT-Service, Unifi-Netzwerke &amp; KNX-Automation</span></li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
+              <TrackedButton
+                href="/services/"
+                trackEvent="cta_homepage_anchor_services"
+                trackCategory="strategic_anchors"
+                trackLabel="Services Overview"
+                variant="primary"
+                icon="fa-solid fa-arrow-right"
+              >
+                Services entdecken
+              </TrackedButton>
+              <TrackedButton
+                href="#roi-rechner"
+                trackEvent="cta_homepage_anchor_roi"
+                trackCategory="strategic_anchors"
+                trackLabel="ROI Calculator"
+                variant="secondary"
+              >
+                ROI berechnen
+              </TrackedButton>
+            </div>
           </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Internationale Rechnungsstellung</h3>
-            <p class="text-meg-text-secondary">Währungs- und Template-Logik direkt im ERP-Flow, inklusive validierter Kombinationen statt stiller Fallbacks.</p>
-          </article>
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark rounded-2xl p-6">
-            <h3 class="text-xl font-bold text-meg-text-primary-dark mb-3">Security & Compliance by Default</h3>
-            <p class="text-meg-text-secondary">Mandantenisolation, Audit-Trail, MFA und E-Invoicing-Fähigkeit als belastbares Fundament für den Mittelstand.</p>
-          </article>
-        </div>
 
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <TrackedButton
-            href="/suite/"
-            trackEvent="cta_homepage_suite_overview"
-            trackCategory="suite_launch"
-            trackLabel="Suite Overview"
-            variant="primary"
-            icon="fa-solid fa-layer-group"
-            iconPosition="left"
-          >
-            Suite entdecken
-          </TrackedButton>
-          <TrackedButton
-            href="/suite/preise/"
-            trackEvent="cta_homepage_suite_pricing"
-            trackCategory="suite_launch"
-            trackLabel="Suite Pricing"
-            variant="secondary"
-            icon="fa-solid fa-arrow-right"
-          >
-            Pricing ansehen
-          </TrackedButton>
+          <!-- Anker 2: SaaS Waldheim Suite -->
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="size-12 rounded-2xl bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center text-meg-accent">
+                  <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1 rounded-full">
+                  2 · SaaS Business-Plattform
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
+                Waldheim Suite – 9 Module, 1 Login
+              </h3>
+              <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+                Schluss mit dem Tool-Flickenteppich: Steuern Sie Kundenportal, CRM (Socialverse), ERP (Silvacore), Dokumentenmanagement (Aether), Fuhrpark (Ecodrive), Finanzen und Workflows aus einer mandantenisolierten App-Shell.
+              </p>
+              <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Zentrale Tenant-Defaults, SSO &amp; nahtloser App-Switch</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>E-Rechnungspflicht ready (XRechnung &amp; ZUGFeRD)</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>100% DSGVO-konform · Gehostet in Deutschland</span></li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
+              <TrackedButton
+                href="/suite/"
+                trackEvent="cta_homepage_suite_overview"
+                trackCategory="suite_launch"
+                trackLabel="Suite Overview"
+                variant="primary"
+                icon="fa-solid fa-layer-group"
+                iconPosition="left"
+              >
+                Suite entdecken
+              </TrackedButton>
+              <TrackedButton
+                href="/suite/preise/"
+                trackEvent="cta_homepage_suite_pricing"
+                trackCategory="suite_launch"
+                trackLabel="Suite Pricing"
+                variant="secondary"
+                icon="fa-solid fa-arrow-right"
+              >
+                Preise ansehen
+              </TrackedButton>
+            </div>
+          </article>
+
+          <!-- Anker 3: Open Source Stack & semrel -->
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-blue-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="size-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                  <i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
+                  3 · Open Source · semrel v0.26.3
+                </span>
+              </div>
+              <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
+                semrel &amp; Open-Source Ökosystem
+              </h3>
+              <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+                Produktionsreife Open-Source-Software als gelebter Beweis für Engineering-Exzellenz: allen voran <strong>semrel v0.26.3</strong> – die Go-native, zero-dependency Semantic-Release-Engine für Enterprise-CI/CD und Air-Gap-Umgebungen.
+              </p>
+              <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Statisches Go-Binary ohne Node.js-Abhängigkeiten</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Cosign v3 Bundle, CycloneDX/SPDX SBOM &amp; SLSA</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>30+ Plugins, <code class="font-mono">.semrel.lock</code> &amp; Monorepo Workspace</span></li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
+              <TrackedButton
+                href="/semrel/"
+                trackEvent="cta_homepage_anchor_semrel"
+                trackCategory="strategic_anchors"
+                trackLabel="semrel Overview"
+                variant="primary"
+                icon="fa-solid fa-code-branch"
+                iconPosition="left"
+              >
+                semrel v0.26.3
+              </TrackedButton>
+              <TrackedButton
+                href="#opensource-stack"
+                trackEvent="cta_homepage_anchor_oss"
+                trackCategory="strategic_anchors"
+                trackLabel="Open Source Stack"
+                variant="secondary"
+                icon="fa-solid fa-arrow-right"
+              >
+                Alle OSS-Tools
+              </TrackedButton>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -541,6 +647,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   gsap.registerPlugin(ScrollTrigger);
 
   function initIndexAnimations() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
     // Animate bento cards with a stagger when services section enters viewport
     const bentoCards = document.querySelectorAll('.bento-card');
     if (bentoCards.length > 0) {
