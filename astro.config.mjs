@@ -132,7 +132,4 @@ export default defineConfig({
       },
     },
   },
-  markdown: {
-    smartypants: true,
-  },
 });

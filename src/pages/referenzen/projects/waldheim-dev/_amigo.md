@@ -42,8 +42,8 @@ tags:
   ]
 techStack: [
     "go",
-    "htmx",
-    "sqlite",
+    "mcp",
+    "html",
     "docker",
     "git",
     "github",

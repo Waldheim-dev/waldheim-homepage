@@ -3,7 +3,7 @@ title: "K8s Chaos Battleship: Das Making-Of des unbesiegbaren Clusters"
 description: "Ein detaillierter Blick hinter die Kulissen unseres interaktiven Chaos Engineering Experiments für die Cloudland 2026 – gebaut mit Go, FluxCD und viel Zerstörungswut."
 pubDate: "2026-05-06"
 heroImage: "/images/blog/making-of-k8s-chaos-battleship-cloudland-2026.png"
-author: 'devops-hero'
+author: 'markus-waldheim'
 keywords: Kubernetes, Chaos Engineering, GoLang, FluxCD, GitOps, Gamification, Cloudland 2026, Platform Engineering, Resilienz, Self-Healing
 ---
 
