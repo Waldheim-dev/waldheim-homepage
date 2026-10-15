@@ -1,3 +1,10 @@
+# [26.17.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.5...26.17.0) (2026-10-15)
+
+
+### Features
+
+* update dependencies, showcase semrel v0.26.3 and fix A11y/icon rendering ([de115fe](https://github.com/Waldheim-dev/waldheim-homepage/commit/de115fe40328dab313f5cff11fa088b8d32d9b2d))
+
 ## [26.16.5](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.16.4...26.16.5) (2026-08-26)
 
 
