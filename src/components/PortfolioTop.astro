@@ -51,6 +51,8 @@ const categories = await getCollection('projects_kategorie');
                   class="relative z-10 h-full w-full bg-meg-bg-dark object-cover shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   src={project.data.heroImage}
                   alt={`${project.data.title} – Referenzprojekt Webentwicklung und Design von waldheim.dev`}
+                  width="800"
+                  height="450"
                   loading="lazy"
                 />
                 {project.data.aiGenerated && <AiImageBadge class="absolute top-3 right-3 z-20" />}

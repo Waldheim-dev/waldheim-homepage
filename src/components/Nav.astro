@@ -6,6 +6,7 @@ const version = JSON.parse(fs.readFileSync('./package.json').toString()).version
 
 // Get info for all items
 const suite = getProductInfo('suite')!;
+const semrel = getProductInfo('semrel')!;
 const waetherapp = getProductInfo('waetherapp')!;
 const obsidianGeminiAgent = getProductInfo('obsidian-gemini-agent')!;
 const ausgabeschein = getProductInfo('ausgabeschein-generator')!;
@@ -146,14 +147,14 @@ const itServiceColors = getServiceColors('it-service');
                     <div class="size-11 flex items-center justify-center rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 group-hover:scale-110 transition-transform">
                       <i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i>
                     </div>
-                    <span class="text-[9px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded-full">Apache 2.0</span>
+                    <span class="text-[9px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded-full">v{semrel.version} · Apache 2.0</span>
                   </div>
                   <p class="text-xl font-black text-meg-text-primary-dark tracking-tight mb-1">semrel</p>
                   <p class="text-[11px] font-bold text-blue-400 mb-3">Semantic Releases.<br/>Fully Automated.</p>
-                  <p class="text-[11px] text-slate-400 leading-relaxed">Go-basiertes Release-System mit Plugin-Architektur. Conventional Commits, Monorepo-Support, 30+ Plugins.</p>
+                  <p class="text-[11px] text-slate-400 leading-relaxed">Go-natives Release-System ohne Runtime-Overhead. 30+ Plugins, .semrel.lock, Air-Gap &amp; Cosign v3.</p>
                 </div>
                 <div class="mt-5 flex flex-wrap gap-1">
-                  {['Go', 'CI/CD', 'Plugins', 'GitHub'].map(tag => (
+                  {['Go', 'Cosign v3', '30+ Plugins', 'Air-Gap'].map(tag => (
                     <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-meg-surface-dark border border-meg-border-dark text-slate-400">{tag}</span>
                   ))}
                 </div>
@@ -306,7 +307,7 @@ const itServiceColors = getServiceColors('it-service');
             <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-blue-500/30">
               <a href="/semrel/" class="flex items-center gap-2 p-2 text-sm font-bold text-blue-400">
                 <i class="fa-solid fa-code-branch text-xs" aria-hidden="true"></i>
-                semrel <span class="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20">Featured</span>
+                semrel <span class="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20">v{semrel.version}</span>
               </a>
               <a href="/ausgabeschein-generator/" class="block p-2 text-sm text-slate-400">Ausgabeschein</a>
               <a href="/waetherapp/" class="block p-2 text-sm text-slate-400">WetterApp</a>

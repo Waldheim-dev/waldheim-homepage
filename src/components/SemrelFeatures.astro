@@ -102,28 +102,46 @@ const features = [
   },
   {
     icon: 'fa-wand-magic-sparkles',
-    title: 'Generator Phase (v0.14.0)',
+    title: '8-Phase Pipeline (v0.18+)',
     desc: {
-      de: 'Neue Pipeline-Phase zwischen Changelog-Generierung und Release: Generator-Plugins koennen Release Notes via stdout zentral setzen und an spaetere Phasen weiterreichen.',
-      en: 'New pipeline phase between changelog generation and release: generator plugins can set release notes via stdout and pass them to downstream phases.',
+      de: 'Condition, Analyzer, Generator, Updater, Packager (.deb/.rpm via nfpm), Publisher (OCI/HTTP), Provider & Hook — vollständig modular steuerbar.',
+      en: 'Condition, Analyzer, Generator, Updater, Packager (.deb/.rpm via nfpm), Publisher (OCI/HTTP), Provider & Hook — fully modular across the entire lifecycle.',
     },
     badge: 'Pipeline',
   },
   {
-    icon: 'fa-brands fa-github',
-    title: 'GitHub Actions Native',
+    icon: 'fa-lock',
+    title: 'Lockfile & Doctor (v0.21+)',
     desc: {
-      de: 'Native action.yml Composite Action, strukturierter JSON Release Output und wiederverwendbare Workflow Templates für CI/CD-Pipelines.',
-      en: 'Native action.yml Composite Action, structured JSON release output and reusable workflow templates for CI/CD pipelines.',
+      de: 'Reproduzierbare Plugin-Versionen mit SHA256-Prüfsummen in .semrel.lock, automatisches semrel plugin restore und Pre-Flight-Checks per semrel doctor.',
+      en: 'Reproducible plugin versions with SHA256 checksums in .semrel.lock, automatic semrel plugin restore and pre-flight validation via semrel doctor.',
     },
-    badge: 'CI/CD',
+    badge: 'Reliability',
+  },
+  {
+    icon: 'fa-sliders',
+    title: 'Env-Config & Scopes (v0.26.3)',
+    desc: {
+      de: 'Umgebungsvariablen-Interpolation in .semrel.yaml, Scope-basierte Bump-Regeln, taglose Release-Metadaten-Auflösung und idempotente Docker-Tag-Retries.',
+      en: 'Environment variable interpolation in .semrel.yaml, scope-based bump rules, tagless release metadata resolution and idempotent Docker tag retries.',
+    },
+    badge: 'v0.26.3',
+  },
+  {
+    icon: 'fa-brands fa-github',
+    title: 'GitHub Actions & Schema',
+    desc: {
+      de: 'Native action.yml Composite Action, offizielles JSON Schema (registry.semrel.io) für VS Code / JetBrains Autocomplete und Self-Update via semrel update.',
+      en: 'Native action.yml Composite Action, official JSON Schema (registry.semrel.io) for VS Code / JetBrains autocomplete and self-update via semrel update.',
+    },
+    badge: 'CI/CD & DX',
   },
   {
     icon: 'fa-chart-bar',
-    title: 'Release Analytics',
+    title: 'Release Analytics & Commitlint',
     desc: {
-      de: 'Append-only NDJSON Release-History Tracking, Jira/GitHub Issue Reference Extraction und commitlint für CLI, Git Range oder stdin.',
-      en: 'Append-only NDJSON release history tracking, Jira/GitHub issue reference extraction and commitlint for CLI, git range or stdin.',
+      de: 'Append-only NDJSON Release-History, Contributor-Metadaten für Plugins, Jira/GitHub Issue-Extraktion und semrel commitlint (--commit-msg-file, Range, stdin).',
+      en: 'Append-only NDJSON release history, contributor metadata passed to plugins, Jira/GitHub issue extraction and semrel commitlint (--commit-msg-file, range, stdin).',
     },
     badge: 'Insights',
   },
@@ -166,9 +184,9 @@ const features = [
         >
           <div class='flex items-start justify-between mb-4'>
             <div class='size-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform'>
-              <i class={`fa-solid ${feature.icon} text-blue-400 text-xl`} aria-hidden='true'></i>
+              <i class={`${feature.icon.includes('fa-brands') ? feature.icon : `fa-solid ${feature.icon}`} text-blue-400 text-xl`} aria-hidden='true'></i>
             </div>
-            <span class='text-[10px] font-black uppercase tracking-widest text-blue-500/70 border border-blue-500/20 px-2 py-1 rounded-md bg-blue-500/5'>
+            <span class='text-[10px] font-black uppercase tracking-widest text-blue-400 border border-blue-500/20 px-2 py-1 rounded-md bg-blue-500/5'>
               {feature.badge}
             </span>
           </div>

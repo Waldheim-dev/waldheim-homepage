@@ -14,7 +14,7 @@ const features = [
     color: 'from-blue-500 to-indigo-500'
   },
   {
-    icon: 'fa-command',
+    icon: 'fa-terminal',
     title: 'Systemsteuerung',
     description: 'Gemini kann Obsidian-Befehle ausführen, die globale Suche bedienen und sogar komplexe Canvas-Mindmaps für Sie erstellen.',
     color: 'from-violet-500 to-purple-500'
@@ -32,7 +32,7 @@ const features = [
     color: 'from-cyan-500 to-blue-500'
   },
   {
-    icon: 'fa-markdown',
+    icon: 'fa-brands fa-markdown',
     title: 'Markdown-Native',
     description: 'Tabellen, Code-Blöcke und mathematische Formeln werden perfekt gerendert, genau wie Sie es von Obsidian erwarten.',
     color: 'from-emerald-500 to-teal-500'
@@ -100,7 +100,7 @@ const targetGroups = [
         <div class='gsap-fadein bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark rounded-2xl p-6 hover:border-indigo-500/30 transition-all duration-300 group shadow-sm' style={`animation-delay: ${0.45 + index * 0.05}s`}>
           <div class='flex items-center gap-4 mb-4'>
             <div class={`size-10 bg-meg-bg-dark border border-meg-border-dark rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:border-indigo-500/50 transition-all shadow-inner`}>
-              <i class={`fa-solid ${feature.icon} text-indigo-400 text-lg`} aria-hidden='true'></i>
+              <i class={`${feature.icon.includes('fa-brands') ? feature.icon : `fa-solid ${feature.icon}`} text-indigo-400 text-lg`} aria-hidden='true'></i>
             </div>
             <h3 class='text-base font-bold text-meg-text-primary-dark'>{feature.title}</h3>
           </div>

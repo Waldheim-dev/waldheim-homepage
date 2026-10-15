@@ -25,12 +25,16 @@ const t = {
     installCode: `go install github.com/SemRels/semrel/cmd/semrel@latest
 semrel --version
 
-# Plugins nach Bedarf installieren
-semrel plugin install conventional
-semrel plugin install github
-semrel plugin install npm
-semrel plugin install docker`,
-    configureCode: `branches:
+# Konfiguration initialisieren (inkl. JSON-Schema)
+semrel config init
+
+# Plugins installieren & in .semrel.lock pinnen
+semrel plugin install @semrel/conventional
+semrel plugin install @semrel/github
+semrel plugin install @semrel/npm
+semrel plugin restore`,
+    configureCode: `# yaml-language-server: $schema=https://registry.semrel.io/schemas/core/v1.json
+branches:
   - name: main
   - name: next
     prerelease: true
@@ -38,22 +42,26 @@ semrel plugin install docker`,
 commit_changelog: false
 
 plugins:
-  - uses: conventional      # Analyzer
-  - uses: changelog-md      # Generator
-  - uses: npm               # Updater
-  - uses: nfpm              # Packager (optional)
-  - uses: oci               # Publisher (optional)
-  - uses: github            # Provider
-  - uses: slack             # Hook
+  - uses: "@semrel/conventional" # Analyzer
+  - uses: "@semrel/changelog-md" # Generator
+  - uses: "@semrel/npm"          # Updater
+  - uses: "@semrel/nfpm"         # Packager (optional)
+  - uses: "@semrel/oci"          # Publisher (optional)
+  - uses: "@semrel/github"       # Provider
+  - uses: "@semrel/slack"        # Hook
     args:
-      channel: "#releases"`,
-    releaseCode: `# Erst Dry-Run — kein Output, kein Tag, kein Release
-semrel release --dry-run
+      channel: "\${RELEASE_CHANNEL:-#releases}"`,
+    releaseCode: `# Pre-Flight Check (Config, Plugins, Git-Status & Tokens)
+semrel doctor
 
-# Commit-Messages validieren
+# Commit-Messages validieren (Range, Datei oder Stdin)
+semrel commitlint --commit-msg-file .git/COMMIT_EDITMSG
 semrel lint
 
-# Vollständiger Release-Durchlauf
+# Erst Dry-Run — kein Tag, kein Release, volle Vorschau
+semrel release --dry-run
+
+# Vollständiger Release-Durchlauf (oder Monorepo: semrel workspace)
 semrel release`,
   },
   en: {
@@ -74,12 +82,16 @@ semrel release`,
     installCode: `go install github.com/SemRels/semrel/cmd/semrel@latest
 semrel --version
 
-# Install plugins as needed
-semrel plugin install conventional
-semrel plugin install github
-semrel plugin install npm
-semrel plugin install docker`,
-    configureCode: `branches:
+# Initialize configuration (with JSON Schema)
+semrel config init
+
+# Install & pin plugins in .semrel.lock
+semrel plugin install @semrel/conventional
+semrel plugin install @semrel/github
+semrel plugin install @semrel/npm
+semrel plugin restore`,
+    configureCode: `# yaml-language-server: $schema=https://registry.semrel.io/schemas/core/v1.json
+branches:
   - name: main
   - name: next
     prerelease: true
@@ -87,22 +99,26 @@ semrel plugin install docker`,
 commit_changelog: false
 
 plugins:
-  - uses: conventional      # Analyzer
-  - uses: changelog-md      # Generator
-  - uses: npm               # Updater
-  - uses: nfpm              # Packager (optional)
-  - uses: oci               # Publisher (optional)
-  - uses: github            # Provider
-  - uses: slack             # Hook
+  - uses: "@semrel/conventional" # Analyzer
+  - uses: "@semrel/changelog-md" # Generator
+  - uses: "@semrel/npm"          # Updater
+  - uses: "@semrel/nfpm"         # Packager (optional)
+  - uses: "@semrel/oci"          # Publisher (optional)
+  - uses: "@semrel/github"       # Provider
+  - uses: "@semrel/slack"        # Hook
     args:
-      channel: "#releases"`,
-    releaseCode: `# First dry-run — no output, no tag, no release
-semrel release --dry-run
+      channel: "\${RELEASE_CHANNEL:-#releases}"`,
+    releaseCode: `# Pre-flight check (config, plugins, git state & tokens)
+semrel doctor
 
-# Validate commit messages
+# Validate commit messages (range, file or stdin)
+semrel commitlint --commit-msg-file .git/COMMIT_EDITMSG
 semrel lint
 
-# Full release run
+# First dry-run — no tag, no release, full preview
+semrel release --dry-run
+
+# Full release run (or monorepo: semrel workspace)
 semrel release`,
   },
 }[lang];

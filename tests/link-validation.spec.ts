@@ -246,6 +246,7 @@ test.describe('Link-Validation Tests', () => {
 
     for (const redir of redirects) {
       await page.goto(redir.from);
+      await page.waitForURL((url) => url.pathname.includes(redir.to), { timeout: 5000 });
       expect(page.url()).toContain(redir.to);
     }
   });

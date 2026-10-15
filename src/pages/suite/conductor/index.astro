@@ -29,7 +29,7 @@ const features = [
   { icon: 'fa-diagram-project', title: 'Visueller Workflow-Builder', description: 'Drag-and-Drop-Editor zum Erstellen von Automatisierungen. Trigger, Bedingungen und Aktionen werden als Nodes verbunden – kein Code nötig.' },
   { icon: 'fa-bolt', title: 'Event-Trigger', description: 'Starten Sie Workflows über Module-Events: CRM-Deal gewonnen, ERP-Auftrag erstellt, Rechnung bezahlt, Schadensmeldung eingegangen.' },
   { icon: 'fa-code-branch', title: 'Bedingungen & Verzweigungen', description: 'If-Else-Logik, Wertevergleiche und Switch-Nodes für verzweigte Prozesse. Komplexe Entscheidungsbäume ohne Programmierung.' },
-  { icon: 'fa-webhook', title: 'HTTP-Webhooks', description: 'Externe Systeme als Trigger-Quelle oder Aktionsziel einbinden. Keine nativen Konnektoren nötig – offene REST-Schnittstelle für alles.' },
+  { icon: 'fa-plug', title: 'HTTP-Webhooks', description: 'Externe Systeme als Trigger-Quelle oder Aktionsziel einbinden. Keine nativen Konnektoren nötig – offene REST-Schnittstelle für alles.' },
   { icon: 'fa-clock-rotate-left', title: 'Ausführungshistorie', description: 'Vollständiges Log aller Workflow-Ausführungen mit Status, Dauer, Fehlerdetails und Eingangsdaten. Vollständig auditierbar.' },
   { icon: 'fa-rotate-right', title: 'Fehlerbehandlung & Retry', description: 'Konfigurierbare Retry-Logik mit Backoff, Dead-Letter-Queue für fehlgeschlagene Runs und automatische Team-Benachrichtigung über Relay.' },
   { icon: 'fa-calendar-days', title: 'Zeitgesteuerte Trigger', description: 'Cron-basierte Zeitpläne: täglich, wöchentlich, monatlich oder mit benutzerdefiniertem Intervall. Perfekt für Reports, Abrechnungen und Erinnerungen.' },
@@ -91,7 +91,7 @@ const nodeGraph = [
             In Entwicklung
           </span>
           <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
-            <i class="fa-solid fa-code-slash text-indigo-400" aria-hidden="true"></i>
+            <i class="fa-solid fa-code text-indigo-400" aria-hidden="true"></i>
             No-Code
           </span>
           <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
@@ -215,7 +215,7 @@ const nodeGraph = [
                 <div class="flex items-center gap-3 text-xs">
                   <i class={`fa-solid fa-circle-dot text-${e.color}-400`} aria-hidden="true"></i>
                   <span class="text-meg-text-secondary flex-1 truncate">{e.label}</span>
-                  <span class="text-meg-text-secondary opacity-60 shrink-0">{e.time}</span>
+                  <span class="text-meg-text-secondary shrink-0">{e.time}</span>
                 </div>
               ))}
             </div>
