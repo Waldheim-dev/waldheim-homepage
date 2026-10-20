@@ -50,8 +50,8 @@ const modules = [
     title: 'Customer Portal',
     subtitle: 'Identität, Billing & Self-Service',
     description:
-      'Zentrales Owner- und Kundenportal mit SSO, Ticket-System, Rechnungsverwaltung, Abo-Steuerung und Self-Service fuer internationale Nutzer.',
-    badge: 'Closed Alpha',
+      'Zentrales Owner- und Kundenportal mit SSO, In-App-Ticket-System & Antwort-Flows, Rechnungsverwaltung, Abo-Steuerung und Self-Service.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/socialverse/',
@@ -60,18 +60,18 @@ const modules = [
     title: 'Socialverse CRM',
     subtitle: 'Pipeline, Deals & Kontakte',
     description:
-      'Professionelles CRM mit Deal-Pipeline, Kontaktmanagement, Kampagnen, Revenue-Workflows und KPI-Dashboard für Ihren Vertrieb.',
-    badge: 'Closed Alpha',
+      'Professionelles CRM mit Deal-Pipeline, Custom Fields, Kontakt-Aktivitäten-Timeline, Kampagnen, Revenue-Workflows und KPI-Dashboard.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/forge/',
     icon: 'fa-building-columns',
     color: 'green',
     title: 'Silvacore ERP',
-    subtitle: 'Produkte, Projekte & Aufträge',
+    subtitle: 'Produkte, Angebote & E-Rechnung',
     description:
-      'Enterprise-Ressourcenplanung mit Produktkatalog, Projektmanagement, Zeiterfassung, Angeboten und Auftragsabwicklung.',
-    badge: 'Closed Alpha',
+      'ERP mit Produktkatalog, Angeboten (1-Klick-Rechnungskonvertierung), Multi-Line Invoice Composer sowie XRechnung 3.0 & ZUGFeRD PDF/A-3b.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/aether/',
@@ -80,48 +80,48 @@ const modules = [
     title: 'Aether',
     subtitle: 'Dokumente, Assets & Wissen',
     description:
-      'Zentrales Dokumentenmanagement mit Ordnerstruktur, Explorer-Ansicht, XRechnung-Export und verknüpften Wissensobjekten.',
-    badge: 'Closed Alpha',
+      'Zentrales Dokumentenmanagement mit geschützter Ordnerhierarchie, Explorer-Ansicht, XRechnung-Belegarchiv und verknüpften Wissensobjekten.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/ecodrive/',
     icon: 'fa-leaf',
     color: 'emerald',
     title: 'Ecodrive',
-    subtitle: 'Flotten, Routen & CO₂',
+    subtitle: 'Flotten, TCO & CO₂',
     description:
-      'Intelligentes Flottenmanagement mit Fahrzeugverwaltung, Routenplanung, CO₂-Reporting und ESG-Kennzahlen.',
-    badge: 'Closed Alpha',
+      'Intelligentes Flottenmanagement mit Fahrzeugakte, Fahrtenbuch, bidirektionalem Odometer-Rechner, TCO-/Ersatzanalyse und ESG-Kennzahlen.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/treasury/',
     icon: 'fa-coins',
     color: 'yellow',
     title: 'Treasury',
-    subtitle: 'Finanzen & Liquiditätsplanung',
+    subtitle: 'Finanzen, Bankimport & DATEV',
     description:
-      'Liquiditätsübersicht, Kostenstellen, Budgetcontrolling, Cashflow-Analyse und DATEV-Export für Ihre Finanzabteilung.',
-    badge: 'In Entwicklung',
+      'Liquiditätsvorschau, Kostenstellen-Budgets, CAMT.053-/CSV-Bankimport mit Duplikatschutz, Mahnwesen und DATEV-Buchungsstapel-Export (EXTF 700).',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/properties/',
     icon: 'fa-building',
     color: 'orange',
     title: 'Properties',
-    subtitle: 'Schlanke WEG-Verwaltung',
+    subtitle: 'WEG-Verwaltung & Zählerkaskade',
     description:
-      'Objekte, Einheiten, Eigentuemerportal, Tickets sowie WEG-Abrechnung, Mahnwesen, Jahresabrechnung, Wirtschaftsplan und Ruecklagenkonto in einem Cloud-Modul.',
-    badge: 'In Entwicklung',
+      'Objekte, Einheiten, Haupt-/Unterzähler-Kaskade, Owner Portal, WEG-Abrechnung, druckbare Jahresabrechnung (PDF), Wirtschaftsplan und Rücklagen.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/relay/',
     icon: 'fa-tower-broadcast',
     color: 'cyan',
     title: 'Relay',
-    subtitle: 'Kommunikation & Benachrichtigungen',
+    subtitle: 'Tasks, Boards & Multi-Channel',
     description:
-      'Zentraler Kommunikations-Hub für E-Mail, Push, SMS und In-App-Notifications aus allen Suite-Modulen.',
-    badge: 'In Entwicklung',
+      'Aufgaben-, Subtask-, Zeiterfassungs- und Board-Management kombiniert mit gebrandetem SMTP-TLS-Versand, Push und In-App-Notifications.',
+    badge: 'Jetzt nutzbar',
   },
   {
     href: '/suite/conductor/',
@@ -130,8 +130,8 @@ const modules = [
     title: 'Conductor',
     subtitle: 'Workflows & Automatisierung',
     description:
-      'Visueller Workflow-Builder für Business-Automatisierung, Event-Trigger und prozessübergreifende Integrationen.',
-    badge: 'In Entwicklung',
+      'Visueller Workflow-Builder, Template-Management und Event-Trigger für prozessübergreifende Automatisierungen über alle Suite-Module.',
+    badge: 'Release Candidate',
   },
 ];
 
@@ -292,14 +292,20 @@ const complianceItems = [
 
     <div class="max-w-7xl mx-auto py-24 sm:py-32">
       <div class="text-center">
-        <div class="gsap-fadein mb-8">
+        <div class="gsap-fadein mb-8 flex flex-wrap justify-center gap-3">
           <span
-            class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-4 py-2 rounded-full text-sm font-bold shadow-sm"
+            class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold shadow-sm"
           >
             <i
               class="fa-solid fa-circle text-[6px] animate-pulse"
               aria-hidden="true"></i>
-            Early Access
+            v{suite.version} · Release Candidate · Jetzt live nutzbar
+          </span>
+          <span
+            class="inline-flex items-center gap-2 bg-meg-accent/10 border border-meg-accent/20 text-meg-accent px-4 py-2 rounded-full text-sm font-bold shadow-sm"
+          >
+            <i class="fa-solid fa-rocket text-xs" aria-hidden="true"></i>
+            Kurz vor v1.0 Stable
           </span>
         </div>
 
@@ -1772,11 +1778,10 @@ const complianceItems = [
           id="cta-heading"
           class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-4"
         >
-          Bereit für die Suite?
+          Sofort starten mit v{suite.version}
         </h2>
         <p class="text-xl text-meg-text-secondary mb-8 max-w-2xl mx-auto">
-          Registrieren Sie sich im Kundenportal und erhalten Sie frühen Zugang
-          zu allen Modulen der Waldheim Suite.
+          Die Waldheim Suite steht kurz vor dem v1.0 Stable Release und ist ab sofort produktiv nutzbar – starten Sie direkt in der Live-Demo oder im Kundenportal.
         </p>
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-4"

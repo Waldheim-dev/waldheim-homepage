@@ -207,20 +207,20 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 <div class="size-12 rounded-2xl bg-meg-accent/10 border border-meg-accent/20 flex items-center justify-center text-meg-accent">
                   <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
                 </div>
-                <span class="text-[10px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3 py-1 rounded-full">
-                  2 · SaaS Business-Plattform
+                <span class="text-[10px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                  2 · SaaS Suite v0.11.3 · Jetzt nutzbar
                 </span>
               </div>
               <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
                 Waldheim Suite – 9 Module, 1 Login
               </h3>
               <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-                Schluss mit dem Tool-Flickenteppich: Steuern Sie Kundenportal, CRM (Socialverse), ERP (Silvacore), Dokumentenmanagement (Aether), Fuhrpark (Ecodrive), Finanzen und Workflows aus einer mandantenisolierten App-Shell.
+                Kurz vor dem v1.0 Stable Release und <strong>ab sofort produktiv nutzbar</strong>: Steuern Sie Kundenportal, CRM (Socialverse), ERP (Silvacore), DMS (Aether), Fuhrpark (Ecodrive), Finanzen (Treasury), Immobilien (Properties) und Workflows aus einer mandantenisolierten App-Shell.
               </p>
               <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Zentrale Tenant-Defaults, SSO &amp; nahtloser App-Switch</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>E-Rechnungspflicht ready (XRechnung &amp; ZUGFeRD)</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>100% DSGVO-konform · Gehostet in Deutschland</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>XRechnung 3.0 &amp; ZUGFeRD PDF/A-3b, DATEV EXTF 700 &amp; CAMT.053</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Smart Masks, Server-Driven DataTables &amp; WEG-Zählerkaskade</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>100% DSGVO-konform (PostgreSQL RLS) · Live-Demo sofort startklar</span></li>
               </ul>
             </div>
             <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
@@ -236,14 +236,14 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 Suite entdecken
               </TrackedButton>
               <TrackedButton
-                href="/suite/preise/"
-                trackEvent="cta_homepage_suite_pricing"
+                href="https://suite.waldheim.dev"
+                trackEvent="cta_homepage_suite_live"
                 trackCategory="suite_launch"
-                trackLabel="Suite Pricing"
+                trackLabel="Suite Live Demo"
                 variant="secondary"
-                icon="fa-solid fa-arrow-right"
+                icon="fa-solid fa-arrow-up-right-from-square"
               >
-                Preise ansehen
+                Jetzt live nutzen
               </TrackedButton>
             </div>
           </article>
@@ -256,19 +256,19 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                   <i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i>
                 </div>
                 <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
-                  3 · Open Source · semrel v0.26.3
+                  3 · Open Source · semrel v0.28.2
                 </span>
               </div>
               <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
                 semrel &amp; Open-Source Ökosystem
               </h3>
               <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-                Produktionsreife Open-Source-Software als gelebter Beweis für Engineering-Exzellenz: allen voran <strong>semrel v0.26.3</strong> – die Go-native, zero-dependency Semantic-Release-Engine für Enterprise-CI/CD und Air-Gap-Umgebungen.
+                Produktionsreife Open-Source-Software als gelebter Beweis für Engineering-Exzellenz: allen voran <strong>semrel v0.28.2</strong> – die Go-native, zero-dependency Semantic-Release-Engine für Monorepos, Enterprise-CI/CD und Air-Gap-Umgebungen.
               </p>
               <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Statisches Go-Binary ohne Node.js-Abhängigkeiten</span></li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Cosign v3 Bundle, CycloneDX/SPDX SBOM &amp; SLSA</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>30+ Plugins, <code class="font-mono">.semrel.lock</code> &amp; Monorepo Workspace</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Workspace 2.0 (Shared/Ignore Paths, Paket-Changelogs) &amp; 30+ Plugins</span></li>
               </ul>
             </div>
             <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
@@ -281,7 +281,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 icon="fa-solid fa-code-branch"
                 iconPosition="left"
               >
-                semrel v0.26.3
+                semrel v0.28.2
               </TrackedButton>
               <TrackedButton
                 href="#opensource-stack"

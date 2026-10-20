@@ -1,7 +1,9 @@
 ---
 const date = new Date();
 import fs from 'node:fs';
+import { getProductInfo } from '../consts/productColors';
 
+const suite = getProductInfo('suite')!;
 let version = '0.0.0';
 try {
   version = JSON.parse(fs.readFileSync('./package.json').toString()).version;
@@ -96,10 +98,10 @@ try {
                 <div class="size-11 flex items-center justify-center rounded-xl bg-meg-accent/15 border border-meg-accent/30 text-meg-accent group-hover:scale-110 transition-transform">
                   <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
                 </div>
-                <span class="text-[9px] font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-2 py-1 rounded-full">SaaS Suite</span>
+                <span class="text-[9px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded-full">v{suite.version} · Live</span>
               </div>
               <p class="text-lg font-black text-meg-text-primary-dark tracking-tight mb-1">Waldheim Suite</p>
-              <p class="text-[11px] font-bold text-meg-accent mb-3">Business-Plattform. Alles integriert.</p>
+              <p class="text-[11px] font-bold text-meg-accent mb-3">Business-Plattform. Ab sofort nutzbar.</p>
             </div>
 
             <!-- Module-Grid -->
