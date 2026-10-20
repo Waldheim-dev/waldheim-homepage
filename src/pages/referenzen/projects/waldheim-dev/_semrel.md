@@ -3,7 +3,7 @@
 title: "semrel v0.28.2: Go-Native Semantic Release & Supply-Chain Automation"
 isTopProject: true
 description: "Entwicklung von semrel (v0.28.2): Ein zero-dependency, Go-natives Open-Source-System für vollautomatische Semantic Releases, Monorepo-Workspaces (Shared/Ignore Paths, paket-gescopte Changelogs), Air-Gap-Pipelines und Supply-Chain-Security (Cosign v3, SBOM, SLSA)."
-shortDescription: "Zero-dependency Go-Alternative zu semantic-release mit 30+ Plugins, .semrel.lock, Monorepo Workspace 2.0, Air-Gap-Modus und Cosign v3 Supply-Chain-Security."
+shortDescription: "Zero-dependency Go-Alternative zu semantic-release mit 46 offiziellen Plugins, .semrel.lock, Monorepo Workspace 2.0, Air-Gap-Modus und Cosign v3 Supply-Chain-Security."
 pubDate: "2026-10-20"
 category: "devsecops"
 heroImage: "/blogs/compliance-monitoring-in-der-cicd-pipeline.webp"
@@ -17,8 +17,8 @@ assets:
 results:
   - value: "0 Deps"
     label: "Statisches Go-Binary"
-  - value: "30+"
-    label: "Standalone Plugins"
+  - value: "46"
+    label: "Offizielle Plugins"
   - value: "v0.28.2"
     label: "Aktuelles Release"
 overview:
@@ -118,7 +118,7 @@ keywords:
 
 **semrel** ([semrel.io](https://www.semrel.io/) · [GitHub: SemRels/semrel](https://github.com/SemRels/semrel)) ist unser Flaggschiff-Open-Source-Projekt für vollautomatische semantische Versionierung und Paket-Veröffentlichung. Entwickelt in Go von **Markus Waldheim** und **Thomas Boerger**, ersetzt `semrel` schwere Node.js-basierte Release-Ketten durch eine einzige statische Binärdatei.
 
-Mit dem aktuellen Release **v0.28.2** bietet `semrel` eine ausgereifte 8-Phasen-Pipeline, über 30 eigenständige Plugins sowie Enterprise-Features wie Monorepo Workspace 2.0, Air-Gap-Caching, `.semrel.lock`-Prüfsummen und Cosign-v3-Signierung.
+Mit dem aktuellen Release **v0.28.2** bietet `semrel` eine ausgereifte 8-Phasen-Pipeline, **46 offizielle Standalone-Plugins** sowie Enterprise-Features wie Monorepo Workspace 2.0, Air-Gap-Caching, `.semrel.lock`-Prüfsummen und Cosign-v3-Signierung.
 
 ## Warum wir semrel gebaut haben
 
@@ -129,16 +129,16 @@ In zahlreichen DevSecOps-Beratungsprojekten zeigte sich immer wieder dasselbe Mu
 
 ## Architektur & Highlights (Stand v0.28.2)
 
-### 1. 8-stufige Pluggable Pipeline
+### 1. 8-stufige Pluggable Pipeline mit 46 offiziellen Plugins
 Jeder Schritt im Release-Lebenszyklus ist als isoliertes Subprocess-Plugin ausführbar:
-- **Condition:** Validiert die CI-Umgebung (`github-actions`, `gitlab-ci`, `gitea-actions`, `generic`).
-- **Analyzer:** Parst Conventional Commits inkl. Scope-Regeln (`@semrel/conventional`).
-- **Generator:** Erzeugt strukturierte Release Notes (`@semrel/changelog-md`, `@semrel/changelog-html`).
-- **Updater:** Aktualisiert Versionen in `package.json`, `Cargo.toml`, `Chart.yaml`, `pyproject.toml`, Gradle, Maven, NuGet, Go-Binaries, Homebrew oder Terraform.
-- **Packager:** Baut `.deb`- und `.rpm`-Pakete via `@semrel/nfpm`.
-- **Publisher:** Veröffentlicht Artefakte in OCI-Registries oder auf generischen HTTP-Targets.
-- **Provider:** Erstellt Git-Tags und Releases auf GitHub, GitLab, Gitea/Forgejo oder Bitbucket.
-- **Hook:** Benachrichtigt Teams über Slack, Microsoft Teams, Matrix, E-Mail oder schließt automatisch verknüpfte Jira-Tickets.
+- **Condition (6 Plugins):** Validiert die CI-Umgebung (`github-actions` inkl. GHES-Support, `gitlab-ci`, `gitea-actions`, `bitbucket-pipelines`, `circleci`, `generic`).
+- **Analyzer (2 Plugins):** Parst Conventional Commits inkl. Scope-Regeln (`@semrel/conventional`, `@semrel/default`).
+- **Generator (3 Plugins):** Erzeugt strukturierte Release Notes (`@semrel/changelog-md`, `@semrel/changelog-html`, `@semrel/release-notes`).
+- **Updater (15 Plugins):** Aktualisiert Versionen in `npm`, `docker`, `helm`, `cargo`, `python`, `gradle`, `maven`, `nuget`, `go`, `homebrew`, `terraform` sowie neu für **PHP (`composer`)**, **Dart/Flutter (`pubspec`)**, **Zig (`zig`)** und beliebige Dateien via Regex/Literal (**`replace`**).
+- **Packager (1 Plugin):** Baut `.deb`-, `.rpm`- und `.apk`-Pakete via `@semrel/nfpm`.
+- **Publisher (6 Plugins):** Veröffentlicht Artefakte in OCI-Registries (`oci`), auf generischen HTTP-Targets (`generic-http`), lokale Container-Images (`docker`), Rust-Crates auf `crates.io` (`crates`), Python-Wheels auf PyPI (`pypi`) sowie Node-Pakete via `npm`/`pnpm`/`yarn` inkl. **tokenlosem OIDC Trusted Publishing** (`npm`).
+- **Provider (5 Plugins):** Erstellt Git-Tags und Releases auf GitHub (inkl. GitHub Enterprise Server / GHES), GitLab, Gitea/Forgejo, Bitbucket oder lokalem Git.
+- **Hook (8 Plugins):** Benachrichtigt Teams über Slack, Microsoft Teams, **Discord**, Matrix, E-Mail, schließt Jira-Tickets, führt Git-Operationen aus oder startet phasenbewusste Shell-Kommandos (**`exec`**).
 
 ### 2. Reproduzierbarkeit mit `.semrel.lock` & `semrel doctor`
 Plugins werden über `semrel plugin install @semrel/<name>` bezogen und mit ihrer exakten Version sowie SHA256-Prüfsumme in `.semrel.lock` fixiert. In Air-Gap-Pipelines stellt `semrel plugin restore` sicher, dass nur kryptografisch verifizierte Binaries aus dem lokalen Cache ausgeführt werden. Mit `semrel doctor` prüft das CLI vorab Konfiguration, Tokens, Git-Status und Ökosystem-Dateien.
