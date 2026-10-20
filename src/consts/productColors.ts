@@ -18,7 +18,7 @@ export interface ProductColors {
 export interface ProductInfo {
   name: string;
   version: string;
-  status?: 'stable' | 'beta' | 'alpha' | 'closed-alpha';
+  status?: 'stable' | 'rc' | 'beta' | 'alpha' | 'closed-alpha';
   releaseDate?: string;
   colors: ProductColors;
 }
@@ -44,9 +44,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   socialverse: {
     name: 'Socialverse',
-    version: '0.9.0',
-    status: 'closed-alpha',
-    releaseDate: '2026-Q1',
+    version: '0.11.3',
+    status: 'rc',
+    releaseDate: '2026-10-20',
     colors: {
       name: 'Socialverse',
       primary: 'purple-500',
@@ -61,9 +61,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   silvacore: {
     name: 'Silvacore',
-    version: '0.1.0',
-    status: 'closed-alpha',
-    releaseDate: '2025-10-24',
+    version: '0.11.3',
+    status: 'rc',
+    releaseDate: '2026-10-20',
     colors: {
       name: 'Silvacore',
       primary: 'green-400',
@@ -163,9 +163,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   suite: {
     name: 'Waldheim Suite',
-    version: '0.1.0',
-    status: 'alpha',
-    releaseDate: '2026-Q3',
+    version: '0.11.3',
+    status: 'rc',
+    releaseDate: '2026-10-20',
     colors: {
       name: 'Waldheim Suite',
       primary: 'meg-accent',
@@ -214,9 +214,9 @@ export const PRODUCTS: Record<string, ProductInfo> = {
   },
   semrel: {
     name: 'semrel',
-    version: '0.26.3',
+    version: '0.28.2',
     status: 'beta',
-    releaseDate: '2026-09-21',
+    releaseDate: '2026-10-20',
     colors: {
       name: 'semrel',
       primary: 'blue-400',
