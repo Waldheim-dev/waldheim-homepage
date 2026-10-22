@@ -1,3 +1,13 @@
+# [26.19.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.18.1...26.19.0) (2026-10-22)
+
+
+### Features
+
+* **deploy:** add local SFTP deploy script and optimize CI mirror speed ([077bcc0](https://github.com/Waldheim-dev/waldheim-homepage/commit/077bcc010c5d99c99e9e3ec40d3714baea90c6b3))
+* **deploy:** store SFTP credentials in OS keychain and remove hardcoded script API key ([301f5e9](https://github.com/Waldheim-dev/waldheim-homepage/commit/301f5e9f69404bd27c4d8d9ee20dfe97db1c9e2e))
+* **semrel:** showcase all 46 official plugins and recent plugin enhancements ([730ae45](https://github.com/Waldheim-dev/waldheim-homepage/commit/730ae45aa3c6824218d9a50bd5f9b87b4e5dc347))
+* update semrel to v0.28.2 and Waldheim Suite to v0.11.3 live RC ([9813d8b](https://github.com/Waldheim-dev/waldheim-homepage/commit/9813d8bb1bd713217096f637228ac60705b81fa3))
+
 ## [26.18.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.18.0...26.18.1) (2026-10-15)
 
 
