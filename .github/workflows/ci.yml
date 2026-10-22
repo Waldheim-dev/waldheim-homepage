@@ -172,7 +172,8 @@ jobs:
             set net:reconnect-interval-base 5
             open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST
             rm -rf ${REMOTE_DIR}_astro
-            mirror --reverse --delete --verbose ./dist/ $REMOTE_DIR
+            mirror --reverse --delete --ignore-time --parallel=8 --verbose ./dist/ $REMOTE_DIR
+            mirror --reverse --parallel=8 --include-glob='*.html' --include-glob='*.html.gz' --include-glob='*.xml' --include-glob='*.xml.gz' --include-glob='*.txt' --include-glob='*.txt.gz' --include-glob='*.json' --include-glob='*.webmanifest' --include-glob='.htaccess' --include-glob='_redirects' ./dist/ $REMOTE_DIR
             mkdir -p ${REMOTE_DIR}products/ausgabeschein-generator/
             put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/workbench.png
             put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/print-preview.png
