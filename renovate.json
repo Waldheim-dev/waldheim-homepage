@@ -11,6 +11,7 @@
   ],
   "enabledManagers": ["npm"],
   "ignorePaths": [".gitlab-ci.yml", ".devcontainer/**"],
+  "minimumReleaseAge": "1 day",
   "rebaseWhen": "behind-base-branch",
   "automerge": true,
   "automergeType": "branch",
