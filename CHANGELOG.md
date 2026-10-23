@@ -1,3 +1,10 @@
+## [26.19.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.19.0...26.19.1) (2026-10-23)
+
+
+### Bug Fixes
+
+* **ci:** pass RENOVATE_REPOSITORIES to Renovate action and enable direct automerge ([7ae4d13](https://github.com/Waldheim-dev/waldheim-homepage/commit/7ae4d134568df3bd7e2c949708c1477535931029))
+
 # [26.19.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.18.1...26.19.0) (2026-10-22)
 
 
