@@ -12,7 +12,8 @@
   "rebaseWhen": "behind-base-branch",
   "automerge": true,
   "automergeType": "pr",
-  "platformAutomerge": true,
+  "platformAutomerge": false,
+  "ignoreTests": true,
   "labels": ["dependencies", "renovate"],
   "rangeStrategy": "bump",
   "vulnerabilityAlerts": {
