@@ -22,6 +22,9 @@
   "branchConcurrentLimit": 0,
   "labels": ["dependencies", "renovate"],
   "rangeStrategy": "bump",
+  "vulnerabilityAlerts": {
+    "enabled": false
+  },
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
@@ -39,9 +42,10 @@
       "ignoreTests": true
     },
     {
-      "description": "Require manual review for major updates",
+      "description": "List major updates in Dependency Dashboard for manual approval",
       "matchUpdateTypes": ["major"],
-      "automerge": false
+      "automerge": false,
+      "dependencyDashboardApproval": true
     },
     {
       "description": "Keep TypeScript on 6.x until typescript-eslint and @astrojs/check support TS 7+",
@@ -57,6 +61,11 @@
       "description": "Keep js-yaml override on 4.x for cosmiconfig compatibility",
       "matchPackageNames": ["js-yaml"],
       "allowedVersions": "<5.0.0"
+    },
+    {
+      "description": "Keep uuid override on 11.x for @lhci/cli compatibility",
+      "matchPackageNames": ["uuid"],
+      "allowedVersions": "<12.0.0"
     }
   ]
 }
