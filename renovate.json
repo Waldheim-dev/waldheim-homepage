@@ -9,28 +9,33 @@
     ":automergeDigest",
     ":rebaseStalePrs"
   ],
+  "enabledManagers": ["npm"],
+  "ignorePaths": [".gitlab-ci.yml", ".devcontainer/**"],
   "rebaseWhen": "behind-base-branch",
   "automerge": true,
-  "automergeType": "pr",
+  "automergeType": "branch",
   "platformAutomerge": false,
   "ignoreTests": true,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "branchConcurrentLimit": 0,
   "labels": ["dependencies", "renovate"],
   "rangeStrategy": "bump",
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "labels": ["security"],
-    "automerge": true
-  },
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
+    "automergeType": "branch",
     "schedule": ["before 5am on monday"]
   },
   "packageRules": [
     {
-      "description": "Automerge all patch, minor, pin, and digest updates across npm and GitHub Actions",
+      "description": "Group and automerge all minor, patch, pin, and digest npm updates directly to main",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true,
+      "automergeType": "branch",
+      "ignoreTests": true
     },
     {
       "description": "Require manual review for major updates",
@@ -38,16 +43,19 @@
       "automerge": false
     },
     {
-      "description": "Group GitHub Actions updates",
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "groupName": "GitHub Actions",
-      "automerge": true
-    },
-    {
       "description": "Keep TypeScript on 6.x until typescript-eslint and @astrojs/check support TS 7+",
       "matchPackageNames": ["typescript"],
       "allowedVersions": "<7.0.0"
+    },
+    {
+      "description": "Keep pnpm overrides compatible with transitive consumers",
+      "matchPackageNames": ["fast-uri"],
+      "allowedVersions": "<4.0.0"
+    },
+    {
+      "description": "Keep js-yaml override on 4.x for cosmiconfig compatibility",
+      "matchPackageNames": ["js-yaml"],
+      "allowedVersions": "<5.0.0"
     }
   ]
 }
