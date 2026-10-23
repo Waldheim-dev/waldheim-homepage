@@ -1,3 +1,12 @@
+## [26.19.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.19.1...26.19.2) (2026-10-23)
+
+
+### Bug Fixes
+
+* **ci:** use branch automerge in Renovate for org PR permission policy ([a23db46](https://github.com/Waldheim-dev/waldheim-homepage/commit/a23db4683eb3b5dfa71d8f2256e46ba817764bb4))
+* **deps:** align pnpm minimumReleaseAge policy with Renovate updates ([2cb8b11](https://github.com/Waldheim-dev/waldheim-homepage/commit/2cb8b112df3d836cdee2fd700bb57b40367c6bc3))
+* **deps:** update all non-major dependencies ([6a1bbbc](https://github.com/Waldheim-dev/waldheim-homepage/commit/6a1bbbc72c0cd4fa642f6fe377f4206fd3d5ebc7))
+
 ## [26.19.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.19.0...26.19.1) (2026-10-23)
 
 
