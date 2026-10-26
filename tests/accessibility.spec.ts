@@ -397,6 +397,7 @@ test.describe('Barrierefreiheit (A11y) Tests', () => {
     const bodyHtml = await page.content();
     expect(bodyHtml).not.toContain('NaN Jahre');
     expect(bodyHtml).not.toContain('NaN Jahr');
+    expect(bodyHtml).not.toContain('**KI-gestützte');
     await expect(page.getByText('Kundenumgebung im Veterinär-Bereich').first()).toBeAttached();
   });
 });
