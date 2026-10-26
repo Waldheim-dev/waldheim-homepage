@@ -8,7 +8,7 @@ auditConfig:
   ignoreGhsas:
     - GHSA-vfj7-8cjw-p6xm
 overrides:
-  '@puppeteer/browsers': 3.2.5
+  '@puppeteer/browsers': 3.2.6
   basic-ftp: 6.2.3
   deepmerge-ts: 8.0.2
   fast-uri: 3.1.9

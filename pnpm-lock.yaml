@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@puppeteer/browsers': 3.2.5
+  '@puppeteer/browsers': 3.2.6
   basic-ftp: 6.2.3
   deepmerge-ts: 8.0.2
   fast-uri: 3.1.9
@@ -36,8 +36,8 @@ importers:
         specifier: 7.3.1
         version: 7.3.1
       '@google/genai':
-        specifier: 2.30.0
-        version: 2.30.0(supports-color@7.2.0)
+        specifier: 2.31.0
+        version: 2.31.0(supports-color@7.2.0)
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.3.4(@types/node@26.6.5)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))
@@ -66,8 +66,8 @@ importers:
         specifier: ^3.15.0
         version: 3.15.0
       openai:
-        specifier: 7.42.0
-        version: 7.42.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.11.2)(ws@8.22.0)(zod@4.6.7)
+        specifier: 7.43.0
+        version: 7.43.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.11.2)(ws@8.22.0)(zod@4.6.7)
       tailwindcss:
         specifier: 4.3.3
         version: 4.3.3
@@ -118,7 +118,7 @@ importers:
         specifier: 10.4.1
         version: 10.4.1
       dotenv:
-        specifier: ^18.0.8
+        specifier: ^18.0.9
         version: 18.0.9
       eslint:
         specifier: 10.13.0
@@ -676,8 +676,8 @@ packages:
       '@modelcontextprotocol/sdk':
         optional: true
 
-  '@google/genai@2.30.0':
-    resolution: {integrity: sha512-Gkv1ix8iZey/V3WF4lHaRS8C71P533jenDT/lA+fdPTCfXYfmCVHvo+0H5jTgzonqsmROQG7QpzLJkpoP/x7bg==}
+  '@google/genai@2.31.0':
+    resolution: {integrity: sha512-u1fw0qEiuWwNcjZixJFRfQF0awQnHb/rBBQUeiYGF+nmTXQCvcgpR2UMhKU9KNdnZdYhahY5jwS6nJ2V2tGtDA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -1091,8 +1091,8 @@ packages:
   '@protobufjs/utf8@1.1.2':
     resolution: {integrity: sha512-b1UQwcEZ4yCnMCD8DAL1VlbvBJE9/IX4FTIp7BG1xYpf29SLazLSrqUkj4w7Y5y7cCVP6E5tcqqcI0xemPkHug==}
 
-  '@puppeteer/browsers@3.2.5':
-    resolution: {integrity: sha512-UoCo3Pynbm37aLEEoydSiG+t24ui7sLD40+07CKxzxNy4PpSowJMkvlLIiV67XjP1lMVynhQVnuwlTABqBH8LQ==}
+  '@puppeteer/browsers@3.2.6':
+    resolution: {integrity: sha512-MJP29gVoHznmqmwhH1tlZqzfeQ3aylTpSSa6WKZXtkwYUH02i9imBmWGTyZrbnAou5paX78SE4jMAUqnEPf8ug==}
     engines: {node: '>=22.12.0'}
     hasBin: true
     peerDependencies:
@@ -3361,8 +3361,8 @@ packages:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
 
-  legacy-javascript@0.0.3:
-    resolution: {integrity: sha512-1r6MT4dVaJyXt4G07Cm2cQ0AUaLJdefiEp4SmIAylA++gnEQ82YvmzE58RkM5EP0fk5hROLCslUPGnwIYdZQVA==}
+  legacy-javascript@0.0.4:
+    resolution: {integrity: sha512-UTmeKBVxnfJcpmpOvzzNnLsQT99BXHpPlc/ZKddIRmWmrR0fw6335I3lq4+sJoP60UTbBNaYsGYVPc65YB1x3A==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -4023,8 +4023,8 @@ packages:
       zod:
         optional: true
 
-  openai@7.42.0:
-    resolution: {integrity: sha512-RziM2bxp1k24mTLtunije+OOCGRC+qtK0YNYPWkrTdKJLJ65WYW+rPYxlLbnBzU4WwINFCFa0OjCgbsX+fif/w==}
+  openai@7.43.0:
+    resolution: {integrity: sha512-fBjKaDFG8AVfkGYoIo/E+xNRlNk7nx2nQ9GoQtXfePzPjg4QcT6nejkhXayJnEwSpFGfthOrAPI2KXj5yAqg9A==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
@@ -6025,7 +6025,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/genai@2.30.0(supports-color@7.2.0)':
+  '@google/genai@2.31.0(supports-color@7.2.0)':
     dependencies:
       google-auth-library: 10.9.1(supports-color@7.2.0)
       p-retry: 4.6.2
@@ -6381,12 +6381,12 @@ snapshots:
 
   '@paulirish/trace_engine@0.0.53':
     dependencies:
-      legacy-javascript: 0.0.3
+      legacy-javascript: 0.0.4
       third-party-web: 0.30.0
 
   '@paulirish/trace_engine@0.0.65':
     dependencies:
-      legacy-javascript: 0.0.3
+      legacy-javascript: 0.0.4
       third-party-web: 0.30.0
 
   '@pkgr/core@0.3.6': {}
@@ -6433,7 +6433,7 @@ snapshots:
 
   '@protobufjs/utf8@1.1.2': {}
 
-  '@puppeteer/browsers@3.2.5(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)':
+  '@puppeteer/browsers@3.2.6(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)':
     dependencies:
       modern-tar: 0.8.6
       yargs: 18.2.0
@@ -9100,7 +9100,7 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
-  legacy-javascript@0.0.3: {}
+  legacy-javascript@0.0.4: {}
 
   levn@0.4.1:
     dependencies:
@@ -9675,7 +9675,7 @@ snapshots:
       ws: 8.22.0
       zod: 4.6.7
 
-  openai@7.42.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.11.2)(ws@8.22.0)(zod@4.6.7):
+  openai@7.43.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.11.2)(ws@8.22.0)(zod@4.6.7):
     optionalDependencies:
       google-auth-library: 10.9.1(supports-color@7.2.0)
       undici: 8.11.2
@@ -9948,7 +9948,7 @@ snapshots:
 
   puppeteer-core@24.43.1(proxy-agent@6.5.0(supports-color@7.2.0))(supports-color@7.2.0)(yauzl@2.10.0):
     dependencies:
-      '@puppeteer/browsers': 3.2.5(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)
+      '@puppeteer/browsers': 3.2.6(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1608973)
       debug: 4.4.3(supports-color@7.2.0)
       devtools-protocol: 0.0.1608973
@@ -9964,7 +9964,7 @@ snapshots:
 
   puppeteer-core@25.13.0(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0):
     dependencies:
-      '@puppeteer/browsers': 3.2.5(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)
+      '@puppeteer/browsers': 3.2.6(proxy-agent@6.5.0(supports-color@7.2.0))(yauzl@2.10.0)
       chromium-bidi: 157.0.8090-0(devtools-protocol@0.0.1696802)
       devtools-protocol: 0.0.1696802
       typed-query-selector: 2.12.3
