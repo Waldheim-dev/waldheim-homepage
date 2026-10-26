@@ -1,3 +1,15 @@
+# [26.21.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.20.2...26.21.0) (2026-10-26)
+
+
+### Bug Fixes
+
+* **karriere:** prevent duplicate click listener registration on project collapses ([7345a51](https://github.com/Waldheim-dev/waldheim-homepage/commit/7345a51b73033d84ad23d53a469bc65405d2b551))
+
+
+### Features
+
+* **services:** add website design/dev, 10x AI-coaching (>1.000%), AI reviews/skills, FinOps and AIOps ([3de5b5d](https://github.com/Waldheim-dev/waldheim-homepage/commit/3de5b5dfcf6a2bf94217370d3818c6414ef2cf85))
+
 ## [26.20.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.20.1...26.20.2) (2026-10-26)
 
 
