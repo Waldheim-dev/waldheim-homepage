@@ -1,0 +1,7 @@
+{
+  "name": "Kundenumgebung im Veterinär-Bereich",
+  "position": "DevSecOps- & Cloud-Infrastructure-Spezialist",
+  "description": "Aufbau, Automatisierung und Betrieb einer modernen Cloud-Infrastruktur bei IONOS für eine Kundenumgebung im Veterinär-Bereich. Umsetzung von Infrastructure as Code (IaC) mit Terraform, GitOps-basiertem Deployment mit FluxCD auf Linux-Systemen sowie KI-gestützter Infrastruktur- und Pipeline-Entwicklung mit GitHub Copilot.",
+  "techstack": ["terraform", "fluxcd", "githubcopilot", "linux", "ionos", "kubernetes", "git", "github"],
+  "from": "2026-10-01"
+}

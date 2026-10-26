@@ -383,4 +383,20 @@ test.describe('Barrierefreiheit (A11y) Tests', () => {
     
     expect(accessibilityScanResults.violations).toEqual([]);
   });
+
+  test('Über mich (Skills & Karriere)', async ({ page }) => {
+    await page.goto('/ueber-mich/');
+    await page.waitForLoadState('networkidle');
+
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+
+    expect(accessibilityScanResults.violations).toEqual([]);
+
+    const bodyHtml = await page.content();
+    expect(bodyHtml).not.toContain('NaN Jahre');
+    expect(bodyHtml).not.toContain('NaN Jahr');
+    await expect(page.getByText('Kundenumgebung im Veterinär-Bereich').first()).toBeAttached();
+  });
 });

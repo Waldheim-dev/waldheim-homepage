@@ -4,26 +4,34 @@ name: Renovate
 on:
   schedule:
     - cron: "0 5 * * 1-5"
+  issues:
+    types: [edited]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: renovate
+  group: homepage-refs/heads/main
   cancel-in-progress: false
 
 jobs:
   renovate:
     name: Renovate
+    if: github.event_name != 'issues' || github.event.issue.title == 'Dependency Dashboard'
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
       issues: write
+      actions: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Record current main SHA
+        id: before
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Run Renovate
         uses: renovatebot/github-action@v46.3.8
@@ -34,3 +42,17 @@ jobs:
           RENOVATE_ONBOARDING: 'false'
           RENOVATE_REQUIRE_CONFIG: 'optional'
           RENOVATE_GIT_AUTHOR: 'Renovate Bot <29139614+renovate[bot]@users.noreply.github.com>'
+
+      - name: Trigger CI if Renovate automerged commits to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BEFORE_SHA: ${{ steps.before.outputs.sha }}
+        run: |
+          git fetch origin main
+          AFTER_SHA=$(git rev-parse origin/main)
+          if [ "$BEFORE_SHA" != "$AFTER_SHA" ]; then
+            echo "main advanced from $BEFORE_SHA to $AFTER_SHA — dispatching CI · Release · Deploy"
+            gh workflow run ci.yml --ref main
+          else
+            echo "main unchanged ($AFTER_SHA)"
+          fi

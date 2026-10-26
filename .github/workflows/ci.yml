@@ -5,6 +5,7 @@ on:
     branches: [main, next]
   pull_request:
     branches: [main, next]
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -54,7 +55,7 @@ jobs:
       # Optionally upload the artifact (controlled by repository variable)
       # Disable if you hit artifact storage quota: set UPLOAD_ARTIFACTS=false in repo settings
       - name: Upload dist artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false'
         continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
@@ -65,7 +66,7 @@ jobs:
           overwrite: true
 
       - name: Artifact upload fallback notice
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false' && failure()
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && vars.UPLOAD_ARTIFACTS != 'false' && failure()
         run: |
           echo "Artifact upload failed (likely storage quota reached)."
           echo "Continuing pipeline so release/deploy can still run."
@@ -76,7 +77,7 @@ jobs:
   # ──────────────────────────────────────────
   release:
     name: Semantic Release
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: qa
     runs-on: ubuntu-latest
     permissions:
@@ -127,7 +128,7 @@ jobs:
   # ──────────────────────────────────────────
   deploy:
     name: Deploy → IONOS (FTP)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: [qa, release]
     runs-on: ubuntu-latest
     environment: FTP_PASSWORD
@@ -174,7 +175,7 @@ jobs:
             rm -rf ${REMOTE_DIR}_astro
             mirror --reverse --delete --ignore-time --parallel=8 --verbose ./dist/ $REMOTE_DIR
             mirror --reverse --parallel=8 --include-glob='*.html' --include-glob='*.html.gz' --include-glob='*.xml' --include-glob='*.xml.gz' --include-glob='*.txt' --include-glob='*.txt.gz' --include-glob='*.json' --include-glob='*.webmanifest' --include-glob='.htaccess' --include-glob='_redirects' ./dist/ $REMOTE_DIR
-            mkdir -p ${REMOTE_DIR}products/ausgabeschein-generator/
+            mkdir -pf ${REMOTE_DIR}products/ausgabeschein-generator/
             put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/workbench.png
             put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/print-preview.png
             put -O ${REMOTE_DIR}products/ausgabeschein-generator/ ./dist/products/ausgabeschein-generator/mobile.png

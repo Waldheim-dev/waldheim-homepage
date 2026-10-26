@@ -7,6 +7,6 @@
   "sinceLastRollup": "2012-01-01",
   "knowledgebase": "expert",
   "isTopSkill": true,
-  "isTechStack": false,
+  "isTechStack": true,
   "layer": ["infrastructure"]
 }

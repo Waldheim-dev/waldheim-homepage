@@ -2,8 +2,8 @@
     "from": "2022-07-01",
     "company": "InterFace AG",
     "position": "Senior IT-Consultant",
-    "description": "Entwicklung von unterschiedlichen Geschäftsprozess-Entwicklungen im Bereich Forschung, Autoindustrie, Staatswesen und Consultant-Bereich. Teammitglied des hausinternen DevSecOps-Teams und des UI/UX-Teams. Zertifizierung als Professional Scrum Master I  & II und Professional Scrum Product Owner I.",
+    "description": "Entwicklung von unterschiedlichen Geschäftsprozess-Entwicklungen und Cloud-Infrastrukturen im Bereich Forschung, Veterinärwesen, Autoindustrie, Staatswesen und Consultant-Bereich. Teammitglied des hausinternen DevSecOps-Teams und des UI/UX-Teams. Zertifizierung als Professional Scrum Master I & II und Professional Scrum Product Owner I.",
     "isCurrent": true,
     "location": "Unterhaching",
-    "projects": ["akdb_pers", "ba_eamz", "devservices", "helmholtz"]
+    "projects": ["vet_ionos", "akdb_pers", "ba_eamz", "devservices", "helmholtz"]
 }

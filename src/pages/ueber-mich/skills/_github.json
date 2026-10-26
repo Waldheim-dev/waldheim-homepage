@@ -4,10 +4,10 @@
   "productive": true,
   "isActive": true,
   "fixedExperience": 2,
-  "sinceLastRollup": "",
+  "sinceLastRollup": "2025-10-01",
   "knowledgebase": "advanced",
   "isTopSkill": true,
-  "isTechStack": false,
+  "isTechStack": true,
   "invertImage": true,
   "layer": ["infrastructure", "general"]
 }
