@@ -35,10 +35,10 @@ export const SERVICES: Service[] = [
   },
   {
     key: 'smarthome',
-    title: 'Smart Home & KNX',
+    title: 'Smart Home, KNX & Local AI',
     href: '/services/smarthome/',
     icon: 'fa-solid fa-house',
-    description: 'KNX-Gebäudeautomation, intelligente Aktoren (Rollo, Heizung, Licht), AI-Kameras und vollständige Haussteuerung – Profitechnik für anspruchsvolle Gebäude.',
+    description: 'KNX-Gebäudeautomation, lokale KI-Optimierung (ohne Cloud), Energiekosten- & Effizienz-Management, adaptive Alltags-Routinen und AI-Kamerasicherheit.',
     color: 'orange'
   }
 ];
