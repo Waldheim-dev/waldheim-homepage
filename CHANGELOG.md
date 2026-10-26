@@ -1,3 +1,10 @@
+# [26.20.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.19.2...26.20.0) (2026-10-26)
+
+
+### Features
+
+* **ueber-mich:** add InterFace AG veterinary IONOS project and fix GitHub skill NaN ([6ea7ab7](https://github.com/Waldheim-dev/waldheim-homepage/commit/6ea7ab76a47c6182f4f59d00f3e96c853516cffe))
+
 ## [26.19.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.19.1...26.19.2) (2026-10-23)
 
 
