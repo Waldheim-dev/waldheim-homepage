@@ -33,7 +33,6 @@
     "astro": "7.4.2",
     "astro-compress": "2.4.3",
     "astro-compressor": "2.0.1",
-    "astro-robots-txt": "^1.0.0",
     "astro-seo-schema": "7.0.1",
     "gsap": "^3.15.0",
     "openai": "7.43.0",

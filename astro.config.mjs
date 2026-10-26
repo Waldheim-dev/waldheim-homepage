@@ -13,8 +13,6 @@ import compress from 'astro-compress';
 
 import partytown from '@astrojs/partytown';
 
-import robotsTxt from 'astro-robots-txt';
-
 import 'dotenv/config';
 
 // https://astro.build/config
@@ -96,17 +94,6 @@ export default defineConfig({
       config: {
         forward: ['dataLayer.push'],
       },
-    }),
-    robotsTxt({
-      host: 'www.waldheim.dev',
-      sitemap: 'https://www.waldheim.dev/sitemap-index.xml',
-      policy: [
-        {
-          userAgent: '*',
-          allow: '/',
-          disallow: ['/danke/', '/test-*', '/*?*utm_source=', '/*?*ref='],
-        },
-      ],
     }),
   ],
   build: {

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /danke/
+Disallow: /test-*
+Disallow: /*?*utm_source=
+Disallow: /*?*ref=
+Allow: /
+Sitemap: https://www.waldheim.dev/sitemap-index.xml
+Host: www.waldheim.dev

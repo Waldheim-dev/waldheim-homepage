@@ -15,6 +15,7 @@ overrides:
   svgo: 4.1.0
   tmp: 0.2.7
   uuid: 11.1.1
+  zod: 4.6.7
 
 importers:
 
@@ -56,9 +57,6 @@ importers:
       astro-compressor:
         specifier: 2.0.1
         version: 2.0.1
-      astro-robots-txt:
-        specifier: ^1.0.0
-        version: 1.0.0
       astro-seo-schema:
         specifier: 7.0.1
         version: 7.0.1(astro@7.4.2(@types/node@26.6.5)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))(schema-dts@1.1.5)
@@ -178,7 +176,7 @@ packages:
     resolution: {integrity: sha512-LAmu761tSN9r66ixvmciswUj/ZC+1Q4iAfpedTfSVLeswRwnY3n2Nb6Tsk+cLPP28aLOPWeMgIuTuCcMC6W/iw==}
     hasBin: true
     peerDependencies:
-      zod: ^3.25.0 || ^4.0.0
+      zod: 4.6.7
     peerDependenciesMeta:
       zod:
         optional: true
@@ -1674,9 +1672,6 @@ packages:
     resolution: {integrity: sha512-WavQUarfgwSbpCq4xsdcIBdX5KArfI2d6DD8EIloJIMthnB1508iNpx4C77EhUyMd03LpEt8HAPzwF/cG0V39g==}
     engines: {node: ^22.22.3 || ^24.16.0 || >=26.3.0}
 
-  astro-robots-txt@1.0.0:
-    resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
-
   astro-seo-schema@7.0.1:
     resolution: {integrity: sha512-JkPW+0ww5JGfpN67rodL4OrT2X3hDurNFcBIGRP9CnQIDfa/PD+jPBB+ZQPH6q+x4MZNGdFVeZ3BRXbykxaVIQ==}
     peerDependencies:
@@ -2533,10 +2528,6 @@ packages:
 
   file-entry-cache@11.1.5:
     resolution: {integrity: sha512-+PFTHITI08JIGhnNpGNI8T8inUpgZfk3GNEqfT9R2zZV2iFXg3CvqzSl/uEhs7TSGujYRELEANyDvS8Fj7+S7Q==}
-
-  filename-reserved-regex@3.0.0:
-    resolution: {integrity: sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -3821,7 +3812,7 @@ packages:
       '@smithy/hash-node': '>=4.3.0 <5'
       '@smithy/signature-v4': '>=5.4.0 <6'
       ws: ^8.18.0
-      zod: ^3.25 || ^4.0
+      zod: 4.6.7
     peerDependenciesMeta:
       '@aws-sdk/credential-provider-node':
         optional: true
@@ -3844,7 +3835,7 @@ packages:
       google-auth-library: '>=9.15.1 <11'
       undici: '>=5 <9'
       ws: ^8.21.0
-      zod: ^3.25 || ^4.0
+      zod: 4.6.7
     peerDependenciesMeta:
       '@aws-sdk/credential-provider-node':
         optional: true
@@ -4972,10 +4963,6 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  valid-filename@4.0.0:
-    resolution: {integrity: sha512-VEYTpTVPMgO799f2wI7zWf0x2C54bPX6NAfbZ2Z8kZn76p+3rEYCTYVYzMUcVSMvakxMQTriBf24s3+WeXJtEg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
@@ -5356,9 +5343,6 @@ packages:
   yoctocolors@2.2.0:
     resolution: {integrity: sha512-xYqdZFUK/VYazNl/oCDYN+3WloWQwMfZxBoiNt6qNyk+xfOdi598muWE42rNZFp1kNOiqW936q5RhUdnpqElSg==}
     engines: {node: '>=18'}
-
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
@@ -6990,11 +6974,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-robots-txt@1.0.0:
-    dependencies:
-      valid-filename: 4.0.0
-      zod: 3.25.76
-
   astro-seo-schema@7.0.1(astro@7.4.2(@types/node@26.6.5)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))(schema-dts@1.1.5):
     dependencies:
       astro: 7.4.2(@types/node@26.6.5)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1)
@@ -7266,7 +7245,7 @@ snapshots:
     dependencies:
       devtools-protocol: 0.0.1608973
       mitt: 3.0.1
-      zod: 3.25.76
+      zod: 4.6.7
 
   chromium-bidi@157.0.8090-0(devtools-protocol@0.0.1704951):
     dependencies:
@@ -8077,8 +8056,6 @@ snapshots:
   file-entry-cache@11.1.5:
     dependencies:
       flat-cache: 6.1.23
-
-  filename-reserved-regex@3.0.0: {}
 
   fill-range@7.1.1:
     dependencies:
@@ -10552,10 +10529,6 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  valid-filename@4.0.0:
-    dependencies:
-      filename-reserved-regex: 3.0.0
-
   validate-npm-package-license@3.0.4:
     dependencies:
       spdx-correct: 3.2.0
@@ -10911,8 +10884,6 @@ snapshots:
   yocto-queue@1.2.2: {}
 
   yoctocolors@2.2.0: {}
-
-  zod@3.25.76: {}
 
   zod@4.6.7: {}
 
