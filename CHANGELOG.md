@@ -1,3 +1,11 @@
+## [26.20.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.20.1...26.20.2) (2026-10-26)
+
+
+### Bug Fixes
+
+* **content:** replace raw Markdown bold syntax with HTML strong tags in Astro templates ([68d45b8](https://github.com/Waldheim-dev/waldheim-homepage/commit/68d45b80bd0f6dfa564a6b07324fb259bf9e7eb5))
+* **security:** upgrade zod to 4.6.7 via static robots.txt and fix Renovate SHA check ([0ee11d5](https://github.com/Waldheim-dev/waldheim-homepage/commit/0ee11d5bac95ca86125dfdbc1e0c3533124cb34e)), closes [#186](https://github.com/Waldheim-dev/waldheim-homepage/issues/186)
+
 ## [26.20.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.20.0...26.20.1) (2026-10-26)
 
 
