@@ -44,24 +44,35 @@ referencedProjects.sort((a, b) => {
 ---
 
 <script is:inline>
-  document.addEventListener('astro:page-load', () => {
-    const buttons = document.querySelectorAll('button[aria-controls]');
+  (() => {
+    const initKarriereCollapses = () => {
+      const buttons = document.querySelectorAll('button[data-karriere-toggle]');
 
-    const toggle = (button) => {
-      const expanded = button.getAttribute('aria-expanded') === 'true' || false;
-      button.setAttribute('aria-expanded', !expanded);
-      const target = document.getElementById(
-        button.getAttribute('aria-controls')
-      );
-      target.style.height = expanded ? '0' : `${target.scrollHeight}px`;
-      const icons = button.querySelectorAll('svg');
-      icons.forEach((icon) => icon.classList.toggle('hidden'));
+      buttons.forEach((button) => {
+        if (button.dataset.karriereBound === 'true') return;
+        button.dataset.karriereBound = 'true';
+
+        button.addEventListener('click', () => {
+          const expanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!expanded));
+          const targetId = button.getAttribute('aria-controls');
+          const target = targetId ? document.getElementById(targetId) : null;
+          if (target) {
+            target.style.height = expanded ? '0px' : `${target.scrollHeight}px`;
+          }
+          const icons = button.querySelectorAll('svg');
+          icons.forEach((icon) => icon.classList.toggle('hidden'));
+        });
+      });
     };
 
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => toggle(button));
-    });
-  });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initKarriereCollapses, { once: true });
+    } else {
+      initKarriereCollapses();
+    }
+    document.addEventListener('astro:page-load', initKarriereCollapses);
+  })();
 </script>
 <div>
   {
@@ -76,7 +87,8 @@ referencedProjects.sort((a, b) => {
               <dt>
                 <button
                   type="button"
-                  class="flex w-full items-center justify-between text-left text-meg-text-primary-dark hover:bg-meg-accent/5 p-4 transition-all group"
+                  data-karriere-toggle
+                  class="flex w-full items-center justify-between text-left text-meg-text-primary-dark hover:bg-meg-accent/5 p-4 transition-all group cursor-pointer"
                   aria-controls={project.id}
                   aria-expanded="false"
                 >

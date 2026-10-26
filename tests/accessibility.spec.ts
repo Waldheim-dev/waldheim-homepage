@@ -398,6 +398,14 @@ test.describe('Barrierefreiheit (A11y) Tests', () => {
     expect(bodyHtml).not.toContain('NaN Jahre');
     expect(bodyHtml).not.toContain('NaN Jahr');
     expect(bodyHtml).not.toContain('**KI-gestützte');
-    await expect(page.getByText('Kundenumgebung im Veterinär-Bereich').first()).toBeAttached();
+    const vetButton = page.locator('button[aria-controls="vet_ionos"]');
+    await expect(vetButton).toHaveAttribute('aria-expanded', 'false');
+    await vetButton.click();
+    await expect(vetButton).toHaveAttribute('aria-expanded', 'true');
+    const vetPanel = page.locator('#vet_ionos');
+    const expandedHeight = await vetPanel.evaluate((el) => Number.parseInt(el.style.height, 10));
+    expect(expandedHeight).toBeGreaterThan(0);
+    await vetButton.click();
+    await expect(vetButton).toHaveAttribute('aria-expanded', 'false');
   });
 });
