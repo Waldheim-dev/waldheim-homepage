@@ -1,3 +1,10 @@
+# [26.22.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.21.0...26.22.0) (2026-10-26)
+
+
+### Features
+
+* **smarthome:** expand Smart Home service with local AI, cost optimization and adaptive routines ([5835993](https://github.com/Waldheim-dev/waldheim-homepage/commit/5835993f7126e23580a200983199220c897c10ea))
+
 # [26.21.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.20.2...26.21.0) (2026-10-26)
 
 
