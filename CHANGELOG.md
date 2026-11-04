@@ -1,3 +1,10 @@
+## [26.22.7](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.6...26.22.7) (2026-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([77327c3](https://github.com/Waldheim-dev/waldheim-homepage/commit/77327c396e9d8c202b7f8bf7ec26edd205a38fff))
+
 ## [26.22.6](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.5...26.22.6) (2026-11-03)
 
 
