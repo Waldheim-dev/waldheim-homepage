@@ -21,6 +21,11 @@
   "branchConcurrentLimit": 0,
   "labels": ["dependencies", "renovate"],
   "rangeStrategy": "bump",
+  "commitBodyTable": true,
+  "group": {
+    "commitMessageTopic": "{{{groupName}}} ({{#each upgrades}}{{{depName}}} {{{prettyNewVersion}}}{{#unless @last}}, {{/unless}}{{/each}})",
+    "commitMessageExtra": ""
+  },
   "vulnerabilityAlerts": {
     "enabled": false
   },
@@ -33,10 +38,9 @@
   },
   "packageRules": [
     {
-      "description": "Group and automerge all minor, patch, pin, and digest npm updates directly to main",
+      "description": "Automerge individual minor, patch, pin, and digest npm updates directly to main with fix(deps) commits for changelog visibility",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
+      "semanticCommitType": "fix",
       "automerge": true,
       "automergeType": "branch",
       "ignoreTests": true
@@ -44,8 +48,11 @@
     {
       "description": "List major updates in Dependency Dashboard for manual approval",
       "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "dependencyDashboardApproval": true
+      "dependencyDashboardApproval": true,
+      "semanticCommitType": "fix",
+      "automerge": true,
+      "automergeType": "branch",
+      "ignoreTests": true
     },
     {
       "description": "Keep TypeScript on 6.x until typescript-eslint and @astrojs/check support TS 7+",
