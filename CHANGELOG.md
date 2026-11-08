@@ -1,3 +1,10 @@
+## [26.22.10](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.9...26.22.10) (2026-11-08)
+
+
+### Bug Fixes
+
+* **deps:** bundle Renovate weekly with per-package changelogs and upgrade pnpm to 12.18.0 ([02a2cf1](https://github.com/Waldheim-dev/waldheim-homepage/commit/02a2cf1632058eac7ec6277ae2406f6e2ef19050))
+
 ## [26.22.9](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.8...26.22.9) (2026-11-06)
 
 
