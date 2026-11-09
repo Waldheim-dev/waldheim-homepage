@@ -17,7 +17,25 @@ const keywords = "Kontakt, Bestätigung, Waldheim.dev"
   <main class="mx-auto flex w-full max-w-7xl flex-auto flex-col justify-center px-6 py-24 sm:py-64 lg:px-8 bg-meg-bg-dark">
     <p class="text-base font-bold uppercase tracking-widest text-emerald-400 gsap-fadein">Wohoooo! 🎉</p>
     <h1 class="mt-4 text-pretty text-5xl font-black tracking-tighter text-meg-text-primary-dark sm:text-7xl gsap-fadein">Kontaktanfrage erhalten</h1>
-    <p class="mt-6 text-pretty text-lg font-medium text-meg-text-secondary sm:text-xl/8 gsap-fadein max-w-2xl leading-relaxed">Vielen Dank! Ich habe deine Nachricht erhalten und werde mich so schnell wie möglich bei dir zurückmelden.</p>
+    <p class="mt-6 text-pretty text-lg font-medium text-meg-text-secondary sm:text-xl/8 gsap-fadein max-w-2xl leading-relaxed">
+      Vielen Dank! Deine Anfrage wurde erfolgreich im Support-Desk &amp; CRM der <strong>Waldheim Suite</strong> erfasst. Ich melde mich innerhalb von 24 Stunden bei dir zurück.
+    </p>
+    <p id="ticket-confirmation-box" class="mt-4 hidden text-sm font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-2.5 w-fit">
+      Ticket-Referenz: <span id="ticket-confirmation-id" class="font-mono"></span>
+    </p>
+    <script is:inline>
+      try {
+        const ticketId = sessionStorage.getItem('waldheim_last_ticket_id');
+        if (ticketId) {
+          const box = document.getElementById('ticket-confirmation-box');
+          const idEl = document.getElementById('ticket-confirmation-id');
+          if (box && idEl) {
+            idEl.textContent = ticketId;
+            box.classList.remove('hidden');
+          }
+        }
+      } catch (_) {}
+    </script>
     <div class="mt-12">
       <a href="/" class="inline-flex items-center gap-2 text-sm font-bold text-meg-accent hover:text-sky-400 transition-colors gsap-fadein focus-visible:outline-meg-accent focus-visible:outline-2 focus-visible:outline-offset-2 rounded">
         <i class="fa-solid fa-arrow-left"></i> 

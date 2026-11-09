@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-@import "vanilla-cookieconsent/dist/cookieconsent.css";
 @import "tailwindcss";
 @config '../../tailwind.config.cjs';
 
@@ -9,6 +8,11 @@
 .fab {
   --fa-style-family: "Font Awesome 7 Brands" !important;
   --fa-style: 400 !important;
+}
+
+/* Isolate icon font-swap layout invalidation so WOFF2 load causes 0ms document reflow */
+i[class*="fa-"] {
+  contain: layout style;
 }
 
 html {
@@ -98,119 +102,6 @@ html {
     border-color: var(--color-gray-200, currentColor);
   }
 }
-
-/* Cookie Consent - Modern Enterprise Glass Style */
-.cc--tailwind {
-    /* Background - Glass Effect */
-    --cc-bg: rgba(15, 23, 42, 0.95);
-    --cc-text: #f8fafc;
-    
-    /* Primary Button - MEG Accent */
-    --cc-primary-color: #0ea5e9;
-    --cc-btn-primary-bg: #0ea5e9;
-    --cc-btn-primary-color: #ffffff;
-    --cc-btn-primary-hover-bg: #38bdf8;
-    --cc-btn-primary-hover-color: #ffffff;
-    --cc-btn-primary-border-color: rgba(14, 165, 233, 0.3);
-    
-    /* Secondary Button - Glass Style */
-    --cc-secondary-color: #64748b;
-    --cc-btn-secondary-bg: rgba(30, 41, 59, 0.5);
-    --cc-btn-secondary-color: #f8fafc;
-    --cc-btn-secondary-hover-bg: rgba(30, 41, 59, 0.8);
-    --cc-btn-secondary-hover-color: #ffffff;
-    --cc-btn-secondary-border-color: rgba(226, 232, 240, 0.1);
-    
-    /* Category Blocks - Glass Cards */
-    --cc-cookie-category-block-bg: rgba(30, 41, 59, 0.3);
-    --cc-cookie-category-block-border: rgba(226, 232, 240, 0.1);
-    --cc-cookie-category-block-hover-bg: rgba(30, 41, 59, 0.5);
-    --cc-cookie-category-block-hover-border: rgba(14, 165, 233, 0.3);
-    
-    /* Toggle - MEG Accent */
-    --cc-toggle-bg-off: rgba(100, 116, 139, 0.3);
-    --cc-toggle-bg-on: #0ea5e9;
-    --cc-toggle-knob-bg: #ffffff;
-    
-    /* Overlay - Backdrop Blur */
-    --cc-overlay-bg: rgba(2, 6, 23, 0.8) !important;
-    
-    /* Link Colors */
-    --cc-link-color: #0ea5e9;
-    --cc-link-hover-color: #38bdf8;
-}
-
-/* Glow-Effekte für Buttons */
-.cc--tailwind .cm__btn-primary {
-    box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.3);
-    border-radius: 0.75rem;
-    transition: all 0.3s ease;
-}
-
-.cc--tailwind .cm__btn-primary:hover {
-    box-shadow: 0 6px 20px 0 rgba(14, 165, 233, 0.5);
-    transform: translateY(-1px);
-}
-
-.cc--tailwind .cm__btn-secondary {
-    border-radius: 0.75rem;
-    transition: all 0.3s ease;
-}
-
-/* Glass-Effekt für Modal */
-.cc--tailwind .cm {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(226, 232, 240, 0.1);
-    border-radius: 1rem;
-}
-
-/* Category Block Glow on Hover */
-.cc--tailwind .cookie-category__block:hover {
-    box-shadow: 0 4px 12px 0 rgba(0, 212, 208, 0.15);
-}
-
-:root[data-theme='light'] .cc--tailwind {
-    --cc-bg: rgba(255, 255, 255, 0.98);
-    --cc-text: #0f172a;
-
-    --cc-primary-color: #0ea5e9;
-    --cc-btn-primary-bg: #0ea5e9;
-    --cc-btn-primary-color: #ffffff;
-    --cc-btn-primary-hover-bg: #0284c7;
-    --cc-btn-primary-hover-color: #ffffff;
-    --cc-btn-primary-border-color: rgba(14, 165, 233, 0.35);
-
-    --cc-secondary-color: #334155;
-    --cc-btn-secondary-bg: rgba(241, 245, 249, 0.9);
-    --cc-btn-secondary-color: #0f172a;
-    --cc-btn-secondary-hover-bg: rgba(226, 232, 240, 0.95);
-    --cc-btn-secondary-hover-color: #0f172a;
-    --cc-btn-secondary-border-color: rgba(148, 163, 184, 0.35);
-
-    --cc-cookie-category-block-bg: rgba(248, 250, 252, 0.9);
-    --cc-cookie-category-block-border: rgba(148, 163, 184, 0.35);
-    --cc-cookie-category-block-hover-bg: rgba(241, 245, 249, 0.95);
-    --cc-cookie-category-block-hover-border: rgba(14, 165, 233, 0.3);
-
-    --cc-toggle-bg-off: rgba(148, 163, 184, 0.45);
-    --cc-toggle-bg-on: #0ea5e9;
-    --cc-toggle-knob-bg: #ffffff;
-
-    --cc-overlay-bg: rgba(15, 23, 42, 0.35) !important;
-
-    --cc-link-color: #0369a1;
-    --cc-link-hover-color: #0ea5e9;
-}
-
-:root[data-theme='light'] .cc--tailwind .cm {
-    border: 1px solid rgba(148, 163, 184, 0.35);
-}
-
-:root[data-theme='light'] .cc--tailwind .cm__btn-primary {
-    box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.2);
-}
-
 
 @keyframes rotate_gradient {
   0% { --tw-gradient-position: from 0deg in oklab; }
@@ -344,14 +235,45 @@ html {
 .prose code, .prose-invert code {
     font-family: 'Fira Code', monospace !important;
     font-size: .875rem !important;
-    padding: .2rem .4rem !important;
+    padding: .15rem .45rem !important;
     border-radius: .375rem !important;
+    font-weight: 600 !important;
 }
 
-/* code without pre */
-.prose p code, .prose-invert p code {
-    background-color: var(--background-dark) !important;
-    color: var(--foreground-light) !important;
+.prose code::before,
+.prose code::after,
+.prose-invert code::before,
+.prose-invert code::after {
+    content: none !important;
+}
+
+/* Inline-Code (außerhalb von <pre>) – Dark Mode & Light Mode perfekt lesbar */
+.prose :not(pre) > code,
+.prose-invert :not(pre) > code {
+    background-color: rgba(14, 165, 233, 0.14) !important;
+    border: 1px solid rgba(14, 165, 233, 0.3) !important;
+    color: #38bdf8 !important;
+}
+
+:root[data-theme='light'] .prose :not(pre) > code,
+:root[data-theme='light'] .prose-invert :not(pre) > code {
+    background-color: #e0f2fe !important;
+    border: 1px solid #7dd3fc !important;
+    color: #0c4a6e !important;
+}
+
+:root[data-theme='light'] .prose pre,
+:root[data-theme='light'] .prose-invert pre {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+:root[data-theme='light'] .prose pre code,
+:root[data-theme='light'] .prose-invert pre code {
+    background-color: transparent !important;
+    border: 0 !important;
+    color: #f8fafc !important;
 }
 
 .prose h1, .prose-invert h1 {

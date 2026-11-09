@@ -10,9 +10,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   { name: 'Aether', link: 'https://waldheim.dev/suite/aether' },
 ]);
 
-const titel = 'Aether – Dokumente, Assets & Wissen | Waldheim Suite';
+const titel = 'DMS & Dokumentenmanagement DSGVO – ab 59 € | Waldheim Suite';
 const description =
-  'Aether organisiert Dokumente, Assets, Freigaben und verknüpftes Wissen an einem Ort statt in Laufwerken, E-Mails und Chat-Threads. Teil der Waldheim Suite.';
+  'Aether DMS: DSGVO-konformes Dokumentenmanagement mit Versionierung, Belegarchiv, Freigaben & Volltextsuche ab 59 €/Seat/Monat in der Waldheim Suite.';
 const keywords =
   'Aether, Dokumentenmanagement, Assets, Freigaben, Wissen, Versionierung, Suche, Waldheim Suite';
 
@@ -23,8 +23,9 @@ const softwareSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: description,
-  url: 'https://waldheim.dev/suite/aether',
-  author: { '@type': 'Organization', name: 'waldheim.dev', url: 'https://waldheim.dev' },
+  url: 'https://www.waldheim.dev/suite/aether/',
+  author: { '@type': 'Organization', name: 'waldheim.dev', url: 'https://www.waldheim.dev/' },
+  offers: { '@type': 'Offer', price: '59', priceCurrency: 'EUR', availability: 'https://schema.org/OnlineOnly' },
 };
 
 const features = [
@@ -89,7 +90,7 @@ const integrations = [
   { icon: 'fa-building-columns', label: 'Silvacore ERP', desc: 'Projektakten, Lieferscheine und Nachweise bleiben am Auftrag verknüpft', color: 'green' },
   { icon: 'fa-building', label: 'Properties', desc: 'Verträge, Pläne und Abrechnungen hängen direkt an Objekten und Einheiten', color: 'orange' },
   { icon: 'fa-coins', label: 'Treasury', desc: 'Belege und Finanzdokumente sind unmittelbar aus Prozessen aufrufbar', color: 'yellow' },
-  { icon: 'fa-id-card', label: 'CustomerPortal', desc: 'Kunden können freigegebene Dokumente direkt im Portal einsehen', color: 'sky' },
+  { icon: 'fa-table-cells-large', label: 'Waldheim Suite Shell', desc: 'Kunden können freigegebene Dokumente direkt im Suite-Workspace einsehen', color: 'sky' },
 ];
 ---
 
@@ -99,7 +100,7 @@ const integrations = [
   keywords={keywords}
   schema={[softwareSchema, breadCrumbSchema]}
 >
-  <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
     <div class="max-w-7xl mx-auto">
       <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
         <li><a href="/suite/" class="hover:text-meg-accent transition-colors font-semibold">Waldheim Suite</a></li>
@@ -131,7 +132,7 @@ const integrations = [
         <div class="gsap-fadein mb-6 flex flex-wrap justify-center gap-2" style="animation-delay: 0.1s">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/20 text-sm font-bold text-rose-400">
             <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
-            v0.11.3 · Jetzt nutzbar
+            v0.12.1 · Jetzt nutzbar
           </span>
           <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
             <i class="fa-solid fa-lock text-rose-400" aria-hidden="true"></i>

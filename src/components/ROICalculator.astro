@@ -154,88 +154,66 @@
   </div>
 </section>
 
-<script>
-  import gsap from 'gsap';
+<script is:inline>
+  (() => {
+    function initRoiCalculator() {
+      const slTeam = document.getElementById('slider-team-size');
+      const slDeploy = document.getElementById('slider-deployments');
+      const slRate = document.getElementById('slider-rate');
+      const toggleAIPower = document.getElementById('toggle-ai-power');
 
-  function initRoiCalculator() {
-    const slTeam = document.getElementById('slider-team-size') as HTMLInputElement | null;
-    const slDeploy = document.getElementById('slider-deployments') as HTMLInputElement | null;
-    const slRate = document.getElementById('slider-rate') as HTMLInputElement | null;
-    const toggleAIPower = document.getElementById('toggle-ai-power') as HTMLInputElement | null;
+      if (!(slTeam instanceof HTMLInputElement) || !(slDeploy instanceof HTMLInputElement) || !(slRate instanceof HTMLInputElement)) return;
 
-    if (!slTeam || !slDeploy || !slRate) return;
+      const valTeam = document.getElementById('val-team-size');
+      const valDeploy = document.getElementById('val-deployments');
+      const valRate = document.getElementById('val-rate');
+      const outHours = document.getElementById('out-lost-hours');
+      const outCost = document.getElementById('out-lost-cost');
+      const outSavings = document.getElementById('out-savings');
 
-    // Display fields
-    const valTeam = document.getElementById('val-team-size');
-    const valDeploy = document.getElementById('val-deployments');
-    const valRate = document.getElementById('val-rate');
-    const outHours = document.getElementById('out-lost-hours');
-    const outCost = document.getElementById('out-lost-cost');
-    const outSavings = document.getElementById('out-savings');
+      function calculate() {
+        const team = parseInt(slTeam.value, 10) || 1;
+        const deployments = parseInt(slDeploy.value, 10) || 1;
+        const rate = parseInt(slRate.value, 10) || 70;
+        const isAIPower = toggleAIPower instanceof HTMLInputElement ? toggleAIPower.checked : false;
 
-    // Values holder for GSAP interpolation
-    const results = {
-      lostHours: 0,
-      lostCost: 0,
-      savings: 0
-    };
+        const multiplier = isAIPower ? 5 : 1;
+        const effectiveTeam = team * multiplier;
 
-    function calculate() {
-      const team = parseInt(slTeam!.value);
-      const deployments = parseInt(slDeploy!.value);
-      const rate = parseInt(slRate!.value);
-      const isAIPower = toggleAIPower ? toggleAIPower.checked : false;
-
-      const multiplier = isAIPower ? 5 : 1;
-      const effectiveTeam = team * multiplier;
-
-      // Display inputs
-      if (valTeam) {
-        if (isAIPower) {
-          valTeam.innerHTML = `${team} <span class="text-xs text-amber-400 font-bold ml-1.5">(5x KI-Hebel = ${effectiveTeam} Effektiv)</span>`;
-        } else {
-          valTeam.textContent = String(team);
+        if (valTeam) {
+          if (isAIPower) {
+            valTeam.innerHTML = `${team} <span class="text-xs text-amber-400 font-bold ml-1.5">(5x KI-Hebel = ${effectiveTeam} Effektiv)</span>`;
+          } else {
+            valTeam.textContent = String(team);
+          }
         }
+        if (valDeploy) valDeploy.textContent = String(deployments);
+        if (valRate) valRate.textContent = `${rate} €`;
+
+        const targetHours = Math.round(effectiveTeam * deployments * 1.5);
+        const targetCost = Math.round(targetHours * rate * 12);
+        const targetSavings = Math.round(targetCost * 0.8);
+
+        if (outHours) outHours.textContent = `${targetHours} Std.`;
+        if (outCost) outCost.textContent = `${targetCost.toLocaleString('de-DE')} €`;
+        if (outSavings) outSavings.textContent = targetSavings.toLocaleString('de-DE');
       }
-      if (valDeploy) valDeploy.textContent = String(deployments);
-      if (valRate) valRate.textContent = `${rate} €`;
 
-      // Formel:
-      // Zeitverlust pro Monat = Effektives Team * Deployments * 1.5 Std.
-      const targetHours = effectiveTeam * deployments * 1.5;
-      // Kosten pro Jahr = Stunden pro Monat * Rate * 12 Monate
-      const targetCost = targetHours * rate * 12;
-      // Ersparnis pro Jahr = 80% der jährlichen Kosten
-      const targetSavings = targetCost * 0.8;
+      slTeam.addEventListener('input', calculate);
+      slDeploy.addEventListener('input', calculate);
+      slRate.addEventListener('input', calculate);
+      if (toggleAIPower) toggleAIPower.addEventListener('change', calculate);
 
-      // GSAP smooth number animation
-      gsap.to(results, {
-        lostHours: targetHours,
-        lostCost: targetCost,
-        savings: targetSavings,
-        duration: 0.45,
-        ease: 'power1.out',
-        onUpdate: () => {
-          if (outHours) outHours.textContent = `${Math.round(results.lostHours)} Std.`;
-          if (outCost) outCost.textContent = `${Math.round(results.lostCost).toLocaleString('de-DE')} €`;
-          if (outSavings) outSavings.textContent = Math.round(results.savings).toLocaleString('de-DE');
-        }
-      });
+      calculate();
     }
 
-    // Attach listeners
-    slTeam.addEventListener('input', calculate);
-    slDeploy.addEventListener('input', calculate);
-    slRate.addEventListener('input', calculate);
-    if (toggleAIPower) toggleAIPower.addEventListener('change', calculate);
-
-    // Initial calculation
-    calculate();
-  }
-
-  // Trigger on load
-  initRoiCalculator();
-  document.addEventListener('astro:page-load', initRoiCalculator);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initRoiCalculator, { once: true });
+    } else {
+      initRoiCalculator();
+    }
+    document.addEventListener('astro:page-load', initRoiCalculator);
+  })();
 </script>
 
 <style>

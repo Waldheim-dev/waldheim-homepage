@@ -6,6 +6,7 @@
 # Suite Modul-Redirects (alte URLs → neue Suite-Struktur)
 /silvacore/           /suite/forge/         301
 /suite/silvacore/     /suite/forge/         301
+/suite/portal/        /suite/               301
 /ecodrive/            /suite/ecodrive/      301
 /socialverse/         /suite/socialverse/   301
 /aether/              /suite/aether/        301

@@ -11,34 +11,42 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     key: 'entwicklung',
-    title: 'Web, Custom Software & AI-Coaching',
+    title: 'Web, Custom Software & AI-Coaching (ab 1.400 €)',
     href: '/services/entwicklung/',
     icon: 'fa-solid fa-code',
-    description: 'Moderne Webseiten-Entwicklung & Gestaltung, maßgeschneiderte Web-Apps/SaaS-Plattformen sowie AI-Team-Coaching (AI Reviews, Skills & Automationen für >1.000% / 10x Produktivität).',
+    description: 'Websites ab 1.400 € (2–4 Wochen), Kundenportale & SaaS ab 4.900 € sowie KI-Team-Coaching ab 1.400 € (70 €/h, § 19 UStG Netto = Brutto).',
     color: 'blue'
   },
   {
     key: 'devsecops',
-    title: 'DevSecOps, FinOps & AIOps',
+    title: 'DevSecOps, Kubernetes & FinOps (ab 980 €)',
     href: '/services/devsecops/',
     icon: 'fa-solid fa-shield-halved',
-    description: 'Sichere CI/CD-Pipelines, Kubernetes, GitOps, FinOps-Kostenoptimierung, AIOps-Observability und Coaching für KI-gestützte Pipeline- & Review-Automationen.',
+    description: 'CI/CD-Pipelines, Kubernetes/GitOps, Container-Security-Audits (ab 980 €) und FinOps-Cloud-Kostensenkung um 20–45 % (ab 1.400 €).',
     color: 'purple'
   },
   {
     key: 'it-service',
-    title: 'IT-Service & Infrastruktur',
+    title: 'IT-Service, Unifi, NAS & M365 (ab 280 €)',
     href: '/services/it-service/',
     icon: 'fa-solid fa-desktop',
-    description: 'Custom PCs & Workstations, Unifi-Netzwerke, NAS, Backup, Microsoft 365 und On-Premise-Dienste – komplett aus einer Hand für Windows, macOS & Linux.',
+    description: 'Custom PCs & KI-Workstations (Bau ab 280 €), Unifi-WLAN & 3-2-1-NAS (ab 490 €), Microsoft 365 Migration (ab 700 €) & Support zu 70 €/h.',
     color: 'green'
   },
   {
     key: 'smarthome',
-    title: 'Smart Home, KNX & Local AI',
+    title: 'Smart Home, KNX & Lokale KI (ab 630 €)',
     href: '/services/smarthome/',
     icon: 'fa-solid fa-house',
-    description: 'KNX-Gebäudeautomation, lokale KI-Optimierung (ohne Cloud), Energiekosten- & Effizienz-Management, adaptive Alltags-Routinen und AI-Kamerasicherheit.',
+    description: 'Home Assistant & KNX (ab 630 €), PV-/Wärmepumpen-Energiemanagement (ab 980 €) und lokale KI-Kameras ohne Cloud-Abo (Frigate NVR).',
     color: 'orange'
+  },
+  {
+    key: 'design',
+    title: 'UI/UX-Design & Barrierefreiheit (ab 490 €)',
+    href: '/services/design/',
+    icon: 'fa-solid fa-palette',
+    description: 'Klickbare Figma-Prototypen & Redesigns ab 980 € (1–3 Wochen) sowie technische BFSG-/WCAG-2.1-AA-Prüfung & Umsetzung ab 490 €.',
+    color: 'pink'
   }
 ];

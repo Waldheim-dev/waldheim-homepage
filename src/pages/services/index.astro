@@ -4,53 +4,72 @@ import Layout from '../../layouts/Layout.astro';
 import { SchemaUtils } from '../../utils/schema';
 import InteractiveHeroCanvas from '../../components/InteractiveHeroCanvas.astro';
 import PromoSuite from '../../components/PromoSuite.astro';
+import AnswerFirstBox from '../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../components/SolutionDirectorySection.astro';
+import { ALL_SERVICE_SOLUTIONS } from '../../consts/seoCatalog';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: 'https://waldheim.dev'
+  link: 'https://www.waldheim.dev/'
 }, {
   name: 'Services',
   link: Astro.url.href
 }]);
 
-
-
-const titel = 'IT-Services Augsburg & München: Software & Cloud | Waldheim.dev';
-const description = 'IT-Dienstleistungen in Augsburg & München: Custom Software, DevSecOps & Cloud, ganzheitlicher IT-Service (Netzwerk, NAS, M365) und KNX Smart Home.';
+const titel = 'IT-Services & Software Augsburg – ab 70 €/h | Waldheim.dev';
+const description = 'IT-Dienstleistungen in Augsburg & München ab 70 €/h (§ 19 UStG): Websites ab 1.400 €, Custom Software, DevSecOps, Unifi/NAS, M365 & KNX Smart Home.';
 const keywords = 'IT Services Augsburg, Custom Software Bayern, IT Infrastruktur München, Smart Home KNX Augsburg, DevSecOps Beratung, Unifi Netzwerk, Microsoft 365 Beratung';
 
 const services = [
   {
     name: 'Web, Custom Software & AI-Coaching',
     href: '/services/entwicklung/',
+    price: 'Ab 1.400 € Festpreis · 70 €/h',
+    duration: '1–8 Wochen',
     icon: 'fa-code',
     color: 'text-meg-accent',
     borderHover: 'hover:border-meg-accent/40',
-    desc: 'Moderne Webseiten-Entwicklung & Gestaltung, maßgeschneiderte Web-Apps/SaaS-Plattformen sowie AI-Coaching (AI Reviews & Skill-Automationen für >1.000% / 10x Produktivität).'
+    desc: 'Unternehmenswebsites ab 1.400 € (2–4 Wochen), Kundenportale & SaaS-Plattformen ab 4.900 € sowie 10x KI-Coaching für Entwicklerteams ab 1.400 €.'
   },
   {
-    name: 'DevSecOps, FinOps & AIOps',
+    name: 'DevSecOps, Kubernetes & FinOps',
     href: '/services/devsecops/',
+    price: 'Ab 980 € Audit · 70 €/h',
+    duration: '1–3 Wochen',
     icon: 'fa-shield-halved',
     color: 'text-violet-400',
     borderHover: 'hover:border-violet-500/40',
-    desc: 'CI/CD-Pipelines, Kubernetes, Terraform, FinOps-Kostenoptimierung, AIOps-Observability und Team-Coaching für KI-gestützte Pipeline- & Security-Automationen.'
+    desc: 'CI/CD-Pipelines, Kubernetes & GitOps (FluxCD/ArgoCD), Container-Security-Audits (ab 980 €) und FinOps-Cloud-Kostensenkung um 20–45 %.'
   },
   {
-    name: 'IT-Service & Infrastruktur',
+    name: 'IT-Service, Unifi, NAS & M365',
     href: '/services/it-service/',
+    price: 'Ab 280 € Paket · 70 €/h',
+    duration: '< 2 Std. Reaktion / 1–5 Tage',
     icon: 'fa-desktop',
     color: 'text-emerald-400',
     borderHover: 'hover:border-emerald-500/40',
-    desc: 'Custom PCs, Unifi-Netzwerke, NAS, Backup, Microsoft 365 und On-Premise – für Windows, macOS & Linux.'
+    desc: 'Custom PCs & KI-Workstations (Bau ab 280 €), Ubiquiti Unifi-WLAN & 3-2-1-NAS (ab 490 €), Microsoft 365 Migration (ab 700 €) & Linux/Windows/Mac-Support.'
   },
   {
-    name: 'Smart Home, KNX & Local AI',
+    name: 'Smart Home, KNX & Lokale KI',
     href: '/services/smarthome/',
+    price: 'Ab 630 € Paket · 70 €/h',
+    duration: '2 Tage bis 2 Wochen',
     icon: 'fa-house',
     color: 'text-orange-400',
     borderHover: 'hover:border-orange-500/40',
-    desc: 'KNX-Gebäudeautomation, lokale KI-Optimierung auf Kosten & Energieeffizienz, selbstlernende Alltags-Routinen, Heizungs-/Beschattungssteuerung und AI-Kameras.'
+    desc: 'KNX & Home Assistant (ab 630 €), PV-/Wärmepumpen-Energiemanagement (ab 980 €) und lokale KI-Kameras ohne Cloud-Abo (Frigate NVR).'
+  },
+  {
+    name: 'UI/UX-Design & Barrierefreiheit (BFSG)',
+    href: '/services/design/',
+    price: 'Ab 490 € Audit / 980 € Design',
+    duration: '1–3 Wochen',
+    icon: 'fa-palette',
+    color: 'text-rose-400',
+    borderHover: 'hover:border-rose-500/40',
+    desc: 'Klickbare Figma-Prototypen, B2B-Interface-Design & Redesigns (ab 980 €) sowie technische BFSG-/WCAG-2.1-AA-Prüfung und Umsetzung (ab 490 €).'
   }
 ];
 ---
@@ -76,31 +95,64 @@ const services = [
       </div>
     </section>
 
+    <AnswerFirstBox
+      question="Was kosten die IT-Services von Waldheim.dev und wie lange dauern typische Projekte?"
+      directAnswer="Alle IT- und Entwicklungsleistungen bei Waldheim.dev werden zum einheitlichen Senior-Stundensatz von 70 € pro Stunde (im 15-Minuten-Takt, gemäß § 19 UStG ohne Umsatzsteuer – Netto = Brutto) oder als verbindliches Festpreis-Paket abgerechnet: Custom-PC-Bau ab 280 € (3–5 Tage), Unifi-Netzwerk & NAS ab 490 € (1–3 Tage), KNX & Home Assistant ab 630 € (2–5 Tage), DevSecOps-/Cloud-Audits ab 980 € (1 Woche), Unternehmenswebsites ab 1.400 € (2–4 Wochen) sowie individuelle Kundenportale und Web-Apps ab 4.900 € (4–8 Wochen)."
+      price="70 € / Std. (Festpreise ab 280 €)"
+      priceSubtext="15-Min.-Takt · § 19 UStG (Netto = Brutto)"
+      duration="1 Tag bis 8 Wochen"
+      durationSubtext="Klare Meilensteine & Festpreis-Option"
+      deliverable="5 Leistungsbereiche + 22 Spezialpakete"
+      location="Augsburg, München & DACH Remote"
+      accentColor="blue"
+      primaryCtaText="Kostenloses Erstgespräch buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Alle 22 Leistungspakete ansehen"
+      secondaryCtaHref="#alle-service-pakete"
+    />
+
     <!-- Services Grid -->
     <section class="px-6 py-24 bg-meg-bg-dark" aria-labelledby="services-grid-heading">
       <h2 id="services-grid-heading" class="sr-only">Alle Services im Überblick</h2>
-      <div class="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div class="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, i) => (
           <a
             href={service.href}
-            class="gsap-fadein group relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-8 rounded-2xl transition-all duration-300 hover:shadow-xl"
+            class="gsap-fadein group relative bg-meg-surface-dark/50 backdrop-blur-xl border border-meg-border-dark p-8 rounded-2xl transition-all duration-300 hover:shadow-xl flex flex-col justify-between"
             style={`animation-delay: ${0.1 + i * 0.08}s`}
           >
-            <div class="size-14 rounded-xl bg-meg-bg-dark border border-meg-border-dark flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i class={`fa-solid ${service.icon} ${service.color} text-2xl`} aria-hidden="true"></i>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-6">
+                <div class="size-14 rounded-xl bg-meg-bg-dark border border-meg-border-dark flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <i class={`fa-solid ${service.icon} ${service.color} text-2xl`} aria-hidden="true"></i>
+                </div>
+                <div class="text-right">
+                  <span class="block text-xs font-black text-emerald-400">{service.price}</span>
+                  <span class="block text-[11px] text-meg-text-secondary">Dauer: {service.duration}</span>
+                </div>
+              </div>
+              <h2 class="text-2xl font-bold text-meg-text-primary-dark mb-3">{service.name}</h2>
+              <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
+                {service.desc}
+              </p>
             </div>
-            <h2 class="text-2xl font-bold text-meg-text-primary-dark mb-3">{service.name}</h2>
-            <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-              {service.desc}
-            </p>
             <span class={`${service.color} text-sm font-bold flex items-center gap-2 group-hover:gap-4 transition-all`}>
-              Mehr erfahren
+              Preise &amp; Details ansehen
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </span>
           </a>
         ))}
       </div>
     </section>
+
+    <div id="alle-service-pakete">
+      <SolutionDirectorySection
+        eyebrow="22 konkrete Leistungspakete · Antwort zuerst"
+        heading="Alle Fragen zu Preisen, Dauer & Umsetzung im Direktzugriff"
+        subheading="Wählen Sie Ihr konkretes Anliegen: Jede Detailseite nennt direkt im ersten Absatz den Einstiegspreis, die Projektdauer und alle enthaltenen Leistungen."
+        items={ALL_SERVICE_SOLUTIONS}
+      />
+    </div>
 
     <PromoSuite />
 

@@ -10,9 +10,9 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   { name: 'Ecodrive', link: 'https://waldheim.dev/suite/ecodrive' },
 ]);
 
-const titel = 'Ecodrive – Flotte, Einsatz & ESG | Waldheim Suite';
+const titel = 'Fuhrparkmanagement & Fahrtenbuch App – ab 8 € | Waldheim Suite';
 const description =
-  'Ecodrive steuert Flotten, Einsätze, CO₂-Daten und ESG-Reporting in einem operativen Modul statt in Fahrtenbüchern und Tabellen. Teil der Waldheim Suite.';
+  'Ecodrive Fuhrparkmanagement: Digitale Fahrzeugakte, Fahrtenbuch, TCO-Rechner & CO₂/ESG-Berichte ab 8 € pro Fahrzeug/Monat in der Waldheim Suite.';
 const keywords =
   'Ecodrive, Flottenmanagement, ESG Reporting, CO2 Tracking, Routenplanung, Fahrtenbuch, Waldheim Suite';
 
@@ -23,8 +23,9 @@ const softwareSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: description,
-  url: 'https://waldheim.dev/suite/ecodrive',
-  author: { '@type': 'Organization', name: 'waldheim.dev', url: 'https://waldheim.dev' },
+  url: 'https://www.waldheim.dev/suite/ecodrive/',
+  author: { '@type': 'Organization', name: 'waldheim.dev', url: 'https://www.waldheim.dev/' },
+  offers: { '@type': 'Offer', price: '8', priceCurrency: 'EUR', availability: 'https://schema.org/OnlineOnly' },
 };
 
 const features = [
@@ -99,7 +100,7 @@ const integrations = [
   keywords={keywords}
   schema={[softwareSchema, breadCrumbSchema]}
 >
-  <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
     <div class="max-w-7xl mx-auto">
       <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
         <li><a href="/suite/" class="hover:text-meg-accent transition-colors font-semibold">Waldheim Suite</a></li>
@@ -131,7 +132,7 @@ const integrations = [
         <div class="gsap-fadein mb-6 flex flex-wrap justify-center gap-2" style="animation-delay: 0.1s">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-sm font-bold text-emerald-400">
             <i class="fa-solid fa-car-side" aria-hidden="true"></i>
-            v0.11.3 · Jetzt nutzbar
+            v0.12.1 · Jetzt nutzbar
           </span>
           <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
             <i class="fa-solid fa-leaf text-emerald-400" aria-hidden="true"></i>

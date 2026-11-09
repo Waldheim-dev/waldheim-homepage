@@ -28,7 +28,7 @@ const categories = await getCollection('projects_kategorie');
         Von Webentwicklung über DevSecOps bis zur Verbandssoftware – hier finden Sie eine Auswahl meiner Projekte.
       </p>
       <a
-        href="/referenzen/1/"
+        href="/referenzen/"
         class="mt-6 rounded-xl px-6 py-3 bg-meg-accent text-white hover:shadow-lg hover:shadow-meg-accent/30 hover:scale-[1.02] transition-all duration-300 inline-block font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
         Gesamtes Portfolio entdecken
       </a>
@@ -81,16 +81,23 @@ const categories = await getCollection('projects_kategorie');
       ))}
     </div>
     
-    {/* Slide Indicators - Active Pill + Dots */}
-    <div class="flex justify-center items-center gap-2 mt-8" role="group" aria-label="Projekt-Indikator">
+    {/* Slide Indicators - Active Pill + Dots (min 24x24px touch target, pre-sized in HTML for 0ms reflow) */}
+    <div class="flex justify-center items-center gap-3 mt-8" role="group" aria-label="Projekt-Indikator">
       {projects.map((_, index) => (
         <button
-          class="slide-indicator relative rounded-full transition-all duration-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent overflow-hidden"
+          type="button"
+          class="slide-indicator relative min-w-6 min-h-6 py-1.5 flex items-center justify-center rounded-full transition-all duration-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
+          style={index === 0 ? 'width: 80px; height: 24px;' : 'width: 24px; height: 24px;'}
+          aria-current={index === 0 ? 'true' : undefined}
           data-index={index}
           aria-label={`Zu Projekt ${index + 1} springen`}
         >
-          <div class="indicator-bg absolute inset-0 bg-meg-surface-dark/80 rounded-full"></div>
-          <div class="indicator-progress absolute inset-0 bg-meg-accent rounded-full origin-left scale-x-0 z-10"></div>
+          <div
+            class="indicator-bg relative w-full h-3 bg-meg-surface-dark/80 rounded-full overflow-hidden"
+            style={index === 0 ? 'background-color: rgb(26 72 95 / 0.8);' : 'background-color: rgb(138 190 171 / 0.4);'}
+          >
+            <div class="indicator-progress absolute inset-0 bg-meg-accent rounded-full origin-left scale-x-0 z-10"></div>
+          </div>
         </button>
       ))}
     </div>
@@ -105,46 +112,47 @@ const categories = await getCollection('projects_kategorie');
     if (!slide || !indicators.length) return;
     
     const getGap = () => {
-      if (window.innerWidth < 640) return 16;
-      if (window.innerWidth < 768) return 32;
-      return 64;
+      if (window.matchMedia('(min-width: 768px)').matches) return 64;
+      if (window.matchMedia('(min-width: 640px)').matches) return 32;
+      return 16;
     };
     
     let gap = getGap();
-    window.addEventListener('resize', () => { gap = getGap(); });
+    window.addEventListener('resize', () => { gap = getGap(); }, { passive: true });
     
     const innerTime = 2500;
     const outerTime = innerTime * 2;
     let currentIndex = 0;
     
-    // Set initial dot/pill sizes
+    // Set initial dot/pill sizes (min 24px height for WCAG 2.2 AA target-size)
     const setIndicatorSize = (indicator, bg, index, isActive) => {
       if (isActive) {
         // Active: Pill (wide) - dark background so progress is visible
         indicator.style.width = '80px';
-        indicator.style.height = '12px';
+        indicator.style.height = '24px';
         bg.style.backgroundColor = 'rgb(26 72 95 / 0.8)'; // dark-800/80
       } else if (index < currentIndex) {
         // Completed: Small dot (filled with primary color)
         indicator.style.width = '24px';
-        indicator.style.height = '12px';
+        indicator.style.height = '24px';
         bg.style.backgroundColor = 'rgb(0 212 208)'; // primary-500 solid
       } else {
         // Upcoming: Small dot (gray/empty)
         indicator.style.width = '24px';
-        indicator.style.height = '12px';
+        indicator.style.height = '24px';
         bg.style.backgroundColor = 'rgb(138 190 171 / 0.4)'; // light-500/40
       }
     };
     
-    // Update active indicator and start progress animation
-    const updateIndicators = (animated = true) => {
-      const scrollLeft = slide.scrollLeft;
-      const cardWidth = slide.firstElementChild?.offsetWidth || 0;
-      const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
-      
-      if (activeIndex !== currentIndex) {
-        currentIndex = activeIndex;
+    // Update active indicator without forcing layout reflow when index is known
+    const updateIndicators = (animated = true, readLayout = false) => {
+      if (readLayout) {
+        const scrollLeft = slide.scrollLeft;
+        const cardWidth = slide.firstElementChild?.offsetWidth || 1;
+        const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+        if (activeIndex !== currentIndex) {
+          currentIndex = activeIndex;
+        }
       }
       
       indicators.forEach((indicator, index) => {
@@ -203,20 +211,8 @@ const categories = await getCollection('projects_kategorie');
     
     // Listen to scroll events
     slide.addEventListener('scroll', () => {
-      const scrollLeft = slide.scrollLeft;
-      const cardWidth = slide.firstElementChild?.offsetWidth || 0;
-      const newIndex = Math.round(scrollLeft / (cardWidth + gap));
-      
-      if (newIndex !== currentIndex) {
-        currentIndex = newIndex;
-        updateIndicators(false); // Don't animate on manual scroll
-      }
-    });
-    
-    // Initial update - delayed to ensure DOM is ready
-    setTimeout(() => {
-      updateIndicators(true);
-    }, 100);
+      updateIndicators(false, true);
+    }, { passive: true });
     
     const changeSlide = () => {
       const first = slide.firstElementChild;
@@ -230,11 +226,24 @@ const categories = await getCollection('projects_kategorie');
           slide.scrollLeft = 0;
           currentIndex = 0;
         }
-        updateIndicators(true);
+        updateIndicators(true, true);
       }, innerTime);
     };
     
-    let slideInterval = setInterval(changeSlide, outerTime);
+    let slideInterval = 0;
+    if ('IntersectionObserver' in window) {
+      const sliderObs = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            if (!slideInterval) slideInterval = setInterval(changeSlide, outerTime);
+          } else if (slideInterval) {
+            clearInterval(slideInterval);
+            slideInterval = 0;
+          }
+        }
+      });
+      sliderObs.observe(slide);
+    }
     
     const pauseSlider = () => {
       clearInterval(slideInterval);

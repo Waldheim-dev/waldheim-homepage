@@ -13,19 +13,42 @@ export async function getStaticPaths() {
 }
 
 const project = Astro.props;
-const { Content } = await render(project)
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home',
-  link: Astro.url.hostname
-}, {
-  name: 'Referenzen',
-  link: Astro.url.hostname
-},{
-  name: project.data.title,
-  link: Astro.url.href
-}]);
+const { Content } = await render(project);
+const slug = project.id.replace(/^_/, '').replace(/\/_/, '/');
+const projectUrl = `https://www.waldheim.dev/referenzen/${slug}/`;
+const seoTitle =
+  project.data.title.length > 68
+    ? `${project.data.title.slice(0, 52).trim()}… | Waldheim.dev`
+    : `${project.data.title} | Waldheim.dev`.length < 70
+      ? `${project.data.title} | Waldheim.dev`
+      : project.data.title;
+const seoDesc =
+  project.data.description.length > 156
+    ? `${project.data.description.slice(0, 152).trim()}…`
+    : project.data.description;
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  {
+    name: 'Home',
+    link: 'https://www.waldheim.dev/',
+  },
+  {
+    name: 'Referenzen',
+    link: 'https://www.waldheim.dev/referenzen/',
+  },
+  {
+    name: project.data.title,
+    link: projectUrl,
+  },
+]);
 ---
-<Layout {...project.data} schema={[breadCrumbSchema]}>
+<Layout
+  {...project.data}
+  title={seoTitle}
+  description={seoDesc}
+  image={project.data.heroImage}
+  schema={[breadCrumbSchema]}
+>
   <ProjectLayout {...project.data}>
     <Content />
   </ProjectLayout>

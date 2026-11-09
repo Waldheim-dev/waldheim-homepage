@@ -20,7 +20,7 @@ const itServiceColors = getServiceColors('it-service');
 <nav class="sticky top-0 z-50 flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-2xl text-meg-text-primary-dark bg-meg-surface-dark/90 backdrop-blur-xl border border-meg-border-dark shadow-xl hover:border-meg-accent/30" aria-label="Hauptnavigation">
     <div class="flex items-center gap-4">
         <a href="/" class="-m-1.5 flex items-center gap-2 text-meg-text-primary-dark rounded-xl px-2 py-1 hover:bg-meg-surface-dark/50 transition-all group" aria-label="Waldheim.dev">
-          <img class="h-8 w-auto block logo-theme-aware transition-transform group-hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Logo" loading="lazy" width="32" height="32">
+          <img class="h-8 w-auto block logo-theme-aware transition-transform group-hover:scale-105" src="/waldheim.dev.svg" alt="Waldheim.dev Logo" loading="eager" width="32" height="32">
           <span class="font-bold tracking-tight">Waldheim.dev</span>
         </a>
         <span class="inline-flex items-center gap-x-1.5 rounded-lg bg-meg-accent/10 border border-meg-accent/30 px-2 py-1 text-[10px] font-black text-meg-accent">
@@ -66,16 +66,15 @@ const itServiceColors = getServiceColors('it-service');
                 </div>
               </a>
 
-              <!-- Module rechts: 3-Spalten-Grid mit Icon + Titel + Beschreibung -->
-              <div class="flex-1 grid grid-cols-3 gap-1.5 content-start">
+              <!-- Module rechts: Grid mit Icon + Titel + Beschreibung -->
+              <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-1.5 content-start">
                 {[
-                  { icon: 'fa-id-card',          color: 'text-sky-400',     bg: 'bg-sky-500/10',     href: '/suite/portal/',      label: 'CustomerPortal',  desc: 'Ihr digitales Kundenportal' },
                   { icon: 'fa-users-gear',        color: 'text-violet-400',  bg: 'bg-violet-500/10',  href: '/suite/socialverse/', label: 'Socialverse CRM', desc: 'Kontakte, Sales & Kommunikation' },
-                  { icon: 'fa-building-columns',  color: 'text-green-400',   bg: 'bg-green-500/10',   href: '/suite/forge/',       label: 'Silvacore ERP',   desc: 'WEG-Verwaltung & Immobilien' },
-                  { icon: 'fa-atom',              color: 'text-rose-400',    bg: 'bg-rose-500/10',    href: '/suite/aether/',      label: 'Aether',          desc: 'KI-gestützte Automatisierung' },
+                  { icon: 'fa-building-columns',  color: 'text-green-400',   bg: 'bg-green-500/10',   href: '/suite/forge/',       label: 'Silvacore ERP',   desc: 'Aufträge, Projekte & E-Rechnung' },
+                  { icon: 'fa-atom',              color: 'text-rose-400',    bg: 'bg-rose-500/10',    href: '/suite/aether/',      label: 'Aether',          desc: 'Dokumente, Assets & Wissen' },
                   { icon: 'fa-leaf',              color: 'text-emerald-400', bg: 'bg-emerald-500/10', href: '/suite/ecodrive/',    label: 'Ecodrive',        desc: 'Nachhaltige Flottensteuerung' },
-                  { icon: 'fa-coins',             color: 'text-yellow-400',  bg: 'bg-yellow-500/10',  href: '/suite/treasury/',    label: 'Treasury',        desc: 'Finanzen & Buchhaltung' },
-                  { icon: 'fa-building',          color: 'text-orange-400',  bg: 'bg-orange-500/10',  href: '/suite/properties/',  label: 'Properties',      desc: 'Immobilien & Objektverwaltung' },
+                  { icon: 'fa-coins',             color: 'text-yellow-400',  bg: 'bg-yellow-500/10',  href: '/suite/treasury/',    label: 'Treasury',        desc: 'Finanzen, Banking & DATEV' },
+                  { icon: 'fa-building',          color: 'text-orange-400',  bg: 'bg-orange-500/10',  href: '/suite/properties/',  label: 'Properties',      desc: 'Immobilien & WEG-Verwaltung' },
                   { icon: 'fa-tower-broadcast',   color: 'text-cyan-400',    bg: 'bg-cyan-500/10',    href: '/suite/relay/',       label: 'Relay',           desc: 'Messaging & Benachrichtigungen' },
                   { icon: 'fa-gears',             color: 'text-indigo-400',  bg: 'bg-indigo-500/10',  href: '/suite/conductor/',   label: 'Conductor',       desc: 'Workflow-Orchestrierung' },
                 ].map(mod => (
@@ -90,8 +89,14 @@ const itServiceColors = getServiceColors('it-service');
                   </a>
                 ))}
                 <a href="/suite/preise/" class="group col-span-3 flex items-center justify-center gap-2 rounded-xl p-2 mt-1 border border-meg-border-dark/50 hover:border-meg-accent/30 hover:bg-meg-bg-dark transition-all text-[11px] font-bold text-slate-400 hover:text-meg-accent">
-                  <i class="fa-solid fa-tag text-xs" aria-hidden="true"></i> Suite-Preise ansehen
+                  <i class="fa-solid fa-tag text-xs" aria-hidden="true"></i> Suite-Preise (ab 29 €/Monat) &amp; alle 16 Lösungen ansehen
                 </a>
+                <div class="col-span-3 grid grid-cols-4 gap-1.5 pt-2 border-t border-meg-border-dark/50">
+                  <a href="/suite/e-rechnung-software/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ E-Rechnung (ab 29 €)</a>
+                  <a href="/suite/erp-mittelstand-kosten/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ Was kostet ein ERP?</a>
+                  <a href="/suite/weg-verwaltung-software/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ WEG &amp; Zählerkaskade</a>
+                  <a href="/suite/fuhrparkmanagement-fahrtenbuch/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ Fuhrpark (ab 8 €)</a>
+                </div>
               </div>
             </div>
           </div>
@@ -104,16 +109,18 @@ const itServiceColors = getServiceColors('it-service');
           <span>Consulting</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-2xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
             <div class="grid grid-cols-2 gap-2">
               {[
-                { href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent', bg: 'bg-meg-accent/10', hover: 'hover:border-meg-accent/20', title: 'Web, Software & AI-Coaching', desc: 'Websites, SaaS & 10x AI-Teams' },
-                { href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400', bg: 'bg-violet-500/10', hover: 'hover:border-violet-500/20', title: 'DevSecOps, FinOps & AIOps', desc: 'Pipelines, Cloud & AI-Automation' },
-                { href: '/services/it-service/', icon: 'fa-desktop', color: 'text-emerald-400', bg: 'bg-emerald-500/10', hover: 'hover:border-emerald-500/20', title: 'IT-Service & Infrastruktur', desc: 'PC, Netzwerk, NAS, M365' },
-                { href: '/services/smarthome/', icon: 'fa-house', color: 'text-orange-400', bg: 'bg-orange-500/10', hover: 'hover:border-orange-500/20', title: 'Smart Home, KNX & Local AI', desc: 'Lokale KI, Effizienz & Routinen' }
+                { href: '/services/entwicklung/', icon: 'fa-code', color: 'text-meg-accent', bg: 'bg-meg-accent/10', hover: 'hover:border-meg-accent/20', title: 'Web, Software & AI-Coaching', desc: 'Websites ab 1.400 €, Portale & 10x KI' },
+                { href: '/services/devsecops/', icon: 'fa-shield-halved', color: 'text-violet-400', bg: 'bg-violet-500/10', hover: 'hover:border-violet-500/20', title: 'DevSecOps, FinOps & AIOps', desc: 'K8s, CI/CD & Cloud-Kosten (ab 980 €)' },
+                { href: '/services/it-service/', icon: 'fa-desktop', color: 'text-emerald-400', bg: 'bg-emerald-500/10', hover: 'hover:border-emerald-500/20', title: 'IT-Service & Infrastruktur', desc: 'PC ab 280 €, Unifi/NAS ab 490 €, M365' },
+                { href: '/services/smarthome/', icon: 'fa-house', color: 'text-orange-400', bg: 'bg-orange-500/10', hover: 'hover:border-orange-500/20', title: 'Smart Home, KNX & Local AI', desc: 'Home Assistant, PV/WP & KI-Kameras' },
+                { href: '/services/design/', icon: 'fa-palette', color: 'text-rose-400', bg: 'bg-rose-500/10', hover: 'hover:border-rose-500/20', title: 'UI/UX-Design & BFSG', desc: 'Figma-Prototypen (ab 980 €) & WCAG' },
+                { href: '/services/', icon: 'fa-briefcase', color: 'text-sky-400', bg: 'bg-sky-500/10', hover: 'hover:border-sky-500/20', title: 'Alle 22 Service-Pakete', desc: 'Preise & Dauer auf einen Blick (70 €/h)' }
               ].map(s => (
-                <a href={s.href} class="group flex gap-x-4 rounded-2xl p-4 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark shadow-sm hover:shadow-md">
+                <a href={s.href} class="group flex gap-x-4 rounded-2xl p-3.5 hover:bg-meg-bg-dark transition-all border border-transparent hover:border-meg-border-dark shadow-sm hover:shadow-md">
                   <div class={`size-10 flex-none flex items-center justify-center rounded-lg ${s.bg} ${s.color} group-hover:scale-110 transition-transform`}>
                     <i class={`fa-solid ${s.icon}`}></i>
                   </div>
@@ -123,6 +130,11 @@ const itServiceColors = getServiceColors('it-service');
                   </div>
                 </a>
               ))}
+            </div>
+            <div class="mt-3 pt-3 border-t border-meg-border-dark/50 grid grid-cols-3 gap-1.5">
+              <a href="/services/website-kosten/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ Was kostet eine Website?</a>
+              <a href="/services/kundenportal-entwickeln-lassen/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ Kundenportal entwickeln</a>
+              <a href="/services/website-relaunch-seo/" class="rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-slate-400 hover:text-meg-accent hover:bg-meg-bg-dark transition-all truncate">→ SEO &amp; GEO Relaunch</a>
             </div>
           </div>
         </div>
@@ -192,8 +204,8 @@ const itServiceColors = getServiceColors('it-service');
       <a href="/referenzen/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Referenzen</a>
       <a href="/blog/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Blog</a>
 
-      <a href="https://portal.waldheim.dev" target="_blank" class="ml-4 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-slate-900 shadow-lg shadow-meg-accent/20 hover:scale-[1.05] transition-all">
-        <span>Kundenportal</span>
+      <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="ml-4 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-slate-900 shadow-lg shadow-meg-accent/20 hover:scale-[1.05] transition-all">
+        <span>Waldheim Suite</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
       </a>
 
@@ -253,8 +265,8 @@ const itServiceColors = getServiceColors('it-service');
 
     <!-- Mobile Menu Trigger -->
     <div class="lg:hidden flex items-center">
-      <button type="button" class="button-toggle cursor-pointer rounded-lg p-2.5 bg-meg-surface-dark/50 text-slate-400 hover:text-meg-text-primary-dark border border-meg-border-dark transition-all">
-        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      <button type="button" aria-label="Hauptmenü öffnen" title="Hauptmenü öffnen" class="button-toggle cursor-pointer rounded-lg p-2.5 bg-meg-surface-dark/50 text-slate-400 hover:text-meg-text-primary-dark border border-meg-border-dark transition-all">
+        <i class="fa-solid fa-bars-staggered text-xl" aria-hidden="true"></i>
       </button>
     </div>
 
@@ -271,7 +283,6 @@ const itServiceColors = getServiceColors('it-service');
             </button>
             <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-meg-accent/20">
               <a href="/suite/" class="block p-2 text-sm font-bold text-meg-accent">Übersicht</a>
-              <a href="/suite/portal/" class="block p-2 text-sm text-slate-400">CustomerPortal</a>
               <a href="/suite/socialverse/" class="block p-2 text-sm text-slate-400">Socialverse CRM</a>
               <a href="/suite/forge/" class="block p-2 text-sm text-slate-400">Silvacore ERP</a>
               <a href="/suite/aether/" class="block p-2 text-sm text-slate-400">Aether</a>
@@ -363,8 +374,8 @@ const itServiceColors = getServiceColors('it-service');
             </button>
           </div>
 
-          <a href="https://portal.waldheim.dev" target="_blank" class="flex items-center justify-center gap-2 rounded-2xl bg-meg-accent py-4 font-black text-white shadow-xl shadow-meg-accent/20">
-            Kundenportal <i class="fa-solid fa-arrow-right"></i>
+          <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-2xl bg-meg-accent py-4 font-black text-white shadow-xl shadow-meg-accent/20">
+            Waldheim Suite <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </div>

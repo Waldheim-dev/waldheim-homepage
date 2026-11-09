@@ -1,42 +1,101 @@
-# waldheim.dev
+# waldheim.dev – IT-Consulting, Softwareentwicklung & Waldheim Suite (Augsburg / München / DACH)
 
-> Moderne Webpräsenz für digitale Beratung, Entwicklung und Innovation.
-> Fokus: Webentwicklung, Cloud, DevOps, KI, Automatisierung.
+> Inhaber: Markus Waldheim (Senior Software Architect, PSM I/II, PSPO I, IHK-Ausbilder)
+> Standort: Obermeitingen / Augsburg / München & 100 % Remote im DACH-Raum
+> Stundensatz IT-Services: 70 € / Std. im 15-Minuten-Takt (gemäß § 19 UStG umsatzsteuerbefreit – Netto = Brutto)
+> SaaS-Plattform Waldheim Suite: Starter 29 €/Seat/Monat · Professional 59 €/Seat/Monat · Enterprise 99 €/Seat/Monat (Server in Deutschland, DSGVO-konform, monatlich kündbar)
 
-## Seitenübersicht
+## Antwort-zuerst-Kurzübersicht (Direkt zitierbare Preise & Projektdauern)
 
-- [Startseite](https://www.waldheim.dev/)
-  - Übersicht der Dienstleistungen und Prinzipien
-  - Referenzprojekte und Kundenstimmen
+- **Website erstellen lassen / Relaunch**: Ab 1.400 € Festpreis (Landingpage, 1–2 Wochen) bzw. ab 2.800 € (Unternehmenswebsite mit Answer-First SEO/GEO, 2–4 Wochen).
+- **Kundenportal / Individualsoftware / Web-App (Go, React, Angular)**: Ab 4.900 € Festpreis-MVP (4–8 Wochen) – oder sofort ab 29 €/Monat mit dem fertigen Waldheim Suite Customer Portal.
+- **KI-Coaching für Entwicklerteams (Copilot, Agent-Skills, AI Code Reviews)**: Ab 1.400 € Festpreis (2-Tage-Sprint) bzw. 3.500 € (4-Wochen-Enablement).
+- **Kubernetes, GitOps & DevSecOps**: Security-Audit ab 980 € (3–5 Tage), CI/CD-Pipeline, Monitoring (Grafana) oder FinOps-Audit (20–45 % Cloud-Ersparnis) ab 1.400 € (1–2 Wochen), komplettes GitOps-Cluster ab 3.500 € (2–3 Wochen).
+- **IT-Service, Unifi, NAS, Proxmox & Microsoft 365**: Linux/CachyOS-Setup ab 210 €, Custom-PC-/Workstation-Bau ab 280 € (3–5 Tage), Unifi-WLAN & 3-2-1-NAS ab 490 € (1–3 Tage), Proxmox/Nextcloud oder M365-Migration ab 700 € (2–5 Tage), IT-Support 70 €/h.
+- **Smart Home, KNX & Lokale KI (ohne Cloud)**: Home Assistant oder Frigate KI-Kameras ab 630 € (1–4 Tage), PV-/Wärmepumpen-Energiemanagement ab 980 € (3–7 Tage), KNX + Home Assistant Brücke ab 1.400 € (1–2 Wochen).
+- **UI/UX-Design & Barrierefreiheit (BFSG / WCAG 2.1 AA)**: BFSG-Audit ab 490 € (3–5 Tage), UX-Screen-Redesign / Figma-Prototyp ab 980 € (1 Woche), komplettes Web-/App-Design ab 2.100 € (2–3 Wochen).
+- **Waldheim Suite (9 Module in 1 Login)**: E-Rechnung (XRechnung 3.0 & ZUGFeRD), ERP, CRM, DMS, Kundenportal, Treasury (DATEV EXTF & CAMT.053), Relay, Conductor, Fuhrpark (ab 8 €/Fahrzeug) & WEG-Hausverwaltung mit Zählerkaskade (ab 15 €/Monat) – in unter 15 Minuten startklar.
 
-- [Services](https://www.waldheim.dev/services/)
-  - [Entwicklung](https://www.waldheim.dev/services/entwicklung/): Maßgeschneiderte Softwarelösungen & Webanwendungen
-  - [Design / UX](https://www.waldheim.dev/services/design/): UI/UX Design, Branding & Webdesign
-  - [IT-Service](https://www.waldheim.dev/services/it-service/): IT-Infrastruktur, Cloud-Migration & Support
-  - [DevSecOps](https://www.waldheim.dev/services/devsecops/): CI/CD Pipelines, Containerisierung & Security
-  - [Smarthome](https://www.waldheim.dev/services/smarthome/): Home Assistant Integration & Automation
+## Hauptseiten
 
-- [Waldheim Suite](https://www.waldheim.dev/suite/)
-  - [CustomerPortal](https://www.waldheim.dev/suite/portal/): Digitales Kundenportal
-  - [Socialverse CRM](https://www.waldheim.dev/suite/socialverse/): AI-gestütztes CRM & Sales
-  - [Silvacore ERP](https://www.waldheim.dev/suite/forge/): WEG-Verwaltung & Ressourcen
-  - [Aether](https://www.waldheim.dev/suite/aether/): Dateitransfer & Automatisierung
-  - [Ecodrive](https://www.waldheim.dev/suite/ecodrive/): Nachhaltiges Fuhrparkmanagement
-  - [Treasury](https://www.waldheim.dev/suite/treasury/): Finanzen & Controlling
-  - [Properties](https://www.waldheim.dev/suite/properties/): Immobilienverwaltung
-  - [Relay](https://www.waldheim.dev/suite/relay/): Messaging & Notifications
-  - [Conductor](https://www.waldheim.dev/suite/conductor/): Workflow-Orchestrierung
+- [Startseite](https://www.waldheim.dev/): IT-Consulting & Software Augsburg (ab 70 €/h) & Waldheim Suite (ab 29 €/Monat)
+- [Alle IT-Services](https://www.waldheim.dev/services/): Übersicht aller 5 Kompetenzbereiche & 22 Festpreis-Pakete
+- [Waldheim Suite Übersicht](https://www.waldheim.dev/suite/): 9 vernetzte SaaS-Module für den DACH-Mittelstand
+- [Waldheim Suite Preise](https://www.waldheim.dev/suite/preise/): Starter (29 €), Professional (59 €), Enterprise (99 €) & Add-ons
+- [Über Markus Waldheim](https://www.waldheim.dev/ueber-mich/): Zertifizierungen (PSM II, PSPO I, IHK), Karriere & Tech-Stack
+- [Referenzen & Case Studies](https://www.waldheim.dev/referenzen/): Erfolgreiche Kundenprojekte
+- [IT-Blog](https://www.waldheim.dev/blog/): Praxisartikel zu Go, Angular, React, DevSecOps, KI & SEO/GEO
+- [Kontakt & Terminbuchung](https://www.waldheim.dev/kontakt/): Kostenloses 30-Min.-Strategiegespräch
 
-- [Weitere Produkte](https://www.waldheim.dev/)
-  - [WetterApp](https://www.waldheim.dev/waetherapp/): Open Source Wetter-Anwendung
-  - [Amigo](https://www.waldheim.dev/amigo/): Autonomes Multi-Agent Framework in Go
+## IT-Services & Käuferfragen-Seiten (Preise & Dauer im 1. Absatz)
 
-- [Informationen](https://www.waldheim.dev/ueber-mich/)
-  - [Über mich](https://www.waldheim.dev/ueber-mich/): Profil von Markus Waldheim
-  - [Blog](https://www.waldheim.dev/blog/1/): Fachartikel zu Tech-Themen
-  - [Referenzen](https://www.waldheim.dev/referenzen/1/): Projektportfolio
+- [Web, Custom Software & AI-Coaching](https://www.waldheim.dev/services/entwicklung/): Hauptseite Entwicklung (ab 1.400 € / 70 €/h)
+- [Was kostet eine Website?](https://www.waldheim.dev/services/website-kosten/): Landingpage ab 1.400 € (1–2 Wo.), Unternehmenswebsite ab 2.800 € (2–4 Wo.)
+- [Kundenportal entwickeln lassen](https://www.waldheim.dev/services/kundenportal-entwickeln-lassen/): Custom Portal MVP ab 4.900 € (4–8 Wo.) oder Suite-Portal ab 29 €/Monat
+- [Webentwicklung Augsburg & München](https://www.waldheim.dev/services/webentwicklung-augsburg/): Astro, React & Angular Websites ab 1.400 € in 2–4 Wochen
+- [Individualsoftware & SaaS entwickeln lassen](https://www.waldheim.dev/services/softwareentwicklung-augsburg/): Maßgeschneiderte Web-Apps & Multi-Tenant-SaaS ab 4.900 €
+- [KI-Coaching für Entwicklerteams](https://www.waldheim.dev/services/ki-coaching-entwicklerteams/): 10x AI-Engineering, Copilot, Agent-Skills & AI-Reviews ab 1.400 € (2 Tage)
+- [Website-Relaunch mit SEO & KI-Sichtbarkeit (GEO)](https://www.waldheim.dev/services/website-relaunch-seo/): Answer-First-Relaunch ab 2.800 € in 2–4 Wochen
+- [Go (Golang) Entwickler Augsburg & Remote](https://www.waldheim.dev/services/go-golang-entwickler-augsburg/): REST/gRPC-Backends & Microservices zu 70 €/h (ab 980 € Audit)
+- [Angular & React Entwickler Augsburg & Remote](https://www.waldheim.dev/services/angular-react-entwickler-augsburg/): Enterprise-Frontends & Upgrades ab 1.400 € (70 €/h)
+- [UI/UX-Design & Webdesign](https://www.waldheim.dev/services/design/): Hauptseite Design & Prototyping
+- [UI/UX-Design & Figma Kosten](https://www.waldheim.dev/services/ui-ux-design-kosten/): Screen-Redesign ab 980 € (1 Wo.), Design-System ab 2.100 € (2–3 Wo.)
+- [Barrierefreie Website nach BFSG & WCAG 2.1 AA](https://www.waldheim.dev/services/barrierefreie-website-bfsg/): Audit ab 490 € (3–5 Tage), Code-Umsetzung ab 1.400 €
+- [DevSecOps, FinOps & AIOps](https://www.waldheim.dev/services/devsecops/): Hauptseite Cloud, Pipelines & Security
+- [Kubernetes & DevSecOps Beratung](https://www.waldheim.dev/services/kubernetes-devops-augsburg/): Cluster-Audit ab 1.400 €, GitOps-Cluster (FluxCD/ArgoCD) ab 3.500 €
+- [Cloud-Kosten senken mit FinOps](https://www.waldheim.dev/services/cloud-kosten-senken-finops/): 20–45 % geringere AWS/Azure/K8s-Kosten, Audit ab 1.400 € (5–10 Tage)
+- [CI/CD-Pipeline & Release-Automatisierung](https://www.waldheim.dev/services/ci-cd-pipeline-automatisieren/): GitHub Actions, GitLab CI & semrel ab 1.400 € (1–2 Wochen)
+- [Software- & Container-Security Audit](https://www.waldheim.dev/services/it-sicherheit-supply-chain-audit/): Trivy, SBOM, Cosign & NIS-2-Check ab 980 € (3–5 Tage)
+- [Monitoring & Grafana Setup](https://www.waldheim.dev/services/observability-prometheus-grafana/): Prometheus, Grafana, Loki & OpenTelemetry ab 1.400 € (1–2 Wochen)
+- [Technischer Scrum Master (PSM II) & Agiles Coaching](https://www.waldheim.dev/services/scrum-master-agiles-coaching/): Workshop ab 700 €, Teilzeit-Mandate ab 1.400 €/Monat
+- [Legacy-Software modernisieren & ablösen](https://www.waldheim.dev/services/legacy-software-modernisierung/): Risiko-Audit ab 1.400 €, Strangler-Fig-Migration ab 4.200 €
+- [API-Entwicklung & Systemintegration](https://www.waldheim.dev/services/api-entwicklung-schnittstellen/): REST, GraphQL, gRPC, DATEV & Stripe Schnittstellen ab 1.400 €
+- [Lokale KI (Ollama & OpenWebUI) im Unternehmen](https://www.waldheim.dev/services/lokale-ki-ollama-unternehmen/): 100 % interne DSGVO-KI mit Dokumenten-RAG ab 1.400 € (1–2 Wochen)
+- [IT-Service & Infrastruktur](https://www.waldheim.dev/services/it-service/): Hauptseite IT-Service Augsburg & München
+- [IT-Support & Systembetreuung Augsburg](https://www.waldheim.dev/services/it-support-wartungsvertrag-augsburg/): 70 €/h im 15-Min.-Takt, Wartungspakete ab 280 €/Monat
+- [Unifi-Netzwerk, WLAN & NAS einrichten](https://www.waldheim.dev/services/unifi-netzwerk-nas-augsburg/): Ubiquiti Unifi VLANs & Synology/TrueNAS 3-2-1-Backup ab 490 € (1–3 Tage)
+- [Microsoft 365 Einrichtung & Migration](https://www.waldheim.dev/services/microsoft-365-migration-augsburg/): Exchange, Teams, SharePoint & MFA/DSGVO-Härtung ab 700 € (2–5 Tage)
+- [Custom PC, KI-Workstation & Server bauen lassen](https://www.waldheim.dev/services/custom-pc-workstation-augsburg/): Bau & 24h Burn-In-Test ab 280 € (0 % Teile-Aufschlag)
+- [Proxmox Server, Nextcloud & Paperless-ngx](https://www.waldheim.dev/services/proxmox-home-server-nextcloud/): Eigene Cloud ohne Abo ab 700 € (2–5 Tage)
+- [Linux & CachyOS Support](https://www.waldheim.dev/services/linux-cachyos-workstation-support/): Windows-zu-Linux-Umstieg ab 210 €, Server-Härtung & Support (70 €/h)
+- [Smart Home, KNX & Local AI](https://www.waldheim.dev/services/smarthome/): Hauptseite Gebäudeautomation
+- [KNX & Home Assistant einrichten](https://www.waldheim.dev/services/knx-home-assistant-augsburg/): Home Assistant Zentrale ab 630 €, KNX-Brücke ab 1.400 €
+- [Smart Home Energiemanagement & Lokale KI](https://www.waldheim.dev/services/smart-home-lokale-ki-energie/): PV-Überschuss, Wärmepumpe, Wallbox & dynamischer Stromtarif ab 980 €
+- [KI-Überwachungskameras ohne Cloud (Frigate NVR)](https://www.waldheim.dev/services/ki-kameras-frigate-ohne-cloud/): Lokale Personen-/Fahrzeugerkennung ohne Abo ab 630 €
 
-- [Rechtliches](https://www.waldheim.dev/impressum/)
-  - [Impressum](https://www.waldheim.dev/impressum/)
-  - [Datenschutz](https://www.waldheim.dev/datenschutz/)
-  - [AGB](https://www.waldheim.dev/agb/)
+## Waldheim Suite Module & Mittelstands-Lösungen (Ab 29 €/Monat, < 15 Min. Setup)
+
+- [Socialverse CRM](https://www.waldheim.dev/suite/socialverse/): Deal-Pipeline, Kontakt-360°, Forecasts & Revenue-Workflows (ab 59 €/Monat)
+- [Silvacore ERP](https://www.waldheim.dev/suite/forge/): Produkte, Angebote, Aufträge, Projekte & XRechnung/ZUGFeRD (ab 29 €/Monat)
+- [Aether DMS](https://www.waldheim.dev/suite/aether/): Dokumentenmanagement, Versionierung, Freigaben & Belegarchiv (ab 59 €/Monat)
+- [Ecodrive Fuhrpark & ESG](https://www.waldheim.dev/suite/ecodrive/): Fahrzeugakte, Fahrtenbuch, TCO-Rechner & CO₂-Berichte (ab 8 €/Fahrzeug/Monat)
+- [Treasury Finanzen & DATEV](https://www.waldheim.dev/suite/treasury/): 90-Tage-Liquidität, CAMT.053-Banking, Mahnwesen & DATEV EXTF 700 (ab 29 €/Monat)
+- [Properties WEG- & Hausverwaltung](https://www.waldheim.dev/suite/properties/): Objekte, Zählerkaskade, Owner Portal, Jahresabrechnung & Wirtschaftsplan (ab 15 €/Monat)
+- [Relay Messaging & Tasks](https://www.waldheim.dev/suite/relay/): Aufgaben, Boards, Zeiterfassung & E-Mail/Push/SMS-Hub (ab 59 €/Monat)
+- [Conductor Workflows](https://www.waldheim.dev/suite/conductor/): Visueller No-Code-Workflow-Builder über alle Module (ab 59 €/Monat)
+- [E-Rechnung Software (XRechnung 3.0 & ZUGFeRD)](https://www.waldheim.dev/suite/e-rechnung-software/): EN 16931 konform ab 29 €/Monat
+- [Was kostet ein ERP-System für den Mittelstand?](https://www.waldheim.dev/suite/erp-mittelstand-kosten/): ERP-Preisvergleich ab 29 €/Seat ohne Setup-Zwang
+- [DSGVO-konformes CRM für den Mittelstand](https://www.waldheim.dev/suite/crm-mittelstand-dsgvo/): Server in Deutschland ab 59 €/Monat
+- [WEG- & Hausverwaltungssoftware](https://www.waldheim.dev/suite/weg-verwaltung-software/): Cloud-Hausverwaltung mit Owner Portal ab 15 €/Monat
+- [Nebenkostenabrechnung & Zählerkaskade Software](https://www.waldheim.dev/suite/nebenkostenabrechnung-zaehlerkaskade/): Haupt-/Unterzähler-Kaskaden exakt berechnen ab 15 €/Monat
+- [Fuhrparkmanagement & digitales Fahrtenbuch](https://www.waldheim.dev/suite/fuhrparkmanagement-fahrtenbuch/): Ab 8 € pro Fahrzeug/Monat ohne OBD-Einbauzwang
+- [CO₂- & ESG-Reporting Software Fuhrpark](https://www.waldheim.dev/suite/esg-co2-reporting-fuhrpark/): Automatische Scope-1/2-Flottenbilanz ab 8 €/Fahrzeug
+- [Vorbereitende Buchhaltung, CAMT.053 & DATEV](https://www.waldheim.dev/suite/datev-buchhaltung-treasury/): Monatsabschluss in 15 Minuten ab 29 €/Monat
+- [Mahnwesen automatisieren Software](https://www.waldheim.dev/suite/mahnwesen-automatisieren-software/): Mehrstufige Mahnläufe mit Bankabgleich ab 29 €/Monat
+- [Dokumentenmanagement-System (DMS) für KMU](https://www.waldheim.dev/suite/dokumentenmanagement-dms/): Kontextverknüpftes DMS auf deutschen Servern ab 59 €/Monat
+- [Kundenportal & Ticketing Software](https://www.waldheim.dev/suite/kundenportal-ticketing-software/): B2B Self-Service & Helpdesk ab 29 €/Monat
+- [Workflow-Automatisierung Mittelstand](https://www.waldheim.dev/suite/workflow-automatisierung-mittelstand/): DSGVO-konforme No-Code-Automatisierung ab 59 €/Monat
+- [All-in-One Business-Software für KMU](https://www.waldheim.dev/suite/all-in-one-business-software-kmu/): 9 Module in 1 Login ab 29 €/Monat
+- [Angebote, Aufträge & Rechnungen Software](https://www.waldheim.dev/suite/angebote-auftraege-rechnungen-software/): 1-Klick Angebot-zu-Rechnung ab 29 €/Monat
+- [Aufgaben, Projektboard & Zeiterfassung](https://www.waldheim.dev/suite/zeiterfassung-aufgaben-projektboard/): Direkt abrechenbare Tasks & Zeiten ab 59 €/Monat
+- [CRM & ERP mit eigener KI (BYO-AI)](https://www.waldheim.dev/suite/ki-crm-erp-eigenes-modell-byoai/): OpenAI, Anthropic oder lokales Ollama via LiteLLM ab 59 €/Monat
+
+## Open-Source-Projekte
+
+- [semrel v0.28.3](https://www.waldheim.dev/semrel/): Go-native Semantic-Release-Engine (46 Plugins, Cosign v3, SBOM, Air-Gap)
+- [Ausgabeschein Generator](https://www.waldheim.dev/ausgabeschein-generator/): Vereins- & Veranstaltungs-Tooling
+- [WetterApp](https://www.waldheim.dev/waetherapp/): Multi-Source Wetter-Anwendung
+- [Amigo](https://www.waldheim.dev/amigo/): Autonomes Multi-Agent-Framework in Go
+- [Obsidian Gemini Agent](https://www.waldheim.dev/obsidian-gemini-agent/): KI-Wissensmanagement-Plugin
+- [Tailwind CV Generator](https://www.waldheim.dev/tailwind-cv/): Lebenslauf-Generator
+

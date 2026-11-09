@@ -69,16 +69,26 @@ const layer = [
       </div>
     </div>
 
-    <div class="py-12 mt-12">
+    <div class="py-8 mt-4">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex items-center gap-4 mb-12 gsap-fadein">
-          <h3 class="text-2xl font-black text-meg-text-primary-dark tracking-tight">Ecosystem</h3>
-          <div class="h-px flex-1 bg-meg-border-dark"></div>
-          <span class="text-[10px] font-black uppercase tracking-widest text-meg-text-secondary bg-meg-surface-dark px-2 py-1 rounded-lg">Full List</span>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 gsap-fadein">
-          {otherSkills.map((entry) => <SkillFlipCard entry={entry} />)}
-        </div>
+        <details id="ecosystem-skills-details" class="group rounded-3xl border border-meg-border-dark bg-meg-surface-dark/30 p-6 sm:p-8">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <div class="flex items-center gap-4 flex-1">
+              <h3 class="text-xl sm:text-2xl font-black text-meg-text-primary-dark tracking-tight">
+                Ecosystem &amp; Weitere Technologien ({otherSkills.length} Tools)
+              </h3>
+              <div class="h-px flex-1 bg-meg-border-dark hidden sm:block"></div>
+            </div>
+            <span class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-meg-accent bg-meg-accent/10 border border-meg-accent/20 px-3.5 py-2 rounded-xl">
+              <span>Vollständige Liste einblenden</span>
+              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform" aria-hidden="true"></i>
+            </span>
+          </summary>
+          <div id="ecosystem-skills-grid" class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+          <template id="ecosystem-skills-template">
+            {otherSkills.map((entry) => <SkillFlipCard entry={entry} />)}
+          </template>
+        </details>
       </div>
     </div>
   </section>
@@ -88,14 +98,31 @@ const layer = [
           const triggers = document.querySelectorAll(
             '[data-trigger="filter"]'
           );
-          const cards = document.querySelectorAll('[data-layer]');
+          const ecoDetails = document.getElementById('ecosystem-skills-details');
+          const ecoGrid = document.getElementById('ecosystem-skills-grid');
+          const ecoTpl = document.getElementById('ecosystem-skills-template');
+          const ensureEcosystemMounted = () => {
+            if (ecoGrid && ecoTpl instanceof HTMLTemplateElement && !ecoGrid.hasChildNodes()) {
+              ecoGrid.appendChild(ecoTpl.content.cloneNode(true));
+            }
+          };
+          ecoDetails?.addEventListener('toggle', () => {
+            if (ecoDetails instanceof HTMLDetailsElement && ecoDetails.open) {
+              ensureEcosystemMounted();
+            }
+          });
           triggers.forEach((trigger) => {
             trigger.addEventListener('click', () => {
+              ensureEcosystemMounted();
+              const cards = document.querySelectorAll('[data-layer]');
               let filtered = trigger.getAttribute('data-filtered') === 'true';
               const filter = trigger.getAttribute('data-filter');
               filtered = !filtered;
               if (filter === 'all') {
                 filtered = false;
+              }
+              if (filtered && ecoDetails instanceof HTMLDetailsElement) {
+                ecoDetails.open = true;
               }
               for (const nextTrigger of triggers) {
                 nextTrigger.classList.remove('bg-meg-accent', 'text-white', 'border-meg-accent');

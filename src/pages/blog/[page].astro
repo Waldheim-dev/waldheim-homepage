@@ -25,21 +25,25 @@ const allBlogs = (await getCollection('blog')).map((post) => ({
   id: post.id,
 }));
 
-// SEO & Meta
-const titel = 'IT-Insights & Tech-Blog | Waldheim.dev';
-const description =
-  'Fachartikel zu DevSecOps, Software-Architektur & Cloud-Native Strategien. Expertenwissen für CTOs & Entwickler im Raum Augsburg & München.';
+// SEO & Meta (Eindeutige Titel pro Seite + Canonical/noindex für Paginierung gegen GSC Duplikate)
+const isFirstPage = page.currentPage === 1;
+const titel = isFirstPage
+  ? 'IT-Blog: Go, Angular, DevSecOps & KI | Waldheim.dev'
+  : `IT-Blog & Fachartikel – Seite ${page.currentPage} von ${page.lastPage} | Waldheim.dev`;
+const description = isFirstPage
+  ? 'Praxisnahe Fachartikel zu Go, Angular, React, Kubernetes, DevSecOps, DSGVO & KI-Engineering von Senior Architect Markus Waldheim (Augsburg & München).'
+  : `Seite ${page.currentPage} von ${page.lastPage} im Waldheim.dev IT-Blog: Weitere Praxisbeiträge zu Go, Angular, DevSecOps, Cloud-Native und KI-Engineering.`;
 const keywords =
   'IT Blog Augsburg, DevSecOps Tipps, Softwareentwicklung Insights München, Cloud Security Blog, Tech Tutorials Bayern, Markus Waldheim Blog';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   {
     name: 'Home',
-    link: 'https://waldheim.dev',
+    link: 'https://www.waldheim.dev/',
   },
   {
     name: 'Blog',
-    link: 'https://waldheim.dev/blog',
+    link: 'https://www.waldheim.dev/blog/',
   },
 ]);
 
@@ -50,9 +54,9 @@ const articleSchema = page.data.map((post) =>
     datePublished: post.data.pubDate.toISOString(),
     dateModified: post.data.pubDate.toISOString(),
     description: post.data.description,
-    author: post.data.author,
+    author: 'Markus Waldheim',
     publisher: SITE_TITLE,
-    url: 'https://waldheim.dev/blog/' + post.id,
+    url: `https://www.waldheim.dev/blog/${post.id.replace(/^_/, '')}/`,
   }),
 );
 ---
@@ -62,6 +66,8 @@ const articleSchema = page.data.map((post) =>
   description={description}
   keywords={keywords}
   schema={[breadCrumbSchema, ...articleSchema]}
+  canonical={isFirstPage ? '/blog/' : undefined}
+  robots="noindex, follow"
 >
   <main id="main-content" class="bg-meg-bg-dark min-h-screen">
     <section class="py-24 px-6">

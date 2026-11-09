@@ -9,12 +9,16 @@ import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 import { SchemaUtils } from '../../../utils/schema';
 import AiImageBadge from '../../../components/AiImageBadge.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { getServiceSolutionsByCategory } from '../../../consts/seoCatalog';
 
-// SEO & Meta
-const titel = 'DevSecOps, FinOps, AIOps & AI-Coaching Augsburg/München';
-const description = 'Ihr Experte für DevSecOps, FinOps, AIOps & AI-Engineering-Coaching (>1.000% / 10x Produktivität): Sichere CI/CD-Pipelines, Kubernetes, Terraform, GitOps, AI Reviews & Skill-Automationen.';
+// SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis, < 68 Zeichen)
+const titel = 'DevSecOps, Kubernetes & Cloud Augsburg – ab 70 €/h | Waldheim';
+const description = 'DevSecOps, Kubernetes/GitOps, FinOps (20–45 % Cloud-Ersparnis) & Monitoring in Augsburg/München: Audits ab 980 €, Setup ab 1.400 € in 1–3 Wochen (70 €/h).';
 const keywords = 'DevSecOps Beratung Augsburg, FinOps Consulting München, AIOps Bayern, AI Code Review Automation, Skills Automationen, CI/CD Automatisierung Bayern, Kubernetes Consulting, GitOps Experte, Terraform';
 const ogImage = 'https://waldheim.dev/services/devsecops-og.jpg';
+const categorySolutions = getServiceSolutionsByCategory('devsecops');
 
 // Structured Data: Professional Service (Specific to DevSecOps)
 const serviceSchema = {
@@ -39,7 +43,9 @@ const serviceSchema = {
   'description': 'Automatisierung der Software-Lieferkette, FinOps-Cloud-Kostenoptimierung, AIOps-Observability sowie Team-Coaching für AI Reviews und Skill-Automationen (>1.000% Produktivität).',
   'offers': {
     '@type': 'Offer',
-    'description': 'Individuelles DevSecOps-/FinOps-/AIOps-Audit, Implementierung & Team-Coaching'
+    'price': '980',
+    'priceCurrency': 'EUR',
+    'description': 'Security-Audit ab 980 €, CI/CD- & FinOps-Setup ab 1.400 € (70 €/h, § 19 UStG)'
   }
 };
 
@@ -80,6 +86,17 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/" class="hover:text-meg-accent transition-colors font-semibold">Startseite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li><a href="/services/" class="hover:text-meg-accent transition-colors font-semibold">Services</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-violet-400 font-bold">DevSecOps, FinOps &amp; AIOps</li>
+      </ol>
+    </div>
+  </nav>
   <main id="main-content">
     <!-- Hero Section: Fokus auf ROI & Sicherheit -->
     <ServiceHero 
@@ -89,6 +106,21 @@ const faqSchema = SchemaUtils.getFAQSchema([
       gradient="purple"
       icon="fa-shield-halved"
       badge="DevSecOps · FinOps · AIOps · AI Review & Skills Coaching"
+    />
+
+    <AnswerFirstBox
+      question="Was kosten DevSecOps, Kubernetes-Setups und FinOps-Cloud-Optimierung bei Waldheim.dev?"
+      directAnswer="Ein technisches Container- & Supply-Chain-Security-Audit startet bei Waldheim.dev ab 980 € Festpreis (Dauer: 3–5 Tage). Das Einrichten einer automatisierten CI/CD-Pipeline, eines Prometheus/Grafana-Monitoring-Stacks oder eines FinOps-Cloud-Kosten-Audits (20–45 % Ersparnis) kostet ab 1.400 € Festpreis (Dauer: 1–2 Wochen). Komplette Kubernetes-GitOps-Cluster (FluxCD/ArgoCD) starten ab 3.500 € (Dauer: 2–3 Wochen) auf Basis von 70 €/h (§ 19 UStG, Netto = Brutto)."
+      price="Ab 980 € (70 €/h)"
+      priceSubtext="§ 19 UStG · Netto = Brutto"
+      duration="3 Tage bis 3 Wochen"
+      durationSubtext="Audits 3–5 Tage · Cluster 2–3 Wochen"
+      deliverable="CI/CD, Kubernetes/GitOps, FinOps & Grafana"
+      accentColor="purple"
+      primaryCtaText="DevSecOps-Erstgespräch buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Alle DevSecOps-Pakete ansehen"
+      secondaryCtaHref="#spezialpakete-devsecops"
     />
 
     <!-- Value Proposition: Warum DevSecOps, FinOps & AIOps? -->
@@ -169,7 +201,7 @@ const faqSchema = SchemaUtils.getFAQSchema([
               </li>
               <li class="flex items-start gap-3">
                 <i class="fa-solid fa-check text-emerald-400 mt-1" aria-hidden="true"></i>
-                <span><strong class="text-meg-text-primary-dark font-semibold">semrel (v0.28.2 Open Source):</strong> Eigenentwickelte Go-native Release- &amp; Supply-Chain-Automation (Workspace 2.0, Cosign v3, SBOM, SLSA, Air-Gap). <a href="/semrel/" class="text-violet-400 font-bold underline hover:text-violet-300">semrel entdecken →</a></span>
+                <span><strong class="text-meg-text-primary-dark font-semibold">semrel (v0.28.3 Open Source):</strong> Eigenentwickelte Go-native Release- &amp; Supply-Chain-Automation (Workspace 2.0, Cosign v3, SBOM, SLSA, Air-Gap). <a href="/semrel/" class="text-violet-400 font-bold underline hover:text-violet-300">semrel entdecken →</a></span>
               </li>
             </ul>
           </div>
@@ -231,6 +263,15 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </div>
       </div>
     </section>
+
+    <div id="spezialpakete-devsecops">
+      <SolutionDirectorySection
+        eyebrow="Antwort zuerst · DevSecOps, Cloud & Security Pakete"
+        heading="Alle DevSecOps-, Kubernetes- & FinOps-Pakete im Überblick"
+        subheading="Konkrete Festpreise, Einsparpotenziale und Durchlaufzeiten für Ihre Infrastruktur."
+        items={categorySolutions}
+      />
+    </div>
 
     <PriceService />
     <Blog limits={2} />

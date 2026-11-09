@@ -40,7 +40,7 @@ const colors = {
 };
 ---
 
-<section class='relative isolate pt-14 overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark'>
+<section class='relative isolate overflow-hidden bg-meg-bg-dark border-b border-meg-border-dark'>
   <!-- Three.js Interactive WebGL Background -->
   <InteractiveHeroCanvas particleColor={colors[gradient].particle} lineColor={colors[gradient].line} />
 
@@ -51,12 +51,12 @@ const colors = {
       style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
   </div>
 
-  <div class='py-24 sm:py-32 lg:pb-40'>
+  <div class='py-16 sm:py-24'>
     <div class='mx-auto max-w-7xl px-6 lg:px-8'>
       <div class='mx-auto max-w-3xl text-center'>
         <!-- Badge (optional) -->
         {badge && (
-          <div class='mt-24 sm:mt-32 lg:mt-16 gsap-fadein'>
+          <div class='gsap-fadein'>
             <span class={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-sm font-bold text-meg-text-primary-dark shadow-sm`}>
               <i class={`fa-solid ${icon} text-meg-accent`} aria-hidden='true'></i>
               {badge}
@@ -100,7 +100,7 @@ const colors = {
             rel='noopener noreferrer'
             class={`px-8 py-4 bg-meg-surface-dark/50 backdrop-blur-md border border-meg-border-dark text-meg-text-primary-dark font-semibold text-lg rounded-xl hover:bg-meg-surface-dark hover:border-meg-accent/50 transition-all duration-300 inline-flex items-center gap-2`}
           >
-            Kundenportal
+            Waldheim Suite
           </a>
         </div>
 

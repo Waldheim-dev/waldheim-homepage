@@ -8,11 +8,15 @@ import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { getServiceSolutionsByCategory } from '../../../consts/seoCatalog';
 
-const titel = 'Smart Home, KNX & Lokale KI Augsburg | Effizienz, Kostenoptimierung & Routinen';
-const description = 'Professionelle Smart-Home-Automation mit lokaler KI in Augsburg & München: KNX, Home Assistant, KI-gestützte Energiekosten- & Effizienzoptimierung, adaptive Routinen, Heizung, Rollos & AI-Kameras.';
+const titel = 'KNX Smart Home & Lokale KI Augsburg – ab 70 €/h | Waldheim.dev';
+const description = 'Smart Home mit KNX, Home Assistant & lokaler KI (ohne Cloud) in Augsburg & München: Einrichtung ab 630 € Festpreis (70 €/h) in 2 Tagen bis 2 Wochen.';
 const keywords = 'KNX Smart Home Augsburg, Smart Home lokale KI, Home Assistant Local AI, Smart Home Kostenoptimierung, Energieeffizienz Smart Home, Intelligente Routinen KI, Gebäudeautomation Bayern, AI Kameras Frigate';
 const ogImage = 'https://waldheim.dev/services/smarthome-og.jpg';
+const categorySolutions = getServiceSolutionsByCategory('smarthome');
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -87,6 +91,17 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/" class="hover:text-meg-accent transition-colors font-semibold">Startseite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li><a href="/services/" class="hover:text-meg-accent transition-colors font-semibold">Services</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-orange-400 font-bold">Smart Home, KNX &amp; Local AI</li>
+      </ol>
+    </div>
+  </nav>
   <main id="main-content">
     <ServiceHero 
       title="Smart Home, KNX & Local AI"
@@ -95,6 +110,21 @@ const faqSchema = SchemaUtils.getFAQSchema([
       gradient="orange"
       icon="fa-house"
       badge="KNX · Lokale KI · Kosten- & Effizienzoptimierung · Routinen"
+    />
+
+    <AnswerFirstBox
+      question="Was kosten KNX-Programmierung, Home Assistant und lokales KI-Energiemanagement in Augsburg?"
+      directAnswer="Die Einrichtung einer lokalen Home-Assistant-Zentrale oder eines lokalen KI-Kamerasystems (Frigate NVR / Unifi Protect ohne Cloud-Abo) startet bei Waldheim.dev ab 630 € Festpreis (Dauer: 1–4 Tage). Ein herstellerübergreifendes Energiemanagement (PV-Überschuss, Wärmepumpe, Wallbox & dynamischer Stromtarif) kostet ab 980 € (Dauer: 3–7 Tage), und eine komplette KNX-Home-Assistant-Brücke oder ETS-Parametrierung startet ab 1.400 € (70 €/h, § 19 UStG)."
+      price="Ab 630 € (70 €/h)"
+      priceSubtext="100 % lokal ohne Cloud-Abos · § 19 UStG"
+      duration="2 Tage bis 2 Wochen"
+      durationSubtext="Vor Ort in Augsburg/München & Remote"
+      deliverable="KNX, Home Assistant, PV/WP-Kopplung & KI-Kameras"
+      accentColor="orange"
+      primaryCtaText="Smart-Home-Beratung buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Smart-Home-Pakete ansehen"
+      secondaryCtaHref="#spezialpakete-smarthome"
     />
 
     <!-- Hauptleistungen -->
@@ -438,6 +468,15 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </div>
       </div>
     </section>
+
+    <div id="spezialpakete-smarthome">
+      <SolutionDirectorySection
+        eyebrow="Antwort zuerst · Smart Home, KNX & Lokale KI Pakete"
+        heading="Alle Smart-Home-Pakete mit Festpreisen & Dauer"
+        subheading="KNX, Home Assistant, PV-/Wärmepumpen-Optimierung und lokale KI-Kameras ohne Cloud."
+        items={categorySolutions}
+      />
+    </div>
 
     <PriceService />
     <Blog limits={2} />

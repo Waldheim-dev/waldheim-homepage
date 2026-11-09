@@ -8,12 +8,19 @@ import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 import AiImageBadge from '../../../components/AiImageBadge.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { getServiceSolutionsByCategory } from '../../../consts/seoCatalog';
 
-// SEO & Meta
-const titel = 'UI/UX Design & Branding Augsburg | Conversion-Optimierung';
-const description = 'User-centered Design für B2B-Anwendungen. Ich entwickle moderne Brandings, Interfaces & UX-Strategien, die Ihre Zielgruppe in Augsburg & München überzeugen.';
+// SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis, < 68 Zeichen)
+const titel = 'UI/UX-Design & Webdesign Augsburg – ab 980 € | Waldheim.dev';
+const description = 'UI/UX-Design, Figma-Prototypen & Webdesign in Augsburg/München: Screen-Redesigns ab 980 €, komplette Design-Systeme ab 2.100 € in 1–3 Wochen (70 €/h).';
 const keywords = 'UI Design Augsburg, UX Consulting München, Webdesign Bayern, Branding für Startups, Interface Design KMU, User Experience Optimierung';
 const ogImage = 'https://waldheim.dev/services/design-og.jpg';
+const categorySolutions = [
+  ...getServiceSolutionsByCategory('design'),
+  ...getServiceSolutionsByCategory('entwicklung').slice(0, 2),
+];
 
 // Structured Data: Service
 const serviceSchema = {
@@ -38,7 +45,9 @@ const serviceSchema = {
   'description': 'Entwicklung ganzheitlicher Designsysteme, intuitiver User Interfaces und nachhaltiger Markenidentitäten mit Fokus auf Conversion und Barrierefreiheit.',
   'offers': {
     '@type': 'Offer',
-    'description': 'Design-Sprints, UI-Konzepte & Brand-Identity Pakete'
+    'price': '980',
+    'priceCurrency': 'EUR',
+    'description': 'UX-Audit & Screen-Redesign ab 980 €, Komplettes Web-/App-Design ab 2.100 € (70 €/h, § 19 UStG)'
   }
 };
 
@@ -75,6 +84,17 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/" class="hover:text-meg-accent transition-colors font-semibold">Startseite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li><a href="/services/" class="hover:text-meg-accent transition-colors font-semibold">Services</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-rose-400 font-bold">Design &amp; UX</li>
+      </ol>
+    </div>
+  </nav>
   <main id="main-content">
     <!-- Hero Section -->
     <ServiceHero 
@@ -84,6 +104,21 @@ const faqSchema = SchemaUtils.getFAQSchema([
       gradient="rose"
       icon="fa-palette"
       badge="Design Thinking & User Centered Design"
+    />
+
+    <AnswerFirstBox
+      question="Was kosten UI/UX-Design, klickbare Figma-Prototypen und B2B-Webdesign?"
+      directAnswer="Ein fokussiertes UX-Audit mit Conversion-Redesign Ihrer Startseite oder zentralen App-Maske kostet bei Waldheim.dev 980 € Festpreis (Dauer: 1 Woche). Ein vollständiges Web- oder SaaS-Interface-Design in Figma inklusive klickbarem Prototyp, Komponenten-Bibliothek und WCAG-2.1-AA-Kontrastprüfung startet ab 2.100 € (Dauer: 2–3 Wochen) auf Basis von 70 €/h (§ 19 UStG, Netto = Brutto)."
+      price="Ab 980 € (70 €/h)"
+      priceSubtext="§ 19 UStG · Netto = Brutto"
+      duration="1–3 Wochen"
+      durationSubtext="Klickbarer Figma-Prototyp in 5–7 Tagen"
+      deliverable="Figma-Design, Klick-Prototyp, Design-System & A11y"
+      accentColor="rose"
+      primaryCtaText="Design-Erstgespräch buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Design-Pakete ansehen"
+      secondaryCtaHref="#spezialpakete-design"
     />
 
     <!-- Fokus-Bereiche -->
@@ -172,6 +207,15 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </div>
       </div>
     </section>
+
+    <div id="spezialpakete-design">
+      <SolutionDirectorySection
+        eyebrow="Antwort zuerst · UI/UX, Webdesign & Barrierefreiheit"
+        heading="Alle Design-, BFSG- & Relaunch-Pakete im Überblick"
+        subheading="Von klickbaren Figma-Prototypen bis zum kompletten Website-Neubau."
+        items={categorySolutions}
+      />
+    </div>
 
     <PriceService />
     <Blog limits={2} />

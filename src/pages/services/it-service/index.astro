@@ -8,12 +8,16 @@ import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
 import AiImageBadge from '../../../components/AiImageBadge.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { getServiceSolutionsByCategory } from '../../../consts/seoCatalog';
 
-// SEO & Meta
-const titel = 'IT-Service Augsburg & München | Custom PC, Unifi-Netzwerk, NAS, Microsoft 365, Linux & Windows';
-const description = 'Ganzheitlicher IT-Service in Bayern: Custom PCs & Workstations (Gaming, Office, Server), Unifi-Netzwerke, NAS & Backup nach 3-2-1-Regel, On-Premise-Dienste, Microsoft 365 und Systembetreuung für Windows, macOS & Linux – von Ubuntu bis CachyOS.';
+// SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis, < 68 Zeichen)
+const titel = 'IT-Service, Unifi & PC-Bau Augsburg – ab 70 €/h | Waldheim.dev';
+const description = 'IT-Service in Augsburg & München ab 70 €/h (§ 19 UStG): Custom PCs ab 280 €, Unifi-WLAN & NAS ab 490 €, Microsoft 365 ab 700 € sowie Linux/Windows/Mac.';
 const keywords = 'IT Service Augsburg, Custom PC Bayern, Gaming PC bauen Augsburg, Workstation PC München, Unifi Netzwerk Augsburg, NAS Einrichtung Bayern, Microsoft 365 Beratung, On-Premise Server, Linux CachyOS Augsburg, ArchLinux Setup, IT Infrastruktur KMU, Netzwerkinfrastruktur Augsburg, Home Server Einrichtung';
 const ogImage = 'https://waldheim.dev/services/it-service-og.jpg';
+const categorySolutions = getServiceSolutionsByCategory('it-service');
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -37,7 +41,9 @@ const serviceSchema = {
   'description': 'Umfassender IT-Service: Custom-PC-Konfiguration (Gaming, Workstation, Server), professionelle Unifi-Netzwerke, NAS & Backup, On-Premise-Server mit Proxmox, Microsoft 365 und Betreuung für Windows, macOS & Linux (Ubuntu bis CachyOS/Arch).',
   'offers': {
     '@type': 'Offer',
-    'description': 'Monatliche Wartungsverträge & On-Demand Support'
+    'price': '70',
+    'priceCurrency': 'EUR',
+    'description': 'IT-Support ab 70 €/h (15-Min.-Takt), PC-Bau ab 280 €, Unifi/NAS ab 490 €, M365 ab 700 €'
   }
 };
 
@@ -183,6 +189,17 @@ const selfHostedServices = [
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/" class="hover:text-meg-accent transition-colors font-semibold">Startseite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li><a href="/services/" class="hover:text-meg-accent transition-colors font-semibold">Services</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-emerald-400 font-bold">IT-Service &amp; Infrastruktur</li>
+      </ol>
+    </div>
+  </nav>
   <main id="main-content">
     <ServiceHero 
       title="IT-Service & Infrastruktur"
@@ -191,6 +208,21 @@ const selfHostedServices = [
       gradient="green"
       icon="fa-desktop"
       badge="Augsburg & München · Windows · macOS · Linux · CachyOS · Arch"
+    />
+
+    <AnswerFirstBox
+      question="Was kosten IT-Service, Unifi-Netzwerk, NAS-Backup und PC-Bau in Augsburg & München?"
+      directAnswer="IT-Support und Systemadministration kosten bei Waldheim.dev 70 € pro Stunde bei Abrechnung im 15-Minuten-Takt (gemäß § 19 UStG umsatzsteuerbefreit – Netto = Brutto). Unsere Festpreis-Pakete starten bei 210 € für ein Linux-/CachyOS-Setup (1–2 Tage), 280 € für Custom-PC- & Workstation-Bau (3–5 Tage), 490 € für Unifi-WLAN oder Synology/TrueNAS-3-2-1-Backup (1–3 Tage) und 700 € für Proxmox-Server oder Microsoft-365-Migrationen (2–5 Tage)."
+      price="70 €/h · Pakete ab 210 €"
+      priceSubtext="15-Min.-Takt · § 19 UStG (Netto = Brutto)"
+      duration="< 2 Std. Reaktion / 1–5 Tage"
+      durationSubtext="Remote-Soforthilfe & Vor-Ort in Augsburg/München"
+      deliverable="PC/Workstation, Unifi, NAS, Proxmox, M365 & Linux"
+      accentColor="green"
+      primaryCtaText="IT-Beratung & Termin buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Alle IT-Service-Pakete ansehen"
+      secondaryCtaHref="#spezialpakete-it"
     />
 
     <!-- Leistungsübersicht -->
@@ -497,6 +529,15 @@ const selfHostedServices = [
         </div>
       </div>
     </section>
+
+    <div id="spezialpakete-it">
+      <SolutionDirectorySection
+        eyebrow="Antwort zuerst · IT-Infrastruktur & Support Pakete"
+        heading="Alle IT-Service-Pakete mit Festpreisen & Dauer"
+        subheading="Von Unifi-Netzwerk und NAS über Microsoft 365 bis zu Custom Workstations und Linux."
+        items={categorySolutions}
+      />
+    </div>
 
     <PriceService />
     <Blog limits={2} />

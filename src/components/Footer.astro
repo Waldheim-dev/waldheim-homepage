@@ -59,7 +59,7 @@ try {
       <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-4">
           <a href="/" class="-m-1.5 inline-flex items-center gap-2 rounded-lg p-1.5 hover:bg-meg-surface-dark/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent">
-            <img class="h-8 w-auto transition-transform hover:scale-105" src="/waldheim.dev.png" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
+            <img class="h-8 w-auto transition-transform hover:scale-105" src="/waldheim.dev.svg" alt="Waldheim.dev Footer Logo" loading="lazy" width="32" height="32">
             <span class="font-bold tracking-tight">Waldheim.dev</span>
           </a>
           <p class="text-sm leading-5 text-meg-text-secondary">Let&apos;s build a better tomorrow, together</p>
@@ -107,10 +107,9 @@ try {
             <!-- Module-Grid -->
             <div class="grid grid-cols-2 gap-x-4 gap-y-2 my-4">
               {[
-                { href: '/suite/portal/',      label: 'CustomerPortal' },
                 { href: '/suite/socialverse/', label: 'Socialverse CRM' },
                 { href: '/suite/forge/',       label: 'Silvacore ERP' },
-                { href: '/suite/aether/',      label: 'Aether KI' },
+                { href: '/suite/aether/',      label: 'Aether DMS' },
                 { href: '/suite/ecodrive/',    label: 'Ecodrive' },
                 { href: '/suite/treasury/',    label: 'Treasury' },
                 { href: '/suite/properties/',  label: 'Properties' },
@@ -139,12 +138,15 @@ try {
         <!-- IT-Consulting -->
         <div>
           <h3 class="text-xs font-black uppercase tracking-[0.2em] text-meg-text-primary-dark mb-6">IT-Consulting</h3>
-          <ul class="space-y-4">
-            <li><a href="/services/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Alle Services</a></li>
+          <ul class="space-y-3">
+            <li><a href="/services/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Alle Services (70 €/h)</a></li>
             <li><a href="/services/entwicklung/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Web, Software &amp; AI-Coaching</a></li>
-            <li><a href="/services/devsecops/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">DevSecOps, FinOps &amp; AIOps</a></li>
-            <li><a href="/services/it-service/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Service & Infra</a></li>
+            <li><a href="/services/website-kosten/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Was kostet eine Website?</a></li>
+            <li><a href="/services/kundenportal-entwickeln-lassen/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Kundenportal entwickeln</a></li>
+            <li><a href="/services/devsecops/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">DevSecOps, FinOps &amp; K8s</a></li>
+            <li><a href="/services/it-service/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">IT-Service, Unifi &amp; NAS</a></li>
             <li><a href="/services/smarthome/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">Smart Home, KNX &amp; Local AI</a></li>
+            <li><a href="/services/design/" class="text-sm text-meg-text-secondary hover:text-meg-accent transition-colors">UI/UX-Design &amp; BFSG</a></li>
           </ul>
         </div>
 
@@ -191,7 +193,7 @@ try {
     <!-- Bottom Bar -->
     <div class="mt-16 pt-8 border-t border-meg-border-dark/50 flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-4">
-        <img class="h-6 w-auto opacity-50 grayscale" src="/waldheim.dev.png" alt="Logo" loading="lazy" width="24" height="24">
+        <img class="h-6 w-auto opacity-50 grayscale" src="/waldheim.dev.svg" alt="Logo" loading="lazy" width="24" height="24">
         <p class="text-[10px] font-bold text-meg-text-secondary uppercase tracking-widest">
           &copy; {date.getFullYear()} Waldheim.dev &middot; Obermeitingen &middot; v{version}
         </p>

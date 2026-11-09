@@ -9,8 +9,8 @@ import AiImageBadge from '../../components/AiImageBadge.astro';
 const projects = (await getCollection('projects'))
   .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
 
-const pageSize = 6;
-const paginatedProjects = projects.slice(0, pageSize);
+// Alle Projekte direkt verlinken (Click-Depth = 2 für 100% Indexierung aller Referenzen)
+const paginatedProjects = projects;
 
 // Alle Waldheim.dev SaaS-Produkte & Open-Source-Projekte gezielt hervorheben
 const productAndOssProjects = projects.filter((p) =>
@@ -162,18 +162,6 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
             })
           }
         </div>
-
-        {projects.length > pageSize && (
-          <div class="mt-20 text-center">
-            <a 
-              href="/referenzen/1/" 
-              class="inline-flex items-center gap-3 px-8 py-4 bg-meg-accent text-white font-bold rounded-2xl shadow-xl shadow-meg-accent/20 hover:scale-[1.05] transition-all"
-            >
-              Alle {projects.length} Fallstudien entdecken
-              <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
-            </a>
-          </div>
-        )}
       </div>
     </section>
 

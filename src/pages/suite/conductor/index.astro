@@ -10,8 +10,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   { name: 'Conductor', link: 'https://waldheim.dev/suite/conductor' },
 ]);
 
-const titel = 'Conductor – Workflow-Automatisierung | Waldheim Suite';
-const description = 'Conductor: Visueller Workflow-Builder für die Waldheim Suite. Automatisieren Sie Prozesse zwischen CRM, ERP, Treasury, Relay und weiteren Modulen – ohne eine Zeile Code. Teil der Waldheim Suite.';
+const titel = 'Workflow-Automatisierung Mittelstand – ab 59 € | Waldheim';
+const description = 'Waldheim Conductor: Visueller No-Code-Workflow-Builder für Prozesse zwischen CRM, ERP, Treasury, DMS & Webhooks ab 59 €/Seat/Monat in der Waldheim Suite.';
 const keywords = 'Conductor, Workflow-Automatisierung, No-Code, Trigger, Prozessautomatisierung, Waldheim Suite';
 
 const softwareSchema = {
@@ -21,8 +21,9 @@ const softwareSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: description,
-  url: 'https://waldheim.dev/suite/conductor',
-  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://waldheim.dev' },
+  url: 'https://www.waldheim.dev/suite/conductor/',
+  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://www.waldheim.dev/' },
+  offers: { '@type': 'Offer', price: '59', priceCurrency: 'EUR', availability: 'https://schema.org/OnlineOnly' },
 };
 
 const features = [
@@ -59,7 +60,7 @@ const nodeGraph = [
 
 <Layout title={titel} description={description} keywords={keywords} schema={[softwareSchema, breadCrumbSchema]}>
 
-  <nav class="pt-20 px-6 bg-meg-bg-dark" aria-label="Breadcrumb">
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
     <div class="max-w-7xl mx-auto">
       <ol class="flex items-center gap-2 text-sm text-meg-text-secondary">
         <li><a href="/suite/" class="hover:text-meg-accent transition-colors font-semibold">Waldheim Suite</a></li>
@@ -88,7 +89,7 @@ const nodeGraph = [
         <div class="gsap-fadein mb-6 flex flex-wrap justify-center gap-2" style="animation-delay: 0.1s">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-sm font-bold text-indigo-400">
             <i class="fa-solid fa-gears" aria-hidden="true"></i>
-            v0.11.3 · Release Candidate
+            v0.12.1 · Release Candidate
           </span>
           <span class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-xs font-semibold text-meg-text-secondary">
             <i class="fa-solid fa-code text-indigo-400" aria-hidden="true"></i>

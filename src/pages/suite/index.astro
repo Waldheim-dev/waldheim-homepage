@@ -3,6 +3,9 @@ import ROICalculator from '../../components/ROICalculator.astro';
 import InteractiveHeroCanvas from '../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../layouts/Layout.astro';
 import PromoServices from '../../components/PromoServices.astro';
+import AnswerFirstBox from '../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../components/SolutionDirectorySection.astro';
+import { ALL_SUITE_SOLUTIONS } from '../../consts/seoCatalog';
 
 import { SchemaUtils } from '../../utils/schema';
 import { getProductInfo } from '../../consts/productColors';
@@ -10,14 +13,14 @@ import { getProductInfo } from '../../consts/productColors';
 const suite = getProductInfo('suite')!;
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
-  { name: 'Home', link: 'https://waldheim.dev' },
-  { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
+  { name: 'Home', link: 'https://www.waldheim.dev/' },
+  { name: 'Waldheim Suite', link: 'https://www.waldheim.dev/suite/' },
 ]);
 
-// SEO & Meta
-const titel = 'Waldheim Suite | Modulare ERP- & CRM-Suite für den Mittelstand';
+// SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis, < 68 Zeichen)
+const titel = 'ERP & CRM Suite Mittelstand – ab 29 €/Monat | Waldheim Suite';
 const description =
-  'Modulare Business-Suite für den DACH-Mittelstand: Portal, CRM, ERP, DMS, Ecodrive & Treasury in einer Plattform. DSGVO-konform & E-Rechnung-ready.';
+  'Modulare ERP- & CRM-Suite für den Mittelstand ab 29 €/Monat: E-Rechnung (XRechnung/ZUGFeRD), CRM, DMS, Treasury, Fuhrpark, WEG & Workflows.';
 const keywords =
   'Business Software Suite Deutschland, E-Rechnungspflicht 2025 Software, ERP CRM integriert, Cloud-Native Business Apps, ZUGFeRD Rechnungssoftware, Mittelstand SaaS';
 
@@ -28,31 +31,21 @@ const softwareSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: description,
-  url: 'https://waldheim.dev/suite',
+  url: 'https://www.waldheim.dev/suite/',
   author: {
     '@type': 'Organization',
     name: 'Waldheim.dev',
-    url: 'https://waldheim.dev',
+    url: 'https://www.waldheim.dev/',
   },
   offers: {
     '@type': 'Offer',
-    price: '0',
+    price: '29',
     priceCurrency: 'EUR',
     availability: 'https://schema.org/OnlineOnly',
   },
 };
 
 const modules = [
-  {
-    href: '/suite/portal/',
-    icon: 'fa-id-card',
-    color: 'sky',
-    title: 'Customer Portal',
-    subtitle: 'Identität, Billing & Self-Service',
-    description:
-      'Zentrales Owner- und Kundenportal mit SSO, In-App-Ticket-System & Antwort-Flows, Rechnungsverwaltung, Abo-Steuerung und Self-Service.',
-    badge: 'Jetzt nutzbar',
-  },
   {
     href: '/suite/socialverse/',
     icon: 'fa-users-gear',
@@ -136,10 +129,10 @@ const modules = [
 ];
 
 const includedFeatures = [
-  'Alle 9 Suite-Module inklusive',
+  'Alle 8 Suite-Module in 1 App-Shell',
   'Unbegrenzte Mandanten-Isolation',
   'Single Sign-On & App Switcher',
-  'Owner Portal & Ticketing',
+  'Integriertes Support- & Billing-Desk',
   'DSGVO-konform (Server in DE)',
   'E-Rechnung (XRechnung / ZUGFeRD)',
   'Audit-Log & Rollenverwaltung',
@@ -149,7 +142,7 @@ const faqItems = [
   {
     question: 'Was ist in einem Seat enthalten?',
     answer:
-      'Ein Seat gibt einem Benutzer vollen Zugang zu allen 9 Modulen der Suite (Portal, CRM, ERP, Aether, Ecodrive, Treasury, Properties, Relay, Conductor). Module sind nicht einzeln buchbar – die Suite kommt als vollständiges Paket.',
+      'Ein Seat gibt einem Benutzer Zugang zu den im Tarif enthaltenen Suite-Modulen (CRM, ERP, Aether, Ecodrive, Treasury, Properties, Relay, Conductor) inklusive zentraler Suite-Shell für SSO, Billing und Support.',
   },
   {
     question: 'Wie funktioniert die Mandantentrennung?',
@@ -622,9 +615,9 @@ const complianceItems = [
             <div class="grid grid-cols-3 gap-3 mb-4">
               {
                 [
-                  { icon: 'fa-id-card', label: 'Portal', color: 'sky' },
                   { icon: 'fa-users-gear', label: 'CRM', color: 'violet' },
                   { icon: 'fa-building-columns', label: 'ERP', color: 'green' },
+                  { icon: 'fa-coins', label: 'Treasury', color: 'yellow' },
                   { icon: 'fa-atom', label: 'Aether', color: 'rose' },
                   { icon: 'fa-leaf', label: 'Ecodrive', color: 'emerald' },
                   { icon: 'fa-gears', label: 'Conductor', color: 'indigo' },
@@ -664,6 +657,22 @@ const complianceItems = [
   </section>
 
   <!-- Module Grid -->
+  <AnswerFirstBox
+    question="Was kostet die Waldheim Suite (ERP, CRM, DMS & E-Rechnung) und wie schnell ist sie einsatzbereit?"
+    directAnswer="Die Waldheim Suite kostet ab 29 € pro Nutzer und Monat im Starter-Tarif (Silvacore ERP inkl. XRechnung 3.0 & ZUGFeRD sowie Treasury inkl. DATEV-Export & CAMT.053), 59 € pro Monat im Professional-Tarif (+ Socialverse CRM, Aether DMS, Relay, Conductor & Bring Your Own AI) und 99 € pro Monat im Enterprise-Tarif (+ Ecodrive Fuhrpark & Properties WEG-Verwaltung). Sie ist in unter 15 Minuten im Browser startklar, monatlich kündbar und wird zu 100 % DSGVO-konform auf deutschen Servern betrieben."
+    price="Ab 29 € / Seat / Monat"
+    priceSubtext="Monatlich kündbar · 14 Tage kostenlos testen"
+    duration="Unter 15 Minuten"
+    durationSubtext="Sofort im Browser einsatzbereit"
+    deliverable="8 vernetzte Module in 1 Suite-Shell"
+    location="100 % Hosting in Deutschland (DSGVO)"
+    accentColor="blue"
+    primaryCtaText="Live-Demo sofort starten"
+    primaryCtaHref="https://suite.waldheim.dev"
+    secondaryCtaText="Alle Suite-Lösungen ansehen"
+    secondaryCtaHref="#suite-anwendungsfaelle"
+  />
+
   <section
     class="py-24 sm:py-32 px-6 bg-meg-bg-dark border-b border-meg-border-dark"
     aria-labelledby="modules-heading"
@@ -1041,93 +1050,6 @@ const complianceItems = [
                     </p>
                     <p class="text-xl font-black text-teal-400">{k.value}</p>
                     <p class="text-xs text-meg-text-secondary">{k.sub}</p>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-
-        <!-- Customer Portal Deep-dive -->
-        <div
-          class="gsap-fadein grid grid-cols-1 lg:grid-cols-2 gap-10 bg-meg-bg-dark border border-sky-500/20 rounded-3xl p-8 items-center"
-        >
-          <div
-            class="order-2 lg:order-1 bg-meg-surface-dark/60 rounded-2xl border border-sky-500/10 p-5"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <p
-                class="text-xs font-bold text-meg-text-secondary uppercase tracking-wider"
-              >
-                Kunden-Workspace
-              </p>
-              <span
-                class="text-xs bg-sky-500/10 text-sky-400 border border-sky-500/20 px-2 py-1 rounded-lg font-bold"
-                >Self-Service</span
-              >
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  { label: 'Offene Tickets', value: '4', sub: '1 kritisch' },
-                  { label: 'Antwortzeit', value: '1h 12m', sub: 'unter SLA' },
-                  {
-                    label: 'Offene Rechnungen',
-                    value: '€ 2.480',
-                    sub: '2 Belege',
-                  },
-                  { label: 'Aktive Module', value: '5', sub: 'Suite-weit' },
-                ].map((k) => (
-                  <div class="bg-meg-bg-dark/60 rounded-xl p-3">
-                    <p class="text-xs text-meg-text-secondary mb-1">
-                      {k.label}
-                    </p>
-                    <p class="text-xl font-black text-sky-400">{k.value}</p>
-                    <p class="text-xs text-meg-text-secondary">{k.sub}</p>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-          <div class="order-1 lg:order-2">
-            <div class="flex items-center gap-3 mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center"
-              >
-                <i
-                  class="fa-solid fa-id-card text-sky-400 text-xl"
-                  aria-hidden="true"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-black text-meg-text-primary-dark">
-                  CustomerPortal
-                </h3>
-                <p class="text-sm text-sky-400 font-semibold">
-                  Identität, Billing & Support
-                </p>
-              </div>
-            </div>
-            <p class="text-meg-text-secondary mb-6 leading-relaxed">
-              Ein zentraler Self-Service-Zugang für Kunden: Supportfälle,
-              Rechnungen, Abos und Nutzerzugänge laufen im selben Workspace
-              zusammen statt über Backoffice-Mails und manuelle Freigaben.
-            </p>
-            <div class="grid grid-cols-2 gap-3">
-              {
-                [
-                  'Tickets mit SLA & Historie',
-                  'Rechnungen & Zahlungsstatus',
-                  'Abo- und Modulverwaltung',
-                  'Nutzer & Rollen',
-                  'Belege aus Aether',
-                  'Benachrichtigungen via Relay',
-                ].map((f) => (
-                  <div class="flex items-center gap-2 text-sm text-meg-text-secondary">
-                    <i
-                      class="fa-solid fa-circle-check text-sky-400 text-xs shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span>{f}</span>
                   </div>
                 ))
               }
@@ -1781,7 +1703,7 @@ const complianceItems = [
           Sofort starten mit v{suite.version}
         </h2>
         <p class="text-xl text-meg-text-secondary mb-8 max-w-2xl mx-auto">
-          Die Waldheim Suite steht kurz vor dem v1.0 Stable Release und ist ab sofort produktiv nutzbar – starten Sie direkt in der Live-Demo oder im Kundenportal.
+          Die Waldheim Suite steht mit v{suite.version} in den finalen Startlöchern vor dem v1.0 Stable Release und ist ab sofort produktiv in der Live-Demo nutzbar.
         </p>
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -1809,6 +1731,15 @@ const complianceItems = [
       </div>
     </div>
   </section>
+
+  <div id="suite-anwendungsfaelle">
+    <SolutionDirectorySection
+      eyebrow="Antwort zuerst · Alle 16 Suite-Lösungen & Kostenfragen"
+      heading="Konkrete Lösungen für E-Rechnung, ERP, CRM, DMS, Fuhrpark & WEG"
+      subheading="Erfahren Sie auf jeder Spezialseite sofort im ersten Absatz, was die jeweilige Lösung kostet und wie schnell Ihr Team produktiv startet."
+      items={ALL_SUITE_SOLUTIONS}
+    />
+  </div>
 </Layout>
 
 <script>

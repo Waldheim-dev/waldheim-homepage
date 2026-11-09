@@ -14,19 +14,31 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props;
 const categories = (await getCollection('projects_kategorie'));
+const isFirstPage = page.currentPage === 1;
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: Astro.url.hostname
+  link: 'https://www.waldheim.dev/'
 }, {
   name: 'Referenzen',
-  link: Astro.url.href
+  link: 'https://www.waldheim.dev/referenzen/'
 }]);
 
-const titel = 'Projekte & Referenzen - waldheim.dev';
-const description = 'Entdecken Sie unsere Referenzprojekte: Webentwicklung, Softwarelösungen, Design und mehr. Überzeugen Sie sich von unserer Expertise und Qualität.';
+const titel = isFirstPage
+  ? 'Case Studies & IT-Referenzen Augsburg | Waldheim.dev'
+  : `Referenzen & Case Studies – Seite ${page.currentPage} | Waldheim.dev`;
+const description = isFirstPage
+  ? 'Entdecken Sie unsere Referenzprojekte: Webentwicklung, Softwarelösungen, Design und mehr. Überzeugen Sie sich von unserer Expertise und Qualität.'
+  : `Seite ${page.currentPage} unserer IT-, Software- und Design-Referenzprojekte bei Waldheim.dev.`;
 const keywords = 'Softwareprojekte, Webentwicklungsprojekte, IT-Projekte, Referenzen, Portfolio, Webdesign';
 ---
-<Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
+<Layout
+  title={titel}
+  description={description}
+  keywords={keywords}
+  schema={[breadCrumbSchema]}
+  canonical={isFirstPage ? '/referenzen/' : undefined}
+  robots="noindex, follow"
+>
   <div class="py-24 sm:py-32 bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center gsap-fadein">

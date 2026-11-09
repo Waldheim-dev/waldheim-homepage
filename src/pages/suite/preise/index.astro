@@ -2,18 +2,21 @@
 import InteractiveHeroCanvas from '../../../components/InteractiveHeroCanvas.astro';
 import Layout from '../../../layouts/Layout.astro';
 import PromoServices from '../../../components/PromoServices.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { ALL_SUITE_SOLUTIONS } from '../../../consts/seoCatalog';
 
 import { SchemaUtils } from '../../../utils/schema';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
-  { name: 'Home', link: 'https://waldheim.dev' },
-  { name: 'Waldheim Suite', link: 'https://waldheim.dev/suite' },
-  { name: 'Preise', link: 'https://waldheim.dev/suite/preise' },
+  { name: 'Home', link: 'https://www.waldheim.dev/' },
+  { name: 'Waldheim Suite', link: 'https://www.waldheim.dev/suite/' },
+  { name: 'Preise', link: 'https://www.waldheim.dev/suite/preise/' },
 ]);
 
-const titel = 'Preise – Waldheim Suite | Waldheim.dev';
+const titel = 'ERP & CRM Suite Preise – ab 29 €/Seat/Monat | Waldheim Suite';
 const description =
-  'Modulares Value-based Pricing für den DACH-Mittelstand: Starter ab 29 EUR, Professional ab 59 EUR, Enterprise ab 99 EUR – inklusive E-Rechnung, CRM, ERP, BYO-AI und DSGVO-konformer Datenhaltung in Deutschland.';
+  'Waldheim Suite Preise für KMU: Starter 29 €, Professional 59 €, Enterprise 99 € pro Seat/Monat – inkl. E-Rechnung, CRM, ERP, DMS & DSGVO-Cloud.';
 const keywords =
   'Waldheim Suite Preise, SaaS Pricing DACH, per Seat, CRM ERP Suite, Mittelstand, E-Rechnung, ZUGFeRD, XRechnung, Starter Professional Enterprise';
 
@@ -24,8 +27,14 @@ const softwareSchema = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: description,
-  url: 'https://waldheim.dev/suite/preise',
-  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://waldheim.dev' },
+  url: 'https://www.waldheim.dev/suite/preise/',
+  author: { '@type': 'Organization', name: 'Waldheim.dev', url: 'https://www.waldheim.dev/' },
+  offers: {
+    '@type': 'Offer',
+    price: '29',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/OnlineOnly',
+  },
 };
 
 const pricingTiers = [
@@ -34,13 +43,13 @@ const pricingTiers = [
     price: '29',
     badge: 'Compliance-Wedge',
     popular: false,
-    desc: 'Das ideale Fundament für E-Rechnungs-Compliance, Basisbuchhaltung und Kundenportal.',
-    modules: ['Customer Portal', 'Silvacore ERP', 'Treasury'],
+    desc: 'Das ideale Fundament für E-Rechnungs-Compliance, Basisbuchhaltung und Mandanten-Workspace.',
+    modules: ['Silvacore ERP', 'Treasury'],
     features: [
       { icon: 'fa-file-invoice', text: 'E-Rechnung: ZUGFeRD & XRechnung' },
       { icon: 'fa-calculator', text: 'Finanzbuchhaltung & DATEV-Schnittstelle' },
       { icon: 'fa-building-columns', text: 'Banking-Abgleich & Mahnwesen' },
-      { icon: 'fa-headset', text: 'Basis-Ticketing (Customer Portal)' },
+      { icon: 'fa-headset', text: 'Integriertes Basis-Ticketing & Support-Desk' },
       { icon: 'fa-shield-halved', text: 'RLS Mandanten-Isolation & MFA' },
     ],
     cta: 'Demo starten',
@@ -54,7 +63,7 @@ const pricingTiers = [
     badge: 'Empfohlen',
     popular: true,
     desc: 'Die komplette Suite für Vertrieb, Dokumente, Automation und eigene KI-Modelle.',
-    modules: ['Customer Portal', 'Silvacore ERP', 'Treasury', 'Socialverse CRM', 'Aether', 'Relay', 'Conductor'],
+    modules: ['Silvacore ERP', 'Treasury', 'Socialverse CRM', 'Aether', 'Relay', 'Conductor'],
     features: [
       { icon: 'fa-check', text: 'Alle Features aus Starter' },
       { icon: 'fa-network-wired', text: 'Lead- & Opportunity-Pipeline (Socialverse CRM)' },
@@ -139,7 +148,6 @@ const modules = [
   { icon: 'fa-building-columns', name: 'Silvacore ERP', desc: 'Produkte, Projekte, Auftrage, Ressourcen', color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
   { icon: 'fa-folder-open', name: 'Aether', desc: 'Dokumente, Assets, Wissens-Objekte', color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20' },
   { icon: 'fa-truck', name: 'Ecodrive', desc: 'Flotten, Routen, CO2, ESG-Reporting', color: 'text-teal-400', bg: 'bg-teal-500/10', border: 'border-teal-500/20' },
-  { icon: 'fa-headset', name: 'Customer Portal', desc: 'Tickets, Rechnungen, Abo-Verwaltung', color: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
   { icon: 'fa-coins', name: 'Treasury', desc: 'Liquiditat, Budgets, Kostenstellen, Cashflow', color: 'text-yellow-400', bg: 'bg-yellow-500/10', border: 'border-yellow-500/20' },
   { icon: 'fa-building', name: 'Properties', desc: 'Objekte, Einheiten, WEG-Abrechnung, Rucklagen', color: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/20' },
   { icon: 'fa-tower-broadcast', name: 'Relay', desc: 'E-Mail, Push, SMS und In-App-Benachrichtigungen', color: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/20' },
@@ -149,7 +157,7 @@ const modules = [
 const included = [
   'Module flexibel nach Bedarf aktivierbar',
   'Strikte RLS Mandanten-Isolation (Multi-Tenant)',
-  'Single Sign-On (SSO) und MFA uber Kundenportal',
+  'Single Sign-On (SSO) und MFA in der Suite-Shell',
   'App Switcher zwischen allen Modulen',
   'DSGVO-konforme Datenhaltung in Deutschland',
   'Stripe-Abo, monatlich kundbar',
@@ -160,7 +168,7 @@ const included = [
 const faqs = [
   {
     q: 'Was ist in einem Seat enthalten?',
-    a: 'Ein Seat gibt einem Benutzer Zugang zu allen im Tier enthaltenen Suite-Modulen. Starter: Portal, ERP, Treasury. Professional: + CRM, DMS, Relay, Conductor. Enterprise: + Ecodrive, Properties.'
+    a: 'Ein Seat gibt einem Benutzer Zugang zu allen im Tier enthaltenen Suite-Modulen. Starter: ERP, Treasury & Suite-Core. Professional: + CRM, DMS, Relay, Conductor. Enterprise: + Ecodrive, Properties.'
   },
   {
     q: 'Was kostet das Enterprise-Tier?',
@@ -180,7 +188,7 @@ const faqs = [
   },
   {
     q: 'Was bedeutet "Bring Your Own AI"?',
-    a: 'Im Professional- und Enterprise-Tier konnen Sie Ihre eigenen API-Schlussel für OpenAI, Anthropic oder andere Anbieter hinterlegen. Die Suite leitet Anfragen uber einen LiteLLM-Proxy weiter – Ihre Schlussel bleiben verschlusselt und verlassen nie unkontrolliert Ihren Mandanten.'
+    a: 'Im Professional- und Enterprise-Tier konnen Sie Ihre eigenen API-Schlussel für OpenAI, Anthropic, Azure AI oder Ihren eigenen lokalen Ollama-Server hinterlegen. Die Suite leitet Anfragen uber unser LiteLLM-Gateway weiter: Sie zahlen nur Ihren tatsachlichen Token-Verbrauch direkt an Ihren KI-Provider (oder 0 EUR bei lokalem Ollama), wahrend Ihr Suite-Seat-Preis konstant und kalkulierbar bleibt.'
   },
   {
     q: 'Was bedeutet Multi-Tenant?',
@@ -225,6 +233,22 @@ const faqs = [
   </section>
 
   <!-- Pricing Tiers Grid -->
+  <AnswerFirstBox
+    question="Was kosten die Tarife und Add-ons der Waldheim Suite pro Monat?"
+    directAnswer="Die Waldheim Suite startet im Starter-Tarif bei 29 € pro Seat/Monat (Silvacore ERP inkl. E-Rechnung, Treasury inkl. DATEV sowie Suite-Core mit SSO & Support). Der empfohlene Professional-Tarif kostet 59 € pro Seat/Monat (+ Socialverse CRM, Aether DMS, Relay, Conductor & Bring Your Own AI) und ist 14 Tage kostenlos testbar. Der Enterprise-Tarif für 99 € pro Seat/Monat schaltet zusätzlich Ecodrive (Fuhrpark, sonst ab 8 €/Fahrzeug) und Properties (WEG-/Hausverwaltung, sonst ab 15 €/Monat) frei."
+    price="29 € / 59 € / 99 €"
+    priceSubtext="Pro Seat / Monat · Monatlich kündbar"
+    duration="Sofort (< 15 Min.)"
+    durationSubtext="14 Tage Trial ohne Kreditkarte"
+    deliverable="0 € Pflicht-Setup · Bis zu 40 % Early-Adopter-Rabatt"
+    location="Server in Deutschland (DSGVO)"
+    accentColor="blue"
+    primaryCtaText="14 Tage kostenlos testen"
+    primaryCtaHref="https://suite.waldheim.dev"
+    secondaryCtaText="Spezialseiten je Anwendungsfall"
+    secondaryCtaHref="#suite-preis-fragen"
+  />
+
   <section class="px-6 pb-24 bg-meg-bg-dark">
     <div class="mx-auto max-w-7xl">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -404,6 +428,15 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <div id="suite-preis-fragen">
+    <SolutionDirectorySection
+      eyebrow="Antwort zuerst · Detailpreise nach Anwendungsfall"
+      heading="Alle Suite-Lösungen & Kostenvergleiche im Detail"
+      subheading="Wählen Sie Ihren Schwerpunkt von E-Rechnung und DATEV bis zu WEG-Zählerkaskade und Fuhrpark-ESG."
+      items={ALL_SUITE_SOLUTIONS}
+    />
+  </div>
 
   <PromoServices />
 

@@ -105,18 +105,37 @@ export class SchemaUtils {
   }
 
   static getArticleSchema(article: Article) {
+    const authorName =
+      typeof article.author === 'string'
+        ? article.author
+        : 'Markus Waldheim';
+    const imageUrl = article.image?.startsWith('http')
+      ? article.image
+      : `https://www.waldheim.dev${article.image?.startsWith('/') ? '' : '/'}${article.image || 'waldheim-dev-og.jpg'}`;
     return {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
+      '@type': 'BlogPosting',
       headline: article.title,
-      image: article.image,
-      author: article.author,
+      image: imageUrl,
+      author: {
+        '@type': 'Person',
+        name: authorName,
+        url: 'https://www.waldheim.dev/ueber-mich/',
+      },
       datePublished: article.datePublished,
       dateModified: article.dateModified,
-      mainEntityOfPage: article.url,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': article.url,
+      },
       publisher: {
         '@type': 'Organization',
-        name: article.publisher,
+        name: 'Waldheim.dev',
+        url: 'https://www.waldheim.dev/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.waldheim.dev/waldheim.dev.png',
+        },
       },
       description: article.description,
     };

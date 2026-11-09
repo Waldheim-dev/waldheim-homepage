@@ -5,6 +5,7 @@ import Toggle from './Inputs/Toggle.astro';
 
 const { title, image, video, isEmbedded = false } = Astro.props;
 const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.waldheim.dev/api/v1/management/contact-intake';
+const contactIntakeToken = import.meta.env.PUBLIC_CONTACT_INTAKE_TOKEN ?? '';
 ---
 <div class={`relative isolate ${!isEmbedded ? 'py-24 sm:py-32 lg:pb-40' : ''}`}>
   {!isEmbedded && (
@@ -89,8 +90,28 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
                           placeholder="+49 123 4567890"
                           className="sm:col-span-2"
                       />
+                      <div class="sm:col-span-2">
+                        <label for="inquiry_topic" class="block text-xs font-bold uppercase tracking-wider text-meg-text-secondary mb-2">
+                          Gewünschter Bereich / Paket
+                        </label>
+                        <select
+                          id="inquiry_topic"
+                          name="inquiry_topic"
+                          class="w-full rounded-xl bg-meg-bg-dark/80 border border-meg-border-dark px-4 py-3 text-sm text-meg-text-primary-dark focus:border-meg-accent focus:outline-none"
+                        >
+                          <option value="Webentwicklung / Website (ab 1.400 €)">Webentwicklung / Website (ab 1.400 €)</option>
+                          <option value="Individualsoftware / Kundenportal (ab 4.900 €)">Individualsoftware / Kundenportal (ab 4.900 €)</option>
+                          <option value="Waldheim Suite (ERP, CRM, E-Rechnung, WEG, Fuhrpark)">Waldheim Suite (ERP, CRM, E-Rechnung, WEG, Fuhrpark)</option>
+                          <option value="KI-Coaching für Entwicklerteams (ab 1.400 €)">KI-Coaching für Entwicklerteams (ab 1.400 €)</option>
+                          <option value="DevSecOps, Kubernetes & FinOps (ab 980 €)">DevSecOps, Kubernetes &amp; FinOps (ab 980 €)</option>
+                          <option value="IT-Service, Unifi, NAS, M365 & PC-Bau (ab 280 €)">IT-Service, Unifi, NAS, M365 &amp; PC-Bau (ab 280 €)</option>
+                          <option value="Smart Home, KNX & Lokale KI (ab 630 €)">Smart Home, KNX &amp; Lokale KI (ab 630 €)</option>
+                          <option value="UI/UX-Design & Barrierefreiheit BFSG (ab 490 €)">UI/UX-Design &amp; Barrierefreiheit BFSG (ab 490 €)</option>
+                          <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+                        </select>
+                      </div>
                       <Textarea
-                          label="Ihre Nachricht"
+                          label="Ihre Nachricht (mind. 10 Zeichen)"
                           name="message"
                           rows="4"
                           className="sm:col-span-2"
@@ -125,7 +146,7 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
     </div>
   </div>
 
-  <script is:inline define:vars={{ contactApiUrl }}>
+  <script is:inline define:vars={{ contactApiUrl, contactIntakeToken }}>
     (function() {
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
@@ -134,39 +155,65 @@ const contactApiUrl = import.meta.env.PUBLIC_CONTACT_API_URL ?? 'https://suite.w
 
       if (!form) return;
       if (submittedAtField instanceof HTMLInputElement) {
-        submittedAtField.value = String(Date.now());
+        submittedAtField.value = String(Date.now() - 3000);
       }
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Wird gesendet...';
-        
+        status.classList.add('hidden');
+
         const formData = new FormData(form);
+        const rawMessage = String(formData.get('message') || '').trim();
+        const topic = String(formData.get('inquiry_topic') || '').trim();
+        if (rawMessage.length < 10) {
+          status.textContent = 'Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein.';
+          status.classList.remove('hidden');
+          status.classList.add('text-amber-400');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Ticket &amp; CRM-Kontakt werden angelegt...';
+        
         if (submittedAtField instanceof HTMLInputElement && !submittedAtField.value) {
-          submittedAtField.value = String(Date.now());
+          submittedAtField.value = String(Date.now() - 3000);
           formData.set('submitted_at', submittedAtField.value);
         }
         const data = Object.fromEntries(formData.entries());
+        if (topic) {
+          data.message = `[Bereich: ${topic}]\n${rawMessage}`;
+        }
+        if (contactIntakeToken) {
+          data.intake_token = contactIntakeToken;
+        }
 
         try {
+          const headers = { 'Content-Type': 'application/json' };
+          if (contactIntakeToken) {
+            headers['X-Intake-Token'] = contactIntakeToken;
+          }
           const response = await fetch(contactApiUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers,
             body: JSON.stringify(data),
           });
 
           if (response.ok) {
+            try {
+              const resJson = await response.json();
+              if (resJson && resJson.ticket_id) {
+                sessionStorage.setItem('waldheim_last_ticket_id', String(resJson.ticket_id));
+              }
+            } catch (_) {}
             window.location.href = '/danke/';
           } else {
             throw new Error('Server-Fehler');
           }
         } catch (error) {
           console.error('Fehler:', error);
-          status.textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+          status.innerHTML = 'Die Direktübermittlung zur Suite ist fehlgeschlagen. Sie können Ihre Anfrage direkt per E-Mail an <a href="mailto:kontakt@waldheim.dev" class="underline text-meg-accent">kontakt@waldheim.dev</a> senden.';
           status.classList.remove('hidden');
-          status.classList.add('text-rose-500');
+          status.classList.add('text-rose-400');
           btn.disabled = false;
           btn.innerHTML = 'Anfrage senden <i class="fa-solid fa-paper-plane text-xs"></i>';
         }

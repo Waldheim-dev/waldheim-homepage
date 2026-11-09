@@ -119,9 +119,13 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
               </p>
             </div>
             <Contact isEmbedded={true} />
-            <div class="px-8 sm:px-10 pb-8">
-              <p class="text-[10px] text-meg-text-secondary/50 text-center italic leading-tight">
-                Ihre Daten werden sicher verschlüsselt an mein CRM-System (Socialverse API) übertragen und ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+            <div class="px-8 sm:px-10 pb-8 space-y-2">
+              <p class="text-[11px] text-meg-text-secondary text-center leading-relaxed">
+                <i class="fa-solid fa-shield-halved text-emerald-400 mr-1" aria-hidden="true"></i>
+                Ihre Anfrage wird TLS-verschlüsselt direkt an den <strong>Contact-Intake der Waldheim Suite</strong> (<code>suite.waldheim.dev/api/v1/management/contact-intake</code>) übermittelt: Dort wird im Haupt-Mandanten automatisch ein <strong>Support-Ticket (24h-SLA)</strong> in Nexus/Portal sowie Ihr <strong>CRM-Kontakt</strong> angelegt.
+              </p>
+              <p class="text-[11px] text-meg-text-secondary text-center">
+                Alternativ erreichen Sie mich jederzeit direkt per E-Mail unter <a href="mailto:kontakt@waldheim.dev" class="text-meg-accent font-bold hover:underline">kontakt@waldheim.dev</a>.
               </p>
             </div>
           </div>

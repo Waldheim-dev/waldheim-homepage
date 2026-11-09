@@ -33,20 +33,62 @@ const mockPage = {
 const allBlogs = blogs.map(post => ({
   title: post.data.title,
   description: post.data.description,
-  id: post.id
+  id: post.id.replace(/^_/, '')
 }));
 
+// Themen-Cluster für direkte interne Verlinkung aller Artikel (Click-Depth = 2 gegen GSC "Gefunden – zurzeit nicht indexiert")
+const topicClusters = [
+  {
+    title: 'Go (Golang), APIs & Backend-Architektur',
+    icon: 'fa-server',
+    match: (id: string, t: string) => /go|api|grpc|postgres|sql|microservice|backend|kafka|redis|valkey/i.test(id + ' ' + t),
+  },
+  {
+    title: 'Angular, React, TypeScript & Frontend',
+    icon: 'fa-code',
+    match: (id: string, t: string) => /angular|react|frontend|css|tailwind|astro|ui|ux|animation|web/i.test(id + ' ' + t),
+  },
+  {
+    title: 'DevSecOps, Kubernetes, Cloud & CI/CD',
+    icon: 'fa-dharmachakra',
+    match: (id: string, t: string) => /kubernetes|k8s|docker|container|cicd|pipeline|gitops|flux|argo|cloud|terraform|helm|monitoring|prometheus|grafana|semrel/i.test(id + ' ' + t),
+  },
+  {
+    title: 'KI-Engineering, Agenten & Automatisierung',
+    icon: 'fa-brain',
+    match: (id: string, t: string) => /ki|ai|llm|ollama|gemini|openai|agent|copilot|automatisierung|seo|geo/i.test(id + ' ' + t),
+  },
+  {
+    title: 'IT-Security, DSGVO, Barrierefreiheit & Agile',
+    icon: 'fa-shield-halved',
+    match: () => true,
+  },
+];
+
+const assignedIds = new Set<string>();
+const groupedBlogs = topicClusters.map((cluster) => {
+  const posts = allBlogs.filter((post) => {
+    if (assignedIds.has(post.id)) return false;
+    if (cluster.match(post.id, post.title)) {
+      assignedIds.add(post.id);
+      return true;
+    }
+    return false;
+  });
+  return { ...cluster, posts };
+});
+
 // SEO & Meta
-const titel = 'IT-Insights & Tech-Blog | Waldheim.dev';
-const description = 'Fachartikel zu DevSecOps, Software-Architektur & Cloud-Native Strategien. Expertenwissen für CTOs & Entwickler im Raum Augsburg & München.';
+const titel = 'IT-Blog: Go, Angular, DevSecOps & KI | Waldheim.dev';
+const description = 'Praxisnahe Fachartikel zu Go, Angular, React, Kubernetes, DevSecOps, DSGVO & KI-Engineering von Senior Architect Markus Waldheim (Augsburg & München).';
 const keywords = 'IT Blog Augsburg, DevSecOps Tipps, Softwareentwicklung Insights München, Cloud Security Blog, Tech Tutorials Bayern, Markus Waldheim Blog';
 
 const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
   name: 'Home',
-  link: 'https://waldheim.dev'
+  link: 'https://www.waldheim.dev/'
 }, {
   name: 'Blog',
-  link: 'https://waldheim.dev/blog'
+  link: 'https://www.waldheim.dev/blog/'
 }]);
 
 const articleSchema = paginatedProjects.map((post) => SchemaUtils.getArticleSchema({
@@ -55,9 +97,9 @@ const articleSchema = paginatedProjects.map((post) => SchemaUtils.getArticleSche
   datePublished: post.data.pubDate.toISOString(),
   dateModified: post.data.pubDate.toISOString(),
   description: post.data.description,
-  author: post.data.author,
+  author: 'Markus Waldheim',
   publisher: SITE_TITLE,
-  url: 'https://waldheim.dev/blog/' + post.id
+  url: `https://www.waldheim.dev/blog/${post.id.replace(/^_/, '')}/`
 }))
 ---
 
@@ -98,6 +140,48 @@ const articleSchema = paginatedProjects.map((post) => SchemaUtils.getArticleSche
         <div class="mt-20">
           <BlogPagination page={mockPage} />
         </div>
+
+        <!-- Vollständiges Themen- & Artikelverzeichnis (Click-Depth 2 für alle Artikel gegen GSC "Gefunden – zurzeit nicht indexiert") -->
+        <section class="mt-24 pt-16 border-t border-meg-border-dark" aria-labelledby="all-articles-directory-heading">
+          <header class="max-w-3xl mb-12">
+            <p class="text-xs font-black uppercase tracking-[0.2em] text-meg-accent mb-2">
+              Komplettes Wissensarchiv ({allBlogs.length} Fachartikel)
+            </p>
+            <h2 id="all-articles-directory-heading" class="text-2xl sm:text-4xl font-black tracking-tight text-meg-text-primary-dark mb-3">
+              Alle Fachartikel nach Themengebiet im Direktzugriff
+            </h2>
+            <p class="text-sm sm:text-base text-meg-text-secondary">
+              Direkte Übersicht aller Praxisbeiträge ohne Blättern durch Seiten – sortiert nach Architektur-, Cloud-, Frontend-, Security- und KI-Schwerpunkten.
+            </p>
+          </header>
+
+          <div class="space-y-8">
+            {groupedBlogs.map((group) => (
+              <div class="rounded-2xl bg-meg-surface-dark/40 border border-meg-border-dark p-6 sm:p-8">
+                <h3 class="text-lg sm:text-xl font-bold text-meg-text-primary-dark mb-4 flex items-center gap-3">
+                  <i class={`fa-solid ${group.icon} text-meg-accent`} aria-hidden="true"></i>
+                  <span>{group.title}</span>
+                  <span class="text-xs font-bold text-meg-text-secondary bg-meg-bg-dark border border-meg-border-dark px-2.5 py-0.5 rounded-full">
+                    {group.posts.length} Artikel
+                  </span>
+                </h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2.5 text-xs sm:text-sm">
+                  {group.posts.map((post) => (
+                    <li>
+                      <a
+                        href={`/blog/${post.id}/`}
+                        class="text-meg-text-secondary hover:text-meg-accent transition-colors flex items-start gap-2 py-1"
+                      >
+                        <i class="fa-solid fa-angle-right text-meg-accent mt-1 shrink-0 text-[10px]" aria-hidden="true"></i>
+                        <span class="line-clamp-2">{post.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
 

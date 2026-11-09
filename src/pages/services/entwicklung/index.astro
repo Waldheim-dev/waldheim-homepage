@@ -8,12 +8,16 @@ import PriceService from '../../../components/PriceService.astro';
 import Partner from '../../../components/Partner.astro';
 import RelatedServices from '../../../components/RelatedServices.astro';
 import Blog from '../../../components/Blog.astro';
+import AnswerFirstBox from '../../../components/AnswerFirstBox.astro';
+import SolutionDirectorySection from '../../../components/SolutionDirectorySection.astro';
+import { getServiceSolutionsByCategory } from '../../../consts/seoCatalog';
 
-// SEO & Meta
-const titel = 'Webentwicklung, Custom Software & AI-Team-Coaching Augsburg/München';
-const description = 'Moderne Webseiten-Entwicklung & Gestaltung, maßgeschneiderte Software-Produkte (SaaS, Web-Apps, APIs) und AI-Engineering-Coaching für >1.000% (10x) Produktivität.';
+// SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis, < 68 Zeichen)
+const titel = 'Webentwicklung & Software Augsburg – ab 1.400 € | Waldheim.dev';
+const description = 'Websites ab 1.400 € (2–4 Wochen), Kundenportale & Software ab 4.900 € sowie 10x KI-Coaching für Entwicklerteams in Augsburg & München (70 €/h).';
 const keywords = 'Webentwicklung Augsburg, Webdesign München, Custom Software Bayern, AI Engineering Coaching, KI im Entwicklungsprozess, AI Code Review, Skills Automationen, SaaS Entwicklung KMU, Astro Angular Go';
 const ogImage = 'https://waldheim.dev/services/entwicklung-og.jpg';
+const categorySolutions = getServiceSolutionsByCategory('entwicklung');
 
 // Structured Data
 const serviceSchema = {
@@ -38,7 +42,9 @@ const serviceSchema = {
   'description': 'Klassische Webseiten-Entwicklung und Gestaltung, hochwertige Individualsoftware (SaaS, Web-Apps, APIs) sowie Team-Coaching für KI-gestützte Softwareentwicklung mit bis zu 10x (>1.000%) Produktivität.',
   'offers': {
     '@type': 'Offer',
-    'description': 'Projektbasierte Entwicklung, AI-Engineering-Coaching & agile Retainer-Modelle'
+    'price': '1400',
+    'priceCurrency': 'EUR',
+    'description': 'Websites ab 1.400 € (2–4 Wochen), Custom Software ab 4.900 € (4–8 Wochen), AI-Coaching ab 1.400 € (70 €/h, § 19 UStG)'
   }
 };
 
@@ -83,6 +89,17 @@ const faqSchema = SchemaUtils.getFAQSchema([
   schema={[serviceSchema, breadCrumbSchema, faqSchema]}
   image={ogImage}
 >
+  <nav class="py-4 px-6 bg-meg-bg-dark border-b border-meg-border-dark/40" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-meg-text-secondary">
+        <li><a href="/" class="hover:text-meg-accent transition-colors font-semibold">Startseite</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li><a href="/services/" class="hover:text-meg-accent transition-colors font-semibold">Services</a></li>
+        <li aria-hidden="true"><i class="fa-solid fa-chevron-right text-xs opacity-40"></i></li>
+        <li class="text-meg-accent font-bold">Web, Software &amp; AI-Coaching</li>
+      </ol>
+    </div>
+  </nav>
   <main id="main-content">
     <ServiceHero 
       title="Web, Software & AI-Coaching"
@@ -91,6 +108,21 @@ const faqSchema = SchemaUtils.getFAQSchema([
       gradient="blue"
       icon="fa-code"
       badge="10+ Jahre Full-Stack · 10x AI-Engineering (>1.000%)"
+    />
+
+    <AnswerFirstBox
+      question="Was kosten Webentwicklung, Individualsoftware und KI-Team-Coaching bei Waldheim.dev?"
+      directAnswer="Moderne Unternehmenswebsites und SEO/GEO-Relaunches kosten bei Waldheim.dev ab 1.400 € bis 2.800 € Festpreis (Dauer: 1–4 Wochen). Maßgeschneiderte Web-Apps, Kundenportale und Multi-Tenant-SaaS-Plattformen (Go, React, Angular, PostgreSQL) starten ab 4.900 € für ein produktives MVP (Dauer: 4–8 Wochen). Praxisnahes KI-Coaching für Entwicklerteams ist ab 1.400 € (2-Tage-Sprint) buchbar – oder flexibel zu 70 €/h (§ 19 UStG, Netto = Brutto)."
+      price="Ab 1.400 € (70 €/h)"
+      priceSubtext="§ 19 UStG · Netto = Brutto"
+      duration="1–8 Wochen"
+      durationSubtext="Websites 1–4 Wo. · Software-MVP 4–8 Wo."
+      deliverable="Websites, Portale, Go/React/Angular & KI-Coaching"
+      accentColor="blue"
+      primaryCtaText="Kostenloses Erstgespräch buchen"
+      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
+      secondaryCtaText="Spezialpakete & Preise ansehen"
+      secondaryCtaHref="#spezialpakete-entwicklung"
     />
 
     <!-- Produktkategorien -->
@@ -303,6 +335,15 @@ const faqSchema = SchemaUtils.getFAQSchema([
         </div>
       </div>
     </section>
+
+    <div id="spezialpakete-entwicklung">
+      <SolutionDirectorySection
+        eyebrow="Antwort zuerst · Alle Entwicklungs- & KI-Pakete"
+        heading="Konkrete Preise & Projektdauern nach Themengebiet"
+        subheading="Wählen Sie Ihre konkrete Fragestellung für detaillierte Paketpreise, Zeitpläne und Leistungsumfänge."
+        items={categorySolutions}
+      />
+    </div>
 
     <PriceService />
     <Blog limits={2} />

@@ -18,19 +18,51 @@ const { Content, headings } = await render(blog)
 
 const wordCount = blog.body ? blog.body.split(/\s+/).length : 0;
 const readingTime = Math.ceil(wordCount / 200);
+const slug = blog.id.replace(/^_/, '');
+const postUrl = `https://www.waldheim.dev/blog/${slug}/`;
 
-const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
-  name: 'Home',
-  link: Astro.url.hostname
-}, {
-  name: 'Blog',
-  link: Astro.url.hostname
-},{
-  name: blog.data.title,
-  link: Astro.url.href
-}]);
+const seoTitle =
+  blog.data.title.length > 68
+    ? `${blog.data.title.slice(0, 52).trim()}… | Waldheim.dev`
+    : blog.data.title;
+const seoDesc =
+  blog.data.description.length > 156
+    ? `${blog.data.description.slice(0, 152).trim()}…`
+    : blog.data.description;
+
+const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
+  {
+    name: 'Home',
+    link: 'https://www.waldheim.dev/',
+  },
+  {
+    name: 'Blog',
+    link: 'https://www.waldheim.dev/blog/',
+  },
+  {
+    name: blog.data.title,
+    link: postUrl,
+  },
+]);
+
+const articleSchema = SchemaUtils.getArticleSchema({
+  title: blog.data.title,
+  image: blog.data.heroImage,
+  author: 'Markus Waldheim',
+  datePublished: blog.data.pubDate.toISOString(),
+  dateModified: blog.data.pubDate.toISOString(),
+  url: postUrl,
+  publisher: 'Waldheim.dev',
+  description: blog.data.description,
+});
 ---
-<Layout {...blog.data} schema={[breadCrumbSchema]}>
+<Layout
+  {...blog.data}
+  title={seoTitle}
+  description={seoDesc}
+  image={blog.data.heroImage}
+  schema={[breadCrumbSchema, articleSchema]}
+>
   <BlogLayout {...blog.data} headings={headings} readingTime={readingTime}>
     <Content />
   </BlogLayout>

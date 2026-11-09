@@ -3,9 +3,10 @@
     "collect": {
       "url": [
         "http://localhost:4321/",
-        "http://localhost:4321/ecodrive/",
-        "http://localhost:4321/silvacore/",
-        "http://localhost:4321/socialverse/",
+        "http://localhost:4321/suite/",
+        "http://localhost:4321/suite/ecodrive/",
+        "http://localhost:4321/suite/forge/",
+        "http://localhost:4321/suite/socialverse/",
         "http://localhost:4321/services/devsecops/",
         "http://localhost:4321/services/entwicklung/",
         "http://localhost:4321/services/design/",
