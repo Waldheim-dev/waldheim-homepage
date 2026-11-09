@@ -1,3 +1,10 @@
+# [26.23.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.11...26.23.0) (2026-11-09)
+
+
+### Features
+
+* **seo:** implement 60+ page German Answer-First SEO/GEO architecture and 100/100 Lighthouse optimization ([d03f1af](https://github.com/Waldheim-dev/waldheim-homepage/commit/d03f1af9571556999bbc11c581c3be8813b7bd3c))
+
 ## [26.22.11](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.10...26.22.11) (2026-11-09)
 
 
