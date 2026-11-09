@@ -1,3 +1,12 @@
+## [26.22.11](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.10...26.22.11) (2026-11-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to ^18.0.10 ([9c7987c](https://github.com/Waldheim-dev/waldheim-homepage/commit/9c7987ce2cbbaa329546041503279a32942bc9d0))
+* **deps:** update dependency postcss-selector-parser to v7.2.0 ([5ba6601](https://github.com/Waldheim-dev/waldheim-homepage/commit/5ba66018030d3e25bd70c94f63e3f2d5b9b1900e))
+* **deps:** update tailwindcss monorepo (@tailwindcss/vite v4.3.5, tailwindcss v4.3.5) ([ab977f4](https://github.com/Waldheim-dev/waldheim-homepage/commit/ab977f4cfa0bbef2f3b74626bd8d518aaebf55b1))
+
 ## [26.22.10](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.9...26.22.10) (2026-11-08)
 
 
