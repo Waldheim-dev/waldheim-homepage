@@ -168,7 +168,7 @@ overrides:
   deepmerge-ts: 8.0.2
   fast-uri: 3.1.9
   js-yaml: 4.3.2
-  postcss-selector-parser: 7.1.7
+  postcss-selector-parser: 7.2.0
   sharp: 0.35.5
   svgo: 4.1.0
   tmp: 0.2.7
@@ -2409,11 +2409,6 @@ packages:
     resolution: {integrity: sha512-wD5oz5xibMOPHzy13CyGmogB3phdvcDaB5t0W/Nr5Z2O/agcB8YwOz6e2Lsp10pNDzBoDO9nVa3RGs/2BttpHQ==}
     engines: {node: '>= 6'}
 
-  cssesc@3.0.0:
-    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
-    engines: {node: '>=4'}
-    hasBin: true
-
   csso@5.0.5:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
@@ -4348,8 +4343,8 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
-  postcss-selector-parser@7.1.7:
-    resolution: {integrity: sha512-wWBro/7hJ40ye6TPiXkUQoXKCw23xSsjriUvqd7Uls9Sso3oLiON1flc18cCdnjgCRXw4fBVqUJJeOdDTh3P3g==}
+  postcss-selector-parser@7.2.0:
+    resolution: {integrity: sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==}
     engines: {node: '>=4'}
 
   postcss@8.5.32:
@@ -6814,7 +6809,7 @@ snapshots:
 
   '@tailwindcss/typography@0.5.20(tailwindcss@4.3.5)':
     dependencies:
-      postcss-selector-parser: 7.1.7
+      postcss-selector-parser: 7.2.0
       tailwindcss: 4.3.5
 
   '@tailwindcss/vite@4.3.5(vite@8.3.6(@types/node@26.6.6)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))':
@@ -7796,8 +7791,6 @@ snapshots:
 
   css-what@7.0.0: {}
 
-  cssesc@3.0.0: {}
-
   csso@5.0.5:
     dependencies:
       css-tree: 2.2.1
@@ -8139,7 +8132,7 @@ snapshots:
       espree: 11.2.0
       globals: 17.14.0
       postcss: 8.5.32
-      postcss-selector-parser: 7.1.7
+      postcss-selector-parser: 7.2.0
       synckit: 0.11.13
     optionalDependencies:
       '@typescript-eslint/parser': 8.72.1(eslint@10.14.0(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
@@ -9787,9 +9780,8 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-selector-parser@7.1.7:
+  postcss-selector-parser@7.2.0:
     dependencies:
-      cssesc: 3.0.0
       util-deprecate: 1.0.2
 
   postcss@8.5.32:
