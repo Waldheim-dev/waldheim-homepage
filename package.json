@@ -43,7 +43,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
     "@lhci/cli": "^0.16.1",
-    "@playwright/test": "^1.65.0",
+    "@playwright/test": "^1.65.1",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/exec": "7.1.0",
@@ -62,7 +62,7 @@
     "fast-glob": "^3.3.3",
     "lighthouse": "^13.6.0",
     "ollama": "0.6.4",
-    "playwright": "^1.65.0",
+    "playwright": "^1.65.1",
     "prettier": "3.9.10",
     "semantic-release": "25.0.9",
     "sharp": "0.35.5",
