@@ -1,3 +1,21 @@
+## [26.23.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.23.0...26.23.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* **deps:** update astro monorepo (@astrojs/mdx v8.1.6, @astrojs/sitemap v3.7.5, astro v7.4.12) ([6269b96](https://github.com/Waldheim-dev/waldheim-homepage/commit/6269b960f6489244c82f18b36c58414859ef3202))
+* **deps:** update dependency @lhci/cli to ^0.16.1 ([702e8f1](https://github.com/Waldheim-dev/waldheim-homepage/commit/702e8f1c82934e9fbc509b1f538adbc3ce86afe6))
+* **deps:** update dependency @puppeteer/browsers to v3.2.7 ([a81c9ab](https://github.com/Waldheim-dev/waldheim-homepage/commit/a81c9ab32eb53761b6fd3d0e37c8f1ffa5155923))
+* **deps:** update dependency @semantic-release/github to v12.0.11 ([f18cdf0](https://github.com/Waldheim-dev/waldheim-homepage/commit/f18cdf0d129f75dce855341b20a2c9378be6831e))
+* **deps:** update dependency astro-seo-schema to v7.0.2 ([f68abd1](https://github.com/Waldheim-dev/waldheim-homepage/commit/f68abd1ef5e3f5129458e6727b083c4231d7a01d))
+* **deps:** update dependency eslint to v10.15.0 ([fffc9a1](https://github.com/Waldheim-dev/waldheim-homepage/commit/fffc9a1c49877f9a30bee1d798b8dc24b7168ad0))
+* **deps:** update dependency openai to v7.57.0 ([a3c4676](https://github.com/Waldheim-dev/waldheim-homepage/commit/a3c4676b00c9e95a5b3fd6b2e82f2a47be3aa589))
+* **deps:** update dependency postcss-selector-parser to v7.2.1 ([a0ec8f3](https://github.com/Waldheim-dev/waldheim-homepage/commit/a0ec8f38b715c213830f51dc6d7bef296a771091))
+* **deps:** update dependency prettier to v3.10.1 ([ef6af3f](https://github.com/Waldheim-dev/waldheim-homepage/commit/ef6af3ff54ef07fc0e4307e1fff4bfd8047e6d98))
+* **deps:** update playwright monorepo (@playwright/test v1.65.1, playwright v1.65.1) ([0f30c39](https://github.com/Waldheim-dev/waldheim-homepage/commit/0f30c39bf35be527a43b3593cded7eb71aba33df))
+* **deps:** update pnpm to v12.21.0 ([0d25f41](https://github.com/Waldheim-dev/waldheim-homepage/commit/0d25f41a8aae0358510a1fcec46a121955adda4c))
+* **deps:** update typescript-eslint monorepo (@typescript-eslint/eslint-plugin v8.72.2, @typescript-eslint/parser v8.72.2) ([b57d76c](https://github.com/Waldheim-dev/waldheim-homepage/commit/b57d76c0115fedf77a1684b5707d60b05cbd985e))
+
 # [26.23.0](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.22.11...26.23.0) (2026-11-09)
 
 
