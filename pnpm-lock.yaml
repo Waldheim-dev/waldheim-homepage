@@ -168,7 +168,7 @@ overrides:
   deepmerge-ts: 8.0.2
   fast-uri: 3.1.9
   js-yaml: 4.3.2
-  postcss-selector-parser: 7.2.0
+  postcss-selector-parser: 7.2.1
   sharp: 0.35.5
   svgo: 4.1.0
   tmp: 0.2.7
@@ -4226,10 +4226,9 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
-  postcss-selector-parser@7.2.0:
-    resolution: {integrity: sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==}
+  postcss-selector-parser@7.2.1:
+    resolution: {integrity: sha512-GwxlMgTTXwIom+ebC7an3k6RaJDwklRQQnfiXsLPGicu8FYV/k/+1/9YY2OU2+r938H2t4X0TDxoif+HP2rjzQ==}
     engines: {node: '>=4'}
-    deprecated: Double-escapes CSS Modules class names (#362). Use 7.2.1.
 
   postcss@8.5.32:
     resolution: {integrity: sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g==}
@@ -6634,7 +6633,7 @@ snapshots:
 
   '@tailwindcss/typography@0.5.20(tailwindcss@4.3.5)':
     dependencies:
-      postcss-selector-parser: 7.2.0
+      postcss-selector-parser: 7.2.1
       tailwindcss: 4.3.5
 
   '@tailwindcss/vite@4.3.5(vite@8.3.7(@types/node@26.6.6)(jiti@2.7.0)(terser@5.49.2)(yaml@2.9.1))':
@@ -7950,7 +7949,7 @@ snapshots:
       espree: 11.2.0
       globals: 17.14.0
       postcss: 8.5.32
-      postcss-selector-parser: 7.2.0
+      postcss-selector-parser: 7.2.1
       synckit: 0.11.13
     optionalDependencies:
       '@typescript-eslint/parser': 8.72.1(eslint@10.14.0(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
@@ -9595,7 +9594,7 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss-selector-parser@7.2.0:
+  postcss-selector-parser@7.2.1:
     dependencies:
       util-deprecate: 1.0.2
 
