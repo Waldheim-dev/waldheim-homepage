@@ -1,3 +1,10 @@
+## [26.23.2](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.23.1...26.23.2) (2026-11-19)
+
+
+### Bug Fixes
+
+* **analytics:** start GA4 tracking initially and disable immediately on cookie opt-out ([a99f7e7](https://github.com/Waldheim-dev/waldheim-homepage/commit/a99f7e778d86527261b7ca60015e9ee583796fb0))
+
 ## [26.23.1](https://github.com/Waldheim-dev/waldheim-homepage/compare/26.23.0...26.23.1) (2026-11-16)
 
 
