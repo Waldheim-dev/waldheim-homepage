@@ -26,7 +26,7 @@
     "@astrojs/partytown": "^2.1.9",
     "@astrojs/sitemap": "3.7.6",
     "@fortawesome/fontawesome-free": "7.3.1",
-    "@google/genai": "2.32.0",
+    "@google/genai": "3.6.1",
     "@tailwindcss/vite": "4.3.5",
     "@types/three": "^0.187.0",
     "@waldheimdev/astro-ai-llms-txt": "^1.5.0",
