@@ -279,8 +279,8 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
       {
         name: 'Enterprise (+ WEG-Hausgeld-Mahnwesen)',
         badge: 'Inkl. Immobilien',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Hausverwaltungen und Bestandshalter, die auch monatliche Hausgeld- und Mietforderungen automatisiert mahnen.',
         features: [
@@ -377,8 +377,8 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
       {
         name: 'Suite Enterprise (Für Verwalter-Teams)',
         badge: 'Voll-Suite',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für professionelle Verwaltungen, die Objektverwaltung, Buchhaltung (Treasury), DMS (Aether) und Kommunikation (Relay) vereinen.',
         features: [
@@ -497,7 +497,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         idealFor: 'Für kleine Teams, die primär Auftragssteuerung, Kundenportal-Tickets und Rechnungsstellung benötigen.',
         features: [
           'Operative Projektaufgaben & Meilensteine in Silvacore ERP',
-          'Kunden-Tickets mit SLA-Tracking im Customer Portal',
+          'Kunden-Tickets mit Status- und Prioritätsverfolgung im Customer Portal',
           'Angebote, E-Rechnungen & DATEV-Vorbereitung inklusive',
         ],
         ctaText: 'Starter wählen',
@@ -506,8 +506,8 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
       {
         name: 'Enterprise (Voll-Suite)',
         badge: 'Alle 9 Module',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Unternehmen, die zusätzlich Außendienst-Touren (Ecodrive) und Objekt-Instandhaltung (Properties) steuern.',
         features: [
@@ -603,14 +603,14 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
       {
         name: 'Enterprise (+ KI-Immobilien & Flotte)',
         badge: 'Alle 9 Module',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für den zusätzlichen Einsatz von KI-Übersetzungen in der WEG-Verwaltung und Flotten-Analysen.',
         features: [
           'Alles aus Professional + Properties & Ecodrive',
           'Automatische KI-Übersetzung von Eigentümer-Kommunikation & Beschlüssen',
-          'Dedizierte Mandanten-Isolation & Enterprise-SLA',
+          'Dedizierte Mandanten-Isolation; Supportumfang laut Angebot',
         ],
         ctaText: 'Enterprise testen',
         ctaHref: 'https://suite.waldheim.dev',
