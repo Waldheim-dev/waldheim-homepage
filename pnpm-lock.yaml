@@ -241,8 +241,8 @@ importers:
         specifier: ^3.15.1
         version: 3.15.1
       openai:
-        specifier: 7.62.0
-        version: 7.62.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.13.1)(ws@8.23.0)(zod@4.6.7)
+        specifier: 7.63.0
+        version: 7.63.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.13.1)(ws@8.23.0)(zod@4.6.7)
       tailwindcss:
         specifier: 4.3.5
         version: 4.3.5
@@ -4162,8 +4162,8 @@ packages:
       zod:
         optional: true
 
-  openai@7.62.0:
-    resolution: {integrity: sha512-dehzgY2anBfU3H+FfWHCVjhb9ZRYzahzNpvmMExTmMaeU11i51NJIMJPDctgLiP4+pCh53KIsLVQ66ucKyDNMA==}
+  openai@7.63.0:
+    resolution: {integrity: sha512-bTRCHcdcYHu9k+2+jjPuzWTNaCORLBCNLrYkTFGmotQIec2D/lIWWMZ6uc9AIazc0MA4lYw62xpdcjUMjt98xg==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
@@ -9673,7 +9673,7 @@ snapshots:
       ws: 8.23.0
       zod: 4.6.7
 
-  openai@7.62.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.13.1)(ws@8.23.0)(zod@4.6.7):
+  openai@7.63.0(google-auth-library@10.9.1(supports-color@7.2.0))(undici@8.13.1)(ws@8.23.0)(zod@4.6.7):
     optionalDependencies:
       google-auth-library: 10.9.1(supports-color@7.2.0)
       undici: 8.13.1
