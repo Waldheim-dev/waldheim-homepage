@@ -49,8 +49,8 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
       {
         name: 'Enterprise (+ Immobilien- & Fahrzeugakten)',
         badge: 'Voll-Suite',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Unternehmen mit zusätzlichen Objekt-/WEG-Akten (Properties) und digitalen Fahrzeugakten (Ecodrive).',
         features: [
@@ -181,7 +181,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
         price: 'ab 25 €',
         priceUnit: '/ Agent / Monat',
         duration: 'Jederzeit zubuchbar',
-        idealFor: 'Für dedizierte Support-Teams mit hohem Ticket-Aufkommen und garantierten Reaktionszeiten.',
+        idealFor: 'Für dedizierte Support-Teams mit hohem Ticket-Aufkommen und klaren Supportprozessen.',
         features: [
           'Omnichannel-Queue mit SLA-Timer & Eskalationsregeln',
           'Makros, Textbausteine & automatische Zuweisungs-Regeln',
@@ -277,14 +277,14 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
       {
         name: 'Enterprise (Voll-Suite)',
         badge: 'Alle 9 Module',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für zusätzliche Automatisierungen in der Immobilienverwaltung (Properties) und im Fuhrpark (Ecodrive).',
         features: [
           'Automatische Mahn-, Zählerstands- & Abrechnungs-Workflows für WEGs',
           'Automatische HU-, Service- & Emissions-Warnungen im Fuhrpark',
-          'Dedizierter Account-Manager & SLA-Garantie',
+          'Supportumfang und Ansprechpartner laut individuellem Angebot',
         ],
         ctaText: 'Enterprise testen',
         ctaHref: 'https://suite.waldheim.dev',
@@ -360,7 +360,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
     h1Title: 'All-in-One Business-Software für KMU (ab 29 €)',
     heroDesc: 'Im typischen Mittelstand stecken Kundendaten im CRM, Rechnungen im Buchhaltungstool, Dateien in der Cloud, Tickets im Postfach und Fuhrparklisten in Excel. Die Waldheim Suite vereint alle 9 Bereiche unter einer einzigen Oberfläche.',
     question: 'Was kostet eine komplette All-in-One-Unternehmenssoftware für KMU und welche Module sind enthalten?',
-    directAnswer: 'Die Waldheim Suite bündelt bis zu 9 voll vernetzte Unternehmensmodule unter einem einzigen Login: Starter ab 29 € pro Seat/Monat (Kundenportal, Silvacore ERP inkl. E-Rechnung, Treasury inkl. DATEV), Professional ab 59 € pro Seat/Monat (+ Socialverse CRM, Aether DMS, Relay Messaging, Conductor Workflows & BYO-AI) und Enterprise für 99 € pro Seat/Monat (+ Ecodrive Fuhrpark & Properties Immobilienverwaltung). Sofort startklar in unter 15 Minuten, monatlich kündbar.',
+    directAnswer: 'Die Waldheim Suite bündelt bis zu 9 Unternehmensmodule unter einem Login: Starter für 29 € pro Seat/Monat, Professional für 59 € pro Seat/Monat und Enterprise pauschal für 89 € pro Monat. Für verwaltete Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen.',
     priceLabel: 'Ab 29 € / Seat / Monat',
     priceSubtext: 'Bis zu 9 Module in einer Plattform',
     durationLabel: 'Sofort (< 15 Min.)',
@@ -405,15 +405,15 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
       {
         name: 'Enterprise (Alle 9 Module)',
         badge: 'Vollausbau',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: 'Inkl. persönlichem Support',
         idealFor: 'Für Unternehmen mit zusätzlichen Anforderungen an Fuhrpark/ESG, Immobilienverwaltung und höchste Isolation.',
         features: [
           'Alle 7 Module aus Professional inklusive',
           'Ecodrive (Fuhrpark, digitales Fahrtenbuch, TCO & ESG-Berichte)',
           'Properties (WEG- & Objektverwaltung, Zählerkaskade, Owner Portal)',
-          'Optionale physische DB-per-Tenant-Isolation & Support-SLA',
+          'Optionale physische DB-per-Tenant-Isolation; Supportumfang laut Angebot',
         ],
         ctaText: 'Enterprise testen',
         ctaHref: 'https://suite.waldheim.dev',
@@ -435,7 +435,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
     comparisonRows: [
       { criteria: 'Anzahl Logins & Oberflächen', waldheim: '1 zentraler Login + App-Switcher', statusQuo: '6–10 verschiedene Logins & Passwörter' },
       { criteria: 'Schnittstellen-Pflege', waldheim: '0 € (alles nativ vernetzt)', statusQuo: 'Ständige Sync-Fehler zwischen Einzel-Tools' },
-      { criteria: 'Gesamtkosten pro Mitarbeiter', waldheim: '29 € – 99 € / Monat komplett', statusQuo: '180 € – 350 € / Monat summierte Einzel-Abos' },
+      { criteria: 'Monatliche Suite-Kosten', waldheim: '29 € / Seat, 59 € / Seat oder 89 € pauschal; nutzungsabhängige Add-ons extra', statusQuo: '180 € – 350 € / Monat summierte Einzel-Abos' },
       { criteria: 'Ansprechpartner beim Hersteller', waldheim: 'Direkter Kontakt zum deutschen Entwicklerteam', statusQuo: 'Anonyme Ticket-Hotlines im Ausland' },
     ],
     faqs: [
@@ -588,7 +588,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
     h1Title: 'CO₂- & ESG-Reporting Software für den Fuhrpark (ab 8 €)',
     heroDesc: 'Banken, Großkunden und CSRD-Lieferketten verlangen auch von mittelständischen Zulieferern belastbare CO₂-Kennzahlen. Ecodrive berechnet Ihre Flotten-Emissionen automatisch aus den echten Fahr- und Tankdaten.',
     question: 'Was kostet eine Software für automatisches CO₂- und ESG-Reporting im Fuhrpark?',
-    directAnswer: 'Mit Waldheim Ecodrive starten Sie Ihr automatisiertes CO₂- und ESG-Flottenreporting bereits ab 8 € pro Fahrzeug und Monat (bzw. im Enterprise-Tarif der Waldheim Suite für 99 €/Seat/Monat). Die Software ist in unter 15 Minuten eingerichtet und liefert jederzeit exportierbare Emissionsberichte nach Fahrzeug, Antriebsart (Verbrenner, Hybrid, Elektro), Fahrer, Projekt und Zeitraum.',
+    directAnswer: 'Mit Waldheim Ecodrive starten Sie Ihr automatisiertes CO₂- und ESG-Flottenreporting ab 8 € pro Fahrzeug und Monat. Im Enterprise-Tarif ist der Modulzugang enthalten; nutzungsabhängige Fahrzeugpreise können zusätzlich anfallen.',
     priceLabel: 'Ab 8 € / Fahrzeug / Monat',
     priceSubtext: 'Inkl. Fahrtenbuch, TCO & Fahrzeugakte',
     durationLabel: 'Sofort (< 15 Min.)',
@@ -617,8 +617,8 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
       {
         name: 'Suite Enterprise (Gesamt-Plattform)',
         badge: '9 Module inkl.',
-        price: '99 €',
-        priceUnit: '/ Seat / Monat',
+        price: '89 €',
+        priceUnit: '/ Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für Unternehmen, die Flotten-ESG, Gebäudeverbräuche (Properties), Belege (Aether) und Finanzen (Treasury) kombiniert auswerten.',
         features: [
