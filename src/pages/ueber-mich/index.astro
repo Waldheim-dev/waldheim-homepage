@@ -46,7 +46,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[personSchema, breadCrumbSchema]} image={ogImage}>
-  <main id="main-content">
+  <div>
     <!-- Hero: Autorität & Persönlichkeit -->
     <HeroMetric 
       title="Strategische IT-Beratung mit über 10 Jahren Praxiserfahrung" 
@@ -180,5 +180,5 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         <a href="/kontakt/" class="text-meg-text-primary-dark font-bold hover:text-meg-accent transition-colors underline decoration-meg-accent underline-offset-4">Kontaktformular</a>
       </div>
     </CTASoft>
-  </main>
+  </div>
 </Layout>

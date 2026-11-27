@@ -7,7 +7,7 @@ author: 'markus-waldheim'
 keywords: Scrum, Scrum Master, Product Owner, PSM, PSM II, PSPO, agil, agile Methoden, Projektmanagement, Softwareentwicklung, Produktentwicklung, Zertifizierung, Weiterbildung, Dienstleistungen, Optimierung, Effizienz, Zusammenarbeit, [weitere relevante Keywords]
 ---
 
-# Neu: Scrum Master & Product Owner Services – für agilere Projekte! 🚀
+## Neu: Scrum Master & Product Owner Services – für agilere Projekte! 🚀
 
 Ich freue mich, Ihnen mitteilen zu können, dass ich mein Dienstleistungsportfolio erweitert habe! Durch intensive Weiterbildungen und Zertifizierungen bin ich jetzt zertifizierter
 

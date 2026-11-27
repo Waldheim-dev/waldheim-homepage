@@ -28,7 +28,7 @@ So könnte eure .github/copilot-instructions.md aussehen:
 
 Markdown
 
-# Anweisungen für GitHub Copilot in unserem Projekt "Phoenix"
+## Anweisungen für GitHub Copilot in unserem Projekt "Phoenix"
 
 Wir entwickeln eine E-Commerce-Plattform mit TypeScript, React und Node.js. Bitte beachte die folgenden Richtlinien für alle deine Vorschläge.
 

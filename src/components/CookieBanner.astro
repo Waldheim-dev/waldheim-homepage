@@ -7,12 +7,12 @@
   role="dialog"
   aria-modal="false"
   aria-labelledby="waldheim-cookie-title"
-  class="hidden fixed bottom-4 right-4 left-4 sm:left-auto sm:w-[420px] z-50 rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark p-5 shadow-2xl text-meg-text-primary-dark"
+  class="hidden fixed bottom-4 right-4 left-4 sm:left-auto sm:w-[420px] z-50 rounded-2xl bg-meg-surface-dark/95 backdrop-blur-xl border border-meg-border-dark p-3 sm:p-5 shadow-2xl text-meg-text-primary-dark"
 >
   <div class="flex items-start justify-between gap-3 mb-2">
     <p id="waldheim-cookie-title" class="text-sm font-black tracking-tight flex items-center gap-2">
       <i class="fa-solid fa-shield-halved text-meg-accent" aria-hidden="true"></i>
-      <span>Datenschutz &amp; Cookie-Einwilligung</span>
+      <span>Cookie-Einstellungen</span>
     </p>
     <div class="flex items-center gap-2 text-[11px] font-semibold shrink-0">
       <a href="/datenschutz/" class="text-meg-accent hover:underline">Datenschutz</a>
@@ -21,8 +21,8 @@
     </div>
   </div>
 
-  <p class="text-xs text-meg-text-secondary leading-relaxed mb-4">
-    Wir nutzen technisch notwendige Speicherung (§ 25 Abs. 2 TDDDG) sowie – nur mit Ihrer freiwilligen Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO) – Google Analytics 4 (Google Ireland Ltd. / USA) zur Reichweitenmessung. Widerruf jederzeit im Footer unter „Cookies“.
+  <p class="text-xs text-meg-text-secondary leading-relaxed mb-2">
+    Notwendige Speicherungen sind immer aktiv. Google Analytics laden wir nur mit Ihrer Einwilligung; ein Widerruf ist jederzeit im Footer möglich.
   </p>
 
   <!-- Aufklappbare Detail-Einstellungen (2. Ebene mit Anbieter, Zweck, Rechtsgrundlage & Speicherdauer) -->
@@ -31,7 +31,7 @@
       <span>
         <strong class="block text-meg-text-primary-dark">Technisch notwendig (immer aktiv)</strong>
         <span class="block text-[11px] text-meg-text-secondary mt-0.5">
-          Speichert Ihre Einwilligungs-Auswahl (<code>waldheim-cookie-consent-v1</code>, 12 Monate) sowie Darstellungspräferenzen (Theme/Kontrast). Rechtsgrundlage: § 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO.
+          Speichert Ihre Einwilligungs-Auswahl (<code>waldheim-cookie-consent-v1</code>, 12 Monate) sowie Ihre Kontrastpräferenz. Rechtsgrundlage: § 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO.
         </span>
       </span>
       <input
@@ -39,7 +39,7 @@
         checked
         disabled
         aria-label="Technisch notwendige Speicherung (immer aktiv)"
-        class="size-4 mt-1 accent-sky-500 rounded shrink-0"
+        class="size-4 mt-1 accent-meg-accent rounded shrink-0"
       />
     </label>
 
@@ -54,7 +54,7 @@
         id="waldheim-cookie-analytics"
         type="checkbox"
         aria-label="Statistik und Analyse (Google Analytics 4) aktivieren"
-        class="size-4 mt-1 accent-sky-500 rounded cursor-pointer shrink-0"
+        class="size-4 mt-1 accent-meg-accent rounded cursor-pointer shrink-0"
       />
     </label>
   </div>
@@ -112,7 +112,7 @@
     };
 
     const initialStored = readStoredConsent();
-    const initialAnalyticsAllowed = initialStored ? Boolean(initialStored.analytics) : true;
+    const initialAnalyticsAllowed = initialStored ? Boolean(initialStored.analytics) : false;
     window[`ga-disable-${GA_ID}`] = !initialAnalyticsAllowed;
 
     window.dataLayer = window.dataLayer || [];
@@ -209,7 +209,7 @@
     };
 
     const applyConsent = (state) => {
-      const analyticsGranted = state ? Boolean(state.analytics) : true;
+      const analyticsGranted = state ? Boolean(state.analytics) : false;
       if (analyticsGranted) {
         window[`ga-disable-${GA_ID}`] = false;
         window.gtag('consent', 'update', {
@@ -254,7 +254,7 @@
       const openBanner = (expandDetails) => {
         const current = readStoredConsent();
         if (analyticsCheckbox instanceof HTMLInputElement) {
-          analyticsCheckbox.checked = current ? Boolean(current.analytics) : true;
+          analyticsCheckbox.checked = current ? Boolean(current.analytics) : false;
         }
         if (expandDetails && details && saveSelectionBtn && toggleDetailsBtn) {
           details.classList.remove('hidden');
@@ -299,8 +299,7 @@
       if (stored) {
         applyConsent(stored);
       } else {
-        // Track initial visit immediately unless user opts out in the banner
-        loadGoogleAnalytics();
+        applyConsent(null);
         openBanner(false);
       }
     };

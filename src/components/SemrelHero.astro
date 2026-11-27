@@ -21,7 +21,7 @@ const t = {
       '8-stufige Pipeline (Condition, Analyzer, Generator, Updater, Packager, Publisher, Provider, Hook) inkl. Env-Var-Interpolation & Monorepo-Workspace.',
     ],
     btnGithub: 'GitHub öffnen',
-    btnGithubLabel: 'semrel auf GitHub ansehen',
+    btnGithubLabel: 'GitHub öffnen – semrel auf GitHub ansehen',
     btnDocs: 'Dokumentation',
     btnDocsLabel: 'semrel.io Dokumentation öffnen',
     btnContribute: 'Mitmachen',
@@ -40,7 +40,7 @@ const t = {
       '8-stage pipeline (condition, analyzer, generator, updater, packager, publisher, provider, hook) with env-var interpolation & monorepo workspace.',
     ],
     btnGithub: 'Open on GitHub',
-    btnGithubLabel: 'View semrel on GitHub',
+    btnGithubLabel: 'Open on GitHub – view semrel',
     btnDocs: 'Documentation',
     btnDocsLabel: 'Open semrel.io Documentation',
     btnContribute: 'Contribute',
@@ -56,7 +56,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
   <!-- Background ambient glow -->
   <div class='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80' aria-hidden='true'>
     <div
-      class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-500/20 to-sky-400/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
+      class='relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-meg-brand to-meg-accent/10 opacity-60 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
       style='clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'></div>
   </div>
 
@@ -64,20 +64,20 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
     <div class='mx-auto max-w-4xl text-center'>
 
       <!-- Badges -->
-      <div class='gsap-fadein mt-24 sm:mt-32 lg:mt-16 flex flex-wrap justify-center gap-3 mb-8'>
-        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-sm font-bold text-blue-400'>
+      <div class='gsap-fadein mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 mb-8'>
+        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-brand/70 border border-meg-accent/20 text-sm font-bold text-meg-accent'>
           <i class="fa-brands fa-golang" aria-hidden="true"></i>
           Go-native
         </span>
-        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-blue-500/30 text-sm font-bold text-meg-text-primary-dark'>
-          <i class="fa-solid fa-code-branch text-blue-400" aria-hidden="true"></i>
+        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-accent/30 text-sm font-bold text-meg-text-primary-dark'>
+          <i class="fa-solid fa-code-branch text-meg-accent" aria-hidden="true"></i>
           v{semrelInfo.version} · Latest
         </span>
         <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-surface-dark border border-meg-border-dark text-sm font-bold text-meg-text-secondary'>
-          <i class="fa-solid fa-scale-balanced text-sky-400" aria-hidden="true"></i>
+          <i class="fa-solid fa-scale-balanced text-meg-accent" aria-hidden="true"></i>
           Apache 2.0
         </span>
-        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-sm font-bold text-emerald-400'>
+        <span class='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-meg-brand/70 border border-meg-accent/20 text-sm font-bold text-meg-accent'>
           <i class="fa-solid fa-people-group" aria-hidden="true"></i>
           Open for Contributors
         </span>
@@ -89,7 +89,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
       </h1>
 
       <p class='gsap-fadein text-2xl md:text-3xl font-bold mb-8' style='animation-delay: 0.3s'>
-        <span class='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400'>
+        <span class='text-meg-accent'>
           Semantic Releases. Fully Automated. Fully Open.
         </span>
       </p>
@@ -98,8 +98,8 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         {t.description}
       </p>
 
-      <div class='gsap-fadein mb-12 max-w-3xl mx-auto text-left bg-meg-surface-dark/50 border border-blue-500/20 rounded-2xl p-5' style='animation-delay: 0.52s'>
-        <p class='text-sm font-black uppercase tracking-widest text-blue-400 mb-3'>{t.releaseHeadline}</p>
+      <div class='gsap-fadein mb-12 max-w-3xl mx-auto text-left bg-meg-surface-dark/50 border border-meg-accent/20 rounded-2xl p-5' style='animation-delay: 0.52s'>
+        <p class='text-sm font-black uppercase tracking-widest text-meg-accent mb-3'>{t.releaseHeadline}</p>
         <ul class='space-y-2 text-meg-text-secondary text-sm md:text-base'>
           {t.releaseHighlights.map((item) => (
             <li class='flex items-start gap-2'>
@@ -116,7 +116,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
           href='https://github.com/SemRels/semrel'
           target='_blank'
           rel='noopener noreferrer'
-          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] transition-all'
+          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-accent text-white font-bold text-lg hover:shadow-xl hover:shadow-meg-accent/20 hover:scale-[1.02] transition-all'
           aria-label={t.btnGithubLabel}
         >
           <i class='fa-brands fa-github' aria-hidden='true'></i>
@@ -126,7 +126,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
           href='https://www.semrel.io/'
           target='_blank'
           rel='noopener noreferrer'
-          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg hover:border-blue-500/50 transition-all'
+          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-surface-dark border border-meg-border-dark text-meg-text-primary-dark font-bold text-lg hover:border-meg-accent/50 transition-all'
           aria-label={t.btnDocsLabel}
         >
           <i class='fa-solid fa-book' aria-hidden='true'></i>
@@ -134,7 +134,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         </a>
         <a
           href={contributeHref}
-          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold text-lg hover:bg-emerald-500/20 transition-all'
+          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-meg-brand/70 border border-meg-accent/30 text-meg-accent font-bold text-lg hover:bg-meg-brand transition-all'
           aria-label={t.btnContributeLabel}
         >
           <i class='fa-solid fa-hand-holding-heart' aria-hidden='true'></i>
@@ -142,7 +142,7 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
         </a>
         <a
           href='/referenzen/waldheim-dev/semrel/'
-          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-meg-surface-dark/80 border border-blue-500/30 text-blue-400 font-bold text-lg hover:bg-blue-500/10 transition-all'
+          class='w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-meg-surface-dark/80 border border-meg-accent/30 text-meg-accent font-bold text-lg hover:bg-meg-brand/70 transition-all'
           aria-label={t.btnCaseStudyLabel}
         >
           <i class='fa-solid fa-diagram-project' aria-hidden='true'></i>
@@ -153,12 +153,11 @@ const contributeHref = lang === 'en' ? '/en/semrel/#contribute' : '/semrel/#cont
       <!-- Trust indicators -->
       <div class='gsap-fadein flex flex-wrap justify-center gap-4 text-sm text-meg-text-secondary' style='animation-delay: 0.75s'>
         {[
-          { icon: 'fa-shield-halved', text: 'Cosign v3 · SBOM · SLSA', color: 'text-blue-400' },
-          { icon: 'fa-puzzle-piece', text: '46 Plugins (.semrel.lock)', color: 'text-sky-400' },
-          { icon: 'fa-diagram-project', text: 'Monorepo Workspace', color: 'text-blue-400' },
-          { icon: 'fa-plane-slash', text: 'Air-Gap Ready', color: 'text-sky-400' },
-          { icon: 'fa-certificate', text: 'OpenSSF Scorecard', color: 'text-blue-400' },
-          { icon: 'fa-building-shield', text: 'Enterprise Adopters', color: 'text-emerald-400' },
+          { icon: 'fa-shield-halved', text: 'Cosign v3 · SBOM · SLSA', color: 'text-meg-accent' },
+          { icon: 'fa-puzzle-piece', text: '46 Plugins (.semrel.lock)', color: 'text-meg-accent' },
+          { icon: 'fa-diagram-project', text: 'Monorepo Workspace', color: 'text-meg-accent' },
+          { icon: 'fa-plane-slash', text: 'Air-Gap Ready', color: 'text-meg-accent' },
+          { icon: 'fa-certificate', text: 'OpenSSF Scorecard', color: 'text-meg-accent' },
         ].map(item => (
           <div class='flex items-center gap-2 bg-meg-surface-dark/50 border border-meg-border-dark px-4 py-2 rounded-xl'>
             <i class={`fa-solid ${item.icon} ${item.color}`} aria-hidden='true'></i>

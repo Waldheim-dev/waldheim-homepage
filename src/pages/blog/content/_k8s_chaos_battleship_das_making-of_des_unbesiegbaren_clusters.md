@@ -7,7 +7,7 @@ author: 'markus-waldheim'
 keywords: Kubernetes, Chaos Engineering, GoLang, FluxCD, GitOps, Gamification, Cloudland 2026, Platform Engineering, Resilienz, Self-Healing
 ---
 
-# K8s Chaos Battleship: Das Making-Of des unbesiegbaren Clusters
+## K8s Chaos Battleship: Das Making-Of des unbesiegbaren Clusters
 
 ⏳ **T-Minus 2 Wochen bis zur Cloudland 2026!**
 

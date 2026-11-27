@@ -7,7 +7,7 @@ author: 'markus-waldheim'
 keywords: SEWOBE, SEWOBE AG, Vereinsverwaltung, Verbandsverwaltung, Mitgliederverwaltung, Software, Vereinssoftware, Verbandssoftware, Digitalisierung, Verein, Verband, Organisation, Partner, Dienstleistungen, Beratung, Support, Schulung, [weitere relevante Keywords]
 ---
 
-# Neue Partnerschaft: SEWOBE AG – Vereinsverwaltung leicht gemacht! 🤝
+## Neue Partnerschaft: SEWOBE AG – Vereinsverwaltung leicht gemacht! 🤝
 
 Ich freue mich, Ihnen meine neue Partnerschaft mit der **SEWOBE AG** bekannt zu geben! Als zertifizierter SEWOBE-Partner
 kann ich Sie ab sofort noch umfassender bei der Digitalisierung Ihrer Vereins- oder Verbandsverwaltung unterstützen.
