@@ -7,9 +7,12 @@ export interface Props {
   price: string;
   priceSubtext?: string;
   duration: string;
+  durationLabel?: string;
   durationSubtext?: string;
   deliverable: string;
   location?: string;
+  locationLabel?: string;
+  locationSubtext?: string;
   accentColor?: 'blue' | 'purple' | 'green' | 'orange' | 'rose' | 'yellow' | 'cyan' | 'indigo';
   primaryCtaText?: string;
   primaryCtaHref?: string;
@@ -21,11 +24,14 @@ const {
   question,
   directAnswer,
   price,
-  priceSubtext = 'Transparent · § 19 UStG (Netto = Brutto)',
+  priceSubtext = 'Preisangaben gemäß aktuellem Angebot',
   duration,
-  durationSubtext = 'Durch 10x AI-Engineering beschleunigt',
+  durationLabel,
+  durationSubtext = 'Der Zeitraum richtet sich nach Umfang und Vereinbarung',
   deliverable,
   location = 'Augsburg, München & DACH Remote',
+  locationLabel,
+  locationSubtext,
   accentColor = 'blue',
   primaryCtaText,
   primaryCtaHref,
@@ -49,11 +55,11 @@ const colorMap = {
     glow: 'from-violet-500/10 to-fuchsia-500/5',
   },
   green: {
-    border: 'border-emerald-500/30',
-    badgeBg: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400',
-    iconText: 'text-emerald-400',
-    iconBg: 'bg-emerald-500/10 border-emerald-500/20',
-    glow: 'from-emerald-500/10 to-teal-500/5',
+    border: 'border-meg-accent/30',
+    badgeBg: 'bg-meg-brand border-meg-accent/20 text-meg-accent',
+    iconText: 'text-meg-accent',
+    iconBg: 'bg-meg-brand border-meg-accent/20',
+    glow: 'from-meg-brand/80 to-meg-accent/5',
   },
   orange: {
     border: 'border-orange-500/30',
@@ -96,10 +102,10 @@ const theme = colorMap[accentColor] || colorMap.blue;
 const labels = {
   badge: 'Antwort zuerst · Preis, Dauer & Fakten auf einen Blick',
   price: 'Einstiegspreis / Kosten',
-  duration: 'Typische Projektdauer',
+  duration: durationLabel ?? 'Typische Projektdauer',
   deliverable: 'Ergebnis & Lieferumfang',
-  location: 'Einsatzgebiet & Modell',
-  regionSub: 'Vor Ort & 100% Remote',
+  location: locationLabel ?? 'Einsatzgebiet & Modell',
+  regionSub: locationSubtext ?? 'Vor Ort oder remote',
 };
 ---
 
@@ -117,7 +123,7 @@ const labels = {
         </span>
         <span class="text-xs font-semibold text-meg-text-secondary">
           <i class="fa-solid fa-circle-check text-emerald-400 mr-1.5" aria-hidden="true"></i>
-          Direkt zitierfähig (SEO &amp; KI-Antworten) · Stand 2026
+          Waldheim.dev · transparent und direkt besprechbar
         </span>
       </div>
 
@@ -187,7 +193,7 @@ const labels = {
         <div class="mt-6 pt-5 border-t border-meg-border-dark/60 flex flex-wrap items-center justify-between gap-4">
           <p class="text-xs text-meg-text-secondary">
             <i class="fa-solid fa-bolt text-emerald-400 mr-1.5" aria-hidden="true"></i>
-            Kostenlose Ersteinschätzung mit konkretem Festpreis- oder Sprint-Angebot innerhalb von 24 Stunden.
+            Im Erstgespräch klären wir gemeinsam Ziel, Umfang und einen passenden nächsten Schritt.
           </p>
           <div class="flex flex-wrap gap-3">
             {primaryCtaText && primaryCtaHref && (

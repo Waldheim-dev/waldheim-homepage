@@ -19,6 +19,7 @@ export interface Props {
   schema?: any[];
   robots?: string;
   canonical?: string;
+  showLatestBlogBanner?: boolean;
 }
 
 // Canonical URL & Normalisierung
@@ -101,6 +102,7 @@ const {
   schema = [],
   keywords = 'IT-Consulting Augsburg, Softwareentwicklung München, Webentwicklung Kosten, DevSecOps Experte, Waldheim Suite ERP CRM, KI-Coaching, KNX Smart Home',
   robots = 'index, follow',
+  showLatestBlogBanner = false,
 } = Astro.props;
 
 // Schemas zusammenführen (Basis + Seitenspezifisch)
@@ -113,7 +115,7 @@ const finalSchema = [
 ---
 
 <!doctype html>
-<html lang={currentLang} class="scroll-smooth">
+<html lang={currentLang} class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <base href="/" />
@@ -136,96 +138,63 @@ const finalSchema = [
       href="/favicons/favicon-32x32.png"
     />
     <link rel="manifest" href="/favicons/site.webmanifest" />
-    <meta name="theme-color" content="#020617" />
+    <meta name="theme-color" content="#f7faf7" />
     <script is:inline>
       (() => {
-        const THEME_KEY = 'waldheim-theme';
         const CONTRAST_KEY = 'waldheim-contrast';
-        const validThemes = new Set(['dark', 'light', 'system']);
         const validContrasts = new Set(['normal', 'high']);
-
-        const getSystemTheme = () =>
-          window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-        const getSavedThemeSelection = () => {
-          const theme = localStorage.getItem(THEME_KEY);
-          return validThemes.has(theme) ? theme : 'dark';
-        };
 
         const getSavedContrast = () => {
           const contrast = localStorage.getItem(CONTRAST_KEY);
           return validContrasts.has(contrast) ? contrast : 'normal';
         };
 
-        const resolveTheme = (themeSelection) =>
-          themeSelection === 'system' ? getSystemTheme() : themeSelection;
-
-        const updateThemeColor = (resolvedTheme, contrast) => {
+        const updateThemeColor = (contrast) => {
           const metaTheme = document.querySelector('meta[name="theme-color"]');
           if (!metaTheme) return;
-
-          if (contrast === 'high') {
-            metaTheme.setAttribute('content', resolvedTheme === 'dark' ? '#000000' : '#ffffff');
-            return;
-          }
-          metaTheme.setAttribute('content', resolvedTheme === 'dark' ? '#020617' : '#f8fafc');
-        };
-
-        const applyAppearance = (themeSelection, contrast) => {
-          const root = document.documentElement;
-          const resolvedTheme = resolveTheme(themeSelection);
-          root.dataset.theme = resolvedTheme;
-          root.dataset.themeSource = themeSelection;
-          root.dataset.contrast = contrast;
-          updateThemeColor(resolvedTheme, contrast);
-          window.dispatchEvent(
-            new CustomEvent('waldheim:appearance-change', {
-              detail: { theme: resolvedTheme, themeSource: themeSelection, contrast },
-            }),
+          metaTheme.setAttribute(
+            'content',
+            contrast === 'high' ? '#ffffff' : '#f7faf7',
           );
         };
 
-        const setTheme = (themeSelection) => {
-          if (!validThemes.has(themeSelection)) return;
-          if (themeSelection === 'system') {
-            localStorage.removeItem(THEME_KEY);
-          } else {
-            localStorage.setItem(THEME_KEY, themeSelection);
-          }
-          applyAppearance(themeSelection, getSavedContrast());
+        const applyAppearance = (contrast) => {
+          const root = document.documentElement;
+          root.dataset.theme = 'light';
+          root.dataset.themeSource = 'light';
+          root.dataset.contrast = contrast;
+          updateThemeColor(contrast);
+          window.dispatchEvent(
+            new CustomEvent('waldheim:appearance-change', {
+              detail: { theme: 'light', themeSource: 'light', contrast },
+            }),
+          );
         };
 
         const setContrast = (contrast) => {
           if (!validContrasts.has(contrast)) return;
           localStorage.setItem(CONTRAST_KEY, contrast);
-          applyAppearance(getSavedThemeSelection(), contrast);
+          applyAppearance(contrast);
         };
 
         const toggleContrast = () => {
           setContrast(getSavedContrast() === 'high' ? 'normal' : 'high');
         };
 
-        applyAppearance(getSavedThemeSelection(), getSavedContrast());
+        applyAppearance(getSavedContrast());
         document.addEventListener('astro:page-load', () => {
-          applyAppearance(getSavedThemeSelection(), getSavedContrast());
+          applyAppearance(getSavedContrast());
         });
 
         window.waldheimAppearance = {
           getState: () => ({
-            theme: resolveTheme(getSavedThemeSelection()),
-            themeSource: getSavedThemeSelection(),
+            theme: 'light',
+            themeSource: 'light',
             contrast: getSavedContrast(),
           }),
-          setTheme,
           setContrast,
           toggleContrast,
         };
-
-        const colorSchemeWatcher = window.matchMedia('(prefers-color-scheme: dark)');
-        colorSchemeWatcher.addEventListener('change', () => {
-          if (getSavedThemeSelection() !== 'system') return;
-          applyAppearance('system', getSavedContrast());
-        });
       })();
     </script>
 
@@ -346,9 +315,11 @@ const finalSchema = [
       <Nav />
     </header>
 
-    <aside class="max-w-7xl mx-auto px-4">
-      <Banner />
-    </aside>
+    {showLatestBlogBanner && (
+      <aside class="max-w-7xl mx-auto px-4" data-testid="latest-blog-banner">
+        <Banner />
+      </aside>
+    )}
 
     <main>
       <slot />

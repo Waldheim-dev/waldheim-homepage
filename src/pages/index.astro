@@ -10,19 +10,14 @@ import PriceService from '../components/PriceService.astro';
 import Blog from '../components/Blog.astro';
 import SkillWrapper from '../components/SkillWrapper.astro';
 import TrackedButton from '../components/TrackedButton.astro';
-import Testimonials from '../components/Testimonials.astro';
 import FreeTools from '../components/FreeTools.astro';
-import SuiteClaim from '../components/SuiteClaim.astro';
-import ROICalculator from '../components/ROICalculator.astro';
-import AnswerFirstBox from '../components/AnswerFirstBox.astro';
 import SolutionDirectorySection from '../components/SolutionDirectorySection.astro';
 import { ALL_SERVICE_SOLUTIONS, ALL_SUITE_SOLUTIONS } from '../consts/seoCatalog';
 
 // SEO & Meta (High-CTR: Suchbegriff vorne + Einstiegspreis im Titel, < 68 Zeichen)
-const titel =
-  'IT-Consulting & Software Augsburg – ab 70 €/h | Waldheim.dev';
+const titel = 'Beratung, Software & Waldheim Suite | Waldheim.dev';
 const description =
-  'Webentwicklung ab 1.400 €, Individualsoftware & DevSecOps in Augsburg/München (70 €/h, § 19 UStG) sowie Waldheim Suite (ERP & CRM) ab 29 €/Monat.';
+  'Persönliche IT-Beratung und Softwareentwicklung aus Augsburg. Entdecken Sie die Waldheim Suite für vernetzte Unternehmensprozesse und semrel, unsere Open-Source-Release-Automation.';
 const keywords =
   'IT-Consulting Augsburg, Softwareentwicklung München, Webentwicklung Augsburg Kosten, DevSecOps FinOps AIOps, Waldheim Suite ERP CRM, KI Coaching Entwickler';
 const ogImage = 'https://waldheim.dev/waldheim-dev-og.jpg';
@@ -50,7 +45,7 @@ const professionalServiceSchema = {
     { '@type': 'City', name: 'Landsberg am Lech' },
   ],
   description:
-    'Senior IT-Consulting, DevSecOps, FinOps, AIOps, Webentwicklung und Individualsoftware. Spezialisiert auf 10x (>1.000%) KI-gestützte Produktivität und Team-Coaching.',
+    'Senior IT-Beratung, Softwareentwicklung, DevSecOps und Produktentwicklung mit transparenten Entscheidungen und schrittweiser Umsetzung.',
   memberOf: [
     {
       '@type': 'Organization',
@@ -81,13 +76,12 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
   schema={[professionalServiceSchema, breadCrumbSchema]}
   image={ogImage}
 >
-  <HeroBackground
-    title="High-End IT-Consulting & Software­entwicklung"
-    subtitle="Ich transformiere Ihre IT-Prozesse mit DevSecOps, FinOps, AIOps und eigenen KI-Automationen (AI Reviews & Skills) für über 1.000% (10x) mehr Produktivität – in der Umsetzung wie im Team-Coaching."
-    video="/videos/video_chip.mp4"
-    aiGenerated={true}
-  >
-    <div class="mt-10 flex items-center justify-center flex-wrap gap-4">
+  <main id="main-content">
+    <HeroBackground
+      title="Weniger Reibung. Mehr Wirkung aus Ihrer IT."
+      subtitle="Beratung, Software und Automatisierung aus Augsburg: Wir klären zuerst, was Sie wirklich brauchen, und setzen dann den passenden nächsten Schritt um – als Dienstleistung, mit der Waldheim Suite oder mit Open Source wie semrel."
+    >
+    <div class="flex flex-wrap items-center gap-3">
       <TrackedButton
         href="https://calendly.com/markus-waldheim/30min"
         target="_blank"
@@ -95,106 +89,92 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
         trackCategory="hero"
         trackLabel="Strategiegespräch buchen"
         variant="primary"
-        icon="fa-solid fa-calendar-check animate-pulse"
+        icon="fa-solid fa-calendar-check"
         iconPosition="left"
       >
-        Kostenloses Strategiegespräch
+        30 Minuten sprechen
       </TrackedButton>
       <TrackedButton
-        href="/referenzen/"
-        trackEvent="cta_homepage_references"
+        href="#kernbereiche"
+        trackEvent="cta_homepage_explore"
         trackCategory="hero"
-        trackLabel="Referenzen"
+        trackLabel="Drei Kernbereiche"
         variant="secondary"
         icon="fa-solid fa-arrow-right"
       >
-        Case Studies ansehen
+        Wege entdecken
       </TrackedButton>
     </div>
+    </HeroBackground>
 
-    <!-- Trust-Bar: Direkte Sichtbarkeit der USPs -->
-    <div
-      class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-meg-text-secondary text-sm border-t border-meg-border-dark/30 pt-8"
+    <section
+      class="border-b border-meg-border-dark bg-white/70 px-6 py-7"
+      aria-label="Erfahrung und Zusammenarbeit"
     >
-      <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">10+ Jahre</span>
-        <span>IT-Expertise</span>
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-6 text-center sm:grid-cols-4">
+        <div>
+          <p class="font-black text-meg-text-primary-dark">10+ Jahre</p>
+          <p class="mt-1 text-sm text-meg-text-secondary">IT-Erfahrung</p>
+        </div>
+        <div>
+          <p class="font-black text-meg-text-primary-dark">PSM II · PSPO I</p>
+          <p class="mt-1 text-sm text-meg-text-secondary">Scrum-Zertifizierungen</p>
+        </div>
+        <div>
+          <p class="font-black text-meg-text-primary-dark">Augsburg</p>
+          <p class="mt-1 text-sm text-meg-text-secondary">und Zusammenarbeit remote</p>
+        </div>
+        <div>
+          <p class="font-black text-meg-text-primary-dark">Open Source</p>
+          <p class="mt-1 text-sm text-meg-text-secondary">Nachvollziehbar und offen</p>
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">&gt;1.000% (10x)</span>
-        <span>Produktivität durch KI</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">PSM I/II & PSPO</span>
-        <span>Zertifiziert</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <span class="text-meg-accent font-bold text-lg">90+ Score</span>
-        <span>Lighthouse-Performance</span>
-      </div>
-    </div>
-  </HeroBackground>
-
-  <main id="main-content">
-    <AnswerFirstBox
-      question="Was kosten IT-Consulting, Web-/Softwareentwicklung und die Waldheim Suite bei Waldheim.dev?"
-      directAnswer="IT-Consulting, DevSecOps, IT-Support und individuelle Softwareentwicklung kosten bei Waldheim.dev 70 € pro Stunde im fairen 15-Minuten-Takt (gemäß § 19 UStG umsatzsteuerbefreit – Netto = Brutto) oder als Festpreis-Paket: Unternehmenswebsites starten ab 1.400 € (Dauer: 2–4 Wochen), Kundenportale und Web-Apps ab 4.900 € (Dauer: 4–8 Wochen). Unsere schlüsselfertige ERP- & CRM-Plattform Waldheim Suite (9 Module inkl. E-Rechnung, Kundenportal, DMS, Treasury, Fuhrpark & WEG) ist ab 29 € pro Nutzer/Monat in unter 15 Minuten einsatzbereit."
-      price="Ab 70 €/h · Suite ab 29 €"
-      priceSubtext="Festpreise ab 280 € · § 19 UStG (Netto = Brutto)"
-      duration="Sofort bis 4 Wochen"
-      durationSubtext="Suite < 15 Min. · Websites 2–4 Wochen"
-      deliverable="Web, Software, DevSecOps, IT/KNX & 9-Modul-Suite"
-      location="Augsburg, München & DACH Remote"
-      accentColor="blue"
-      primaryCtaText="Kostenloses 30-Min.-Erstgespräch"
-      primaryCtaHref="https://calendly.com/markus-waldheim/30min"
-      secondaryCtaText="Alle Preise & Fragen ansehen"
-      secondaryCtaHref="#alle-loesungen"
-    />
+    </section>
 
     <!-- Strategische 3-Anker-Architektur: Services · Waldheim Suite · Open Source (semrel) -->
     <section
-      class="py-20 border-b border-meg-border-dark/30"
+      id="kernbereiche"
+      class="bg-meg-bg-dark px-6 py-24"
       aria-labelledby="strategic-anchors-heading"
     >
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
         <div class="text-center max-w-3xl mx-auto">
           <p class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4">
-            Drei Kernbereiche · Ein Qualitätsanspruch
+            Drei Wege · Ein persönlicher Ansprechpartner
           </p>
           <h2
             id="strategic-anchors-heading"
             class="text-4xl md:text-5xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
           >
-            Consulting, SaaS-Plattform &amp; Open-Source Engineering
+            Was möchten Sie als Nächstes möglich machen?
           </h2>
           <p class="text-lg text-meg-text-secondary">
-            Ob maßgeschneiderte Enterprise-Beratung, schlüsselfertige Business-Suite für den Mittelstand oder supply-chain-sichere Open-Source-Automatisierung – wählen Sie den passenden Hebel für Ihr Vorhaben.
+            Wählen Sie den Einstieg, der zu Ihrem Vorhaben passt. Wir machen Umfang und nächste Schritte verständlich, bevor Arbeit beginnt.
           </p>
         </div>
 
         <div class="mt-12 grid gap-8 lg:grid-cols-3">
-          <!-- Anker 1: Dienstleistungen (Services) -->
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-violet-500/40 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
+          <!-- Weg 1: Dienstleistungen -->
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/40 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
             <div>
               <div class="flex items-center justify-between mb-6">
-                <div class="size-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+                <div class="size-12 rounded-2xl bg-meg-brand border border-meg-accent/20 flex items-center justify-center text-meg-accent">
                   <i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i>
                 </div>
-                <span class="text-[10px] font-black uppercase tracking-widest text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full">
-                  1 · IT-Services &amp; Consulting
+                <span class="text-[10px] font-black uppercase tracking-widest text-meg-accent bg-meg-brand border border-meg-accent/20 px-3 py-1 rounded-full">
+                  01 · Beratung und Umsetzung
                 </span>
               </div>
               <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
-                DevSecOps, FinOps, AIOps &amp; Software
+                Wenn Ihr Vorhaben einen erfahrenen Umsetzungspartner braucht
               </h3>
               <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-                Zertifizierte Senior-Expertise (PSM II, PSPO I) für DevSecOps, FinOps &amp; AIOps, klassische Webseiten-Entwicklung &amp; Gestaltung, Custom Software sowie AI-Team-Coaching (&gt;1.000% / 10x Produktivität).
+                Von IT-Beratung und sicheren Lieferprozessen bis zu Web- und Individualsoftware: Wir klären Ziel, Umfang und Risiken gemeinsam.
               </p>
               <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>DevSecOps, FinOps, AIOps, Kubernetes &amp; GitOps</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Webseiten, Custom Software &amp; 10x AI-Coaching (&gt;1.000%)</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Eigene AI Reviews, Skills-Automationen &amp; IT/KNX-Service</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Webseiten, individuelle Software &amp; Team-Coaching</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>IT-Service, KNX und Automatisierung</span></li>
               </ul>
             </div>
             <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
@@ -209,18 +189,18 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 Services entdecken
               </TrackedButton>
               <TrackedButton
-                href="#roi-rechner"
+                href="#so-arbeiten-wir"
                 trackEvent="cta_homepage_anchor_roi"
                 trackCategory="strategic_anchors"
-                trackLabel="ROI Calculator"
+                trackLabel="How we work"
                 variant="secondary"
               >
-                ROI berechnen
+                Arbeitsweise ansehen
               </TrackedButton>
             </div>
           </article>
 
-          <!-- Anker 2: SaaS Waldheim Suite -->
+          <!-- Weg 2: Waldheim Suite -->
           <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
             <div>
               <div class="flex items-center justify-between mb-6">
@@ -228,19 +208,19 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                   <i class="fa-solid fa-table-cells-large text-xl" aria-hidden="true"></i>
                 </div>
                 <span class="text-[10px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                  2 · SaaS Suite v0.12.1 · Finale Startlöcher
+                  02 · Waldheim Suite
                 </span>
               </div>
               <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
-                Waldheim Suite – 8 Module, 1 Login
+                Wenn Prozesse und Informationen zusammengehören
               </h3>
               <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-                Mit <strong>v0.12.1 in den finalen Startlöchern</strong> vor v1.0 und <strong>ab sofort produktiv nutzbar</strong>: Steuern Sie CRM (Socialverse), ERP (Silvacore), DMS (Aether), Fuhrpark (Ecodrive), Finanzen (Treasury), Immobilien (Properties), Messaging (Relay) und Workflows (Conductor) aus einer mandantenisolierten App-Shell.
+                Die modulare Plattform verbindet CRM, ERP, Finanzen, Dokumente und weitere Abläufe in einem gemeinsamen Workspace. Starten Sie mit dem, was Sie heute benötigen.
               </p>
               <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>XRechnung 3.0 &amp; ZUGFeRD PDF/A-3b, DATEV EXTF 700 &amp; CAMT.053</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Smart Masks, Server-Driven DataTables &amp; WEG-Zählerkaskade</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>100% DSGVO-konform (PostgreSQL RLS) · Live-Demo sofort startklar</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Ein Login, App-Switch und mandantenbezogene Arbeitsbereiche</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Tarife und optionale Einheitspreise vor dem Abschluss einsehen</span></li>
               </ul>
             </div>
             <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
@@ -259,36 +239,36 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 href="https://suite.waldheim.dev"
                 trackEvent="cta_homepage_suite_live"
                 trackCategory="suite_launch"
-                trackLabel="Suite Live Demo"
+                trackLabel="Suite test access"
                 variant="secondary"
                 icon="fa-solid fa-arrow-up-right-from-square"
               >
-                Jetzt live nutzen
+                Testphase ansehen
               </TrackedButton>
             </div>
           </article>
 
-          <!-- Anker 3: Open Source Stack & semrel -->
-          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-blue-500/50 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
+          <!-- Weg 3: Open Source -->
+          <article class="bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/40 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl">
             <div>
               <div class="flex items-center justify-between mb-6">
-                <div class="size-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                <div class="size-12 rounded-2xl bg-meg-brand border border-meg-accent/20 flex items-center justify-center text-meg-accent">
                   <i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i>
                 </div>
-                <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
-                  3 · Open Source · semrel v0.28.3
+                <span class="text-[10px] font-black uppercase tracking-widest text-meg-accent bg-meg-brand border border-meg-accent/20 px-3 py-1 rounded-full">
+                  03 · Open Source · Apache 2.0
                 </span>
               </div>
               <h3 class="text-2xl font-bold text-meg-text-primary-dark mb-3">
-                semrel &amp; Open-Source Ökosystem
+                Wenn Releases wiederholbar statt Handarbeit sein sollen
               </h3>
               <p class="text-meg-text-secondary text-sm leading-relaxed mb-6">
-                Produktionsreife Open-Source-Software als gelebter Beweis für Engineering-Exzellenz: allen voran <strong>semrel v0.28.3</strong> (im letzten Feinschliff vor dem v1.0 Release) – die Go-native, zero-dependency Semantic-Release-Engine für Monorepos, Enterprise-CI/CD und Air-Gap-Umgebungen.
+                semrel ist ein offenes, Go-natives Werkzeug für semantische Versionierung und automatisierte Releases – mit Plugin-Architektur und Unterstützung für Monorepos.
               </p>
               <ul class="space-y-2 text-xs text-meg-text-secondary mb-8">
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Statisches Go-Binary ohne Node.js-Abhängigkeiten</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Cosign v3 Bundle, CycloneDX/SPDX SBOM &amp; SLSA</span></li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Workspace 2.0 (Shared/Ignore Paths, Paket-Changelogs) &amp; 46 Plugins</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Conventional Commits, Changelog und SemVer</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400" aria-hidden="true"></i><span>Dokumentation, Roadmap und Beiträge offen auf GitHub</span></li>
               </ul>
             </div>
             <div class="flex flex-wrap gap-3 pt-4 border-t border-meg-border-dark/60">
@@ -301,7 +281,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 icon="fa-solid fa-code-branch"
                 iconPosition="left"
               >
-                semrel v0.28.3
+                semrel entdecken
               </TrackedButton>
               <TrackedButton
                 href="#opensource-stack"
@@ -340,9 +320,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                 >
               </h2>
               <p class="text-lg text-meg-text-secondary mb-8">
-                IT ist kein Selbstzweck, sondern Ihr stärkster Hebel. Ich
-                garantiere Lösungen, die nicht nur funktionieren, sondern Ihr
-                Business skalierbar machen.
+                IT soll konkrete Arbeit erleichtern. Wir verstehen zuerst den
+                Engpass und wählen dann eine passende, wartbare Lösung.
               </p>
               <dl class="space-y-6">
                 <div>
@@ -354,8 +333,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                       aria-hidden="true"></i> Sicherheit (By Design)
                   </dt>
                   <dd class="mt-2 ml-8 text-meg-text-secondary">
-                    Präventive Absicherung Ihrer Infrastruktur ab der ersten
-                    Codezeile.
+                    Sicherheitsanforderungen früh klären und in Architektur und
+                    Lieferprozess berücksichtigen.
                   </dd>
                 </div>
                 <div>
@@ -367,8 +346,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                       aria-hidden="true"></i> High Performance
                   </dt>
                   <dd class="mt-2 ml-8 text-meg-text-secondary">
-                    Ladezeiten unter 1s und optimierte Core Web Vitals für beste
-                    UX und SEO.
+                    Performance messen, Engpässe sichtbar machen und
+                    Verbesserungen nachvollziehbar priorisieren.
                   </dd>
                 </div>
                 <div>
@@ -380,8 +359,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
                       aria-hidden="true"></i> Saubere Dokumentation
                   </dt>
                   <dd class="mt-2 ml-8 text-meg-text-secondary">
-                    100% nachvollziehbarer Code und Architekturentscheidungen
-                    (ADR).
+                    Entscheidungen, Schnittstellen und Übergaben verständlich
+                    dokumentieren.
                   </dd>
                 </div>
               </dl>
@@ -411,7 +390,8 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
             </header>
             <p class="text-meg-text-secondary mb-6">
               Sichere CI/CD-Pipelines, GitOps, Cloud-Kostenoptimierung (FinOps),
-              KI-gestützte Observability (AIOps) und Team-Coaching für eigene AI-Review- &amp; Skill-Automationen.
+              KI-gestützte Observability (AIOps) und Team-Coaching für
+              Entwicklungsabläufe.
             </p>
             <TrackedButton
               href="/services/devsecops/"
@@ -454,7 +434,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
             </header>
             <p class="text-meg-text-secondary mb-6">
               Moderne Webseiten-Entwicklung &amp; Gestaltung, maßgeschneiderte
-              SaaS-/Enterprise-Software und 10x AI-Engineering-Coaching (&gt;1.000% Produktivität).
+              SaaS-/Enterprise-Software und praxisnahes Team-Coaching.
             </p>
             <TrackedButton
               href="/services/entwicklung/"
@@ -582,12 +562,12 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
               <div class="flex-1">
                 <span
                   class="text-meg-accent font-bold uppercase tracking-[0.2em] text-xs mb-4 block"
-                  >Garantierte Qualität</span
+                  >Arbeitsweise &amp; Erfahrung</span
                 >
                 <h3
                   class="text-3xl font-black tracking-tighter text-meg-text-primary-dark mb-6"
                 >
-                  Profitieren Sie von <span
+                  Arbeiten Sie mit <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-meg-accent to-sky-400"
                     >zertifizierter</span
                   > Expertise
@@ -648,10 +628,67 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
       </div>
     </section>
 
-    <ROICalculator />
+    <section
+      id="so-arbeiten-wir"
+      class="border-y border-meg-border-dark bg-white/70 px-6 py-24"
+      aria-labelledby="process-heading"
+    >
+      <div class="mx-auto max-w-7xl">
+        <header class="mx-auto max-w-3xl text-center">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-meg-accent">
+            Zusammenarbeit ohne Blackbox
+          </p>
+          <h2
+            id="process-heading"
+            class="mt-4 text-balance text-3xl font-black tracking-tight text-meg-text-primary-dark sm:text-5xl"
+          >
+            Gute Lösungen beginnen mit Klarheit.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-meg-text-secondary">
+            Sie wissen, woran gearbeitet wird, warum es wichtig ist und was als
+            Nächstes passiert.
+          </p>
+        </header>
+
+        <ol class="mt-12 grid gap-5 md:grid-cols-3">
+          <li class="rounded-3xl border border-meg-border-dark bg-white p-7 shadow-sm">
+            <span class="flex size-11 items-center justify-center rounded-2xl bg-meg-brand font-black text-meg-accent">01</span>
+            <h3 class="mt-6 text-xl font-black text-meg-text-primary-dark">Zuhören und verstehen</h3>
+            <p class="mt-3 leading-7 text-meg-text-secondary">
+              Wir beginnen bei Ihrem Ziel, den bestehenden Abläufen und den
+              Menschen, die damit arbeiten.
+            </p>
+          </li>
+          <li class="rounded-3xl border border-meg-border-dark bg-white p-7 shadow-sm">
+            <span class="flex size-11 items-center justify-center rounded-2xl bg-meg-brand font-black text-meg-accent">02</span>
+            <h3 class="mt-6 text-xl font-black text-meg-text-primary-dark">Optionen offenlegen</h3>
+            <p class="mt-3 leading-7 text-meg-text-secondary">
+              Sie erhalten einen verständlichen Vorschlag zu Umfang, Kosten,
+              Abhängigkeiten und sinnvollen Alternativen.
+            </p>
+          </li>
+          <li class="rounded-3xl border border-meg-border-dark bg-white p-7 shadow-sm">
+            <span class="flex size-11 items-center justify-center rounded-2xl bg-meg-brand font-black text-meg-accent">03</span>
+            <h3 class="mt-6 text-xl font-black text-meg-text-primary-dark">Schrittweise liefern</h3>
+            <p class="mt-3 leading-7 text-meg-text-secondary">
+              Wir setzen in überprüfbaren Etappen um, holen Feedback ein und
+              halten Entscheidungen nachvollziehbar fest.
+            </p>
+          </li>
+        </ol>
+        <div class="mt-10 text-center">
+          <a
+            href="/kontakt/"
+            class="inline-flex items-center gap-2 rounded-xl bg-meg-accent px-6 py-3.5 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-meg-accent"
+          >
+            Vorhaben besprechen
+            <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <PortfolioTop />
-    <Testimonials />
     <PriceService />
     <div id="alle-loesungen">
       <SolutionDirectorySection
@@ -664,6 +701,5 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
     <Blog limits={6} />
     <FreeTools />
     <SkillWrapper />
-    <SuiteClaim />
   </main>
 </Layout>
