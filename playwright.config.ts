@@ -9,7 +9,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:4322',
+    baseURL: 'http://127.0.0.1:4323',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -22,9 +22,9 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'pnpm preview --port 4322',
-    url: 'http://localhost:4322',
-    reuseExistingServer: !process.env.CI,
+    command: 'pnpm preview --host 127.0.0.1 --port 4323 --strictPort',
+    url: 'http://127.0.0.1:4323',
+    reuseExistingServer: false,
     timeout: 120000,
   },
 });

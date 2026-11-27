@@ -650,7 +650,7 @@ const complianceItems = [
   <!-- Module Grid -->
   <AnswerFirstBox
     question="Was kostet die Waldheim Suite (ERP, CRM, DMS & E-Rechnung) und wie schnell ist sie einsatzbereit?"
-    directAnswer="Die Waldheim Suite kostet ab 29 € pro Seat und Monat im Starter-Tarif und 59 € pro Seat und Monat im Professional-Tarif. Enterprise kostet pauschal 89 € pro Monat. Für WEG-Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen. Die Suite ist monatlich kündbar."
+    directAnswer="Die Waldheim Suite kostet ab 29 € pro Seat und Monat im Starter-Tarif, 59 € im Professional-Tarif und 89 € im Enterprise-Tarif. Für WEG-Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen. Die Suite ist monatlich kündbar."
     price="Ab 29 € / Seat / Monat"
     priceSubtext="Monatlich kündbar · 14 Tage testen"
     duration="14 Tage"
@@ -1414,7 +1414,7 @@ const complianceItems = [
               >€89</span
             >
             <span class="text-meg-text-secondary text-xs font-bold uppercase"
-              >/Monat pauschal</span
+              >/Seat/Mo.</span
             >
           </div>
           <p class="text-sm text-meg-text-secondary mb-5 leading-relaxed">
@@ -1487,7 +1487,7 @@ const complianceItems = [
                   class="calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40"
                 >
                   Enterprise<br /><span
-                    class="text-[10px] font-normal">€89 pauschal</span
+                    class="text-[10px] font-normal">€89/Seat</span
                   >
                 </button>
               </div>
@@ -1499,7 +1499,7 @@ const complianceItems = [
                 <label
                   for="calc-seats"
                   class="text-sm font-bold text-meg-text-primary-dark"
-                  >Anzahl Nutzer (Seats; Enterprise pauschal)</label
+                  >Anzahl Nutzer (Seats)</label
                 >
                 <span
                   id="calc-seats-display"
@@ -1664,11 +1664,9 @@ const complianceItems = [
 
     seatsDisplay.textContent = seats.toString();
 
-    const basePrice = currentTier === 'enterprise' ? currentPrice : seats * currentPrice;
+    const basePrice = seats * currentPrice;
 
-    breakdownSeats.textContent = currentTier === 'enterprise'
-      ? 'Enterprise-Pauschale'
-      : `${seats} Seat${seats > 1 ? 's' : ''} × €${currentPrice}`;
+    breakdownSeats.textContent = `${seats} Seat${seats > 1 ? 's' : ''} × €${currentPrice}`;
     breakdownBase.textContent = `€${basePrice}`;
     totalEl.textContent = `€${basePrice}`;
   }
@@ -1677,7 +1675,7 @@ const complianceItems = [
     btn.addEventListener('click', () => {
       currentPrice = parseInt(btn.dataset.price || '29');
       currentTier = btn.dataset.tier || 'starter';
-      seatsInput.disabled = currentTier === 'enterprise';
+      seatsInput.disabled = false;
       tierBtns.forEach((b) => {
         b.className =
           'calc-tier-btn py-2.5 px-3 rounded-xl border text-xs font-bold transition-all border-meg-border-dark text-meg-text-secondary hover:border-meg-accent/40';

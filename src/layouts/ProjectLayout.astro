@@ -199,18 +199,8 @@ if (nextYear) {
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="lg:pr-4">
-            <div class="relative group overflow-hidden rounded-2xl bg-meg-surface-dark/50 border border-meg-border-dark hover:border-meg-accent/30 transition-all duration-300 shadow-sm">
-              <div
-                class="absolute -inset-2 bg-gradient-to-r from-meg-accent/10 via-sky-400/10 to-violet-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div
-                class="relative overflow-hidden rounded-2xl px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-                <img fetchpriority="high"
-                  class="absolute inset-0 h-full w-full object-cover brightness-50 saturate-50 group-hover:scale-105 transition-transform duration-700"
-                  src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
-                  alt={client.name}
-                />
-                <div class="absolute inset-0 bg-gradient-to-br from-meg-surface-dark/80 via-meg-surface-dark/90 to-meg-bg-dark/95" />
-                <figure class="relative isolate">
+            <div class="relative rounded-2xl border border-meg-border-dark bg-meg-brand/40 p-6 shadow-sm sm:p-8">
+                <figure class="relative">
                   <h2 class="text-meg-text-primary-dark text-3xl font-bold tracking-tight">{client.name}</h2>
                   {client.web ? (
                     <a
@@ -238,8 +228,6 @@ if (nextYear) {
                 </figure>
               </div>
             </div>
-  
-          </div>
           <div class="gsap-fadein">
             <div class="text-base leading-7 text-meg-text-primary-dark lg:max-w-lg">
               <p class="text-sm font-bold uppercase tracking-widest text-meg-accent">
@@ -557,7 +545,7 @@ if (nextYear) {
 </div>
 <div class=' px-6 py-6 lg:px-8 bg-meg-bg-dark'>
   <div class='mx-auto max-w-3xl text-base leading-7 text-meg-text-primary-dark'>
-    <div class="mt-16 prose prose-invert prose-meg w-full max-w-none">
+    <div class="mt-16 prose prose-meg w-full max-w-none">
       <slot />
     </div>
   </div>

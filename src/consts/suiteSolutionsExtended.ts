@@ -50,7 +50,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
         name: 'Enterprise (+ Immobilien- & Fahrzeugakten)',
         badge: 'Voll-Suite',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Unternehmen mit zusätzlichen Objekt-/WEG-Akten (Properties) und digitalen Fahrzeugakten (Ecodrive).',
         features: [
@@ -278,7 +278,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
         name: 'Enterprise (Voll-Suite)',
         badge: 'Alle 9 Module',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für zusätzliche Automatisierungen in der Immobilienverwaltung (Properties) und im Fuhrpark (Ecodrive).',
         features: [
@@ -360,7 +360,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
     h1Title: 'All-in-One Business-Software für KMU (ab 29 €)',
     heroDesc: 'Im typischen Mittelstand stecken Kundendaten im CRM, Rechnungen im Buchhaltungstool, Dateien in der Cloud, Tickets im Postfach und Fuhrparklisten in Excel. Die Waldheim Suite vereint alle 9 Bereiche unter einer einzigen Oberfläche.',
     question: 'Was kostet eine komplette All-in-One-Unternehmenssoftware für KMU und welche Module sind enthalten?',
-    directAnswer: 'Die Waldheim Suite bündelt bis zu 9 Unternehmensmodule unter einem Login: Starter für 29 € pro Seat/Monat, Professional für 59 € pro Seat/Monat und Enterprise pauschal für 89 € pro Monat. Für verwaltete Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen.',
+    directAnswer: 'Die Waldheim Suite bündelt bis zu 9 Unternehmensmodule unter einem Login: Starter für 29 €, Professional für 59 € und Enterprise für 89 € pro Seat/Monat. Für verwaltete Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen.',
     priceLabel: 'Ab 29 € / Seat / Monat',
     priceSubtext: 'Bis zu 9 Module in einer Plattform',
     durationLabel: 'Sofort (< 15 Min.)',
@@ -406,7 +406,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
         name: 'Enterprise (Alle 9 Module)',
         badge: 'Vollausbau',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Inkl. persönlichem Support',
         idealFor: 'Für Unternehmen mit zusätzlichen Anforderungen an Fuhrpark/ESG, Immobilienverwaltung und höchste Isolation.',
         features: [
@@ -435,7 +435,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
     comparisonRows: [
       { criteria: 'Anzahl Logins & Oberflächen', waldheim: '1 zentraler Login + App-Switcher', statusQuo: '6–10 verschiedene Logins & Passwörter' },
       { criteria: 'Schnittstellen-Pflege', waldheim: '0 € (alles nativ vernetzt)', statusQuo: 'Ständige Sync-Fehler zwischen Einzel-Tools' },
-      { criteria: 'Monatliche Suite-Kosten', waldheim: '29 € / Seat, 59 € / Seat oder 89 € pauschal; nutzungsabhängige Add-ons extra', statusQuo: '180 € – 350 € / Monat summierte Einzel-Abos' },
+      { criteria: 'Monatliche Suite-Kosten', waldheim: '29 €, 59 € oder 89 € pro Seat; nutzungsabhängige Add-ons extra', statusQuo: '180 € – 350 € / Monat summierte Einzel-Abos' },
       { criteria: 'Ansprechpartner beim Hersteller', waldheim: 'Direkter Kontakt zum deutschen Entwicklerteam', statusQuo: 'Anonyme Ticket-Hotlines im Ausland' },
     ],
     faqs: [
@@ -618,7 +618,7 @@ export const SUITE_SOLUTIONS_EXTENDED: SolutionPageData[] = [
         name: 'Suite Enterprise (Gesamt-Plattform)',
         badge: '9 Module inkl.',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für Unternehmen, die Flotten-ESG, Gebäudeverbräuche (Properties), Belege (Aether) und Finanzen (Treasury) kombiniert auswerten.',
         features: [

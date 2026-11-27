@@ -280,36 +280,14 @@ const finalSchema = [
 
     <style is:global>
       :root {
-        --accent-gradient: linear-gradient(45deg, #0ea5e9, #6366f1);
-      }
-      #cursor-blur {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(
-          circle,
-          rgba(14, 165, 233, 0.15) 0%,
-          rgba(14, 165, 233, 0) 70%
-        );
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        filter: blur(100px);
-        will-change: transform;
-        mix-blend-mode: screen;
-      }
-
-      html[data-theme='light'] #cursor-blur {
-        mix-blend-mode: multiply;
+        --accent-gradient: linear-gradient(45deg, #dfece0, #366544);
       }
     </style>
   </head>
   <body
-    class="bg-meg-bg-dark text-meg-text-primary-dark selection:bg-meg-accent selection:text-white antialiased overflow-x-hidden"
+    class="bg-meg-bg-dark text-meg-text-primary-dark selection:bg-meg-accent selection:text-white antialiased"
   >
-    <div id="cursor-blur" class="hidden lg:block"></div>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
     <header class="sticky top-0 z-50 max-w-7xl mx-auto py-2 px-4">
       <Nav />
@@ -321,32 +299,12 @@ const finalSchema = [
       </aside>
     )}
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
 
     <Footer />
     <CookieBanner />
 
-    <script is:inline>
-      // Cursor Blur Follower
-      const cursor = document.getElementById('cursor-blur');
-      if (cursor) {
-        window.addEventListener('mousemove', (e) => {
-          if (window.gsap) {
-            window.gsap.to(cursor, {
-              x: e.clientX - 300,
-              y: e.clientY - 300,
-              duration: 0.8,
-              ease: 'power3.out',
-            });
-          } else {
-            // Fallback: simpler CSS-based movement if GSAP isn't ready
-            cursor.style.transform = `translate(${e.clientX - 300}px, ${e.clientY - 300}px)`;
-            cursor.style.transition = 'transform 0.1s ease-out';
-          }
-        });
-      }
-    </script>
   </body>
 </html>

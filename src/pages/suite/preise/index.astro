@@ -16,7 +16,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([
 
 const titel = 'ERP & CRM Suite Preise – ab 29 €/Seat/Monat | Waldheim Suite';
 const description =
-  'Waldheim Suite Preise für KMU: Starter 29 € und Professional 59 € pro Seat/Monat, Enterprise pauschal 89 € pro Monat – inkl. E-Rechnung, CRM, ERP und DMS.';
+  'Waldheim Suite Preise für KMU: Starter 29 €, Professional 59 € und Enterprise 89 € pro Seat/Monat – inkl. E-Rechnung, CRM, ERP und DMS.';
 const keywords =
   'Waldheim Suite Preise, SaaS Pricing DACH, per Seat, CRM ERP Suite, Mittelstand, E-Rechnung, ZUGFeRD, XRechnung, Starter Professional Enterprise';
 
@@ -172,7 +172,7 @@ const faqs = [
   },
   {
     q: 'Was kostet das Enterprise-Tier?',
-    a: 'Das Enterprise-Tier kostet pauschal 89 EUR pro Monat. Für nutzungsabhängige Leistungen wie verwaltete Einheiten, Fahrzeuge oder erweiterten HelpDesk können zusätzliche Einheitspreise anfallen.'
+    a: 'Das Enterprise-Tier kostet 89 EUR pro Seat und Monat. Für nutzungsabhängige Leistungen wie verwaltete Einheiten, Fahrzeuge oder erweiterten HelpDesk können zusätzliche Einheitspreise anfallen.'
   },
   {
     q: 'Wo werden meine Daten gespeichert?',
@@ -231,9 +231,9 @@ const faqs = [
   <!-- Pricing Tiers Grid -->
   <AnswerFirstBox
     question="Was kosten die Tarife und Add-ons der Waldheim Suite pro Monat?"
-    directAnswer="Die Waldheim Suite kostet im Starter-Tarif 29 € und im Professional-Tarif 59 € pro Seat/Monat. Enterprise kostet pauschal 89 € pro Monat. Die 14-tägige Testphase erfordert keine Kreditkarte. Für WEG-Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen."
+    directAnswer="Die Waldheim Suite kostet im Starter-Tarif 29 €, im Professional-Tarif 59 € und im Enterprise-Tarif 89 € pro Seat/Monat. Die 14-tägige Testphase erfordert keine Kreditkarte. Für WEG-Einheiten, Fahrzeuge und erweiterten HelpDesk können zusätzliche Einheitspreise anfallen."
     price="29 € / 59 € / 89 €"
-    priceSubtext="Starter/Professional pro Seat, Enterprise pauschal · Monatlich kündbar"
+    priceSubtext="Alle Tarife pro Seat · Monatlich kündbar"
     duration="14 Tage"
     durationLabel="Testphase"
     durationSubtext="Testphase ohne automatisches Abo"
@@ -265,12 +265,12 @@ const faqs = [
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class={`text-xs font-bold uppercase tracking-widest ${tier.popular ? 'text-meg-accent' : 'text-slate-400'}`}>{tier.name}</span>
-                <span class={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full ${tier.popular ? 'bg-meg-accent text-slate-900' : tier.name === 'Enterprise' ? 'bg-violet-500/20 text-violet-300 border border-violet-500/30' : 'bg-slate-700 text-slate-200'}`}>{tier.badge}</span>
+                <span class={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full ${tier.popular ? 'bg-meg-accent text-slate-900' : tier.name === 'Enterprise' ? 'bg-violet-500/20 text-violet-950 border border-violet-500/30' : 'bg-slate-700 text-slate-200'}`}>{tier.badge}</span>
               </div>
               <div class="flex items-baseline gap-2 mt-2">
                 <span class="text-5xl font-black text-meg-text-primary-dark tracking-tighter">EUR {tier.price}</span>
                 <div class="text-meg-text-secondary text-[10px] leading-tight uppercase font-bold">
-                  <span>{tier.name === 'Enterprise' ? 'pauschal' : '/ Seat'}</span>
+                  <span>/ Seat</span>
                   <br />
                   <span>/ Monat</span>
                 </div>

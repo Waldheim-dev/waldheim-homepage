@@ -7,7 +7,7 @@ author: 'markus-waldheim'
 keywords: EnterJS, 2023, Konferenz, Darmstadt, JavaScript, Frontend, Entwicklung, Workshop, Svelte, Vorträge, Trends, Rückblick, Erfahrungsbericht, React, Vue, Angular, WebAssembly, TypeScript, Node.js
 ---
 
-# EnterJS 2023: Mein Rückblick auf die JavaScript-Konferenz in Darmstadt 💻
+## EnterJS 2023: Mein Rückblick auf die JavaScript-Konferenz in Darmstadt 💻
 
 Vom 21. bis 23. Juni 2023 fand in Darmstadt die EnterJS statt, eine der größten Konferenzen für JavaScript-Entwicklung
 in Deutschland. Ich war im Rahmen meiner Tätigkeit für waldheim.dev vor Ort, um mich über die neuesten Trends und

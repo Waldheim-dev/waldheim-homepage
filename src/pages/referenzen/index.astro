@@ -36,7 +36,7 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
 }]);
 ---
 <Layout title={titel} description={description} keywords={keywords} schema={[breadCrumbSchema]}>
-  <main id="main-content" class="bg-meg-bg-dark min-h-screen">
+  <div class="bg-meg-bg-dark min-h-screen">
     <section class="py-24 sm:py-32" aria-labelledby="portfolio-heading">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <header class="mx-auto max-w-3xl text-center mb-16">
@@ -179,5 +179,5 @@ const breadCrumbSchema = SchemaUtils.getBreadcrumbSchema([{
         </div>
       </div>
     </section>
-  </main>
+  </div>
 </Layout>

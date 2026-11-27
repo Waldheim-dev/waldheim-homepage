@@ -7,7 +7,7 @@ author: 'markus-waldheim'
 keywords: Smart Home, Hausautomation, Heimautomation, IoT, Smart Home Sicherheit, Local Cluster, lokale Steuerung, unabhängige Systeme, Beratung, Planung, Umsetzung, Installation, [weitere relevante Keywords, z.B. spezifische Technologien/Protokolle]
 ---
 
-# Smart Home einfach gemacht: Meine neuen Dienstleistungen für Ihr Zuhause 🏡
+## Smart Home einfach gemacht: Meine neuen Dienstleistungen für Ihr Zuhause 🏡
 
 Aus einem persönlichen Projekt heraus ist eine Leidenschaft entstanden – und daraus sind neue Dienstleistungen für Sie
 gewachsen! Ich biete Ihnen ab sofort umfassende Unterstützung rund um das Thema Smart Home.

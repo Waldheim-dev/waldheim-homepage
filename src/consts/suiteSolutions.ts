@@ -182,7 +182,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
         name: 'Enterprise (Voll-Suite)',
         badge: 'Inkl. Flotte & Immobilien',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Inkl. Onboarding-Begleitung',
         idealFor: 'Für Unternehmen mit eigenem Fuhrpark, Immobilien-/WEG-Bestand oder dedizierten Datenbank-Anforderungen.',
         features: [
@@ -210,7 +210,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
     ],
     comparisonRows: [
       { criteria: 'Einführungsprojekt', waldheim: '0 € Pflicht-Setup (optionales Coaching ab 490 €)', statusQuo: '25.000 € – 100.000 € Beraterzwang' },
-      { criteria: 'Monatliche Suite-Kosten', waldheim: '29 € / Seat, 59 € / Seat oder 89 € pauschal; nutzungsabhängige Add-ons extra', statusQuo: '150 € – 300 € über diverse Einzel-Tools' },
+      { criteria: 'Monatliche Suite-Kosten', waldheim: '29 €, 59 € oder 89 € pro Seat; nutzungsabhängige Add-ons extra', statusQuo: '150 € – 300 € über diverse Einzel-Tools' },
       { criteria: 'Einführungsdauer', waldheim: 'Am selben Tag einsatzbereit', statusQuo: '6–18 Monate Projektlaufzeit' },
       { criteria: 'Kündigungsfrist', waldheim: 'Jederzeit monatlich kündbar', statusQuo: 'Mehrjährige Knebelverträge' },
     ],
@@ -281,7 +281,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
         name: 'Enterprise (Voll-Suite)',
         badge: '9 Module komplett',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Unternehmen mit zusätzlichen Anforderungen an Fuhrpark, Außendienst oder Immobilienverwaltung.',
         features: [
@@ -365,9 +365,9 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
     h1Title: 'WEG- & Hausverwaltungssoftware (ab 15 €/Monat)',
     heroDesc: 'Veraltete Desktop-Hausverwaltungsprogramme sind kompliziert, teuer und bieten Eigentümern keinen digitalen Self-Service. Waldheim Properties automatisiert Zählerkaskaden, Hausgeldabrechnung, Wirtschaftsplan und Eigentümerkommunikation.',
     question: 'Was kostet eine moderne Cloud-Software für WEG- und Hausverwaltung inklusive Eigentümerportal?',
-    directAnswer: 'Das Modul Waldheim Properties kann als Add-on ab 15 € Grundgebühr pro Monat zuzüglich 0,30 € bis 1,00 € pro verwalteter Einheit gebucht werden. Im Enterprise-Tarif ist der Modulzugang enthalten; nutzungsabhängige Einheitspreise können zusätzlich anfallen.',
+    directAnswer: 'Das Modul Waldheim Properties kann als Add-on ab 15 € Grundgebühr pro Monat zuzüglich 0,30 € pro verwalteter Einheit gebucht werden. Im Enterprise-Tarif ist der Modulzugang enthalten; nutzungsabhängige Einheitspreise können zusätzlich anfallen.',
     priceLabel: 'Ab 15 € / Monat',
-    priceSubtext: '+ 0,30 € – 1,00 € je Einheit (oder Enterprise)',
+    priceSubtext: '+ 0,30 € je Einheit (oder Enterprise)',
     durationLabel: 'Sofort startklar',
     durationSubtext: '1. Objekt in 30 Minuten angelegt',
     deliverableLabel: 'WEG-Abrechnung, Zählerkaskade & Owner Portal',
@@ -378,7 +378,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
         name: 'Properties Add-on (Flexibel)',
         badge: 'Ab 15 €/Monat',
         price: 'ab 15 €',
-        priceUnit: '/ Monat + 0,30–1,00 € / Einheit',
+        priceUnit: '/ Monat + 0,30 € / Einheit',
         duration: 'Monatlich kündbar',
         idealFor: 'Für kleine bis mittlere WEG-Verwaltungen, Selbstverwalter, Vermieter und WG-/Zimmervermietung.',
         features: [
@@ -396,7 +396,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
         name: 'Suite Enterprise (Komplett-Plattform)',
         badge: 'Für Profiverwalter',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für Hausverwaltungen, die Immobilien, Buchhaltung (Treasury), Dokumentenarchiv (Aether) und Fuhrpark in einer Plattform bündeln.',
         features: [
@@ -510,7 +510,7 @@ export const SUITE_SOLUTIONS_CORE: SolutionPageData[] = [
         name: 'Suite Enterprise (Inkl. ERP, DMS & Treasury)',
         badge: 'Vollintegration',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für Unternehmen, die Fahrzeugeinsätze direkt mit ERP-Projekten, Tankbelegen (Aether) und Kostenstellen (Treasury) verknüpfen wollen.',
         features: [

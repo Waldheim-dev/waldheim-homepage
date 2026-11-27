@@ -14,7 +14,7 @@ const entwicklungColors = getServiceColors('entwicklung');
 const itServiceColors = getServiceColors('it-service');
 ---
 
-<nav class="sticky top-0 z-50 flex justify-between space-x-4 items-center py-4 pl-8 lg:px-8 pr-8 transition-all duration-300 ease-in-out rounded-2xl text-meg-text-primary-dark bg-meg-surface-dark/90 backdrop-blur-xl border border-meg-border-dark shadow-xl hover:border-meg-accent/30" aria-label="Hauptnavigation">
+<nav class="relative flex items-center justify-between gap-3 rounded-xl border border-meg-border-dark bg-white/95 px-3 py-3 text-meg-text-primary-dark shadow-sm backdrop-blur-xl transition-colors hover:border-meg-accent/30 sm:px-5 lg:px-6" aria-label="Hauptnavigation">
     <div class="flex items-center gap-4">
         <a href="/" class="-m-1.5 flex items-center gap-2 text-meg-text-primary-dark rounded-xl px-2 py-1 hover:bg-meg-surface-dark/50 transition-all group" aria-label="Waldheim.dev">
           <img class="h-8 w-auto block logo-theme-aware transition-transform group-hover:scale-105" src="/waldheim.dev.svg" alt="Waldheim.dev Logo" loading="eager" width="32" height="32">
@@ -27,11 +27,11 @@ const itServiceColors = getServiceColors('it-service');
       
       <!-- Suite Dropdown -->
       <div class="relative dropdown">
-        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+        <button type="button" aria-expanded="false" aria-controls="desktop-suite-menu" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
           <span>Suite</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-5xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div id="desktop-suite-menu" class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-5xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
             <div class="flex gap-4">
 
@@ -97,11 +97,11 @@ const itServiceColors = getServiceColors('it-service');
 
       <!-- Consulting Dropdown -->
       <div class="relative dropdown">
-        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+        <button type="button" aria-expanded="false" aria-controls="desktop-services-menu" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
           <span>Consulting</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-2xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div id="desktop-services-menu" class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-2xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
             <div class="grid grid-cols-2 gap-2">
               {[
@@ -134,11 +134,11 @@ const itServiceColors = getServiceColors('it-service');
 
       <!-- Open Source Dropdown -->
       <div class="relative dropdown">
-        <button type="button" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
+        <button type="button" aria-expanded="false" aria-controls="desktop-open-source-menu" class="dropdown-trigger cursor-pointer inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">
           <span>Open Source</span>
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
         </button>
-        <div class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-3xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
+        <div id="desktop-open-source-menu" class="dropdown-menu hidden absolute left-1/2 z-30 mt-4 w-screen max-w-3xl -translate-x-1/2 px-4 opacity-0 translate-y-2 transition-all duration-300">
           <div class="flex-auto overflow-hidden rounded-3xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-4">
             <div class="flex gap-4">
 
@@ -195,22 +195,25 @@ const itServiceColors = getServiceColors('it-service');
 
       <a href="/referenzen/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Referenzen</a>
       <a href="/blog/" class="text-sm font-semibold text-slate-400 hover:text-meg-text-primary-dark px-3 py-2 rounded-lg transition-all">Blog</a>
+      <a href="/kontakt/" class="text-sm font-semibold text-slate-400 hover:text-meg-accent px-3 py-2 rounded-lg transition-all">Kontakt</a>
 
-      <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="ml-4 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-slate-900 shadow-lg shadow-meg-accent/20 hover:scale-[1.05] transition-all">
-        <span>Waldheim Suite</span>
+      <a href="https://suite.waldheim.dev" target="_blank" rel="noopener noreferrer" class="ml-2 flex items-center gap-2 rounded-xl bg-meg-accent px-4 py-2.5 text-sm font-black text-white shadow-sm shadow-meg-accent/20 transition-colors hover:bg-primary-600">
+        <span>Suite testen</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
       </a>
 
       <div class="relative dropdown ml-2">
         <button
           type="button"
+          aria-expanded="false"
+          aria-controls="appearance-menu"
           class="dropdown-trigger cursor-pointer inline-flex items-center justify-center size-10 rounded-xl border border-meg-border-dark bg-meg-surface-dark/60 text-slate-400 hover:text-meg-text-primary-dark hover:border-meg-accent/40 transition-all"
           aria-label="Anzeige-Einstellungen öffnen"
           title="Anzeige-Einstellungen"
         >
           <i class="fa-solid fa-sliders text-sm" aria-hidden="true"></i>
         </button>
-        <div class="dropdown-menu hidden absolute right-0 z-30 mt-4 w-[280px] opacity-0 translate-y-2 transition-all duration-300">
+        <div id="appearance-menu" class="dropdown-menu hidden absolute right-0 z-30 mt-4 w-[280px] opacity-0 translate-y-2 transition-all duration-300">
           <div class="overflow-hidden rounded-2xl bg-meg-surface-dark/98 backdrop-blur-xl border border-meg-border-dark shadow-2xl p-3 space-y-3">
             <p class="text-xs font-black uppercase tracking-wide text-meg-text-secondary">Erscheinungsbild</p>
             <p class="text-xs text-meg-text-secondary">Heller Markenmodus</p>
@@ -235,23 +238,29 @@ const itServiceColors = getServiceColors('it-service');
 
     <!-- Mobile Menu Trigger -->
     <div class="lg:hidden flex items-center">
-      <button type="button" aria-label="Hauptmenü öffnen" title="Hauptmenü öffnen" class="button-toggle cursor-pointer rounded-lg p-2.5 bg-meg-surface-dark/50 text-slate-400 hover:text-meg-text-primary-dark border border-meg-border-dark transition-all">
+      <button type="button" aria-label="Hauptmenü öffnen" title="Hauptmenü öffnen" aria-expanded="false" aria-controls="mobile-menu" class="button-toggle cursor-pointer rounded-lg p-2.5 bg-meg-surface-dark/50 text-slate-400 hover:text-meg-text-primary-dark border border-meg-border-dark transition-all">
         <i class="fa-solid fa-bars-staggered text-xl" aria-hidden="true"></i>
       </button>
     </div>
 
     <!-- Mobile Navigation (Complete Hierarchy) -->
-    <div class="lg:hidden absolute inset-0" role="dialog" id="mobile-menu" style="display: none;">
+    <div class="lg:hidden absolute inset-0" role="region" aria-labelledby="mobile-menu-title" aria-hidden="true" id="mobile-menu" style="display: none;">
       <div class="nav-sidebar fixed inset-x-4 top-24 z-50 overflow-y-auto rounded-3xl bg-meg-surface-dark/98 backdrop-blur-2xl border border-meg-border-dark p-6 shadow-2xl max-h-[80vh]">
         <div class="space-y-4">
+          <div class="flex items-center justify-between gap-4">
+            <h2 id="mobile-menu-title" class="text-lg font-black text-meg-text-primary-dark">Navigation</h2>
+            <button type="button" class="mobile-menu-close rounded-lg border border-meg-border-dark p-2 text-meg-text-secondary" aria-label="Menü schließen">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
           
           <!-- Category: Suite -->
           <div class="accordion-item">
-            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+            <button type="button" aria-expanded="false" aria-controls="mobile-suite-links" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
               <span>Waldheim Suite</span>
               <i class="fa-solid fa-chevron-down transition-transform"></i>
             </button>
-            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-meg-accent/20">
+            <div id="mobile-suite-links" class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-meg-accent/20">
               <a href="/suite/" class="block p-2 text-sm font-bold text-meg-accent">Übersicht</a>
               <a href="/suite/socialverse/" class="block p-2 text-sm text-slate-400">Socialverse CRM</a>
               <a href="/suite/forge/" class="block p-2 text-sm text-slate-400">Silvacore ERP</a>
@@ -267,11 +276,11 @@ const itServiceColors = getServiceColors('it-service');
 
           <!-- Category: Consulting -->
           <div class="accordion-item">
-            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+            <button type="button" aria-expanded="false" aria-controls="mobile-services-links" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
               <span>IT-Consulting</span>
               <i class="fa-solid fa-chevron-down transition-transform"></i>
             </button>
-            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-violet-500/20">
+            <div id="mobile-services-links" class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-violet-500/20">
               <a href="/services/entwicklung/" class="block p-2 text-sm text-slate-400">Web, Software &amp; AI-Coaching</a>
               <a href="/services/devsecops/" class="block p-2 text-sm text-slate-400">DevSecOps, FinOps &amp; AIOps</a>
               <a href="/services/it-service/" class="block p-2 text-sm text-slate-400">IT-Service & Infrastruktur</a>
@@ -281,11 +290,11 @@ const itServiceColors = getServiceColors('it-service');
 
           <!-- Category: Open Source -->
           <div class="accordion-item">
-            <button type="button" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
+            <button type="button" aria-expanded="false" aria-controls="mobile-open-source-links" class="mobile-accordion-trigger flex w-full items-center justify-between p-3 rounded-2xl bg-meg-bg-dark/50 border border-meg-border-dark/50 font-bold text-meg-text-primary-dark">
               <span>Open Source</span>
               <i class="fa-solid fa-chevron-down transition-transform"></i>
             </button>
-            <div class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-blue-500/30">
+            <div id="mobile-open-source-links" class="accordion-content hidden mt-2 space-y-1 pl-4 border-l-2 border-blue-500/30">
               <a href="/semrel/" class="flex items-center gap-2 p-2 text-sm font-bold text-blue-400">
                 <i class="fa-solid fa-code-branch text-xs" aria-hidden="true"></i>
                 semrel <span class="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20">v{semrel.version}</span>
@@ -305,6 +314,7 @@ const itServiceColors = getServiceColors('it-service');
           <a href="/referenzen/" class="block p-3 font-bold text-meg-text-primary-dark">Referenzen</a>
           <a href="/blog/" class="block p-3 font-bold text-meg-text-primary-dark">IT-Blog</a>
           <a href="/ueber-mich/" class="block p-3 font-bold text-meg-text-primary-dark">Über mich</a>
+          <a href="/kontakt/" class="block p-3 font-bold text-meg-accent">Kontakt &amp; Projektanfrage</a>
 
           <div class="rounded-2xl border border-meg-border-dark bg-meg-bg-dark/40 p-3">
             <p class="text-xs font-black uppercase tracking-wide text-meg-text-secondary mb-1">Erscheinungsbild</p>
@@ -335,7 +345,29 @@ const itServiceColors = getServiceColors('it-service');
       const dropdowns = document.querySelectorAll('.dropdown');
       const toggle = document.querySelector('.button-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.querySelector('.mobile-menu-close');
       const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger');
+
+      const closeDesktopDropdowns = () => {
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+          menu.classList.add('hidden', 'opacity-0', 'translate-y-2');
+          const trigger = menu.parentElement?.querySelector('.dropdown-trigger');
+          trigger?.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.dropdown .fa-chevron-down').forEach(icon => icon.classList.remove('rotate-180'));
+      };
+
+      const setMobileMenuOpen = (isOpen) => {
+        if (!mobileMenu || !toggle) return;
+        mobileMenu.style.display = isOpen ? 'block' : 'none';
+        mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isOpen ? 'Hauptmenü schließen' : 'Hauptmenü öffnen');
+        toggle.setAttribute('title', isOpen ? 'Hauptmenü schließen' : 'Hauptmenü öffnen');
+        if (isOpen && mobileMenuClose instanceof HTMLElement) {
+          mobileMenuClose.focus();
+        }
+      };
 
       // Desktop Dropdowns
       dropdowns.forEach(dd => {
@@ -348,16 +380,12 @@ const itServiceColors = getServiceColors('it-service');
 
         trigger.addEventListener('click', (e) => {
           e.stopPropagation();
-          const isOpen = !menu.classList.contains('hidden');
-          
-          // Close others
-          document.querySelectorAll('.dropdown-menu').forEach(m => {
-            m.classList.add('hidden', 'opacity-0', 'translate-y-2');
-          });
-          document.querySelectorAll('.dropdown .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+          const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+          closeDesktopDropdowns();
 
           if (!isOpen) {
             menu.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
             requestAnimationFrame(() => {
               menu.classList.remove('opacity-0', 'translate-y-2');
               menu.classList.add('opacity-100', 'translate-y-0');
@@ -370,10 +398,17 @@ const itServiceColors = getServiceColors('it-service');
       // Mobile Menu Toggle
       if (toggle) {
         toggle.addEventListener('click', () => {
-          const isHidden = mobileMenu.style.display === 'none';
-          mobileMenu.style.display = isHidden ? 'block' : 'none';
+          const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+          setMobileMenuOpen(!isOpen);
         });
       }
+      mobileMenuClose?.addEventListener('click', () => {
+        setMobileMenuOpen(false);
+        toggle?.focus();
+      });
+      mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
 
       // Mobile Accordion Logic
       accordionTriggers.forEach(trigger => {
@@ -385,6 +420,7 @@ const itServiceColors = getServiceColors('it-service');
           
           content.classList.toggle('hidden');
           icon.classList.toggle('rotate-180');
+          trigger.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
         });
       });
 
@@ -411,10 +447,16 @@ const itServiceColors = getServiceColors('it-service');
       window.addEventListener('waldheim:appearance-change', renderAppearance);
       renderAppearance();
 
-      // Global Close
-      document.addEventListener('click', () => {
-        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden', 'opacity-0', 'translate-y-2'));
-        document.querySelectorAll('.dropdown .fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+      document.addEventListener('click', closeDesktopDropdowns);
+      document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        const openTrigger = document.querySelector('.dropdown-trigger[aria-expanded="true"]');
+        closeDesktopDropdowns();
+        if (openTrigger instanceof HTMLElement) openTrigger.focus();
+        if (mobileMenu?.style.display === 'block') {
+          setMobileMenuOpen(false);
+          toggle?.focus();
+        }
       });
     });
 </script>

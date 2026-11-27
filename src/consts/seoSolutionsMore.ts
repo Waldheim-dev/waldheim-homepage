@@ -280,7 +280,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         name: 'Enterprise (+ WEG-Hausgeld-Mahnwesen)',
         badge: 'Inkl. Immobilien',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Hausverwaltungen und Bestandshalter, die auch monatliche Hausgeld- und Mietforderungen automatisiert mahnen.',
         features: [
@@ -347,9 +347,9 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
     h1Title: 'Nebenkostenabrechnung & Zählerkaskade Software (ab 15 €)',
     heroDesc: 'Sobald in einem Mehrfamilienhaus Hauptzähler, Wärmepumpenzähler, Allgemeinstrom und Wohnungs-Unterzähler ineinander verschachtelt sind, scheitern herkömmliche Abrechnungsprogramme. Waldheim Properties löst Zählerkaskaden visuell und mathematisch exakt.',
     question: 'Mit welcher Software lässt sich eine komplexe Zählerkaskade für Nebenkosten und WEG-Abrechnungen berechnen?',
-    directAnswer: 'Waldheim Properties (ab 15 € pro Monat zzgl. 0,30 €–1,00 € je Einheit, monatlich kündbar) besitzt eine speziell entwickelte Engine für mehrstufige Haupt- und Unterzähler-Kaskaden. Sie bilden den Zählerbaum einmalig ab, tragen die Ablesewerte ein und erstellen in wenigen Minuten eine prüffähige, druckfertige Nebenkosten- oder WEG-Jahresabrechnung als PDF inklusive Bereitstellung im Eigentümer-/Mieterportal.',
+    directAnswer: 'Waldheim Properties (ab 15 € pro Monat zzgl. 0,30 € je Einheit, monatlich kündbar) besitzt eine speziell entwickelte Engine für mehrstufige Haupt- und Unterzähler-Kaskaden. Sie bilden den Zählerbaum einmalig ab, tragen die Ablesewerte ein und erstellen in wenigen Minuten eine prüffähige, druckfertige Nebenkosten- oder WEG-Jahresabrechnung als PDF inklusive Bereitstellung im Eigentümer-/Mieterportal.',
     priceLabel: 'Ab 15 € / Monat',
-    priceSubtext: '+ 0,30 € – 1,00 € je Einheit',
+    priceSubtext: '+ 0,30 € je Einheit',
     durationLabel: 'Sofort startklar',
     durationSubtext: 'Zählerbaum in 10 Minuten angelegt',
     deliverableLabel: 'Zählerkaskaden-Rechner, PDF-Abrechnung & Portal',
@@ -360,7 +360,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         name: 'Properties Add-on',
         badge: 'Ab 15 € / Monat',
         price: 'ab 15 €',
-        priceUnit: '/ Monat + 0,30–1,00 € / Einheit',
+        priceUnit: '/ Monat + 0,30 € / Einheit',
         duration: 'Sofort im Browser nutzbar',
         idealFor: 'Für private Vermieter, Selbstverwalter von WEGs und kleinere Hausverwaltungen.',
         features: [
@@ -378,7 +378,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         name: 'Suite Enterprise (Für Verwalter-Teams)',
         badge: 'Voll-Suite',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: '14 Tage kostenlos testen',
         idealFor: 'Für professionelle Verwaltungen, die Objektverwaltung, Buchhaltung (Treasury), DMS (Aether) und Kommunikation (Relay) vereinen.',
         features: [
@@ -507,7 +507,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         name: 'Enterprise (Voll-Suite)',
         badge: 'Alle 9 Module',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für Unternehmen, die zusätzlich Außendienst-Touren (Ecodrive) und Objekt-Instandhaltung (Properties) steuern.',
         features: [
@@ -604,7 +604,7 @@ export const SEO_SOLUTIONS_MORE: SolutionPageData[] = [
         name: 'Enterprise (+ KI-Immobilien & Flotte)',
         badge: 'Alle 9 Module',
         price: '89 €',
-        priceUnit: '/ Monat',
+        priceUnit: '/ Seat / Monat',
         duration: 'Sofort startklar',
         idealFor: 'Für den zusätzlichen Einsatz von KI-Übersetzungen in der WEG-Verwaltung und Flotten-Analysen.',
         features: [

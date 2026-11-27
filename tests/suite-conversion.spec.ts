@@ -107,7 +107,11 @@ test.describe('Suite conversion pages', () => {
     await expect(page.locator('#calc-total')).toHaveText('€290');
 
     await page.locator('#calc-tier-enterprise').click();
-    await expect(page.locator('#calc-total')).toHaveText('€89');
+    await expect(page.locator('#calc-seats')).toBeEnabled();
+    await expect(page.locator('#calc-breakdown-seats')).toHaveText(
+      '10 Seats × €89',
+    );
+    await expect(page.locator('#calc-total')).toHaveText('€890');
   });
 
   test('does not present invented customer metrics on the contact page', async ({
@@ -137,11 +141,21 @@ test.describe('Suite conversion pages', () => {
     );
   });
 
+  test('shows the configured Properties price per unit', async ({ page }) => {
+    await page.goto('/suite/weg-verwaltung-software/');
+
+    await expect(page.getByText(/0,30\s?€ je Einheit/i).first()).toBeVisible();
+    await expect(page.getByText(/1,00\s?€/i)).toHaveCount(0);
+  });
+
   test('does not advertise an unconfigured early-adopter discount', async ({
     page,
   }) => {
     await page.goto('/suite/preise/');
 
+    await expect(
+      page.getByText(/Enterprise-Tarif 89 € pro Seat\/Monat/),
+    ).toBeVisible();
     await expect(page.getByText(/40\s?% Rabatt/i)).toHaveCount(0);
     await expect(
       page.getByText(/0,30 EUR|1,00 EUR|ab €8|ab €15|ab €25/i),

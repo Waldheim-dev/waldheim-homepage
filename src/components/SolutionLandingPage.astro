@@ -120,7 +120,7 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
     </div>
   </nav>
 
-  <main id="main-content">
+  <div>
     <ServiceHero
       title={page.h1Title}
       subtitle={page.h1Subtitle}
@@ -194,7 +194,7 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
       <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <!-- Ablauf in 4 klaren Schritten -->
         <div>
-          <p class="text-xs font-black uppercase tracking-[0.2em] text-emerald-400 mb-3">
+          <p class="text-xs font-black uppercase tracking-[0.2em] text-meg-accent mb-3">
             Planbarer Projektablauf
           </p>
           <h2 id="process-comparison-heading" class="text-3xl font-black tracking-tight text-meg-text-primary-dark mb-6">
@@ -203,7 +203,7 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
           <ol class="space-y-4">
             {page.processSteps.map((step, idx) => (
               <li class="rounded-2xl bg-meg-surface-dark/60 border border-meg-border-dark p-5 flex gap-4">
-                <div class="size-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-black flex items-center justify-center shrink-0">
+                <div class="size-10 rounded-xl bg-meg-brand border border-meg-accent/20 text-meg-accent font-black flex items-center justify-center shrink-0">
                   {idx + 1}
                 </div>
                 <div>
@@ -228,12 +228,17 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
           <h3 class="text-2xl font-black text-meg-text-primary-dark mb-6">
             Warum {page.section === 'suite' ? 'die Waldheim Suite' : 'Waldheim.dev'} statt klassischer Alternativen?
           </h3>
-          <div class="overflow-x-auto">
+          <div
+            tabindex="0"
+            role="region"
+            aria-label="Leistungsvergleich"
+            class="overflow-x-auto"
+          >
             <table class="w-full text-left border-collapse text-sm">
               <thead>
                 <tr class="border-b border-meg-border-dark text-xs uppercase tracking-wider text-meg-text-secondary">
                   <th class="py-3 pr-3">Kriterium</th>
-                  <th class="py-3 px-3 text-emerald-400 font-black">Waldheim.dev</th>
+                  <th class="py-3 px-3 text-meg-accent font-black">Waldheim.dev</th>
                   <th class="py-3 pl-3 text-meg-text-secondary">Klassischer Markt</th>
                 </tr>
               </thead>
@@ -241,7 +246,7 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
                 {page.comparisonRows.map((row) => (
                   <tr>
                     <td class="py-3.5 pr-3 font-bold text-meg-text-primary-dark">{row.criteria}</td>
-                    <td class="py-3.5 px-3 text-emerald-400 font-semibold">{row.waldheim}</td>
+                    <td class="py-3.5 px-3 text-meg-accent font-semibold">{row.waldheim}</td>
                     <td class="py-3.5 pl-3 text-meg-text-secondary">{row.statusQuo}</td>
                   </tr>
                 ))}
@@ -296,7 +301,7 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
                 >
                   <div>
                     <div class="flex items-center justify-between gap-2 mb-3">
-                      <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                      <span class="text-xs font-black text-meg-accent bg-meg-brand border border-meg-accent/20 px-2.5 py-1 rounded-full">
                         {rel.priceLabel}
                       </span>
                       <span class="text-xs text-meg-text-secondary font-semibold">
@@ -323,5 +328,5 @@ const heroGradient = heroGradientMap[page.accentColor] || 'blue';
     )}
 
     {page.section === 'suite' ? <PromoServices /> : <PromoSuite />}
-  </main>
+  </div>
 </Layout>

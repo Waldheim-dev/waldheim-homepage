@@ -112,7 +112,7 @@ const theme = accentStyles[accentColor] || accentStyles.blue;
           style={`animation-delay: ${0.08 * (idx + 1)}s`}
         >
           <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
+            <div class="mb-4 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
               <h3 class="text-2xl font-black text-meg-text-primary-dark">{pkg.name}</h3>
               {pkg.badge && (
                 <span class={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full border ${theme.badge}`}>
